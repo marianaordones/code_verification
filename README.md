@@ -1,84 +1,84 @@
-# LLM-Guided Program Verification — baseline
+# LLM-Guided Program Verification with SMT Feedback
 
-Pipeline simples para gerar e reparar provas Rust/Verus com Qwen3-8B local,
-uma GPU e feedback convencional do Verus. Sem fine-tuning, busca de candidatos,
-contraexemplos adicionais ou acesso interno ao solver.
+Projeto de pesquisa sobre geração e reparo de provas de programas por modelos
+de linguagem, com foco em Rust/Verus e no solver SMT Z3.
 
-O código foi preparado localmente para você transferir e executar no cluster
-Linux/SLURM. **Nenhum resultado real do piloto foi produzido neste ambiente.**
-O baseline completo só é habilitado após a escolha humana baseada no piloto.
+A pergunta central é: **informações internas do solver ajudam um LLM a reparar
+uma prova que falhou, além do que ele consegue fazer com os diagnósticos
+convencionais do verificador?**
 
-Comece pela [análise das referências e arquitetura](docs/architecture.md) e pelo
-[guia de instalação e execução no SLURM](docs/cluster.md).
+## Visão geral
 
-```text
-baseline/        carregamento → prompts → vLLM → Verus → integridade → logs/métricas
-configs/         thinking e non-thinking, com os parâmetros solicitados
-prompts/         prompts zero-shot e de reparo versionados
-data/            150 entradas oficiais, hashes e seleção fixa de 15 tarefas
-tools/lynette/   parser/comparador de integridade reutilizado (MIT)
-scripts/         preparo e jobs SLURM
-tests/           protocolo, retomada, métricas e testes reais opcionais
-docs/            análise e instruções para o cluster
-```
+O projeto reúne experimentos em que um modelo propõe anotações de prova, o Verus
+avalia o candidato e o resultado orienta novas propostas. A implementação e os
+contratos do programa são preservados conforme a política de edição de cada
+experimento. Um reparo só é considerado bem-sucedido quando o candidato atende
+às restrições do experimento e passa pela verificação do arquivo completo.
 
-Python 3.11+, vLLM 0.8.5, Transformers 4.51.3 e BF16. Verus, Z3 e o modelo têm
-revisões/identidades registradas; veja o guia para preparar o ambiente.
-O pipeline fora da inferência usa somente a biblioteca padrão de Python.
+As comparações investigam diferentes modelos, prompts, formatos de edição e
+tipos de feedback. Os experimentos incluem geração de arquivos completos,
+reparos localizados e estudos pareados com e sem informações internas do Z3.
 
-Testes locais (sem baixar o modelo):
+## Questões de pesquisa
 
-```bash
-python -m unittest discover -s tests -v
-```
+- Qual é a contribuição dos internals em relação aos diagnósticos do Verus?
+- Quais informações do solver são úteis e como selecioná-las dentro do contexto
+  disponível para o modelo?
+- O efeito varia conforme o mecanismo de falha da prova?
+- Como o formato de edição influencia repetições, erros e sucesso dos reparos?
+- Quais limitações decorrem da capacidade do modelo e quais decorrem do feedback?
 
-Testes de Verus/Lynette são pulados quando `VERUS_BIN` e `LYNETTE_BIN` não estão
-definidos. Os testes com simulação não medem sucesso científico.
+## Dados e experimentos
 
-No cluster, depois de extrair o ZIP em armazenamento compartilhado:
+O repositório trabalha com tarefas de **VerusBench** e com os casos Verus/Z3 de
+**Identifying What the Solver Needs**. Estes últimos removem uma assertion
+essencial de um programa previamente verificado, preservando as outras
+anotações. São tarefas diferentes da geração de provas sobre programas sem as
+anotações necessárias, e seus resultados devem ser interpretados separadamente.
 
-```bash
-mkdir -p logs
-sbatch scripts/slurm/prepare.slurm
-```
+Os modelos explorados incluem Qwen3-8B, Qwen3-14B e
+Qwen2.5-Coder-14B-Instruct. Os estudos pareados utilizam os mesmos candidatos
+iniciais e sementes, variando o feedback fornecido ao modelo. Listas fixadas de
+IDs, configurações e registros por tentativa apoiam a reprodutibilidade.
 
-O primeiro job prepara um runtime persistente sem módulos/venv, compila as
-ferramentas e testa duas tarefas nos dois modos. Quando ele terminar com sucesso:
+## Feedback do solver
 
-```bash
-sbatch scripts/slurm/pilot.slurm
-```
+Além das mensagens de erro do Verus, o projeto explora consultas SMT completas,
+estatísticas de busca e eventos de instanciação de quantificadores. O feedback
+compacto pode incluir fórmulas quantificadas, identificadores, triggers, termos
+de substituição e literais de cláusulas associados às instanciações.
 
-O job do piloto usa as mesmas 15 tarefas nos dois modos: geração inicial e até dois reparos.
-Mantém respostas completas, prompts renderizados, código, saída do Verus,
-integridade, tempos e tokens por tentativa. Salva `results/seed-20261018/pilot/report.md` e
-`report.json`, com resultados globais e por categoria, custo por resolvida e
-projeção de tempo. Arquivos salvos permitem retomar o job.
+Parte dessas informações é obtida por **reexecuções diagnósticas instrumentadas**
+de consultas capturadas. Elas descrevem essas reexecuções e não garantem
+reproduzir a sequência original de busca do Verus. A seleção dos eventos é
+heurística; sua presença não demonstra necessidade para a prova, e sua ausência
+no feedback não demonstra ausência na busca.
 
-Seleção prévia: seed `20261018`, estratos CloverBench 2, Diffy 4, MBPP 7, Misc 2;
-IDs em [data/pilot.json](data/pilot.json). Só `unverified/` é distribuído ao pipeline.
-O modo não é escolhido automaticamente e o job para após o relatório do piloto.
+## Organização
 
-Piloto atual: **Qwen3-14B, prompt v2, 50 IDs sorteados com semente fixa,
-thinking e non-thinking**. Consulte [as instruções e arquivos a transferir](docs/pilot14b-v2-50.md).
-Depois de atualizar esses arquivos no cluster:
+| Diretório | Conteúdo |
+|---|---|
+| `baseline/` | Inferência, verificação, integridade e métricas dos experimentos de geração e reparo. |
+| `diagnostics/` | Captura de consultas e extração de informações do Z3. |
+| `repair_study/` | Reparos localizados e seleção de eventos por relevância. |
+| `local_ablation/` | Comparações pareadas com e sem internals. |
+| `solver_needs_study/` | Estudos sobre assertions essenciais do benchmark Solver Needs. |
+| `configs/`, `prompts/`, `data/` | Configurações, prompts e seleções de tarefas. |
+| `scripts/`, `tests/` | Infraestrutura de execução e validação. |
+| `docs/` | Descrição dos protocolos, decisões e documentação operacional. |
 
-```bash
-mkdir -p logs
-sbatch scripts/slurm/pilot14b_v2_50.slurm
-```
+Os registros dos experimentos incluem prompts, respostas, candidatos,
+diagnósticos, dados do solver, tempos e consumo de tokens. Além da taxa de
+sucesso, a análise considera reparos exclusivos de cada braço, erros de edição,
+repetições e disponibilidade efetiva do feedback.
 
-Resultados em `results/qwen14b-v2-50/seed-20261018/pilot/`, separados do 8B
-e do piloto anterior de dez tarefas. Nenhuma seleção por dificuldade foi aplicada.
+## Documentação e referências
 
-Referências: [AutoVerus / VeruSAGE e Verus-Bench](https://github.com/microsoft/verus-proof-synthesis),
-[artigo AutoVerus](https://arxiv.org/abs/2409.13082),
-[ExVerus](https://github.com/claudeyj/exverus),
-[Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B).
-# Atualização: Coder v4 e revalidação
-
-A próxima execução completa usa `scripts/slurm/qwen25coder14b_v4_150.slurm`.
-O filtro permite triggers de prova e mantém as verificações estrutural e Verus.
-Para reavaliar candidatos antigos sem inferência, use `scripts/slurm/revalidate.slurm`.
-Instruções e comandos: [Coder v4 e revalidação](docs/qwen25coder14b-v4-150.md).
-
+- [Arquitetura e referências](docs/architecture.md)
+- [Ablação de internals com reparo localizado](docs/localized-internals-ablation.md)
+- [Experimentos com Solver Needs](docs/solver-needs-qwen14b.md)
+- [Documentação do ambiente de execução](docs/cluster.md)
+- [Verus](https://github.com/verus-lang/verus)
+- [Z3](https://github.com/Z3Prover/z3)
+- [VerusBench e síntese de provas Verus](https://github.com/microsoft/verus-proof-synthesis)
+- [Identifying What the Solver Needs](https://github.com/knutsa/solver-needs)
