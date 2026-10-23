@@ -1,0 +1,5 @@
+Complete the proof of this Rust/Verus program. Add the necessary formal annotations using the Verus syntax reference. Preserve the implementation, imports, wrappers and specifications. Return the complete source only.
+
+<program>
+$code
+</program>

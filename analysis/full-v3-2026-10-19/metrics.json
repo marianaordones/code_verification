@@ -1,0 +1,741 @@
+{
+  "v3_all": {
+    "tasks": 150,
+    "solved": 17,
+    "counts": {
+      "attempts": 422,
+      "syntax_attempts": 27,
+      "type_attempts": 77,
+      "valid_integrity": 339,
+      "initial_success": 13,
+      "verus_pass": 33,
+      "verus_pass_integrity_rejected": 16
+    },
+    "problem_counts": {
+      "syntax": 9,
+      "type": 31,
+      "invalid": 26
+    },
+    "problem_ids": {
+      "syntax": [
+        "cloverbench_binary_search",
+        "diffy_ms4",
+        "mbpp_task_id_572",
+        "mbpp_task_id_576",
+        "mbpp_task_id_586",
+        "mbpp_task_id_610",
+        "mbpp_task_id_755",
+        "misc_binary_search",
+        "misc_max_index"
+      ],
+      "type": [
+        "diffy_ms1",
+        "diffy_ms2",
+        "mbpp_task_id_105",
+        "mbpp_task_id_133",
+        "mbpp_task_id_142",
+        "mbpp_task_id_18",
+        "mbpp_task_id_249",
+        "mbpp_task_id_261",
+        "mbpp_task_id_412",
+        "mbpp_task_id_426",
+        "mbpp_task_id_436",
+        "mbpp_task_id_461",
+        "mbpp_task_id_554",
+        "mbpp_task_id_579",
+        "mbpp_task_id_602",
+        "mbpp_task_id_624",
+        "mbpp_task_id_629",
+        "mbpp_task_id_69",
+        "mbpp_task_id_728",
+        "mbpp_task_id_764",
+        "mbpp_task_id_769",
+        "mbpp_task_id_798",
+        "mbpp_task_id_807",
+        "mbpp_task_id_94",
+        "misc_bubble",
+        "misc_cell_2_sum",
+        "misc_choose_odd",
+        "misc_deduplicate",
+        "misc_filter",
+        "misc_remove_all_greater",
+        "misc_simple_nested"
+      ],
+      "invalid": [
+        "mbpp_task_id_113",
+        "mbpp_task_id_161",
+        "mbpp_task_id_18",
+        "mbpp_task_id_2",
+        "mbpp_task_id_251",
+        "mbpp_task_id_273",
+        "mbpp_task_id_282",
+        "mbpp_task_id_445",
+        "mbpp_task_id_457",
+        "mbpp_task_id_476",
+        "mbpp_task_id_477",
+        "mbpp_task_id_557",
+        "mbpp_task_id_576",
+        "mbpp_task_id_579",
+        "mbpp_task_id_588",
+        "mbpp_task_id_602",
+        "mbpp_task_id_616",
+        "mbpp_task_id_618",
+        "mbpp_task_id_624",
+        "mbpp_task_id_69",
+        "mbpp_task_id_732",
+        "mbpp_task_id_741",
+        "mbpp_task_id_8",
+        "mbpp_task_id_804",
+        "mbpp_task_id_95",
+        "misc_havoc_inline_post"
+      ]
+    },
+    "integrity_reasons": {
+      "Unable to parse file: expected `,`\n": 9,
+      "Unable to parse file: unexpected token, expected `;`\n": 17,
+      "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]'].": 30,
+      "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: [].": 20,
+      "Disallowed changes found in the body of function: fn sum_min_max (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 2,
+      "Disallowed changes found in the body of function: fn difference_max_min (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "\nthread 'main' (963717) panicked at lynette/src/utils.rs:118:56:\ncalled `Result::unwrap()` on an `Err` value: LexError { span: bytes(933..933) }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n": 1,
+      "Forbidden trusted/bypass construct: assume": 3
+    },
+    "type_pairs": {
+      "('int', 'Range<int>')": 26,
+      "('bool', 'usize')": 1,
+      "('int', 'usize')": 25,
+      "('Seq<bool>', 'bool')": 3,
+      "('int', 'RangeTo<usize>')": 4,
+      "('int', 'RangeTo<int>')": 8,
+      "('int', 'Range<usize>')": 17,
+      "('Seq<i64>', 'i64')": 6,
+      "('Seq<i32>', 'i32')": 3,
+      "('&i32', 'i32')": 3,
+      "('Seq<u8>', 'u8')": 9,
+      "('&_', 'i32')": 1,
+      "('usize', 'Option<_>')": 3,
+      "('Seq<u32>', 'int')": 3,
+      "('usize', 'int')": 3,
+      "('Set<_>', 'i32')": 3
+    },
+    "proof_diagnostics": {
+      "error: precondition not satisfied": 603,
+      "error: invariant not satisfied at end of loop body": 155,
+      "error: invariant not satisfied before loop": 23,
+      "error: possible arithmetic underflow/overflow": 128,
+      "error: postcondition not satisfied": 61,
+      "error: assertion failed": 21
+    },
+    "initial_valid_verification_failures": [
+      "cloverbench_array_append_strong",
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_array_sum_strong",
+      "cloverbench_is_prime",
+      "cloverbench_two_sum",
+      "diffy_brs4",
+      "diffy_conda",
+      "diffy_condg",
+      "diffy_condm",
+      "diffy_condn",
+      "diffy_ms2",
+      "diffy_ms3",
+      "diffy_res1",
+      "diffy_res1o",
+      "diffy_res2",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s1if",
+      "diffy_s1lif",
+      "diffy_s22if",
+      "diffy_s2if",
+      "diffy_s2lif",
+      "diffy_s32if",
+      "diffy_s3if",
+      "diffy_s3lif",
+      "diffy_s42if",
+      "diffy_s4if",
+      "diffy_s4lif",
+      "diffy_s52if",
+      "diffy_s5if",
+      "diffy_s5lif",
+      "diffy_sina1",
+      "diffy_sina2",
+      "diffy_sina3",
+      "diffy_sina4",
+      "diffy_sina5",
+      "mbpp_task_id_142",
+      "mbpp_task_id_170",
+      "mbpp_task_id_240",
+      "mbpp_task_id_261",
+      "mbpp_task_id_262",
+      "mbpp_task_id_290",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_412",
+      "mbpp_task_id_424",
+      "mbpp_task_id_426",
+      "mbpp_task_id_436",
+      "mbpp_task_id_447",
+      "mbpp_task_id_460",
+      "mbpp_task_id_472",
+      "mbpp_task_id_554",
+      "mbpp_task_id_578",
+      "mbpp_task_id_605",
+      "mbpp_task_id_62",
+      "mbpp_task_id_629",
+      "mbpp_task_id_644",
+      "mbpp_task_id_743",
+      "mbpp_task_id_809",
+      "misc_arg_free",
+      "misc_conditional_average",
+      "misc_fib",
+      "misc_filter",
+      "misc_findmax",
+      "misc_len_intersect",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_reverse",
+      "misc_sum",
+      "misc_tail_triangle",
+      "misc_trigger"
+    ],
+    "verus_pass_but_rejected": [
+      [
+        "mbpp_task_id_113",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_2",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_2",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_2",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_251",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_477",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_732",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_732",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_741",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_95",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ]
+    ],
+    "checker_errors": [
+      [
+        "misc_filter_weak",
+        0,
+        "\nthread 'main' (963717) panicked at lynette/src/utils.rs:118:56:\ncalled `Result::unwrap()` on an `Err` value: LexError { span: bytes(933..933) }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n"
+      ]
+    ]
+  },
+  "v2_common100": {
+    "tasks": 100,
+    "solved": 14,
+    "counts": {
+      "attempts": 276,
+      "syntax_attempts": 14,
+      "type_attempts": 96,
+      "valid_integrity": 196,
+      "initial_success": 11,
+      "verus_pass": 28,
+      "verus_pass_integrity_rejected": 14
+    },
+    "problem_counts": {
+      "type": 42,
+      "invalid": 23,
+      "syntax": 7
+    },
+    "problem_ids": {
+      "type": [
+        "cloverbench_all_digits_strong",
+        "diffy_brs1",
+        "diffy_brs2",
+        "diffy_brs3",
+        "diffy_brs4",
+        "diffy_brs5",
+        "diffy_conda",
+        "diffy_ms2",
+        "diffy_ms5",
+        "diffy_res1",
+        "diffy_res1o",
+        "diffy_res2o",
+        "diffy_s12if",
+        "diffy_s32if",
+        "diffy_s3if",
+        "diffy_s3lif",
+        "diffy_s42if",
+        "diffy_s4if",
+        "diffy_s5lif",
+        "mbpp_task_id_133",
+        "mbpp_task_id_261",
+        "mbpp_task_id_273",
+        "mbpp_task_id_282",
+        "mbpp_task_id_412",
+        "mbpp_task_id_426",
+        "mbpp_task_id_436",
+        "mbpp_task_id_445",
+        "mbpp_task_id_472",
+        "mbpp_task_id_554",
+        "mbpp_task_id_588",
+        "mbpp_task_id_616",
+        "mbpp_task_id_629",
+        "mbpp_task_id_728",
+        "mbpp_task_id_764",
+        "mbpp_task_id_798",
+        "mbpp_task_id_8",
+        "mbpp_task_id_804",
+        "misc_bubble",
+        "misc_choose_odd",
+        "misc_filter",
+        "misc_map",
+        "misc_reverse"
+      ],
+      "invalid": [
+        "cloverbench_all_digits_strong",
+        "cloverbench_array_concat_strong",
+        "cloverbench_array_sum_strong",
+        "mbpp_task_id_161",
+        "mbpp_task_id_18",
+        "mbpp_task_id_2",
+        "mbpp_task_id_249",
+        "mbpp_task_id_251",
+        "mbpp_task_id_261",
+        "mbpp_task_id_273",
+        "mbpp_task_id_282",
+        "mbpp_task_id_290",
+        "mbpp_task_id_424",
+        "mbpp_task_id_445",
+        "mbpp_task_id_477",
+        "mbpp_task_id_616",
+        "mbpp_task_id_70",
+        "mbpp_task_id_728",
+        "mbpp_task_id_760",
+        "mbpp_task_id_8",
+        "mbpp_task_id_804",
+        "mbpp_task_id_95",
+        "misc_havoc_inline_post"
+      ],
+      "syntax": [
+        "cloverbench_array_product_strong",
+        "mbpp_task_id_414",
+        "mbpp_task_id_610",
+        "mbpp_task_id_728",
+        "mbpp_task_id_8",
+        "misc_deduplicate",
+        "misc_max_index"
+      ]
+    },
+    "integrity_reasons": {
+      "Changed attributes, imports or non-Verus macros (conservative policy)": 61,
+      "Disallowed changes found in the body of function: fn concat (a : & Vec < u64 > , b : & Vec < u64 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "Unable to parse file: expected `,`\n": 5,
+      "Unable to parse file: expected `by`\n": 1,
+      "Unable to parse file: expected an expression\n": 3,
+      "Unable to parse file: unexpected token, expected `;`\n": 3,
+      "Unable to parse file: expected curly braces\n": 3,
+      "Forbidden trusted/bypass construct: assume": 3
+    },
+    "type_pairs": {
+      "('usize', 'nat')": 1,
+      "('usize', 'int')": 4,
+      "('int', 'usize')": 64,
+      "('bool', 'i32')": 1,
+      "('int', 'Range<usize>')": 7,
+      "('bool', 'usize')": 1,
+      "('Seq<i64>', 'i64')": 6,
+      "('int', 'Range<int>')": 8,
+      "('int', 'RangeTo<usize>')": 7,
+      "('Seq<u8>', 'u8')": 3,
+      "('int', 'RangeTo<int>')": 2
+    },
+    "proof_diagnostics": {
+      "error: invariant not satisfied at end of loop body": 78,
+      "error: invariant not satisfied before loop": 49,
+      "error: precondition not satisfied": 149,
+      "error: possible arithmetic underflow/overflow": 44,
+      "error: assertion failed": 20,
+      "error: postcondition not satisfied": 36
+    },
+    "initial_valid_verification_failures": [
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_cal_div",
+      "cloverbench_two_sum",
+      "diffy_condg",
+      "diffy_condn",
+      "diffy_s22if",
+      "diffy_sina2",
+      "diffy_sina4",
+      "mbpp_task_id_170",
+      "mbpp_task_id_262",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_472",
+      "mbpp_task_id_567",
+      "mbpp_task_id_586",
+      "mbpp_task_id_62",
+      "mbpp_task_id_644",
+      "mbpp_task_id_743",
+      "misc_arg_free",
+      "misc_conditional_average",
+      "misc_findmax",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_remove_all_greater",
+      "misc_sum",
+      "misc_tail_triangle",
+      "misc_trigger"
+    ],
+    "verus_pass_but_rejected": [
+      [
+        "mbpp_task_id_2",
+        0,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_2",
+        1,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_2",
+        2,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_251",
+        0,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_251",
+        1,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_251",
+        2,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_477",
+        0,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_477",
+        1,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_477",
+        2,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_760",
+        1,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_760",
+        2,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_95",
+        0,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_95",
+        1,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ],
+      [
+        "mbpp_task_id_95",
+        2,
+        "Changed attributes, imports or non-Verus macros (conservative policy)"
+      ]
+    ],
+    "checker_errors": []
+  },
+  "v3_common100": {
+    "tasks": 100,
+    "solved": 14,
+    "counts": {
+      "attempts": 275,
+      "syntax_attempts": 12,
+      "type_attempts": 44,
+      "valid_integrity": 228,
+      "initial_success": 12,
+      "verus_pass": 26,
+      "verus_pass_integrity_rejected": 12
+    },
+    "problem_counts": {
+      "type": 18,
+      "invalid": 15,
+      "syntax": 4
+    },
+    "problem_ids": {
+      "type": [
+        "diffy_ms2",
+        "mbpp_task_id_133",
+        "mbpp_task_id_18",
+        "mbpp_task_id_249",
+        "mbpp_task_id_261",
+        "mbpp_task_id_412",
+        "mbpp_task_id_426",
+        "mbpp_task_id_436",
+        "mbpp_task_id_554",
+        "mbpp_task_id_629",
+        "mbpp_task_id_728",
+        "mbpp_task_id_764",
+        "mbpp_task_id_798",
+        "misc_bubble",
+        "misc_choose_odd",
+        "misc_deduplicate",
+        "misc_filter",
+        "misc_remove_all_greater"
+      ],
+      "invalid": [
+        "mbpp_task_id_161",
+        "mbpp_task_id_18",
+        "mbpp_task_id_2",
+        "mbpp_task_id_251",
+        "mbpp_task_id_273",
+        "mbpp_task_id_282",
+        "mbpp_task_id_445",
+        "mbpp_task_id_477",
+        "mbpp_task_id_557",
+        "mbpp_task_id_588",
+        "mbpp_task_id_616",
+        "mbpp_task_id_8",
+        "mbpp_task_id_804",
+        "mbpp_task_id_95",
+        "misc_havoc_inline_post"
+      ],
+      "syntax": [
+        "mbpp_task_id_572",
+        "mbpp_task_id_586",
+        "mbpp_task_id_610",
+        "misc_max_index"
+      ]
+    },
+    "integrity_reasons": {
+      "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]'].": 18,
+      "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: [].": 13,
+      "Unable to parse file: unexpected token, expected `;`\n": 9,
+      "Disallowed changes found in the body of function: fn difference_max_min (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "Forbidden trusted/bypass construct: assume": 3,
+      "Unable to parse file: expected `,`\n": 3
+    },
+    "type_pairs": {
+      "('bool', 'usize')": 1,
+      "('int', 'usize')": 12,
+      "('int', 'Range<usize>')": 13,
+      "('Seq<i64>', 'i64')": 6,
+      "('int', 'Range<int>')": 18,
+      "('&i32', 'i32')": 2,
+      "('int', 'RangeTo<usize>')": 1,
+      "('int', 'RangeTo<int>')": 2,
+      "('Seq<u8>', 'u8')": 3,
+      "('Seq<u32>', 'int')": 3,
+      "('usize', 'int')": 3,
+      "('Set<_>', 'i32')": 3
+    },
+    "proof_diagnostics": {
+      "error: precondition not satisfied": 375,
+      "error: invariant not satisfied at end of loop body": 91,
+      "error: invariant not satisfied before loop": 13,
+      "error: possible arithmetic underflow/overflow": 83,
+      "error: postcondition not satisfied": 43,
+      "error: assertion failed": 10
+    },
+    "initial_valid_verification_failures": [
+      "cloverbench_array_append_strong",
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_array_sum_strong",
+      "cloverbench_two_sum",
+      "diffy_brs4",
+      "diffy_conda",
+      "diffy_condg",
+      "diffy_condn",
+      "diffy_ms2",
+      "diffy_res1",
+      "diffy_res1o",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s22if",
+      "diffy_s32if",
+      "diffy_s3if",
+      "diffy_s3lif",
+      "diffy_s42if",
+      "diffy_s4if",
+      "diffy_s5lif",
+      "diffy_sina2",
+      "diffy_sina4",
+      "mbpp_task_id_170",
+      "mbpp_task_id_261",
+      "mbpp_task_id_262",
+      "mbpp_task_id_290",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_412",
+      "mbpp_task_id_424",
+      "mbpp_task_id_426",
+      "mbpp_task_id_436",
+      "mbpp_task_id_472",
+      "mbpp_task_id_554",
+      "mbpp_task_id_62",
+      "mbpp_task_id_629",
+      "mbpp_task_id_644",
+      "mbpp_task_id_743",
+      "misc_arg_free",
+      "misc_conditional_average",
+      "misc_filter",
+      "misc_findmax",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_reverse",
+      "misc_sum",
+      "misc_tail_triangle",
+      "misc_trigger"
+    ],
+    "verus_pass_but_rejected": [
+      [
+        "mbpp_task_id_2",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_2",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_2",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_251",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_477",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        0,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_95",
+        1,
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        2,
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ]
+    ],
+    "checker_errors": []
+  },
+  "paired_outcomes": {
+    "(False, False)": 84,
+    "(False, True)": 2,
+    "(True, True)": 12,
+    "(True, False)": 2
+  }
+}

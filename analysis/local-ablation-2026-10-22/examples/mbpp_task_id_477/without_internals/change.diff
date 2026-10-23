@@ -1,0 +1,27 @@
+--- before.rs
++++ after.rs
+@@ -26,15 +26,15 @@
+     let mut index = 0;
+     while index < str1.len()
+         invariant
+-            0 <= index <= str1.len(),
+-            lower_case@.len() == index,
+-            forall|i: int|
+-                0 <= i < index ==> lower_case[i] == (if is_upper_case(#[trigger] str1[i as usize]) {
+-                    shift32_spec(str1[i as usize])
+-                } else {
+-                    str1[i as usize]
+-                }),
+-    {
++    0 <= index <= str1.len(),
++    lower_case@.len() == index,
++    forall|i: int|
++        0 <= i < index ==> lower_case[i] == (if is_upper_case(#[trigger] str1[i as int]) {
++            shift32_spec(str1[i as int])
++        } else {
++            str1[i as int]
++        }),
++{
+         if (str1[index] >= 65 && str1[index] <= 90) {
+             lower_case.push((str1[index] + 32) as u8);
+         } else {

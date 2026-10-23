@@ -1,0 +1,330 @@
+{
+  "schema": "z3-internals-v1",
+  "scope": "diagnostic_api_replay_not_original_search",
+  "availability": "available",
+  "original_query_counts": {
+    "sat": 0,
+    "unsat": 4,
+    "unknown": 2,
+    "timeout": 0
+  },
+  "capture_errors": 0,
+  "query_id": "query-0000",
+  "original_result": "unknown",
+  "replay_result": "unknown",
+  "reason_unknown": "(incomplete quantifiers)",
+  "replay_timeout_ms": 5000,
+  "unavailability_reason": null,
+  "statistics": {
+    "quant instantiations": 107,
+    "conflicts": 42,
+    "decisions": 52,
+    "propagations": 274,
+    "arith conflicts": 3,
+    "rlimit count": 63723,
+    "time": 0.183
+  },
+  "sampling": {
+    "instantiations_observed": 107,
+    "instantiations_saved": 107,
+    "callback_errors": 0,
+    "groups_in_prompt": 10,
+    "instances_in_prompt": 22,
+    "policy": "first fitting events; at most 10 distinct quantifiers and 3 instances each; complete formulas only"
+  },
+  "quantifiers": [
+    {
+      "id": "Q1",
+      "quantifier_smt": "(forall ((x Poly))\n  (! (or (not (has_type x TYPE%vstd!raw_ptr.Metadata.))\n         (= x (Poly%vstd!raw_ptr.Metadata. (%Poly%vstd!raw_ptr.Metadata. x))))\n     :pattern ((has_type x TYPE%vstd!raw_ptr.Metadata.))\n     :skolemid skolem_internal_vstd__raw_ptr__Metadata_unbox_axiom_definition\n     :qid internal_vstd__raw_ptr__Metadata_unbox_axiom_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "(Poly%vstd!raw_ptr.Metadata. vstd!raw_ptr.Metadata./Thin)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x Poly))\n             (! (or (not (has_type x TYPE%vstd!raw_ptr.Metadata.))\n                    (= x\n                       (Poly%vstd!raw_ptr.Metadata.\n                         (%Poly%vstd!raw_ptr.Metadata. x))))\n                :pattern ((has_type x TYPE%vstd!raw_ptr.Metadata.))\n                :skolemid skolem_internal_vstd__raw_ptr__Metadata_unbox_axiom_definition\n                :qid internal_vstd__raw_ptr__Metadata_unbox_axiom_definition))))\n  (not a!1))",
+            "(not (has_type (Poly%vstd!raw_ptr.Metadata. vstd!raw_ptr.Metadata./Thin)\n               TYPE%vstd!raw_ptr.Metadata.))",
+            "(= (Poly%vstd!raw_ptr.Metadata. vstd!raw_ptr.Metadata./Thin)\n   (Poly%vstd!raw_ptr.Metadata.\n     (%Poly%vstd!raw_ptr.Metadata.\n       (Poly%vstd!raw_ptr.Metadata. vstd!raw_ptr.Metadata./Thin))))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "quantifier_smt": "(forall ((x Poly))\n  (! (let ((a!1 (not (has_type x\n                               (TYPE%alloc!vec.Vec.\n                                 $\n                                 (UINT 64)\n                                 $\n                                 ALLOCATOR_GLOBAL)))))\n       (or a!1\n           (= x\n              (Poly%alloc!vec.Vec<u64./allocator_global%.>.\n                (%Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))))\n     :pattern ((has_type x (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))\n     :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_unbox_axiom_definition\n     :qid internal_alloc__vec__Vec<u64./allocator_global__.>_unbox_axiom_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "tmp%2"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x Poly))\n             (! (let ((a!1 (not (has_type x\n                                          (TYPE%alloc!vec.Vec.\n                                            $\n                                            (UINT 64)\n                                            $\n                                            ALLOCATOR_GLOBAL)))))\n                  (or a!1\n                      (= x\n                         (Poly%alloc!vec.Vec<u64./allocator_global%.>.\n                           (%Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))))\n                :pattern ((has_type x\n                                    (TYPE%alloc!vec.Vec.\n                                      $\n                                      (UINT 64)\n                                      $\n                                      ALLOCATOR_GLOBAL)))\n                :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_unbox_axiom_definition\n                :qid internal_alloc__vec__Vec<u64./allocator_global__.>_unbox_axiom_definition))))\n  (not a!1))",
+            "(not (has_type tmp%2 (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))",
+            "(= tmp%2\n   (Poly%alloc!vec.Vec<u64./allocator_global%.>.\n     (%Poly%alloc!vec.Vec<u64./allocator_global%.>. tmp%2)))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "quantifier_smt": "(forall ((bits Int) (i Int))\n  (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n     (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n       (not a!2)))\n     :pattern ((uInv bits i))\n     :skolemid skolem_prelude_u_inv\n     :qid prelude_u_inv))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "elem!"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n            (not a!2)))\n          :pattern ((uInv bits i))\n          :skolemid skolem_prelude_u_inv\n          :qid prelude_u_inv)))",
+            "(let ((a!1 (or (not (>= elem! 0)) (<= (+ (uHi 64) (* (- 1) elem!)) 0))))\n  (not (= a!1 (uInv 64 elem!))))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "SZ",
+            "tmp%1"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n            (not a!2)))\n          :pattern ((uInv bits i))\n          :skolemid skolem_prelude_u_inv\n          :qid prelude_u_inv)))",
+            "(let ((a!1 (>= (+ tmp%1 (* (- 1) (uHi SZ))) 0)))\n(let ((a!2 (= (or (not (>= tmp%1 0)) a!1) (uInv SZ tmp%1))))\n  (not a!2)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "SZ",
+            "tmp%3"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n            (not a!2)))\n          :pattern ((uInv bits i))\n          :skolemid skolem_prelude_u_inv\n          :qid prelude_u_inv)))",
+            "(let ((a!1 (>= (+ tmp%3 (* (- 1) (uHi SZ))) 0)))\n(let ((a!2 (= (or (not (>= tmp%3 0)) a!1) (uInv SZ tmp%3))))\n  (not a!2)))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "quantifier_smt": "(forall ((x alloc!vec.Vec<u64./allocator_global%.>.))\n  (! (= x\n        (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n          (Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))\n     :pattern ((Poly%alloc!vec.Vec<u64./allocator_global%.>. x))\n     :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition\n     :qid internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "c@0"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x alloc!vec.Vec<u64./allocator_global%.>.))\n             (! (= x\n                   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n                     (Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))\n                :pattern ((Poly%alloc!vec.Vec<u64./allocator_global%.>. x))\n                :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition\n                :qid internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition))))\n  (not a!1))",
+            "(= c@0\n   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n     (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "v!"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x alloc!vec.Vec<u64./allocator_global%.>.))\n             (! (= x\n                   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n                     (Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))\n                :pattern ((Poly%alloc!vec.Vec<u64./allocator_global%.>. x))\n                :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition\n                :qid internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition))))\n  (not a!1))",
+            "(= v!\n   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n     (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "c@1"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x alloc!vec.Vec<u64./allocator_global%.>.))\n             (! (= x\n                   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n                     (Poly%alloc!vec.Vec<u64./allocator_global%.>. x)))\n                :pattern ((Poly%alloc!vec.Vec<u64./allocator_global%.>. x))\n                :skolemid skolem_internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition\n                :qid internal_alloc__vec__Vec<u64./allocator_global__.>_box_axiom_definition))))\n  (not a!1))",
+            "(= c@1\n   (%Poly%alloc!vec.Vec<u64./allocator_global%.>.\n     (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1)))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "quantifier_smt": "(forall ((x vstd!raw_ptr.Metadata.))\n  (! (= x (%Poly%vstd!raw_ptr.Metadata. (Poly%vstd!raw_ptr.Metadata. x)))\n     :pattern ((Poly%vstd!raw_ptr.Metadata. x))\n     :skolemid skolem_internal_vstd__raw_ptr__Metadata_box_axiom_definition\n     :qid internal_vstd__raw_ptr__Metadata_box_axiom_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "vstd!raw_ptr.Metadata./Thin"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x vstd!raw_ptr.Metadata.))\n             (! (= x\n                   (%Poly%vstd!raw_ptr.Metadata.\n                     (Poly%vstd!raw_ptr.Metadata. x)))\n                :pattern ((Poly%vstd!raw_ptr.Metadata. x))\n                :skolemid skolem_internal_vstd__raw_ptr__Metadata_box_axiom_definition\n                :qid internal_vstd__raw_ptr__Metadata_box_axiom_definition))))\n  (not a!1))",
+            "(= vstd!raw_ptr.Metadata./Thin\n   (%Poly%vstd!raw_ptr.Metadata.\n     (Poly%vstd!raw_ptr.Metadata. vstd!raw_ptr.Metadata./Thin)))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "quantifier_smt": "(forall ((Self%&. Dcr) (Self%& Type) (self! Poly))\n  (! (or (not (has_type self! Self%&))\n         (has_type (vstd!view.View.view.? Self%&. Self%& self!)\n                   (proj%vstd!view.View./V Self%&. Self%&)))\n     :pattern ((vstd!view.View.view.? Self%&. Self%& self!))\n     :skolemid skolem_internal_vstd!view.View.view.?_pre_post_definition\n     :qid internal_vstd!view.View.view.?_pre_post_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)",
+            "(Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (self! Poly))\n             (! (or (not (has_type self! Self%&))\n                    (has_type (vstd!view.View.view.? Self%&. Self%& self!)\n                              (proj%vstd!view.View./V Self%&. Self%&)))\n                :pattern ((vstd!view.View.view.? Self%&. Self%& self!))\n                :skolemid skolem_internal_vstd!view.View.view.?_pre_post_definition\n                :qid internal_vstd!view.View.view.?_pre_post_definition))))\n  (not a!1))",
+            "(not (has_type (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0)\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))",
+            "(has_type (vstd!view.View.view.?\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n            (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))\n          (proj%vstd!view.View./V\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)",
+            "(Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (self! Poly))\n             (! (or (not (has_type self! Self%&))\n                    (has_type (vstd!view.View.view.? Self%&. Self%& self!)\n                              (proj%vstd!view.View./V Self%&. Self%&)))\n                :pattern ((vstd!view.View.view.? Self%&. Self%& self!))\n                :skolemid skolem_internal_vstd!view.View.view.?_pre_post_definition\n                :qid internal_vstd!view.View.view.?_pre_post_definition))))\n  (not a!1))",
+            "(not (has_type (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))",
+            "(has_type (vstd!view.View.view.?\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n            (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n          (proj%vstd!view.View./V\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)",
+            "(Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (self! Poly))\n             (! (or (not (has_type self! Self%&))\n                    (has_type (vstd!view.View.view.? Self%&. Self%& self!)\n                              (proj%vstd!view.View./V Self%&. Self%&)))\n                :pattern ((vstd!view.View.view.? Self%&. Self%& self!))\n                :skolemid skolem_internal_vstd!view.View.view.?_pre_post_definition\n                :qid internal_vstd!view.View.view.?_pre_post_definition))))\n  (not a!1))",
+            "(not (has_type (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1)\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))",
+            "(has_type (vstd!view.View.view.?\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n            (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1))\n          (proj%vstd!view.View./V\n            $\n            (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "quantifier_smt": "(forall ((A&. Dcr) (A& Type) (self! Poly))\n  (! (or (not (has_type self! (TYPE%vstd!seq.Seq. A&. A&)))\n         (>= (vstd!seq.Seq.len.? A&. A& self!) 0))\n     :pattern ((vstd!seq.Seq.len.? A&. A& self!))\n     :skolemid skolem_internal_vstd!seq.Seq.len.?_pre_post_definition\n     :qid internal_vstd!seq.Seq.len.?_pre_post_definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(UINT 64)",
+            "(vstd!view.View.view.?\n  $\n  (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n  (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((A&. Dcr) (A& Type) (self! Poly))\n             (! (or (not (has_type self! (TYPE%vstd!seq.Seq. A&. A&)))\n                    (>= (vstd!seq.Seq.len.? A&. A& self!) 0))\n                :pattern ((vstd!seq.Seq.len.? A&. A& self!))\n                :skolemid skolem_internal_vstd!seq.Seq.len.?_pre_post_definition\n                :qid internal_vstd!seq.Seq.len.?_pre_post_definition))))\n  (not a!1))",
+            "(let ((a!1 (has_type (vstd!view.View.view.?\n                       $\n                       (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n                       (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))\n                     (TYPE%vstd!seq.Seq. $ (UINT 64)))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.len.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0)))))\n  (>= a!1 0))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(UINT 64)",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n  (vstd!seq.Seq.push.?\n    $\n    (UINT 64)\n    (vstd!view.View.view.?\n      $\n      (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n      (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))\n    a!1))"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((A&. Dcr) (A& Type) (self! Poly))\n             (! (or (not (has_type self! (TYPE%vstd!seq.Seq. A&. A&)))\n                    (>= (vstd!seq.Seq.len.? A&. A& self!) 0))\n                :pattern ((vstd!seq.Seq.len.? A&. A& self!))\n                :skolemid skolem_internal_vstd!seq.Seq.len.?_pre_post_definition\n                :qid internal_vstd!seq.Seq.len.?_pre_post_definition))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n(let ((a!2 (vstd!seq.Seq.push.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))\n             a!1)))\n  (not (has_type a!2 (TYPE%vstd!seq.Seq. $ (UINT 64))))))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n(let ((a!2 (vstd!seq.Seq.push.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@0))\n             a!1)))\n  (>= (vstd!seq.Seq.len.? $ (UINT 64) a!2) 0)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(UINT 64)",
+            "(vstd!view.View.view.?\n  $\n  (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n  (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((A&. Dcr) (A& Type) (self! Poly))\n             (! (or (not (has_type self! (TYPE%vstd!seq.Seq. A&. A&)))\n                    (>= (vstd!seq.Seq.len.? A&. A& self!) 0))\n                :pattern ((vstd!seq.Seq.len.? A&. A& self!))\n                :skolemid skolem_internal_vstd!seq.Seq.len.?_pre_post_definition\n                :qid internal_vstd!seq.Seq.len.?_pre_post_definition))))\n  (not a!1))",
+            "(let ((a!1 (has_type (vstd!view.View.view.?\n                       $\n                       (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n                       (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n                     (TYPE%vstd!seq.Seq. $ (UINT 64)))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.len.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)))))\n  (>= a!1 0))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "quantifier_smt": "(forall ((id FuelId))\n  (! (= (fuel_bool id) (fuel_bool_default id))\n     :pattern ((fuel_bool id))\n     :skolemid skolem_prelude_fuel_defaults\n     :qid prelude_fuel_defaults))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "fuel%vstd!std_specs.vec.axiom_spec_len."
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+            "(= (fuel_bool fuel%vstd!std_specs.vec.axiom_spec_len.)\n   (fuel_bool_default fuel%vstd!std_specs.vec.axiom_spec_len.))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "fuel%vstd!std_specs.vec.impl&%0.spec_index."
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+            "(= (fuel_bool fuel%vstd!std_specs.vec.impl&%0.spec_index.)\n   (fuel_bool_default fuel%vstd!std_specs.vec.impl&%0.spec_index.))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "fuel%vstd!std_specs.vec.axiom_vec_index_decreases."
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+            "(= (fuel_bool fuel%vstd!std_specs.vec.axiom_vec_index_decreases.)\n   (fuel_bool_default fuel%vstd!std_specs.vec.axiom_vec_index_decreases.))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q9",
+      "quantifier_smt": "(forall ((T&. Dcr)\n         (T& Type)\n         (A&. Dcr)\n         (A& Type)\n         (vec! Poly)\n         (i! Int)\n         (element! Poly))\n  (! (let ((a!1 (= element!\n                   (vstd!seq.Seq.index.?\n                     T&.\n                     T&\n                     (vstd!view.View.view.?\n                       $\n                       (TYPE%alloc!vec.Vec. T&. T& A&. A&)\n                       vec!)\n                     (I i!)))))\n     (let ((a!2 (= (or (not (has_type element! T&)) (not a!1))\n                   (ens%vstd!std_specs.vec.vec_index.\n                     T&.\n                     T&\n                     A&.\n                     A&\n                     vec!\n                     i!\n                     element!))))\n       (not a!2)))\n     :pattern ((ens%vstd!std_specs.vec.vec_index.\n                 T&.\n                 T&\n                 A&.\n                 A&\n                 vec!\n                 i!\n                 element!))\n     :skolemid skolem_internal_ens__vstd!std_specs.vec.vec_index._definition\n     :qid internal_ens__vstd!std_specs.vec.vec_index._definition))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "$",
+            "(UINT 64)",
+            "$",
+            "ALLOCATOR_GLOBAL",
+            "(Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)",
+            "n@0",
+            "tmp%4"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((T&. Dcr)\n              (T& Type)\n              (A&. Dcr)\n              (A& Type)\n              (vec! Poly)\n              (i! Int)\n              (element! Poly))\n       (! (let ((a!1 (= element!\n                        (vstd!seq.Seq.index.?\n                          T&.\n                          T&\n                          (vstd!view.View.view.?\n                            $\n                            (TYPE%alloc!vec.Vec. T&. T& A&. A&)\n                            vec!)\n                          (I i!)))))\n          (let ((a!2 (= (or (not (has_type element! T&)) (not a!1))\n                        (ens%vstd!std_specs.vec.vec_index.\n                          T&.\n                          T&\n                          A&.\n                          A&\n                          vec!\n                          i!\n                          element!))))\n            (not a!2)))\n          :pattern ((ens%vstd!std_specs.vec.vec_index.\n                      T&.\n                      T&\n                      A&.\n                      A&\n                      vec!\n                      i!\n                      element!))\n          :skolemid skolem_internal_ens__vstd!std_specs.vec.vec_index._definition\n          :qid internal_ens__vstd!std_specs.vec.vec_index._definition)))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n(let ((a!2 (or (not (has_type tmp%4 (UINT 64))) (not (= tmp%4 a!1)))))\n  (not (= a!2\n          (ens%vstd!std_specs.vec.vec_index.\n            $\n            (UINT 64)\n            $\n            ALLOCATOR_GLOBAL\n            (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!)\n            n@0\n            tmp%4)))))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "quantifier_smt": "(forall ((bits Int) (x Poly))\n  (! (or (not (has_type x (UINT bits))) (uInv bits (%I x)))\n     :pattern ((has_type x (UINT bits)))\n     :skolemid skolem_prelude_unbox_uint\n     :qid prelude_unbox_uint))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "(vstd!seq.Seq.index.?\n  $\n  (UINT 64)\n  (vstd!view.View.view.?\n    $\n    (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n    (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n  (I n@0))"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((bits Int) (x Poly))\n             (! (or (not (has_type x (UINT bits))) (uInv bits (%I x)))\n                :pattern ((has_type x (UINT bits)))\n                :skolemid skolem_prelude_unbox_uint\n                :qid prelude_unbox_uint))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n  (not (has_type a!1 (UINT 64))))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             (I n@0))))\n  (uInv 64 (%I a!1)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "(vstd!seq.Seq.index.?\n  $\n  (UINT 64)\n  (vstd!view.View.view.?\n    $\n    (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n    (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1))\n  i$!skolem_user_candidate__append_29!7)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((bits Int) (x Poly))\n             (! (or (not (has_type x (UINT bits))) (uInv bits (%I x)))\n                :pattern ((has_type x (UINT bits)))\n                :skolemid skolem_prelude_unbox_uint\n                :qid prelude_unbox_uint))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1))\n             i$!skolem_user_candidate__append_29!7)))\n  (not (has_type a!1 (UINT 64))))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. c@1))\n             i$!skolem_user_candidate__append_29!7)))\n  (uInv 64 (%I a!1)))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "(vstd!seq.Seq.index.?\n  $\n  (UINT 64)\n  (vstd!view.View.view.?\n    $\n    (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n    (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n  i$!skolem_user_candidate__append_29!7)"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((bits Int) (x Poly))\n             (! (or (not (has_type x (UINT bits))) (uInv bits (%I x)))\n                :pattern ((has_type x (UINT bits)))\n                :skolemid skolem_prelude_unbox_uint\n                :qid prelude_unbox_uint))))\n  (not a!1))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             i$!skolem_user_candidate__append_29!7)))\n  (not (has_type a!1 (UINT 64))))",
+            "(let ((a!1 (vstd!seq.Seq.index.?\n             $\n             (UINT 64)\n             (vstd!view.View.view.?\n               $\n               (TYPE%alloc!vec.Vec. $ (UINT 64) $ ALLOCATOR_GLOBAL)\n               (Poly%alloc!vec.Vec<u64./allocator_global%.>. v!))\n             i$!skolem_user_candidate__append_29!7)))\n  (uInv 64 (%I a!1)))"
+          ]
+        }
+      ]
+    }
+  ]
+}

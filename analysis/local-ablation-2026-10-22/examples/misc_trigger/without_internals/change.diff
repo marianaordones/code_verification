@@ -1,0 +1,15 @@
+--- before.rs
++++ after.rs
+@@ -18,8 +18,10 @@
+         ret == arr@[i as int],
+ {
+     proof {
+-        assert(arr@[i as int] == i + 2);
+-    }
++    assert(f(arr@, i as int));
++    assert(arr@[i as int] == i + 2);
++}
++
+     arr[i]
+ }
+ }

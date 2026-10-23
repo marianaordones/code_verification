@@ -1,0 +1,5 @@
+Add the proof annotations needed for Verus to verify this complete program. Preserve its implementation and specifications.
+
+<program>
+$code
+</program>

@@ -1,0 +1,21 @@
+{
+  "experiment": "qwen25coder14b-v2-100",
+  "model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "model_revision": "aedcc2d42b622764e023cf882b6652e646b95671",
+  "prompt_version": "v2",
+  "task_selection": "data/pilot-qwen25coder14b-v2-100.json",
+  "pilot_size": 100,
+  "max_num_seqs": 1,
+  "mode": "instruct",
+  "enable_thinking": false,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "max_tokens": 4096,
+  "max_repairs": 2,
+  "seed": 20261018,
+  "verus": "verus",
+  "z3": "z3",
+  "lynette": "tools/lynette/source/target/release/lynette",
+  "verification_timeout": 120
+}

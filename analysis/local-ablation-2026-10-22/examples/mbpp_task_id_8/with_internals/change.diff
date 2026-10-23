@@ -1,0 +1,13 @@
+--- before.rs
++++ after.rs
+@@ -19,7 +19,9 @@
+         invariant
+             result.len() == index,
+             forall|k: int| 0 <= k < index ==> (#[trigger] result[k] == nums[k] * nums[k]),
+-    {
++            0 <= index <= nums.len(),
++            forall|k: int| 0 <= k < nums.len() ==> (0 <= #[trigger] nums[k] * #[trigger] nums[k] < i32::MAX),
++{
+         result.push(nums[index] * nums[index]);
+         index += 1;
+     }

@@ -1,0 +1,342 @@
+"""Paired Qwen repair of essential Verus assertions from Identifying What the Solver Needs."""
+import argparse
+from collections import Counter
+import importlib.metadata
+import json
+import os
+from pathlib import Path
+import platform
+import sys
+import time
+
+from baseline.__main__ import run_lock
+from baseline.inference import LocalVLLM, model_identity, prepare_model
+from baseline.integrity import tokens
+from baseline.prompts import ROOT
+from baseline.provenance import command, file_hashes, tool_identity, tool_signature
+from baseline.storage import digest, read_json, write_json, write_text
+from diagnostics.z3_internals import api_identity
+from .actions import EMPTY, parse_response, render
+from .data import LABELS, SELECTION, selected_cases, split_task
+from .download import REVISION, SOURCE, VERUS_VERSION, source
+from .feedback import ARMS, control_feedback, fits, internals, messages
+from .verify import StudyVerifier
+
+
+def configuration():
+    config = read_json(ROOT / 'configs/solver-needs-qwen14b.json')
+    model_identity(config)
+    if config['max_attempts'] != 4 or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
+        raise ValueError('Expected four total proposals, 48k context and 4096 output tokens')
+    return config
+
+
+def implementation():
+    return file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'),
+        ROOT / 'prompts/solver-needs/system.txt', ROOT / 'configs/solver-needs-qwen14b.json',
+        SELECTION,
+        *(ROOT / 'baseline').glob('*.py'), *(ROOT / 'diagnostics').glob('*.py'),
+        ROOT / 'repair_study/worker.py', ROOT / 'repair_study/relevance.py'])
+
+
+def tools():
+    identities = {key: tool_identity(os.environ[env]) for key, env in [('verus', 'VERUS_BIN'), ('z3', 'Z3_BIN')]}
+    for key in identities:
+        identities[key]['version'] = command([identities[key]['path'], '--version'])
+    if VERUS_VERSION not in str(identities['verus']['version']) or '4.12.5' not in str(identities['z3']['version']):
+        raise ValueError('Use the separate Verus 0.2026.02.22.2c9a6a0 and bundled Z3 4.12.5')
+    identities['solver_api'] = api_identity()
+    return identities
+
+
+def validate(root):
+    manifest = read_json(root / 'manifest.json')
+    if manifest['implementation'] != implementation():
+        raise ValueError('Code/prompts changed; use another study directory')
+    for name, expected in manifest['files'].items():
+        if digest((root / name).read_bytes()) != expected:
+            raise ValueError('Frozen input changed: ' + name)
+    return manifest
+
+
+def prepare(args):
+    root = args.study.resolve()
+    if (root / 'manifest.json').exists():
+        manifest = validate(root)
+        if (manifest['task_count'] != args.tasks or
+                manifest.get('selection_sha256') != digest(getattr(args, 'selection', SELECTION).read_bytes())):
+            raise ValueError('Prepared study has another subset size')
+        print('Already prepared:', root)
+        return
+    source()
+    config, identities = configuration(), tools()
+    selection_path = getattr(args, 'selection', SELECTION)
+    rows = selected_cases(args.tasks, selection_path)
+    selected_ids = [row['id'] for row in rows]
+    plan = {'revision': REVISION, 'task_count': args.tasks, 'selected_ids': selected_ids,
+            'selection_sha256': digest(selection_path.read_bytes()), 'config': config,
+            'tool_hashes': {k: tool_signature(v) for k, v in identities.items()}, 'implementation': implementation()}
+    if (root / 'preparation.json').exists() and read_json(root / 'preparation.json') != plan:
+        raise ValueError('Preparation changed; use another output directory')
+    write_json(root / 'preparation.json', plan)
+    write_json(root / 'selected_ids.json', {'revision': REVISION, 'ids': selected_ids})
+    write_json(root / 'selection.json', read_json(selection_path))
+    from transformers import AutoTokenizer
+    if importlib.metadata.version('transformers') != '4.51.3':
+        raise ValueError('Use the pinned cluster runtime')
+    model, revision = model_identity(config)
+    tokenizer = AutoTokenizer.from_pretrained(prepare_model(model, revision), local_files_only=True)
+    tokenizer.model_max_length = 10**12
+    verifier = StudyVerifier(identities['verus']['path'], identities['z3']['path'], config['verification_timeout'])
+    counts, selected = Counter(), []
+    for row in rows:
+        label = row['paper_label']
+        folder = root / 'inputs' / row['id']
+        if not (folder / 'ready.json').exists():
+            task = split_task(row)
+            write_json(folder / 'task.json', {k: v for k, v in task.items() if k != 'reference'})
+            # Published assertion/screens/labels are private audit data, never prompt content.
+            write_json(root / 'private' / (row['id'] + '.json'), row)
+            write_text(folder / 'candidate.rs', render(task, EMPTY))
+            verification = verifier.verify(folder / 'candidate.rs')
+            write_json(folder / 'verification.json', verification)
+            if verification['error_type'] == 'verifier_error':
+                raise ValueError('Verifier infrastructure error; inspect ' + str(folder / 'verification.json'))
+            code = (folder / 'candidate.rs').read_text(encoding='utf-8')
+            internals(folder, code, verification, EMPTY, [], tokenizer, config)
+            write_json(folder / 'ready.json', {'initially_verified': verification['success'],
+                       'published_screens_used': True, 'reference_placebo_restoration_not_rerun': True})
+        selected.append({k: row[k] for k in ('id', 'corpus', 'problem', 'source_path', 'paper_label', 'release_label')})
+        counts[label] += 1
+        print('Prepared', row['id'], label, flush=True)
+    files = {f"inputs/{case['id']}/{name}": digest((root / 'inputs' / case['id'] / name).read_bytes())
+             for case in selected for name in ('task.json', 'candidate.rs', 'verification.json', 'feedback.json', 'ready.json')}
+    files['selected_ids.json'] = digest((root / 'selected_ids.json').read_bytes())
+    files['selection.json'] = digest((root / 'selection.json').read_bytes())
+    manifest = {**plan, 'cases': selected, 'files': files, 'selection_counts': dict(counts),
+                'paper_task_count': 462, 'release_extraction_count': 468,
+                'source_receipt': read_json(SOURCE / 'download-receipt.json'),
+                'scope': 'published essential assertions; no reference/placebo/restoration audit rerun; labels/probes hidden; four total proposals'}
+    write_json(root / 'manifest.json', manifest)
+    print('Prepared', len(selected), 'paired tasks:', root, flush=True)
+
+
+def run_case(root, arm, case, config, inference, verifier):
+    frozen = root / 'inputs' / case['id']
+    task = read_json(frozen / 'task.json')
+    code = (frozen / 'candidate.rs').read_text(encoding='utf-8')
+    verification = read_json(frozen / 'verification.json')
+    if verification['success']:
+        result = {'id': case['id'], 'success': False, 'initially_verified': True, 'attempts': []}
+        write_json(root / arm / case['id'] / 'task.json', result)
+        return result
+    feedback = read_json(frozen / 'feedback.json')
+    action, history, records = dict(EMPTY), [], []
+    for index in range(1, config['max_attempts'] + 1):
+        folder = root / arm / case['id'] / f'attempt_{index:02}'
+        if (folder / 'result.json').exists():
+            result = read_json(folder / 'result.json')
+        else:
+            started = time.perf_counter()
+            payload = feedback['internals'] if arm == 'with_internals' else None
+            prompt = messages(code, verification, action, feedback['context'], payload, history)
+            common = messages(code, verification, action, feedback['context'], None, history)
+            if not fits(code, verification, action, feedback['context'], payload, history, inference.tokenizer, config):
+                raise ValueError('Actual prompt exceeds context; no automatic truncation')
+            request = {'messages': prompt, 'seed': config['seed'] + index, 'parameters': config,
+                'candidate_sha256': digest(code.encode()), 'common_messages_sha256': digest(json.dumps(common, sort_keys=True).encode()),
+                'internals_exposed': bool(payload and payload['queries'])}
+            if (folder / 'request.json').exists() and read_json(folder / 'request.json') != request:
+                raise ValueError('Saved request changed')
+            write_json(folder / 'request.json', request)
+            write_json(folder / 'exposure.json', {'availability': feedback['availability'] if arm == 'with_internals' else 'withheld_by_design',
+                                               'payload': payload, 'context': feedback['context']})
+            if (folder / 'response.json').exists():
+                response = read_json(folder / 'response.json')
+            else:
+                response = inference.generate(prompt, config, request['seed'])
+                write_json(folder / 'response.json', response)
+            write_text(folder / 'rendered_prompt.txt', response['rendered_prompt'])
+            write_text(folder / 'response.txt', response['text'])
+            proposed, edit_error = action, None
+            try:
+                proposed = parse_response(response['text'])
+                new_code = render(task, proposed)
+                unchanged = tokens(new_code) == tokens(code) and proposed['nla'] == action['nla']
+                if unchanged:
+                    raise ValueError('No effective proof/solver-setting change')
+            except (ValueError, KeyError, TypeError) as error:
+                proposed, new_code, unchanged, edit_error = action, code, True, str(error)
+            write_json(folder / 'action.json', proposed)
+            write_text(folder / 'candidate.rs', new_code)
+            checked = verifier.verify(folder / 'candidate.rs', nla=proposed['nla'])
+            write_json(folder / 'verification.json', checked)
+            write_json(folder / 'integrity.json', {'valid': True, 'policy': 'fixed prefix/suffix; validated proof slot; exact checked catalogue law; NLA Boolean only',
+                       'edit_error': edit_error, 'acceptance_requires_whole_file_verus': True})
+            result = {'attempt': index, 'success': checked['success'] and edit_error is None,
+                'unchanged': unchanged, 'edit_error': edit_error, 'error_type': checked['error_type'],
+                'nla_enabled': proposed['nla'], 'law': proposed['law'], 'mechanism': proposed['mechanism'],
+                'input_tokens': response['input_tokens'], 'output_tokens': response['output_tokens'],
+                'truncated': response['truncated'], 'inference_seconds': response['inference_seconds'],
+                'processing_seconds': time.perf_counter() - started, 'internals_exposed': request['internals_exposed']}
+            write_json(folder / 'result.json', result)
+        records.append(result)
+        if result['success']:
+            break
+        code = (folder / 'candidate.rs').read_text(encoding='utf-8')
+        action, verification = read_json(folder / 'action.json'), read_json(folder / 'verification.json')
+        history.append({'attempt': index, 'action': action, 'error_type': result['error_type'],
+                        'edit_error': result['edit_error'], 'unchanged': result['unchanged']})
+        if index < config['max_attempts']:
+            started = time.perf_counter()
+            cache = folder / 'next-feedback.json'
+            if cache.exists():
+                feedback = read_json(cache)
+            else:
+                feedback = internals(folder, code, verification, action, history, inference.tokenizer, config) if arm == 'with_internals' else control_feedback(code, verification)
+                write_json(cache, feedback)
+                result['feedback_seconds'] = time.perf_counter() - started
+                write_json(folder / 'result.json', result)
+    summary = {'id': case['id'], 'success': any(r['success'] for r in records), 'initially_verified': False, 'attempts': records}
+    write_json(root / arm / case['id'] / 'task.json', summary)
+    print(arm, case['id'], 'success' if summary['success'] else 'failed', flush=True)
+    return summary
+
+
+def compare(root):
+    manifest = validate(root)
+    rows, summaries = [], {}
+    for case in manifest['cases']:
+        row = {**case, 'initially_verified': read_json(root / 'inputs' / case['id'] / 'verification.json')['success'],
+               'initial_internals_available': read_json(root / 'inputs' / case['id'] / 'feedback.json')['availability'] == 'available'}
+        requests = []
+        for arm in ARMS:
+            folder = root / arm / case['id']
+            row[arm] = read_json(folder / 'task.json')['success'] if (folder / 'task.json').exists() else None
+            path = folder / 'attempt_01/request.json'
+            requests.append(read_json(path) if path.exists() else None)
+        row['first_pair_valid'] = None
+        if all(requests):
+            a, b = requests
+            expected = digest((root / 'inputs' / case['id'] / 'candidate.rs').read_bytes())
+            row['first_pair_valid'] = (a['candidate_sha256'] == b['candidate_sha256'] == expected
+                and a['common_messages_sha256'] == b['common_messages_sha256']
+                and a['parameters'] == b['parameters'] and a['seed'] == b['seed'] and not b['internals_exposed'])
+        rows.append(row)
+    for arm in ARMS:
+        completed = [read_json(root / arm / c['id'] / 'task.json') for c in manifest['cases'] if (root / arm / c['id'] / 'task.json').exists()]
+        attempts = [a for t in completed for a in t['attempts']]
+        summary = {'expected': len(rows), 'completed': len(completed), 'solved': sum(t['success'] for t in completed),
+            'initially_verified': sum(r['initially_verified'] for r in rows),
+            'repair_denominator': sum(not r['initially_verified'] for r in rows),
+            'solved_by_attempt': {str(k): sum(any(a['success'] and a['attempt'] <= k for a in t['attempts']) for t in completed) for k in range(1, 5)},
+            'attempts': len(attempts), 'unchanged': sum(a['unchanged'] for a in attempts),
+            'edit_errors': dict(Counter(a['edit_error'] for a in attempts if a['edit_error'])),
+            'errors': dict(Counter(a['error_type'] for a in attempts)),
+            'input_tokens': sum(a['input_tokens'] for a in attempts), 'output_tokens': sum(a['output_tokens'] for a in attempts),
+            'truncated': sum(a['truncated'] for a in attempts),
+            'inference_seconds': sum(a['inference_seconds'] for a in attempts),
+            'processing_seconds': sum(a['processing_seconds'] + a.get('feedback_seconds', 0) for a in attempts),
+            'exposed_attempts': sum(a['internals_exposed'] for a in attempts),
+            'by_paper_label': {label: {'expected': sum(r['paper_label'] == label for r in rows),
+                'solved': sum(r['paper_label'] == label and r[arm] is True for r in rows)} for label in LABELS},
+            'missing': [r['id'] for r in rows if r[arm] is None]}
+        summaries[arm] = summary
+        write_json(root / arm / 'summary.json', summary)
+    report = {'summaries': summaries, 'paired': rows, 'complete': all(not s['missing'] for s in summaries.values()),
+        'first_pair_check_passed': all(r['first_pair_valid'] is True for r in rows if not r['initially_verified']),
+        'with_only': [r['id'] for r in rows if r[ARMS[0]] is True and r[ARMS[1]] is False],
+        'without_only': [r['id'] for r in rows if r[ARMS[1]] is True and r[ARMS[0]] is False],
+        'sessions': [read_json(p) for p in root.glob('session-*.json')],
+        'label_disagreements': [r['id'] for r in rows if r['paper_label'] != r['release_label']],
+        'scope': manifest['scope']}
+    write_json(root / 'comparison.json', report)
+    lines = ['# Solver Needs: paired Qwen repair', '', '| Arm | Completed | Solved | Attempts | Unchanged |', '|---|---|---|---|---|']
+    for arm, s in summaries.items():
+        lines.append(f"| {arm} | {s['completed']}/{s['expected']} | {s['solved']} | {s['attempts']} | {s['unchanged']} |")
+    lines += ['', '| Paper label | Selected | With internals | Without internals |', '|---|---|---|---|']
+    for label in LABELS:
+        lines.append(f"| {label} | {summaries[ARMS[0]]['by_paper_label'][label]['expected']} | {summaries[ARMS[0]]['by_paper_label'][label]['solved']} | {summaries[ARMS[1]]['by_paper_label'][label]['solved']} |")
+    lines += ['', f"Complete: {report['complete']}; initial pairs valid: {report['first_pair_check_passed']}",
+        f"Initially verified without a model: {summaries[ARMS[0]]['initially_verified']}; repair denominator: {summaries[ARMS[0]]['repair_denominator']}",
+        'Four TOTAL proposals per task/arm. Labels and successful probes are hidden from model.',
+        'Paper/release label disagreements and exclusive wins are listed in comparison.json.',
+        'AX catalogue lemmas are checked, not unchecked axioms. NLA changes are explicit experimental actions.']
+    write_text(root / 'comparison.md', '\n'.join(lines))
+    print(root / 'comparison.md', flush=True)
+    return report
+
+
+def run(args):
+    source()  # Validate the pinned upstream files used by the catalogue/renderer.
+    root = args.study.resolve()
+    manifest, identities = validate(root), tools()
+    if {k: tool_signature(v) for k, v in identities.items()} != manifest['tool_hashes']:
+        raise ValueError('Prepared inputs and run use different tool binaries/API')
+    config = manifest['config']
+    versions = {p: importlib.metadata.version(p) for p in ('vllm', 'transformers', 'torch')}
+    if versions['vllm'] != '0.8.5' or versions['transformers'] != '4.51.3':
+        raise ValueError('Use the pinned GPU dependencies')
+    import torch
+    device = torch.cuda.get_device_properties(0)
+    gpu = {'name': device.name, 'memory_bytes': device.total_memory, 'uuid': str(getattr(device, 'uuid', ''))}
+    fingerprint = digest(json.dumps({'manifest': digest((root / 'manifest.json').read_bytes()), 'versions': versions,
+        'gpu_class': device.name, 'requirements': digest((ROOT / 'requirements-cluster.txt').read_bytes())}, sort_keys=True).encode())
+    if (root / 'run.json').exists() and read_json(root / 'run.json')['fingerprint'] != fingerprint:
+        raise ValueError('Runtime/GPU class changed; resume on the same class or use another output')
+    write_json(root / 'run.json', {'fingerprint': fingerprint, 'config': config, 'versions': versions,
+        'python': sys.version, 'platform': platform.platform(), 'gpu': gpu, 'tools': identities,
+        'solver_api_scope': 'same Z3 version; separate instrumented diagnostic library; not original search'})
+    pending = [(i, c) for i, c in enumerate(manifest['cases']) if any(not (root / a / c['id'] / 'task.json').exists() for a in ARMS)]
+    for _, case in pending:
+        if read_json(root / 'inputs' / case['id'] / 'verification.json')['success']:
+            for arm in ARMS:
+                run_case(root, arm, case, config, None, None)
+    pending = [(i, c) for i, c in pending if any(not (root / a / c['id'] / 'task.json').exists() for a in ARMS)]
+    if not pending:
+        compare(root)
+        return 0
+    started = time.perf_counter()
+    inference = LocalVLLM(config)
+    session = {'model_load_seconds': time.perf_counter() - started, 'gpu': gpu}
+    session_path = root / f'session-{time.time_ns()}.json'
+    write_json(session_path, session)
+    verifier = StudyVerifier(identities['verus']['path'], identities['z3']['path'], config['verification_timeout'])
+    try:
+        for index, case in pending:
+            for arm in (ARMS if index % 2 == 0 else ARMS[::-1]):
+                if (root / arm / case['id'] / 'task.json').exists():
+                    continue
+                try:
+                    run_case(root, arm, case, config, inference, verifier)
+                except Exception as error:
+                    write_json(root / arm / case['id'] / 'error.json', {'error': str(error), 'type': type(error).__name__})
+                    print(arm, case['id'], 'infrastructure error:', error, flush=True)
+    finally:
+        session['wall_seconds'] = time.perf_counter() - started
+        write_json(session_path, session)
+        report = compare(root)
+    return 0 if report['complete'] and report['first_pair_check_passed'] else 1
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=('prepare', 'run', 'compare'))
+    parser.add_argument('--study', required=True, type=Path)
+    parser.add_argument('--tasks', type=int, default=100)
+    parser.add_argument('--selection', type=Path, default=SELECTION)
+    args = parser.parse_args()
+    if not 1 <= args.tasks <= 462:
+        parser.error('tasks must be between 1 and 462 (and fit the saved selection)')
+    with run_lock(args.study.resolve()):
+        if args.command == 'prepare':
+            prepare(args)
+        elif args.command == 'run':
+            return run(args)
+        else:
+            compare(args.study.resolve())
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

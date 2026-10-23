@@ -1,0 +1,2364 @@
+{
+  "scope": "saved artifacts only; no solver or inference execution",
+  "counts": {
+    "frozen_input_hashes_checked": 570,
+    "initial_annotation_cases": 17,
+    "initial_any_candidate_group_cases": 20,
+    "with_internals_success_on_initial_annotation_cases": 1,
+    "without_internals_success_on_initial_annotation_cases": 1,
+    "actual_first_pairs_validated": 114,
+    "available_first_responses_identical": 20,
+    "available_first_codes_identical": 26,
+    "unavailable_first_responses_identical": 37,
+    "unavailable_first_codes_identical": 37
+  },
+  "identical_prompt_different_response_cases": [
+    "diffy_brs5",
+    "diffy_brs4"
+  ],
+  "arms": {
+    "with_internals": {
+      "counts": {
+        "E0308_attempts": 53,
+        "exposed_unchanged": 22,
+        "result_unknown": 125,
+        "reason_(incomplete quantifiers)": 117,
+        "reason_(incomplete (theory arithmetic))": 8
+      },
+      "integrity_statuses": {
+        "valid": 208,
+        "unparseable": 16
+      },
+      "E0308_problems": 35,
+      "syntax_problems": 10,
+      "distinct_exposed_problems": 78,
+      "max_input_tokens": 31688,
+      "groups_total": 1312,
+      "groups_max": 19,
+      "instances_total": 2019,
+      "instances_max": 30,
+      "replay_time_min_median_max": [
+        0.02,
+        0.108,
+        0.299
+      ]
+    },
+    "without_internals": {
+      "counts": {
+        "E0308_attempts": 47,
+        "exposed_unchanged": 0
+      },
+      "integrity_statuses": {
+        "valid": 208,
+        "unparseable": 14
+      },
+      "E0308_problems": 30,
+      "syntax_problems": 8,
+      "distinct_exposed_problems": 0,
+      "max_input_tokens": 9693,
+      "groups_total": 0,
+      "groups_max": 0,
+      "instances_total": 0,
+      "instances_max": 0,
+      "replay_time_min_median_max": null
+    }
+  },
+  "successes": [
+    {
+      "id": "mbpp_task_id_760",
+      "arm": "with_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_760",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_8",
+      "arm": "with_internals",
+      "repair": 2,
+      "internals_available": true
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "arm": "with_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "arm": "with_internals",
+      "repair": 2,
+      "internals_available": true
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "arm": "without_internals",
+      "repair": 2,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_477",
+      "arm": "with_internals",
+      "repair": 2,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_477",
+      "arm": "without_internals",
+      "repair": 2,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "arm": "with_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "arm": "with_internals",
+      "repair": 1,
+      "internals_available": true
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "misc_trigger",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    },
+    {
+      "id": "mbpp_task_id_472",
+      "arm": "without_internals",
+      "repair": 1,
+      "internals_available": false
+    }
+  ],
+  "paired": [
+    {
+      "id": "misc_remove_all_greater",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_sum",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_760",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "misc_linearsearch",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_8",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_426",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_basic_nonlinear",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_161",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_605",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_condn",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_414",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_578",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_brs1",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_ms4",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_290",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_brs5",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_769",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_644",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "misc_binary_search",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s1lif",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_reverse",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_62",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_399",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_deduplicate",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_809",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_616",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_807",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "cloverbench_array_append_strong",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s1if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_choose_odd",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "cloverbench_array_copy_strong",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_273",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_ms3",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_fib",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "mbpp_task_id_251",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_461",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "misc_map",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_cell_2_sum",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_findmax",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_condg",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_brs3",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "mbpp_task_id_460",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_764",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_142",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_240",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_477",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_798",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_610",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_len_intersect",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "mbpp_task_id_629",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_588",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_586",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "diffy_res2",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_70",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_conda",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "mbpp_task_id_105",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": true,
+      "with_internals_final_error": null,
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "misc_bubble",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_282",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_431",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_s4lif",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_brs4",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_trigger",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "diffy_ms5",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_s3if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_94",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_412",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_simple_nested",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_728",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_133",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "cloverbench_array_sum_strong",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_424",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_tail_triangle",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "cloverbench_all_digits_strong",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_s52if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_476",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_s5lif",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_579",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_arg_free",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_condm",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_s2if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_brs2",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_261",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s22if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "diffy_sina3",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "diffy_sina2",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "misc_conditional_average",
+      "initial_available": true,
+      "initial_annotation": true,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "diffy_s4if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_472",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": true,
+      "without_internals_final_error": null
+    },
+    {
+      "id": "mbpp_task_id_445",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "mbpp_task_id_262",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_res1o",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_743",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "cloverbench_two_sum",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s12if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "syntax",
+      "without_internals": false,
+      "without_internals_final_error": "syntax"
+    },
+    {
+      "id": "mbpp_task_id_170",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_sina4",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_res1",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "compilation",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_sina5",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_sina1",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_res2o",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s5if",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s3lif",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    },
+    {
+      "id": "misc_filter",
+      "initial_available": false,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "mbpp_task_id_436",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "verification"
+    },
+    {
+      "id": "diffy_s2lif",
+      "initial_available": true,
+      "initial_annotation": false,
+      "with_internals": false,
+      "with_internals_final_error": "verification",
+      "without_internals": false,
+      "without_internals_final_error": "compilation"
+    }
+  ],
+  "comparison": {
+    "summaries": {
+      "with_internals": {
+        "mode": "with_internals",
+        "expected_cases": 114,
+        "completed_cases": 114,
+        "solved": 7,
+        "success_after_repairs": {
+          "1": 4,
+          "2": 7
+        },
+        "attempts": 224,
+        "unchanged": 46,
+        "invalid_local_edits": 46,
+        "no_editable_sites": 0,
+        "compilation_or_syntax_attempts": 102,
+        "transitions": {
+          "verification -> verification": 97,
+          "compilation -> None": 4,
+          "verification -> syntax": 6,
+          "syntax -> syntax": 6,
+          "verification -> None": 3,
+          "compilation -> compilation": 60,
+          "verification -> compilation": 26,
+          "compilation -> syntax": 4,
+          "compilation -> verification": 18
+        },
+        "errors": {
+          "verification": 115,
+          "null": 7,
+          "syntax": 16,
+          "compilation": 86
+        },
+        "integrity_rejections": 16,
+        "input_tokens": 2629566,
+        "output_tokens": 19098,
+        "inference_seconds": 1168.148802275071,
+        "processing_seconds": 4656.320921957376,
+        "internals": {
+          "feedbacks": 224,
+          "available": 125,
+          "with_candidate_groups": 38,
+          "group_categories": {
+            "candidate_annotation": 46,
+            "operation_related_library": 768,
+            "other_background": 248,
+            "representation": 238,
+            "candidate_definition": 12
+          },
+          "withheld_by_design": 0
+        },
+        "missing_cases": [],
+        "edit_error_reasons": {
+          "No effective token change": 40,
+          "Only replace the invariant list": 6
+        }
+      },
+      "without_internals": {
+        "mode": "without_internals",
+        "expected_cases": 114,
+        "completed_cases": 114,
+        "solved": 8,
+        "success_after_repairs": {
+          "1": 6,
+          "2": 8
+        },
+        "attempts": 222,
+        "unchanged": 59,
+        "invalid_local_edits": 59,
+        "no_editable_sites": 0,
+        "compilation_or_syntax_attempts": 102,
+        "transitions": {
+          "verification -> verification": 98,
+          "compilation -> None": 4,
+          "verification -> compilation": 29,
+          "compilation -> verification": 14,
+          "compilation -> compilation": 61,
+          "compilation -> syntax": 4,
+          "verification -> None": 4,
+          "syntax -> syntax": 4,
+          "verification -> syntax": 4
+        },
+        "errors": {
+          "verification": 112,
+          "null": 8,
+          "compilation": 90,
+          "syntax": 12
+        },
+        "integrity_rejections": 14,
+        "input_tokens": 1430461,
+        "output_tokens": 18691,
+        "inference_seconds": 860.6005071104737,
+        "processing_seconds": 4188.618273168686,
+        "internals": {
+          "feedbacks": 222,
+          "available": 0,
+          "with_candidate_groups": 0,
+          "group_categories": {},
+          "withheld_by_design": 222
+        },
+        "missing_cases": [],
+        "edit_error_reasons": {
+          "No effective token change": 54,
+          "Only replace the invariant list": 4,
+          "Replacement must be exactly one proof block": 1
+        }
+      }
+    },
+    "paired": [
+      {
+        "id": "misc_remove_all_greater",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "cloverbench_is_prime",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_sum",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_760",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_linearsearch",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_8",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": true,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_426",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_basic_nonlinear",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_161",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_605",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_condn",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_414",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_578",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_3",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_brs1",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_ms4",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_array_concat_strong",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_290",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_brs5",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_769",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_644",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_557",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_binary_search",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s1lif",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_reverse",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_62",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_399",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_deduplicate",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_809",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_616",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_807",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_array_append_strong",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s1if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_choose_odd",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_array_copy_strong",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_273",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_ms3",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_fib",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_251",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_461",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_457",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_map",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_cell_2_sum",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_findmax",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_condg",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_brs3",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_460",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_764",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_554",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_142",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_240",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_477",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_array_product_strong",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_798",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_610",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_len_intersect",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_629",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_588",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_586",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_145",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_res2",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_70",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_conda",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_105",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_cal_div",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": true,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_bubble",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_282",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_431",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_s4lif",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_brs4",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_trigger",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_ms5",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_s3if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_94",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_412",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_simple_nested",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_728",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_133",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "cloverbench_array_sum_strong",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_424",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_tail_triangle",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "cloverbench_all_digits_strong",
+        "category": "CloverBench",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_s52if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_476",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_s5lif",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_579",
+        "category": "MBPP",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "misc_arg_free",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_condm",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "diffy_s2if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_brs2",
+        "category": "Diffy",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_261",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s22if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_sina3",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_sina2",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_conditional_average",
+        "category": "Misc",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s4if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_472",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": true,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_445",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_262",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_res1o",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_743",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "cloverbench_two_sum",
+        "category": "CloverBench",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s12if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "mbpp_task_id_170",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_sina4",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_res1",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_sina5",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_sina1",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_res2o",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s5if",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s3lif",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "misc_filter",
+        "category": "Misc",
+        "initial_internals_available": false,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": true
+      },
+      {
+        "id": "mbpp_task_id_436",
+        "category": "MBPP",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      },
+      {
+        "id": "diffy_s2lif",
+        "category": "Diffy",
+        "initial_internals_available": true,
+        "with_internals": false,
+        "without_internals": false,
+        "first_pair_valid": true,
+        "first_prompts_identical": false
+      }
+    ],
+    "strata": {
+      "initial_internals_available": {
+        "expected": 75,
+        "with_internals": 3,
+        "without_internals": 4,
+        "completed_pairs": 75
+      },
+      "initial_internals_unavailable": {
+        "expected": 39,
+        "with_internals": 4,
+        "without_internals": 4,
+        "completed_pairs": 39
+      }
+    },
+    "complete": true,
+    "first_pair_check_passed": true,
+    "with_only": [
+      "mbpp_task_id_8"
+    ],
+    "without_only": [
+      "misc_trigger",
+      "mbpp_task_id_472"
+    ],
+    "shared_model_load_seconds": 1517.7059082359774,
+    "sessions": [
+      {
+        "model_load_seconds": 1517.7059082359774,
+        "gpu": {
+          "name": "NVIDIA L40S",
+          "memory_bytes": 47665709056,
+          "compute_capability": [
+            8,
+            9
+          ],
+          "cuda_build": "12.4"
+        },
+        "gpu_uuid": "270b465d-de85-51c6-b1d1-3247681ef02d",
+        "wall_seconds": 10443.325722826994
+      }
+    ],
+    "scope": "localized repair in both arms on the same saved failures; not a full 150-task generation run"
+  }
+}

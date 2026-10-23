@@ -1,0 +1,779 @@
+{
+  "archive": "download_2026-10-19_19-30-13.zip",
+  "controls": [
+    {
+      "name": "sat_arithmetic",
+      "scope": "standalone SMT control; not a captured Verus query",
+      "expected": "sat",
+      "cli": {
+        "scope": "same-binary replay; search history is not preserved",
+        "result": "sat",
+        "timeout_ms": 5000,
+        "timed_out": false,
+        "returncode": 0,
+        "sections_available": true,
+        "seconds": 0.024034056928940117,
+        "reason_available": true,
+        "model_available": true,
+        "statistics_available": true,
+        "values_available": true,
+        "model_is_confirmed_sat": true
+      },
+      "api": {
+        "mode": "api",
+        "scope": "API replay, not the original Verus call",
+        "timeout_ms": 5000,
+        "forced_rlimit": null,
+        "clauses_observed": 3,
+        "instantiations_observed": 0,
+        "events_saved": 3,
+        "instantiations_saved": 0,
+        "rules_observed": {
+          "assumption": 2,
+          "smt": 1
+        },
+        "sampled_buckets": {
+          "assumptions": 2,
+          "other_inferences": 1
+        },
+        "callback_errors": 0,
+        "status": "completed",
+        "phase": "finished",
+        "z3_version": "4.12.5",
+        "z3_python_path": "/tmp/verus-native-6082-FH29IB1A/z3-probe/z3py/z3/__init__.py",
+        "original_tactic_not_reproduced": false,
+        "candidate_models_enabled": false,
+        "result": "sat",
+        "seconds": 0.002901732921600342,
+        "reason_unknown": null,
+        "statistics": {
+          "final checks": 1,
+          "added eqs": 1,
+          "num checks": 1,
+          "mk bool var": 2,
+          "arith-lower": 1,
+          "arith-upper": 1,
+          "arith-fixed-eqs": 1,
+          "arith-make-feasible": 1,
+          "arith-max-columns": 5,
+          "num allocs": 492592,
+          "rlimit count": 86,
+          "max memory": 21.8,
+          "memory": 21.8,
+          "time": 0.002
+        },
+        "events_omitted": 0,
+        "instantiations_omitted": 0,
+        "model_bytes": 25,
+        "model_status": "sat_model",
+        "assertions_evaluated_true_in_model": 2,
+        "assertion_count": 2
+      },
+      "stability": {
+        "runs": [
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.020903912954963744,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          },
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.019927210989408195,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          },
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.020312362001277506,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          }
+        ],
+        "results": [
+          "sat",
+          "sat",
+          "sat"
+        ],
+        "consistent_observed_results": true,
+        "scope": "repeated CLI replays, not identical search traces or validated models"
+      },
+      "payload_sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic/query.smt2",
+          "available": true,
+          "characters": 94,
+          "bytes": 94,
+          "tokens": 34
+        },
+        "model_sat_model": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic/api/model.smt2",
+          "available": true,
+          "characters": 25,
+          "bytes": 25,
+          "tokens": 11
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic/api/instantiations.jsonl",
+          "available": true,
+          "characters": 0,
+          "bytes": 0,
+          "tokens": 0
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 174,
+          "bytes": 174,
+          "tokens": 64
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic/cli.statistics.txt",
+          "available": true,
+          "characters": 185,
+          "bytes": 185,
+          "tokens": 72
+        },
+        "preview": {
+          "characters": 830,
+          "bytes": 830,
+          "tokens": 265
+        }
+      },
+      "folder": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_arithmetic"
+    },
+    {
+      "name": "sat_quantified",
+      "scope": "standalone SMT control; not a captured Verus query",
+      "expected": "sat",
+      "cli": {
+        "scope": "same-binary replay; search history is not preserved",
+        "result": "sat",
+        "timeout_ms": 5000,
+        "timed_out": false,
+        "returncode": 0,
+        "sections_available": true,
+        "seconds": 0.025368422036990523,
+        "reason_available": true,
+        "model_available": true,
+        "statistics_available": true,
+        "values_available": true,
+        "model_is_confirmed_sat": true
+      },
+      "api": {
+        "mode": "api",
+        "scope": "API replay, not the original Verus call",
+        "timeout_ms": 5000,
+        "forced_rlimit": null,
+        "clauses_observed": 7,
+        "instantiations_observed": 1,
+        "events_saved": 7,
+        "instantiations_saved": 1,
+        "rules_observed": {
+          "assumption": 2,
+          "inst": 1,
+          "smt": 4
+        },
+        "sampled_buckets": {
+          "assumptions": 2,
+          "instantiations": 1,
+          "other_inferences": 4
+        },
+        "callback_errors": 0,
+        "status": "completed",
+        "phase": "finished",
+        "z3_version": "4.12.5",
+        "z3_python_path": "/tmp/verus-native-6082-FH29IB1A/z3-probe/z3py/z3/__init__.py",
+        "original_tactic_not_reproduced": false,
+        "candidate_models_enabled": false,
+        "result": "sat",
+        "seconds": 0.007068542996421456,
+        "reason_unknown": null,
+        "statistics": {
+          "final checks": 1,
+          "added eqs": 3,
+          "max generation": 1,
+          "num checks": 1,
+          "mk bool var": 5,
+          "quant instantiations": 1,
+          "arith eq adapter": 1,
+          "arith-lower": 1,
+          "arith-upper": 1,
+          "arith-make-feasible": 3,
+          "arith-max-columns": 5,
+          "num allocs": 635201,
+          "rlimit count": 222,
+          "max memory": 22.43,
+          "memory": 22.43,
+          "time": 0.006
+        },
+        "events_omitted": 0,
+        "instantiations_omitted": 0,
+        "model_bytes": 34,
+        "model_status": "sat_model",
+        "assertions_evaluated_true_in_model": 2,
+        "assertion_count": 2
+      },
+      "stability": {
+        "runs": [
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.022672376944683492,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          },
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.02168451203033328,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          },
+          {
+            "scope": "same-binary replay; search history is not preserved",
+            "result": "sat",
+            "timeout_ms": 5000,
+            "timed_out": false,
+            "returncode": 0,
+            "sections_available": true,
+            "seconds": 0.02112317702267319,
+            "reason_available": true,
+            "model_available": true,
+            "statistics_available": true,
+            "values_available": true,
+            "model_is_confirmed_sat": true
+          }
+        ],
+        "results": [
+          "sat",
+          "sat",
+          "sat"
+        ],
+        "consistent_observed_results": true,
+        "scope": "repeated CLI replays, not identical search traces or validated models"
+      },
+      "payload_sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified/query.smt2",
+          "available": true,
+          "characters": 165,
+          "bytes": 165,
+          "tokens": 60
+        },
+        "model_sat_model": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified/api/model.smt2",
+          "available": true,
+          "characters": 34,
+          "bytes": 34,
+          "tokens": 16
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified/api/instantiations.jsonl",
+          "available": true,
+          "characters": 581,
+          "bytes": 581,
+          "tokens": 214
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 794,
+          "bytes": 794,
+          "tokens": 316
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified/cli.statistics.txt",
+          "available": true,
+          "characters": 343,
+          "bytes": 343,
+          "tokens": 123
+        },
+        "preview": {
+          "characters": 2249,
+          "bytes": 2249,
+          "tokens": 808
+        }
+      },
+      "folder": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/controls/sat_quantified"
+    }
+  ],
+  "cases": [
+    {
+      "case": "verus_arithmetic_control",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 2,
+        "unknown": 1
+      },
+      "result": "unknown",
+      "reason": "(incomplete quantifiers)",
+      "api_seconds": 1.1333363440353423,
+      "observed_rules": {
+        "assumption": 92,
+        "tseitin": 246,
+        "smt": 1,
+        "del": 1
+      },
+      "saved_other_rules": {
+        "tseitin": 100
+      },
+      "instantiations_observed": 0,
+      "instantiations_saved": 0,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/verus_arithmetic_control/query-00/query.smt2",
+          "available": true,
+          "characters": 19211,
+          "bytes": 19211,
+          "tokens": 6682
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/verus_arithmetic_control/query-00/api/model.smt2",
+          "available": true,
+          "characters": 3507,
+          "bytes": 3507,
+          "tokens": 1481
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/verus_arithmetic_control/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 0,
+          "bytes": 0,
+          "tokens": 0
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/verus_arithmetic_control/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 1650318,
+          "bytes": 1650318,
+          "tokens": 433874
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/verus_arithmetic_control/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 414,
+          "bytes": 414,
+          "tokens": 157
+        },
+        "preview": {
+          "characters": 13940,
+          "bytes": 13940,
+          "tokens": 4561
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    },
+    {
+      "case": "cloverbench_array_copy_strong",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 4,
+        "unknown": 2
+      },
+      "result": "unknown",
+      "reason": "(incomplete quantifiers)",
+      "api_seconds": 0.3514272039756179,
+      "observed_rules": {
+        "assumption": 595,
+        "smt": 262,
+        "tseitin": 656,
+        "inst": 104,
+        "del": 4,
+        "rup": 46
+      },
+      "saved_other_rules": {
+        "smt": 18,
+        "tseitin": 82
+      },
+      "instantiations_observed": 104,
+      "instantiations_saved": 100,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/cloverbench_array_copy_strong/query-00/query.smt2",
+          "available": true,
+          "characters": 118848,
+          "bytes": 118848,
+          "tokens": 42673
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/cloverbench_array_copy_strong/query-00/api/model.smt2",
+          "available": true,
+          "characters": 22975,
+          "bytes": 22975,
+          "tokens": 8929
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/cloverbench_array_copy_strong/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 256448,
+          "bytes": 256448,
+          "tokens": 83648
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/cloverbench_array_copy_strong/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 134913,
+          "bytes": 134913,
+          "tokens": 50395
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/cloverbench_array_copy_strong/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 1039,
+          "bytes": 1039,
+          "tokens": 330
+        },
+        "preview": {
+          "characters": 18577,
+          "bytes": 18577,
+          "tokens": 6449
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    },
+    {
+      "case": "diffy_condn",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 4,
+        "unknown": 8
+      },
+      "result": "unknown",
+      "reason": "(incomplete quantifiers)",
+      "api_seconds": 0.3238398210378364,
+      "observed_rules": {
+        "assumption": 572,
+        "tseitin": 617,
+        "inst": 96,
+        "smt": 228,
+        "rup": 46,
+        "del": 4
+      },
+      "saved_other_rules": {
+        "tseitin": 92,
+        "smt": 8
+      },
+      "instantiations_observed": 96,
+      "instantiations_saved": 96,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/diffy_condn/query-00/query.smt2",
+          "available": true,
+          "characters": 114544,
+          "bytes": 114544,
+          "tokens": 41233
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/diffy_condn/query-00/api/model.smt2",
+          "available": true,
+          "characters": 20938,
+          "bytes": 20938,
+          "tokens": 8084
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/diffy_condn/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 201600,
+          "bytes": 201600,
+          "tokens": 66061
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/diffy_condn/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 100333,
+          "bytes": 100333,
+          "tokens": 42002
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/diffy_condn/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 1037,
+          "bytes": 1037,
+          "tokens": 328
+        },
+        "preview": {
+          "characters": 18575,
+          "bytes": 18575,
+          "tokens": 6824
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    },
+    {
+      "case": "mbpp_task_id_3",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 4,
+        "unknown": 1
+      },
+      "result": "unknown",
+      "reason": "(incomplete (theory arithmetic))",
+      "api_seconds": 0.9286120979813859,
+      "observed_rules": {
+        "assumption": 113,
+        "tseitin": 426,
+        "smt": 81,
+        "inst": 6,
+        "del": 5,
+        "rup": 4
+      },
+      "saved_other_rules": {
+        "tseitin": 100
+      },
+      "instantiations_observed": 6,
+      "instantiations_saved": 6,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_3/query-00/query.smt2",
+          "available": true,
+          "characters": 22876,
+          "bytes": 22876,
+          "tokens": 7684
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_3/query-00/api/model.smt2",
+          "available": true,
+          "characters": 4020,
+          "bytes": 4020,
+          "tokens": 1690
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_3/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 9373,
+          "bytes": 9373,
+          "tokens": 3667
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_3/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 1649922,
+          "bytes": 1649922,
+          "tokens": 429018
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_3/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 1001,
+          "bytes": 1001,
+          "tokens": 312
+        },
+        "preview": {
+          "characters": 18547,
+          "bytes": 18547,
+          "tokens": 6214
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    },
+    {
+      "case": "mbpp_task_id_170",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 4,
+        "unknown": 4
+      },
+      "result": "unknown",
+      "reason": "(incomplete quantifiers)",
+      "api_seconds": 0.3176971370121464,
+      "observed_rules": {
+        "assumption": 1098,
+        "tseitin": 1189,
+        "smt": 301,
+        "inst": 157,
+        "del": 4,
+        "rup": 93
+      },
+      "saved_other_rules": {
+        "tseitin": 99,
+        "smt": 1
+      },
+      "instantiations_observed": 157,
+      "instantiations_saved": 100,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_170/query-00/query.smt2",
+          "available": true,
+          "characters": 215090,
+          "bytes": 215090,
+          "tokens": 79661
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_170/query-00/api/model.smt2",
+          "available": true,
+          "characters": 38723,
+          "bytes": 38723,
+          "tokens": 15375
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_170/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 136894,
+          "bytes": 136894,
+          "tokens": 42858
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_170/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 107348,
+          "bytes": 107348,
+          "tokens": 43363
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/mbpp_task_id_170/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 1072,
+          "bytes": 1072,
+          "tokens": 342
+        },
+        "preview": {
+          "characters": 18610,
+          "bytes": 18610,
+          "tokens": 6917
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    },
+    {
+      "case": "misc_arg_free",
+      "original_counts": {
+        "sat": 0,
+        "unsat": 6,
+        "unknown": 3
+      },
+      "result": "unknown",
+      "reason": "(incomplete quantifiers)",
+      "api_seconds": 0.8319012330612168,
+      "observed_rules": {
+        "assumption": 113,
+        "tseitin": 310,
+        "smt": 48,
+        "inst": 9,
+        "del": 3,
+        "rup": 1
+      },
+      "saved_other_rules": {
+        "tseitin": 100
+      },
+      "instantiations_observed": 9,
+      "instantiations_saved": 9,
+      "model_status": "unvalidated_candidate_after_unknown",
+      "sizes": {
+        "query_smt": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/misc_arg_free/query-00/query.smt2",
+          "available": true,
+          "characters": 18871,
+          "bytes": 18871,
+          "tokens": 6611
+        },
+        "model_unvalidated_candidate_after_unknown": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/misc_arg_free/query-00/api/model.smt2",
+          "available": true,
+          "characters": 3905,
+          "bytes": 3905,
+          "tokens": 1690
+        },
+        "quantifier_instances": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/misc_arg_free/query-00/api/instantiations.jsonl",
+          "available": true,
+          "characters": 12773,
+          "bytes": 12773,
+          "tokens": 5145
+        },
+        "search_inferences": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/misc_arg_free/query-00/api/search-inferences.jsonl",
+          "available": true,
+          "characters": 1650318,
+          "bytes": 1650318,
+          "tokens": 433874
+        },
+        "statistics": {
+          "file": "/mnt/users/mariana.soares/code_verification/results/z3-exposure/job-6082/verus-cases/misc_arg_free/query-00/cli.statistics.txt",
+          "available": true,
+          "characters": 875,
+          "bytes": 875,
+          "tokens": 271
+        },
+        "preview": {
+          "characters": 18413,
+          "bytes": 18413,
+          "tokens": 6339
+        }
+      },
+      "repeated_results": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ]
+    }
+  ],
+  "real_query_counts": {
+    "sat": 0,
+    "unsat": 22,
+    "unknown": 18
+  }
+}

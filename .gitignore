@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+references/
+results/
+*.egg-info/
+tools/lynette/source/target/
+slurm-*.out
+.pytest_cache/
+cluster.env
+dist/
+.cluster/
+logs/

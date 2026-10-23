@@ -1,0 +1,23 @@
+{
+  "note": "Lexical gate only; these are not revalidated successes. Real Verus and Lynette still required.",
+  "archives": {
+    "download_2026-10-19_08-09-53.zip": {
+      "counts": {
+        "original_invalid_attempts": 65,
+        "now_pass_lexical_gate": 62
+      },
+      "remaining_reasons": {
+        "Forbidden trusted/bypass construct: assume": 3
+      }
+    },
+    "download_2026-10-19_12-48-06.zip": {
+      "counts": {
+        "original_invalid_attempts": 50,
+        "now_pass_lexical_gate": 31
+      },
+      "remaining_reasons": {
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: [].": 19
+      }
+    }
+  }
+}

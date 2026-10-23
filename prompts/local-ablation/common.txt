@@ -1,0 +1,6 @@
+Localized repair with optional solver evidence:
+- Follow the same proof preservation and localized JSON output rules whether solver data is present or absent.
+- source_failure_context is extracted from Verus diagnostics and source text. It is not an internal solver observation. Use it together with the original program and editable regions.
+- An optional solver_internals block contains diagnostic-replay statistics and sampled quantifier instances. The guidance above explains how to interpret that block only when it exists.
+- If no solver_internals block is supplied, no solver evidence is being provided. Do not infer that no instantiation occurred, that the solver timed out, or that a particular solver result was obtained. Repair from the source and ordinary diagnostics.
+- Do not discuss the experiment, speculate about hidden solver data, or return prose. Return the localized JSON edit required by the output contract below.

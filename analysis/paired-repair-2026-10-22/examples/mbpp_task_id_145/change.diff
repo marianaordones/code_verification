@@ -1,0 +1,21 @@
+--- before.rs
++++ after.rs
+@@ -17,12 +17,12 @@
+     let mut index = 1;
+     while index < arr.len()
+         invariant
+-            0 <= index <= arr.len(),
+-            min_val == old(arr)[0] || exists|i: int| 0 <= i < index && old(arr)[i] == min_val,
+-            max_val == old(arr)[0] || exists|i: int| 0 <= i < index && old(arr)[i] == max_val,
+-            forall|i: int| 0 <= i < index ==> old(arr)[i] <= max_val,
+-            forall|i: int| 0 <= i < index ==> old(arr)[i] >= min_val,
+-    {
++    0 <= index <= arr.len(),
++    min_val == arr@[0] || exists|i: int| 0 <= i < index && arr@[i] == min_val,
++    max_val == arr@[0] || exists|i: int| 0 <= i < index && arr@[i] == max_val,
++    forall|i: int| 0 <= i < index ==> arr@[i] <= max_val,
++    forall|i: int| 0 <= i < index ==> arr@[i] >= min_val,
++{
+         if (arr[index] < min_val) {
+             min_val = arr[index];
+         } else if (arr[index] > max_val) {

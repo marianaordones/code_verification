@@ -1,0 +1,128 @@
+{
+  "schema": "z3-internals-v1",
+  "scope": "diagnostic_api_replay_not_original_search",
+  "availability": "available",
+  "original_query_counts": {
+    "sat": 0,
+    "unsat": 4,
+    "unknown": 1,
+    "timeout": 0
+  },
+  "capture_errors": 0,
+  "query_id": "query-0000",
+  "original_result": "unknown",
+  "replay_result": "unknown",
+  "reason_unknown": "(incomplete (theory arithmetic))",
+  "replay_timeout_ms": 5000,
+  "unavailability_reason": null,
+  "statistics": {
+    "quant instantiations": 6,
+    "conflicts": 2,
+    "decisions": 4,
+    "propagations": 174,
+    "arith conflicts": 1,
+    "rlimit count": 16841,
+    "time": 0.029
+  },
+  "sampling": {
+    "instantiations_observed": 6,
+    "instantiations_saved": 6,
+    "callback_errors": 0,
+    "groups_in_prompt": 5,
+    "instances_in_prompt": 6,
+    "policy": "first fitting events; at most 10 distinct quantifiers and 3 instances each; complete formulas only"
+  },
+  "quantifiers": [
+    {
+      "id": "Q1",
+      "quantifier_smt": "(forall ((bits Int) (i Int))\n  (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n     (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n       (not a!2)))\n     :pattern ((uInv bits i))\n     :skolemid skolem_prelude_u_inv\n     :qid prelude_u_inv))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "n!"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n            (not a!2)))\n          :pattern ((uInv bits i))\n          :skolemid skolem_prelude_u_inv\n          :qid prelude_u_inv)))",
+            "(let ((a!1 (or (not (>= n! 0)) (<= (+ (uHi 64) (* (- 1) n!)) 0))))\n  (not (= a!1 (uInv 64 n!))))"
+          ]
+        },
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "index@0"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!2 (= (or (not (>= i 0)) a!1) (uInv bits i))))\n            (not a!2)))\n          :pattern ((uInv bits i))\n          :skolemid skolem_prelude_u_inv\n          :qid prelude_u_inv)))",
+            "(let ((a!1 (or (not (>= index@0 0)) (<= (+ (uHi 64) (* (- 1) index@0)) 0))))\n  (not (= a!1 (uInv 64 index@0))))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "quantifier_smt": "(forall ((id FuelId))\n  (! (= (fuel_bool id) (fuel_bool_default id))\n     :pattern ((fuel_bool id))\n     :skolemid skolem_prelude_fuel_defaults\n     :qid prelude_fuel_defaults))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "fuel%candidate!is_divisible."
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+            "(= (fuel_bool fuel%candidate!is_divisible.)\n   (fuel_bool_default fuel%candidate!is_divisible.))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "quantifier_smt": "(forall ((bits Int) (i Int))\n  (! (let ((a!1 (>= (+ (uClip bits i) (* (- 1) (uHi bits))) 0))\n           (a!2 (>= (+ i (* (- 1) (uHi bits))) 0)))\n     (let ((a!3 (not (or (not (>= i 0)) a!2 (= i (uClip bits i))))))\n     (let ((a!4 (or (not (>= (uClip bits i) 0)) a!1 a!3)))\n       (not a!4))))\n     :pattern ((uClip bits i))\n     :skolemid skolem_prelude_u_clip\n     :qid prelude_u_clip))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "64",
+            "(EucMod n! index@0)"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((bits Int) (i Int))\n       (! (let ((a!1 (>= (+ (uClip bits i) (* (- 1) (uHi bits))) 0))\n                (a!2 (>= (+ i (* (- 1) (uHi bits))) 0)))\n          (let ((a!3 (not (or (not (>= i 0)) a!2 (= i (uClip bits i))))))\n          (let ((a!4 (or (not (>= (uClip bits i) 0)) a!1 a!3)))\n            (not a!4))))\n          :pattern ((uClip bits i))\n          :skolemid skolem_prelude_u_clip\n          :qid prelude_u_clip)))",
+            "(let ((a!1 (not (>= (uClip 64 (EucMod n! index@0)) 0)))\n      (a!2 (+ (uHi 64) (* (- 1) (uClip 64 (EucMod n! index@0)))))\n      (a!3 (<= (+ (uHi 64) (* (- 1) (EucMod n! index@0))) 0)))\n(let ((a!4 (or (not (>= (EucMod n! index@0) 0))\n               a!3\n               (= (EucMod n! index@0) (uClip 64 (EucMod n! index@0))))))\n  (not (or a!1 (<= a!2 0) (not a!4)))))"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "quantifier_smt": "(forall ((x Int) (y Int))\n  (! (= (+ (EucMod x y) (* (- 1) (mod x y))) 0)\n     :pattern ((EucMod x y))\n     :skolemid skolem_prelude_eucmod\n     :qid prelude_eucmod))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "n!",
+            "index@0"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ (EucMod x y) (* (- 1) (mod x y))) 0)\n                :pattern ((EucMod x y))\n                :skolemid skolem_prelude_eucmod\n                :qid prelude_eucmod))))\n  (not a!1))",
+            "(= (+ (EucMod n! index@0) (* (- 1) (mod n! index@0))) 0)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "quantifier_smt": "(forall ((x Int) (y Int))\n  (! (let ((a!1 (<= (+ y (* (- 1) (EucMod x y))) 0)))\n     (let ((a!2 (or (not (>= (EucMod x y) 0)) a!1)))\n       (or (not (>= x 0)) (<= y 0) (not a!2))))\n     :pattern ((EucMod x y))\n     :skolemid skolem_prelude_mod_unsigned_in_bounds\n     :qid prelude_mod_unsigned_in_bounds))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "n!",
+            "index@0"
+          ],
+          "clause_literals_smt": [
+            "(let ((a!1 (forall ((x Int) (y Int))\n             (! (let ((a!1 (<= (+ y (* (- 1) (EucMod x y))) 0)))\n                (let ((a!2 (or (not (>= (EucMod x y) 0)) a!1)))\n                  (or (not (>= x 0)) (<= y 0) (not a!2))))\n                :pattern ((EucMod x y))\n                :skolemid skolem_prelude_mod_unsigned_in_bounds\n                :qid prelude_mod_unsigned_in_bounds))))\n  (not a!1))",
+            "(not (>= n! 0))",
+            "(<= index@0 0)",
+            "(let ((a!1 (<= (+ index@0 (* (- 1) (EucMod n! index@0))) 0)))\n(let ((a!2 (or (not (>= (EucMod n! index@0) 0)) a!1)))\n  (not a!2)))"
+          ]
+        }
+      ]
+    }
+  ]
+}

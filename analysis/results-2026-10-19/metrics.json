@@ -1,0 +1,969 @@
+{
+  "thinking": {
+    "summary": {
+      "expected_tasks": 50,
+      "completed_tasks": 50,
+      "solved": 3,
+      "success_at": {
+        "0": 0.04,
+        "1": 0.06,
+        "2": 0.06,
+        "3": null,
+        "5": null
+      },
+      "complete": true,
+      "repair_rate": 0.020833333333333332,
+      "attempts": 145,
+      "inference_mean_seconds": 39.0218939960035,
+      "inference_median_seconds": 11.24920091900276,
+      "task_mean_seconds": 168.22710972509347,
+      "task_median_seconds": 102.06220568163553,
+      "total_active_seconds": 8411.355486254673,
+      "seconds_per_solved": 2803.785162084891,
+      "tokens_per_solved": 44243.0,
+      "verification_seconds": 2725.6124322158284,
+      "input_tokens": 177061,
+      "output_tokens": 132729,
+      "reasoning_tokens": 92417,
+      "final_tokens": 40167,
+      "output_tokens_per_attempt": 915.3724137931034,
+      "truncated": 0,
+      "truncation_rate": 0,
+      "invalid_modifications": 47,
+      "integrity_statuses": {
+        "invalid": 47,
+        "unparseable": 65,
+        "valid": 33
+      },
+      "errors": {
+        "compilation": 25,
+        "syntax": 86,
+        "verification": 31
+      },
+      "error_rates_per_attempt": {
+        "compilation": 0.1724137931034483,
+        "syntax": 0.593103448275862,
+        "verification": 0.21379310344827587
+      },
+      "planning_150_tasks_6_attempts_hours": 14.502337045266678,
+      "stage": "pilot",
+      "mode": "thinking",
+      "run_fingerprint": "ec236cbe5cd05a8bfe200218e603394452e9b1a7a395ee2e125b3f71cd3e4acf",
+      "model_load_seconds": 7895.472956437967,
+      "seconds_per_solved_including_model_load": 5435.609480897547,
+      "completed_session_wall_seconds": 16950.929376362008,
+      "interrupted_sessions": 0,
+      "session_gpus": [
+        {
+          "name": "NVIDIA L40S",
+          "memory_bytes": 47665709056,
+          "compute_capability": [
+            8,
+            9
+          ],
+          "cuda_build": "12.4"
+        }
+      ],
+      "categories": {
+        "CloverBench": {
+          "expected_tasks": 5,
+          "completed_tasks": 5,
+          "solved": 2,
+          "success_at": {
+            "0": 0.4,
+            "1": 0.4,
+            "2": 0.4,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 11,
+          "inference_mean_seconds": 11.937941659559412,
+          "inference_median_seconds": 11.7997179160011,
+          "task_mean_seconds": 70.5246739892289,
+          "task_median_seconds": 81.82606394705363,
+          "total_active_seconds": 352.6233699461445,
+          "seconds_per_solved": 176.31168497307226,
+          "tokens_per_solved": 1565.5,
+          "verification_seconds": 220.89591603097506,
+          "input_tokens": 10536,
+          "output_tokens": 3131,
+          "reasoning_tokens": 22,
+          "final_tokens": 3098,
+          "output_tokens_per_attempt": 284.6363636363636,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 3,
+          "integrity_statuses": {
+            "invalid": 3,
+            "unparseable": 6,
+            "valid": 2
+          },
+          "errors": {
+            "compilation": 3,
+            "syntax": 6
+          },
+          "error_rates_per_attempt": {
+            "compilation": 0.2727272727272727,
+            "syntax": 0.5454545454545454
+          },
+          "planning_150_tasks_6_attempts_hours": 8.014167498776011
+        },
+        "Diffy": {
+          "expected_tasks": 14,
+          "completed_tasks": 14,
+          "solved": 0,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 42,
+          "inference_mean_seconds": 97.29485076897323,
+          "inference_median_seconds": 17.559330254036468,
+          "task_mean_seconds": 345.8538341663828,
+          "task_median_seconds": 372.75842406848096,
+          "total_active_seconds": 4841.953678329359,
+          "seconds_per_solved": null,
+          "tokens_per_solved": null,
+          "verification_seconds": 754.7706141464878,
+          "input_tokens": 72296,
+          "output_tokens": 95453,
+          "reasoning_tokens": 81469,
+          "final_tokens": 13942,
+          "output_tokens_per_attempt": 2272.690476190476,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 14,
+          "integrity_statuses": {
+            "valid": 23,
+            "invalid": 14,
+            "unparseable": 5
+          },
+          "errors": {
+            "verification": 23,
+            "syntax": 15,
+            "compilation": 4
+          },
+          "error_rates_per_attempt": {
+            "verification": 0.5476190476190477,
+            "syntax": 0.35714285714285715,
+            "compilation": 0.09523809523809523
+          },
+          "planning_150_tasks_6_attempts_hours": 28.821152847198565
+        },
+        "MBPP": {
+          "expected_tasks": 23,
+          "completed_tasks": 23,
+          "solved": 1,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.043478260869565216,
+            "2": 0.043478260869565216,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.043478260869565216,
+          "attempts": 68,
+          "inference_mean_seconds": 10.687737998314654,
+          "inference_median_seconds": 10.36805413744878,
+          "task_mean_seconds": 92.58316094349847,
+          "task_median_seconds": 95.49175670580007,
+          "total_active_seconds": 2129.412701700465,
+          "seconds_per_solved": 2129.412701700465,
+          "tokens_per_solved": 17346.0,
+          "verification_seconds": 1376.5185459564673,
+          "input_tokens": 63861,
+          "output_tokens": 17346,
+          "reasoning_tokens": 136,
+          "final_tokens": 17142,
+          "output_tokens_per_attempt": 255.08823529411765,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 15,
+          "integrity_statuses": {
+            "unparseable": 51,
+            "invalid": 15,
+            "valid": 2
+          },
+          "errors": {
+            "syntax": 57,
+            "compilation": 9,
+            "verification": 1
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.8382352941176471,
+            "compilation": 0.1323529411764706,
+            "verification": 0.014705882352941176
+          },
+          "planning_150_tasks_6_attempts_hours": 7.828723168016415
+        },
+        "Misc": {
+          "expected_tasks": 8,
+          "completed_tasks": 8,
+          "solved": 0,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 24,
+          "inference_mean_seconds": 29.73780645762842,
+          "inference_median_seconds": 10.064439634035807,
+          "task_mean_seconds": 135.92071703483816,
+          "task_median_seconds": 98.40452152001671,
+          "total_active_seconds": 1087.3657362787053,
+          "seconds_per_solved": null,
+          "tokens_per_solved": null,
+          "verification_seconds": 373.4273560818983,
+          "input_tokens": 30368,
+          "output_tokens": 16799,
+          "reasoning_tokens": 10790,
+          "final_tokens": 5985,
+          "output_tokens_per_attempt": 699.9583333333334,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 15,
+          "integrity_statuses": {
+            "invalid": 15,
+            "unparseable": 3,
+            "valid": 6
+          },
+          "errors": {
+            "compilation": 9,
+            "syntax": 8,
+            "verification": 7
+          },
+          "error_rates_per_attempt": {
+            "compilation": 0.375,
+            "syntax": 0.3333333333333333,
+            "verification": 0.2916666666666667
+          },
+          "planning_150_tasks_6_attempts_hours": 11.326726419569846
+        }
+      },
+      "missing_tasks": [],
+      "infrastructure_failures": {}
+    },
+    "diagnostic_audit": {
+      "explicit_syntax_attempts": 81,
+      "type_mismatch_attempts": 5,
+      "common_explicit_syntax_attempts": 81,
+      "verus_pass_but_integrity_rejected": 0
+    },
+    "diagnostic_occurrences": {
+      "error[E0599]: no method named `get` found for struct `vstd::seq::Seq` in the current scope": 3,
+      "error: unexpected token": 69,
+      "error: invariant not satisfied before loop": 7,
+      "error: precondition not satisfied": 116,
+      "error: postcondition not satisfied": 17,
+      "error: expected curly braces": 10,
+      "error: this file contains an unclosed delimiter": 1,
+      "error: expected `,`": 1,
+      "error: invariant not satisfied at end of loop body": 11,
+      "error: possible arithmetic underflow/overflow": 20,
+      "error[E0308]: mismatched types": 9,
+      "error: panic is not supported (if you used Rust's `assert!` macro, you may have meant to use Verus's `assert` function)": 6,
+      "error: assertion failed": 2,
+      "error: the attribute #[verifier::truncate] is only allowed on casts (you may need parentheses around the cast)": 1,
+      "error: `builtin::impl&%15%default%min` is not supported (note: you may be able to add a Verus specification to this function with the `external_fn_specification` attribute)": 1,
+      "error: cannot find macro `verus` in this scope": 5,
+      "error[E0601]: `main` function not found in crate `candidate`": 6,
+      "error: The verifier does not yet support the following Rust feature: ==/!= for non smt equality types": 2,
+      "error: unexpected proof block": 1,
+      "error[E0277]: the type `[u64]` cannot be indexed by `builtin::int`": 2,
+      "error[E0605]: non-primitive cast: `usize` as `builtin::int`": 6
+    },
+    "eligible_initial_verification_failures": [
+      "diffy_brs1",
+      "diffy_brs2",
+      "diffy_brs3",
+      "diffy_brs4",
+      "diffy_conda",
+      "diffy_condn",
+      "diffy_ms2",
+      "diffy_ms5",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s22if",
+      "mbpp_task_id_804",
+      "misc_map",
+      "misc_reverse"
+    ],
+    "solved_ids": [
+      "cloverbench_cal_div",
+      "cloverbench_linear_search2",
+      "mbpp_task_id_804"
+    ],
+    "common_50": {
+      "solved": 3,
+      "tasks": 50
+    }
+  },
+  "nonthinking": {
+    "summary": {
+      "expected_tasks": 50,
+      "completed_tasks": 50,
+      "solved": 4,
+      "success_at": {
+        "0": 0.08,
+        "1": 0.08,
+        "2": 0.08,
+        "3": null,
+        "5": null
+      },
+      "complete": true,
+      "repair_rate": 0.0,
+      "attempts": 142,
+      "inference_mean_seconds": 11.55330060367984,
+      "inference_median_seconds": 10.925581639981829,
+      "task_mean_seconds": 85.72631546568125,
+      "task_median_seconds": 85.19011941045756,
+      "total_active_seconds": 4286.315773284063,
+      "seconds_per_solved": 1071.5789433210157,
+      "tokens_per_solved": 9728.0,
+      "verification_seconds": 2642.591202721582,
+      "input_tokens": 183902,
+      "output_tokens": 38912,
+      "reasoning_tokens": 0,
+      "final_tokens": 38912,
+      "output_tokens_per_attempt": 274.0281690140845,
+      "truncated": 0,
+      "truncation_rate": 0,
+      "invalid_modifications": 28,
+      "integrity_statuses": {
+        "valid": 54,
+        "unparseable": 60,
+        "invalid": 28
+      },
+      "errors": {
+        "syntax": 82,
+        "compilation": 16,
+        "verification": 40
+      },
+      "error_rates_per_attempt": {
+        "syntax": 0.5774647887323944,
+        "compilation": 0.11267605633802817,
+        "verification": 0.28169014084507044
+      },
+      "planning_150_tasks_6_attempts_hours": 7.546330586767716,
+      "stage": "pilot",
+      "mode": "nonthinking",
+      "run_fingerprint": "bc7e5dccf1ad11141abd16b19e8a6001c990cfd710fdfb852d64bbdc23960937",
+      "model_load_seconds": 2146.586570665939,
+      "seconds_per_solved_including_model_load": 1608.2255859875004,
+      "completed_session_wall_seconds": 6526.863401398994,
+      "interrupted_sessions": 0,
+      "session_gpus": [
+        {
+          "name": "NVIDIA L40S",
+          "memory_bytes": 47665709056,
+          "compute_capability": [
+            8,
+            9
+          ],
+          "cuda_build": "12.4"
+        }
+      ],
+      "categories": {
+        "CloverBench": {
+          "expected_tasks": 5,
+          "completed_tasks": 5,
+          "solved": 2,
+          "success_at": {
+            "0": 0.4,
+            "1": 0.4,
+            "2": 0.4,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 11,
+          "inference_mean_seconds": 11.74226596609647,
+          "inference_median_seconds": 11.322558694984764,
+          "task_mean_seconds": 71.03821334375534,
+          "task_median_seconds": 86.90527232387103,
+          "total_active_seconds": 355.1910667187767,
+          "seconds_per_solved": 177.59553335938836,
+          "tokens_per_solved": 1529.5,
+          "verification_seconds": 225.65849563782103,
+          "input_tokens": 10487,
+          "output_tokens": 3059,
+          "reasoning_tokens": 0,
+          "final_tokens": 3059,
+          "output_tokens_per_attempt": 278.09090909090907,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 0,
+          "integrity_statuses": {
+            "valid": 5,
+            "unparseable": 6
+          },
+          "errors": {
+            "syntax": 7,
+            "compilation": 2
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.6363636363636364,
+            "compilation": 0.18181818181818182
+          },
+          "planning_150_tasks_6_attempts_hours": 8.072524243608562
+        },
+        "Diffy": {
+          "expected_tasks": 14,
+          "completed_tasks": 14,
+          "solved": 0,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 42,
+          "inference_mean_seconds": 13.476230668707839,
+          "inference_median_seconds": 13.45426452497486,
+          "task_mean_seconds": 81.08839252281801,
+          "task_median_seconds": 71.0729421316064,
+          "total_active_seconds": 1135.2374953194521,
+          "seconds_per_solved": null,
+          "tokens_per_solved": null,
+          "verification_seconds": 568.6519493293017,
+          "input_tokens": 81936,
+          "output_tokens": 13298,
+          "reasoning_tokens": 0,
+          "final_tokens": 13298,
+          "output_tokens_per_attempt": 316.6190476190476,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 4,
+          "integrity_statuses": {
+            "valid": 35,
+            "invalid": 4,
+            "unparseable": 3
+          },
+          "errors": {
+            "verification": 31,
+            "syntax": 11
+          },
+          "error_rates_per_attempt": {
+            "verification": 0.7380952380952381,
+            "syntax": 0.2619047619047619
+          },
+          "planning_150_tasks_6_attempts_hours": 6.757366043568167
+        },
+        "MBPP": {
+          "expected_tasks": 23,
+          "completed_tasks": 23,
+          "solved": 2,
+          "success_at": {
+            "0": 0.08695652173913043,
+            "1": 0.08695652173913043,
+            "2": 0.08695652173913043,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 65,
+          "inference_mean_seconds": 10.705790696946833,
+          "inference_median_seconds": 10.03039881400764,
+          "task_mean_seconds": 86.93877638829872,
+          "task_median_seconds": 83.47496649704408,
+          "total_active_seconds": 1999.5918569308706,
+          "seconds_per_solved": 999.7959284654353,
+          "tokens_per_solved": 8315.5,
+          "verification_seconds": 1301.8530711777275,
+          "input_tokens": 61257,
+          "output_tokens": 16631,
+          "reasoning_tokens": 0,
+          "final_tokens": 16631,
+          "output_tokens_per_attempt": 255.86153846153846,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 12,
+          "integrity_statuses": {
+            "unparseable": 48,
+            "invalid": 12,
+            "valid": 5
+          },
+          "errors": {
+            "syntax": 57,
+            "compilation": 6
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.8769230769230769,
+            "compilation": 0.09230769230769231
+          },
+          "planning_150_tasks_6_attempts_hours": 7.6907379112725796
+        },
+        "Misc": {
+          "expected_tasks": 8,
+          "completed_tasks": 8,
+          "solved": 0,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 24,
+          "inference_mean_seconds": 10.396903196175117,
+          "inference_median_seconds": 9.893996572936885,
+          "task_mean_seconds": 99.53691928937042,
+          "task_median_seconds": 98.6087372880429,
+          "total_active_seconds": 796.2953543149633,
+          "seconds_per_solved": null,
+          "tokens_per_solved": null,
+          "verification_seconds": 546.4276865767315,
+          "input_tokens": 30222,
+          "output_tokens": 5924,
+          "reasoning_tokens": 0,
+          "final_tokens": 5924,
+          "output_tokens_per_attempt": 246.83333333333334,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 12,
+          "integrity_statuses": {
+            "invalid": 12,
+            "unparseable": 3,
+            "valid": 9
+          },
+          "errors": {
+            "compilation": 8,
+            "syntax": 7,
+            "verification": 9
+          },
+          "error_rates_per_attempt": {
+            "compilation": 0.3333333333333333,
+            "syntax": 0.2916666666666667,
+            "verification": 0.375
+          },
+          "planning_150_tasks_6_attempts_hours": 8.294743274114202
+        }
+      },
+      "missing_tasks": [],
+      "infrastructure_failures": {}
+    },
+    "diagnostic_audit": {
+      "explicit_syntax_attempts": 72,
+      "type_mismatch_attempts": 10,
+      "common_explicit_syntax_attempts": 72,
+      "verus_pass_but_integrity_rejected": 0
+    },
+    "diagnostic_occurrences": {
+      "error[E0308]: mismatched types": 12,
+      "error: cannot call function with mode exec": 2,
+      "error: unexpected token": 69,
+      "error: precondition not satisfied": 173,
+      "error: invariant not satisfied before loop": 8,
+      "error: assertion failed": 11,
+      "error: postcondition not satisfied": 30,
+      "error: invariant not satisfied at end of loop body": 6,
+      "error: possible arithmetic underflow/overflow": 23,
+      "error: expected curly braces": 3,
+      "error: Could not automatically infer triggers for this quantifer.  Use #[trigger] annotations to manually mark trigger terms instead.": 3,
+      "error[E0601]: `main` function not found in crate `candidate`": 3,
+      "error: The verifier does not yet support the following Rust feature: ==/!= for non smt equality types": 2,
+      "error: cannot find macro `verus` in this scope": 4,
+      "error: unexpected proof block": 1,
+      "error: panic is not supported (if you used Rust's `assert!` macro, you may have meant to use Verus's `assert` function)": 1
+    },
+    "eligible_initial_verification_failures": [
+      "diffy_brs1",
+      "diffy_brs2",
+      "diffy_brs3",
+      "diffy_brs4",
+      "diffy_conda",
+      "diffy_condn",
+      "diffy_ms2",
+      "diffy_ms5",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s22if",
+      "diffy_s3lif",
+      "diffy_sina4",
+      "misc_map",
+      "misc_reverse"
+    ],
+    "solved_ids": [
+      "cloverbench_cal_div",
+      "cloverbench_linear_search2",
+      "mbpp_task_id_804",
+      "mbpp_task_id_95"
+    ],
+    "common_50": {
+      "solved": 4,
+      "tasks": 50
+    }
+  },
+  "instruct": {
+    "summary": {
+      "expected_tasks": 100,
+      "completed_tasks": 100,
+      "solved": 14,
+      "success_at": {
+        "0": 0.11,
+        "1": 0.13,
+        "2": 0.14,
+        "3": null,
+        "5": null
+      },
+      "complete": true,
+      "repair_rate": 0.033707865168539325,
+      "attempts": 276,
+      "inference_mean_seconds": 12.509045058467418,
+      "inference_median_seconds": 11.74077214745921,
+      "task_mean_seconds": 94.74608008907235,
+      "task_median_seconds": 99.10426308342721,
+      "total_active_seconds": 9474.608008907235,
+      "seconds_per_solved": 676.7577149219453,
+      "tokens_per_solved": 6005.571428571428,
+      "verification_seconds": 5994.873161935597,
+      "input_tokens": 363087,
+      "output_tokens": 84078,
+      "reasoning_tokens": 0,
+      "final_tokens": 84078,
+      "output_tokens_per_attempt": 304.6304347826087,
+      "truncated": 0,
+      "truncation_rate": 0,
+      "invalid_modifications": 65,
+      "integrity_statuses": {
+        "invalid": 65,
+        "valid": 196,
+        "unparseable": 15
+      },
+      "errors": {
+        "syntax": 104,
+        "compilation": 24,
+        "timeout": 3,
+        "verification": 117
+      },
+      "error_rates_per_attempt": {
+        "syntax": 0.37681159420289856,
+        "compilation": 0.08695652173913043,
+        "timeout": 0.010869565217391304,
+        "verification": 0.42391304347826086
+      },
+      "planning_150_tasks_6_attempts_hours": 8.582072471836263,
+      "stage": "pilot",
+      "mode": "instruct",
+      "run_fingerprint": "6c0fa9b388cab680ef68b13e15fb15a72b48cb1434d7a7306577bf1f539743ba",
+      "model_load_seconds": 6214.080791443994,
+      "seconds_per_solved_including_model_load": 1120.6206285965163,
+      "completed_session_wall_seconds": 17377.160759633058,
+      "interrupted_sessions": 0,
+      "session_gpus": [
+        {
+          "name": "NVIDIA L40S",
+          "memory_bytes": 47665709056,
+          "compute_capability": [
+            8,
+            9
+          ],
+          "cuda_build": "12.4"
+        }
+      ],
+      "categories": {
+        "CloverBench": {
+          "expected_tasks": 9,
+          "completed_tasks": 9,
+          "solved": 1,
+          "success_at": {
+            "0": 0.1111111111111111,
+            "1": 0.1111111111111111,
+            "2": 0.1111111111111111,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 25,
+          "inference_mean_seconds": 11.882852005755995,
+          "inference_median_seconds": 12.794128598994575,
+          "task_mean_seconds": 129.58801765664248,
+          "task_median_seconds": 99.12730507389642,
+          "total_active_seconds": 1166.2921589097823,
+          "seconds_per_solved": 1166.2921589097823,
+          "tokens_per_solved": 7230.0,
+          "verification_seconds": 847.262889082951,
+          "input_tokens": 31679,
+          "output_tokens": 7230,
+          "reasoning_tokens": 0,
+          "final_tokens": 7230,
+          "output_tokens_per_attempt": 289.2,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 7,
+          "integrity_statuses": {
+            "invalid": 7,
+            "valid": 16,
+            "unparseable": 2
+          },
+          "errors": {
+            "syntax": 4,
+            "compilation": 1,
+            "timeout": 3,
+            "verification": 16
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.16,
+            "compilation": 0.04,
+            "timeout": 0.12,
+            "verification": 0.64
+          },
+          "planning_150_tasks_6_attempts_hours": 11.662921589097824
+        },
+        "Diffy": {
+          "expected_tasks": 23,
+          "completed_tasks": 23,
+          "solved": 0,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.0,
+          "attempts": 69,
+          "inference_mean_seconds": 16.43948035413126,
+          "inference_median_seconds": 14.773481710988563,
+          "task_mean_seconds": 108.52701992064249,
+          "task_median_seconds": 104.84873660496669,
+          "total_active_seconds": 2496.121458174777,
+          "seconds_per_solved": null,
+          "tokens_per_solved": null,
+          "verification_seconds": 1359.6976204200764,
+          "input_tokens": 118321,
+          "output_tokens": 27497,
+          "reasoning_tokens": 0,
+          "final_tokens": 27497,
+          "output_tokens_per_attempt": 398.5072463768116,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 0,
+          "integrity_statuses": {
+            "valid": 69
+          },
+          "errors": {
+            "syntax": 43,
+            "compilation": 11,
+            "verification": 15
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.6231884057971014,
+            "compilation": 0.15942028985507245,
+            "verification": 0.21739130434782608
+          },
+          "planning_150_tasks_6_attempts_hours": 9.043918326720208
+        },
+        "MBPP": {
+          "expected_tasks": 51,
+          "completed_tasks": 51,
+          "solved": 11,
+          "success_at": {
+            "0": 0.19607843137254902,
+            "1": 0.21568627450980393,
+            "2": 0.21568627450980393,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.024390243902439025,
+          "attempts": 132,
+          "inference_mean_seconds": 11.15907198372544,
+          "inference_median_seconds": 10.622109636547975,
+          "task_mean_seconds": 87.70362333910923,
+          "task_median_seconds": 99.00307514099404,
+          "total_active_seconds": 4472.884790294571,
+          "seconds_per_solved": 406.6258900267792,
+          "tokens_per_solved": 3272.0,
+          "verification_seconds": 2998.110605747439,
+          "input_tokens": 151864,
+          "output_tokens": 35992,
+          "reasoning_tokens": 0,
+          "final_tokens": 35992,
+          "output_tokens_per_attempt": 272.6666666666667,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 55,
+          "integrity_statuses": {
+            "valid": 70,
+            "invalid": 55,
+            "unparseable": 7
+          },
+          "errors": {
+            "syntax": 42,
+            "verification": 55,
+            "compilation": 10
+          },
+          "error_rates_per_attempt": {
+            "syntax": 0.3181818181818182,
+            "verification": 0.4166666666666667,
+            "compilation": 0.07575757575757576
+          },
+          "planning_150_tasks_6_attempts_hours": 8.471372708891233
+        },
+        "Misc": {
+          "expected_tasks": 17,
+          "completed_tasks": 17,
+          "solved": 2,
+          "success_at": {
+            "0": 0.0,
+            "1": 0.058823529411764705,
+            "2": 0.11764705882352941,
+            "3": null,
+            "5": null
+          },
+          "complete": true,
+          "repair_rate": 0.11764705882352941,
+          "attempts": 50,
+          "inference_mean_seconds": 10.962069794125854,
+          "inference_median_seconds": 9.598772103490774,
+          "task_mean_seconds": 78.78291773694731,
+          "task_median_seconds": 78.57617135520559,
+          "total_active_seconds": 1339.3096015281044,
+          "seconds_per_solved": 669.6548007640522,
+          "tokens_per_solved": 6679.5,
+          "verification_seconds": 789.8020466851303,
+          "input_tokens": 61223,
+          "output_tokens": 13359,
+          "reasoning_tokens": 0,
+          "final_tokens": 13359,
+          "output_tokens_per_attempt": 267.18,
+          "truncated": 0,
+          "truncation_rate": 0,
+          "invalid_modifications": 3,
+          "integrity_statuses": {
+            "valid": 41,
+            "unparseable": 6,
+            "invalid": 3
+          },
+          "errors": {
+            "verification": 31,
+            "compilation": 2,
+            "syntax": 15
+          },
+          "error_rates_per_attempt": {
+            "verification": 0.62,
+            "compilation": 0.04,
+            "syntax": 0.3
+          },
+          "planning_150_tasks_6_attempts_hours": 6.696548007640522
+        }
+      },
+      "missing_tasks": [],
+      "infrastructure_failures": {}
+    },
+    "diagnostic_audit": {
+      "explicit_syntax_attempts": 14,
+      "type_mismatch_attempts": 96,
+      "common_explicit_syntax_attempts": 3,
+      "verus_pass_but_integrity_rejected": 14
+    },
+    "diagnostic_occurrences": {
+      "error[E0308]: mismatched types": 238,
+      "error[E0605]: non-primitive cast: `usize` as `builtin::int`": 5,
+      "error: `core::str::impl&%0::len` is not supported (note: you may be able to add a Verus specification to this function with the `external_fn_specification` attribute) (note: the vstd library provides some specification for the Rust std library, but it is currently limited)": 1,
+      "error: invariant not satisfied at end of loop body": 78,
+      "error: invariant not satisfied before loop": 49,
+      "error: precondition not satisfied": 149,
+      "error: possible arithmetic underflow/overflow": 44,
+      "error: expected `,`": 7,
+      "error: assertion failed": 20,
+      "error[E0277]: the trait bound `bool: builtin::Integer` is not satisfied": 4,
+      "error[E0599]: no method named `iter` found for type `i32` in the current scope": 3,
+      "error[E0283]: type annotations needed": 2,
+      "error[E0599]: the method `sum` exists for struct `RangeInclusive<int>`, but its trait bounds were not satisfied": 3,
+      "error[E0282]: type annotations needed": 3,
+      "error: postcondition not satisfied": 36,
+      "error: possible division by zero": 2,
+      "error[E0277]: the type `[u32]` cannot be indexed by `builtin::int`": 2,
+      "error[E0599]: `u32` is not an iterator": 9,
+      "error: cannot call function with mode exec": 2,
+      "error: expected `by`": 1,
+      "error[E0425]: cannot find value `result` in this scope": 1,
+      "error[E0277]: the type `[i32]` cannot be indexed by `builtin::int`": 2,
+      "error: expected expression": 3,
+      "error[E0061]: this method takes 1 argument but 0 arguments were supplied": 6,
+      "error: unexpected token": 3,
+      "error: Could not automatically infer triggers for this quantifer.  Use #[trigger] annotations to manually mark trigger terms instead.": 2,
+      "error: unexpected proof block": 1,
+      "error: expected curly braces": 3,
+      "error: a mutable reference is expected here": 1
+    },
+    "eligible_initial_verification_failures": [
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_cal_div",
+      "cloverbench_two_sum",
+      "diffy_condg",
+      "diffy_condn",
+      "diffy_s22if",
+      "diffy_sina2",
+      "diffy_sina4",
+      "mbpp_task_id_170",
+      "mbpp_task_id_262",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_472",
+      "mbpp_task_id_567",
+      "mbpp_task_id_586",
+      "mbpp_task_id_62",
+      "mbpp_task_id_644",
+      "mbpp_task_id_743",
+      "misc_arg_free",
+      "misc_conditional_average",
+      "misc_findmax",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_remove_all_greater",
+      "misc_sum",
+      "misc_tail_triangle",
+      "misc_trigger"
+    ],
+    "solved_ids": [
+      "cloverbench_linear_search2",
+      "mbpp_task_id_230",
+      "mbpp_task_id_284",
+      "mbpp_task_id_307",
+      "mbpp_task_id_454",
+      "mbpp_task_id_474",
+      "mbpp_task_id_557",
+      "mbpp_task_id_567",
+      "mbpp_task_id_733",
+      "mbpp_task_id_775",
+      "mbpp_task_id_790",
+      "mbpp_task_id_808",
+      "misc_arg_free",
+      "misc_trigger"
+    ],
+    "common_50": {
+      "solved": 5,
+      "tasks": 50
+    }
+  },
+  "archive_overlap": {
+    "shared_entries": 3370,
+    "different_shared_files": 0
+  }
+}

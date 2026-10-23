@@ -1,0 +1,27 @@
+{
+  "seed": 20261018,
+  "allocation": {
+    "CloverBench": 2,
+    "Diffy": 4,
+    "MBPP": 7,
+    "Misc": 2
+  },
+  "manifest_sha256": "1f1949326daf6d06ef52c0f203dcabf0f26f13932cb86ef146bf76fa2b4bf8ee",
+  "task_ids": [
+    "cloverbench_array_copy_strong",
+    "cloverbench_array_sum_strong",
+    "diffy_brs5",
+    "diffy_s4lif",
+    "diffy_s5lif",
+    "diffy_sina2",
+    "mbpp_task_id_18",
+    "mbpp_task_id_262",
+    "mbpp_task_id_414",
+    "mbpp_task_id_436",
+    "mbpp_task_id_457",
+    "mbpp_task_id_461",
+    "mbpp_task_id_790",
+    "misc_basic_nonlinear",
+    "misc_max_index"
+  ]
+}

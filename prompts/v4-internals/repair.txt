@@ -1,0 +1,13 @@
+Repair only proof annotations. Compare the candidate against the authoritative original; restore disallowed changes to imports, attributes, executable code and specifications. Use the latest Verus and integrity diagnostics below. Return the complete source only.
+
+<original_program>
+$original
+</original_program>
+
+<current_candidate>
+$code
+</current_candidate>
+
+<diagnostics>
+$feedback
+</diagnostics>

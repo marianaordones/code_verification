@@ -1,0 +1,20 @@
+note: recommendation not met
+  --> /mnt/users/mariana.soares/code_verification/results/qwen25coder14b-c-internals-150/seed-20261018/full/instruct/cloverbench_array_append_strong/attempt_00/candidate.rs:21:58
+   |
+21 |             forall|i: int| (0 <= i && i < n) ==> c[i] == v[i],
+   |                                                          ^^^^
+  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18
+   |
+   = note: recommendation not met
+
+error: precondition not satisfied
+  --> /mnt/users/mariana.soares/code_verification/results/qwen25coder14b-c-internals-150/seed-20261018/full/instruct/cloverbench_array_append_strong/attempt_00/candidate.rs:23:16
+   |
+23 |         c.push(v[n]);
+   |                ^^^^
+  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9
+   |
+   = note: failed precondition
+
+error: aborting due to 1 previous error
+

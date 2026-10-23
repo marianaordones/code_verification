@@ -1,0 +1,4094 @@
+{
+  "archive": "C:\\Users\\mario\\Downloads\\download_2026-10-21_22-25-20.zip",
+  "counts": {
+    "feedbacks": 262,
+    "available": 149,
+    "exact_payloads_delivered": 262,
+    "unchanged_all": 201,
+    "unchanged_after_available": 130,
+    "raw_user_quantifiers_present_feedbacks": 36,
+    "raw_user_quantifiers_excluded_feedbacks": 30,
+    "selected_source_groups": 24,
+    "selected_user_groups": 8,
+    "feedbacks_with_source_candidate_named_group": 12,
+    "feedbacks_with_user_candidate_named_group": 6
+  },
+  "quantifier_group_categories_by_qid_name": {
+    "library_or_encoding_named": 839,
+    "prelude": 566,
+    "source_candidate_named": 24
+  },
+  "unavailability": {
+    "no_captured_sat_or_unknown_query": 113,
+    "available": 149
+  },
+  "replay_reasons": {
+    "(incomplete quantifiers)": 140,
+    "(incomplete (theory arithmetic))": 9
+  },
+  "transitions": {
+    "unavailable: compilation -> compilation": 67,
+    "available: verification -> verification": 138,
+    "available: verification -> compilation": 10,
+    "unavailable: syntax -> syntax": 25,
+    "unavailable: verification -> verification": 7,
+    "unavailable: compilation -> verification": 12,
+    "unavailable: None -> None": 2,
+    "available: verification -> syntax": 1
+  },
+  "top_qids": [
+    [
+      "prelude_u_inv",
+      137
+    ],
+    [
+      "internal_vstd__raw_ptr__Metadata_unbox_axiom_definition",
+      134
+    ],
+    [
+      "internal_vstd__raw_ptr__Metadata_box_axiom_definition",
+      133
+    ],
+    [
+      "prelude_fuel_defaults",
+      128
+    ],
+    [
+      "internal_alloc__vec__Vec<i32./allocator_global__.>_box_axiom_definition",
+      91
+    ],
+    [
+      "prelude_unbox_box_int",
+      88
+    ],
+    [
+      "internal_vstd!view.View.view.?_pre_post_definition",
+      71
+    ],
+    [
+      "prelude_u_clip",
+      62
+    ],
+    [
+      "prelude_i_inv",
+      50
+    ],
+    [
+      "internal_vstd!std_specs.vec.spec_vec_len.?_pre_post_definition",
+      47
+    ],
+    [
+      "internal_ens__vstd!std_specs.vec.vec_index._definition",
+      45
+    ],
+    [
+      "user_vstd__std_specs__vec__axiom_spec_len_0",
+      40
+    ],
+    [
+      "internal_alloc__vec__Vec<i32./allocator_global__.>_unbox_axiom_definition",
+      37
+    ],
+    [
+      "internal_ens__vstd!pervasive.impl&__1.set._definition",
+      31
+    ],
+    [
+      "internal_vstd!seq.Seq.update.?_pre_post_definition",
+      31
+    ],
+    [
+      "internal_ens__alloc!vec.impl&__1.len._definition",
+      30
+    ],
+    [
+      "internal_vstd!seq.Seq.len.?_pre_post_definition",
+      22
+    ],
+    [
+      "internal_alloc__vec__Vec<u32./allocator_global__.>_box_axiom_definition",
+      20
+    ],
+    [
+      "internal_vstd!seq.Seq.index.?_pre_post_definition",
+      19
+    ],
+    [
+      "internal_alloc__vec__Vec<u32./allocator_global__.>_unbox_axiom_definition",
+      15
+    ]
+  ],
+  "statistics_min_median_max": {
+    "quant instantiations": [
+      4,
+      81,
+      218
+    ],
+    "conflicts": [
+      1,
+      41.0,
+      172
+    ],
+    "decisions": [
+      1,
+      50,
+      189
+    ],
+    "propagations": [
+      130,
+      230,
+      791
+    ],
+    "arith conflicts": [
+      1,
+      4,
+      12
+    ],
+    "rlimit count": [
+      13157,
+      62488,
+      171730
+    ],
+    "time": [
+      0.017,
+      0.121,
+      0.304
+    ]
+  },
+  "literal_characters": 1949923,
+  "literal_characters_in_literals_containing_forall": 1243709,
+  "feedback_details": [
+    {
+      "task": "cloverbench_all_digits_strong",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_all_digits_strong",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_array_append_strong",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 51,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        },
+        {
+          "event_index": 69,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        },
+        {
+          "event_index": 90,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_append_strong",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 51,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        },
+        {
+          "event_index": 69,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        },
+        {
+          "event_index": 90,
+          "qids": [
+            "user_candidate__append_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_concat_strong",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 118,
+          "qids": [
+            "user_candidate__concat_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_concat_strong",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 118,
+          "qids": [
+            "user_candidate__concat_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_copy_strong",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 48,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        },
+        {
+          "event_index": 87,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_copy_strong",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 48,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        },
+        {
+          "event_index": 87,
+          "qids": [
+            "user_candidate__copy_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_array_product_strong",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_array_product_strong",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_array_sum_strong",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_array_sum_strong",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_binary_search",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_binary_search",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_cal_div",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 3,
+      "instances": 3,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_cal_div",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 3,
+      "instances": 3,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_is_prime",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 7,
+      "instances": 9,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 1,
+      "raw_user_first_events": [
+        {
+          "event_index": 5,
+          "qids": [
+            "user_candidate__is_prime_0",
+            "internal_candidate!is_prime.?_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_is_prime",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 7,
+      "instances": 9,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 1,
+      "raw_user_first_events": [
+        {
+          "event_index": 5,
+          "qids": [
+            "user_candidate__is_prime_0",
+            "internal_candidate!is_prime.?_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "cloverbench_two_sum",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 15,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "cloverbench_two_sum",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 15,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs1",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs1",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs2",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs2",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs3",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs3",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs4",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs4",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs5",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_brs5",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_conda",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_conda",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condg",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condg",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condm",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condm",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condn",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_condn",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms1",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms1",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms2",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms2",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms3",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms3",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms4",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms4",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms5",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_ms5",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res1",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res1",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res1o",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res1o",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res2",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res2",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res2o",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_res2o",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s12if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s12if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s1if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s1if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 22,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s1lif",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s1lif",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s22if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s22if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s2if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s2if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s2lif",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s2lif",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s32if",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s32if",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s3if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s3if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s3lif",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s3lif",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s42if",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s42if",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s4if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s4if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s4lif",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s4lif",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s52if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s52if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s5if",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s5if",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s5lif",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_s5lif",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina1",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina1",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina2",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina2",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina3",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina3",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina4",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina4",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina5",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "diffy_sina5",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 19,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_105",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_105",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_133",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_133",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_142",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_142",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_145",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_145",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_161",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 97,
+          "qids": [
+            "user_candidate__remove_elements_89"
+          ]
+        },
+        {
+          "event_index": 101,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        },
+        {
+          "event_index": 125,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_161",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 97,
+          "qids": [
+            "user_candidate__remove_elements_89"
+          ]
+        },
+        {
+          "event_index": 101,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        },
+        {
+          "event_index": 125,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_170",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_170",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_18",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_18",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_2",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": null,
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_2",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": null,
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_240",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_240",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_251",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_251",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_261",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_261",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_262",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_262",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_273",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_273",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_282",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_282",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_290",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_290",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_3",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 5,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_3",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 5,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_399",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_399",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_412",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_412",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_414",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_414",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_424",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_424",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_426",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_426",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_431",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_431",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_436",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_436",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_445",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_445",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_447",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_447",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_457",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__min_sublist_31"
+          ]
+        },
+        {
+          "event_index": 79,
+          "qids": [
+            "user_candidate__min_sublist_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_457",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__min_sublist_31"
+          ]
+        },
+        {
+          "event_index": 79,
+          "qids": [
+            "user_candidate__min_sublist_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_460",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_460",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_461",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_461",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_472",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_472",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_476",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_476",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_477",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_477",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_554",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_554",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_557",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_557",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_572",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_572",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_576",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_576",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_578",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 54,
+          "qids": [
+            "user_candidate__interleave_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_578",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 54,
+          "qids": [
+            "user_candidate__interleave_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_579",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_579",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_586",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_586",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_588",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_588",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_602",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_602",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_605",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 5,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_605",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 5,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_610",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 10,
+      "instances": 13,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_610",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_616",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_616",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_618",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_618",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_62",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 62,
+          "qids": [
+            "user_candidate__smallest_num_31"
+          ]
+        },
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__smallest_num_31"
+          ]
+        },
+        {
+          "event_index": 70,
+          "qids": [
+            "user_candidate__smallest_num_30"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_62",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 62,
+          "qids": [
+            "user_candidate__smallest_num_31"
+          ]
+        },
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__smallest_num_31"
+          ]
+        },
+        {
+          "event_index": 70,
+          "qids": [
+            "user_candidate__smallest_num_30"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_629",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_629",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_644",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_644",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_69",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_69",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_70",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_70",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_728",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_728",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_743",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_743",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 21,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_755",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_755",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_760",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_760",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_764",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_764",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_769",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 97,
+          "qids": [
+            "user_candidate__difference_91"
+          ]
+        },
+        {
+          "event_index": 101,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        },
+        {
+          "event_index": 111,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_769",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 20,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 97,
+          "qids": [
+            "user_candidate__difference_91"
+          ]
+        },
+        {
+          "event_index": 101,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        },
+        {
+          "event_index": 111,
+          "qids": [
+            "user_candidate__contains_82",
+            "internal_ens__candidate!contains._definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_798",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_798",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_8",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_8",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_807",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_807",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_809",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 15,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 48,
+          "qids": [
+            "user_candidate__is_smaller_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_809",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 15,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 48,
+          "qids": [
+            "user_candidate__is_smaller_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "mbpp_task_id_94",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "mbpp_task_id_94",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_arg_free",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 3,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_arg_free",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 3,
+      "instances": 6,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_basic_nonlinear",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_basic_nonlinear",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 3,
+      "instances": 4,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_binary_search",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 77,
+          "qids": [
+            "user_candidate__binary_search_29"
+          ]
+        },
+        {
+          "event_index": 78,
+          "qids": [
+            "user_candidate__binary_search_30"
+          ]
+        },
+        {
+          "event_index": 88,
+          "qids": [
+            "user_candidate__binary_search_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_binary_search",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 77,
+          "qids": [
+            "user_candidate__binary_search_29"
+          ]
+        },
+        {
+          "event_index": 78,
+          "qids": [
+            "user_candidate__binary_search_30"
+          ]
+        },
+        {
+          "event_index": 88,
+          "qids": [
+            "user_candidate__binary_search_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_bubble",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_bubble",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 194,
+          "qids": [
+            "user_candidate__sorted_between_94",
+            "internal_candidate!sorted_between.?_definition"
+          ]
+        },
+        {
+          "event_index": 195,
+          "qids": [
+            "user_candidate__sorted_between_94",
+            "internal_candidate!sorted_between.?_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_cell_2_sum",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_cell_2_sum",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_choose_odd",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_choose_odd",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_conditional_average",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 1,
+      "raw_user_first_events": [
+        {
+          "event_index": 45,
+          "qids": [
+            "user_candidate__conditional_average_32"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_conditional_average",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 1,
+      "user_candidate_named_groups": 1,
+      "raw_user_first_events": [
+        {
+          "event_index": 45,
+          "qids": [
+            "user_candidate__conditional_average_32"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_deduplicate",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_deduplicate",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_fib",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 55,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        },
+        {
+          "event_index": 74,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_fib",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 55,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        },
+        {
+          "event_index": 74,
+          "qids": [
+            "user_candidate__fibonacci_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_filter",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_filter",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_filter_weak",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_filter_weak",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 17,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_findmax",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__find_max_31"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__find_max_31"
+          ]
+        },
+        {
+          "event_index": 72,
+          "qids": [
+            "user_candidate__find_max_30"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_findmax",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 64,
+          "qids": [
+            "user_candidate__find_max_31"
+          ]
+        },
+        {
+          "event_index": 66,
+          "qids": [
+            "user_candidate__find_max_31"
+          ]
+        },
+        {
+          "event_index": 72,
+          "qids": [
+            "user_candidate__find_max_30"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_havoc_inline_post",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 13,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_havoc_inline_post",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 62,
+          "qids": [
+            "user_candidate__havoc_inline_post_29"
+          ]
+        },
+        {
+          "event_index": 72,
+          "qids": [
+            "user_candidate__havoc_inline_post_29"
+          ]
+        },
+        {
+          "event_index": 79,
+          "qids": [
+            "user_candidate__havoc_inline_post_29"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_len_intersect",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_len_intersect",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": false,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_linearsearch",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 53,
+          "qids": [
+            "user_candidate__linear_search_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_linearsearch",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 53,
+          "qids": [
+            "user_candidate__linear_search_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_map",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 2,
+      "user_candidate_named_groups": 2,
+      "raw_user_first_events": [
+        {
+          "event_index": 43,
+          "qids": [
+            "user_candidate__myfun2_30"
+          ]
+        },
+        {
+          "event_index": 44,
+          "qids": [
+            "user_candidate__myfun2_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_map",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 14,
+      "source_named_groups": 2,
+      "user_candidate_named_groups": 2,
+      "raw_user_first_events": [
+        {
+          "event_index": 43,
+          "qids": [
+            "user_candidate__myfun2_30"
+          ]
+        },
+        {
+          "event_index": 44,
+          "qids": [
+            "user_candidate__myfun2_31"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_max_index",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_max_index",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "syntax",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_remove_all_greater",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 99,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        },
+        {
+          "event_index": 132,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        },
+        {
+          "event_index": 148,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_remove_all_greater",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 18,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": [
+        {
+          "event_index": 99,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        },
+        {
+          "event_index": 132,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        },
+        {
+          "event_index": 148,
+          "qids": [
+            "user_candidate__remove_all_greater_87"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "misc_reverse",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_reverse",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_simple_nested",
+      "attempt": 0,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_simple_nested",
+      "attempt": 1,
+      "available": false,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "compilation",
+      "groups": 0,
+      "instances": 0,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_sum",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 3,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_sum",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 16,
+      "source_named_groups": 3,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_tail_triangle",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 4,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_tail_triangle",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 23,
+      "source_named_groups": 4,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_trigger",
+      "attempt": 0,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 12,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    },
+    {
+      "task": "misc_trigger",
+      "attempt": 1,
+      "available": true,
+      "exact_payload_delivered": true,
+      "unchanged_next_candidate": true,
+      "next_error_type": "verification",
+      "groups": 10,
+      "instances": 12,
+      "source_named_groups": 0,
+      "user_candidate_named_groups": 0,
+      "raw_user_first_events": []
+    }
+  ],
+  "v4_repair_repetitions": {
+    "unchanged": 196,
+    "total": 261
+  }
+}

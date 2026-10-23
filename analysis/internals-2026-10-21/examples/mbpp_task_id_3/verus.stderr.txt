@@ -1,0 +1,11 @@
+error: postcondition not satisfied
+  --> /mnt/users/mariana.soares/code_verification/results/qwen25coder14b-c-internals-150/seed-20261018/full/instruct/mbpp_task_id_3/attempt_00/candidate.rs:28:13
+   |
+15 |         result == (exists|k: int| 2 <= k < n && is_divisible(n as int, k)),
+   |         ------------------------------------------------------------------ failed this postcondition
+...
+28 |             return true;
+   |             ^^^^^^^^^^^ at this exit
+
+error: aborting due to 1 previous error
+

@@ -1,0 +1,957 @@
+{
+  "v3_summary": {
+    "expected_tasks": 150,
+    "completed_tasks": 150,
+    "solved": 17,
+    "success_at": {
+      "0": 0.08666666666666667,
+      "1": 0.1,
+      "2": 0.11333333333333333,
+      "3": null,
+      "5": null
+    },
+    "complete": true,
+    "repair_rate": 0.029197080291970802,
+    "attempts": 422,
+    "inference_mean_seconds": 13.045024534926851,
+    "inference_median_seconds": 12.239432812028099,
+    "task_mean_seconds": 98.9515050380157,
+    "task_median_seconds": 104.72180891095195,
+    "total_active_seconds": 14842.725755702355,
+    "seconds_per_solved": 873.101515041315,
+    "tokens_per_solved": 7824.705882352941,
+    "verification_seconds": 9326.869473613915,
+    "input_tokens": 807066,
+    "output_tokens": 133020,
+    "reasoning_tokens": 0,
+    "final_tokens": 133020,
+    "output_tokens_per_attempt": 315.2132701421801,
+    "truncated": 0,
+    "truncation_rate": 0,
+    "invalid_modifications": 56,
+    "integrity_statuses": {
+      "valid": 339,
+      "unparseable": 26,
+      "invalid": 56,
+      "checker_error": 1
+    },
+    "errors": {
+      "compilation": 117,
+      "verification": 245,
+      "syntax": 27
+    },
+    "error_rates_per_attempt": {
+      "compilation": 0.2772511848341232,
+      "verification": 0.580568720379147,
+      "syntax": 0.06398104265402843
+    },
+    "planning_150_tasks_6_attempts_hours": 8.793083978496655,
+    "stage": "full",
+    "mode": "instruct",
+    "run_fingerprint": "4ffbbb31056fe1320f40139aaacf49d5cbf446b9a2e4e008548fe9011b8c3b83",
+    "model_load_seconds": 2324.927167959977,
+    "seconds_per_solved_including_model_load": 1009.8619366860195,
+    "completed_session_wall_seconds": 17482.168005193,
+    "interrupted_sessions": 0,
+    "session_gpus": [
+      {
+        "name": "NVIDIA L40S",
+        "memory_bytes": 47665709056,
+        "compute_capability": [
+          8,
+          9
+        ],
+        "cuda_build": "12.4"
+      }
+    ],
+    "categories": {
+      "CloverBench": {
+        "expected_tasks": 11,
+        "completed_tasks": 11,
+        "solved": 2,
+        "success_at": {
+          "0": 0.18181818181818182,
+          "1": 0.18181818181818182,
+          "2": 0.18181818181818182,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.0,
+        "attempts": 29,
+        "inference_mean_seconds": 11.949432064136811,
+        "inference_median_seconds": 11.663874203921296,
+        "task_mean_seconds": 89.12134608182929,
+        "task_median_seconds": 105.80004647816531,
+        "total_active_seconds": 980.3348069001222,
+        "seconds_per_solved": 490.1674034500611,
+        "tokens_per_solved": 4185.5,
+        "verification_seconds": 633.2375169540755,
+        "input_tokens": 49891,
+        "output_tokens": 8371,
+        "reasoning_tokens": 0,
+        "final_tokens": 8371,
+        "output_tokens_per_attempt": 288.6551724137931,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 0,
+        "integrity_statuses": {
+          "valid": 26,
+          "unparseable": 3
+        },
+        "errors": {
+          "compilation": 3,
+          "verification": 21,
+          "syntax": 3
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.10344827586206896,
+          "verification": 0.7241379310344828,
+          "syntax": 0.10344827586206896
+        },
+        "planning_150_tasks_6_attempts_hours": 8.45116212844933
+      },
+      "Diffy": {
+        "expected_tasks": 38,
+        "completed_tasks": 38,
+        "solved": 0,
+        "success_at": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.0,
+        "attempts": 114,
+        "inference_mean_seconds": 16.003276842685107,
+        "inference_median_seconds": 15.215157236496452,
+        "task_mean_seconds": 110.18240394876462,
+        "task_median_seconds": 110.92659782880219,
+        "total_active_seconds": 4186.931350053055,
+        "seconds_per_solved": null,
+        "tokens_per_solved": null,
+        "verification_seconds": 2358.7205745123792,
+        "input_tokens": 298879,
+        "output_tokens": 43649,
+        "reasoning_tokens": 0,
+        "final_tokens": 43649,
+        "output_tokens_per_attempt": 382.8859649122807,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 0,
+        "integrity_statuses": {
+          "valid": 111,
+          "unparseable": 3
+        },
+        "errors": {
+          "compilation": 21,
+          "verification": 90,
+          "syntax": 3
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.18421052631578946,
+          "verification": 0.7894736842105263,
+          "syntax": 0.02631578947368421
+        },
+        "planning_150_tasks_6_attempts_hours": 9.181866995730385
+      },
+      "MBPP": {
+        "expected_tasks": 78,
+        "completed_tasks": 78,
+        "solved": 14,
+        "success_at": {
+          "0": 0.14102564102564102,
+          "1": 0.15384615384615385,
+          "2": 0.1794871794871795,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.04477611940298507,
+        "attempts": 211,
+        "inference_mean_seconds": 12.119620471674688,
+        "inference_median_seconds": 10.962479472975247,
+        "task_mean_seconds": 94.02249084340367,
+        "task_median_seconds": 103.46443253540201,
+        "total_active_seconds": 7333.754285785486,
+        "seconds_per_solved": 523.8395918418204,
+        "tokens_per_solved": 4438.714285714285,
+        "verification_seconds": 4771.822625587345,
+        "input_tokens": 344864,
+        "output_tokens": 62142,
+        "reasoning_tokens": 0,
+        "final_tokens": 62142,
+        "output_tokens_per_attempt": 294.5118483412322,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 53,
+        "integrity_statuses": {
+          "valid": 144,
+          "invalid": 53,
+          "unparseable": 14
+        },
+        "errors": {
+          "compilation": 73,
+          "verification": 93,
+          "syntax": 15
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.3459715639810427,
+          "verification": 0.44075829383886256,
+          "syntax": 0.07109004739336493
+        },
+        "planning_150_tasks_6_attempts_hours": 8.689282329129723
+      },
+      "Misc": {
+        "expected_tasks": 23,
+        "completed_tasks": 23,
+        "solved": 1,
+        "success_at": {
+          "0": 0.0,
+          "1": 0.043478260869565216,
+          "2": 0.043478260869565216,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.043478260869565216,
+        "attempts": 68,
+        "inference_mean_seconds": 11.42431388661327,
+        "inference_median_seconds": 11.019413433037698,
+        "task_mean_seconds": 101.81327447668224,
+        "task_median_seconds": 100.57652160199359,
+        "total_active_seconds": 2341.7053129636915,
+        "seconds_per_solved": 2341.7053129636915,
+        "tokens_per_solved": 18858.0,
+        "verification_seconds": 1563.0887565601151,
+        "input_tokens": 113432,
+        "output_tokens": 18858,
+        "reasoning_tokens": 0,
+        "final_tokens": 18858,
+        "output_tokens_per_attempt": 277.3235294117647,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 3,
+        "integrity_statuses": {
+          "valid": 58,
+          "unparseable": 6,
+          "checker_error": 1,
+          "invalid": 3
+        },
+        "errors": {
+          "verification": 41,
+          "compilation": 20,
+          "syntax": 6
+        },
+        "error_rates_per_attempt": {
+          "verification": 0.6029411764705882,
+          "compilation": 0.29411764705882354,
+          "syntax": 0.08823529411764706
+        },
+        "planning_150_tasks_6_attempts_hours": 8.609210709425337
+      }
+    },
+    "missing_tasks": [],
+    "infrastructure_failures": {}
+  },
+  "v4_summary": {
+    "expected_tasks": 150,
+    "completed_tasks": 150,
+    "solved": 20,
+    "success_at": {
+      "0": 0.12666666666666668,
+      "1": 0.13333333333333333,
+      "2": 0.13333333333333333,
+      "3": null,
+      "5": null
+    },
+    "complete": true,
+    "repair_rate": 0.007633587786259542,
+    "attempts": 411,
+    "inference_mean_seconds": 13.091986323919809,
+    "inference_median_seconds": 12.522679692017846,
+    "task_mean_seconds": 91.88451522435139,
+    "task_median_seconds": 91.05661712901201,
+    "total_active_seconds": 13782.677283652709,
+    "seconds_per_solved": 689.1338641826354,
+    "tokens_per_solved": 6491.3,
+    "verification_seconds": 8296.371219838504,
+    "input_tokens": 872427,
+    "output_tokens": 129826,
+    "reasoning_tokens": 0,
+    "final_tokens": 129826,
+    "output_tokens_per_attempt": 315.87834549878346,
+    "truncated": 0,
+    "truncation_rate": 0,
+    "invalid_modifications": 16,
+    "integrity_statuses": {
+      "valid": 370,
+      "unparseable": 24,
+      "checker_error": 1,
+      "invalid": 16
+    },
+    "errors": {
+      "compilation": 97,
+      "verification": 262,
+      "syntax": 24,
+      "timeout": 5
+    },
+    "error_rates_per_attempt": {
+      "compilation": 0.2360097323600973,
+      "verification": 0.6374695863746959,
+      "syntax": 0.058394160583941604,
+      "timeout": 0.012165450121654502
+    },
+    "planning_150_tasks_6_attempts_hours": 8.38362365185688,
+    "diagnostics": {
+      "audited_attempts": 411,
+      "syntax_attempts": 24,
+      "type_mismatch_attempts": 60,
+      "problems_with_syntax_errors": 8,
+      "problems_with_type_mismatches": 29,
+      "syntax_problem_ids": [
+        "cloverbench_binary_search",
+        "mbpp_task_id_161",
+        "mbpp_task_id_18",
+        "mbpp_task_id_576",
+        "mbpp_task_id_610",
+        "mbpp_task_id_69",
+        "mbpp_task_id_755",
+        "misc_max_index"
+      ],
+      "type_mismatch_problem_ids": [
+        "diffy_ms1",
+        "diffy_ms2",
+        "diffy_ms3",
+        "diffy_ms4",
+        "diffy_ms5",
+        "mbpp_task_id_105",
+        "mbpp_task_id_133",
+        "mbpp_task_id_142",
+        "mbpp_task_id_261",
+        "mbpp_task_id_273",
+        "mbpp_task_id_282",
+        "mbpp_task_id_431",
+        "mbpp_task_id_445",
+        "mbpp_task_id_460",
+        "mbpp_task_id_461",
+        "mbpp_task_id_476",
+        "mbpp_task_id_477",
+        "mbpp_task_id_572",
+        "mbpp_task_id_588",
+        "mbpp_task_id_602",
+        "mbpp_task_id_616",
+        "mbpp_task_id_764",
+        "mbpp_task_id_798",
+        "mbpp_task_id_804",
+        "mbpp_task_id_807",
+        "mbpp_task_id_94",
+        "misc_choose_odd",
+        "misc_deduplicate",
+        "misc_simple_nested"
+      ]
+    },
+    "stage": "full",
+    "mode": "instruct",
+    "run_fingerprint": "0873da25d6e35e30a5d7a6ec1e884919d9e93691569083ee4c8b0ad4f3103ff8",
+    "model_load_seconds": 2321.446368186036,
+    "seconds_per_solved_including_model_load": 805.2061825919372,
+    "completed_session_wall_seconds": 17761.800943823997,
+    "interrupted_sessions": 0,
+    "session_gpus": [
+      {
+        "name": "NVIDIA L40S",
+        "memory_bytes": 47665709056,
+        "compute_capability": [
+          8,
+          9
+        ],
+        "cuda_build": "12.4"
+      }
+    ],
+    "categories": {
+      "CloverBench": {
+        "expected_tasks": 11,
+        "completed_tasks": 11,
+        "solved": 2,
+        "success_at": {
+          "0": 0.18181818181818182,
+          "1": 0.18181818181818182,
+          "2": 0.18181818181818182,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.0,
+        "attempts": 29,
+        "inference_mean_seconds": 11.879293771047177,
+        "inference_median_seconds": 11.483016268000938,
+        "task_mean_seconds": 82.92553889764135,
+        "task_median_seconds": 94.01365152304061,
+        "total_active_seconds": 912.1809278740548,
+        "seconds_per_solved": 456.0904639370274,
+        "tokens_per_solved": 4166.0,
+        "verification_seconds": 566.9263960787794,
+        "input_tokens": 53794,
+        "output_tokens": 8332,
+        "reasoning_tokens": 0,
+        "final_tokens": 8332,
+        "output_tokens_per_attempt": 287.3103448275862,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 0,
+        "integrity_statuses": {
+          "valid": 26,
+          "unparseable": 3
+        },
+        "errors": {
+          "compilation": 3,
+          "verification": 21,
+          "syntax": 3
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.10344827586206896,
+          "verification": 0.7241379310344828,
+          "syntax": 0.10344827586206896
+        },
+        "planning_150_tasks_6_attempts_hours": 7.863628688569437
+      },
+      "Diffy": {
+        "expected_tasks": 38,
+        "completed_tasks": 38,
+        "solved": 0,
+        "success_at": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.0,
+        "attempts": 114,
+        "inference_mean_seconds": 15.557872779337535,
+        "inference_median_seconds": 14.850243513996247,
+        "task_mean_seconds": 100.13547317944406,
+        "task_median_seconds": 92.73912174598081,
+        "total_active_seconds": 3805.147980818874,
+        "seconds_per_solved": null,
+        "tokens_per_solved": null,
+        "verification_seconds": 2028.9228228387656,
+        "input_tokens": 321050,
+        "output_tokens": 42395,
+        "reasoning_tokens": 0,
+        "final_tokens": 42395,
+        "output_tokens_per_attempt": 371.8859649122807,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 6,
+        "integrity_statuses": {
+          "valid": 107,
+          "checker_error": 1,
+          "invalid": 6
+        },
+        "errors": {
+          "compilation": 17,
+          "verification": 97
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.14912280701754385,
+          "verification": 0.8508771929824561
+        },
+        "planning_150_tasks_6_attempts_hours": 8.344622764953671
+      },
+      "MBPP": {
+        "expected_tasks": 78,
+        "completed_tasks": 78,
+        "solved": 18,
+        "success_at": {
+          "0": 0.21794871794871795,
+          "1": 0.23076923076923078,
+          "2": 0.23076923076923078,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.01639344262295082,
+        "attempts": 199,
+        "inference_mean_seconds": 12.465749957814612,
+        "inference_median_seconds": 11.268021599040367,
+        "task_mean_seconds": 82.93315024692744,
+        "task_median_seconds": 82.25668248842703,
+        "total_active_seconds": 6468.785719260341,
+        "seconds_per_solved": 359.37698440335225,
+        "tokens_per_solved": 3343.277777777778,
+        "verification_seconds": 3946.1131722596474,
+        "input_tokens": 368358,
+        "output_tokens": 60179,
+        "reasoning_tokens": 0,
+        "final_tokens": 60179,
+        "output_tokens_per_attempt": 302.4070351758794,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 7,
+        "integrity_statuses": {
+          "valid": 174,
+          "unparseable": 18,
+          "invalid": 7
+        },
+        "errors": {
+          "compilation": 62,
+          "verification": 97,
+          "syntax": 18,
+          "timeout": 1
+        },
+        "error_rates_per_attempt": {
+          "compilation": 0.31155778894472363,
+          "verification": 0.48743718592964824,
+          "syntax": 0.09045226130653267,
+          "timeout": 0.005025125628140704
+        },
+        "planning_150_tasks_6_attempts_hours": 8.126615225201434
+      },
+      "Misc": {
+        "expected_tasks": 23,
+        "completed_tasks": 23,
+        "solved": 0,
+        "success_at": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": null,
+          "5": null
+        },
+        "complete": true,
+        "repair_rate": 0.0,
+        "attempts": 69,
+        "inference_mean_seconds": 11.333697410450533,
+        "inference_median_seconds": 10.85678251995705,
+        "task_mean_seconds": 112.89402850867127,
+        "task_median_seconds": 80.71369044110179,
+        "total_active_seconds": 2596.5626556994393,
+        "seconds_per_solved": null,
+        "tokens_per_solved": null,
+        "verification_seconds": 1754.4088286613114,
+        "input_tokens": 129225,
+        "output_tokens": 18920,
+        "reasoning_tokens": 0,
+        "final_tokens": 18920,
+        "output_tokens_per_attempt": 274.2028985507246,
+        "truncated": 0,
+        "truncation_rate": 0,
+        "invalid_modifications": 3,
+        "integrity_statuses": {
+          "valid": 63,
+          "invalid": 3,
+          "unparseable": 3
+        },
+        "errors": {
+          "verification": 47,
+          "compilation": 15,
+          "syntax": 3,
+          "timeout": 4
+        },
+        "error_rates_per_attempt": {
+          "verification": 0.6811594202898551,
+          "compilation": 0.21739130434782608,
+          "syntax": 0.043478260869565216,
+          "timeout": 0.057971014492753624
+        },
+        "planning_150_tasks_6_attempts_hours": 9.40783570905594
+      }
+    },
+    "missing_tasks": [],
+    "infrastructure_failures": {}
+  },
+  "v3_audit": {
+    "counts": {
+      "verus_pass": 33,
+      "accepted": 17,
+      "attempts": 422
+    },
+    "integrity_reasons": {
+      "Unable to parse file: expected `,`\n": 9,
+      "Unable to parse file: unexpected token, expected `;`\n": 17,
+      "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]'].": 30,
+      "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: [].": 20,
+      "Disallowed changes found in the body of function: fn sum_min_max (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 2,
+      "Disallowed changes found in the body of function: fn difference_max_min (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "\nthread 'main' (963717) panicked at lynette/src/utils.rs:118:56:\ncalled `Result::unwrap()` on an `Err` value: LexError { span: bytes(933..933) }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n": 1,
+      "Forbidden trusted/bypass construct: assume": 3
+    },
+    "verus_pass_rejected": [
+      [
+        "mbpp_task_id_113",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_2",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_2",
+        1,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_2",
+        2,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_251",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_477",
+        1,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_477",
+        2,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_732",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_732",
+        1,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_741",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_804",
+        1,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        0,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ],
+      [
+        "mbpp_task_id_95",
+        1,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: []."
+      ],
+      [
+        "mbpp_task_id_95",
+        2,
+        "invalid",
+        "Changed attributes (conservative policy). Restore removed original items: []. Remove added items: ['# [ trigger ]']."
+      ]
+    ],
+    "type_pairs": {
+      "('int', 'Range<int>')": 26,
+      "('bool', 'usize')": 1,
+      "('int', 'usize')": 25,
+      "('Seq<bool>', 'bool')": 3,
+      "('int', 'RangeTo<usize>')": 4,
+      "('int', 'RangeTo<int>')": 8,
+      "('Seq<i64>', 'i64')": 6,
+      "('int', 'Range<usize>')": 17,
+      "('Seq<i32>', 'i32')": 3,
+      "('&i32', 'i32')": 3,
+      "('Seq<u8>', 'u8')": 9,
+      "('&_', 'i32')": 1,
+      "('usize', 'Option<_>')": 3,
+      "('usize', 'int')": 3,
+      "('Seq<u32>', 'int')": 3,
+      "('Set<_>', 'i32')": 3
+    },
+    "initial_valid_verification_failures": [
+      "cloverbench_array_append_strong",
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_array_sum_strong",
+      "cloverbench_is_prime",
+      "cloverbench_two_sum",
+      "diffy_brs4",
+      "diffy_conda",
+      "diffy_condg",
+      "diffy_condm",
+      "diffy_condn",
+      "diffy_res1",
+      "diffy_res1o",
+      "diffy_res2",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s1if",
+      "diffy_s1lif",
+      "diffy_s22if",
+      "diffy_s2if",
+      "diffy_s2lif",
+      "diffy_s32if",
+      "diffy_s3if",
+      "diffy_s3lif",
+      "diffy_s42if",
+      "diffy_s4if",
+      "diffy_s4lif",
+      "diffy_s52if",
+      "diffy_s5if",
+      "diffy_s5lif",
+      "diffy_sina1",
+      "diffy_sina2",
+      "diffy_sina3",
+      "diffy_sina4",
+      "diffy_sina5",
+      "mbpp_task_id_170",
+      "mbpp_task_id_240",
+      "mbpp_task_id_261",
+      "mbpp_task_id_262",
+      "mbpp_task_id_290",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_424",
+      "mbpp_task_id_447",
+      "mbpp_task_id_460",
+      "mbpp_task_id_472",
+      "mbpp_task_id_578",
+      "mbpp_task_id_605",
+      "mbpp_task_id_62",
+      "mbpp_task_id_644",
+      "mbpp_task_id_743",
+      "mbpp_task_id_809",
+      "misc_arg_free",
+      "misc_conditional_average",
+      "misc_fib",
+      "misc_findmax",
+      "misc_len_intersect",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_reverse",
+      "misc_sum",
+      "misc_tail_triangle",
+      "misc_trigger"
+    ],
+    "stages": {
+      "0": {
+        "compilation": 37,
+        "verification": 83,
+        "syntax": 9,
+        "verus_pass": 21
+      },
+      "1": {
+        "compilation": 43,
+        "verification": 78,
+        "syntax": 9,
+        "verus_pass": 7
+      },
+      "2": {
+        "compilation": 37,
+        "verification": 84,
+        "syntax": 9,
+        "verus_pass": 5
+      }
+    }
+  },
+  "v4_audit": {
+    "counts": {
+      "verus_pass": 23,
+      "accepted": 20,
+      "attempts": 411
+    },
+    "integrity_reasons": {
+      "Unable to parse file: expected `,`\n": 6,
+      "\nthread 'main' (980559) panicked at lynette/src/utils.rs:118:56:\ncalled `Result::unwrap()` on an `Err` value: LexError { span: bytes(1102..1102) }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n": 1,
+      "Disallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 6,
+      "Unable to parse file: unexpected token, expected `;`\n": 18,
+      "Disallowed changes found in the body of function: fn shared_elements (list1 : & Vec < i32 > , list2 : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 3,
+      "Disallowed changes found in the body of function: fn has_common_element (list1 : & Vec < i32 > , list2 : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "Disallowed changes found in the body of function: fn sum_min_max (arr : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n": 1,
+      "Changed attributes (conservative policy). Restore removed original items: ['# [ trigger ]']. Remove added items: [].": 2,
+      "Forbidden trusted/bypass construct: assume": 3
+    },
+    "verus_pass_rejected": [
+      [
+        "mbpp_task_id_2",
+        0,
+        "invalid",
+        "Disallowed changes found in the body of function: fn shared_elements (list1 : & Vec < i32 > , list2 : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n"
+      ],
+      [
+        "mbpp_task_id_2",
+        1,
+        "invalid",
+        "Disallowed changes found in the body of function: fn shared_elements (list1 : & Vec < i32 > , list2 : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n"
+      ],
+      [
+        "mbpp_task_id_2",
+        2,
+        "invalid",
+        "Disallowed changes found in the body of function: fn shared_elements (list1 : & Vec < i32 > , list2 : & Vec < i32 >)\nDisallowed changes made to Verus macros in the original files.\nDisallowed changes detected\n"
+      ]
+    ],
+    "type_pairs": {
+      "('int', 'Range<usize>')": 4,
+      "('int', 'Range<int>')": 21,
+      "('int', 'RangeTo<int>')": 5,
+      "('Seq<bool>', 'bool')": 1,
+      "('Seq<i64>', 'i64')": 6,
+      "('Seq<i32>', 'i32')": 6,
+      "('int', 'RangeTo<usize>')": 2,
+      "('int', 'usize')": 19,
+      "('Seq<u8>', 'u8')": 9,
+      "('int', 'i32')": 4,
+      "('usize', 'Option<_>')": 3
+    },
+    "initial_valid_verification_failures": [
+      "cloverbench_array_append_strong",
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_array_sum_strong",
+      "cloverbench_is_prime",
+      "cloverbench_two_sum",
+      "diffy_conda",
+      "diffy_condg",
+      "diffy_condm",
+      "diffy_condn",
+      "diffy_res1",
+      "diffy_res1o",
+      "diffy_res2",
+      "diffy_res2o",
+      "diffy_s12if",
+      "diffy_s1if",
+      "diffy_s1lif",
+      "diffy_s22if",
+      "diffy_s2if",
+      "diffy_s2lif",
+      "diffy_s32if",
+      "diffy_s3if",
+      "diffy_s3lif",
+      "diffy_s42if",
+      "diffy_s4if",
+      "diffy_s4lif",
+      "diffy_s52if",
+      "diffy_s5if",
+      "diffy_s5lif",
+      "diffy_sina1",
+      "diffy_sina2",
+      "diffy_sina3",
+      "diffy_sina4",
+      "diffy_sina5",
+      "mbpp_task_id_170",
+      "mbpp_task_id_240",
+      "mbpp_task_id_249",
+      "mbpp_task_id_261",
+      "mbpp_task_id_262",
+      "mbpp_task_id_273",
+      "mbpp_task_id_282",
+      "mbpp_task_id_290",
+      "mbpp_task_id_3",
+      "mbpp_task_id_399",
+      "mbpp_task_id_412",
+      "mbpp_task_id_426",
+      "mbpp_task_id_436",
+      "mbpp_task_id_445",
+      "mbpp_task_id_447",
+      "mbpp_task_id_457",
+      "mbpp_task_id_460",
+      "mbpp_task_id_472",
+      "mbpp_task_id_554",
+      "mbpp_task_id_557",
+      "mbpp_task_id_578",
+      "mbpp_task_id_586",
+      "mbpp_task_id_605",
+      "mbpp_task_id_616",
+      "mbpp_task_id_618",
+      "mbpp_task_id_62",
+      "mbpp_task_id_629",
+      "mbpp_task_id_644",
+      "mbpp_task_id_728",
+      "mbpp_task_id_743",
+      "mbpp_task_id_8",
+      "mbpp_task_id_809",
+      "misc_arg_free",
+      "misc_binary_search",
+      "misc_bubble",
+      "misc_conditional_average",
+      "misc_fib",
+      "misc_filter_weak",
+      "misc_findmax",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_remove_all_greater",
+      "misc_sum",
+      "misc_trigger"
+    ],
+    "stages": {
+      "0": {
+        "compilation": 35,
+        "verification": 85,
+        "syntax": 8,
+        "verus_pass": 20,
+        "timeout": 2
+      },
+      "1": {
+        "compilation": 34,
+        "verification": 86,
+        "syntax": 8,
+        "verus_pass": 2,
+        "timeout": 1
+      },
+      "2": {
+        "compilation": 28,
+        "verification": 91,
+        "syntax": 8,
+        "verus_pass": 1,
+        "timeout": 2
+      }
+    }
+  },
+  "paired_outcomes": {
+    "(False, False)": 129,
+    "(True, True)": 16,
+    "(False, True)": 4,
+    "(True, False)": 1
+  },
+  "gained_ids": [
+    "mbpp_task_id_251",
+    "mbpp_task_id_624",
+    "mbpp_task_id_741",
+    "mbpp_task_id_95"
+  ],
+  "lost_ids": [
+    "misc_arg_free"
+  ]
+}

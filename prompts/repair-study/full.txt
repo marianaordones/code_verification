@@ -1,0 +1,2 @@
+Output contract for experiment 1:
+Return only one complete Rust/Verus file. Retain all original executable code and contracts. Make an effective change to proof annotations addressing a reported failure; do not merely copy the failing candidate. No Markdown explanation, JSON patch, SMT commands, or changes to solver options.

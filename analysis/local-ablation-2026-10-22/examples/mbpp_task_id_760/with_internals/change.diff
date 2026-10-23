@@ -1,0 +1,15 @@
+--- before.rs
++++ after.rs
+@@ -14,9 +14,9 @@
+     let mut index = 1;
+     while index < arr.len()
+         invariant
+-            1 <= index <= arr.len(),
+-            forall|i: int| 1 <= i < index ==> arr[0] == arr[i],
+-    {
++    1 <= index <= arr.len(),
++    forall|i: int| 1 <= i < index ==> arr[0] == #[trigger] arr[i],
++{
+         if arr[0] != arr[index] {
+             return false;
+         }

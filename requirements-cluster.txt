@@ -1,0 +1,15 @@
+# Linux x86_64, Python 3.11/3.12. vLLM 0.8.5 CUDA wheels require torch 2.6.0.
+# Do not mix this stack with the cluster's torch 2.5.1 module.
+pip==25.0.1
+setuptools==75.8.0
+vllm==0.8.5
+torch==2.6.0
+torchaudio==2.6.0
+torchvision==0.21.0
+transformers==4.51.3
+huggingface-hub==0.30.2
+tokenizers==0.21.1
+numpy==1.26.4
+# Keep NumPy 1.x compatible dependencies from the vLLM transitive stack.
+opencv-python-headless==4.11.0.86
+mistral-common==1.5.4

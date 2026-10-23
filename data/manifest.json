@@ -1,0 +1,905 @@
+{
+  "benchmark_commit": "cbf9c0c6337b224fd8e5b7cb4e01ae65c0f98bc1",
+  "tasks": [
+    {
+      "id": "cloverbench_all_digits_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/all_digits_strong.rs",
+      "sha256": "230a7dde3a7f2d515b81cee78e94db58989a3d4ac16b25182256f2468706e859"
+    },
+    {
+      "id": "cloverbench_array_append_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_append_strong.rs",
+      "sha256": "94c2a0ea88ef3eed74a393b5e509f4d3d15beceb5ae8598593d5a432cc31fa7c"
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_concat_strong.rs",
+      "sha256": "ffe680369928643c277e9c0ba420fb2b42f1f3078f1e20367a73f409d5eb0524"
+    },
+    {
+      "id": "cloverbench_array_copy_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_copy_strong.rs",
+      "sha256": "82e7848f176d71315eb23debb0bc01d65d6fed7d15af4c625f026781198a0219"
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_product_strong.rs",
+      "sha256": "f17d4b05fec29bf73aa643b77c0b26016d096b89f8ffa0d4301e20d2e103a00c"
+    },
+    {
+      "id": "cloverbench_array_sum_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_sum_strong.rs",
+      "sha256": "c1a1c72498798102fc408d90d72a49cc46c7f2c7839ed0c510cf434e86c51ed1"
+    },
+    {
+      "id": "cloverbench_binary_search",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/binary_search.rs",
+      "sha256": "dff29ac79b9cff59df187138873cdc15ea7ffe432d9e4df8d62589a88760770e"
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/cal_div.rs",
+      "sha256": "1bdf318d2f8cf5e705f4eb1b7c398dede51c7157fabd0bd3dc868cc7abcb0d49"
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/is_prime.rs",
+      "sha256": "dcab82d1f8b0089ab70adfdd409b7ea10834dfd5db04b7acdeefdfcf5dd20a9e"
+    },
+    {
+      "id": "cloverbench_linear_search2",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/linear_search2.rs",
+      "sha256": "f57c05810cb4abf1e055c44458b02208838b1c10c3e19a77c8e0daafbb41ac18"
+    },
+    {
+      "id": "cloverbench_two_sum",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/two_sum.rs",
+      "sha256": "21ac8b1a396286e5469e27a807da2fc1d0f26432ac74fda7f55e3f67ddd68457"
+    },
+    {
+      "id": "diffy_brs1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs1.rs",
+      "sha256": "7b7e624cdf458ce5b6159744c033c86355c5a5dc0855979f2518826a5753dc6d"
+    },
+    {
+      "id": "diffy_brs2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs2.rs",
+      "sha256": "ab913d250e3481c6d2f04a231d464d8117f88462f0fd8dd153700c53a74285fe"
+    },
+    {
+      "id": "diffy_brs3",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs3.rs",
+      "sha256": "c9a8d9648cbc6fc291bbf82957e3d355acb96ac824364dbfc36bc44746c89984"
+    },
+    {
+      "id": "diffy_brs4",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs4.rs",
+      "sha256": "6ab0007cfb10f17170bf0bb1a645cfbd6680c4253cbb647006f75dc0c6ba0d97"
+    },
+    {
+      "id": "diffy_brs5",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs5.rs",
+      "sha256": "0efadff0e54b9923e4c266c32289cb3c62fb792d2a27bbebad07bd3f98898c9d"
+    },
+    {
+      "id": "diffy_conda",
+      "category": "Diffy",
+      "path": "unverified/Diffy/conda.rs",
+      "sha256": "97a0d0fad04505e246a76ab82c62977955c3dcc730e20fa69609992e9e839280"
+    },
+    {
+      "id": "diffy_condg",
+      "category": "Diffy",
+      "path": "unverified/Diffy/condg.rs",
+      "sha256": "f118b6e940921aea1d1fab9a8877d4c4df5451df2597723376beefe0d6ebb527"
+    },
+    {
+      "id": "diffy_condm",
+      "category": "Diffy",
+      "path": "unverified/Diffy/condm.rs",
+      "sha256": "1b6dcfb6699b991bef902e0bb1eef7d8bad8a79407eb15a78619d5be345a623a"
+    },
+    {
+      "id": "diffy_condn",
+      "category": "Diffy",
+      "path": "unverified/Diffy/condn.rs",
+      "sha256": "309986c084caae9cff52aa54abe44be6ad81feea004dcd45160aede80766879c"
+    },
+    {
+      "id": "diffy_ms1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/ms1.rs",
+      "sha256": "2932bef4830921ce6294c4a126ac7d7bb6af0474af702b6b388b49c3721ccce3"
+    },
+    {
+      "id": "diffy_ms2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/ms2.rs",
+      "sha256": "fbe6931403054ea728423bff14884e2837db25775d49e9d4ae1faa04299c5b66"
+    },
+    {
+      "id": "diffy_ms3",
+      "category": "Diffy",
+      "path": "unverified/Diffy/ms3.rs",
+      "sha256": "80ba438f824d5fc507e8af04857a6199b7a7b5909218250103b46780ff7b3cc5"
+    },
+    {
+      "id": "diffy_ms4",
+      "category": "Diffy",
+      "path": "unverified/Diffy/ms4.rs",
+      "sha256": "6ec6f37aa527edd1d0a8a5ba7479112b00d33a9714cb8d0770df6b042f281908"
+    },
+    {
+      "id": "diffy_ms5",
+      "category": "Diffy",
+      "path": "unverified/Diffy/ms5.rs",
+      "sha256": "015df4b81c52201a4b03285470e1e2f3bf393e90fd45e6f692e5d0b704ca875c"
+    },
+    {
+      "id": "diffy_res1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/res1.rs",
+      "sha256": "9bf66c67eb0ba07d51590492ebdb96c3d0e33f09cb09bf2e933aad0c82d9cf66"
+    },
+    {
+      "id": "diffy_res1o",
+      "category": "Diffy",
+      "path": "unverified/Diffy/res1o.rs",
+      "sha256": "e97f808b668b7a2d11b4f9603558441016e287e016d8c63aafd5ddce1d193b81"
+    },
+    {
+      "id": "diffy_res2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/res2.rs",
+      "sha256": "9c481c833fb1181d818a3df55a4d4e60ac33d16682457d142c8a555d91b7f1d2"
+    },
+    {
+      "id": "diffy_res2o",
+      "category": "Diffy",
+      "path": "unverified/Diffy/res2o.rs",
+      "sha256": "565f9bd67c80529ff20384721f64fc86c21174916ba04d5c0c2741ce45ae2eed"
+    },
+    {
+      "id": "diffy_s12if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s12if.rs",
+      "sha256": "51cc3a6848f1e79b470c24847d9efede99eb4547f8cf315146f0c1f0aec2368e"
+    },
+    {
+      "id": "diffy_s1if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s1if.rs",
+      "sha256": "a4dfc343fc08f706ad7a2a48153e7e33bc888259fe340767f266a95bfb0d889b"
+    },
+    {
+      "id": "diffy_s1lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s1lif.rs",
+      "sha256": "97a0d0fad04505e246a76ab82c62977955c3dcc730e20fa69609992e9e839280"
+    },
+    {
+      "id": "diffy_s22if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s22if.rs",
+      "sha256": "a3fde00144bbfcfd5ae1fea83229877cf44aafd02c1b00445e9c161afabf03e7"
+    },
+    {
+      "id": "diffy_s2if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s2if.rs",
+      "sha256": "e837ea2b6208f1ed71ea137dd567051e44c1bb64c8c4a3b3fa27d57ca48c22d3"
+    },
+    {
+      "id": "diffy_s2lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s2lif.rs",
+      "sha256": "f5e172dc702655f3f250a83bc9b468ed39099f5f2d749d77c2cf714ec4e4e682"
+    },
+    {
+      "id": "diffy_s32if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s32if.rs",
+      "sha256": "c4ab44dab486842f37adb7d0de95d5c78328602c3600268150fd2c2f8101586e"
+    },
+    {
+      "id": "diffy_s3if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s3if.rs",
+      "sha256": "0018980fcd83f262589f73ca789d39fd439c94886cd19dc8d38664e80f5882a6"
+    },
+    {
+      "id": "diffy_s3lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s3lif.rs",
+      "sha256": "cf82e03e3e7dda67fb91dae144ffed7ffb117ab9e49ed9aab49cde38147c6731"
+    },
+    {
+      "id": "diffy_s42if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s42if.rs",
+      "sha256": "924f2a885177d9b42ba3d7ffdf835ba0c75ee942ee56b516422f86f6e0dec6d1"
+    },
+    {
+      "id": "diffy_s4if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s4if.rs",
+      "sha256": "abf0df734f0d75cd8ff97a28892b9ba261eec74e28d2c61f1bd67942a1ea0859"
+    },
+    {
+      "id": "diffy_s4lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s4lif.rs",
+      "sha256": "d0eb950b9df286b6925c9f37cf23486703141d73ddef6547bcd53791c5c2fa8e"
+    },
+    {
+      "id": "diffy_s52if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s52if.rs",
+      "sha256": "ce70aff6ab9e0fc0e7b526866a70e649e4ed609b58b53f7cb2cb8572a1f25143"
+    },
+    {
+      "id": "diffy_s5if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s5if.rs",
+      "sha256": "d650e7cfdf11fc2aac5a64e1ebd6001716875a5ae88423f7675fe18457c4e552"
+    },
+    {
+      "id": "diffy_s5lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s5lif.rs",
+      "sha256": "3e93362909301949819bc33b5f8038116a59ffd53e065452caafee17e7257987"
+    },
+    {
+      "id": "diffy_sina1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina1.rs",
+      "sha256": "9a166e74942a64bdb11418fd226a0d0360a6e9546bfc0cb4fa0b524836400b40"
+    },
+    {
+      "id": "diffy_sina2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina2.rs",
+      "sha256": "4b90c440cdd91cb543d9fa78c1edc9ab31422757261c96d18e6cd1856cd68622"
+    },
+    {
+      "id": "diffy_sina3",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina3.rs",
+      "sha256": "99fa3d49de5856827a69b93636b8b6d45660528bcb757ab2b0128b0f11145830"
+    },
+    {
+      "id": "diffy_sina4",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina4.rs",
+      "sha256": "7784323b56e381401a7e09f77aff4f1ffbd32d258d3e6f69424c386b4ba0b2bf"
+    },
+    {
+      "id": "diffy_sina5",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina5.rs",
+      "sha256": "341dfb22424bcce1ddd56ff2e0d83ce6cceacb4821c6e17af51cf37aa4de2c26"
+    },
+    {
+      "id": "mbpp_task_id_105",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_105.rs",
+      "sha256": "1cfd31cc79bb6d50a9f93d33aa3069d5878c373cad6967bedd4ccccc6782bf1e"
+    },
+    {
+      "id": "mbpp_task_id_113",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_113.rs",
+      "sha256": "c2ced85025d15c565b6b0e46bc98bf6d57aed92565662a01a7c305bea34e885a"
+    },
+    {
+      "id": "mbpp_task_id_133",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_133.rs",
+      "sha256": "2c3d9c33e9beb559a18ca642f3daab3870e8e82b915bac47c985d46d7a6f5bea"
+    },
+    {
+      "id": "mbpp_task_id_142",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_142.rs",
+      "sha256": "2515e0ba37328579b9a35f514e29d10b164f1e4d5a6eb7513102c508aee63fb7"
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_145.rs",
+      "sha256": "926c18807d2e4e9942dea40905391cc6582f09e51fcaad76506fd8b24f592293"
+    },
+    {
+      "id": "mbpp_task_id_161",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_161.rs",
+      "sha256": "94c180f29e37e70b4a6047b886a861f85470b1c009a1cee3b22d454a1d631f4f"
+    },
+    {
+      "id": "mbpp_task_id_170",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_170.rs",
+      "sha256": "d50d9be132238bd4e3334e8445653af05208131480a1dc010b02db9bb3292530"
+    },
+    {
+      "id": "mbpp_task_id_18",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_18.rs",
+      "sha256": "8a6ec2116532fa42e94b396b83e26d1789befb13ccfd86b898143ff2dae862b4"
+    },
+    {
+      "id": "mbpp_task_id_2",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_2.rs",
+      "sha256": "7cc5b9ab2da413ff413b0b9c999b5f58c16170221348b9d40f5fe7cb82427b98"
+    },
+    {
+      "id": "mbpp_task_id_230",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_230.rs",
+      "sha256": "ab16d6edb1e838a35a43e1e33a8ecdbe80ca47759ce5790e562bec3f9b82bda8"
+    },
+    {
+      "id": "mbpp_task_id_240",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_240.rs",
+      "sha256": "e105c79f81e0407a0b8f403fd10cc699065ae71dfc2202d8d91d158337f28d73"
+    },
+    {
+      "id": "mbpp_task_id_249",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_249.rs",
+      "sha256": "09ff2ef5d6ef205e6ff2d7d8080b8991a9075ac7a9802741a1837e6fdc17ec4a"
+    },
+    {
+      "id": "mbpp_task_id_251",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_251.rs",
+      "sha256": "6644f61a462d6ef5c731b94c95f034022fda3fe5decd2d9270df3cb9283bb10b"
+    },
+    {
+      "id": "mbpp_task_id_261",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_261.rs",
+      "sha256": "9e6f9753234132f6590ecd030cfb45fe6c0b7293a24ee172a16006fcfe8a9abe"
+    },
+    {
+      "id": "mbpp_task_id_262",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_262.rs",
+      "sha256": "084df30eb3c368ba20695b3cc8c554a95c604e56ebdc9f2ff2ed5ba62543da45"
+    },
+    {
+      "id": "mbpp_task_id_273",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_273.rs",
+      "sha256": "88b41e02ae7f0b0d7b9b1493cacf7ecf72329140236cc00a7ce5e6544ea24f9a"
+    },
+    {
+      "id": "mbpp_task_id_282",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_282.rs",
+      "sha256": "88b41e02ae7f0b0d7b9b1493cacf7ecf72329140236cc00a7ce5e6544ea24f9a"
+    },
+    {
+      "id": "mbpp_task_id_284",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_284.rs",
+      "sha256": "a5bb873790542fe69f97b41d486f9e401e4a30aa41f9d19e41d72d576d267a17"
+    },
+    {
+      "id": "mbpp_task_id_290",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_290.rs",
+      "sha256": "5dfc3817472e7ec67d4d3664089f6fd934748ac77009229857557495377ffb6d"
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_3.rs",
+      "sha256": "ab0ea6c7a8901a9c310f22bf1f224e5d51ba34bef70d32a8b3ac6dcbd8e99d74"
+    },
+    {
+      "id": "mbpp_task_id_307",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_307.rs",
+      "sha256": "aab8ded884d5c81f7a52a70a051e019de27ff8c2391d81c4139654a41e97c00c"
+    },
+    {
+      "id": "mbpp_task_id_399",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_399.rs",
+      "sha256": "1b60cb78fba49fd3f1177af564f11272d66f5d0af5f72689b1c627c9514d63d7"
+    },
+    {
+      "id": "mbpp_task_id_412",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_412.rs",
+      "sha256": "d5c267bbd525d93f9d64c073f32b5f098845a037417c1ebca584f88a6d01198c"
+    },
+    {
+      "id": "mbpp_task_id_414",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_414.rs",
+      "sha256": "a6cdcb3441567d6e95c218dd65104c9b15707ae46114ca762cde31550a6ff028"
+    },
+    {
+      "id": "mbpp_task_id_424",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_424.rs",
+      "sha256": "8b77bd5b0d98251db60e7638740a613efb8fe673dc2decb8c70fc2b0cbdd511a"
+    },
+    {
+      "id": "mbpp_task_id_426",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_426.rs",
+      "sha256": "0e9bc61d1cd067e02ba95e60cc36ec02a4334971a381881cfca3e23162847555"
+    },
+    {
+      "id": "mbpp_task_id_431",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_431.rs",
+      "sha256": "e7bf4a9fa3359e30ff02670517ef6a3eec23ff22c297ee2c4125090f021a5a28"
+    },
+    {
+      "id": "mbpp_task_id_433",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_433.rs",
+      "sha256": "67144d779005b23ba6fbc3b6527d5f987d899d0e29efb2f42a803bf46a2d77eb"
+    },
+    {
+      "id": "mbpp_task_id_436",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_436.rs",
+      "sha256": "1e5cd354b724d0cdb94fb4cdbb65e40d95f36d8f7154fdef6b6cee2283383761"
+    },
+    {
+      "id": "mbpp_task_id_445",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_445.rs",
+      "sha256": "dce056cb5c38aeea5851beab43f5747774fe1ed93b000a5d8f28a79ebcdc64a4"
+    },
+    {
+      "id": "mbpp_task_id_447",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_447.rs",
+      "sha256": "5a934744913161625fd2b49ed1059985a3e29c3524ddc4e6d051b9647e4554d9"
+    },
+    {
+      "id": "mbpp_task_id_454",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_454.rs",
+      "sha256": "4a626e0de9c284bb6096f0bdec345c53b82f853d31bb644873ac35c3d2b7bff5"
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_457.rs",
+      "sha256": "8aacb87592267de9bc0db9b712fae9645bcdd107b38cee5038896b3170242ce9"
+    },
+    {
+      "id": "mbpp_task_id_460",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_460.rs",
+      "sha256": "50d4520d41de4cbaf3f3ff04c0535952198828b621dbba7c792c3830bb3ca530"
+    },
+    {
+      "id": "mbpp_task_id_461",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_461.rs",
+      "sha256": "8740e241f0713f2e2b5dda634dc80dbf3df2354af8d09eac1e0bd86d323e819f"
+    },
+    {
+      "id": "mbpp_task_id_472",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_472.rs",
+      "sha256": "aefcef16b03fa5ba6851a074715b423c5e55ba59375b34e5e0c07a80fc6f0227"
+    },
+    {
+      "id": "mbpp_task_id_474",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_474.rs",
+      "sha256": "9a8421a46cc1a0e149dec5554aee99b611f3506af5c7f11a152fecfb15d9c2bd"
+    },
+    {
+      "id": "mbpp_task_id_476",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_476.rs",
+      "sha256": "80e34f8e6f8c1a47db11629411d2c2fb7f46dd8144eecdedd5e1e2f156337ede"
+    },
+    {
+      "id": "mbpp_task_id_477",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_477.rs",
+      "sha256": "2cd671a3840428aa1cfde0f2b94fe0e73ad918f6f9850ad000ebacddd8dd0856"
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_554.rs",
+      "sha256": "0f75381a67a27628de6b94c08bdc9ddfbf54818c011d33607d89fcb194c72c69"
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_557.rs",
+      "sha256": "3cae196e6f541dd7658d9e07b82674b3c5c4210180e38f0cab1ab0eb0f4007a9"
+    },
+    {
+      "id": "mbpp_task_id_567",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_567.rs",
+      "sha256": "1dd527557427e2cef1ce7bc8ae81182235cfbb12e19c70d922826668b02e3eb0"
+    },
+    {
+      "id": "mbpp_task_id_572",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_572.rs",
+      "sha256": "621d21b19362228842c143dcae0fad2baaef7c17f267f6e5518f5118b5234c88"
+    },
+    {
+      "id": "mbpp_task_id_576",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_576.rs",
+      "sha256": "1fe6ba8fe2d48ff225fb1af8da790a10761580cb6a125ec0578fe58dbcd3ed10"
+    },
+    {
+      "id": "mbpp_task_id_578",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_578.rs",
+      "sha256": "fdbf4334e9e1764bde34d5f29dede521608aca9f8ebd6c4b7d4053988ad487dc"
+    },
+    {
+      "id": "mbpp_task_id_579",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_579.rs",
+      "sha256": "a2b7c1720705476229310d4251784393eaf5a2c9783cc97bb8195b41972e1ac0"
+    },
+    {
+      "id": "mbpp_task_id_586",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_586.rs",
+      "sha256": "1f3c76a58dec92689e585ef96158be946c22b5600b029209fbe954397fd15079"
+    },
+    {
+      "id": "mbpp_task_id_588",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_588.rs",
+      "sha256": "0dd2055f06c9518a092a94de7f6c03677f5f748d5f93adffbb9e52ace106951f"
+    },
+    {
+      "id": "mbpp_task_id_602",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_602.rs",
+      "sha256": "a76b3fd5a411537e5b10904531b699fc15338d95183b58b0f436e36913cc7c28"
+    },
+    {
+      "id": "mbpp_task_id_605",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_605.rs",
+      "sha256": "275a50235193baf116162a4654d9c2707f994ec7bdd7c04d999dceb19128f9a2"
+    },
+    {
+      "id": "mbpp_task_id_610",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_610.rs",
+      "sha256": "505b15b6113f4f1478124e67909aefc04f916c735247a9c6901818828aac6d54"
+    },
+    {
+      "id": "mbpp_task_id_616",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_616.rs",
+      "sha256": "9ea1296a151c516945d9b45180084487876e93b6365e84e19c8136688b33712c"
+    },
+    {
+      "id": "mbpp_task_id_618",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_618.rs",
+      "sha256": "78ce8afd819da9c6fe406e2eed929fcb2db207a61ecdd3640dc01d46193d2f53"
+    },
+    {
+      "id": "mbpp_task_id_62",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_62.rs",
+      "sha256": "7c02da43fa7f6dc73449ba44aacf34925e0c23a982cf39e57603c59c5a51a951"
+    },
+    {
+      "id": "mbpp_task_id_624",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_624.rs",
+      "sha256": "39d23f957f875dc215ac87ae7a5ef7f2f28d863a0415a6bb2c19af0113f913a5"
+    },
+    {
+      "id": "mbpp_task_id_629",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_629.rs",
+      "sha256": "f242817cc1c7e9454fa0df586d7928575f1d8542d8801ef07e6cb65240976ca8"
+    },
+    {
+      "id": "mbpp_task_id_644",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_644.rs",
+      "sha256": "15daa4a41d79538a17c2c4ba90a4416bc561413d2ab01d601144c4e619c27e36"
+    },
+    {
+      "id": "mbpp_task_id_69",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_69.rs",
+      "sha256": "2f699b11492acdeb3aa5cc924bc833c27b055d872a30cdd3905e0d3d46fc0a81"
+    },
+    {
+      "id": "mbpp_task_id_70",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_70.rs",
+      "sha256": "41821f91377f34bcaa05f9a57ef4f58ed4f56384b547d439ebedd6b794a769d1"
+    },
+    {
+      "id": "mbpp_task_id_728",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_728.rs",
+      "sha256": "4df036e28c33fa8a801e7f626db3687a03ea357f039e02f9d8f8b450e9cdc982"
+    },
+    {
+      "id": "mbpp_task_id_732",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_732.rs",
+      "sha256": "a3bf85dea3d9221dc0b7050f4f938c28637cfe21310e25caea88c96d16386a2d"
+    },
+    {
+      "id": "mbpp_task_id_733",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_733.rs",
+      "sha256": "1699914efbcc5371d138b3c3f5ee7e12e99fed1b771f097fd7ebab15aac7fb3f"
+    },
+    {
+      "id": "mbpp_task_id_741",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_741.rs",
+      "sha256": "58a63aec4f983d6349454577c0f29a4d32ab63e6d093d1eb2279efba2054618f"
+    },
+    {
+      "id": "mbpp_task_id_743",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_743.rs",
+      "sha256": "cc2039cbe378bc746154eb8340d8df8242b99aa4d27aca7013c4e0eda02a2e13"
+    },
+    {
+      "id": "mbpp_task_id_755",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_755.rs",
+      "sha256": "fcce2bc578097cc9590fea1701d61f6afdbcb21a94dcac7a14c7819c9946de83"
+    },
+    {
+      "id": "mbpp_task_id_760",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_760.rs",
+      "sha256": "74285e32576d400e662d2f482aa93e15c979e4f3cf3acd92268551abdf321a17"
+    },
+    {
+      "id": "mbpp_task_id_764",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_764.rs",
+      "sha256": "47e2b67522ae4f564a581ee6bdf421d99914cf3e4ef50babc510d8eff16f1f92"
+    },
+    {
+      "id": "mbpp_task_id_769",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_769.rs",
+      "sha256": "5647ad7c0b3d1279ae551dc28966a195917533ca8378f0b3df019682e8c925d1"
+    },
+    {
+      "id": "mbpp_task_id_775",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_775.rs",
+      "sha256": "879c1ae67724ede47a1dcad9e10fbbd0bbdc12a9b3ca1dc4f65c7a375d7451e8"
+    },
+    {
+      "id": "mbpp_task_id_790",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_790.rs",
+      "sha256": "a2d8a4bdde3f99b43a87c330a72246e0fcdffe5e6325acedae8d6796db937350"
+    },
+    {
+      "id": "mbpp_task_id_798",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_798.rs",
+      "sha256": "b9473a1100de497fb31446c1b7de0abff251cd20b888422bef166c7a5efdda35"
+    },
+    {
+      "id": "mbpp_task_id_8",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_8.rs",
+      "sha256": "5f11f1fb82c1e2c1b252828ca074cd977af4655fe520b7ef23d185e8301c36ff"
+    },
+    {
+      "id": "mbpp_task_id_804",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_804.rs",
+      "sha256": "5fdb88b4d83c5e09d18caef010aea911735de982c4b7bb9d83b6ba8facbb3320"
+    },
+    {
+      "id": "mbpp_task_id_807",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_807.rs",
+      "sha256": "49920149d6ed789bf09c1fd930c5e4a70491682194ddb90c4aa2088c9107b7c1"
+    },
+    {
+      "id": "mbpp_task_id_808",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_808.rs",
+      "sha256": "1302fc6de46647a444e50bb413c6dfb2d7381453524f8faede950572e9a15413"
+    },
+    {
+      "id": "mbpp_task_id_809",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_809.rs",
+      "sha256": "268b87ac6246cdb55f349f9306c4bee74a53b3207ebf3940677baefa7ae4ffcb"
+    },
+    {
+      "id": "mbpp_task_id_94",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_94.rs",
+      "sha256": "57fa45f5c626adf0ca40c0cae15390ac43a4e3b1f5972058ba75892077512e43"
+    },
+    {
+      "id": "mbpp_task_id_95",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_95.rs",
+      "sha256": "f94b3aac132dc0547bf1c700cfaaa801492739e9cd58a166adaa020969ffab59"
+    },
+    {
+      "id": "misc_arg_free",
+      "category": "Misc",
+      "path": "unverified/Misc/arg_free.rs",
+      "sha256": "c95cd69a895fd14c31deede5f6ea8c82253c255cc59324c0d0fb5fd387bd8505"
+    },
+    {
+      "id": "misc_basic_nonlinear",
+      "category": "Misc",
+      "path": "unverified/Misc/basic_nonlinear.rs",
+      "sha256": "e75fc574b66e83bde2c695a8077046e9f0e7de816d32c3116317390b19f9f959"
+    },
+    {
+      "id": "misc_binary_search",
+      "category": "Misc",
+      "path": "unverified/Misc/binary_search.rs",
+      "sha256": "5c56c6932ad723573a4ba9cf378edd81927c278e7fa0c192b71187f74737d486"
+    },
+    {
+      "id": "misc_bubble",
+      "category": "Misc",
+      "path": "unverified/Misc/bubble.rs",
+      "sha256": "a931274dd50fe0d3be6aefad0fb4f58d781fa65047f7eb299cecf2191fc8baf2"
+    },
+    {
+      "id": "misc_cell_2_sum",
+      "category": "Misc",
+      "path": "unverified/Misc/cell_2_sum.rs",
+      "sha256": "62a83ff6baddeb984bd9faaddc26f62d03fcede583567e7c2c31fa41ea524582"
+    },
+    {
+      "id": "misc_choose_odd",
+      "category": "Misc",
+      "path": "unverified/Misc/choose_odd.rs",
+      "sha256": "9d9ae1317296c9c25616c9365f4065b56aaa638c556c8b9185b66ff98b3baa2b"
+    },
+    {
+      "id": "misc_conditional_average",
+      "category": "Misc",
+      "path": "unverified/Misc/conditional_average.rs",
+      "sha256": "cf51d2f5e13e4fe96544d3719f5d69da6b2eb471a66bb60ede80a6aa0e59c53b"
+    },
+    {
+      "id": "misc_deduplicate",
+      "category": "Misc",
+      "path": "unverified/Misc/deduplicate.rs",
+      "sha256": "96e6791c16e4bfa876fb2044e651a225f7801962516c13a3e57fcfee041b694e"
+    },
+    {
+      "id": "misc_fib",
+      "category": "Misc",
+      "path": "unverified/Misc/fib.rs",
+      "sha256": "b37985b11669caad2fdd6e8b46cd91a2b265863a1ff28df205f0637287d6e57e"
+    },
+    {
+      "id": "misc_filter",
+      "category": "Misc",
+      "path": "unverified/Misc/filter.rs",
+      "sha256": "432308ff4b3989539c99dd3b2d89cec54231c9f3ad0858edf3716b753d9a5413"
+    },
+    {
+      "id": "misc_filter_weak",
+      "category": "Misc",
+      "path": "unverified/Misc/filter_weak.rs",
+      "sha256": "246ba8141aa010140832f73ef44656de1bbaa8d41a5c17277645dbe53592ffa3"
+    },
+    {
+      "id": "misc_findmax",
+      "category": "Misc",
+      "path": "unverified/Misc/findmax.rs",
+      "sha256": "8c8ab34be41f0d6dba6dbc40d54cfc4b8869620407327b89c27bb82bdd55f4c8"
+    },
+    {
+      "id": "misc_havoc_inline_post",
+      "category": "Misc",
+      "path": "unverified/Misc/havoc_inline_post.rs",
+      "sha256": "00ef955db0ee2664b75b81fb42e9940bf732b7b76ccca9baf2f15ad1e5931c62"
+    },
+    {
+      "id": "misc_len_intersect",
+      "category": "Misc",
+      "path": "unverified/Misc/len_intersect.rs",
+      "sha256": "c8e74b7523c18dc75138dcab9fb7eac8d9a0d4eff67d138a300ac1b3794fd3b8"
+    },
+    {
+      "id": "misc_linearsearch",
+      "category": "Misc",
+      "path": "unverified/Misc/linearsearch.rs",
+      "sha256": "1196f414b32fbac603ef81204ffe3c653285ab8ae15ceb209a3e3cd9d8bb7057"
+    },
+    {
+      "id": "misc_map",
+      "category": "Misc",
+      "path": "unverified/Misc/map.rs",
+      "sha256": "a9bff6bebc0bc2732d2c2f9cb464da9ceb97eba781b9b467fc97e3a8ed759d86"
+    },
+    {
+      "id": "misc_max_index",
+      "category": "Misc",
+      "path": "unverified/Misc/max_index.rs",
+      "sha256": "d39c2dc4c12d425c9c32bc2ecd853d9cc1cfcdf903a3459aa051418f98f3b656"
+    },
+    {
+      "id": "misc_remove_all_greater",
+      "category": "Misc",
+      "path": "unverified/Misc/remove_all_greater.rs",
+      "sha256": "a984803f001054f8f99199e43c56342e0bc195ef9c0abdd38885093743bf97b4"
+    },
+    {
+      "id": "misc_reverse",
+      "category": "Misc",
+      "path": "unverified/Misc/reverse.rs",
+      "sha256": "3542472a72d862c0713d8c8e902a77b147e4bec711b8ce6728afc49ad6de156c"
+    },
+    {
+      "id": "misc_simple_nested",
+      "category": "Misc",
+      "path": "unverified/Misc/simple_nested.rs",
+      "sha256": "0c7054751fae5260bff9dc3ed5336524438d3bc5dd5e2d6cb7b46fce218001ca"
+    },
+    {
+      "id": "misc_sum",
+      "category": "Misc",
+      "path": "unverified/Misc/sum.rs",
+      "sha256": "58df631ae2d2d296e47d8a9d6b215f0d56ec0bc74cb80d1d1d8cf67ed61c31e7"
+    },
+    {
+      "id": "misc_tail_triangle",
+      "category": "Misc",
+      "path": "unverified/Misc/tail_triangle.rs",
+      "sha256": "4e679222f3a470b63221ce6d929b8b74820c94136e23ea9d82b4a16a0ae9f23e"
+    },
+    {
+      "id": "misc_trigger",
+      "category": "Misc",
+      "path": "unverified/Misc/trigger.rs",
+      "sha256": "3c6efa45e4a306d37f1c54d47ca578c7f764febca8bd35d836fa7ccd641925dc"
+    }
+  ]
+}

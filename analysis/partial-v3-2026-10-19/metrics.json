@@ -1,0 +1,50 @@
+{
+  "v3_completed": 124,
+  "v3_solved": 16,
+  "v3_all": {
+    "attempts": 345,
+    "syntax": 21,
+    "E0308": 57,
+    "valid_integrity": 275,
+    "truncated": 0,
+    "inference_seconds": 4643.632856628508,
+    "verification_seconds": 7535.094886410749,
+    "output_tokens": 112115,
+    "verus_pass": 29,
+    "verus_pass_integrity_rejected": 13,
+    "initial_success": 13
+  },
+  "common_count": 82,
+  "v2_common": {
+    "attempts": 223,
+    "syntax": 8,
+    "E0308": 87,
+    "valid_integrity": 155,
+    "truncated": 0,
+    "inference_seconds": 2874.954982192605,
+    "verification_seconds": 5177.635106419446,
+    "output_tokens": 69996,
+    "verus_pass": 23,
+    "verus_pass_integrity_rejected": 11,
+    "initial_success": 11
+  },
+  "v3_common": {
+    "attempts": 222,
+    "syntax": 9,
+    "E0308": 31,
+    "valid_integrity": 184,
+    "truncated": 0,
+    "inference_seconds": 2822.127111638314,
+    "verification_seconds": 5056.087489250931,
+    "output_tokens": 68186,
+    "verus_pass": 22,
+    "verus_pass_integrity_rejected": 9,
+    "initial_success": 12
+  },
+  "paired_outcomes": {
+    "(False, False)": 68,
+    "(True, True)": 11,
+    "(False, True)": 2,
+    "(True, False)": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "experiment": "qwen14b-v2-50",
+  "model": "Qwen/Qwen3-14B",
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "prompt_version": "v2",
+  "task_selection": "data/pilot-qwen14b-v2-50.json",
+  "pilot_size": 50,
+  "max_num_seqs": 1,
+  "mode": "thinking",
+  "enable_thinking": true,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_tokens": 8192,
+  "max_repairs": 2,
+  "seed": 20261018,
+  "verus": "verus",
+  "z3": "z3",
+  "lynette": "tools/lynette/source/target/release/lynette",
+  "verification_timeout": 120
+}

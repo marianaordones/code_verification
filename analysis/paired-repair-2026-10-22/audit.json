@@ -1,0 +1,79 @@
+{
+  "scope": "Saved artifacts only; no solver or inference rerun",
+  "first_payloads_equal": 114,
+  "first_candidate_hash_matches_per_arm": 114,
+  "initial_errors": {
+    "verification": 78,
+    "compilation": 36
+  },
+  "arms": {
+    "full": {
+      "counts": {
+        "available": 141,
+        "available_unchanged": 94,
+        "raw_user_candidate_feedbacks": 29,
+        "raw_user_candidate_feedbacks_omitted": 0,
+        "unavailable": 87,
+        "unavailable_unchanged": 47
+      },
+      "edit_errors": {},
+      "max_input_tokens": 30065,
+      "max_groups": 18,
+      "max_instances": 30
+    },
+    "local": {
+      "counts": {
+        "available": 129,
+        "available_unchanged": 20,
+        "raw_user_candidate_feedbacks": 32,
+        "raw_user_candidate_feedbacks_omitted": 0,
+        "unavailable": 95,
+        "unavailable_unchanged": 24
+      },
+      "edit_errors": {
+        "No effective token change": 40,
+        "Only replace the invariant list": 4
+      },
+      "max_input_tokens": 31817,
+      "max_groups": 18,
+      "max_instances": 31
+    }
+  },
+  "successes": [
+    {
+      "id": "mbpp_task_id_760",
+      "repair": 1,
+      "internals": "unavailable",
+      "verus_success": true,
+      "integrity_valid": true
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "repair": 1,
+      "internals": "unavailable",
+      "verus_success": true,
+      "integrity_valid": true
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "repair": 2,
+      "internals": "available",
+      "verus_success": true,
+      "integrity_valid": true
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "repair": 1,
+      "internals": "unavailable",
+      "verus_success": true,
+      "integrity_valid": true
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "repair": 1,
+      "internals": "available",
+      "verus_success": true,
+      "integrity_valid": true
+    }
+  ]
+}

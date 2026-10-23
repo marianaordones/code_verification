@@ -1,0 +1,52 @@
+{
+  "schema": "z3-internals-v1",
+  "scope": "diagnostic_api_replay_not_original_search",
+  "availability": "available",
+  "original_query_counts": {
+    "sat": 0,
+    "unsat": 0,
+    "unknown": 1,
+    "timeout": 0
+  },
+  "capture_errors": 0,
+  "query_id": "query-0000",
+  "original_result": "unknown",
+  "replay_result": "unknown",
+  "reason_unknown": "incomplete quantifiers",
+  "replay_timeout_ms": 5000,
+  "unavailability_reason": null,
+  "statistics": {
+    "quant instantiations": 12,
+    "conflicts": 3,
+    "decisions": 4,
+    "propagations": 20,
+    "arith conflicts": 1,
+    "rlimit count": 8000,
+    "time": 0.25
+  },
+  "sampling": {
+    "instantiations_observed": 12,
+    "instantiations_saved": 12,
+    "callback_errors": 0,
+    "groups_in_prompt": 1,
+    "instances_in_prompt": 1,
+    "policy": "first fitting events; at most 10 distinct quantifiers and 3 instances each; complete formulas only"
+  },
+  "quantifiers": [
+    {
+      "id": "Q1",
+      "quantifier_smt": "(forall ((j Int)) (>= (f j) 0))",
+      "instances": [
+        {
+          "binding_terms_callback_order": [
+            "0"
+          ],
+          "clause_literals_smt": [
+            "(not (forall ((j Int)) (>= (f j) 0)))",
+            "(>= (f 0) 0)"
+          ]
+        }
+      ]
+    }
+  ]
+}

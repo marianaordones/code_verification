@@ -1,0 +1,9 @@
+Repair the proof annotations in the current Rust/Verus program. Use only the latest conventional Verus diagnostics below. Preserve the implementation and specifications, and follow the Verus syntax reference. Return a complete source file with a concrete proof correction, not an explanation or repeated comments.
+
+<program>
+$code
+</program>
+
+<verus_diagnostics>
+$feedback
+</verus_diagnostics>

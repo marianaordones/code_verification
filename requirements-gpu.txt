@@ -1,0 +1,3 @@
+# Linux/Python 3.11. pip freeze is saved for every experiment.
+vllm==0.8.5
+transformers==4.51.3

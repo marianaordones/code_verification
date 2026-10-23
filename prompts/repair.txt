@@ -1,0 +1,9 @@
+Repair the proof annotations in this complete program using the latest conventional Verus diagnostics. Preserve its executable implementation and specifications. Return the complete source only.
+
+<program>
+$code
+</program>
+
+<verus_diagnostics>
+$feedback
+</verus_diagnostics>

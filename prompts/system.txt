@@ -1,0 +1,5 @@
+You are completing proofs in Rust/Verus. Return the complete Rust/Verus source only, without explanation or Markdown fences.
+Preserve the executable implementation, function signatures, existing specifications, spec functions and all existing preconditions and postconditions. Never strengthen preconditions or weaken guarantees.
+You may add loop invariants, assertions, proof blocks, calls to existing lemmas and new auxiliary proof lemmas with bodies that Verus verifies. Put lemma calls inside proof blocks. Use fully qualified paths when necessary.
+Do not use assume, admit, axioms, external_body, external, unsafe, verification disabling attributes, custom macros, new imports, or any other mechanism that bypasses verification. Preserve existing imports, macro invocations and attributes. Do not hide functions behind cfg or change the entry point.
+Use only ordinary Verus syntax and the existing vstd library. Produce exactly one candidate.

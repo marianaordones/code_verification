@@ -1,0 +1,13 @@
+--- before.rs
++++ after.rs
+@@ -42,8 +42,8 @@
+             0 <= index <= str1.len(),
+             toggle_case@.len() == index,
+             forall|i: int|
+-                0 <= i < index ==> toggle_case[i] == to_toggle_case_spec(str1[i as usize]),
+-    {
++                0 <= i < index ==> toggle_case[i] == to_toggle_case_spec(str1[i as int]),
++{
+         if (str1[index] >= 97 && str1[index] <= 122) {
+             toggle_case.push((str1[index] - 32) as u8);
+         } else if (str1[index] >= 65 && str1[index] <= 90) {

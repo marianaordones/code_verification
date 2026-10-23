@@ -1,0 +1,14 @@
+{
+  "mode": "thinking",
+  "enable_thinking": true,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_tokens": 8192,
+  "max_repairs": 2,
+  "seed": 20261018,
+  "verus": "verus",
+  "z3": "z3",
+  "lynette": "tools/lynette/source/target/release/lynette",
+  "verification_timeout": 120
+}

@@ -1,0 +1,802 @@
+{
+  "summaries": {
+    "full": {
+      "mode": "full",
+      "expected_cases": 114,
+      "completed_cases": 114,
+      "solved": 0,
+      "success_after_repairs": {
+        "1": 0,
+        "2": 0
+      },
+      "attempts": 228,
+      "unchanged": 141,
+      "invalid_local_edits": 0,
+      "no_editable_sites": 0,
+      "compilation_or_syntax_attempts": 86,
+      "transitions": {
+        "verification -> verification": 130,
+        "compilation -> compilation": 66,
+        "verification -> compilation": 14,
+        "compilation -> verification": 12,
+        "verification -> syntax": 3,
+        "syntax -> syntax": 2,
+        "compilation -> syntax": 1
+      },
+      "errors": {
+        "verification": 142,
+        "compilation": 80,
+        "syntax": 6
+      },
+      "integrity_rejections": 12,
+      "input_tokens": 2629722,
+      "output_tokens": 72049,
+      "inference_seconds": 3503.859366285731,
+      "model_load_seconds": 1512.1529613339808,
+      "interrupted_sessions": 0,
+      "processing_seconds": 6838.470049196156,
+      "internals": {
+        "feedbacks": 228,
+        "available": 141,
+        "with_candidate_groups": 35,
+        "group_categories": {
+          "candidate_annotation": 39,
+          "operation_related_library": 841,
+          "other_background": 277,
+          "representation": 266,
+          "candidate_definition": 14
+        }
+      },
+      "missing_cases": []
+    },
+    "local": {
+      "mode": "local",
+      "expected_cases": 114,
+      "completed_cases": 114,
+      "solved": 5,
+      "success_after_repairs": {
+        "1": 4,
+        "2": 5
+      },
+      "attempts": 224,
+      "unchanged": 44,
+      "invalid_local_edits": 44,
+      "no_editable_sites": 0,
+      "compilation_or_syntax_attempts": 104,
+      "transitions": {
+        "verification -> verification": 98,
+        "compilation -> None": 3,
+        "verification -> syntax": 6,
+        "syntax -> syntax": 5,
+        "verification -> compilation": 28,
+        "compilation -> compilation": 63,
+        "compilation -> verification": 17,
+        "compilation -> syntax": 2,
+        "verification -> None": 2
+      },
+      "errors": {
+        "verification": 115,
+        "null": 5,
+        "syntax": 13,
+        "compilation": 91
+      },
+      "integrity_rejections": 14,
+      "input_tokens": 2648251,
+      "output_tokens": 19091,
+      "inference_seconds": 865.5145121603273,
+      "model_load_seconds": 7584.075836141012,
+      "interrupted_sessions": 0,
+      "processing_seconds": 12566.022001372534,
+      "internals": {
+        "feedbacks": 224,
+        "available": 129,
+        "with_candidate_groups": 38,
+        "group_categories": {
+          "candidate_annotation": 46,
+          "operation_related_library": 781,
+          "other_background": 256,
+          "representation": 246,
+          "candidate_definition": 14
+        }
+      },
+      "missing_cases": []
+    }
+  },
+  "paired": [
+    {
+      "id": "misc_remove_all_greater",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_sum",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_760",
+      "full": false,
+      "local": true,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_linearsearch",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_8",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_426",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_basic_nonlinear",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_161",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_605",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_condn",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_414",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_578",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_brs1",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_ms4",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_290",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_brs5",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_769",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_644",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "full": false,
+      "local": true,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_binary_search",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s1lif",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_reverse",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_62",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_399",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_deduplicate",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_809",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_616",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_807",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_array_append_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s1if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_choose_odd",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_array_copy_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_273",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_ms3",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_fib",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_251",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_461",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_457",
+      "full": false,
+      "local": true,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_map",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_cell_2_sum",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_findmax",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_condg",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_brs3",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_460",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_764",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_142",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_240",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_477",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_798",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_610",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_len_intersect",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_629",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_588",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_586",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "full": false,
+      "local": true,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_res2",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_70",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_conda",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_105",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "full": false,
+      "local": true,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_bubble",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_282",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_431",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s4lif",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_brs4",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_trigger",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_ms5",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s3if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_94",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_412",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_simple_nested",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_728",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_133",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_array_sum_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_424",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_tail_triangle",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_all_digits_strong",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s52if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_476",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s5lif",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_579",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_arg_free",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_condm",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s2if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_brs2",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_261",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s22if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_sina3",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_sina2",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_conditional_average",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s4if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_472",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_445",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_262",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_res1o",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_743",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "cloverbench_two_sum",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s12if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_170",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_sina4",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_res1",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_sina5",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_sina1",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_res2o",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s5if",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s3lif",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "misc_filter",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "mbpp_task_id_436",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    },
+    {
+      "id": "diffy_s2lif",
+      "full": false,
+      "local": false,
+      "first_payload_identical": true
+    }
+  ],
+  "shared_preparation_seconds": 1892.6187702143798,
+  "first_payload_check_passed": true,
+  "full_only": [],
+  "local_only": [
+    "mbpp_task_id_760",
+    "mbpp_task_id_557",
+    "mbpp_task_id_457",
+    "mbpp_task_id_145",
+    "cloverbench_cal_div"
+  ],
+  "scope": "repair-only comparison on frozen failed candidates; not full VerusBench success rates"
+}
