@@ -3,8 +3,9 @@ set -Eeuo pipefail
 study="${1:-results/solver-needs-qwen14b-100/seed-20261018}"
 tasks="${2:-100}"
 selection="${3:-configs/solver-needs-tasks100.json}"
+config="${4:-configs/solver-needs-qwen14b.json}"
 mkdir -p logs
-prepare_id="$(sbatch --parsable scripts/slurm/solver_needs_prepare.slurm "$study" "$tasks" "$selection")"
+prepare_id="$(sbatch --parsable scripts/slurm/solver_needs_prepare.slurm "$study" "$tasks" "$selection" "$config")"
 prepare_id="${prepare_id%%;*}"
 run_id="$(sbatch --parsable --dependency="afterok:${prepare_id}" scripts/slurm/solver_needs_run.slurm "$study")"
 run_id="${run_id%%;*}"

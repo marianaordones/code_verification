@@ -18,4 +18,5 @@ source scripts/cluster/stage_solver_needs.sh
 source scripts/cluster/setup_z3_internals.sh
 python -m unittest discover -s tests -p test_solver_needs_study.py -v
 python -m solver_needs_study prepare --study "${1:?Study directory}" --tasks "${2:-100}" \
-    --selection "${3:-configs/solver-needs-tasks100.json}"
+    --selection "${3:-configs/solver-needs-tasks100.json}" \
+    --config "${4:-configs/solver-needs-qwen14b.json}"

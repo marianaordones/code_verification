@@ -23,6 +23,50 @@ class Tokenizer:
 
 
 class SolverNeedsTests(unittest.TestCase):
+    def test_24k_config_only_changes_internal_sample_and_experiment_name(self):
+        old = study.configuration()
+        new = study.configuration(study.ROOT / 'configs/solver-needs-qwen14b-internals24k.json')
+        self.assertEqual({k for k in old if old[k] != new[k]},
+                         {'internals_token_budget', 'max_quantifiers', 'experiment'})
+        self.assertEqual(new['internals_token_budget'], 24576)
+        self.assertEqual(new['max_quantifiers'], 50)
+        self.assertEqual(new['max_instances_each'], 3)
+        self.assertEqual(new['max_model_len'], 49152)
+        self.assertEqual(new['max_tokens'], 4096)
+
+    def test_24k_allows_larger_feedback_but_keeps_output_reserve(self):
+        old = study.configuration()
+        new = study.configuration(study.ROOT / 'configs/solver-needs-qwen14b-internals24k.json')
+        payload = {'queries': [{'sample': 'x' * 16000}]}
+        verification = {'stdout': '', 'stderr': ''}
+        with patch.object(feedback, 'upstream', return_value=(None, SimpleNamespace(LAWS={}))):
+            self.assertFalse(feedback.fits('', verification, actions.EMPTY, {}, payload, [], Tokenizer(), old))
+            self.assertTrue(feedback.fits('', verification, actions.EMPTY, {}, payload, [], Tokenizer(), new))
+            self.assertFalse(feedback.fits('x' * 40000, verification, actions.EMPTY, {}, payload, [], Tokenizer(), new))
+
+    def test_24k_selection_caps_fifty_groups_three_instances_each(self):
+        config = study.configuration(study.ROOT / 'configs/solver-needs-qwen14b-internals24k.json')
+        events = [{'quantifier_smt': f'(forall ((x Int)) (! (= x x) :qid user_candidate_{i}))',
+                   'binding_terms_callback_order': [str(j)], 'clause_literals_smt': ['true']}
+                  for i in range(55) for j in range(4)]
+        with tempfile.TemporaryDirectory() as work:
+            folder = Path(work)
+            write_json(folder / 'solver/report.json', {'queries': [{'id': 'q', 'file': 'q.smt2', 'result': 'unknown'}],
+                                                      'capture_errors': []})
+            write_text(folder / 'solver/q.smt2', '(check-sat)')
+            output = folder / 'internals/q'
+            write_json(output / 'report.json', {'status': 'completed', 'result': 'unknown'})
+            write_text(output / 'instantiations.jsonl', '\n'.join(json.dumps(e) for e in events))
+            with patch.object(feedback, 'execute', return_value={'returncode': 0, 'timed_out': False}), \
+                 patch.object(feedback, 'fits', return_value=True):
+                result = feedback.internals(folder, '', {'stdout': '', 'stderr': ''}, actions.EMPTY,
+                                            [], Tokenizer(), config)
+            groups = result['internals']['queries'][0]['quantifiers']
+            self.assertEqual(len(groups), 50)
+            self.assertTrue(all(len(g['instances']) == 3 for g in groups))
+            saved = read_json(folder / 'feedback.json')
+            self.assertEqual(saved, result)
+
     def test_rust_installation_suppresses_self_update(self):
         script = (study.ROOT / 'scripts/cluster/stage_solver_needs.sh').read_text(encoding='utf-8')
         self.assertIn('export RUSTUP_AUTO_INSTALL=0', script)

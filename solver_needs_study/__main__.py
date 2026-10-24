@@ -23,8 +23,11 @@ from .feedback import ARMS, control_feedback, fits, internals, messages
 from .verify import StudyVerifier
 
 
-def configuration():
-    config = read_json(ROOT / 'configs/solver-needs-qwen14b.json')
+DEFAULT_CONFIG = ROOT / 'configs/solver-needs-qwen14b.json'
+
+
+def configuration(path=DEFAULT_CONFIG):
+    config = read_json(path)
     model_identity(config)
     if config['max_attempts'] != 4 or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
         raise ValueError('Expected four total proposals, 48k context and 4096 output tokens')
@@ -34,6 +37,7 @@ def configuration():
 def implementation():
     return file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'),
         ROOT / 'prompts/solver-needs/system.txt', ROOT / 'configs/solver-needs-qwen14b.json',
+        ROOT / 'configs/solver-needs-qwen14b-internals24k.json',
         SELECTION,
         *(ROOT / 'baseline').glob('*.py'), *(ROOT / 'diagnostics').glob('*.py'),
         ROOT / 'repair_study/worker.py', ROOT / 'repair_study/relevance.py'])
@@ -61,15 +65,17 @@ def validate(root):
 
 def prepare(args):
     root = args.study.resolve()
+    config = configuration(getattr(args, 'config', DEFAULT_CONFIG))
     if (root / 'manifest.json').exists():
         manifest = validate(root)
         if (manifest['task_count'] != args.tasks or
-                manifest.get('selection_sha256') != digest(getattr(args, 'selection', SELECTION).read_bytes())):
-            raise ValueError('Prepared study has another subset size')
+                manifest.get('selection_sha256') != digest(getattr(args, 'selection', SELECTION).read_bytes()) or
+                manifest['config'] != config):
+            raise ValueError('Prepared study has another selection or configuration')
         print('Already prepared:', root)
         return
     source()
-    config, identities = configuration(), tools()
+    identities = tools()
     selection_path = getattr(args, 'selection', SELECTION)
     rows = selected_cases(args.tasks, selection_path)
     selected_ids = [row['id'] for row in rows]
@@ -325,6 +331,8 @@ def main():
     parser.add_argument('--study', required=True, type=Path)
     parser.add_argument('--tasks', type=int, default=100)
     parser.add_argument('--selection', type=Path, default=SELECTION)
+    parser.add_argument('--config', type=Path, default=DEFAULT_CONFIG,
+                        help='Preparation config; run uses the config frozen in the manifest')
     args = parser.parse_args()
     if not 1 <= args.tasks <= 462:
         parser.error('tasks must be between 1 and 462 (and fit the saved selection)')
