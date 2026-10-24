@@ -16,7 +16,7 @@ from baseline.prompts import ROOT
 from baseline.provenance import command, file_hashes, tool_identity, tool_signature
 from baseline.storage import digest, read_json, write_json, write_text
 from diagnostics.z3_internals import api_identity
-from .actions import EMPTY, parse_response, render
+from .actions import EMPTY, RESPONSE_POLICY, parse_response, render
 from .data import LABELS, SELECTION, selected_cases, split_task
 from .download import REVISION, SOURCE, VERUS_VERSION, source
 from .feedback import ARMS, control_feedback, fits, internals, messages
@@ -28,10 +28,28 @@ DEFAULT_CONFIG = ROOT / 'configs/solver-needs-qwen14b.json'
 
 def configuration(path=DEFAULT_CONFIG):
     config = read_json(path)
+    if config.get('provider') == 'claude_code':
+        from .claude_code import validate_config
+        validate_config(config)
+        return config
     model_identity(config)
     if config['max_attempts'] != 4 or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
         raise ValueError('Expected four total proposals, 48k context and 4096 output tokens')
     return config
+
+
+def load_tokenizer(config):
+    from transformers import AutoTokenizer
+    if importlib.metadata.version('transformers') != '4.51.3':
+        raise ValueError('Use transformers 4.51.3 for the frozen feedback budget')
+    if config.get('provider') == 'claude_code':
+        # Download tokenizer files only, never the Qwen weights.
+        from baseline.inference import MODEL_CODER, REVISION_CODER
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_CODER, revision=REVISION_CODER)
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(prepare_model(*model_identity(config)), local_files_only=True)
+    tokenizer.model_max_length = 10**12
+    return tokenizer
 
 
 def implementation():
@@ -87,12 +105,7 @@ def prepare(args):
     write_json(root / 'preparation.json', plan)
     write_json(root / 'selected_ids.json', {'revision': REVISION, 'ids': selected_ids})
     write_json(root / 'selection.json', read_json(selection_path))
-    from transformers import AutoTokenizer
-    if importlib.metadata.version('transformers') != '4.51.3':
-        raise ValueError('Use the pinned cluster runtime')
-    model, revision = model_identity(config)
-    tokenizer = AutoTokenizer.from_pretrained(prepare_model(model, revision), local_files_only=True)
-    tokenizer.model_max_length = 10**12
+    tokenizer = load_tokenizer(config)
     verifier = StudyVerifier(identities['verus']['path'], identities['z3']['path'], config['verification_timeout'])
     counts, selected = Counter(), []
     for row in rows:
@@ -122,7 +135,7 @@ def prepare(args):
     manifest = {**plan, 'cases': selected, 'files': files, 'selection_counts': dict(counts),
                 'paper_task_count': 462, 'release_extraction_count': 468,
                 'source_receipt': read_json(SOURCE / 'download-receipt.json'),
-                'scope': 'published essential assertions; no reference/placebo/restoration audit rerun; labels/probes hidden; four total proposals'}
+                'scope': f"published essential assertions; no reference/placebo/restoration audit rerun; labels/probes hidden; {config['max_attempts']} total proposals"}
     write_json(root / 'manifest.json', manifest)
     print('Prepared', len(selected), 'paired tasks:', root, flush=True)
 
@@ -149,9 +162,11 @@ def run_case(root, arm, case, config, inference, verifier):
             common = messages(code, verification, action, feedback['context'], None, history)
             if not fits(code, verification, action, feedback['context'], payload, history, inference.tokenizer, config):
                 raise ValueError('Actual prompt exceeds context; no automatic truncation')
-            request = {'messages': prompt, 'seed': config['seed'] + index, 'parameters': config,
+            request = {'messages': prompt, 'seed': (config['seed'] + index if config.get('seed') is not None else None), 'parameters': config,
                 'candidate_sha256': digest(code.encode()), 'common_messages_sha256': digest(json.dumps(common, sort_keys=True).encode()),
                 'internals_exposed': bool(payload and payload['queries'])}
+            if config.get('provider') == 'claude_code':
+                request['seed'] = None
             if (folder / 'request.json').exists() and read_json(folder / 'request.json') != request:
                 raise ValueError('Saved request changed')
             write_json(folder / 'request.json', request)
@@ -160,23 +175,31 @@ def run_case(root, arm, case, config, inference, verifier):
             if (folder / 'response.json').exists():
                 response = read_json(folder / 'response.json')
             else:
-                response = inference.generate(prompt, config, request['seed'])
+                if hasattr(inference, 'generate_at'):
+                    response = inference.generate_at(prompt, config, folder)
+                else:
+                    response = inference.generate(prompt, config, request['seed'])
                 write_json(folder / 'response.json', response)
             write_text(folder / 'rendered_prompt.txt', response['rendered_prompt'])
             write_text(folder / 'response.txt', response['text'])
             proposed, edit_error = action, None
+            format_info = {'policy': RESPONSE_POLICY, 'accepted_action': False}
             try:
-                proposed = parse_response(response['text'])
+                proposed = parse_response(response['text'], metadata=format_info)
+                format_info['accepted_action'] = True
                 new_code = render(task, proposed)
                 unchanged = tokens(new_code) == tokens(code) and proposed['nla'] == action['nla']
                 if unchanged:
                     raise ValueError('No effective proof/solver-setting change')
             except (ValueError, KeyError, TypeError) as error:
                 proposed, new_code, unchanged, edit_error = action, code, True, str(error)
+            write_json(folder / 'response-format.json', format_info)
             write_json(folder / 'action.json', proposed)
             write_text(folder / 'candidate.rs', new_code)
             checked = verifier.verify(folder / 'candidate.rs', nla=proposed['nla'])
             write_json(folder / 'verification.json', checked)
+            if config.get('provider') == 'claude_code' and checked['error_type'] == 'verifier_error':
+                raise RuntimeError('Verifier infrastructure error; response preserved, proposal not finalized')
             write_json(folder / 'integrity.json', {'valid': True, 'policy': 'fixed prefix/suffix; validated proof slot; exact checked catalogue law; NLA Boolean only',
                        'edit_error': edit_error, 'acceptance_requires_whole_file_verus': True})
             result = {'attempt': index, 'success': checked['success'] and edit_error is None,
@@ -235,7 +258,7 @@ def compare(root):
         summary = {'expected': len(rows), 'completed': len(completed), 'solved': sum(t['success'] for t in completed),
             'initially_verified': sum(r['initially_verified'] for r in rows),
             'repair_denominator': sum(not r['initially_verified'] for r in rows),
-            'solved_by_attempt': {str(k): sum(any(a['success'] and a['attempt'] <= k for a in t['attempts']) for t in completed) for k in range(1, 5)},
+            'solved_by_attempt': {str(k): sum(any(a['success'] and a['attempt'] <= k for a in t['attempts']) for t in completed) for k in range(1, manifest['config']['max_attempts'] + 1)},
             'attempts': len(attempts), 'unchanged': sum(a['unchanged'] for a in attempts),
             'edit_errors': dict(Counter(a['edit_error'] for a in attempts if a['edit_error'])),
             'errors': dict(Counter(a['error_type'] for a in attempts)),
@@ -257,7 +280,7 @@ def compare(root):
         'label_disagreements': [r['id'] for r in rows if r['paper_label'] != r['release_label']],
         'scope': manifest['scope']}
     write_json(root / 'comparison.json', report)
-    lines = ['# Solver Needs: paired Qwen repair', '', '| Arm | Completed | Solved | Attempts | Unchanged |', '|---|---|---|---|---|']
+    lines = [f"# Solver Needs: paired repair ({manifest['config']['model']})", '', '| Arm | Completed | Solved | Attempts | Unchanged |', '|---|---|---|---|---|']
     for arm, s in summaries.items():
         lines.append(f"| {arm} | {s['completed']}/{s['expected']} | {s['solved']} | {s['attempts']} | {s['unchanged']} |")
     lines += ['', '| Paper label | Selected | With internals | Without internals |', '|---|---|---|---|']
@@ -265,7 +288,7 @@ def compare(root):
         lines.append(f"| {label} | {summaries[ARMS[0]]['by_paper_label'][label]['expected']} | {summaries[ARMS[0]]['by_paper_label'][label]['solved']} | {summaries[ARMS[1]]['by_paper_label'][label]['solved']} |")
     lines += ['', f"Complete: {report['complete']}; initial pairs valid: {report['first_pair_check_passed']}",
         f"Initially verified without a model: {summaries[ARMS[0]]['initially_verified']}; repair denominator: {summaries[ARMS[0]]['repair_denominator']}",
-        'Four TOTAL proposals per task/arm. Labels and successful probes are hidden from model.',
+        f"{manifest['config']['max_attempts']} TOTAL proposals per task/arm. Labels and successful probes are hidden from model.",
         'Paper/release label disagreements and exclusive wins are listed in comparison.json.',
         'AX catalogue lemmas are checked, not unchecked axioms. NLA changes are explicit experimental actions.']
     write_text(root / 'comparison.md', '\n'.join(lines))
@@ -280,6 +303,9 @@ def run(args):
     if {k: tool_signature(v) for k, v in identities.items()} != manifest['tool_hashes']:
         raise ValueError('Prepared inputs and run use different tool binaries/API')
     config = manifest['config']
+    if config.get('provider') == 'claude_code':
+        from .claude_code import run_local
+        return run_local(root, manifest, identities)
     versions = {p: importlib.metadata.version(p) for p in ('vllm', 'transformers', 'torch')}
     if versions['vllm'] != '0.8.5' or versions['transformers'] != '4.51.3':
         raise ValueError('Use the pinned GPU dependencies')

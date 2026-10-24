@@ -1,0 +1,6 @@
+# CPU only: no torch, vLLM or model weights. Same tokenizer version as Qwen study.
+transformers==4.51.3
+huggingface-hub==0.30.2
+tokenizers==0.21.1
+numpy==1.26.4
+z3-solver==4.12.5.0

@@ -1,0 +1,394 @@
+{
+  "revision": "f32c274b053c372aa35c9d8a7e12c1df35bda20d",
+  "seed": 20261023,
+  "method": "Sorted-ID pools shuffled per category; label round-robin; prefer least-repeated source programs including development sources; no model outcomes read",
+  "scope": "exploratory; excludes six development IDs, not necessarily their source programs",
+  "excluded_ids": [
+    "V-135",
+    "V-411",
+    "V-381",
+    "V-245",
+    "V-56",
+    "V-22"
+  ],
+  "ids": [
+    "V-263",
+    "V-306",
+    "VB-13",
+    "V-218",
+    "V-161",
+    "V-282",
+    "VB-2",
+    "VB-0",
+    "V-158",
+    "V-344",
+    "V-167",
+    "V-105",
+    "V-0",
+    "V-430",
+    "VB-53",
+    "V-254",
+    "V-163",
+    "V-47",
+    "V-391",
+    "V-423",
+    "VB-12",
+    "V-108",
+    "V-232",
+    "V-413",
+    "VB-6",
+    "V-439",
+    "V-206",
+    "V-177",
+    "V-362",
+    "V-194",
+    "VB-30",
+    "V-341",
+    "V-142",
+    "V-127",
+    "V-223",
+    "V-368",
+    "VB-17",
+    "V-319",
+    "V-426",
+    "V-354",
+    "V-361",
+    "V-97",
+    "VB-3",
+    "V-407",
+    "V-259",
+    "V-301",
+    "V-225",
+    "V-103",
+    "VB-46",
+    "VB-39",
+    "V-24",
+    "VB-51",
+    "V-229",
+    "VB-69",
+    "VB-40",
+    "V-387",
+    "V-144",
+    "V-38",
+    "V-231",
+    "VB-61"
+  ],
+  "category_counts": {
+    "AX": 10,
+    "INST-forall": 10,
+    "INST-witness": 10,
+    "NLA": 10,
+    "FUEL": 10,
+    "Other": 10
+  },
+  "unique_source_programs": 54,
+  "repeated_source_programs": {
+    "data/corpora/CF-V/0054_1189_A.rs": 3,
+    "data/corpora/CF-V/0091_110_A.rs": 5
+  },
+  "development_source_overlap": [
+    "data/corpora/CF-V/0091_110_A.rs"
+  ],
+  "cases": [
+    {
+      "id": "V-263",
+      "paper_label": "AX",
+      "source_path": "data/corpora/CF-V/0133_1385_B.rs"
+    },
+    {
+      "id": "V-306",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0008_1056_A.rs"
+    },
+    {
+      "id": "VB-13",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/VB/MBPP/task_id_3.rs"
+    },
+    {
+      "id": "V-218",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0087_1315_A.rs"
+    },
+    {
+      "id": "V-161",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0054_1189_A.rs"
+    },
+    {
+      "id": "V-282",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0139_1389_A.rs"
+    },
+    {
+      "id": "VB-2",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_105.rs"
+    },
+    {
+      "id": "VB-0",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/VB/CloverBench/is_prime.rs"
+    },
+    {
+      "id": "V-158",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0053_1230_A.rs"
+    },
+    {
+      "id": "V-344",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0037_1150_A.rs"
+    },
+    {
+      "id": "V-167",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0056_1178_A.rs"
+    },
+    {
+      "id": "V-105",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0034_1102_A.rs"
+    },
+    {
+      "id": "V-0",
+      "paper_label": "AX",
+      "source_path": "data/corpora/CF-V/0000_1013_A.rs"
+    },
+    {
+      "id": "V-430",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0128_1367_A.rs"
+    },
+    {
+      "id": "VB-53",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/VB/Misc/bubble_v2.rs"
+    },
+    {
+      "id": "V-254",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0109_1325_A.rs"
+    },
+    {
+      "id": "V-163",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0055_1104_A.rs"
+    },
+    {
+      "id": "V-47",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0023_1065_A.rs"
+    },
+    {
+      "id": "V-391",
+      "paper_label": "AX",
+      "source_path": "data/corpora/CF-V/0079_1216_A.rs"
+    },
+    {
+      "id": "V-423",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0122_1382_A.rs"
+    },
+    {
+      "id": "VB-12",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/VB/MBPP/task_id_290.rs"
+    },
+    {
+      "id": "V-108",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0035_1162_A.rs"
+    },
+    {
+      "id": "V-232",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0091_110_A.rs"
+    },
+    {
+      "id": "V-413",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0101_116_A.rs"
+    },
+    {
+      "id": "VB-6",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_142.rs"
+    },
+    {
+      "id": "V-439",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0141_1405_A.rs"
+    },
+    {
+      "id": "V-206",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0085_1257_A.rs"
+    },
+    {
+      "id": "V-177",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0070_1180_A.rs"
+    },
+    {
+      "id": "V-362",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0054_1189_A.rs"
+    },
+    {
+      "id": "V-194",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0082_1234_A.rs"
+    },
+    {
+      "id": "VB-30",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_572.rs"
+    },
+    {
+      "id": "V-341",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0036_1015_A.rs"
+    },
+    {
+      "id": "V-142",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0045_1146_A.rs"
+    },
+    {
+      "id": "V-127",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0039_1118_A.rs"
+    },
+    {
+      "id": "V-223",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0091_110_A.rs"
+    },
+    {
+      "id": "V-368",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0063_1185_A.rs"
+    },
+    {
+      "id": "VB-17",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_426.rs"
+    },
+    {
+      "id": "V-319",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0010_1043_A.rs"
+    },
+    {
+      "id": "V-426",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0126_14_A.rs"
+    },
+    {
+      "id": "V-354",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0050_1139_A.rs"
+    },
+    {
+      "id": "V-361",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0054_1189_A.rs"
+    },
+    {
+      "id": "V-97",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0030_1106_A.rs"
+    },
+    {
+      "id": "VB-3",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_133.rs"
+    },
+    {
+      "id": "V-407",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0086_1270_A.rs"
+    },
+    {
+      "id": "V-259",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0132_1385_A.rs"
+    },
+    {
+      "id": "V-301",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0142_1360_A.rs"
+    },
+    {
+      "id": "V-225",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0091_110_A.rs"
+    },
+    {
+      "id": "V-103",
+      "paper_label": "Other",
+      "source_path": "data/corpora/CF-V/0033_1099_A.rs"
+    },
+    {
+      "id": "VB-46",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_807.rs"
+    },
+    {
+      "id": "VB-39",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/VB/MBPP/task_id_605.rs"
+    },
+    {
+      "id": "V-24",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0009_1041_A.rs"
+    },
+    {
+      "id": "VB-51",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/VB/Misc/basic_nonlinear.rs"
+    },
+    {
+      "id": "V-229",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0091_110_A.rs"
+    },
+    {
+      "id": "VB-69",
+      "paper_label": "Other",
+      "source_path": "data/corpora/VB/Misc/len_intersect.rs"
+    },
+    {
+      "id": "VB-40",
+      "paper_label": "AX",
+      "source_path": "data/corpora/VB/MBPP/task_id_629.rs"
+    },
+    {
+      "id": "V-387",
+      "paper_label": "INST-forall",
+      "source_path": "data/corpora/CF-V/0077_1244_A.rs"
+    },
+    {
+      "id": "V-144",
+      "paper_label": "INST-witness",
+      "source_path": "data/corpora/CF-V/0046_1097_A.rs"
+    },
+    {
+      "id": "V-38",
+      "paper_label": "NLA",
+      "source_path": "data/corpora/CF-V/0018_1061_A.rs"
+    },
+    {
+      "id": "V-231",
+      "paper_label": "FUEL",
+      "source_path": "data/corpora/CF-V/0091_110_A.rs"
+    },
+    {
+      "id": "VB-61",
+      "paper_label": "Other",
+      "source_path": "data/corpora/VB/Misc/remove_all_greater.rs"
+    }
+  ]
+}
