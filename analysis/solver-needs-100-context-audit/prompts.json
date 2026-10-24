@@ -1,0 +1,6672 @@
+[
+  {
+    "arm": "with_internals",
+    "id": "V-103",
+    "attempt": "attempt_01",
+    "input_tokens": 9409,
+    "tokenizer_tokens": 9409,
+    "headroom_after_output_reserve": 35647,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-103",
+    "attempt": "attempt_02",
+    "input_tokens": 12465,
+    "tokenizer_tokens": 12465,
+    "headroom_after_output_reserve": 32591,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-103",
+    "attempt": "attempt_03",
+    "input_tokens": 12550,
+    "tokenizer_tokens": 12550,
+    "headroom_after_output_reserve": 32506,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-103",
+    "attempt": "attempt_04",
+    "input_tokens": 12634,
+    "tokenizer_tokens": 12634,
+    "headroom_after_output_reserve": 32422,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-105",
+    "attempt": "attempt_01",
+    "input_tokens": 12237,
+    "tokenizer_tokens": 12237,
+    "headroom_after_output_reserve": 32819,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-105",
+    "attempt": "attempt_02",
+    "input_tokens": 10364,
+    "tokenizer_tokens": 10364,
+    "headroom_after_output_reserve": 34692,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-105",
+    "attempt": "attempt_03",
+    "input_tokens": 6478,
+    "tokenizer_tokens": 6478,
+    "headroom_after_output_reserve": 38578,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-105",
+    "attempt": "attempt_04",
+    "input_tokens": 6842,
+    "tokenizer_tokens": 6842,
+    "headroom_after_output_reserve": 38214,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-11",
+    "attempt": "attempt_01",
+    "input_tokens": 20628,
+    "tokenizer_tokens": 20628,
+    "headroom_after_output_reserve": 24428,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-11",
+    "attempt": "attempt_02",
+    "input_tokens": 8417,
+    "tokenizer_tokens": 8417,
+    "headroom_after_output_reserve": 36639,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-11",
+    "attempt": "attempt_03",
+    "input_tokens": 8508,
+    "tokenizer_tokens": 8508,
+    "headroom_after_output_reserve": 36548,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-11",
+    "attempt": "attempt_04",
+    "input_tokens": 8582,
+    "tokenizer_tokens": 8582,
+    "headroom_after_output_reserve": 36474,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-113",
+    "attempt": "attempt_01",
+    "input_tokens": 16436,
+    "tokenizer_tokens": 16436,
+    "headroom_after_output_reserve": 28620,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-124",
+    "attempt": "attempt_01",
+    "input_tokens": 18742,
+    "tokenizer_tokens": 18742,
+    "headroom_after_output_reserve": 26314,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-129",
+    "attempt": "attempt_01",
+    "input_tokens": 19473,
+    "tokenizer_tokens": 19473,
+    "headroom_after_output_reserve": 25583,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-129",
+    "attempt": "attempt_02",
+    "input_tokens": 19900,
+    "tokenizer_tokens": 19900,
+    "headroom_after_output_reserve": 25156,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-129",
+    "attempt": "attempt_03",
+    "input_tokens": 19939,
+    "tokenizer_tokens": 19939,
+    "headroom_after_output_reserve": 25117,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-129",
+    "attempt": "attempt_04",
+    "input_tokens": 19917,
+    "tokenizer_tokens": 19917,
+    "headroom_after_output_reserve": 25139,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-133",
+    "attempt": "attempt_01",
+    "input_tokens": 19030,
+    "tokenizer_tokens": 19030,
+    "headroom_after_output_reserve": 26026,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-135",
+    "attempt": "attempt_01",
+    "input_tokens": 20224,
+    "tokenizer_tokens": 20224,
+    "headroom_after_output_reserve": 24832,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-135",
+    "attempt": "attempt_02",
+    "input_tokens": 20346,
+    "tokenizer_tokens": 20346,
+    "headroom_after_output_reserve": 24710,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-135",
+    "attempt": "attempt_03",
+    "input_tokens": 20423,
+    "tokenizer_tokens": 20423,
+    "headroom_after_output_reserve": 24633,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-139",
+    "attempt": "attempt_01",
+    "input_tokens": 11320,
+    "tokenizer_tokens": 11320,
+    "headroom_after_output_reserve": 33736,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-139",
+    "attempt": "attempt_02",
+    "input_tokens": 5745,
+    "tokenizer_tokens": 5745,
+    "headroom_after_output_reserve": 39311,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-139",
+    "attempt": "attempt_03",
+    "input_tokens": 5836,
+    "tokenizer_tokens": 5836,
+    "headroom_after_output_reserve": 39220,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-139",
+    "attempt": "attempt_04",
+    "input_tokens": 5927,
+    "tokenizer_tokens": 5927,
+    "headroom_after_output_reserve": 39129,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-140",
+    "attempt": "attempt_01",
+    "input_tokens": 17273,
+    "tokenizer_tokens": 17273,
+    "headroom_after_output_reserve": 27783,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-140",
+    "attempt": "attempt_02",
+    "input_tokens": 17376,
+    "tokenizer_tokens": 17376,
+    "headroom_after_output_reserve": 27680,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-140",
+    "attempt": "attempt_03",
+    "input_tokens": 17452,
+    "tokenizer_tokens": 17452,
+    "headroom_after_output_reserve": 27604,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-140",
+    "attempt": "attempt_04",
+    "input_tokens": 17645,
+    "tokenizer_tokens": 17645,
+    "headroom_after_output_reserve": 27411,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-144",
+    "attempt": "attempt_01",
+    "input_tokens": 15898,
+    "tokenizer_tokens": 15898,
+    "headroom_after_output_reserve": 29158,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-15",
+    "attempt": "attempt_01",
+    "input_tokens": 18573,
+    "tokenizer_tokens": 18573,
+    "headroom_after_output_reserve": 26483,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-15",
+    "attempt": "attempt_02",
+    "input_tokens": 18687,
+    "tokenizer_tokens": 18687,
+    "headroom_after_output_reserve": 26369,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-15",
+    "attempt": "attempt_03",
+    "input_tokens": 18762,
+    "tokenizer_tokens": 18762,
+    "headroom_after_output_reserve": 26294,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-15",
+    "attempt": "attempt_04",
+    "input_tokens": 19071,
+    "tokenizer_tokens": 19071,
+    "headroom_after_output_reserve": 25985,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-156",
+    "attempt": "attempt_01",
+    "input_tokens": 16564,
+    "tokenizer_tokens": 16564,
+    "headroom_after_output_reserve": 28492,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-161",
+    "attempt": "attempt_01",
+    "input_tokens": 19742,
+    "tokenizer_tokens": 19742,
+    "headroom_after_output_reserve": 25314,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-161",
+    "attempt": "attempt_02",
+    "input_tokens": 6237,
+    "tokenizer_tokens": 6237,
+    "headroom_after_output_reserve": 38819,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-161",
+    "attempt": "attempt_03",
+    "input_tokens": 6326,
+    "tokenizer_tokens": 6326,
+    "headroom_after_output_reserve": 38730,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-161",
+    "attempt": "attempt_04",
+    "input_tokens": 6415,
+    "tokenizer_tokens": 6415,
+    "headroom_after_output_reserve": 38641,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-163",
+    "attempt": "attempt_01",
+    "input_tokens": 20773,
+    "tokenizer_tokens": 20773,
+    "headroom_after_output_reserve": 24283,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-163",
+    "attempt": "attempt_02",
+    "input_tokens": 7255,
+    "tokenizer_tokens": 7255,
+    "headroom_after_output_reserve": 37801,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-163",
+    "attempt": "attempt_03",
+    "input_tokens": 7364,
+    "tokenizer_tokens": 7364,
+    "headroom_after_output_reserve": 37692,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-163",
+    "attempt": "attempt_04",
+    "input_tokens": 7562,
+    "tokenizer_tokens": 7562,
+    "headroom_after_output_reserve": 37494,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-167",
+    "attempt": "attempt_01",
+    "input_tokens": 19209,
+    "tokenizer_tokens": 19209,
+    "headroom_after_output_reserve": 25847,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-167",
+    "attempt": "attempt_02",
+    "input_tokens": 20333,
+    "tokenizer_tokens": 20333,
+    "headroom_after_output_reserve": 24723,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-167",
+    "attempt": "attempt_03",
+    "input_tokens": 7379,
+    "tokenizer_tokens": 7379,
+    "headroom_after_output_reserve": 37677,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-167",
+    "attempt": "attempt_04",
+    "input_tokens": 7643,
+    "tokenizer_tokens": 7643,
+    "headroom_after_output_reserve": 37413,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-172",
+    "attempt": "attempt_01",
+    "input_tokens": 18008,
+    "tokenizer_tokens": 18008,
+    "headroom_after_output_reserve": 27048,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-173",
+    "attempt": "attempt_01",
+    "input_tokens": 19145,
+    "tokenizer_tokens": 19145,
+    "headroom_after_output_reserve": 25911,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-173",
+    "attempt": "attempt_02",
+    "input_tokens": 19248,
+    "tokenizer_tokens": 19248,
+    "headroom_after_output_reserve": 25808,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-173",
+    "attempt": "attempt_03",
+    "input_tokens": 19329,
+    "tokenizer_tokens": 19329,
+    "headroom_after_output_reserve": 25727,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-173",
+    "attempt": "attempt_04",
+    "input_tokens": 19631,
+    "tokenizer_tokens": 19631,
+    "headroom_after_output_reserve": 25425,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-178",
+    "attempt": "attempt_01",
+    "input_tokens": 10426,
+    "tokenizer_tokens": 10426,
+    "headroom_after_output_reserve": 34630,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-178",
+    "attempt": "attempt_02",
+    "input_tokens": 7809,
+    "tokenizer_tokens": 7809,
+    "headroom_after_output_reserve": 37247,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-178",
+    "attempt": "attempt_03",
+    "input_tokens": 7900,
+    "tokenizer_tokens": 7900,
+    "headroom_after_output_reserve": 37156,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-178",
+    "attempt": "attempt_04",
+    "input_tokens": 7989,
+    "tokenizer_tokens": 7989,
+    "headroom_after_output_reserve": 37067,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-181",
+    "attempt": "attempt_01",
+    "input_tokens": 21520,
+    "tokenizer_tokens": 21520,
+    "headroom_after_output_reserve": 23536,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-181",
+    "attempt": "attempt_02",
+    "input_tokens": 7538,
+    "tokenizer_tokens": 7538,
+    "headroom_after_output_reserve": 37518,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-181",
+    "attempt": "attempt_03",
+    "input_tokens": 7619,
+    "tokenizer_tokens": 7619,
+    "headroom_after_output_reserve": 37437,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-181",
+    "attempt": "attempt_04",
+    "input_tokens": 7749,
+    "tokenizer_tokens": 7749,
+    "headroom_after_output_reserve": 37307,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-190",
+    "attempt": "attempt_01",
+    "input_tokens": 17788,
+    "tokenizer_tokens": 17788,
+    "headroom_after_output_reserve": 27268,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-190",
+    "attempt": "attempt_02",
+    "input_tokens": 5665,
+    "tokenizer_tokens": 5665,
+    "headroom_after_output_reserve": 39391,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-190",
+    "attempt": "attempt_03",
+    "input_tokens": 19021,
+    "tokenizer_tokens": 19021,
+    "headroom_after_output_reserve": 26035,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-190",
+    "attempt": "attempt_04",
+    "input_tokens": 5820,
+    "tokenizer_tokens": 5820,
+    "headroom_after_output_reserve": 39236,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-206",
+    "attempt": "attempt_01",
+    "input_tokens": 18263,
+    "tokenizer_tokens": 18263,
+    "headroom_after_output_reserve": 26793,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-206",
+    "attempt": "attempt_02",
+    "input_tokens": 18371,
+    "tokenizer_tokens": 18371,
+    "headroom_after_output_reserve": 26685,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-206",
+    "attempt": "attempt_03",
+    "input_tokens": 18448,
+    "tokenizer_tokens": 18448,
+    "headroom_after_output_reserve": 26608,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-206",
+    "attempt": "attempt_04",
+    "input_tokens": 18525,
+    "tokenizer_tokens": 18525,
+    "headroom_after_output_reserve": 26531,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-21",
+    "attempt": "attempt_01",
+    "input_tokens": 14392,
+    "tokenizer_tokens": 14392,
+    "headroom_after_output_reserve": 30664,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-210",
+    "attempt": "attempt_01",
+    "input_tokens": 18998,
+    "tokenizer_tokens": 18998,
+    "headroom_after_output_reserve": 26058,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-216",
+    "attempt": "attempt_01",
+    "input_tokens": 18629,
+    "tokenizer_tokens": 18629,
+    "headroom_after_output_reserve": 26427,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-216",
+    "attempt": "attempt_02",
+    "input_tokens": 18693,
+    "tokenizer_tokens": 18693,
+    "headroom_after_output_reserve": 26363,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-22",
+    "attempt": "attempt_01",
+    "input_tokens": 14691,
+    "tokenizer_tokens": 14691,
+    "headroom_after_output_reserve": 30365,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-220",
+    "attempt": "attempt_01",
+    "input_tokens": 19246,
+    "tokenizer_tokens": 19246,
+    "headroom_after_output_reserve": 25810,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-220",
+    "attempt": "attempt_02",
+    "input_tokens": 19385,
+    "tokenizer_tokens": 19385,
+    "headroom_after_output_reserve": 25671,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-220",
+    "attempt": "attempt_03",
+    "input_tokens": 19471,
+    "tokenizer_tokens": 19471,
+    "headroom_after_output_reserve": 25585,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-220",
+    "attempt": "attempt_04",
+    "input_tokens": 19557,
+    "tokenizer_tokens": 19557,
+    "headroom_after_output_reserve": 25499,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-221",
+    "attempt": "attempt_01",
+    "input_tokens": 19234,
+    "tokenizer_tokens": 19234,
+    "headroom_after_output_reserve": 25822,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-221",
+    "attempt": "attempt_02",
+    "input_tokens": 13818,
+    "tokenizer_tokens": 13818,
+    "headroom_after_output_reserve": 31238,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-221",
+    "attempt": "attempt_03",
+    "input_tokens": 13898,
+    "tokenizer_tokens": 13898,
+    "headroom_after_output_reserve": 31158,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-221",
+    "attempt": "attempt_04",
+    "input_tokens": 13978,
+    "tokenizer_tokens": 13978,
+    "headroom_after_output_reserve": 31078,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-225",
+    "attempt": "attempt_01",
+    "input_tokens": 19256,
+    "tokenizer_tokens": 19256,
+    "headroom_after_output_reserve": 25800,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-227",
+    "attempt": "attempt_01",
+    "input_tokens": 19269,
+    "tokenizer_tokens": 19269,
+    "headroom_after_output_reserve": 25787,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-227",
+    "attempt": "attempt_02",
+    "input_tokens": 13871,
+    "tokenizer_tokens": 13871,
+    "headroom_after_output_reserve": 31185,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-227",
+    "attempt": "attempt_03",
+    "input_tokens": 13957,
+    "tokenizer_tokens": 13957,
+    "headroom_after_output_reserve": 31099,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-227",
+    "attempt": "attempt_04",
+    "input_tokens": 14042,
+    "tokenizer_tokens": 14042,
+    "headroom_after_output_reserve": 31014,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-229",
+    "attempt": "attempt_01",
+    "input_tokens": 19286,
+    "tokenizer_tokens": 19286,
+    "headroom_after_output_reserve": 25770,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-229",
+    "attempt": "attempt_02",
+    "input_tokens": 19343,
+    "tokenizer_tokens": 19343,
+    "headroom_after_output_reserve": 25713,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-229",
+    "attempt": "attempt_03",
+    "input_tokens": 19403,
+    "tokenizer_tokens": 19403,
+    "headroom_after_output_reserve": 25653,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-229",
+    "attempt": "attempt_04",
+    "input_tokens": 19462,
+    "tokenizer_tokens": 19462,
+    "headroom_after_output_reserve": 25594,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-230",
+    "attempt": "attempt_01",
+    "input_tokens": 19292,
+    "tokenizer_tokens": 19292,
+    "headroom_after_output_reserve": 25764,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-230",
+    "attempt": "attempt_02",
+    "input_tokens": 19359,
+    "tokenizer_tokens": 19359,
+    "headroom_after_output_reserve": 25697,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-230",
+    "attempt": "attempt_03",
+    "input_tokens": 19418,
+    "tokenizer_tokens": 19418,
+    "headroom_after_output_reserve": 25638,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-230",
+    "attempt": "attempt_04",
+    "input_tokens": 19477,
+    "tokenizer_tokens": 19477,
+    "headroom_after_output_reserve": 25579,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-232",
+    "attempt": "attempt_01",
+    "input_tokens": 19310,
+    "tokenizer_tokens": 19310,
+    "headroom_after_output_reserve": 25746,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-232",
+    "attempt": "attempt_02",
+    "input_tokens": 19372,
+    "tokenizer_tokens": 19372,
+    "headroom_after_output_reserve": 25684,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-232",
+    "attempt": "attempt_03",
+    "input_tokens": 19431,
+    "tokenizer_tokens": 19431,
+    "headroom_after_output_reserve": 25625,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-232",
+    "attempt": "attempt_04",
+    "input_tokens": 19490,
+    "tokenizer_tokens": 19490,
+    "headroom_after_output_reserve": 25566,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-234",
+    "attempt": "attempt_01",
+    "input_tokens": 19328,
+    "tokenizer_tokens": 19328,
+    "headroom_after_output_reserve": 25728,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-234",
+    "attempt": "attempt_02",
+    "input_tokens": 19389,
+    "tokenizer_tokens": 19389,
+    "headroom_after_output_reserve": 25667,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-234",
+    "attempt": "attempt_03",
+    "input_tokens": 19448,
+    "tokenizer_tokens": 19448,
+    "headroom_after_output_reserve": 25608,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-234",
+    "attempt": "attempt_04",
+    "input_tokens": 19507,
+    "tokenizer_tokens": 19507,
+    "headroom_after_output_reserve": 25549,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-236",
+    "attempt": "attempt_01",
+    "input_tokens": 19346,
+    "tokenizer_tokens": 19346,
+    "headroom_after_output_reserve": 25710,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-236",
+    "attempt": "attempt_02",
+    "input_tokens": 19404,
+    "tokenizer_tokens": 19404,
+    "headroom_after_output_reserve": 25652,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-236",
+    "attempt": "attempt_03",
+    "input_tokens": 19463,
+    "tokenizer_tokens": 19463,
+    "headroom_after_output_reserve": 25593,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-236",
+    "attempt": "attempt_04",
+    "input_tokens": 19522,
+    "tokenizer_tokens": 19522,
+    "headroom_after_output_reserve": 25534,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-239",
+    "attempt": "attempt_01",
+    "input_tokens": 19296,
+    "tokenizer_tokens": 19296,
+    "headroom_after_output_reserve": 25760,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-239",
+    "attempt": "attempt_02",
+    "input_tokens": 19361,
+    "tokenizer_tokens": 19361,
+    "headroom_after_output_reserve": 25695,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-239",
+    "attempt": "attempt_03",
+    "input_tokens": 19420,
+    "tokenizer_tokens": 19420,
+    "headroom_after_output_reserve": 25636,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-239",
+    "attempt": "attempt_04",
+    "input_tokens": 19479,
+    "tokenizer_tokens": 19479,
+    "headroom_after_output_reserve": 25577,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-241",
+    "attempt": "attempt_01",
+    "input_tokens": 17722,
+    "tokenizer_tokens": 17722,
+    "headroom_after_output_reserve": 27334,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-241",
+    "attempt": "attempt_02",
+    "input_tokens": 14894,
+    "tokenizer_tokens": 14894,
+    "headroom_after_output_reserve": 30162,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-241",
+    "attempt": "attempt_03",
+    "input_tokens": 14971,
+    "tokenizer_tokens": 14971,
+    "headroom_after_output_reserve": 30085,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-241",
+    "attempt": "attempt_04",
+    "input_tokens": 15048,
+    "tokenizer_tokens": 15048,
+    "headroom_after_output_reserve": 30008,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-244",
+    "attempt": "attempt_01",
+    "input_tokens": 17698,
+    "tokenizer_tokens": 17698,
+    "headroom_after_output_reserve": 27358,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-244",
+    "attempt": "attempt_02",
+    "input_tokens": 11684,
+    "tokenizer_tokens": 11684,
+    "headroom_after_output_reserve": 33372,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-244",
+    "attempt": "attempt_03",
+    "input_tokens": 11763,
+    "tokenizer_tokens": 11763,
+    "headroom_after_output_reserve": 33293,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-244",
+    "attempt": "attempt_04",
+    "input_tokens": 11842,
+    "tokenizer_tokens": 11842,
+    "headroom_after_output_reserve": 33214,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-245",
+    "attempt": "attempt_01",
+    "input_tokens": 11624,
+    "tokenizer_tokens": 11624,
+    "headroom_after_output_reserve": 33432,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-25",
+    "attempt": "attempt_01",
+    "input_tokens": 6773,
+    "tokenizer_tokens": 6773,
+    "headroom_after_output_reserve": 38283,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-255",
+    "attempt": "attempt_01",
+    "input_tokens": 8524,
+    "tokenizer_tokens": 8524,
+    "headroom_after_output_reserve": 36532,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-259",
+    "attempt": "attempt_01",
+    "input_tokens": 16315,
+    "tokenizer_tokens": 16315,
+    "headroom_after_output_reserve": 28741,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-259",
+    "attempt": "attempt_02",
+    "input_tokens": 5971,
+    "tokenizer_tokens": 5971,
+    "headroom_after_output_reserve": 39085,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-268",
+    "attempt": "attempt_01",
+    "input_tokens": 18912,
+    "tokenizer_tokens": 18912,
+    "headroom_after_output_reserve": 26144,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-268",
+    "attempt": "attempt_02",
+    "input_tokens": 18994,
+    "tokenizer_tokens": 18994,
+    "headroom_after_output_reserve": 26062,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-268",
+    "attempt": "attempt_03",
+    "input_tokens": 19214,
+    "tokenizer_tokens": 19214,
+    "headroom_after_output_reserve": 25842,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-268",
+    "attempt": "attempt_04",
+    "input_tokens": 19310,
+    "tokenizer_tokens": 19310,
+    "headroom_after_output_reserve": 25746,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-273",
+    "attempt": "attempt_01",
+    "input_tokens": 16187,
+    "tokenizer_tokens": 16187,
+    "headroom_after_output_reserve": 28869,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-273",
+    "attempt": "attempt_02",
+    "input_tokens": 8150,
+    "tokenizer_tokens": 8150,
+    "headroom_after_output_reserve": 36906,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-273",
+    "attempt": "attempt_03",
+    "input_tokens": 12566,
+    "tokenizer_tokens": 12566,
+    "headroom_after_output_reserve": 32490,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-273",
+    "attempt": "attempt_04",
+    "input_tokens": 12802,
+    "tokenizer_tokens": 12802,
+    "headroom_after_output_reserve": 32254,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-283",
+    "attempt": "attempt_01",
+    "input_tokens": 10766,
+    "tokenizer_tokens": 10766,
+    "headroom_after_output_reserve": 34290,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-283",
+    "attempt": "attempt_02",
+    "input_tokens": 7111,
+    "tokenizer_tokens": 7111,
+    "headroom_after_output_reserve": 37945,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-283",
+    "attempt": "attempt_03",
+    "input_tokens": 7496,
+    "tokenizer_tokens": 7496,
+    "headroom_after_output_reserve": 37560,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-283",
+    "attempt": "attempt_04",
+    "input_tokens": 7594,
+    "tokenizer_tokens": 7594,
+    "headroom_after_output_reserve": 37462,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-286",
+    "attempt": "attempt_01",
+    "input_tokens": 12136,
+    "tokenizer_tokens": 12136,
+    "headroom_after_output_reserve": 32920,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-286",
+    "attempt": "attempt_02",
+    "input_tokens": 12220,
+    "tokenizer_tokens": 12220,
+    "headroom_after_output_reserve": 32836,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-286",
+    "attempt": "attempt_03",
+    "input_tokens": 12279,
+    "tokenizer_tokens": 12279,
+    "headroom_after_output_reserve": 32777,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-286",
+    "attempt": "attempt_04",
+    "input_tokens": 12338,
+    "tokenizer_tokens": 12338,
+    "headroom_after_output_reserve": 32718,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-30",
+    "attempt": "attempt_01",
+    "input_tokens": 7843,
+    "tokenizer_tokens": 7843,
+    "headroom_after_output_reserve": 37213,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-302",
+    "attempt": "attempt_01",
+    "input_tokens": 16458,
+    "tokenizer_tokens": 16458,
+    "headroom_after_output_reserve": 28598,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-302",
+    "attempt": "attempt_02",
+    "input_tokens": 18142,
+    "tokenizer_tokens": 18142,
+    "headroom_after_output_reserve": 26914,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-302",
+    "attempt": "attempt_03",
+    "input_tokens": 18244,
+    "tokenizer_tokens": 18244,
+    "headroom_after_output_reserve": 26812,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-302",
+    "attempt": "attempt_04",
+    "input_tokens": 18347,
+    "tokenizer_tokens": 18347,
+    "headroom_after_output_reserve": 26709,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-304",
+    "attempt": "attempt_01",
+    "input_tokens": 21216,
+    "tokenizer_tokens": 21216,
+    "headroom_after_output_reserve": 23840,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-304",
+    "attempt": "attempt_02",
+    "input_tokens": 21318,
+    "tokenizer_tokens": 21318,
+    "headroom_after_output_reserve": 23738,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-304",
+    "attempt": "attempt_03",
+    "input_tokens": 21399,
+    "tokenizer_tokens": 21399,
+    "headroom_after_output_reserve": 23657,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-304",
+    "attempt": "attempt_04",
+    "input_tokens": 21548,
+    "tokenizer_tokens": 21548,
+    "headroom_after_output_reserve": 23508,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-325",
+    "attempt": "attempt_01",
+    "input_tokens": 18047,
+    "tokenizer_tokens": 18047,
+    "headroom_after_output_reserve": 27009,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-325",
+    "attempt": "attempt_02",
+    "input_tokens": 5763,
+    "tokenizer_tokens": 5763,
+    "headroom_after_output_reserve": 39293,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-325",
+    "attempt": "attempt_03",
+    "input_tokens": 18132,
+    "tokenizer_tokens": 18132,
+    "headroom_after_output_reserve": 26924,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-325",
+    "attempt": "attempt_04",
+    "input_tokens": 5950,
+    "tokenizer_tokens": 5950,
+    "headroom_after_output_reserve": 39106,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-329",
+    "attempt": "attempt_01",
+    "input_tokens": 23245,
+    "tokenizer_tokens": 23245,
+    "headroom_after_output_reserve": 21811,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-329",
+    "attempt": "attempt_02",
+    "input_tokens": 9173,
+    "tokenizer_tokens": 9173,
+    "headroom_after_output_reserve": 35883,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-329",
+    "attempt": "attempt_03",
+    "input_tokens": 23077,
+    "tokenizer_tokens": 23077,
+    "headroom_after_output_reserve": 21979,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-329",
+    "attempt": "attempt_04",
+    "input_tokens": 23179,
+    "tokenizer_tokens": 23179,
+    "headroom_after_output_reserve": 21877,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-341",
+    "attempt": "attempt_01",
+    "input_tokens": 21096,
+    "tokenizer_tokens": 21096,
+    "headroom_after_output_reserve": 23960,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-341",
+    "attempt": "attempt_02",
+    "input_tokens": 6714,
+    "tokenizer_tokens": 6714,
+    "headroom_after_output_reserve": 38342,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-341",
+    "attempt": "attempt_03",
+    "input_tokens": 21618,
+    "tokenizer_tokens": 21618,
+    "headroom_after_output_reserve": 23438,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-341",
+    "attempt": "attempt_04",
+    "input_tokens": 21708,
+    "tokenizer_tokens": 21708,
+    "headroom_after_output_reserve": 23348,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-354",
+    "attempt": "attempt_01",
+    "input_tokens": 18558,
+    "tokenizer_tokens": 18558,
+    "headroom_after_output_reserve": 26498,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-361",
+    "attempt": "attempt_01",
+    "input_tokens": 19711,
+    "tokenizer_tokens": 19711,
+    "headroom_after_output_reserve": 25345,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-361",
+    "attempt": "attempt_02",
+    "input_tokens": 6328,
+    "tokenizer_tokens": 6328,
+    "headroom_after_output_reserve": 38728,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-361",
+    "attempt": "attempt_03",
+    "input_tokens": 20095,
+    "tokenizer_tokens": 20095,
+    "headroom_after_output_reserve": 24961,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-361",
+    "attempt": "attempt_04",
+    "input_tokens": 20191,
+    "tokenizer_tokens": 20191,
+    "headroom_after_output_reserve": 24865,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-362",
+    "attempt": "attempt_01",
+    "input_tokens": 19711,
+    "tokenizer_tokens": 19711,
+    "headroom_after_output_reserve": 25345,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-362",
+    "attempt": "attempt_02",
+    "input_tokens": 20076,
+    "tokenizer_tokens": 20076,
+    "headroom_after_output_reserve": 24980,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-362",
+    "attempt": "attempt_03",
+    "input_tokens": 20191,
+    "tokenizer_tokens": 20191,
+    "headroom_after_output_reserve": 24865,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-362",
+    "attempt": "attempt_04",
+    "input_tokens": 20306,
+    "tokenizer_tokens": 20306,
+    "headroom_after_output_reserve": 24750,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-368",
+    "attempt": "attempt_01",
+    "input_tokens": 17882,
+    "tokenizer_tokens": 17882,
+    "headroom_after_output_reserve": 27174,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-368",
+    "attempt": "attempt_02",
+    "input_tokens": 5602,
+    "tokenizer_tokens": 5602,
+    "headroom_after_output_reserve": 39454,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-368",
+    "attempt": "attempt_03",
+    "input_tokens": 5772,
+    "tokenizer_tokens": 5772,
+    "headroom_after_output_reserve": 39284,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-368",
+    "attempt": "attempt_04",
+    "input_tokens": 5870,
+    "tokenizer_tokens": 5870,
+    "headroom_after_output_reserve": 39186,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-38",
+    "attempt": "attempt_01",
+    "input_tokens": 17503,
+    "tokenizer_tokens": 17503,
+    "headroom_after_output_reserve": 27553,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-38",
+    "attempt": "attempt_02",
+    "input_tokens": 9651,
+    "tokenizer_tokens": 9651,
+    "headroom_after_output_reserve": 35405,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-38",
+    "attempt": "attempt_03",
+    "input_tokens": 9727,
+    "tokenizer_tokens": 9727,
+    "headroom_after_output_reserve": 35329,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-38",
+    "attempt": "attempt_04",
+    "input_tokens": 9803,
+    "tokenizer_tokens": 9803,
+    "headroom_after_output_reserve": 35253,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-380",
+    "attempt": "attempt_01",
+    "input_tokens": 17450,
+    "tokenizer_tokens": 17450,
+    "headroom_after_output_reserve": 27606,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-380",
+    "attempt": "attempt_02",
+    "input_tokens": 17533,
+    "tokenizer_tokens": 17533,
+    "headroom_after_output_reserve": 27523,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-380",
+    "attempt": "attempt_03",
+    "input_tokens": 17602,
+    "tokenizer_tokens": 17602,
+    "headroom_after_output_reserve": 27454,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-380",
+    "attempt": "attempt_04",
+    "input_tokens": 17750,
+    "tokenizer_tokens": 17750,
+    "headroom_after_output_reserve": 27306,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-381",
+    "attempt": "attempt_01",
+    "input_tokens": 17533,
+    "tokenizer_tokens": 17533,
+    "headroom_after_output_reserve": 27523,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-387",
+    "attempt": "attempt_01",
+    "input_tokens": 18032,
+    "tokenizer_tokens": 18032,
+    "headroom_after_output_reserve": 27024,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-387",
+    "attempt": "attempt_02",
+    "input_tokens": 18473,
+    "tokenizer_tokens": 18473,
+    "headroom_after_output_reserve": 26583,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-387",
+    "attempt": "attempt_03",
+    "input_tokens": 18553,
+    "tokenizer_tokens": 18553,
+    "headroom_after_output_reserve": 26503,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-387",
+    "attempt": "attempt_04",
+    "input_tokens": 18633,
+    "tokenizer_tokens": 18633,
+    "headroom_after_output_reserve": 26423,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-388",
+    "attempt": "attempt_01",
+    "input_tokens": 12422,
+    "tokenizer_tokens": 12422,
+    "headroom_after_output_reserve": 32634,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-388",
+    "attempt": "attempt_02",
+    "input_tokens": 12517,
+    "tokenizer_tokens": 12517,
+    "headroom_after_output_reserve": 32539,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-388",
+    "attempt": "attempt_03",
+    "input_tokens": 13653,
+    "tokenizer_tokens": 13653,
+    "headroom_after_output_reserve": 31403,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-388",
+    "attempt": "attempt_04",
+    "input_tokens": 4814,
+    "tokenizer_tokens": 4814,
+    "headroom_after_output_reserve": 40242,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-391",
+    "attempt": "attempt_01",
+    "input_tokens": 18877,
+    "tokenizer_tokens": 18877,
+    "headroom_after_output_reserve": 26179,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-391",
+    "attempt": "attempt_02",
+    "input_tokens": 6612,
+    "tokenizer_tokens": 6612,
+    "headroom_after_output_reserve": 38444,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-391",
+    "attempt": "attempt_03",
+    "input_tokens": 19234,
+    "tokenizer_tokens": 19234,
+    "headroom_after_output_reserve": 25822,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-391",
+    "attempt": "attempt_04",
+    "input_tokens": 6740,
+    "tokenizer_tokens": 6740,
+    "headroom_after_output_reserve": 38316,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-40",
+    "attempt": "attempt_01",
+    "input_tokens": 13053,
+    "tokenizer_tokens": 13053,
+    "headroom_after_output_reserve": 32003,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-403",
+    "attempt": "attempt_01",
+    "input_tokens": 16700,
+    "tokenizer_tokens": 16700,
+    "headroom_after_output_reserve": 28356,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-411",
+    "attempt": "attempt_01",
+    "input_tokens": 19365,
+    "tokenizer_tokens": 19365,
+    "headroom_after_output_reserve": 25691,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-411",
+    "attempt": "attempt_02",
+    "input_tokens": 19458,
+    "tokenizer_tokens": 19458,
+    "headroom_after_output_reserve": 25598,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-411",
+    "attempt": "attempt_03",
+    "input_tokens": 7221,
+    "tokenizer_tokens": 7221,
+    "headroom_after_output_reserve": 37835,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-411",
+    "attempt": "attempt_04",
+    "input_tokens": 20828,
+    "tokenizer_tokens": 20828,
+    "headroom_after_output_reserve": 24228,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-413",
+    "attempt": "attempt_01",
+    "input_tokens": 18402,
+    "tokenizer_tokens": 18402,
+    "headroom_after_output_reserve": 26654,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-413",
+    "attempt": "attempt_02",
+    "input_tokens": 19770,
+    "tokenizer_tokens": 19770,
+    "headroom_after_output_reserve": 25286,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-413",
+    "attempt": "attempt_03",
+    "input_tokens": 19859,
+    "tokenizer_tokens": 19859,
+    "headroom_after_output_reserve": 25197,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-413",
+    "attempt": "attempt_04",
+    "input_tokens": 19948,
+    "tokenizer_tokens": 19948,
+    "headroom_after_output_reserve": 25108,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-416",
+    "attempt": "attempt_01",
+    "input_tokens": 16922,
+    "tokenizer_tokens": 16922,
+    "headroom_after_output_reserve": 28134,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-416",
+    "attempt": "attempt_02",
+    "input_tokens": 5876,
+    "tokenizer_tokens": 5876,
+    "headroom_after_output_reserve": 39180,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-416",
+    "attempt": "attempt_03",
+    "input_tokens": 4939,
+    "tokenizer_tokens": 4939,
+    "headroom_after_output_reserve": 40117,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-416",
+    "attempt": "attempt_04",
+    "input_tokens": 5040,
+    "tokenizer_tokens": 5040,
+    "headroom_after_output_reserve": 40016,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-421",
+    "attempt": "attempt_01",
+    "input_tokens": 18308,
+    "tokenizer_tokens": 18308,
+    "headroom_after_output_reserve": 26748,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-421",
+    "attempt": "attempt_02",
+    "input_tokens": 6140,
+    "tokenizer_tokens": 6140,
+    "headroom_after_output_reserve": 38916,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-421",
+    "attempt": "attempt_03",
+    "input_tokens": 6210,
+    "tokenizer_tokens": 6210,
+    "headroom_after_output_reserve": 38846,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-421",
+    "attempt": "attempt_04",
+    "input_tokens": 6322,
+    "tokenizer_tokens": 6322,
+    "headroom_after_output_reserve": 38734,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-423",
+    "attempt": "attempt_01",
+    "input_tokens": 18068,
+    "tokenizer_tokens": 18068,
+    "headroom_after_output_reserve": 26988,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-423",
+    "attempt": "attempt_02",
+    "input_tokens": 6017,
+    "tokenizer_tokens": 6017,
+    "headroom_after_output_reserve": 39039,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-423",
+    "attempt": "attempt_03",
+    "input_tokens": 6123,
+    "tokenizer_tokens": 6123,
+    "headroom_after_output_reserve": 38933,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-423",
+    "attempt": "attempt_04",
+    "input_tokens": 6229,
+    "tokenizer_tokens": 6229,
+    "headroom_after_output_reserve": 38827,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-424",
+    "attempt": "attempt_01",
+    "input_tokens": 18110,
+    "tokenizer_tokens": 18110,
+    "headroom_after_output_reserve": 26946,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-424",
+    "attempt": "attempt_02",
+    "input_tokens": 6363,
+    "tokenizer_tokens": 6363,
+    "headroom_after_output_reserve": 38693,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-424",
+    "attempt": "attempt_03",
+    "input_tokens": 6473,
+    "tokenizer_tokens": 6473,
+    "headroom_after_output_reserve": 38583,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-424",
+    "attempt": "attempt_04",
+    "input_tokens": 6583,
+    "tokenizer_tokens": 6583,
+    "headroom_after_output_reserve": 38473,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-428",
+    "attempt": "attempt_01",
+    "input_tokens": 21284,
+    "tokenizer_tokens": 21284,
+    "headroom_after_output_reserve": 23772,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-428",
+    "attempt": "attempt_02",
+    "input_tokens": 21373,
+    "tokenizer_tokens": 21373,
+    "headroom_after_output_reserve": 23683,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-428",
+    "attempt": "attempt_03",
+    "input_tokens": 21447,
+    "tokenizer_tokens": 21447,
+    "headroom_after_output_reserve": 23609,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-428",
+    "attempt": "attempt_04",
+    "input_tokens": 21521,
+    "tokenizer_tokens": 21521,
+    "headroom_after_output_reserve": 23535,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-43",
+    "attempt": "attempt_01",
+    "input_tokens": 7506,
+    "tokenizer_tokens": 7506,
+    "headroom_after_output_reserve": 37550,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-430",
+    "attempt": "attempt_01",
+    "input_tokens": 17403,
+    "tokenizer_tokens": 17403,
+    "headroom_after_output_reserve": 27653,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-430",
+    "attempt": "attempt_02",
+    "input_tokens": 5401,
+    "tokenizer_tokens": 5401,
+    "headroom_after_output_reserve": 39655,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-430",
+    "attempt": "attempt_03",
+    "input_tokens": 5498,
+    "tokenizer_tokens": 5498,
+    "headroom_after_output_reserve": 39558,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-430",
+    "attempt": "attempt_04",
+    "input_tokens": 5595,
+    "tokenizer_tokens": 5595,
+    "headroom_after_output_reserve": 39461,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-442",
+    "attempt": "attempt_01",
+    "input_tokens": 18134,
+    "tokenizer_tokens": 18134,
+    "headroom_after_output_reserve": 26922,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-442",
+    "attempt": "attempt_02",
+    "input_tokens": 6392,
+    "tokenizer_tokens": 6392,
+    "headroom_after_output_reserve": 38664,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-442",
+    "attempt": "attempt_03",
+    "input_tokens": 6515,
+    "tokenizer_tokens": 6515,
+    "headroom_after_output_reserve": 38541,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-442",
+    "attempt": "attempt_04",
+    "input_tokens": 6618,
+    "tokenizer_tokens": 6618,
+    "headroom_after_output_reserve": 38438,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-444",
+    "attempt": "attempt_01",
+    "input_tokens": 18123,
+    "tokenizer_tokens": 18123,
+    "headroom_after_output_reserve": 26933,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-444",
+    "attempt": "attempt_02",
+    "input_tokens": 18242,
+    "tokenizer_tokens": 18242,
+    "headroom_after_output_reserve": 26814,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-444",
+    "attempt": "attempt_03",
+    "input_tokens": 18298,
+    "tokenizer_tokens": 18298,
+    "headroom_after_output_reserve": 26758,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-444",
+    "attempt": "attempt_04",
+    "input_tokens": 18377,
+    "tokenizer_tokens": 18377,
+    "headroom_after_output_reserve": 26679,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-45",
+    "attempt": "attempt_01",
+    "input_tokens": 14167,
+    "tokenizer_tokens": 14167,
+    "headroom_after_output_reserve": 30889,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-47",
+    "attempt": "attempt_01",
+    "input_tokens": 10453,
+    "tokenizer_tokens": 10453,
+    "headroom_after_output_reserve": 34603,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-47",
+    "attempt": "attempt_02",
+    "input_tokens": 10516,
+    "tokenizer_tokens": 10516,
+    "headroom_after_output_reserve": 34540,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-47",
+    "attempt": "attempt_03",
+    "input_tokens": 10575,
+    "tokenizer_tokens": 10575,
+    "headroom_after_output_reserve": 34481,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-47",
+    "attempt": "attempt_04",
+    "input_tokens": 10632,
+    "tokenizer_tokens": 10632,
+    "headroom_after_output_reserve": 34424,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-48",
+    "attempt": "attempt_01",
+    "input_tokens": 10643,
+    "tokenizer_tokens": 10643,
+    "headroom_after_output_reserve": 34413,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-48",
+    "attempt": "attempt_02",
+    "input_tokens": 10704,
+    "tokenizer_tokens": 10704,
+    "headroom_after_output_reserve": 34352,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-48",
+    "attempt": "attempt_03",
+    "input_tokens": 10759,
+    "tokenizer_tokens": 10759,
+    "headroom_after_output_reserve": 34297,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-48",
+    "attempt": "attempt_04",
+    "input_tokens": 10818,
+    "tokenizer_tokens": 10818,
+    "headroom_after_output_reserve": 34238,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-52",
+    "attempt": "attempt_01",
+    "input_tokens": 11160,
+    "tokenizer_tokens": 11160,
+    "headroom_after_output_reserve": 33896,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-52",
+    "attempt": "attempt_02",
+    "input_tokens": 5457,
+    "tokenizer_tokens": 5457,
+    "headroom_after_output_reserve": 39599,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-52",
+    "attempt": "attempt_03",
+    "input_tokens": 5586,
+    "tokenizer_tokens": 5586,
+    "headroom_after_output_reserve": 39470,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-52",
+    "attempt": "attempt_04",
+    "input_tokens": 5715,
+    "tokenizer_tokens": 5715,
+    "headroom_after_output_reserve": 39341,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-53",
+    "attempt": "attempt_01",
+    "input_tokens": 9177,
+    "tokenizer_tokens": 9177,
+    "headroom_after_output_reserve": 35879,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-53",
+    "attempt": "attempt_02",
+    "input_tokens": 4491,
+    "tokenizer_tokens": 4491,
+    "headroom_after_output_reserve": 40565,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-53",
+    "attempt": "attempt_03",
+    "input_tokens": 7966,
+    "tokenizer_tokens": 7966,
+    "headroom_after_output_reserve": 37090,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-56",
+    "attempt": "attempt_01",
+    "input_tokens": 20788,
+    "tokenizer_tokens": 20788,
+    "headroom_after_output_reserve": 24268,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-56",
+    "attempt": "attempt_02",
+    "input_tokens": 6739,
+    "tokenizer_tokens": 6739,
+    "headroom_after_output_reserve": 38317,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-56",
+    "attempt": "attempt_03",
+    "input_tokens": 6920,
+    "tokenizer_tokens": 6920,
+    "headroom_after_output_reserve": 38136,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-56",
+    "attempt": "attempt_04",
+    "input_tokens": 21125,
+    "tokenizer_tokens": 21125,
+    "headroom_after_output_reserve": 23931,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-97",
+    "attempt": "attempt_01",
+    "input_tokens": 19356,
+    "tokenizer_tokens": 19356,
+    "headroom_after_output_reserve": 25700,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-97",
+    "attempt": "attempt_02",
+    "input_tokens": 7158,
+    "tokenizer_tokens": 7158,
+    "headroom_after_output_reserve": 37898,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-97",
+    "attempt": "attempt_03",
+    "input_tokens": 7217,
+    "tokenizer_tokens": 7217,
+    "headroom_after_output_reserve": 37839,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "V-97",
+    "attempt": "attempt_04",
+    "input_tokens": 7276,
+    "tokenizer_tokens": 7276,
+    "headroom_after_output_reserve": 37780,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-0",
+    "attempt": "attempt_01",
+    "input_tokens": 7909,
+    "tokenizer_tokens": 7909,
+    "headroom_after_output_reserve": 37147,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-18",
+    "attempt": "attempt_01",
+    "input_tokens": 16628,
+    "tokenizer_tokens": 16628,
+    "headroom_after_output_reserve": 28428,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-18",
+    "attempt": "attempt_02",
+    "input_tokens": 16769,
+    "tokenizer_tokens": 16769,
+    "headroom_after_output_reserve": 28287,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-18",
+    "attempt": "attempt_03",
+    "input_tokens": 16856,
+    "tokenizer_tokens": 16856,
+    "headroom_after_output_reserve": 28200,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-18",
+    "attempt": "attempt_04",
+    "input_tokens": 17134,
+    "tokenizer_tokens": 17134,
+    "headroom_after_output_reserve": 27922,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-20",
+    "attempt": "attempt_01",
+    "input_tokens": 16232,
+    "tokenizer_tokens": 16232,
+    "headroom_after_output_reserve": 28824,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-20",
+    "attempt": "attempt_02",
+    "input_tokens": 16325,
+    "tokenizer_tokens": 16325,
+    "headroom_after_output_reserve": 28731,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-20",
+    "attempt": "attempt_03",
+    "input_tokens": 5600,
+    "tokenizer_tokens": 5600,
+    "headroom_after_output_reserve": 39456,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-20",
+    "attempt": "attempt_04",
+    "input_tokens": 16468,
+    "tokenizer_tokens": 16468,
+    "headroom_after_output_reserve": 28588,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-21",
+    "attempt": "attempt_01",
+    "input_tokens": 16329,
+    "tokenizer_tokens": 16329,
+    "headroom_after_output_reserve": 28727,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-21",
+    "attempt": "attempt_02",
+    "input_tokens": 4560,
+    "tokenizer_tokens": 4560,
+    "headroom_after_output_reserve": 40496,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-21",
+    "attempt": "attempt_03",
+    "input_tokens": 16504,
+    "tokenizer_tokens": 16504,
+    "headroom_after_output_reserve": 28552,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-21",
+    "attempt": "attempt_04",
+    "input_tokens": 16579,
+    "tokenizer_tokens": 16579,
+    "headroom_after_output_reserve": 28477,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-30",
+    "attempt": "attempt_01",
+    "input_tokens": 16956,
+    "tokenizer_tokens": 16956,
+    "headroom_after_output_reserve": 28100,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-30",
+    "attempt": "attempt_02",
+    "input_tokens": 4891,
+    "tokenizer_tokens": 4891,
+    "headroom_after_output_reserve": 40165,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-30",
+    "attempt": "attempt_03",
+    "input_tokens": 5536,
+    "tokenizer_tokens": 5536,
+    "headroom_after_output_reserve": 39520,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-30",
+    "attempt": "attempt_04",
+    "input_tokens": 5073,
+    "tokenizer_tokens": 5073,
+    "headroom_after_output_reserve": 39983,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-32",
+    "attempt": "attempt_01",
+    "input_tokens": 17020,
+    "tokenizer_tokens": 17020,
+    "headroom_after_output_reserve": 28036,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-32",
+    "attempt": "attempt_02",
+    "input_tokens": 4818,
+    "tokenizer_tokens": 4818,
+    "headroom_after_output_reserve": 40238,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-32",
+    "attempt": "attempt_03",
+    "input_tokens": 6662,
+    "tokenizer_tokens": 6662,
+    "headroom_after_output_reserve": 38394,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-32",
+    "attempt": "attempt_04",
+    "input_tokens": 6741,
+    "tokenizer_tokens": 6741,
+    "headroom_after_output_reserve": 38315,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-34",
+    "attempt": "attempt_01",
+    "input_tokens": 16816,
+    "tokenizer_tokens": 16816,
+    "headroom_after_output_reserve": 28240,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-34",
+    "attempt": "attempt_02",
+    "input_tokens": 16944,
+    "tokenizer_tokens": 16944,
+    "headroom_after_output_reserve": 28112,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-36",
+    "attempt": "attempt_01",
+    "input_tokens": 17027,
+    "tokenizer_tokens": 17027,
+    "headroom_after_output_reserve": 28029,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-36",
+    "attempt": "attempt_02",
+    "input_tokens": 17160,
+    "tokenizer_tokens": 17160,
+    "headroom_after_output_reserve": 27896,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-36",
+    "attempt": "attempt_03",
+    "input_tokens": 17465,
+    "tokenizer_tokens": 17465,
+    "headroom_after_output_reserve": 27591,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-4",
+    "attempt": "attempt_01",
+    "input_tokens": 16688,
+    "tokenizer_tokens": 16688,
+    "headroom_after_output_reserve": 28368,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-4",
+    "attempt": "attempt_02",
+    "input_tokens": 16804,
+    "tokenizer_tokens": 16804,
+    "headroom_after_output_reserve": 28252,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-48",
+    "attempt": "attempt_01",
+    "input_tokens": 16825,
+    "tokenizer_tokens": 16825,
+    "headroom_after_output_reserve": 28231,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-48",
+    "attempt": "attempt_02",
+    "input_tokens": 4665,
+    "tokenizer_tokens": 4665,
+    "headroom_after_output_reserve": 40391,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-48",
+    "attempt": "attempt_03",
+    "input_tokens": 16986,
+    "tokenizer_tokens": 16986,
+    "headroom_after_output_reserve": 28070,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-48",
+    "attempt": "attempt_04",
+    "input_tokens": 17061,
+    "tokenizer_tokens": 17061,
+    "headroom_after_output_reserve": 27995,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-5",
+    "attempt": "attempt_01",
+    "input_tokens": 17216,
+    "tokenizer_tokens": 17216,
+    "headroom_after_output_reserve": 27840,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-5",
+    "attempt": "attempt_02",
+    "input_tokens": 17415,
+    "tokenizer_tokens": 17415,
+    "headroom_after_output_reserve": 27641,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-5",
+    "attempt": "attempt_03",
+    "input_tokens": 17523,
+    "tokenizer_tokens": 17523,
+    "headroom_after_output_reserve": 27533,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-5",
+    "attempt": "attempt_04",
+    "input_tokens": 17847,
+    "tokenizer_tokens": 17847,
+    "headroom_after_output_reserve": 27209,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-51",
+    "attempt": "attempt_01",
+    "input_tokens": 5389,
+    "tokenizer_tokens": 5389,
+    "headroom_after_output_reserve": 39667,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-53",
+    "attempt": "attempt_01",
+    "input_tokens": 17194,
+    "tokenizer_tokens": 17194,
+    "headroom_after_output_reserve": 27862,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-53",
+    "attempt": "attempt_02",
+    "input_tokens": 4740,
+    "tokenizer_tokens": 4740,
+    "headroom_after_output_reserve": 40316,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-53",
+    "attempt": "attempt_03",
+    "input_tokens": 17351,
+    "tokenizer_tokens": 17351,
+    "headroom_after_output_reserve": 27705,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-53",
+    "attempt": "attempt_04",
+    "input_tokens": 4887,
+    "tokenizer_tokens": 4887,
+    "headroom_after_output_reserve": 40169,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-60",
+    "attempt": "attempt_01",
+    "input_tokens": 16583,
+    "tokenizer_tokens": 16583,
+    "headroom_after_output_reserve": 28473,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-60",
+    "attempt": "attempt_02",
+    "input_tokens": 16998,
+    "tokenizer_tokens": 16998,
+    "headroom_after_output_reserve": 28058,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-60",
+    "attempt": "attempt_03",
+    "input_tokens": 17086,
+    "tokenizer_tokens": 17086,
+    "headroom_after_output_reserve": 27970,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-61",
+    "attempt": "attempt_01",
+    "input_tokens": 16691,
+    "tokenizer_tokens": 16691,
+    "headroom_after_output_reserve": 28365,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-61",
+    "attempt": "attempt_02",
+    "input_tokens": 16790,
+    "tokenizer_tokens": 16790,
+    "headroom_after_output_reserve": 28266,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-61",
+    "attempt": "attempt_03",
+    "input_tokens": 17061,
+    "tokenizer_tokens": 17061,
+    "headroom_after_output_reserve": 27995,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-61",
+    "attempt": "attempt_04",
+    "input_tokens": 17138,
+    "tokenizer_tokens": 17138,
+    "headroom_after_output_reserve": 27918,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-63",
+    "attempt": "attempt_01",
+    "input_tokens": 10431,
+    "tokenizer_tokens": 10431,
+    "headroom_after_output_reserve": 34625,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-65",
+    "attempt": "attempt_01",
+    "input_tokens": 17462,
+    "tokenizer_tokens": 17462,
+    "headroom_after_output_reserve": 27594,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-65",
+    "attempt": "attempt_02",
+    "input_tokens": 17596,
+    "tokenizer_tokens": 17596,
+    "headroom_after_output_reserve": 27460,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-65",
+    "attempt": "attempt_03",
+    "input_tokens": 17780,
+    "tokenizer_tokens": 17780,
+    "headroom_after_output_reserve": 27276,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-65",
+    "attempt": "attempt_04",
+    "input_tokens": 17877,
+    "tokenizer_tokens": 17877,
+    "headroom_after_output_reserve": 27179,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-69",
+    "attempt": "attempt_01",
+    "input_tokens": 12800,
+    "tokenizer_tokens": 12800,
+    "headroom_after_output_reserve": 32256,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-69",
+    "attempt": "attempt_02",
+    "input_tokens": 4876,
+    "tokenizer_tokens": 4876,
+    "headroom_after_output_reserve": 40180,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-69",
+    "attempt": "attempt_03",
+    "input_tokens": 5070,
+    "tokenizer_tokens": 5070,
+    "headroom_after_output_reserve": 39986,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "with_internals",
+    "id": "VB-69",
+    "attempt": "attempt_04",
+    "input_tokens": 13075,
+    "tokenizer_tokens": 13075,
+    "headroom_after_output_reserve": 31981,
+    "truncated": false,
+    "exposed": true
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-103",
+    "attempt": "attempt_01",
+    "input_tokens": 6073,
+    "tokenizer_tokens": 6073,
+    "headroom_after_output_reserve": 38983,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-105",
+    "attempt": "attempt_01",
+    "input_tokens": 6314,
+    "tokenizer_tokens": 6314,
+    "headroom_after_output_reserve": 38742,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-105",
+    "attempt": "attempt_02",
+    "input_tokens": 6774,
+    "tokenizer_tokens": 6774,
+    "headroom_after_output_reserve": 38282,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-105",
+    "attempt": "attempt_03",
+    "input_tokens": 6861,
+    "tokenizer_tokens": 6861,
+    "headroom_after_output_reserve": 38195,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-105",
+    "attempt": "attempt_04",
+    "input_tokens": 6948,
+    "tokenizer_tokens": 6948,
+    "headroom_after_output_reserve": 38108,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-11",
+    "attempt": "attempt_01",
+    "input_tokens": 8333,
+    "tokenizer_tokens": 8333,
+    "headroom_after_output_reserve": 36723,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-11",
+    "attempt": "attempt_02",
+    "input_tokens": 9140,
+    "tokenizer_tokens": 9140,
+    "headroom_after_output_reserve": 35916,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-11",
+    "attempt": "attempt_03",
+    "input_tokens": 9362,
+    "tokenizer_tokens": 9362,
+    "headroom_after_output_reserve": 35694,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-11",
+    "attempt": "attempt_04",
+    "input_tokens": 9467,
+    "tokenizer_tokens": 9467,
+    "headroom_after_output_reserve": 35589,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-113",
+    "attempt": "attempt_01",
+    "input_tokens": 8364,
+    "tokenizer_tokens": 8364,
+    "headroom_after_output_reserve": 36692,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-124",
+    "attempt": "attempt_01",
+    "input_tokens": 6467,
+    "tokenizer_tokens": 6467,
+    "headroom_after_output_reserve": 38589,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-124",
+    "attempt": "attempt_02",
+    "input_tokens": 6564,
+    "tokenizer_tokens": 6564,
+    "headroom_after_output_reserve": 38492,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-124",
+    "attempt": "attempt_03",
+    "input_tokens": 6643,
+    "tokenizer_tokens": 6643,
+    "headroom_after_output_reserve": 38413,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-124",
+    "attempt": "attempt_04",
+    "input_tokens": 6722,
+    "tokenizer_tokens": 6722,
+    "headroom_after_output_reserve": 38334,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-129",
+    "attempt": "attempt_01",
+    "input_tokens": 7292,
+    "tokenizer_tokens": 7292,
+    "headroom_after_output_reserve": 37764,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-129",
+    "attempt": "attempt_02",
+    "input_tokens": 7583,
+    "tokenizer_tokens": 7583,
+    "headroom_after_output_reserve": 37473,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-129",
+    "attempt": "attempt_03",
+    "input_tokens": 7642,
+    "tokenizer_tokens": 7642,
+    "headroom_after_output_reserve": 37414,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-129",
+    "attempt": "attempt_04",
+    "input_tokens": 7701,
+    "tokenizer_tokens": 7701,
+    "headroom_after_output_reserve": 37355,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-133",
+    "attempt": "attempt_01",
+    "input_tokens": 6741,
+    "tokenizer_tokens": 6741,
+    "headroom_after_output_reserve": 38315,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-133",
+    "attempt": "attempt_02",
+    "input_tokens": 5184,
+    "tokenizer_tokens": 5184,
+    "headroom_after_output_reserve": 39872,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-133",
+    "attempt": "attempt_03",
+    "input_tokens": 5284,
+    "tokenizer_tokens": 5284,
+    "headroom_after_output_reserve": 39772,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-133",
+    "attempt": "attempt_04",
+    "input_tokens": 5473,
+    "tokenizer_tokens": 5473,
+    "headroom_after_output_reserve": 39583,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-135",
+    "attempt": "attempt_01",
+    "input_tokens": 7962,
+    "tokenizer_tokens": 7962,
+    "headroom_after_output_reserve": 37094,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-135",
+    "attempt": "attempt_02",
+    "input_tokens": 8089,
+    "tokenizer_tokens": 8089,
+    "headroom_after_output_reserve": 36967,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-135",
+    "attempt": "attempt_03",
+    "input_tokens": 8168,
+    "tokenizer_tokens": 8168,
+    "headroom_after_output_reserve": 36888,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-135",
+    "attempt": "attempt_04",
+    "input_tokens": 7592,
+    "tokenizer_tokens": 7592,
+    "headroom_after_output_reserve": 37464,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-139",
+    "attempt": "attempt_01",
+    "input_tokens": 5627,
+    "tokenizer_tokens": 5627,
+    "headroom_after_output_reserve": 39429,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-139",
+    "attempt": "attempt_02",
+    "input_tokens": 5745,
+    "tokenizer_tokens": 5745,
+    "headroom_after_output_reserve": 39311,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-139",
+    "attempt": "attempt_03",
+    "input_tokens": 5836,
+    "tokenizer_tokens": 5836,
+    "headroom_after_output_reserve": 39220,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-139",
+    "attempt": "attempt_04",
+    "input_tokens": 5927,
+    "tokenizer_tokens": 5927,
+    "headroom_after_output_reserve": 39129,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-140",
+    "attempt": "attempt_01",
+    "input_tokens": 4984,
+    "tokenizer_tokens": 4984,
+    "headroom_after_output_reserve": 40072,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-140",
+    "attempt": "attempt_02",
+    "input_tokens": 5088,
+    "tokenizer_tokens": 5088,
+    "headroom_after_output_reserve": 39968,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-140",
+    "attempt": "attempt_03",
+    "input_tokens": 5164,
+    "tokenizer_tokens": 5164,
+    "headroom_after_output_reserve": 39892,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-140",
+    "attempt": "attempt_04",
+    "input_tokens": 5459,
+    "tokenizer_tokens": 5459,
+    "headroom_after_output_reserve": 39597,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-144",
+    "attempt": "attempt_01",
+    "input_tokens": 5056,
+    "tokenizer_tokens": 5056,
+    "headroom_after_output_reserve": 40000,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-144",
+    "attempt": "attempt_02",
+    "input_tokens": 6818,
+    "tokenizer_tokens": 6818,
+    "headroom_after_output_reserve": 38238,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-144",
+    "attempt": "attempt_03",
+    "input_tokens": 7139,
+    "tokenizer_tokens": 7139,
+    "headroom_after_output_reserve": 37917,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-144",
+    "attempt": "attempt_04",
+    "input_tokens": 7011,
+    "tokenizer_tokens": 7011,
+    "headroom_after_output_reserve": 38045,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-15",
+    "attempt": "attempt_01",
+    "input_tokens": 6428,
+    "tokenizer_tokens": 6428,
+    "headroom_after_output_reserve": 38628,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-15",
+    "attempt": "attempt_02",
+    "input_tokens": 6550,
+    "tokenizer_tokens": 6550,
+    "headroom_after_output_reserve": 38506,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-15",
+    "attempt": "attempt_03",
+    "input_tokens": 6625,
+    "tokenizer_tokens": 6625,
+    "headroom_after_output_reserve": 38431,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-15",
+    "attempt": "attempt_04",
+    "input_tokens": 6919,
+    "tokenizer_tokens": 6919,
+    "headroom_after_output_reserve": 38137,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-156",
+    "attempt": "attempt_01",
+    "input_tokens": 5122,
+    "tokenizer_tokens": 5122,
+    "headroom_after_output_reserve": 39934,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-156",
+    "attempt": "attempt_02",
+    "input_tokens": 5617,
+    "tokenizer_tokens": 5617,
+    "headroom_after_output_reserve": 39439,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-156",
+    "attempt": "attempt_03",
+    "input_tokens": 5775,
+    "tokenizer_tokens": 5775,
+    "headroom_after_output_reserve": 39281,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-156",
+    "attempt": "attempt_04",
+    "input_tokens": 5933,
+    "tokenizer_tokens": 5933,
+    "headroom_after_output_reserve": 39123,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-161",
+    "attempt": "attempt_01",
+    "input_tokens": 7536,
+    "tokenizer_tokens": 7536,
+    "headroom_after_output_reserve": 37520,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-161",
+    "attempt": "attempt_02",
+    "input_tokens": 6474,
+    "tokenizer_tokens": 6474,
+    "headroom_after_output_reserve": 38582,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-161",
+    "attempt": "attempt_03",
+    "input_tokens": 6613,
+    "tokenizer_tokens": 6613,
+    "headroom_after_output_reserve": 38443,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-161",
+    "attempt": "attempt_04",
+    "input_tokens": 6734,
+    "tokenizer_tokens": 6734,
+    "headroom_after_output_reserve": 38322,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-163",
+    "attempt": "attempt_01",
+    "input_tokens": 8527,
+    "tokenizer_tokens": 8527,
+    "headroom_after_output_reserve": 36529,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-163",
+    "attempt": "attempt_02",
+    "input_tokens": 7131,
+    "tokenizer_tokens": 7131,
+    "headroom_after_output_reserve": 37925,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-163",
+    "attempt": "attempt_03",
+    "input_tokens": 8821,
+    "tokenizer_tokens": 8821,
+    "headroom_after_output_reserve": 36235,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-163",
+    "attempt": "attempt_04",
+    "input_tokens": 8940,
+    "tokenizer_tokens": 8940,
+    "headroom_after_output_reserve": 36116,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-167",
+    "attempt": "attempt_01",
+    "input_tokens": 6938,
+    "tokenizer_tokens": 6938,
+    "headroom_after_output_reserve": 38118,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-167",
+    "attempt": "attempt_02",
+    "input_tokens": 7012,
+    "tokenizer_tokens": 7012,
+    "headroom_after_output_reserve": 38044,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-167",
+    "attempt": "attempt_03",
+    "input_tokens": 7115,
+    "tokenizer_tokens": 7115,
+    "headroom_after_output_reserve": 37941,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-167",
+    "attempt": "attempt_04",
+    "input_tokens": 7283,
+    "tokenizer_tokens": 7283,
+    "headroom_after_output_reserve": 37773,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-172",
+    "attempt": "attempt_01",
+    "input_tokens": 5825,
+    "tokenizer_tokens": 5825,
+    "headroom_after_output_reserve": 39231,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-173",
+    "attempt": "attempt_01",
+    "input_tokens": 6862,
+    "tokenizer_tokens": 6862,
+    "headroom_after_output_reserve": 38194,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-173",
+    "attempt": "attempt_02",
+    "input_tokens": 7111,
+    "tokenizer_tokens": 7111,
+    "headroom_after_output_reserve": 37945,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-173",
+    "attempt": "attempt_03",
+    "input_tokens": 7220,
+    "tokenizer_tokens": 7220,
+    "headroom_after_output_reserve": 37836,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-173",
+    "attempt": "attempt_04",
+    "input_tokens": 7329,
+    "tokenizer_tokens": 7329,
+    "headroom_after_output_reserve": 37727,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-178",
+    "attempt": "attempt_01",
+    "input_tokens": 6125,
+    "tokenizer_tokens": 6125,
+    "headroom_after_output_reserve": 38931,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-178",
+    "attempt": "attempt_02",
+    "input_tokens": 6136,
+    "tokenizer_tokens": 6136,
+    "headroom_after_output_reserve": 38920,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-178",
+    "attempt": "attempt_03",
+    "input_tokens": 6195,
+    "tokenizer_tokens": 6195,
+    "headroom_after_output_reserve": 38861,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-178",
+    "attempt": "attempt_04",
+    "input_tokens": 6254,
+    "tokenizer_tokens": 6254,
+    "headroom_after_output_reserve": 38802,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-181",
+    "attempt": "attempt_01",
+    "input_tokens": 9304,
+    "tokenizer_tokens": 9304,
+    "headroom_after_output_reserve": 35752,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-181",
+    "attempt": "attempt_02",
+    "input_tokens": 7554,
+    "tokenizer_tokens": 7554,
+    "headroom_after_output_reserve": 37502,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-181",
+    "attempt": "attempt_03",
+    "input_tokens": 7646,
+    "tokenizer_tokens": 7646,
+    "headroom_after_output_reserve": 37410,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-181",
+    "attempt": "attempt_04",
+    "input_tokens": 7791,
+    "tokenizer_tokens": 7791,
+    "headroom_after_output_reserve": 37265,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-190",
+    "attempt": "attempt_01",
+    "input_tokens": 5567,
+    "tokenizer_tokens": 5567,
+    "headroom_after_output_reserve": 39489,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-190",
+    "attempt": "attempt_02",
+    "input_tokens": 5665,
+    "tokenizer_tokens": 5665,
+    "headroom_after_output_reserve": 39391,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-190",
+    "attempt": "attempt_03",
+    "input_tokens": 6894,
+    "tokenizer_tokens": 6894,
+    "headroom_after_output_reserve": 38162,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-190",
+    "attempt": "attempt_04",
+    "input_tokens": 5820,
+    "tokenizer_tokens": 5820,
+    "headroom_after_output_reserve": 39236,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-206",
+    "attempt": "attempt_01",
+    "input_tokens": 6039,
+    "tokenizer_tokens": 6039,
+    "headroom_after_output_reserve": 39017,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-206",
+    "attempt": "attempt_02",
+    "input_tokens": 6553,
+    "tokenizer_tokens": 6553,
+    "headroom_after_output_reserve": 38503,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-206",
+    "attempt": "attempt_03",
+    "input_tokens": 6401,
+    "tokenizer_tokens": 6401,
+    "headroom_after_output_reserve": 38655,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-206",
+    "attempt": "attempt_04",
+    "input_tokens": 6510,
+    "tokenizer_tokens": 6510,
+    "headroom_after_output_reserve": 38546,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-21",
+    "attempt": "attempt_01",
+    "input_tokens": 5882,
+    "tokenizer_tokens": 5882,
+    "headroom_after_output_reserve": 39174,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-21",
+    "attempt": "attempt_02",
+    "input_tokens": 5527,
+    "tokenizer_tokens": 5527,
+    "headroom_after_output_reserve": 39529,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-21",
+    "attempt": "attempt_03",
+    "input_tokens": 5655,
+    "tokenizer_tokens": 5655,
+    "headroom_after_output_reserve": 39401,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-21",
+    "attempt": "attempt_04",
+    "input_tokens": 5775,
+    "tokenizer_tokens": 5775,
+    "headroom_after_output_reserve": 39281,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-210",
+    "attempt": "attempt_01",
+    "input_tokens": 6738,
+    "tokenizer_tokens": 6738,
+    "headroom_after_output_reserve": 38318,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-210",
+    "attempt": "attempt_02",
+    "input_tokens": 6792,
+    "tokenizer_tokens": 6792,
+    "headroom_after_output_reserve": 38264,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-210",
+    "attempt": "attempt_03",
+    "input_tokens": 7180,
+    "tokenizer_tokens": 7180,
+    "headroom_after_output_reserve": 37876,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-210",
+    "attempt": "attempt_04",
+    "input_tokens": 6949,
+    "tokenizer_tokens": 6949,
+    "headroom_after_output_reserve": 38107,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-216",
+    "attempt": "attempt_01",
+    "input_tokens": 6388,
+    "tokenizer_tokens": 6388,
+    "headroom_after_output_reserve": 38668,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-216",
+    "attempt": "attempt_02",
+    "input_tokens": 6477,
+    "tokenizer_tokens": 6477,
+    "headroom_after_output_reserve": 38579,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-216",
+    "attempt": "attempt_03",
+    "input_tokens": 6537,
+    "tokenizer_tokens": 6537,
+    "headroom_after_output_reserve": 38519,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-216",
+    "attempt": "attempt_04",
+    "input_tokens": 6618,
+    "tokenizer_tokens": 6618,
+    "headroom_after_output_reserve": 38438,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-22",
+    "attempt": "attempt_01",
+    "input_tokens": 5882,
+    "tokenizer_tokens": 5882,
+    "headroom_after_output_reserve": 39174,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-22",
+    "attempt": "attempt_02",
+    "input_tokens": 5527,
+    "tokenizer_tokens": 5527,
+    "headroom_after_output_reserve": 39529,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-22",
+    "attempt": "attempt_03",
+    "input_tokens": 5670,
+    "tokenizer_tokens": 5670,
+    "headroom_after_output_reserve": 39386,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-22",
+    "attempt": "attempt_04",
+    "input_tokens": 5680,
+    "tokenizer_tokens": 5680,
+    "headroom_after_output_reserve": 39376,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-220",
+    "attempt": "attempt_01",
+    "input_tokens": 7040,
+    "tokenizer_tokens": 7040,
+    "headroom_after_output_reserve": 38016,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-220",
+    "attempt": "attempt_02",
+    "input_tokens": 7183,
+    "tokenizer_tokens": 7183,
+    "headroom_after_output_reserve": 37873,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-220",
+    "attempt": "attempt_03",
+    "input_tokens": 7201,
+    "tokenizer_tokens": 7201,
+    "headroom_after_output_reserve": 37855,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-220",
+    "attempt": "attempt_04",
+    "input_tokens": 7501,
+    "tokenizer_tokens": 7501,
+    "headroom_after_output_reserve": 37555,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-221",
+    "attempt": "attempt_01",
+    "input_tokens": 7005,
+    "tokenizer_tokens": 7005,
+    "headroom_after_output_reserve": 38051,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-221",
+    "attempt": "attempt_02",
+    "input_tokens": 7065,
+    "tokenizer_tokens": 7065,
+    "headroom_after_output_reserve": 37991,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-221",
+    "attempt": "attempt_03",
+    "input_tokens": 7182,
+    "tokenizer_tokens": 7182,
+    "headroom_after_output_reserve": 37874,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-221",
+    "attempt": "attempt_04",
+    "input_tokens": 7526,
+    "tokenizer_tokens": 7526,
+    "headroom_after_output_reserve": 37530,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-225",
+    "attempt": "attempt_01",
+    "input_tokens": 7026,
+    "tokenizer_tokens": 7026,
+    "headroom_after_output_reserve": 38030,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-225",
+    "attempt": "attempt_02",
+    "input_tokens": 7086,
+    "tokenizer_tokens": 7086,
+    "headroom_after_output_reserve": 37970,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-225",
+    "attempt": "attempt_03",
+    "input_tokens": 7145,
+    "tokenizer_tokens": 7145,
+    "headroom_after_output_reserve": 37911,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-225",
+    "attempt": "attempt_04",
+    "input_tokens": 7204,
+    "tokenizer_tokens": 7204,
+    "headroom_after_output_reserve": 37852,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-227",
+    "attempt": "attempt_01",
+    "input_tokens": 7041,
+    "tokenizer_tokens": 7041,
+    "headroom_after_output_reserve": 38015,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-227",
+    "attempt": "attempt_02",
+    "input_tokens": 7101,
+    "tokenizer_tokens": 7101,
+    "headroom_after_output_reserve": 37955,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-227",
+    "attempt": "attempt_03",
+    "input_tokens": 7160,
+    "tokenizer_tokens": 7160,
+    "headroom_after_output_reserve": 37896,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-227",
+    "attempt": "attempt_04",
+    "input_tokens": 7219,
+    "tokenizer_tokens": 7219,
+    "headroom_after_output_reserve": 37837,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-229",
+    "attempt": "attempt_01",
+    "input_tokens": 7058,
+    "tokenizer_tokens": 7058,
+    "headroom_after_output_reserve": 37998,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-229",
+    "attempt": "attempt_02",
+    "input_tokens": 7118,
+    "tokenizer_tokens": 7118,
+    "headroom_after_output_reserve": 37938,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-229",
+    "attempt": "attempt_03",
+    "input_tokens": 7177,
+    "tokenizer_tokens": 7177,
+    "headroom_after_output_reserve": 37879,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-229",
+    "attempt": "attempt_04",
+    "input_tokens": 7236,
+    "tokenizer_tokens": 7236,
+    "headroom_after_output_reserve": 37820,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-230",
+    "attempt": "attempt_01",
+    "input_tokens": 7068,
+    "tokenizer_tokens": 7068,
+    "headroom_after_output_reserve": 37988,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-230",
+    "attempt": "attempt_02",
+    "input_tokens": 7128,
+    "tokenizer_tokens": 7128,
+    "headroom_after_output_reserve": 37928,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-230",
+    "attempt": "attempt_03",
+    "input_tokens": 7187,
+    "tokenizer_tokens": 7187,
+    "headroom_after_output_reserve": 37869,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-230",
+    "attempt": "attempt_04",
+    "input_tokens": 7246,
+    "tokenizer_tokens": 7246,
+    "headroom_after_output_reserve": 37810,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-232",
+    "attempt": "attempt_01",
+    "input_tokens": 7083,
+    "tokenizer_tokens": 7083,
+    "headroom_after_output_reserve": 37973,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-232",
+    "attempt": "attempt_02",
+    "input_tokens": 7143,
+    "tokenizer_tokens": 7143,
+    "headroom_after_output_reserve": 37913,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-232",
+    "attempt": "attempt_03",
+    "input_tokens": 7202,
+    "tokenizer_tokens": 7202,
+    "headroom_after_output_reserve": 37854,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-232",
+    "attempt": "attempt_04",
+    "input_tokens": 7261,
+    "tokenizer_tokens": 7261,
+    "headroom_after_output_reserve": 37795,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-234",
+    "attempt": "attempt_01",
+    "input_tokens": 7098,
+    "tokenizer_tokens": 7098,
+    "headroom_after_output_reserve": 37958,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-234",
+    "attempt": "attempt_02",
+    "input_tokens": 7158,
+    "tokenizer_tokens": 7158,
+    "headroom_after_output_reserve": 37898,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-234",
+    "attempt": "attempt_03",
+    "input_tokens": 7217,
+    "tokenizer_tokens": 7217,
+    "headroom_after_output_reserve": 37839,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-234",
+    "attempt": "attempt_04",
+    "input_tokens": 7276,
+    "tokenizer_tokens": 7276,
+    "headroom_after_output_reserve": 37780,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-236",
+    "attempt": "attempt_01",
+    "input_tokens": 7113,
+    "tokenizer_tokens": 7113,
+    "headroom_after_output_reserve": 37943,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-236",
+    "attempt": "attempt_02",
+    "input_tokens": 7173,
+    "tokenizer_tokens": 7173,
+    "headroom_after_output_reserve": 37883,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-236",
+    "attempt": "attempt_03",
+    "input_tokens": 7232,
+    "tokenizer_tokens": 7232,
+    "headroom_after_output_reserve": 37824,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-236",
+    "attempt": "attempt_04",
+    "input_tokens": 7291,
+    "tokenizer_tokens": 7291,
+    "headroom_after_output_reserve": 37765,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-239",
+    "attempt": "attempt_01",
+    "input_tokens": 7067,
+    "tokenizer_tokens": 7067,
+    "headroom_after_output_reserve": 37989,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-239",
+    "attempt": "attempt_02",
+    "input_tokens": 7127,
+    "tokenizer_tokens": 7127,
+    "headroom_after_output_reserve": 37929,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-239",
+    "attempt": "attempt_03",
+    "input_tokens": 7186,
+    "tokenizer_tokens": 7186,
+    "headroom_after_output_reserve": 37870,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-239",
+    "attempt": "attempt_04",
+    "input_tokens": 7245,
+    "tokenizer_tokens": 7245,
+    "headroom_after_output_reserve": 37811,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-241",
+    "attempt": "attempt_01",
+    "input_tokens": 5463,
+    "tokenizer_tokens": 5463,
+    "headroom_after_output_reserve": 39593,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-244",
+    "attempt": "attempt_01",
+    "input_tokens": 5420,
+    "tokenizer_tokens": 5420,
+    "headroom_after_output_reserve": 39636,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-245",
+    "attempt": "attempt_01",
+    "input_tokens": 5620,
+    "tokenizer_tokens": 5620,
+    "headroom_after_output_reserve": 39436,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-25",
+    "attempt": "attempt_01",
+    "input_tokens": 6773,
+    "tokenizer_tokens": 6773,
+    "headroom_after_output_reserve": 38283,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-255",
+    "attempt": "attempt_01",
+    "input_tokens": 5456,
+    "tokenizer_tokens": 5456,
+    "headroom_after_output_reserve": 39600,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-259",
+    "attempt": "attempt_01",
+    "input_tokens": 5540,
+    "tokenizer_tokens": 5540,
+    "headroom_after_output_reserve": 39516,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-259",
+    "attempt": "attempt_02",
+    "input_tokens": 5601,
+    "tokenizer_tokens": 5601,
+    "headroom_after_output_reserve": 39455,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-259",
+    "attempt": "attempt_03",
+    "input_tokens": 5712,
+    "tokenizer_tokens": 5712,
+    "headroom_after_output_reserve": 39344,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-259",
+    "attempt": "attempt_04",
+    "input_tokens": 5845,
+    "tokenizer_tokens": 5845,
+    "headroom_after_output_reserve": 39211,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-268",
+    "attempt": "attempt_01",
+    "input_tokens": 6673,
+    "tokenizer_tokens": 6673,
+    "headroom_after_output_reserve": 38383,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-268",
+    "attempt": "attempt_02",
+    "input_tokens": 6627,
+    "tokenizer_tokens": 6627,
+    "headroom_after_output_reserve": 38429,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-268",
+    "attempt": "attempt_03",
+    "input_tokens": 6714,
+    "tokenizer_tokens": 6714,
+    "headroom_after_output_reserve": 38342,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-268",
+    "attempt": "attempt_04",
+    "input_tokens": 6806,
+    "tokenizer_tokens": 6806,
+    "headroom_after_output_reserve": 38250,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-273",
+    "attempt": "attempt_01",
+    "input_tokens": 7543,
+    "tokenizer_tokens": 7543,
+    "headroom_after_output_reserve": 37513,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-273",
+    "attempt": "attempt_02",
+    "input_tokens": 7731,
+    "tokenizer_tokens": 7731,
+    "headroom_after_output_reserve": 37325,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-273",
+    "attempt": "attempt_03",
+    "input_tokens": 7834,
+    "tokenizer_tokens": 7834,
+    "headroom_after_output_reserve": 37222,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-273",
+    "attempt": "attempt_04",
+    "input_tokens": 9483,
+    "tokenizer_tokens": 9483,
+    "headroom_after_output_reserve": 35573,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-283",
+    "attempt": "attempt_01",
+    "input_tokens": 6901,
+    "tokenizer_tokens": 6901,
+    "headroom_after_output_reserve": 38155,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-283",
+    "attempt": "attempt_02",
+    "input_tokens": 7111,
+    "tokenizer_tokens": 7111,
+    "headroom_after_output_reserve": 37945,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-283",
+    "attempt": "attempt_03",
+    "input_tokens": 7496,
+    "tokenizer_tokens": 7496,
+    "headroom_after_output_reserve": 37560,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-283",
+    "attempt": "attempt_04",
+    "input_tokens": 7594,
+    "tokenizer_tokens": 7594,
+    "headroom_after_output_reserve": 37462,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-286",
+    "attempt": "attempt_01",
+    "input_tokens": 6863,
+    "tokenizer_tokens": 6863,
+    "headroom_after_output_reserve": 38193,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-286",
+    "attempt": "attempt_02",
+    "input_tokens": 6931,
+    "tokenizer_tokens": 6931,
+    "headroom_after_output_reserve": 38125,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-286",
+    "attempt": "attempt_03",
+    "input_tokens": 6990,
+    "tokenizer_tokens": 6990,
+    "headroom_after_output_reserve": 38066,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-286",
+    "attempt": "attempt_04",
+    "input_tokens": 7049,
+    "tokenizer_tokens": 7049,
+    "headroom_after_output_reserve": 38007,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-30",
+    "attempt": "attempt_01",
+    "input_tokens": 6263,
+    "tokenizer_tokens": 6263,
+    "headroom_after_output_reserve": 38793,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-302",
+    "attempt": "attempt_01",
+    "input_tokens": 5544,
+    "tokenizer_tokens": 5544,
+    "headroom_after_output_reserve": 39512,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-302",
+    "attempt": "attempt_02",
+    "input_tokens": 5604,
+    "tokenizer_tokens": 5604,
+    "headroom_after_output_reserve": 39452,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-302",
+    "attempt": "attempt_03",
+    "input_tokens": 5659,
+    "tokenizer_tokens": 5659,
+    "headroom_after_output_reserve": 39397,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-302",
+    "attempt": "attempt_04",
+    "input_tokens": 5714,
+    "tokenizer_tokens": 5714,
+    "headroom_after_output_reserve": 39342,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-304",
+    "attempt": "attempt_01",
+    "input_tokens": 9018,
+    "tokenizer_tokens": 9018,
+    "headroom_after_output_reserve": 36038,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-304",
+    "attempt": "attempt_02",
+    "input_tokens": 9213,
+    "tokenizer_tokens": 9213,
+    "headroom_after_output_reserve": 35843,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-304",
+    "attempt": "attempt_03",
+    "input_tokens": 7462,
+    "tokenizer_tokens": 7462,
+    "headroom_after_output_reserve": 37594,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-304",
+    "attempt": "attempt_04",
+    "input_tokens": 9645,
+    "tokenizer_tokens": 9645,
+    "headroom_after_output_reserve": 35411,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-325",
+    "attempt": "attempt_01",
+    "input_tokens": 5765,
+    "tokenizer_tokens": 5765,
+    "headroom_after_output_reserve": 39291,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-325",
+    "attempt": "attempt_02",
+    "input_tokens": 5763,
+    "tokenizer_tokens": 5763,
+    "headroom_after_output_reserve": 39293,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-325",
+    "attempt": "attempt_03",
+    "input_tokens": 5895,
+    "tokenizer_tokens": 5895,
+    "headroom_after_output_reserve": 39161,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-325",
+    "attempt": "attempt_04",
+    "input_tokens": 6009,
+    "tokenizer_tokens": 6009,
+    "headroom_after_output_reserve": 39047,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-329",
+    "attempt": "attempt_01",
+    "input_tokens": 10982,
+    "tokenizer_tokens": 10982,
+    "headroom_after_output_reserve": 34074,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-329",
+    "attempt": "attempt_02",
+    "input_tokens": 11077,
+    "tokenizer_tokens": 11077,
+    "headroom_after_output_reserve": 33979,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-329",
+    "attempt": "attempt_03",
+    "input_tokens": 11180,
+    "tokenizer_tokens": 11180,
+    "headroom_after_output_reserve": 33876,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-329",
+    "attempt": "attempt_04",
+    "input_tokens": 11283,
+    "tokenizer_tokens": 11283,
+    "headroom_after_output_reserve": 33773,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-341",
+    "attempt": "attempt_01",
+    "input_tokens": 8837,
+    "tokenizer_tokens": 8837,
+    "headroom_after_output_reserve": 36219,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-341",
+    "attempt": "attempt_02",
+    "input_tokens": 8978,
+    "tokenizer_tokens": 8978,
+    "headroom_after_output_reserve": 36078,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-341",
+    "attempt": "attempt_03",
+    "input_tokens": 9035,
+    "tokenizer_tokens": 9035,
+    "headroom_after_output_reserve": 36021,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-341",
+    "attempt": "attempt_04",
+    "input_tokens": 9092,
+    "tokenizer_tokens": 9092,
+    "headroom_after_output_reserve": 35964,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-354",
+    "attempt": "attempt_01",
+    "input_tokens": 6293,
+    "tokenizer_tokens": 6293,
+    "headroom_after_output_reserve": 38763,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-361",
+    "attempt": "attempt_01",
+    "input_tokens": 7511,
+    "tokenizer_tokens": 7511,
+    "headroom_after_output_reserve": 37545,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-361",
+    "attempt": "attempt_02",
+    "input_tokens": 7764,
+    "tokenizer_tokens": 7764,
+    "headroom_after_output_reserve": 37292,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-361",
+    "attempt": "attempt_03",
+    "input_tokens": 7877,
+    "tokenizer_tokens": 7877,
+    "headroom_after_output_reserve": 37179,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-361",
+    "attempt": "attempt_04",
+    "input_tokens": 7990,
+    "tokenizer_tokens": 7990,
+    "headroom_after_output_reserve": 37066,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-362",
+    "attempt": "attempt_01",
+    "input_tokens": 7510,
+    "tokenizer_tokens": 7510,
+    "headroom_after_output_reserve": 37546,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-362",
+    "attempt": "attempt_02",
+    "input_tokens": 7774,
+    "tokenizer_tokens": 7774,
+    "headroom_after_output_reserve": 37282,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-362",
+    "attempt": "attempt_03",
+    "input_tokens": 7887,
+    "tokenizer_tokens": 7887,
+    "headroom_after_output_reserve": 37169,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-362",
+    "attempt": "attempt_04",
+    "input_tokens": 8000,
+    "tokenizer_tokens": 8000,
+    "headroom_after_output_reserve": 37056,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-368",
+    "attempt": "attempt_01",
+    "input_tokens": 5636,
+    "tokenizer_tokens": 5636,
+    "headroom_after_output_reserve": 39420,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-368",
+    "attempt": "attempt_02",
+    "input_tokens": 5696,
+    "tokenizer_tokens": 5696,
+    "headroom_after_output_reserve": 39360,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-368",
+    "attempt": "attempt_03",
+    "input_tokens": 6018,
+    "tokenizer_tokens": 6018,
+    "headroom_after_output_reserve": 39038,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-368",
+    "attempt": "attempt_04",
+    "input_tokens": 6172,
+    "tokenizer_tokens": 6172,
+    "headroom_after_output_reserve": 38884,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-38",
+    "attempt": "attempt_01",
+    "input_tokens": 5251,
+    "tokenizer_tokens": 5251,
+    "headroom_after_output_reserve": 39805,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-38",
+    "attempt": "attempt_02",
+    "input_tokens": 5326,
+    "tokenizer_tokens": 5326,
+    "headroom_after_output_reserve": 39730,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-38",
+    "attempt": "attempt_03",
+    "input_tokens": 5402,
+    "tokenizer_tokens": 5402,
+    "headroom_after_output_reserve": 39654,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-38",
+    "attempt": "attempt_04",
+    "input_tokens": 5478,
+    "tokenizer_tokens": 5478,
+    "headroom_after_output_reserve": 39578,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-380",
+    "attempt": "attempt_01",
+    "input_tokens": 5166,
+    "tokenizer_tokens": 5166,
+    "headroom_after_output_reserve": 39890,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-380",
+    "attempt": "attempt_02",
+    "input_tokens": 5378,
+    "tokenizer_tokens": 5378,
+    "headroom_after_output_reserve": 39678,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-380",
+    "attempt": "attempt_03",
+    "input_tokens": 5585,
+    "tokenizer_tokens": 5585,
+    "headroom_after_output_reserve": 39471,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-380",
+    "attempt": "attempt_04",
+    "input_tokens": 5715,
+    "tokenizer_tokens": 5715,
+    "headroom_after_output_reserve": 39341,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-381",
+    "attempt": "attempt_01",
+    "input_tokens": 5271,
+    "tokenizer_tokens": 5271,
+    "headroom_after_output_reserve": 39785,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-387",
+    "attempt": "attempt_01",
+    "input_tokens": 5754,
+    "tokenizer_tokens": 5754,
+    "headroom_after_output_reserve": 39302,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-387",
+    "attempt": "attempt_02",
+    "input_tokens": 7043,
+    "tokenizer_tokens": 7043,
+    "headroom_after_output_reserve": 38013,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-387",
+    "attempt": "attempt_03",
+    "input_tokens": 7175,
+    "tokenizer_tokens": 7175,
+    "headroom_after_output_reserve": 37881,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-387",
+    "attempt": "attempt_04",
+    "input_tokens": 7314,
+    "tokenizer_tokens": 7314,
+    "headroom_after_output_reserve": 37742,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-388",
+    "attempt": "attempt_01",
+    "input_tokens": 4262,
+    "tokenizer_tokens": 4262,
+    "headroom_after_output_reserve": 40794,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-388",
+    "attempt": "attempt_02",
+    "input_tokens": 4354,
+    "tokenizer_tokens": 4354,
+    "headroom_after_output_reserve": 40702,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-388",
+    "attempt": "attempt_03",
+    "input_tokens": 4637,
+    "tokenizer_tokens": 4637,
+    "headroom_after_output_reserve": 40419,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-388",
+    "attempt": "attempt_04",
+    "input_tokens": 4754,
+    "tokenizer_tokens": 4754,
+    "headroom_after_output_reserve": 40302,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-391",
+    "attempt": "attempt_01",
+    "input_tokens": 6590,
+    "tokenizer_tokens": 6590,
+    "headroom_after_output_reserve": 38466,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-391",
+    "attempt": "attempt_02",
+    "input_tokens": 6612,
+    "tokenizer_tokens": 6612,
+    "headroom_after_output_reserve": 38444,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-391",
+    "attempt": "attempt_03",
+    "input_tokens": 6950,
+    "tokenizer_tokens": 6950,
+    "headroom_after_output_reserve": 38106,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-391",
+    "attempt": "attempt_04",
+    "input_tokens": 6740,
+    "tokenizer_tokens": 6740,
+    "headroom_after_output_reserve": 38316,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-40",
+    "attempt": "attempt_01",
+    "input_tokens": 5208,
+    "tokenizer_tokens": 5208,
+    "headroom_after_output_reserve": 39848,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-403",
+    "attempt": "attempt_01",
+    "input_tokens": 8046,
+    "tokenizer_tokens": 8046,
+    "headroom_after_output_reserve": 37010,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-411",
+    "attempt": "attempt_01",
+    "input_tokens": 7076,
+    "tokenizer_tokens": 7076,
+    "headroom_after_output_reserve": 37980,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-411",
+    "attempt": "attempt_02",
+    "input_tokens": 7450,
+    "tokenizer_tokens": 7450,
+    "headroom_after_output_reserve": 37606,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-411",
+    "attempt": "attempt_03",
+    "input_tokens": 7301,
+    "tokenizer_tokens": 7301,
+    "headroom_after_output_reserve": 37755,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-411",
+    "attempt": "attempt_04",
+    "input_tokens": 7393,
+    "tokenizer_tokens": 7393,
+    "headroom_after_output_reserve": 37663,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-413",
+    "attempt": "attempt_01",
+    "input_tokens": 6118,
+    "tokenizer_tokens": 6118,
+    "headroom_after_output_reserve": 38938,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-413",
+    "attempt": "attempt_02",
+    "input_tokens": 6273,
+    "tokenizer_tokens": 6273,
+    "headroom_after_output_reserve": 38783,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-413",
+    "attempt": "attempt_03",
+    "input_tokens": 6366,
+    "tokenizer_tokens": 6366,
+    "headroom_after_output_reserve": 38690,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-413",
+    "attempt": "attempt_04",
+    "input_tokens": 6459,
+    "tokenizer_tokens": 6459,
+    "headroom_after_output_reserve": 38597,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-416",
+    "attempt": "attempt_01",
+    "input_tokens": 4635,
+    "tokenizer_tokens": 4635,
+    "headroom_after_output_reserve": 40421,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-416",
+    "attempt": "attempt_02",
+    "input_tokens": 5876,
+    "tokenizer_tokens": 5876,
+    "headroom_after_output_reserve": 39180,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-416",
+    "attempt": "attempt_03",
+    "input_tokens": 4939,
+    "tokenizer_tokens": 4939,
+    "headroom_after_output_reserve": 40117,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-416",
+    "attempt": "attempt_04",
+    "input_tokens": 5040,
+    "tokenizer_tokens": 5040,
+    "headroom_after_output_reserve": 40016,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-421",
+    "attempt": "attempt_01",
+    "input_tokens": 6078,
+    "tokenizer_tokens": 6078,
+    "headroom_after_output_reserve": 38978,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-421",
+    "attempt": "attempt_02",
+    "input_tokens": 6595,
+    "tokenizer_tokens": 6595,
+    "headroom_after_output_reserve": 38461,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-421",
+    "attempt": "attempt_03",
+    "input_tokens": 6703,
+    "tokenizer_tokens": 6703,
+    "headroom_after_output_reserve": 38353,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-421",
+    "attempt": "attempt_04",
+    "input_tokens": 6840,
+    "tokenizer_tokens": 6840,
+    "headroom_after_output_reserve": 38216,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-423",
+    "attempt": "attempt_01",
+    "input_tokens": 5788,
+    "tokenizer_tokens": 5788,
+    "headroom_after_output_reserve": 39268,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-423",
+    "attempt": "attempt_02",
+    "input_tokens": 6017,
+    "tokenizer_tokens": 6017,
+    "headroom_after_output_reserve": 39039,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-423",
+    "attempt": "attempt_03",
+    "input_tokens": 6568,
+    "tokenizer_tokens": 6568,
+    "headroom_after_output_reserve": 38488,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-423",
+    "attempt": "attempt_04",
+    "input_tokens": 6700,
+    "tokenizer_tokens": 6700,
+    "headroom_after_output_reserve": 38356,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-424",
+    "attempt": "attempt_01",
+    "input_tokens": 5849,
+    "tokenizer_tokens": 5849,
+    "headroom_after_output_reserve": 39207,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-424",
+    "attempt": "attempt_02",
+    "input_tokens": 6400,
+    "tokenizer_tokens": 6400,
+    "headroom_after_output_reserve": 38656,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-424",
+    "attempt": "attempt_03",
+    "input_tokens": 6605,
+    "tokenizer_tokens": 6605,
+    "headroom_after_output_reserve": 38451,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-424",
+    "attempt": "attempt_04",
+    "input_tokens": 6724,
+    "tokenizer_tokens": 6724,
+    "headroom_after_output_reserve": 38332,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-428",
+    "attempt": "attempt_01",
+    "input_tokens": 9059,
+    "tokenizer_tokens": 9059,
+    "headroom_after_output_reserve": 35997,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-428",
+    "attempt": "attempt_02",
+    "input_tokens": 9124,
+    "tokenizer_tokens": 9124,
+    "headroom_after_output_reserve": 35932,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-428",
+    "attempt": "attempt_03",
+    "input_tokens": 9160,
+    "tokenizer_tokens": 9160,
+    "headroom_after_output_reserve": 35896,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-428",
+    "attempt": "attempt_04",
+    "input_tokens": 9511,
+    "tokenizer_tokens": 9511,
+    "headroom_after_output_reserve": 35545,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-43",
+    "attempt": "attempt_01",
+    "input_tokens": 4529,
+    "tokenizer_tokens": 4529,
+    "headroom_after_output_reserve": 40527,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-43",
+    "attempt": "attempt_02",
+    "input_tokens": 4689,
+    "tokenizer_tokens": 4689,
+    "headroom_after_output_reserve": 40367,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-43",
+    "attempt": "attempt_03",
+    "input_tokens": 5423,
+    "tokenizer_tokens": 5423,
+    "headroom_after_output_reserve": 39633,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-43",
+    "attempt": "attempt_04",
+    "input_tokens": 4850,
+    "tokenizer_tokens": 4850,
+    "headroom_after_output_reserve": 40206,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-430",
+    "attempt": "attempt_01",
+    "input_tokens": 5163,
+    "tokenizer_tokens": 5163,
+    "headroom_after_output_reserve": 39893,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-430",
+    "attempt": "attempt_02",
+    "input_tokens": 5416,
+    "tokenizer_tokens": 5416,
+    "headroom_after_output_reserve": 39640,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-430",
+    "attempt": "attempt_03",
+    "input_tokens": 5734,
+    "tokenizer_tokens": 5734,
+    "headroom_after_output_reserve": 39322,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-430",
+    "attempt": "attempt_04",
+    "input_tokens": 5837,
+    "tokenizer_tokens": 5837,
+    "headroom_after_output_reserve": 39219,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-442",
+    "attempt": "attempt_01",
+    "input_tokens": 5876,
+    "tokenizer_tokens": 5876,
+    "headroom_after_output_reserve": 39180,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-442",
+    "attempt": "attempt_02",
+    "input_tokens": 6391,
+    "tokenizer_tokens": 6391,
+    "headroom_after_output_reserve": 38665,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-442",
+    "attempt": "attempt_03",
+    "input_tokens": 6502,
+    "tokenizer_tokens": 6502,
+    "headroom_after_output_reserve": 38554,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-442",
+    "attempt": "attempt_04",
+    "input_tokens": 6613,
+    "tokenizer_tokens": 6613,
+    "headroom_after_output_reserve": 38443,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-444",
+    "attempt": "attempt_01",
+    "input_tokens": 5981,
+    "tokenizer_tokens": 5981,
+    "headroom_after_output_reserve": 39075,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-444",
+    "attempt": "attempt_02",
+    "input_tokens": 6075,
+    "tokenizer_tokens": 6075,
+    "headroom_after_output_reserve": 38981,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-444",
+    "attempt": "attempt_03",
+    "input_tokens": 6155,
+    "tokenizer_tokens": 6155,
+    "headroom_after_output_reserve": 38901,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-444",
+    "attempt": "attempt_04",
+    "input_tokens": 6231,
+    "tokenizer_tokens": 6231,
+    "headroom_after_output_reserve": 38825,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-45",
+    "attempt": "attempt_01",
+    "input_tokens": 5571,
+    "tokenizer_tokens": 5571,
+    "headroom_after_output_reserve": 39485,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-47",
+    "attempt": "attempt_01",
+    "input_tokens": 6194,
+    "tokenizer_tokens": 6194,
+    "headroom_after_output_reserve": 38862,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-47",
+    "attempt": "attempt_02",
+    "input_tokens": 6245,
+    "tokenizer_tokens": 6245,
+    "headroom_after_output_reserve": 38811,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-47",
+    "attempt": "attempt_03",
+    "input_tokens": 6304,
+    "tokenizer_tokens": 6304,
+    "headroom_after_output_reserve": 38752,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-47",
+    "attempt": "attempt_04",
+    "input_tokens": 6363,
+    "tokenizer_tokens": 6363,
+    "headroom_after_output_reserve": 38693,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-48",
+    "attempt": "attempt_01",
+    "input_tokens": 6187,
+    "tokenizer_tokens": 6187,
+    "headroom_after_output_reserve": 38869,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-48",
+    "attempt": "attempt_02",
+    "input_tokens": 6234,
+    "tokenizer_tokens": 6234,
+    "headroom_after_output_reserve": 38822,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-48",
+    "attempt": "attempt_03",
+    "input_tokens": 6293,
+    "tokenizer_tokens": 6293,
+    "headroom_after_output_reserve": 38763,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-48",
+    "attempt": "attempt_04",
+    "input_tokens": 6352,
+    "tokenizer_tokens": 6352,
+    "headroom_after_output_reserve": 38704,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-52",
+    "attempt": "attempt_01",
+    "input_tokens": 4964,
+    "tokenizer_tokens": 4964,
+    "headroom_after_output_reserve": 40092,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-52",
+    "attempt": "attempt_02",
+    "input_tokens": 5457,
+    "tokenizer_tokens": 5457,
+    "headroom_after_output_reserve": 39599,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-52",
+    "attempt": "attempt_03",
+    "input_tokens": 5586,
+    "tokenizer_tokens": 5586,
+    "headroom_after_output_reserve": 39470,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-52",
+    "attempt": "attempt_04",
+    "input_tokens": 5715,
+    "tokenizer_tokens": 5715,
+    "headroom_after_output_reserve": 39341,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-53",
+    "attempt": "attempt_01",
+    "input_tokens": 4214,
+    "tokenizer_tokens": 4214,
+    "headroom_after_output_reserve": 40842,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-53",
+    "attempt": "attempt_02",
+    "input_tokens": 5014,
+    "tokenizer_tokens": 5014,
+    "headroom_after_output_reserve": 40042,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-53",
+    "attempt": "attempt_03",
+    "input_tokens": 5177,
+    "tokenizer_tokens": 5177,
+    "headroom_after_output_reserve": 39879,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-53",
+    "attempt": "attempt_04",
+    "input_tokens": 5340,
+    "tokenizer_tokens": 5340,
+    "headroom_after_output_reserve": 39716,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-56",
+    "attempt": "attempt_01",
+    "input_tokens": 8551,
+    "tokenizer_tokens": 8551,
+    "headroom_after_output_reserve": 36505,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-56",
+    "attempt": "attempt_02",
+    "input_tokens": 6721,
+    "tokenizer_tokens": 6721,
+    "headroom_after_output_reserve": 38335,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-56",
+    "attempt": "attempt_03",
+    "input_tokens": 9478,
+    "tokenizer_tokens": 9478,
+    "headroom_after_output_reserve": 35578,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-56",
+    "attempt": "attempt_04",
+    "input_tokens": 9564,
+    "tokenizer_tokens": 9564,
+    "headroom_after_output_reserve": 35492,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-97",
+    "attempt": "attempt_01",
+    "input_tokens": 7088,
+    "tokenizer_tokens": 7088,
+    "headroom_after_output_reserve": 37968,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-97",
+    "attempt": "attempt_02",
+    "input_tokens": 7158,
+    "tokenizer_tokens": 7158,
+    "headroom_after_output_reserve": 37898,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-97",
+    "attempt": "attempt_03",
+    "input_tokens": 7217,
+    "tokenizer_tokens": 7217,
+    "headroom_after_output_reserve": 37839,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "V-97",
+    "attempt": "attempt_04",
+    "input_tokens": 7276,
+    "tokenizer_tokens": 7276,
+    "headroom_after_output_reserve": 37780,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-0",
+    "attempt": "attempt_01",
+    "input_tokens": 4171,
+    "tokenizer_tokens": 4171,
+    "headroom_after_output_reserve": 40885,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-18",
+    "attempt": "attempt_01",
+    "input_tokens": 4371,
+    "tokenizer_tokens": 4371,
+    "headroom_after_output_reserve": 40685,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-18",
+    "attempt": "attempt_02",
+    "input_tokens": 4433,
+    "tokenizer_tokens": 4433,
+    "headroom_after_output_reserve": 40623,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-18",
+    "attempt": "attempt_03",
+    "input_tokens": 4488,
+    "tokenizer_tokens": 4488,
+    "headroom_after_output_reserve": 40568,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-18",
+    "attempt": "attempt_04",
+    "input_tokens": 5740,
+    "tokenizer_tokens": 5740,
+    "headroom_after_output_reserve": 39316,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-20",
+    "attempt": "attempt_01",
+    "input_tokens": 4483,
+    "tokenizer_tokens": 4483,
+    "headroom_after_output_reserve": 40573,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-20",
+    "attempt": "attempt_02",
+    "input_tokens": 4744,
+    "tokenizer_tokens": 4744,
+    "headroom_after_output_reserve": 40312,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-20",
+    "attempt": "attempt_03",
+    "input_tokens": 4856,
+    "tokenizer_tokens": 4856,
+    "headroom_after_output_reserve": 40200,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-20",
+    "attempt": "attempt_04",
+    "input_tokens": 4786,
+    "tokenizer_tokens": 4786,
+    "headroom_after_output_reserve": 40270,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-21",
+    "attempt": "attempt_01",
+    "input_tokens": 4418,
+    "tokenizer_tokens": 4418,
+    "headroom_after_output_reserve": 40638,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-21",
+    "attempt": "attempt_02",
+    "input_tokens": 5633,
+    "tokenizer_tokens": 5633,
+    "headroom_after_output_reserve": 39423,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-21",
+    "attempt": "attempt_03",
+    "input_tokens": 5694,
+    "tokenizer_tokens": 5694,
+    "headroom_after_output_reserve": 39362,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-21",
+    "attempt": "attempt_04",
+    "input_tokens": 5815,
+    "tokenizer_tokens": 5815,
+    "headroom_after_output_reserve": 39241,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-30",
+    "attempt": "attempt_01",
+    "input_tokens": 4724,
+    "tokenizer_tokens": 4724,
+    "headroom_after_output_reserve": 40332,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-30",
+    "attempt": "attempt_02",
+    "input_tokens": 6056,
+    "tokenizer_tokens": 6056,
+    "headroom_after_output_reserve": 39000,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-30",
+    "attempt": "attempt_03",
+    "input_tokens": 6152,
+    "tokenizer_tokens": 6152,
+    "headroom_after_output_reserve": 38904,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-30",
+    "attempt": "attempt_04",
+    "input_tokens": 6248,
+    "tokenizer_tokens": 6248,
+    "headroom_after_output_reserve": 38808,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-32",
+    "attempt": "attempt_01",
+    "input_tokens": 4785,
+    "tokenizer_tokens": 4785,
+    "headroom_after_output_reserve": 40271,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-32",
+    "attempt": "attempt_02",
+    "input_tokens": 6592,
+    "tokenizer_tokens": 6592,
+    "headroom_after_output_reserve": 38464,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-32",
+    "attempt": "attempt_03",
+    "input_tokens": 6678,
+    "tokenizer_tokens": 6678,
+    "headroom_after_output_reserve": 38378,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-32",
+    "attempt": "attempt_04",
+    "input_tokens": 6764,
+    "tokenizer_tokens": 6764,
+    "headroom_after_output_reserve": 38292,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-34",
+    "attempt": "attempt_01",
+    "input_tokens": 4620,
+    "tokenizer_tokens": 4620,
+    "headroom_after_output_reserve": 40436,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-34",
+    "attempt": "attempt_02",
+    "input_tokens": 5699,
+    "tokenizer_tokens": 5699,
+    "headroom_after_output_reserve": 39357,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-34",
+    "attempt": "attempt_03",
+    "input_tokens": 5536,
+    "tokenizer_tokens": 5536,
+    "headroom_after_output_reserve": 39520,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-34",
+    "attempt": "attempt_04",
+    "input_tokens": 5866,
+    "tokenizer_tokens": 5866,
+    "headroom_after_output_reserve": 39190,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-36",
+    "attempt": "attempt_01",
+    "input_tokens": 4793,
+    "tokenizer_tokens": 4793,
+    "headroom_after_output_reserve": 40263,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-36",
+    "attempt": "attempt_02",
+    "input_tokens": 5921,
+    "tokenizer_tokens": 5921,
+    "headroom_after_output_reserve": 39135,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-36",
+    "attempt": "attempt_03",
+    "input_tokens": 6016,
+    "tokenizer_tokens": 6016,
+    "headroom_after_output_reserve": 39040,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-36",
+    "attempt": "attempt_04",
+    "input_tokens": 6111,
+    "tokenizer_tokens": 6111,
+    "headroom_after_output_reserve": 38945,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-4",
+    "attempt": "attempt_01",
+    "input_tokens": 4476,
+    "tokenizer_tokens": 4476,
+    "headroom_after_output_reserve": 40580,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-4",
+    "attempt": "attempt_02",
+    "input_tokens": 6070,
+    "tokenizer_tokens": 6070,
+    "headroom_after_output_reserve": 38986,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-4",
+    "attempt": "attempt_03",
+    "input_tokens": 5728,
+    "tokenizer_tokens": 5728,
+    "headroom_after_output_reserve": 39328,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-4",
+    "attempt": "attempt_04",
+    "input_tokens": 6243,
+    "tokenizer_tokens": 6243,
+    "headroom_after_output_reserve": 38813,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-48",
+    "attempt": "attempt_01",
+    "input_tokens": 4550,
+    "tokenizer_tokens": 4550,
+    "headroom_after_output_reserve": 40506,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-48",
+    "attempt": "attempt_02",
+    "input_tokens": 5644,
+    "tokenizer_tokens": 5644,
+    "headroom_after_output_reserve": 39412,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-48",
+    "attempt": "attempt_03",
+    "input_tokens": 5728,
+    "tokenizer_tokens": 5728,
+    "headroom_after_output_reserve": 39328,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-5",
+    "attempt": "attempt_01",
+    "input_tokens": 4918,
+    "tokenizer_tokens": 4918,
+    "headroom_after_output_reserve": 40138,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-5",
+    "attempt": "attempt_02",
+    "input_tokens": 5121,
+    "tokenizer_tokens": 5121,
+    "headroom_after_output_reserve": 39935,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-5",
+    "attempt": "attempt_03",
+    "input_tokens": 6443,
+    "tokenizer_tokens": 6443,
+    "headroom_after_output_reserve": 38613,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-5",
+    "attempt": "attempt_04",
+    "input_tokens": 8095,
+    "tokenizer_tokens": 8095,
+    "headroom_after_output_reserve": 36961,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-51",
+    "attempt": "attempt_01",
+    "input_tokens": 4063,
+    "tokenizer_tokens": 4063,
+    "headroom_after_output_reserve": 40993,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-53",
+    "attempt": "attempt_01",
+    "input_tokens": 5006,
+    "tokenizer_tokens": 5006,
+    "headroom_after_output_reserve": 40050,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-53",
+    "attempt": "attempt_02",
+    "input_tokens": 4740,
+    "tokenizer_tokens": 4740,
+    "headroom_after_output_reserve": 40316,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-53",
+    "attempt": "attempt_03",
+    "input_tokens": 5214,
+    "tokenizer_tokens": 5214,
+    "headroom_after_output_reserve": 39842,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-53",
+    "attempt": "attempt_04",
+    "input_tokens": 5313,
+    "tokenizer_tokens": 5313,
+    "headroom_after_output_reserve": 39743,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-60",
+    "attempt": "attempt_01",
+    "input_tokens": 4313,
+    "tokenizer_tokens": 4313,
+    "headroom_after_output_reserve": 40743,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-60",
+    "attempt": "attempt_02",
+    "input_tokens": 4581,
+    "tokenizer_tokens": 4581,
+    "headroom_after_output_reserve": 40475,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-60",
+    "attempt": "attempt_03",
+    "input_tokens": 4693,
+    "tokenizer_tokens": 4693,
+    "headroom_after_output_reserve": 40363,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-60",
+    "attempt": "attempt_04",
+    "input_tokens": 4805,
+    "tokenizer_tokens": 4805,
+    "headroom_after_output_reserve": 40251,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-61",
+    "attempt": "attempt_01",
+    "input_tokens": 4399,
+    "tokenizer_tokens": 4399,
+    "headroom_after_output_reserve": 40657,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-61",
+    "attempt": "attempt_02",
+    "input_tokens": 4560,
+    "tokenizer_tokens": 4560,
+    "headroom_after_output_reserve": 40496,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-61",
+    "attempt": "attempt_03",
+    "input_tokens": 4614,
+    "tokenizer_tokens": 4614,
+    "headroom_after_output_reserve": 40442,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-61",
+    "attempt": "attempt_04",
+    "input_tokens": 4894,
+    "tokenizer_tokens": 4894,
+    "headroom_after_output_reserve": 40162,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-63",
+    "attempt": "attempt_01",
+    "input_tokens": 4126,
+    "tokenizer_tokens": 4126,
+    "headroom_after_output_reserve": 40930,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-63",
+    "attempt": "attempt_02",
+    "input_tokens": 4282,
+    "tokenizer_tokens": 4282,
+    "headroom_after_output_reserve": 40774,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-63",
+    "attempt": "attempt_03",
+    "input_tokens": 4631,
+    "tokenizer_tokens": 4631,
+    "headroom_after_output_reserve": 40425,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-63",
+    "attempt": "attempt_04",
+    "input_tokens": 4451,
+    "tokenizer_tokens": 4451,
+    "headroom_after_output_reserve": 40605,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-65",
+    "attempt": "attempt_01",
+    "input_tokens": 5241,
+    "tokenizer_tokens": 5241,
+    "headroom_after_output_reserve": 39815,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-69",
+    "attempt": "attempt_01",
+    "input_tokens": 4163,
+    "tokenizer_tokens": 4163,
+    "headroom_after_output_reserve": 40893,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-69",
+    "attempt": "attempt_02",
+    "input_tokens": 4308,
+    "tokenizer_tokens": 4308,
+    "headroom_after_output_reserve": 40748,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-69",
+    "attempt": "attempt_03",
+    "input_tokens": 4400,
+    "tokenizer_tokens": 4400,
+    "headroom_after_output_reserve": 40656,
+    "truncated": false,
+    "exposed": false
+  },
+  {
+    "arm": "without_internals",
+    "id": "VB-69",
+    "attempt": "attempt_04",
+    "input_tokens": 4498,
+    "tokenizer_tokens": 4498,
+    "headroom_after_output_reserve": 40558,
+    "truncated": false,
+    "exposed": false
+  }
+]

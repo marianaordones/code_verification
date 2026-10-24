@@ -1,0 +1,105 @@
+{
+  "archive": "download_2026-10-23_21-25-20.zip",
+  "tasks": 100,
+  "config": {
+    "model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+    "model_revision": "aedcc2d42b622764e023cf882b6652e646b95671",
+    "mode": "instruct",
+    "enable_thinking": false,
+    "dtype": "bfloat16",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "seed": 20261018,
+    "max_attempts": 4,
+    "max_tokens": 4096,
+    "max_model_len": 49152,
+    "max_num_seqs": 1,
+    "rope_scaling": {
+      "rope_type": "yarn",
+      "factor": 2.0,
+      "original_max_position_embeddings": 32768
+    },
+    "enable_chunked_prefill": true,
+    "max_num_batched_tokens": 2048,
+    "internals_token_budget": 12288,
+    "max_queries": 3,
+    "max_quantifiers": 20,
+    "max_instances_each": 3,
+    "verification_timeout": 120,
+    "experiment": "solver-needs-qwen14b-z3"
+  },
+  "prompt_counts": {
+    "with_internals": 319,
+    "without_internals": 348
+  },
+  "input_tokens": {
+    "with_internals": {
+      "min": 4491,
+      "median": 16816,
+      "mean": 14271.470219435736,
+      "max": 23245
+    },
+    "without_internals": {
+      "min": 4063,
+      "median": 6414.5,
+      "mean": 6455.043103448276,
+      "max": 11283
+    }
+  },
+  "tokenizer_count_mismatches": 0,
+  "minimum_headroom_with_output_reserved": 21811,
+  "truncated_responses": 0,
+  "exposed_prompts": 240,
+  "internals_tokens_exposed": {
+    "min": 1316,
+    "median": 12215.0,
+    "mean": 10468.829166666666,
+    "max": 12288
+  },
+  "sent_groups_exposed": {
+    "min": 3,
+    "median": 12.0,
+    "mean": 12.283333333333333,
+    "max": 20
+  },
+  "prompts_at_20_group_cap": 35,
+  "prompts_with_any_groups_omitted": 207,
+  "prompts_with_candidate_groups_omitted": 54,
+  "available_categories": {
+    "candidate_definition": 855,
+    "operation_related_library": 3225,
+    "other_background": 3175,
+    "representation": 2150,
+    "candidate_annotation": 641
+  },
+  "sent_categories": {
+    "candidate_definition": 663,
+    "operation_related_library": 1421,
+    "other_background": 286,
+    "representation": 151,
+    "candidate_annotation": 427
+  },
+  "omitted_categories": {
+    "other_background": 2889,
+    "representation": 1999,
+    "operation_related_library": 1804,
+    "candidate_definition": 192,
+    "candidate_annotation": 214
+  },
+  "omission_tests_on_final_payload": {
+    "background_quota_applies": 968,
+    "group_cap_applies": 460,
+    "adding_one_exceeds_internal_budget": 5670
+  },
+  "prompts_with_source_budget_examples": 54,
+  "failed_queries_not_replayed_due_to_cap": 0,
+  "prompts_over_three_failed_queries": 0,
+  "diagnostic_query_reports": 269,
+  "queries_with_observed_source_qids_not_saved": 0,
+  "queries_at_128_saved_groups": 11,
+  "callback_errors": 0,
+  "replay_failures": 0,
+  "replay_mismatches": 4,
+  "scope": "Actually sent prompts only; availability means saved events of outcome-concordant replays; omission causes are marginal tests on final payload, not reconstructed chronological decisions."
+}
