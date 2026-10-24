@@ -13,9 +13,11 @@ from .data import upstream
 ARMS = ('with_internals', 'without_internals')
 
 
-def messages(code, verification, action, context, payload, history):
+def messages(code, verification, action, context, payload, history, config=None):
     _, laws = upstream()
-    system = (ROOT / 'prompts/solver-needs/system.txt').read_text(encoding='utf-8')
+    system = (config or {}).get('system_prompt_text')
+    if system is None:
+        system = (ROOT / 'prompts/solver-needs/system.txt').read_text(encoding='utf-8')
     # Same complete catalogue for every task and every arm; no successful probe IDs.
     catalogue = '\n'.join(f'LAW {name}\n{body.strip()}' for name, body in laws.LAWS.items())
     user = ('Repair the proof hint at REPAIR_SLOT_BEGIN/END.\n'
@@ -36,16 +38,16 @@ def fits(code, verification, action, context, payload, history, tokenizer, confi
         block = json.dumps(payload, ensure_ascii=False, indent=2)
         if len(tokenizer.encode(block, add_special_tokens=False)) > config['internals_token_budget']:
             return False
-    prompt = messages(code, verification, action, context, payload, history)
+    prompt = messages(code, verification, action, context, payload, history, config=config)
     return len(tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True)) + config['max_tokens'] <= config['max_model_len']
 
 
-def internals(folder, code, verification, action, history, tokenizer, config):
+def internals(folder, code, verification, action, history, tokenizer, config, replay=True, saved_context=None):
     destination = folder / 'feedback.json'
     if destination.exists():
         return read_json(destination)
     report = read_json(folder / 'solver/report.json')
-    context = source_context(code, verification)
+    context = saved_context if saved_context is not None else source_context(code, verification)
     write_json(folder / 'source-context.json', context)
     failed = [q for q in report['queries'] if q['result'] in ('sat', 'unknown')]
     payload = {'scope': 'diagnostic_replays_not_original_search',
@@ -55,23 +57,30 @@ def internals(folder, code, verification, action, history, tokenizer, config):
     events = []
     for query in failed[:config['max_queries']]:
         output = folder / 'internals' / query['id']
-        call = execute([sys.executable, '-m', 'repair_study.worker', '--query',
-                        str((folder / 'solver' / query['file']).resolve()), '--context',
-                        str((folder / 'source-context.json').resolve()), '--output', str(output.resolve())],
-                       20, env=api_env())
-        write_json(output / 'process.json', call)
+        if replay:
+            command = [sys.executable, '-m', 'repair_study.worker', '--query',
+                            str((folder / 'solver' / query['file']).resolve()), '--context',
+                            str((folder / 'source-context.json').resolve()), '--output', str(output.resolve())]
+            if config.get('replay_max_instances') is not None:
+                command += ['--max-instances-per-group', str(config['replay_max_instances'])]
+            call = execute(command, 20, env=api_env())
+            write_json(output / 'process.json', call)
+        else:
+            if not (output / 'process.json').exists():
+                raise ValueError('Missing saved replay process record: ' + str(output))
+            call = read_json(output / 'process.json')
         if call['returncode'] != 0 or call['timed_out'] or not (output / 'report.json').exists():
             continue
-        replay = read_json(output / 'report.json')
-        if replay.get('status') != 'completed' or replay.get('result') != query['result']:
+        replay_report = read_json(output / 'report.json')
+        if replay_report.get('status') != 'completed' or replay_report.get('result') != query['result']:
             continue
         payload['queries'].append({'id': query['id'], 'query_sha256': digest((folder / 'solver' / query['file']).read_bytes()),
-            'original_result': query['result'], 'replay_result': replay['result'],
-            'reason_unknown': replay.get('reason_unknown'), 'diagnostic_timeout_ms': 5000,
-            'statistics': {key: replay.get('statistics', {}).get(key) for key in STATISTICS},
-            'observed_instances': replay.get('instantiations_observed'),
-            'saved_instances': replay.get('instantiations_saved'),
-            'callback_errors': replay.get('callback_errors'), 'quantifiers': []})
+            'original_result': query['result'], 'replay_result': replay_report['result'],
+            'reason_unknown': replay_report.get('reason_unknown'), 'diagnostic_timeout_ms': 5000,
+            'statistics': {key: replay_report.get('statistics', {}).get(key) for key in STATISTICS},
+            'observed_instances': replay_report.get('instantiations_observed'),
+            'saved_instances': replay_report.get('instantiations_saved'),
+            'callback_errors': replay_report.get('callback_errors'), 'quantifiers': []})
         if (output / 'instantiations.jsonl').exists():
             for line in (output / 'instantiations.jsonl').read_text(encoding='utf-8').splitlines():
                 if line:

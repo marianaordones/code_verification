@@ -10,10 +10,11 @@ from diagnostics.z3_probe import head, snapshots
 from .relevance import rank, qids
 
 
-def worker(query, context, output):
+def worker(query, context, output, max_instances_per_group=4):
     output.mkdir(parents=True, exist_ok=True)
     report = {'status': 'unavailable', 'timeout_ms': 5000, 'instantiations_observed': 0,
-              'callback_errors': 0, 'oversized_events': 0, 'per_qid_observed': {}}
+              'callback_errors': 0, 'oversized_events': 0, 'per_qid_observed': {},
+              'max_instances_per_group': max_instances_per_group}
     groups = {}
     try:
         report['z3'] = identity()
@@ -45,7 +46,7 @@ def worker(query, context, output):
                         del groups[worst]
                     groups[formula] = {'rank': score, 'category': category, 'events': []}
                 events = groups[formula]['events']
-                if len(events) >= 4:
+                if len(events) >= max_instances_per_group:
                     return
                 event = {'quantifier_smt': formula,
                          'binding_terms_callback_order': [a.sexpr() for c in hint.children()
@@ -80,5 +81,8 @@ if __name__ == '__main__':
     parser.add_argument('--query', type=Path, required=True)
     parser.add_argument('--context', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--max-instances-per-group', type=int, default=4)
     args = parser.parse_args()
-    raise SystemExit(worker(args.query, read_json(args.context), args.output))
+    if args.max_instances_per_group < 1:
+        parser.error('max-instances-per-group must be positive')
+    raise SystemExit(worker(args.query, read_json(args.context), args.output, args.max_instances_per_group))

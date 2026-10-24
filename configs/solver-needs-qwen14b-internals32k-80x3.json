@@ -1,0 +1,31 @@
+{
+  "model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "model_revision": "aedcc2d42b622764e023cf882b6652e646b95671",
+  "mode": "instruct",
+  "enable_thinking": false,
+  "dtype": "bfloat16",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 20261018,
+  "max_attempts": 3,
+  "max_tokens": 4096,
+  "max_model_len": 49152,
+  "max_num_seqs": 1,
+  "rope_scaling": {
+    "rope_type": "yarn",
+    "factor": 2.0,
+    "original_max_position_embeddings": 32768
+  },
+  "enable_chunked_prefill": true,
+  "max_num_batched_tokens": 2048,
+  "internals_token_budget": 32768,
+  "max_queries": 3,
+  "max_quantifiers": 80,
+  "max_instances_each": 3,
+  "verification_timeout": 120,
+  "experiment": "solver-needs-qwen14b-z3-internals32k-80x3",
+  "reuse_initial_events_required": true,
+  "replay_max_instances": 5,
+  "shared_initial_events_required": true
+}

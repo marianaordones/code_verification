@@ -33,8 +33,8 @@ def configuration(path=DEFAULT_CONFIG):
         validate_config(config)
         return config
     model_identity(config)
-    if config['max_attempts'] != 4 or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
-        raise ValueError('Expected four total proposals, 48k context and 4096 output tokens')
+    if config['max_attempts'] not in (3, 4) or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
+        raise ValueError('Expected three/four total proposals, 48k context and 4096 output tokens')
     return config
 
 
@@ -56,6 +56,9 @@ def implementation():
     return file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'),
         ROOT / 'prompts/solver-needs/system.txt', ROOT / 'configs/solver-needs-qwen14b.json',
         ROOT / 'configs/solver-needs-qwen14b-internals24k.json',
+        ROOT / 'configs/solver-needs-qwen14b-internals32k.json',
+        ROOT / 'configs/solver-needs-qwen14b-internals32k-80x3.json',
+        ROOT / 'configs/solver-needs-qwen14b-internals32k-50x5.json',
         SELECTION,
         *(ROOT / 'baseline').glob('*.py'), *(ROOT / 'diagnostics').glob('*.py'),
         ROOT / 'repair_study/worker.py', ROOT / 'repair_study/relevance.py'])
@@ -84,6 +87,21 @@ def validate(root):
 def prepare(args):
     root = args.study.resolve()
     config = configuration(getattr(args, 'config', DEFAULT_CONFIG))
+    reuse_source = getattr(args, 'reuse_initial_from', None)
+    shared_pool = getattr(args, 'shared_initial_events', None)
+    if config.get('shared_initial_events_required') and shared_pool is None:
+        raise ValueError('This variant requires --shared-initial-events for the common five-instance replay pool')
+    if shared_pool is not None:
+        pool_path = shared_pool.resolve()
+        for study_path in [root, *([reuse_source.resolve()] if reuse_source is not None else [])]:
+            if pool_path == study_path or pool_path.is_relative_to(study_path) or study_path.is_relative_to(pool_path):
+                raise ValueError('Shared pool must be outside both source and destination study directories')
+    reuse_manifest = None
+    if config.get('reuse_initial_events_required') and reuse_source is None:
+        raise ValueError('This variant requires --reuse-initial-from pointing to the completed 24k study')
+    if reuse_source is not None:
+        from .reuse import inspect_source
+        reuse_manifest, config = inspect_source(reuse_source.resolve(), root, config)
     if (root / 'manifest.json').exists():
         manifest = validate(root)
         if (manifest['task_count'] != args.tasks or
@@ -100,6 +118,15 @@ def prepare(args):
     plan = {'revision': REVISION, 'task_count': args.tasks, 'selected_ids': selected_ids,
             'selection_sha256': digest(selection_path.read_bytes()), 'config': config,
             'tool_hashes': {k: tool_signature(v) for k, v in identities.items()}, 'implementation': implementation()}
+    if reuse_manifest is not None:
+        if [c['id'] for c in reuse_manifest['cases']] != selected_ids:
+            raise ValueError('Reuse source must contain exactly the same selected IDs in the same order')
+        if reuse_manifest['tool_hashes'] != plan['tool_hashes']:
+            raise ValueError('Reuse source uses different Verus/Z3 binaries or API')
+        plan['initial_event_source'] = {'path': str(reuse_source.resolve()),
+            'manifest_sha256': digest((reuse_source / 'manifest.json').read_bytes())}
+        if shared_pool is not None:
+            plan['shared_initial_events'] = str(shared_pool.resolve())
     if (root / 'preparation.json').exists() and read_json(root / 'preparation.json') != plan:
         raise ValueError('Preparation changed; use another output directory')
     write_json(root / 'preparation.json', plan)
@@ -112,19 +139,12 @@ def prepare(args):
         label = row['paper_label']
         folder = root / 'inputs' / row['id']
         if not (folder / 'ready.json').exists():
-            task = split_task(row)
-            write_json(folder / 'task.json', {k: v for k, v in task.items() if k != 'reference'})
-            # Published assertion/screens/labels are private audit data, never prompt content.
-            write_json(root / 'private' / (row['id'] + '.json'), row)
-            write_text(folder / 'candidate.rs', render(task, EMPTY))
-            verification = verifier.verify(folder / 'candidate.rs')
-            write_json(folder / 'verification.json', verification)
-            if verification['error_type'] == 'verifier_error':
-                raise ValueError('Verifier infrastructure error; inspect ' + str(folder / 'verification.json'))
-            code = (folder / 'candidate.rs').read_text(encoding='utf-8')
-            internals(folder, code, verification, EMPTY, [], tokenizer, config)
-            write_json(folder / 'ready.json', {'initially_verified': verification['success'],
-                       'published_screens_used': True, 'reference_placebo_restoration_not_rerun': True})
+            if reuse_manifest is not None:
+                from .reuse import prepare_case
+                prepare_case(reuse_source.resolve(), root, row['id'], reuse_manifest, config, tokenizer,
+                             shared_pool=shared_pool)
+            else:
+                prepare_fresh_case(root, row, folder, verifier, tokenizer, config)
         selected.append({k: row[k] for k in ('id', 'corpus', 'problem', 'source_path', 'paper_label', 'release_label')})
         counts[label] += 1
         print('Prepared', row['id'], label, flush=True)
@@ -132,12 +152,29 @@ def prepare(args):
              for case in selected for name in ('task.json', 'candidate.rs', 'verification.json', 'feedback.json', 'ready.json')}
     files['selected_ids.json'] = digest((root / 'selected_ids.json').read_bytes())
     files['selection.json'] = digest((root / 'selection.json').read_bytes())
+    if reuse_manifest is not None:
+        files.update({str(p.relative_to(root)): digest(p.read_bytes()) for p in (root / 'inputs').rglob('*') if p.is_file()})
     manifest = {**plan, 'cases': selected, 'files': files, 'selection_counts': dict(counts),
                 'paper_task_count': 462, 'release_extraction_count': 468,
                 'source_receipt': read_json(SOURCE / 'download-receipt.json'),
                 'scope': f"published essential assertions; no reference/placebo/restoration audit rerun; labels/probes hidden; {config['max_attempts']} total proposals"}
     write_json(root / 'manifest.json', manifest)
     print('Prepared', len(selected), 'paired tasks:', root, flush=True)
+
+
+def prepare_fresh_case(root, row, folder, verifier, tokenizer, config):
+    task = split_task(row)
+    write_json(folder / 'task.json', {k: v for k, v in task.items() if k != 'reference'})
+    write_json(root / 'private' / (row['id'] + '.json'), row)
+    write_text(folder / 'candidate.rs', render(task, EMPTY))
+    verification = verifier.verify(folder / 'candidate.rs')
+    write_json(folder / 'verification.json', verification)
+    if verification['error_type'] == 'verifier_error':
+        raise ValueError('Verifier infrastructure error; inspect ' + str(folder / 'verification.json'))
+    code = (folder / 'candidate.rs').read_text(encoding='utf-8')
+    internals(folder, code, verification, EMPTY, [], tokenizer, config)
+    write_json(folder / 'ready.json', {'initially_verified': verification['success'],
+               'published_screens_used': True, 'reference_placebo_restoration_not_rerun': True})
 
 
 def run_case(root, arm, case, config, inference, verifier):
@@ -158,8 +195,8 @@ def run_case(root, arm, case, config, inference, verifier):
         else:
             started = time.perf_counter()
             payload = feedback['internals'] if arm == 'with_internals' else None
-            prompt = messages(code, verification, action, feedback['context'], payload, history)
-            common = messages(code, verification, action, feedback['context'], None, history)
+            prompt = messages(code, verification, action, feedback['context'], payload, history, config=config)
+            common = messages(code, verification, action, feedback['context'], None, history, config=config)
             if not fits(code, verification, action, feedback['context'], payload, history, inference.tokenizer, config):
                 raise ValueError('Actual prompt exceeds context; no automatic truncation')
             request = {'messages': prompt, 'seed': (config['seed'] + index if config.get('seed') is not None else None), 'parameters': config,
@@ -359,6 +396,10 @@ def main():
     parser.add_argument('--selection', type=Path, default=SELECTION)
     parser.add_argument('--config', type=Path, default=DEFAULT_CONFIG,
                         help='Preparation config; run uses the config frozen in the manifest')
+    parser.add_argument('--reuse-initial-from', type=Path,
+                        help='Completed study providing frozen initial candidates and saved replay events')
+    parser.add_argument('--shared-initial-events', type=Path,
+                        help='Shared initial replay pool collected once with five saved instances per group')
     args = parser.parse_args()
     if not 1 <= args.tasks <= 462:
         parser.error('tasks must be between 1 and 462 (and fit the saved selection)')
