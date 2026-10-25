@@ -1,0 +1,159 @@
+{
+  "seed": 20261024,
+  "method": "original lexical screening, shuffled category round-robin; excludes all 25 previous IDs and identical contents; no outcomes",
+  "excluded_ids": [
+    "cloverbench_linear_search2",
+    "diffy_s22if",
+    "mbpp_task_id_557",
+    "misc_findmax",
+    "cloverbench_array_concat_strong",
+    "cloverbench_array_copy_strong",
+    "diffy_sina4",
+    "mbpp_task_id_804",
+    "misc_len_intersect",
+    "cloverbench_array_append_strong",
+    "diffy_conda",
+    "mbpp_task_id_554",
+    "misc_fib",
+    "cloverbench_two_sum",
+    "diffy_s2if",
+    "mbpp_task_id_567",
+    "misc_simple_nested",
+    "cloverbench_binary_search",
+    "diffy_sina1",
+    "mbpp_task_id_728",
+    "misc_filter_weak",
+    "cloverbench_all_digits_strong",
+    "diffy_sina2",
+    "mbpp_task_id_18",
+    "misc_filter"
+  ],
+  "tasks": [
+    {
+      "id": "cloverbench_array_sum_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_sum_strong.rs",
+      "sha256": "c1a1c72498798102fc408d90d72a49cc46c7f2c7839ed0c510cf434e86c51ed1"
+    },
+    {
+      "id": "diffy_s2lif",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s2lif.rs",
+      "sha256": "f5e172dc702655f3f250a83bc9b468ed39099f5f2d749d77c2cf714ec4e4e682"
+    },
+    {
+      "id": "mbpp_task_id_2",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_2.rs",
+      "sha256": "7cc5b9ab2da413ff413b0b9c999b5f58c16170221348b9d40f5fe7cb82427b98"
+    },
+    {
+      "id": "misc_map",
+      "category": "Misc",
+      "path": "unverified/Misc/map.rs",
+      "sha256": "a9bff6bebc0bc2732d2c2f9cb464da9ceb97eba781b9b467fc97e3a8ed759d86"
+    },
+    {
+      "id": "cloverbench_cal_div",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/cal_div.rs",
+      "sha256": "1bdf318d2f8cf5e705f4eb1b7c398dede51c7157fabd0bd3dc868cc7abcb0d49"
+    },
+    {
+      "id": "diffy_brs1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs1.rs",
+      "sha256": "7b7e624cdf458ce5b6159744c033c86355c5a5dc0855979f2518826a5753dc6d"
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_3.rs",
+      "sha256": "ab0ea6c7a8901a9c310f22bf1f224e5d51ba34bef70d32a8b3ac6dcbd8e99d74"
+    },
+    {
+      "id": "misc_reverse",
+      "category": "Misc",
+      "path": "unverified/Misc/reverse.rs",
+      "sha256": "3542472a72d862c0713d8c8e902a77b147e4bec711b8ce6728afc49ad6de156c"
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_product_strong.rs",
+      "sha256": "f17d4b05fec29bf73aa643b77c0b26016d096b89f8ffa0d4301e20d2e103a00c"
+    },
+    {
+      "id": "diffy_condm",
+      "category": "Diffy",
+      "path": "unverified/Diffy/condm.rs",
+      "sha256": "1b6dcfb6699b991bef902e0bb1eef7d8bad8a79407eb15a78619d5be345a623a"
+    },
+    {
+      "id": "mbpp_task_id_576",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_576.rs",
+      "sha256": "1fe6ba8fe2d48ff225fb1af8da790a10761580cb6a125ec0578fe58dbcd3ed10"
+    },
+    {
+      "id": "misc_binary_search",
+      "category": "Misc",
+      "path": "unverified/Misc/binary_search.rs",
+      "sha256": "5c56c6932ad723573a4ba9cf378edd81927c278e7fa0c192b71187f74737d486"
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/is_prime.rs",
+      "sha256": "dcab82d1f8b0089ab70adfdd409b7ea10834dfd5db04b7acdeefdfcf5dd20a9e"
+    },
+    {
+      "id": "diffy_res2o",
+      "category": "Diffy",
+      "path": "unverified/Diffy/res2o.rs",
+      "sha256": "565f9bd67c80529ff20384721f64fc86c21174916ba04d5c0c2741ce45ae2eed"
+    },
+    {
+      "id": "mbpp_task_id_790",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_790.rs",
+      "sha256": "a2d8a4bdde3f99b43a87c330a72246e0fcdffe5e6325acedae8d6796db937350"
+    },
+    {
+      "id": "misc_bubble",
+      "category": "Misc",
+      "path": "unverified/Misc/bubble.rs",
+      "sha256": "a931274dd50fe0d3be6aefad0fb4f58d781fa65047f7eb299cecf2191fc8baf2"
+    },
+    {
+      "id": "diffy_s42if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s42if.rs",
+      "sha256": "924f2a885177d9b42ba3d7ffdf835ba0c75ee942ee56b516422f86f6e0dec6d1"
+    },
+    {
+      "id": "mbpp_task_id_399",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_399.rs",
+      "sha256": "1b60cb78fba49fd3f1177af564f11272d66f5d0af5f72689b1c627c9514d63d7"
+    },
+    {
+      "id": "misc_remove_all_greater",
+      "category": "Misc",
+      "path": "unverified/Misc/remove_all_greater.rs",
+      "sha256": "a984803f001054f8f99199e43c56342e0bc195ef9c0abdd38885093743bf97b4"
+    },
+    {
+      "id": "diffy_brs2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/brs2.rs",
+      "sha256": "ab913d250e3481c6d2f04a231d464d8117f88462f0fd8dd153700c53a74285fe"
+    }
+  ],
+  "category_counts": {
+    "CloverBench": 4,
+    "Diffy": 6,
+    "MBPP": 5,
+    "Misc": 5
+  }
+}

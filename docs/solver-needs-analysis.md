@@ -90,6 +90,44 @@ A auditoria distingue:
 
 O script audita as respostas e erros persistidos. Um erro presente apenas nos logs
 Slurm, sem arquivo de erro salvo, não pode ser identificado por esta análise.
-Também não mede quantificadores omitidos: caber no contexto é diferente de enviar
-todos os eventos relevantes. A auditoria anterior sobre seleção e omissões continua
-documentada separadamente em `analysis/solver-needs-100-context-audit/`.
+A contagem de grupos omitidos é descrita abaixo; caber no contexto é diferente
+de enviar todos os eventos relevantes. A auditoria anterior, com testes marginais
+de inclusão de eventos, continua documentada em
+`analysis/solver-needs-100-context-audit/`.
+
+## Quantificadores disponíveis e enviados
+
+O relatório inclui uma tabela por proposta com média, mediana, P90 e máximo de
+grupos disponíveis nos eventos salvos e de grupos efetivamente enviados. Mostra
+quantos pedidos atingiram o teto configurado e quantos omitiram grupos associados
+ao candidato. Os detalhes estão em `quantifier_audit` e `quantifier_rows` no JSON.
+
+Para a proposta 1, a origem da evidência é `inputs/ID/`. Para as seguintes, é a
+tentativa anterior: os eventos de `attempt_01` alimentam a proposta 2, por exemplo.
+A contagem considera replays concordantes que alimentaram pedidos efetivamente
+respondidos, sem executar novos replays. Um grupo é o par (consulta, fórmula SMT),
+como no empacotador; o JSON também informa quantas fórmulas distintas há ignorando
+a identidade da consulta.
+
+As médias não representam todos os quantificadores criados pelo Z3. Há limites
+anteriores: consultas selecionadas, timeout diagnóstico e reservatório de eventos.
+Muitas fórmulas salvas são axiomas genéricos, portanto uma média acima de 80 não
+demonstra que 80 seja insuficiente para fornecer material relevante. Omissões de
+grupos do candidato são um indicador mais específico, mas ainda heurístico.
+
+O relatório identifica omissões abaixo do teto não explicadas pelas cotas de
+axiomas genéricos. Elas motivam investigar o orçamento de tokens; não são uma
+atribuição causal exata, pois a análise não reproduz cada decisão cronológica do
+empacotador. Instanciações observadas e salvas são contadas separadamente dos
+grupos de quantificadores. Dados ausentes não são registrados como zero.
+
+Para auditar a variante 80x3:
+
+```bash
+sbatch scripts/slurm/solver_needs_analysis.slurm \
+  --expanded results/solver-needs-qwen14b-100-internals32k-samples/seed-20261018/80x3 \
+  --output analysis/solver-needs-32k-80x3
+```
+
+Para 50x5, substitua `80x3` por `50x5` nos dois caminhos. O nome de saída
+`internals24k.json` é histórico: ele contém a variante informada em `--expanded`.

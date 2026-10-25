@@ -1,0 +1,139 @@
+{
+  "seed": 20261024,
+  "method": "category round-robin; ID-sorted shuffled pools; excludes previous five IDs and identical original contents; no model outcomes",
+  "excluded_ids": [
+    "cloverbench_linear_search2",
+    "diffy_s22if",
+    "mbpp_task_id_557",
+    "misc_findmax",
+    "cloverbench_array_concat_strong"
+  ],
+  "tasks": [
+    {
+      "id": "cloverbench_array_copy_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_copy_strong.rs",
+      "sha256": "82e7848f176d71315eb23debb0bc01d65d6fed7d15af4c625f026781198a0219"
+    },
+    {
+      "id": "diffy_sina4",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina4.rs",
+      "sha256": "7784323b56e381401a7e09f77aff4f1ffbd32d258d3e6f69424c386b4ba0b2bf"
+    },
+    {
+      "id": "mbpp_task_id_804",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_804.rs",
+      "sha256": "5fdb88b4d83c5e09d18caef010aea911735de982c4b7bb9d83b6ba8facbb3320"
+    },
+    {
+      "id": "misc_havoc_inline_post",
+      "category": "Misc",
+      "path": "unverified/Misc/havoc_inline_post.rs",
+      "sha256": "00ef955db0ee2664b75b81fb42e9940bf732b7b76ccca9baf2f15ad1e5931c62"
+    },
+    {
+      "id": "cloverbench_array_append_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_append_strong.rs",
+      "sha256": "94c2a0ea88ef3eed74a393b5e509f4d3d15beceb5ae8598593d5a432cc31fa7c"
+    },
+    {
+      "id": "diffy_conda",
+      "category": "Diffy",
+      "path": "unverified/Diffy/conda.rs",
+      "sha256": "97a0d0fad04505e246a76ab82c62977955c3dcc730e20fa69609992e9e839280"
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_554.rs",
+      "sha256": "0f75381a67a27628de6b94c08bdc9ddfbf54818c011d33607d89fcb194c72c69"
+    },
+    {
+      "id": "misc_tail_triangle",
+      "category": "Misc",
+      "path": "unverified/Misc/tail_triangle.rs",
+      "sha256": "4e679222f3a470b63221ce6d929b8b74820c94136e23ea9d82b4a16a0ae9f23e"
+    },
+    {
+      "id": "cloverbench_two_sum",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/two_sum.rs",
+      "sha256": "21ac8b1a396286e5469e27a807da2fc1d0f26432ac74fda7f55e3f67ddd68457"
+    },
+    {
+      "id": "diffy_s2if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s2if.rs",
+      "sha256": "e837ea2b6208f1ed71ea137dd567051e44c1bb64c8c4a3b3fa27d57ca48c22d3"
+    },
+    {
+      "id": "mbpp_task_id_567",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_567.rs",
+      "sha256": "1dd527557427e2cef1ce7bc8ae81182235cfbb12e19c70d922826668b02e3eb0"
+    },
+    {
+      "id": "misc_fib",
+      "category": "Misc",
+      "path": "unverified/Misc/fib.rs",
+      "sha256": "b37985b11669caad2fdd6e8b46cd91a2b265863a1ff28df205f0637287d6e57e"
+    },
+    {
+      "id": "cloverbench_binary_search",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/binary_search.rs",
+      "sha256": "dff29ac79b9cff59df187138873cdc15ea7ffe432d9e4df8d62589a88760770e"
+    },
+    {
+      "id": "diffy_sina1",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina1.rs",
+      "sha256": "9a166e74942a64bdb11418fd226a0d0360a6e9546bfc0cb4fa0b524836400b40"
+    },
+    {
+      "id": "mbpp_task_id_728",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_728.rs",
+      "sha256": "4df036e28c33fa8a801e7f626db3687a03ea357f039e02f9d8f8b450e9cdc982"
+    },
+    {
+      "id": "misc_reverse",
+      "category": "Misc",
+      "path": "unverified/Misc/reverse.rs",
+      "sha256": "3542472a72d862c0713d8c8e902a77b147e4bec711b8ce6728afc49ad6de156c"
+    },
+    {
+      "id": "cloverbench_all_digits_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/all_digits_strong.rs",
+      "sha256": "230a7dde3a7f2d515b81cee78e94db58989a3d4ac16b25182256f2468706e859"
+    },
+    {
+      "id": "diffy_sina2",
+      "category": "Diffy",
+      "path": "unverified/Diffy/sina2.rs",
+      "sha256": "4b90c440cdd91cb543d9fa78c1edc9ab31422757261c96d18e6cd1856cd68622"
+    },
+    {
+      "id": "mbpp_task_id_18",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_18.rs",
+      "sha256": "8a6ec2116532fa42e94b396b83e26d1789befb13ccfd86b898143ff2dae862b4"
+    },
+    {
+      "id": "misc_filter_weak",
+      "category": "Misc",
+      "path": "unverified/Misc/filter_weak.rs",
+      "sha256": "246ba8141aa010140832f73ef44656de1bbaa8d41a5c17277645dbe53592ffa3"
+    }
+  ],
+  "category_counts": {
+    "CloverBench": 5,
+    "Diffy": 5,
+    "MBPP": 5,
+    "Misc": 5
+  }
+}

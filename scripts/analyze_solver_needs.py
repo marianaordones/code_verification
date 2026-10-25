@@ -3,6 +3,7 @@ import argparse
 from collections import Counter
 import csv
 import json
+import math
 from pathlib import Path
 import statistics
 import sys
@@ -23,8 +24,97 @@ def load(path):
 
 
 def distribution(values):
-    return {'n': len(values), 'min': min(values), 'median': statistics.median(values),
-            'max': max(values)} if values else {'n': 0, 'min': None, 'median': None, 'max': None}
+    return {'n': len(values), 'min': min(values), 'mean': statistics.mean(values),
+            'median': statistics.median(values), 'p90': sorted(values)[math.ceil(0.9 * len(values)) - 1],
+            'max': max(values)} if values else {
+                'n': 0, 'min': None, 'mean': None, 'median': None, 'p90': None, 'max': None}
+
+
+def quantifier_counts(root, key, attempt_folder, exposure, config):
+    """Available = saved events of concordant replays feeding this exact request."""
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from repair_study.relevance import rank
+    number = int(attempt_folder.name.split('_')[1])
+    origin = root / 'inputs' / key if number == 1 else attempt_folder.parent / f'attempt_{number - 1:02}'
+    payload = exposure.get('payload')
+    try:
+        sent = {(q['id'], g['quantifier_smt']): g for q in (payload or {}).get('queries', [])
+                for g in q.get('quantifiers', [])}
+    except (KeyError, TypeError) as error:
+        return {'id': key, 'proposal': number, 'study': str(root), 'groups_sent': None,
+                'status': 'invalid_exposure', 'error': str(error)}
+    result = {'id': key, 'proposal': number, 'study': str(root), 'groups_sent': len(sent),
+              'group_limit': config.get('max_quantifiers'), 'instances_sent': sum(len(g['instances']) for g in sent.values()),
+              'available_groups': None, 'candidate_groups_available': None, 'candidate_groups_omitted': None,
+              'status': 'missing_evidence', 'evidence_origin': str(origin)}
+    try:
+        report = load(origin / 'solver/report.json')
+        failed = [q for q in report['queries'] if q['result'] in ('sat', 'unknown')]
+        available, instances, observed, capped_queries = {}, 0, 0, 0
+        selected_queries = failed[:config.get('max_queries', 3)]
+        for query in selected_queries:
+            folder = origin / 'internals' / query['id']
+            process = load(folder / 'process.json')
+            if process['returncode'] != 0 or process['timed_out']:
+                continue
+            replay = load(folder / 'report.json')
+            if replay.get('status') != 'completed' or replay.get('result') != query['result']:
+                continue
+            observed += replay.get('instantiations_observed', 0)
+            query_groups = set()
+            for line in (folder / 'instantiations.jsonl').read_text(encoding='utf-8').splitlines():
+                if not line:
+                    continue
+                event = json.loads(line)
+                group = (query['id'], event['quantifier_smt'])
+                query_groups.add(group)
+                category = rank(event['quantifier_smt'], exposure.get('context', {}))[1]
+                available[group] = category
+                instances += 1
+            capped_queries += len(query_groups) >= 128
+        omitted = {group: category for group, category in available.items() if group not in sent}
+        sent_categories = Counter(g.get('selection_category') for g in sent.values())
+        candidate = {g for g, category in available.items() if category.startswith('candidate')}
+        not_explained = [g for g, category in omitted.items()
+            if len(sent) < config.get('max_quantifiers', 0)
+            and not (category in ('representation', 'other_background') and sent_categories[category] >= 2)]
+        result.update(status='available', available_groups=len(available),
+            unique_formulas_available=len({g[1] for g in available}),
+            saved_instances=instances, observed_instantiation_events=observed,
+            candidate_groups_available=len(candidate), candidate_groups_sent=len(candidate & set(sent)),
+            candidate_groups_omitted=len(candidate - set(sent)),
+            omitted_categories=dict(Counter(omitted.values())),
+            omitted_groups=len(omitted), group_cap_reached=len(sent) >= config.get('max_quantifiers', float('inf')),
+            omitted_groups_not_explained_by_group_or_background_caps=len(not_explained),
+            queries_at_reservoir_cap=capped_queries,
+            failed_queries_outside_query_cap=max(0, len(failed) - len(selected_queries)))
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        result['error'] = str(error)
+    return result
+
+
+def quantifier_summary(rows):
+    measured = [r for r in rows if r['status'] == 'available']
+    return {'requests': len(rows), 'requests_with_measurable_saved_evidence': len(measured),
+        'missing_or_invalid_evidence': len(rows) - len(measured),
+        'available_groups_per_request': distribution([r['available_groups'] for r in measured]),
+        'sent_groups_per_request': distribution([r['groups_sent'] for r in rows if r['groups_sent'] is not None]),
+        'candidate_groups_available': distribution([r['candidate_groups_available'] for r in measured]),
+        'requests_at_group_cap': sum(r['group_cap_reached'] for r in measured),
+        'requests_with_any_omissions': sum(r['omitted_groups'] > 0 for r in measured),
+        'requests_with_candidate_omissions': sum(r['candidate_groups_omitted'] > 0 for r in measured),
+        'requests_with_omissions_below_group_cap_not_explained_by_background_quotas': sum(
+            r['omitted_groups_not_explained_by_group_or_background_caps'] > 0 for r in measured),
+        'queries_at_reservoir_cap': sum(r['queries_at_reservoir_cap'] for r in measured),
+        'by_proposal': {str(k): {
+            'requests': sum(r['proposal'] == k for r in measured),
+            'available_groups': distribution([r['available_groups'] for r in measured if r['proposal'] == k]),
+            'sent_groups': distribution([r['groups_sent'] for r in measured if r['proposal'] == k]),
+            'requests_at_group_cap': sum(r['proposal'] == k and r['group_cap_reached'] for r in measured),
+            'requests_with_candidate_omissions': sum(r['proposal'] == k and r['candidate_groups_omitted'] > 0 for r in measured)
+        } for k in sorted({r['proposal'] for r in measured})},
+        'scope': 'With-internals requests only. Groups are (query ID, encoded formula); repeated formulas in different queries consume separate slots. Saved evidence is not the complete original search. Candidate relevance is heuristic. Budget attribution is not proven by counts alone.'}
 
 
 def tokenizer_for(config, explicit=None):
@@ -40,7 +130,7 @@ def tokenizer_for(config, explicit=None):
 
 
 def analyze_group(paths, tokenizer_path=None):
-    cases, issues, configs, token_rows, error_rows = [], [], [], [], []
+    cases, issues, configs, token_rows, error_rows, quantifier_rows = [], [], [], [], [], []
     seen = set()
     for root in paths:
         if not (root / 'manifest.json').exists():
@@ -91,7 +181,8 @@ def analyze_group(paths, tokenizer_path=None):
                         'internals_exposed': request.get('internals_exposed'), 'tokenizer_count_matches': None}
                     exposure_path = attempt_folder / 'exposure.json'
                     if exposure_path.exists():
-                        payload = load(exposure_path).get('payload')
+                        exposure = load(exposure_path)
+                        payload = exposure.get('payload')
                         groups = [g for q in (payload or {}).get('queries', []) for g in q.get('quantifiers', [])]
                         token_row['groups'] = len(groups)
                         token_row['max_instances_in_group'] = max((len(g['instances']) for g in groups), default=0)
@@ -101,6 +192,8 @@ def analyze_group(paths, tokenizer_path=None):
                             token_row['internals_tokens'] = encode(json.dumps(payload, ensure_ascii=False, indent=2))
                         if token_row['internals_tokens'] is not None and token_row['internals_budget'] is not None:
                             token_row['internals_budget_exceeded'] = token_row['internals_tokens'] > token_row['internals_budget']
+                        if arm == 'with_internals':
+                            quantifier_rows.append(quantifier_counts(root, key, attempt_folder, exposure, parameters))
                     if encode and response.get('rendered_prompt') is not None and input_tokens is not None:
                         token_row['tokenizer_count_matches'] = encode(response['rendered_prompt']) == input_tokens
                     token_rows.append(token_row)
@@ -155,7 +248,9 @@ def analyze_group(paths, tokenizer_path=None):
         'missing_by_arm': {a: [r['id'] for r in eligible if not r['arms'][a]['completed']] for a in ARMS},
         'all_selected_curve': curve(eligible), 'paired_completed_curve': curve(paired),
         'categories': {label: curve([r for r in eligible if r['label'] == label]) for label in sorted({r['label'] for r in eligible if r['label']})},
-        'token_audit': tokens, 'issues': issues, 'errors': error_rows, 'cases': cases, 'token_rows': token_rows}
+        'token_audit': tokens, 'quantifier_audit': quantifier_summary(quantifier_rows),
+        'quantifier_rows': quantifier_rows,
+        'issues': issues, 'errors': error_rows, 'cases': cases, 'token_rows': token_rows}
 
 
 def write_reports(groups, output):
@@ -186,6 +281,18 @@ def write_reports(groups, output):
             f"Bloco interno: {audit['internals_tokens_exposed']}; violações do orçamento interno: {audit['internals_budget_violations']}.",
             f"Payloads expostos sem medição interna: {audit['exposed_payloads_without_token_measurement']}; erros salvos relacionados a contexto: {len(audit['context_related_error_records'])}.",
             'Pendências, curva somente dos pares concluídos, categorias e detalhes constam no JSON.', '']
+        q = report['quantifier_audit']
+        lines += ['### Quantificadores por pedido com internals', '',
+            f"Pedidos com evidência mensurável: {q['requests_with_measurable_saved_evidence']}/{q['requests']}; evidência ausente/inválida: {q['missing_or_invalid_evidence']}.", '',
+            '| Proposta | Pedidos | Capturados: média / mediana / P90 / máximo | Enviados: média / mediana / P90 / máximo | No teto de grupos | Com grupos do candidato omitidos |',
+            '|---|---|---|---|---|---|']
+        for proposal, values in q['by_proposal'].items():
+            fmt = lambda d: ' / '.join(f"{d[k]:.1f}" for k in ('mean', 'median', 'p90', 'max')) if d['n'] else 'N/A'
+            lines.append(f"| {proposal} | {values['requests']} | {fmt(values['available_groups'])} | {fmt(values['sent_groups'])} | {values['requests_at_group_cap']} | {values['requests_with_candidate_omissions']} |")
+        lines += ['', f"Pedidos no teto: {q['requests_at_group_cap']}; com alguma omissão: {q['requests_with_any_omissions']}; com grupos do candidato omitidos: {q['requests_with_candidate_omissions']}.",
+            f"Pedidos com omissões abaixo do teto não explicadas pelas cotas genéricas: {q['requests_with_omissions_below_group_cap_not_explained_by_background_quotas']}.",
+            'Essas omissões sugerem investigar orçamento de tokens; não demonstram sua causa nem relevância semântica.',
+            'Capturados = grupos nos eventos salvos dos replays concordantes usados naquele pedido, não toda a busca.', '']
     with (output / 'success_by_attempt.csv').open('w', newline='', encoding='utf-8') as stream:
         writer = csv.DictWriter(stream, fieldnames=['experiment', 'scope', 'attempt_budget', 'denominator', 'arm', 'cumulative_solved', 'new_solved', 'success_rate'])
         writer.writeheader()

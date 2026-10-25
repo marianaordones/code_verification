@@ -32,6 +32,45 @@ def completed(root, arm, key, win=None):
 
 
 class SolverNeedsAnalysisTests(unittest.TestCase):
+    def test_quantifier_counts_use_evidence_from_previous_proposal(self):
+        with tempfile.TemporaryDirectory() as work:
+            root = Path(work)
+            origin = root / 'with_internals/one/attempt_01'
+            request_folder = root / 'with_internals/one/attempt_02'
+            formula = '(forall ((x Int)) (! (= x x) :qid user_candidate_test))'
+            save(origin / 'solver/report.json', {'queries': [
+                {'id': 'a', 'result': 'unknown'}, {'id': 'b', 'result': 'unknown'}]})
+            for q in ('a', 'b'):
+                save(origin / f'internals/{q}/process.json', {'returncode': 0, 'timed_out': False})
+                save(origin / f'internals/{q}/report.json', {'status': 'completed', 'result': 'unknown', 'instantiations_observed': 20})
+                path = origin / f'internals/{q}/instantiations.jsonl'
+                path.write_text('\n'.join(json.dumps({'quantifier_smt': formula,
+                    'binding_terms_callback_order': [str(i)], 'clause_literals_smt': []}) for i in range(5)), encoding='utf-8')
+            exposure = {'payload': {'queries': [{'id': 'a', 'quantifiers': [
+                {'quantifier_smt': formula, 'selection_category': 'candidate_annotation', 'instances': [1, 2, 3]}]}]}, 'context': {}}
+            result = audit.quantifier_counts(root, 'one', request_folder, exposure, {'max_quantifiers': 80, 'max_queries': 3})
+            self.assertEqual(result['status'], 'available')
+            self.assertEqual(result['available_groups'], 2)
+            self.assertEqual(result['unique_formulas_available'], 1)
+            self.assertEqual(result['saved_instances'], 10)
+            self.assertEqual(result['observed_instantiation_events'], 40)
+            self.assertEqual(result['candidate_groups_omitted'], 1)
+            self.assertFalse(result['group_cap_reached'])
+            self.assertEqual(result['omitted_groups_not_explained_by_group_or_background_caps'], 1)
+            summary = audit.quantifier_summary([result])
+            self.assertEqual(summary['available_groups_per_request']['mean'], 2)
+            self.assertEqual(summary['by_proposal']['2']['sent_groups']['max'], 1)
+
+    def test_missing_quantifier_evidence_is_not_measured_as_zero(self):
+        with tempfile.TemporaryDirectory() as work:
+            root = Path(work)
+            result = audit.quantifier_counts(root, 'one', root / 'with_internals/one/attempt_01', {'payload': None}, {})
+            self.assertEqual(result['status'], 'missing_evidence')
+            self.assertIsNone(result['available_groups'])
+            summary = audit.quantifier_summary([result])
+            self.assertEqual(summary['available_groups_per_request']['n'], 0)
+            self.assertEqual(summary['missing_or_invalid_evidence'], 1)
+
     def test_defaults_use_sibling_old_project_and_current_expanded_run(self):
         root = Path('/cluster/home/user/code_verification_git')
         defaults = audit.default_paths(root)

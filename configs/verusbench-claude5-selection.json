@@ -1,0 +1,36 @@
+{
+  "seed": 20261024,
+  "method": "category round-robin; ID-sorted shuffled pools; distinct original contents; no model outcomes",
+  "tasks": [
+    {
+      "id": "cloverbench_linear_search2",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/linear_search2.rs",
+      "sha256": "f57c05810cb4abf1e055c44458b02208838b1c10c3e19a77c8e0daafbb41ac18"
+    },
+    {
+      "id": "diffy_s22if",
+      "category": "Diffy",
+      "path": "unverified/Diffy/s22if.rs",
+      "sha256": "a3fde00144bbfcfd5ae1fea83229877cf44aafd02c1b00445e9c161afabf03e7"
+    },
+    {
+      "id": "mbpp_task_id_557",
+      "category": "MBPP",
+      "path": "unverified/MBPP/task_id_557.rs",
+      "sha256": "3cae196e6f541dd7658d9e07b82674b3c5c4210180e38f0cab1ab0eb0f4007a9"
+    },
+    {
+      "id": "misc_findmax",
+      "category": "Misc",
+      "path": "unverified/Misc/findmax.rs",
+      "sha256": "8c8ab34be41f0d6dba6dbc40d54cfc4b8869620407327b89c27bb82bdd55f4c8"
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "category": "CloverBench",
+      "path": "unverified/CloverBench/array_concat_strong.rs",
+      "sha256": "ffe680369928643c277e9c0ba420fb2b42f1f3078f1e20367a73f409d5eb0524"
+    }
+  ]
+}
