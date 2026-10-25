@@ -14,6 +14,8 @@ def ensure_pool(folder, origin, config, context, tokenizer):
     names += ['solver/' + q['file'] for q in failed]
     source_bytes = {name: contained(origin, name).read_bytes() for name in names}
     plan = {'source_sha256': {name: digest(value) for name, value in source_bytes.items()},
+            'collect_inventory': bool(config.get('collect_inventory')),
+            'inventory_implementation': digest((ROOT / 'diagnostics/z3_feedback_pilot.py').read_bytes()) if config.get('collect_inventory') else None,
             'context': context, 'max_queries': config['max_queries'], 'max_instances_per_group': 5,
             'worker_sha256': digest((ROOT / 'repair_study/worker.py').read_bytes()),
             'ranking_sha256': digest((ROOT / 'repair_study/relevance.py').read_bytes()),

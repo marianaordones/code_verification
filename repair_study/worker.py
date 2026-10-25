@@ -4,13 +4,13 @@ import json
 from pathlib import Path
 import time
 
-from baseline.storage import read_json, write_json, write_text
+from baseline.storage import digest, read_json, write_json, write_text
 from diagnostics.z3_internals import identity
 from diagnostics.z3_probe import head, snapshots
 from .relevance import rank, qids
 
 
-def worker(query, context, output, max_instances_per_group=4):
+def worker(query, context, output, max_instances_per_group=4, collect_inventory=False):
     output.mkdir(parents=True, exist_ok=True)
     report = {'status': 'unavailable', 'timeout_ms': 5000, 'instantiations_observed': 0,
               'callback_errors': 0, 'oversized_events': 0, 'per_qid_observed': {},
@@ -25,6 +25,11 @@ def worker(query, context, output, max_instances_per_group=4):
         solver = z3.Solver()
         solver.from_string(checks[0][0])
         solver.set(timeout=5000)
+        exact_counts, outer_counts = {}, {}
+        if collect_inventory:
+            from diagnostics.z3_feedback_pilot import inventory, clean_qid
+            data = inventory(solver.assertions(), z3)
+            write_json(output / 'input-quantifiers.json', data)
 
         def on_clause(hint, dependencies, clause):
             try:
@@ -35,6 +40,12 @@ def worker(query, context, output, max_instances_per_group=4):
                 if not z3.is_quantifier(quantifier):
                     return
                 formula = quantifier.sexpr()
+                if collect_inventory:
+                    key = digest(formula.encode())
+                    exact_counts[key] = exact_counts.get(key, 0) + 1
+                    outer = clean_qid(quantifier.qid())
+                    if outer is not None:
+                        outer_counts[outer] = outer_counts.get(outer, 0) + 1
                 for qid in qids(formula):
                     report['per_qid_observed'][qid] = report['per_qid_observed'].get(qid, 0) + 1
                 score, category = rank(formula, context)
@@ -67,6 +78,9 @@ def worker(query, context, output, max_instances_per_group=4):
                       check_seconds=time.perf_counter() - start,
                       statistics={key: value for key, value in solver.statistics()})
         assert callback is not None
+        if collect_inventory:
+            report.update(instantiations_by_exact_formula=exact_counts,
+                          instantiations_by_outer_qid=outer_counts)
     except Exception as error:
         report['error'] = str(error)
     events = [e for group in sorted(groups.values(), key=lambda g: g['rank']) for e in group['events']]
@@ -82,7 +96,9 @@ if __name__ == '__main__':
     parser.add_argument('--context', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--max-instances-per-group', type=int, default=4)
+    parser.add_argument('--collect-inventory', action='store_true')
     args = parser.parse_args()
     if args.max_instances_per_group < 1:
         parser.error('max-instances-per-group must be positive')
-    raise SystemExit(worker(args.query, read_json(args.context), args.output, args.max_instances_per_group))
+    raise SystemExit(worker(args.query, read_json(args.context), args.output, args.max_instances_per_group,
+                          args.collect_inventory))

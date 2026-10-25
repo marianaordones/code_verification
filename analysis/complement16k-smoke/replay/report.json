@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "timeout_ms": 5000,
+  "instantiations_observed": 0,
+  "callback_errors": 0,
+  "oversized_events": 0,
+  "per_qid_observed": {},
+  "max_instances_per_group": 4,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "result": "unknown",
+  "reason_unknown": "(incomplete quantifiers)",
+  "check_seconds": 0.0030737000015506055,
+  "statistics": {
+    "final checks": 1,
+    "num checks": 1,
+    "mk bool var": 1,
+    "arith-make-feasible": 1,
+    "arith-max-columns": 4,
+    "num allocs": 510195,
+    "rlimit count": 163,
+    "max memory": 21.03,
+    "memory": 21.03,
+    "time": 0.002
+  },
+  "instantiations_by_exact_formula": {},
+  "instantiations_by_outer_qid": {},
+  "instantiations_saved": 0
+}

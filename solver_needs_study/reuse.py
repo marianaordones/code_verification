@@ -34,7 +34,8 @@ def inspect_source(source, destination, config):
     allowed_changes = {'max_attempts', 'internals_token_budget', 'experiment',
                        'reuse_initial_events_required', 'system_prompt_text',
                        'max_quantifiers', 'max_instances_each', 'replay_max_instances',
-                       'shared_initial_events_required'}
+                       'shared_initial_events_required', 'max_model_len', 'complement_token_budget',
+                       'max_unobserved_quantifiers', 'collect_inventory'}
     if previous.get('internals_token_budget') != 24576:
         raise ValueError('Reuse must start from the 24k study')
     if {k: v for k, v in config.items() if k not in allowed_changes} != {
@@ -84,7 +85,8 @@ def prepare_case(source, destination, key, manifest, config, tokenizer, shared_p
     saved = read_json(folder / 'source-feedback.json')
     requests = [read_json(source / arm / key / 'attempt_01/request.json')
                 for arm in ('with_internals', 'without_internals')]
-    common = messages(code, verification, EMPTY, saved['context'], None, [], config=config)
+    common = messages(code, verification, EMPTY, saved['context'], None, [],
+                      config={k: v for k, v in config.items() if k != 'complement_token_budget'})
     common_hash = digest(json.dumps(common, sort_keys=True).encode())
     for request in requests:
         if common_messages(request) != common or request['common_messages_sha256'] != common_hash:
@@ -112,6 +114,8 @@ def prepare_case(source, destination, key, manifest, config, tokenizer, shared_p
             replay_report = read_json(folder / prefix / 'report.json')
             if replay_report.get('status') == 'completed':
                 snapshot(prefix + 'instantiations.jsonl', evidence_root=evidence)
+                if config.get('collect_inventory'):
+                    snapshot(prefix + 'input-quantifiers.json', evidence_root=evidence)
     # Verify query bytes match the original exposed payload whenever available.
     for query in (saved['internals'] or {}).get('queries', []):
         record = next(q for q in failed if q['id'] == query['id'])

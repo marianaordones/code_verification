@@ -22,4 +22,5 @@ prepare_args=(prepare --study "${1:?Study directory}" --tasks "${2:-100}"
     --config "${4:-configs/solver-needs-qwen14b.json}")
 if [[ -n "${5:-}" ]]; then prepare_args+=(--reuse-initial-from "$5"); fi
 if [[ -n "${6:-}" ]]; then prepare_args+=(--reference-settings-from "$6"); fi
+if [[ -n "${7:-}" ]]; then prepare_args+=(--shared-initial-events "$7"); fi
 python -m solver_needs_study "${prepare_args[@]}"

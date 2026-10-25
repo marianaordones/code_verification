@@ -13,11 +13,13 @@ from .data import upstream
 ARMS = ('with_internals', 'without_internals')
 
 
-def messages(code, verification, action, context, payload, history, config=None):
+def messages(code, verification, action, context, payload, history, config=None, complement=None):
     _, laws = upstream()
     system = (config or {}).get('system_prompt_text')
     if system is None:
         system = (ROOT / 'prompts/solver-needs/system.txt').read_text(encoding='utf-8')
+    if (config or {}).get('complement_token_budget'):
+        system += '\n' + (ROOT / 'prompts/solver-needs/complement.txt').read_text(encoding='utf-8')
     # Same complete catalogue for every task and every arm; no successful probe IDs.
     catalogue = '\n'.join(f'LAW {name}\n{body.strip()}' for name, body in laws.LAWS.items())
     user = ('Repair the proof hint at REPAIR_SLOT_BEGIN/END.\n'
@@ -29,16 +31,21 @@ def messages(code, verification, action, context, payload, history, config=None)
             '<checked_law_catalogue>\n' + catalogue + '\n</checked_law_catalogue>\n')
     if payload and payload.get('queries'):
         user += '<solver_internals>\n' + json.dumps(payload, ensure_ascii=False, indent=2) + '\n</solver_internals>\n'
+    if complement:
+        user += '<complementary_internals>\n' + json.dumps(complement, ensure_ascii=False, indent=2) + '\n</complementary_internals>\n'
     user += 'Return only the four-field JSON action. Supply a complete replacement for the current slot/settings.'
     return [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]
 
 
-def fits(code, verification, action, context, payload, history, tokenizer, config):
+def fits(code, verification, action, context, payload, history, tokenizer, config, complement=None):
     if payload:
         block = json.dumps(payload, ensure_ascii=False, indent=2)
         if len(tokenizer.encode(block, add_special_tokens=False)) > config['internals_token_budget']:
             return False
-    prompt = messages(code, verification, action, context, payload, history, config=config)
+    if complement and len(tokenizer.encode(json.dumps(complement, ensure_ascii=False, indent=2),
+            add_special_tokens=False)) > config['complement_token_budget']:
+        return False
+    prompt = messages(code, verification, action, context, payload, history, config=config, complement=complement)
     return len(tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True)) + config['max_tokens'] <= config['max_model_len']
 
 
@@ -63,6 +70,8 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
                             str((folder / 'source-context.json').resolve()), '--output', str(output.resolve())]
             if config.get('replay_max_instances') is not None:
                 command += ['--max-instances-per-group', str(config['replay_max_instances'])]
+            if config.get('collect_inventory'):
+                command += ['--collect-inventory']
             call = execute(command, 20, env=api_env())
             write_json(output / 'process.json', call)
         else:
@@ -122,6 +131,13 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
              'availability': 'available' if payload['queries'] else 'unavailable',
              'capture_errors': report['capture_errors'],
              'policy': 'first up to three SAT/UNKNOWN queries; only outcome-concordant replays; bounded relevance-ranked events'}
+    if config.get('complement_token_budget'):
+        from .complement import build
+        value['complement'] = build(folder, context, value['internals'], tokenizer, config,
+            lambda extra: fits(code, verification, action, context, value['internals'], history,
+                               tokenizer, config, complement=extra))
+        value['token_counts'] = {name: len(tokenizer.encode(json.dumps(value[name], ensure_ascii=False,
+            indent=2), add_special_tokens=False)) if value.get(name) else 0 for name in ('internals', 'complement')}
     write_json(destination, value)
     return value
 

@@ -33,8 +33,13 @@ def configuration(path=DEFAULT_CONFIG):
         validate_config(config)
         return config
     model_identity(config)
-    if config['max_attempts'] not in (3, 4) or config['max_model_len'] != 49152 or config['max_tokens'] != 4096:
-        raise ValueError('Expected three/four total proposals, 48k context and 4096 output tokens')
+    if config['max_attempts'] not in (3, 4) or config['max_model_len'] != (61440 if config.get('complement_token_budget') else 49152) or config['max_tokens'] != 4096:
+        raise ValueError('Expected three/four proposals, 48k context (60k for complement), and 4096 output tokens')
+    if config.get('complement_token_budget') and (
+            config['max_attempts'] != 3 or config['internals_token_budget'] != 24576 or
+            config['complement_token_budget'] != 16384 or config['max_unobserved_quantifiers'] != 20 or
+            config['max_quantifiers'] != 50 or config['max_instances_each'] != 3 or not config.get('collect_inventory')):
+        raise ValueError('Complement experiment requires 24k base, 16k extra, 50x3, 20 unobserved formulas, three proposals')
     return config
 
 
@@ -54,7 +59,8 @@ def load_tokenizer(config):
 
 def implementation():
     return file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'),
-        ROOT / 'prompts/solver-needs/system.txt', ROOT / 'configs/solver-needs-qwen14b.json',
+        ROOT / 'prompts/solver-needs/system.txt', ROOT / 'prompts/solver-needs/complement.txt',
+        ROOT / 'configs/solver-needs-qwen14b-complement16k.json', ROOT / 'configs/solver-needs-qwen14b.json',
         ROOT / 'configs/solver-needs-qwen14b-internals24k.json',
         ROOT / 'configs/solver-needs-qwen14b-internals32k.json',
         ROOT / 'configs/solver-needs-qwen14b-internals32k-80x3.json',
@@ -211,21 +217,27 @@ def run_case(root, arm, case, config, inference, verifier):
             result = read_json(folder / 'result.json')
         else:
             started = time.perf_counter()
-            payload = feedback['internals'] if arm == 'with_internals' else None
-            prompt = messages(code, verification, action, feedback['context'], payload, history, config=config)
-            common = messages(code, verification, action, feedback['context'], None, history, config=config)
-            if not fits(code, verification, action, feedback['context'], payload, history, inference.tokenizer, config):
+            base_comparison = bool(config.get('complement_token_budget'))
+            payload = feedback['internals'] if arm == 'with_internals' or base_comparison else None
+            extra = feedback.get('complement') if base_comparison and arm == 'with_internals' else None
+            prompt = messages(code, verification, action, feedback['context'], payload, history, config=config, complement=extra)
+            common = messages(code, verification, action, feedback['context'], payload if base_comparison else None, history, config=config)
+            if not fits(code, verification, action, feedback['context'], payload, history, inference.tokenizer, config, complement=extra):
                 raise ValueError('Actual prompt exceeds context; no automatic truncation')
             request = {'messages': prompt, 'seed': (config['seed'] + index if config.get('seed') is not None else None), 'parameters': config,
                 'candidate_sha256': digest(code.encode()), 'common_messages_sha256': digest(json.dumps(common, sort_keys=True).encode()),
-                'internals_exposed': bool(payload and payload['queries'])}
+                'internals_exposed': bool(payload and payload['queries']), 'complement_exposed': bool(extra)}
             if config.get('provider') == 'claude_code':
                 request['seed'] = None
             if (folder / 'request.json').exists() and read_json(folder / 'request.json') != request:
                 raise ValueError('Saved request changed')
             write_json(folder / 'request.json', request)
-            write_json(folder / 'exposure.json', {'availability': feedback['availability'] if arm == 'with_internals' else 'withheld_by_design',
-                                               'payload': payload, 'context': feedback['context']})
+            write_json(folder / 'exposure.json', {'availability': feedback['availability'] if arm == 'with_internals' or base_comparison else 'withheld_by_design',
+                                               'payload': payload, 'complement': extra,
+                                               'token_counts': {name: len(inference.tokenizer.encode(json.dumps(value,
+                                                   ensure_ascii=False, indent=2), add_special_tokens=False)) if value else 0
+                                                   for name, value in [('internals', payload), ('complement', extra)]},
+                                               'context': feedback['context']})
             if (folder / 'response.json').exists():
                 response = read_json(folder / 'response.json')
             else:
@@ -276,7 +288,7 @@ def run_case(root, arm, case, config, inference, verifier):
             if cache.exists():
                 feedback = read_json(cache)
             else:
-                feedback = internals(folder, code, verification, action, history, inference.tokenizer, config) if arm == 'with_internals' else control_feedback(code, verification)
+                feedback = internals(folder, code, verification, action, history, inference.tokenizer, config) if arm == 'with_internals' or config.get('complement_token_budget') else control_feedback(code, verification)
                 write_json(cache, feedback)
                 result['feedback_seconds'] = time.perf_counter() - started
                 write_json(folder / 'result.json', result)
@@ -304,7 +316,7 @@ def compare(root):
             expected = digest((root / 'inputs' / case['id'] / 'candidate.rs').read_bytes())
             row['first_pair_valid'] = (a['candidate_sha256'] == b['candidate_sha256'] == expected
                 and a['common_messages_sha256'] == b['common_messages_sha256']
-                and a['parameters'] == b['parameters'] and a['seed'] == b['seed'] and not b['internals_exposed'])
+                and a['parameters'] == b['parameters'] and a['seed'] == b['seed'] and (not b.get('complement_exposed') if manifest['config'].get('complement_token_budget') else not b['internals_exposed']))
         rows.append(row)
     for arm in ARMS:
         completed = [read_json(root / arm / c['id'] / 'task.json') for c in manifest['cases'] if (root / arm / c['id'] / 'task.json').exists()]
@@ -333,6 +345,8 @@ def compare(root):
         'sessions': [read_json(p) for p in root.glob('session-*.json')],
         'label_disagreements': [r['id'] for r in rows if r['paper_label'] != r['release_label']],
         'scope': manifest['scope']}
+    report['arm_meanings'] = ({'with_internals': 'base24k plus complement16k', 'without_internals': 'base24k only'}
+        if manifest['config'].get('complement_token_budget') else {'with_internals': 'internals', 'without_internals': 'no internals'})
     write_json(root / 'comparison.json', report)
     lines = [f"# Solver Needs: paired repair ({manifest['config']['model']})", '', '| Arm | Completed | Solved | Attempts | Unchanged |', '|---|---|---|---|---|']
     for arm, s in summaries.items():
@@ -345,6 +359,8 @@ def compare(root):
         f"{manifest['config']['max_attempts']} TOTAL proposals per task/arm. Labels and successful probes are hidden from model.",
         'Paper/release label disagreements and exclusive wins are listed in comparison.json.',
         'AX catalogue lemmas are checked, not unchecked axioms. NLA changes are explicit experimental actions.']
+    if manifest['config'].get('complement_token_budget'):
+        lines += ['', 'IMPORTANT: with_internals = base24k + complement16k; without_internals = base24k only (both receive internals).']
     write_text(root / 'comparison.md', '\n'.join(lines))
     print(root / 'comparison.md', flush=True)
     return report
