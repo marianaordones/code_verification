@@ -32,6 +32,21 @@ def completed(root, arm, key, win=None):
 
 
 class SolverNeedsAnalysisTests(unittest.TestCase):
+    def test_frozen_prompt_metadata_does_not_change_otherwise_identical_configs(self):
+        with tempfile.TemporaryDirectory() as work:
+            a, b = Path(work) / 'a', Path(work) / 'b'
+            study(a, ['one'])
+            study(b, ['two'])
+            manifest = audit.load(b / 'manifest.json')
+            manifest['config']['system_prompt_text'] = 'frozen original'
+            save(b / 'manifest.json', manifest)
+            with patch.object(audit, 'tokenizer_for', return_value=(None, 'unavailable')):
+                self.assertTrue(audit.analyze_group([a, b])['configs_identical_within_group'])
+                manifest = audit.load(a / 'manifest.json')
+                manifest['config']['system_prompt_text'] = 'different'
+                save(a / 'manifest.json', manifest)
+                self.assertFalse(audit.analyze_group([a, b])['configs_identical_within_group'])
+
     def test_quantifier_counts_use_evidence_from_previous_proposal(self):
         with tempfile.TemporaryDirectory() as work:
             root = Path(work)

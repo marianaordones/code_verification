@@ -207,6 +207,8 @@ def analyze_group(paths, tokenizer_path=None):
             cases.append(row)
         issues.append({'path': str(root), 'tokenizer_available': encode is not None, 'tokenizer': tokenizer_info})
     eligible = [r for r in cases if not r['initially_verified']]
+    comparable_configs = [{k: v for k, v in c.items() if k != 'system_prompt_text'} for c in configs]
+    explicit_system_prompts = {c['system_prompt_text'] for c in configs if 'system_prompt_text' in c}
     paired = [r for r in eligible if all(r['arms'][arm]['completed'] for arm in ARMS)]
     max_attempts = max((c['max_attempts'] for c in configs), default=4)
 
@@ -243,7 +245,9 @@ def analyze_group(paths, tokenizer_path=None):
     return {'selected': len(cases), 'repair_denominator': len(eligible),
         'initially_verified': len(cases) - len(eligible), 'paired_completed': len(paired),
         'complete': bool(cases) and len(configs) == len(paths) and len(paired) == len(eligible),
-        'configs_identical_within_group': all(c == configs[0] for c in configs),
+        'configs_identical_within_group': all(c == comparable_configs[0] for c in comparable_configs)
+            and len(explicit_system_prompts) <= 1,
+        'configuration_comparison_scope': 'Configuration fields excluding optional frozen system_prompt_text; explicitly stored system prompts must agree. Actual historical prompt text is not inferred from configs that lack that field.',
         'completed_by_arm': {a: sum(r['arms'][a]['completed'] for r in eligible) for a in ARMS},
         'missing_by_arm': {a: [r['id'] for r in eligible if not r['arms'][a]['completed']] for a in ARMS},
         'all_selected_curve': curve(eligible), 'paired_completed_curve': curve(paired),

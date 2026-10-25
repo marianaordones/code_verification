@@ -87,6 +87,11 @@ def validate(root):
 def prepare(args):
     root = args.study.resolve()
     config = configuration(getattr(args, 'config', DEFAULT_CONFIG))
+    settings_reference = getattr(args, 'reference_settings_from', None)
+    reference_info = None
+    if settings_reference is not None:
+        from .reference import reference_settings
+        config, reference_info = reference_settings(settings_reference.resolve(), config)
     reuse_source = getattr(args, 'reuse_initial_from', None)
     shared_pool = getattr(args, 'shared_initial_events', None)
     if config.get('shared_initial_events_required') and shared_pool is None:
@@ -100,6 +105,8 @@ def prepare(args):
     if config.get('reuse_initial_events_required') and reuse_source is None:
         raise ValueError('This variant requires --reuse-initial-from pointing to the completed 24k study')
     if reuse_source is not None:
+        if settings_reference is not None:
+            raise ValueError('Choose settings-only reference or same-task evidence reuse, not both')
         from .reuse import inspect_source
         reuse_manifest, config = inspect_source(reuse_source.resolve(), root, config)
     if (root / 'manifest.json').exists():
@@ -115,9 +122,19 @@ def prepare(args):
     selection_path = getattr(args, 'selection', SELECTION)
     rows = selected_cases(args.tasks, selection_path)
     selected_ids = [row['id'] for row in rows]
+    if reference_info is not None:
+        from .reference import check_reference_prompt
+        if len(selected_ids) != 362 or set(selected_ids) & set(reference_info['ids']):
+            raise ValueError('Expected exactly 362 tasks outside the original 100-task reference')
+        check_reference_prompt(settings_reference.resolve(), config, reference_info['ids'][0])
     plan = {'revision': REVISION, 'task_count': args.tasks, 'selected_ids': selected_ids,
             'selection_sha256': digest(selection_path.read_bytes()), 'config': config,
             'tool_hashes': {k: tool_signature(v) for k, v in identities.items()}, 'implementation': implementation()}
+    if reference_info is not None:
+        reference_manifest = read_json(settings_reference / 'manifest.json')
+        if reference_manifest['tool_hashes'] != plan['tool_hashes']:
+            raise ValueError('Verus/Z3 tool identities differ from the original 24k experiment')
+        plan['settings_reference'] = reference_info
     if reuse_manifest is not None:
         if [c['id'] for c in reuse_manifest['cases']] != selected_ids:
             raise ValueError('Reuse source must contain exactly the same selected IDs in the same order')
@@ -400,6 +417,8 @@ def main():
                         help='Completed study providing frozen initial candidates and saved replay events')
     parser.add_argument('--shared-initial-events', type=Path,
                         help='Shared initial replay pool collected once with five saved instances per group')
+    parser.add_argument('--reference-settings-from', type=Path,
+                        help='Original completed 100-task study whose settings/prompt must match the complementary run')
     args = parser.parse_args()
     if not 1 <= args.tasks <= 462:
         parser.error('tasks must be between 1 and 462 (and fit the saved selection)')
