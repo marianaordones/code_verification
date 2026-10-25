@@ -1,0 +1,26 @@
+[
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a (* (- 1.0) b)) 0.0)"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ b (* (- 1.0) c)) 0.0)"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (>= (+ a (* (- 1.0) c)) 0.0))"
+    ]
+  }
+]

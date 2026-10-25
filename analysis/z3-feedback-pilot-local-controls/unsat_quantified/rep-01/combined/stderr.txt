@@ -1,0 +1,1 @@
+[quantifier_instances] control_nonnegative :      1 :   0 :   0 :   0 : 1

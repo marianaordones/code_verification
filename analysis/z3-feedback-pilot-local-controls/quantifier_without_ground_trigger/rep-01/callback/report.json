@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "mode": "callback",
+  "callback_errors": 0,
+  "rules_observed": {
+    "assumption": 2
+  },
+  "events_omitted_by_limits": 0,
+  "scope": "isolated diagnostic API replay, not original Verus search",
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "overrides": {
+    "timeout_ms": 5000,
+    "qi.profile": false
+  },
+  "result": "unknown",
+  "check_seconds": 0.055944000003364636,
+  "reason_unknown": "(incomplete quantifiers)",
+  "statistics": {
+    "final checks": 1,
+    "num checks": 1,
+    "mk bool var": 2,
+    "arith-upper": 1,
+    "arith-make-feasible": 1,
+    "arith-max-columns": 5,
+    "num allocs": 511010,
+    "rlimit count": 194,
+    "max memory": 21.03,
+    "memory": 21.03,
+    "time": 0.041
+  },
+  "saved_events": 2,
+  "instantiations_by_exact_formula": {},
+  "instantiations_by_qid": {},
+  "event_formulas_not_in_inventory": [],
+  "event_qids_not_in_inventory": [],
+  "input_quantifiers": 1,
+  "inventory_quantifiers_saved": 1,
+  "inventory_incomplete": false,
+  "dependency_nonempty_events": 0,
+  "no_event_observed_quantifiers": 1,
+  "quantifiers_without_explicit_patterns": 0,
+  "matching_rows_without_input_term_examples": 1,
+  "detailed_theory_hints_observed": {}
+}

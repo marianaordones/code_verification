@@ -1,0 +1,27 @@
+[
+  {
+    "formula_sha256": "a84ca040dcfb455e77261c92e56375a085f6ae0a6a01b11c8ae766a1ac6dc469",
+    "qid": "control_no_ground_term",
+    "quantifier_smt": "(forall ((x Int)) (! (> (f x) x) :pattern ((f x)) :qid control_no_ground_term))",
+    "formula_omitted": false,
+    "kind": "forall",
+    "bound_variables": [
+      {
+        "name": "x",
+        "sort": "Int"
+      }
+    ],
+    "explicit_patterns_smt": [
+      "((f (:var 0)))"
+    ],
+    "pattern_root_symbols": [
+      "f"
+    ],
+    "weight": 1,
+    "observed_exact_formula_events": 0,
+    "observed_events_by_unique_qid": 0,
+    "observation_status": "no_event_observed",
+    "native_profile_records": null,
+    "binding_samples_callback_order": []
+  }
+]

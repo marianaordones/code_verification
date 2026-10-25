@@ -1,0 +1,9 @@
+{
+  "quantifiers": [],
+  "matching": [],
+  "ast_nodes_visited": 4,
+  "ast_node_limit_hit": false,
+  "quantifiers_found": 0,
+  "quantifiers_not_saved": 0,
+  "oversized_ground_terms_not_saved": 0
+}

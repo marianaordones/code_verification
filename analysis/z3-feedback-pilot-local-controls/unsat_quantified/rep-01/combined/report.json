@@ -1,0 +1,54 @@
+{
+  "status": "completed",
+  "mode": "combined",
+  "callback_errors": 0,
+  "rules_observed": {
+    "assumption": 2,
+    "inst": 1
+  },
+  "events_omitted_by_limits": 0,
+  "scope": "isolated diagnostic API replay, not original Verus search",
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "overrides": {
+    "timeout_ms": 5000,
+    "qi.profile": true
+  },
+  "result": "unsat",
+  "check_seconds": 0.02698919999966165,
+  "reason_unknown": null,
+  "statistics": {
+    "conflicts": 1,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 2,
+    "quant instantiations": 1,
+    "arith-lower": 1,
+    "arith-make-feasible": 1,
+    "arith-max-columns": 5,
+    "num allocs": 512582,
+    "rlimit count": 178,
+    "max memory": 21.01,
+    "memory": 21.01,
+    "time": 0.006
+  },
+  "saved_events": 3,
+  "instantiations_by_exact_formula": {
+    "00a47ec809905b68cddcb2c654d4f0d694d54166f7b9d9f8f184ae5815e190ed": 1
+  },
+  "instantiations_by_qid": {
+    "control_nonnegative": 1
+  },
+  "event_formulas_not_in_inventory": [],
+  "event_qids_not_in_inventory": [],
+  "input_quantifiers": 1,
+  "inventory_quantifiers_saved": 1,
+  "inventory_incomplete": false,
+  "dependency_nonempty_events": 0,
+  "no_event_observed_quantifiers": 0,
+  "quantifiers_without_explicit_patterns": 0,
+  "matching_rows_without_input_term_examples": 0,
+  "detailed_theory_hints_observed": {}
+}

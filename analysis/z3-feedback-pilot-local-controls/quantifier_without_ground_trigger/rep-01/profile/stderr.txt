@@ -1,0 +1,1 @@
+[quantifier_instances] control_no_ground_term :     79 :   0 :   0 :   1 : 1

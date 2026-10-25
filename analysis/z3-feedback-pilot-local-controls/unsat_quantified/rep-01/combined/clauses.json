@@ -1,0 +1,29 @@
+[
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((x Int)) (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (>= (f 0) 0))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((x Int))\n        (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))\n      (not (>= (f 0) 0))\n      (bind 0)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((x Int))\n       (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))",
+      "(>= (f 0) 0)"
+    ],
+    "quantifier_sha256": "00a47ec809905b68cddcb2c654d4f0d694d54166f7b9d9f8f184ae5815e190ed",
+    "qid": "control_nonnegative"
+  }
+]

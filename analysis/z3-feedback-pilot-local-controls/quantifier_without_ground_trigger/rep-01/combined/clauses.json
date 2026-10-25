@@ -1,0 +1,18 @@
+[
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((x Int))\n  (! (let ((a!1 (>= (+ x (* (- 1) (f x))) 0)))\n       (not a!1))\n     :pattern ((f x))\n     :qid control_no_ground_term))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= a 0)"
+    ]
+  }
+]

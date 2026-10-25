@@ -1,0 +1,1009 @@
+[
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((id FuelId))\n  (! (= (fuel_bool id) (fuel_bool_default id))\n     :pattern ((fuel_bool id))\n     :skolemid skolem_prelude_fuel_defaults\n     :qid prelude_fuel_defaults))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((m Poly) (arg Poly))\n  (! (= (mut_ref_current% (mut_ref_update_current% m arg)) arg)\n     :pattern ((mut_ref_update_current% m arg))\n     :skolemid skolem_prelude_mut_ref_update_current_current\n     :qid prelude_mut_ref_update_current_current))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((m Poly) (arg Poly))\n  (! (= (mut_ref_future% (mut_ref_update_current% m arg)) (mut_ref_future% m))\n     :pattern ((mut_ref_update_current% m arg))\n     :skolemid skolem_prelude_mut_ref_update_current_future\n     :qid prelude_mut_ref_update_current_future))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((m Poly) (d Dcr) (t Type))\n  (! (or (not (has_type m (MUTREF d t))) (has_type (mut_ref_current% m) t))\n     :pattern ((has_type m (MUTREF d t)) (mut_ref_current% m))\n     :skolemid skolem_prelude_mut_ref_current_has_type\n     :qid prelude_mut_ref_current_has_type))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((m Poly) (d Dcr) (t Type))\n  (! (or (not (has_type m (MUTREF d t))) (has_type (mut_ref_future% m) t))\n     :pattern ((has_type m (MUTREF d t)) (mut_ref_future% m))\n     :skolemid skolem_prelude_mut_ref_current_has_type\n     :qid prelude_mut_ref_current_has_type))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((m Poly) (d Dcr) (t Type) (arg Poly))\n  (! (or (not (has_type m (MUTREF d t)))\n         (not (has_type arg t))\n         (has_type (mut_ref_update_current% m arg) (MUTREF d t)))\n     :pattern ((has_type m (MUTREF d t)) (mut_ref_update_current% m arg))\n     :skolemid skolem_prelude_mut_ref_update_has_type\n     :qid prelude_mut_ref_update_has_type))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (or (not (sized d)) (sized (DST d)))\n     :pattern ((sized (DST d)))\n     :skolemid skolem_prelude_sized_decorate_struct_inherit\n     :qid prelude_sized_decorate_struct_inherit))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (REF d))\n     :pattern ((sized (REF d)))\n     :skolemid skolem_prelude_sized_decorate_ref\n     :qid prelude_sized_decorate_ref))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (MUT_REF d))\n     :pattern ((sized (MUT_REF d)))\n     :skolemid skolem_prelude_sized_decorate_mut_ref\n     :qid prelude_sized_decorate_mut_ref))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr) (t Type) (d2 Dcr))\n  (! (sized (BOX d t d2))\n     :pattern ((sized (BOX d t d2)))\n     :skolemid skolem_prelude_sized_decorate_box\n     :qid prelude_sized_decorate_box))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr) (t Type) (d2 Dcr))\n  (! (sized (RC d t d2))\n     :pattern ((sized (RC d t d2)))\n     :skolemid skolem_prelude_sized_decorate_rc\n     :qid prelude_sized_decorate_rc))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr) (t Type) (d2 Dcr))\n  (! (sized (ARC d t d2))\n     :pattern ((sized (ARC d t d2)))\n     :skolemid skolem_prelude_sized_decorate_arc\n     :qid prelude_sized_decorate_arc))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (GHOST d))\n     :pattern ((sized (GHOST d)))\n     :skolemid skolem_prelude_sized_decorate_ghost\n     :qid prelude_sized_decorate_ghost))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (TRACKED d))\n     :pattern ((sized (TRACKED d)))\n     :skolemid skolem_prelude_sized_decorate_tracked\n     :qid prelude_sized_decorate_tracked))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (NEVER d))\n     :pattern ((sized (NEVER d)))\n     :skolemid skolem_prelude_sized_decorate_never\n     :qid prelude_sized_decorate_never))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((d Dcr))\n  (! (sized (CONST_PTR d))\n     :pattern ((sized (CONST_PTR d)))\n     :skolemid skolem_prelude_sized_decorate_const_ptr\n     :qid prelude_sized_decorate_const_ptr))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(sized $)"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((i Int))\n  (! (= i (const_int (CONST_INT i)))\n     :pattern ((CONST_INT i))\n     :skolemid skolem_prelude_type_id_const_int\n     :qid prelude_type_id_const_int))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((b Bool))\n  (! (= b (const_bool (CONST_BOOL b)))\n     :pattern ((CONST_BOOL b))\n     :skolemid skolem_prelude_type_id_const_bool\n     :qid prelude_type_id_const_bool))"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((b Bool))\n  (! (has_type (B b) BOOL)\n     :pattern ((has_type (B b) BOOL))\n     :skolemid skolem_prelude_has_type_bool\n     :qid prelude_has_type_bool))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (or (not %%location_label%%1) a!1) %%location_label%%1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (or (not %%location_label%%1) a!1))",
+      "%%location_label%%1"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (or (not %%location_label%%1) a!1) %%location_label%%1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "%%location_label%%1",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (or (not %%location_label%%1) a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (or (not %%location_label%%1) a!1) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (or (not %%location_label%%1) a!1))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (or (not %%location_label%%1) a!1) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (or (not %%location_label%%1) a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (not (or (not %%location_label%%1) a!1))\n           (not %%location_label%%1)\n           a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (or (not %%location_label%%1) a!1)))",
+      "(not %%location_label%%1)",
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (tseitin (not (or (not %%location_label%%1) a!1))\n           (not %%location_label%%1)\n           a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not %%location_label%%1)",
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (or (not %%location_label%%1) a!1)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(tseitin (or (not %%location_label%%2)\n             (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))\n         %%location_label%%2)",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(or (not %%location_label%%2)\n    (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))",
+      "%%location_label%%2"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(tseitin (or (not %%location_label%%2)\n             (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))\n         %%location_label%%2)",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "%%location_label%%2",
+      "(or (not %%location_label%%2)\n    (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))\n  (tseitin (or (not %%location_label%%2) a!1) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(or (not %%location_label%%2)\n    (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))",
+      "(not (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))\n  (tseitin (or (not %%location_label%%2) a!1) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))",
+      "(or (not %%location_label%%2)\n    (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))\n  (tseitin (not (or (not %%location_label%%2) a!1))\n           (not %%location_label%%2)\n           a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (or (not %%location_label%%2)\n         (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))",
+      "(not %%location_label%%2)",
+      "(req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))\n  (tseitin (not (or (not %%location_label%%2) a!1))\n           (not %%location_label%%2)\n           a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not %%location_label%%2)",
+      "(req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))",
+      "(not (or (not %%location_label%%2)\n         (req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (not (= tmp%3 a!1)) tmp%3 (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not (= tmp%3 a!1)))",
+      "tmp%3",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (not (= tmp%3 a!1)) tmp%3 (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "tmp%3",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not a!1))",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not (= tmp%3 a!1)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (not (= tmp%3 a!1)) (not tmp%3) a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not (= tmp%3 a!1)))",
+      "(not tmp%3)",
+      "(= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (not (= tmp%3 a!1)) (not tmp%3) a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not tmp%3)",
+      "(= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not (= tmp%3 a!1)))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (= tmp%3 a!1) tmp%3 a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (= tmp%3 a!1))",
+      "tmp%3",
+      "(= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (= tmp%3 a!1) tmp%3 a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "tmp%3",
+      "(= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (= tmp%3 a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (= tmp%3 a!1) (not tmp%3) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (= tmp%3 a!1))",
+      "(not tmp%3)",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "tseitin",
+    "hint_smt": "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (tseitin (= tmp%3 a!1) (not tmp%3) (not a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not tmp%3)",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (not a!1))",
+      "(let ((a!1 (= r@ (EucDiv (Add (Add a_@ b_@) c_@) 2))))\n  (= tmp%3 a!1))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ b_@ (* (- 1) c_@)) 0)",
+      "(>= (+ b_@ (* (- 1) c_@)) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ b_@ (* (- 1) c_@)) 0)",
+      "(<= (+ b_@ (* (- 1) c_@)) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a_@ (* (- 1) c_@)) 0)",
+      "(>= (+ a_@ (* (- 1) c_@)) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a_@ (* (- 1) c_@)) 0)",
+      "(<= (+ a_@ (* (- 1) c_@)) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a_@ (* (- 1) b_@)) 0)",
+      "(>= (+ a_@ (* (- 1) b_@)) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a_@ (* (- 1) b_@)) 0)",
+      "(<= (+ a_@ (* (- 1) b_@)) 0)"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv)))\n      (a!2 (>= (+ a! (* (- 1) (iLo 64))) 0))\n      (a!3 (>= (+ a! (* (- 1) (iHi 64))) 0)))\n  (inst a!1 (= (or (not a!2) a!3) (iInv 64 a!)) (bind 64 a!) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) a!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) a!)) 0))))\n  (not (= a!2 (iInv 64 a!)))))"
+    ],
+    "quantifier_sha256": "d1aa2de1dc37d6d101b88071d63689ce1ef66a8beb0fc435cf6c065eb058598f",
+    "qid": "prelude_i_inv"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv)))\n      (a!2 (>= (+ b! (* (- 1) (iLo 64))) 0))\n      (a!3 (>= (+ b! (* (- 1) (iHi 64))) 0)))\n  (inst a!1 (= (or (not a!2) a!3) (iInv 64 b!)) (bind 64 b!) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) b!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) b!)) 0))))\n  (not (= a!2 (iInv 64 b!)))))"
+    ],
+    "quantifier_sha256": "d1aa2de1dc37d6d101b88071d63689ce1ef66a8beb0fc435cf6c065eb058598f",
+    "qid": "prelude_i_inv"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv)))\n      (a!2 (>= (+ c! (* (- 1) (iLo 64))) 0))\n      (a!3 (>= (+ c! (* (- 1) (iHi 64))) 0)))\n  (inst a!1 (= (or (not a!2) a!3) (iInv 64 c!)) (bind 64 c!) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) c!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) c!)) 0))))\n  (not (= a!2 (iInv 64 c!)))))"
+    ],
+    "quantifier_sha256": "d1aa2de1dc37d6d101b88071d63689ce1ef66a8beb0fc435cf6c065eb058598f",
+    "qid": "prelude_i_inv"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add)))\n      (a!2 (= (+ b! a! (* (- 1) (Add a! b!))) 0)))\n  (inst a!1 (not a!2) (bind a! b!) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add))))\n  (not a!1))",
+      "(= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ],
+    "quantifier_sha256": "7fd9e9edab738de1ee627a63389510daa6330ca12ba90188d3f2c3c7bfb2719f",
+    "qid": "prelude_add"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add)))\n      (a!2 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (inst a!1 (not (= a!2 0)) (bind (Add a! b!) c!) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add))))\n  (not a!1))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (= a!1 0))"
+    ],
+    "quantifier_sha256": "7fd9e9edab738de1ee627a63389510daa6330ca12ba90188d3f2c3c7bfb2719f",
+    "qid": "prelude_add"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n             (! (let ((a!1 (or (not (sized Rhs&.))\n                               (not (sized (proj%%core!ops.arith.Div./Output\n                                             Self%&.\n                                             Self%&\n                                             Rhs&.\n                                             Rhs&))))))\n                  (or (not (tr_bound%core!ops.arith.Div.\n                             Self%&.\n                             Self%&\n                             Rhs&.\n                             Rhs&))\n                      (not a!1)))\n                :pattern ((tr_bound%core!ops.arith.Div.\n                            Self%&.\n                            Self%&\n                            Rhs&.\n                            Rhs&))\n                :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n                :qid internal_core__ops__arith__Div_trait_type_bounds_definition)))\n      (a!2 (not (sized (proj%%core!ops.arith.Div./Output\n                         (REF $)\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!3 (or (not (sized (REF $))) a!2)))\n(let ((a!4 (or (not (tr_bound%core!ops.arith.Div.\n                      (REF $)\n                      (SINT 64)\n                      (REF $)\n                      (SINT 64)))\n               (not a!3))))\n  (inst a!1 (not a!4) (bind (REF $) (SINT 64) (REF $) (SINT 64)) (gen 0)))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n             (! (let ((a!1 (or (not (sized Rhs&.))\n                               (not (sized (proj%%core!ops.arith.Div./Output\n                                             Self%&.\n                                             Self%&\n                                             Rhs&.\n                                             Rhs&))))))\n                  (or (not (tr_bound%core!ops.arith.Div.\n                             Self%&.\n                             Self%&\n                             Rhs&.\n                             Rhs&))\n                      (not a!1)))\n                :pattern ((tr_bound%core!ops.arith.Div.\n                            Self%&.\n                            Self%&\n                            Rhs&.\n                            Rhs&))\n                :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n                :qid internal_core__ops__arith__Div_trait_type_bounds_definition))))\n  (not a!1))",
+      "(not (tr_bound%core!ops.arith.Div. (REF $) (SINT 64) (REF $) (SINT 64)))",
+      "(let ((a!1 (not (sized (proj%%core!ops.arith.Div./Output\n                         (REF $)\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!2 (or (not (sized (REF $))) a!1)))\n  (not a!2)))"
+    ],
+    "quantifier_sha256": "3952342b94d0bfcaa12eda76971c1fdab83b6fe3c9684931ec78bc2137f064fd",
+    "qid": "internal_core__ops__arith__Div_trait_type_bounds_definition"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n             (! (let ((a!1 (or (not (sized Rhs&.))\n                               (not (sized (proj%%core!ops.arith.Div./Output\n                                             Self%&.\n                                             Self%&\n                                             Rhs&.\n                                             Rhs&))))))\n                  (or (not (tr_bound%core!ops.arith.Div.\n                             Self%&.\n                             Self%&\n                             Rhs&.\n                             Rhs&))\n                      (not a!1)))\n                :pattern ((tr_bound%core!ops.arith.Div.\n                            Self%&.\n                            Self%&\n                            Rhs&.\n                            Rhs&))\n                :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n                :qid internal_core__ops__arith__Div_trait_type_bounds_definition)))\n      (a!2 (not (sized (proj%%core!ops.arith.Div./Output\n                         $\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!3 (or (not (sized (REF $))) a!2)))\n(let ((a!4 (or (not (tr_bound%core!ops.arith.Div. $ (SINT 64) (REF $) (SINT 64)))\n               (not a!3))))\n  (inst a!1 (not a!4) (bind $ (SINT 64) (REF $) (SINT 64)) (gen 0)))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n             (! (let ((a!1 (or (not (sized Rhs&.))\n                               (not (sized (proj%%core!ops.arith.Div./Output\n                                             Self%&.\n                                             Self%&\n                                             Rhs&.\n                                             Rhs&))))))\n                  (or (not (tr_bound%core!ops.arith.Div.\n                             Self%&.\n                             Self%&\n                             Rhs&.\n                             Rhs&))\n                      (not a!1)))\n                :pattern ((tr_bound%core!ops.arith.Div.\n                            Self%&.\n                            Self%&\n                            Rhs&.\n                            Rhs&))\n                :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n                :qid internal_core__ops__arith__Div_trait_type_bounds_definition))))\n  (not a!1))",
+      "(not (tr_bound%core!ops.arith.Div. $ (SINT 64) (REF $) (SINT 64)))",
+      "(let ((a!1 (not (sized (proj%%core!ops.arith.Div./Output\n                         $\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!2 (or (not (sized (REF $))) a!1)))\n  (not a!2)))"
+    ],
+    "quantifier_sha256": "3952342b94d0bfcaa12eda76971c1fdab83b6fe3c9684931ec78bc2137f064fd",
+    "qid": "internal_core__ops__arith__Div_trait_type_bounds_definition"
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) a!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) a!)) 0))))\n  (not a!2)))",
+      "(not (<= (+ (iLo 64) (* (- 1) a!)) 0))",
+      "(<= (+ (iHi 64) (* (- 1) a!)) 0)"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) b!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) b!)) 0))))\n  (not a!2)))",
+      "(not (<= (+ (iLo 64) (* (- 1) b!)) 0))",
+      "(<= (+ (iHi 64) (* (- 1) b!)) 0)"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (not (<= (+ (iLo 64) (* (- 1) c!)) 0))))\n(let ((a!2 (or a!1 (<= (+ (iHi 64) (* (- 1) c!)) 0))))\n  (not a!2)))",
+      "(not (<= (+ (iLo 64) (* (- 1) c!)) 0))",
+      "(<= (+ (iHi 64) (* (- 1) c!)) 0)"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (>= a!1 0)))"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (not (sized (proj%%core!ops.arith.Div./Output\n                         (REF $)\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!2 (or (not (sized (REF $))) a!1)))\n  (not a!2)))",
+      "(not (sized (REF $)))",
+      "(not (sized (proj%%core!ops.arith.Div./Output\n              (REF $)\n              (SINT 64)\n              (REF $)\n              (SINT 64))))"
+    ]
+  },
+  {
+    "rule": "del",
+    "hint_smt": "del",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (not (sized (proj%%core!ops.arith.Div./Output\n                         $\n                         (SINT 64)\n                         (REF $)\n                         (SINT 64))))))\n(let ((a!2 (or (not (sized (REF $))) a!1)))\n  (not a!2)))",
+      "(not (sized (proj%%core!ops.arith.Div./Output $ (SINT 64) (REF $) (SINT 64))))",
+      "(not (sized (REF $)))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n              (fuel_bool_default\n                fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)))\n      (bind fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((x Bool))\n             (! (= x (%B (B x)))\n                :pattern ((B x))\n                :skolemid skolem_prelude_unbox_box_bool\n                :qid prelude_unbox_box_bool)))\n      (a!2 (not (= true (%B (B true))))))\n  (inst a!1 a!2 (bind true) (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Bool))\n             (! (= x (%B (B x)))\n                :pattern ((B x))\n                :skolemid skolem_prelude_unbox_box_bool\n                :qid prelude_unbox_box_bool))))\n  (not a!1))",
+      "(%B (B true))"
+    ],
+    "quantifier_sha256": "a7499066800606cb9eb7f21d7a04c3280762e64d25444da178c35375c491c984",
+    "qid": "prelude_unbox_box_bool"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (not (has_type (vstd!std_specs.ops.DivSpec.obeys_div_spec.?\n                            $\n                            (SINT 64)\n                            $\n                            (SINT 64))\n                          BOOL))))\n  (inst (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n          (! (has_type (vstd!std_specs.ops.DivSpec.obeys_div_spec.?\n                         Self%&.\n                         Self%&\n                         Rhs&.\n                         Rhs&)\n                       BOOL)\n             :pattern ((vstd!std_specs.ops.DivSpec.obeys_div_spec.?\n                         Self%&.\n                         Self%&\n                         Rhs&.\n                         Rhs&))\n             :skolemid skolem_internal_vstd!std_specs.ops.DivSpec.obeys_div_spec.?_pre_post_definition\n             :qid internal_vstd!std_specs.ops.DivSpec.obeys_div_spec.?_pre_post_definition))\n        a!1\n        (bind $ (SINT 64) $ (SINT 64))\n        (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n       (! (has_type (vstd!std_specs.ops.DivSpec.obeys_div_spec.?\n                      Self%&.\n                      Self%&\n                      Rhs&.\n                      Rhs&)\n                    BOOL)\n          :pattern ((vstd!std_specs.ops.DivSpec.obeys_div_spec.?\n                      Self%&.\n                      Self%&\n                      Rhs&.\n                      Rhs&))\n          :skolemid skolem_internal_vstd!std_specs.ops.DivSpec.obeys_div_spec.?_pre_post_definition\n          :qid internal_vstd!std_specs.ops.DivSpec.obeys_div_spec.?_pre_post_definition)))",
+      "(has_type (vstd!std_specs.ops.DivSpec.obeys_div_spec.? $ (SINT 64) $ (SINT 64))\n          BOOL)"
+    ],
+    "quantifier_sha256": "2371c75c1811378e8a0b1617b47f8416a354346e2b41d3d134cb742527df90d1",
+    "qid": "internal_vstd!std_specs.ops.DivSpec.obeys_div_spec.?_pre_post_definition"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((x Poly))\n             (! (or (not (has_type x BOOL)) (= x (B (%B x))))\n                :pattern ((has_type x BOOL))\n                :skolemid skolem_prelude_box_unbox_bool\n                :qid prelude_box_unbox_bool)))\n      (a!2 (= (B true) (B (%B (B true))))))\n(let ((a!3 (or (not (has_type (B true) BOOL)) a!2)))\n  (inst a!1 (not a!3) (bind (B true)) (gen 1))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Poly))\n             (! (or (not (has_type x BOOL)) (= x (B (%B x))))\n                :pattern ((has_type x BOOL))\n                :skolemid skolem_prelude_box_unbox_bool\n                :qid prelude_box_unbox_bool))))\n  (not a!1))",
+      "(not (has_type (B true) BOOL))",
+      "(= (B true) (B (%B (B true))))"
+    ],
+    "quantifier_sha256": "d68af8abf493472c6833af7f6a425bc8617f0cd81e6f8906c6ba61d48a6c8c9f",
+    "qid": "prelude_box_unbox_bool"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_req.)\n              (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_req.)))\n      (bind fuel%vstd!std_specs.ops.impl&%77.div_req.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_req.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_req.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_req.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_req.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n              (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_spec.)))\n      (bind fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_spec.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_spec.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%candidate!min_val.)\n              (fuel_bool_default fuel%candidate!min_val.)))\n      (bind fuel%candidate!min_val.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!min_val.)\n   (fuel_bool_default fuel%candidate!min_val.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!min_val.)\n   (fuel_bool_default fuel%candidate!min_val.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%candidate!candies_after_division.)\n              (fuel_bool_default fuel%candidate!candies_after_division.)))\n      (bind fuel%candidate!candies_after_division.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!candies_after_division.)\n   (fuel_bool_default fuel%candidate!candies_after_division.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!candies_after_division.)\n   (fuel_bool_default fuel%candidate!candies_after_division.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%candidate!is_achievable.)\n              (fuel_bool_default fuel%candidate!is_achievable.)))\n      (bind fuel%candidate!is_achievable.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!is_achievable.)\n   (fuel_bool_default fuel%candidate!is_achievable.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!is_achievable.)\n   (fuel_bool_default fuel%candidate!is_achievable.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(inst (forall ((id FuelId))\n        (! (= (fuel_bool id) (fuel_bool_default id))\n           :pattern ((fuel_bool id))\n           :skolemid skolem_prelude_fuel_defaults\n           :qid prelude_fuel_defaults))\n      (not (= (fuel_bool fuel%candidate!is_optimal.)\n              (fuel_bool_default fuel%candidate!is_optimal.)))\n      (bind fuel%candidate!is_optimal.)\n      (gen 0))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!is_optimal.)\n   (fuel_bool_default fuel%candidate!is_optimal.))"
+    ],
+    "quantifier_sha256": "8ed59b638135e34bdb2410eac4a192e76eaabda2892b09f223c34f7eef96b749",
+    "qid": "prelude_fuel_defaults"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!is_optimal.)\n   (fuel_bool_default fuel%candidate!is_optimal.))"
+    ]
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv)))\n      (a!2 (>= (+ (Add a! b!) (* (- 1) (iLo 64))) 0))\n      (a!3 (>= (+ (Add a! b!) (* (- 1) (iHi 64))) 0)))\n  (inst a!1\n        (= (or (not a!2) a!3) (iInv 64 (Add a! b!)))\n        (bind 64 (Add a! b!))\n        (gen 0)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0))\n      (a!2 (<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)))\n  (not (= (or (not a!1) a!2) (iInv 64 (Add a! b!)))))"
+    ],
+    "quantifier_sha256": "d1aa2de1dc37d6d101b88071d63689ce1ef66a8beb0fc435cf6c065eb058598f",
+    "qid": "prelude_i_inv"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv)))\n      (a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) (iLo 64))))\n      (a!3 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) (iHi 64))))\n      (a!4 (iInv 64 (Add (iClip 64 (Add a! b!)) c!)))\n      (a!6 (bind 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!5 (= (or (not (>= a!2 0)) (>= a!3 0)) a!4)))\n  (inst a!1 a!5 a!6 (gen 0))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!)))\n      (a!4 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (not (<= (+ (iLo 64) a!1) 0))))\n(let ((a!3 (or a!2 (<= (+ (iHi 64) a!1) 0))))\n  (not (= a!3 a!4)))))"
+    ],
+    "quantifier_sha256": "d1aa2de1dc37d6d101b88071d63689ce1ef66a8beb0fc435cf6c065eb058598f",
+    "qid": "prelude_i_inv"
+  },
+  {
+    "rule": "inst",
+    "hint_smt": "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add)))\n      (a!2 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!3 (= (+ c! (iClip 64 (Add a! b!)) a!2) 0)))\n  (inst a!1 (not a!3) (bind (iClip 64 (Add a! b!)) c!) (gen 0))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "quantifier_sha256": "7fd9e9edab738de1ee627a63389510daa6330ca12ba90188d3f2c3c7bfb2719f",
+    "qid": "prelude_add"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (iLo 64) a!1) 0))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (has_type (I a!1) (SINT 64)))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (has_type (I a!1) (SINT 64)))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (or (not (<= (iLo 64) 2)) (<= (iHi 64) 2))))\n  (not (= a!1 (iInv 64 2))))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(has_type (I 2) (SINT 64))",
+      "(not (iInv 64 2))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(has_type (I 2) (SINT 64))",
+      "(not (iInv 64 2))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (%I (I 2)) 0))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (%B (vstd!std_specs.ops.DivSpec.div_req.?\n        $\n        (SINT 64)\n        $\n        (SINT 64)\n        (I a!1)\n        (I 2))))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (not (<= a!2 0))))",
+      "(let ((a!1 (forall ((self! Poly) (rhs! Poly))\n             (! (let ((a!1 (or (not (= (%I self!) (- 9223372036854775808)))\n                               (not (= (%I rhs!) (Sub 0 1))))))\n                (let ((a!2 (not (or (= (%I rhs!) 0) (not a!1)))))\n                  (= (vstd!std_specs.ops.DivSpec.div_req.?\n                       $\n                       (SINT 64)\n                       $\n                       (SINT 64)\n                       self!\n                       rhs!)\n                     (B a!2))))\n                :pattern ((vstd!std_specs.ops.DivSpec.div_req.?\n                            $\n                            (SINT 64)\n                            $\n                            (SINT 64)\n                            self!\n                            rhs!))\n                :skolemid skolem_internal_vstd!std_specs.ops.DivSpec.div_req.?_definition\n                :qid internal_vstd!std_specs.ops.DivSpec.div_req.?_definition))))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (%B (vstd!std_specs.ops.DivSpec.div_req.?\n        $\n        (SINT 64)\n        $\n        (SINT 64)\n        (I a!1)\n        (I 2))))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (not (<= a!2 0))))",
+      "(let ((a!1 (forall ((self! Poly) (rhs! Poly))\n             (! (let ((a!1 (or (not (= (%I self!) (- 9223372036854775808)))\n                               (not (= (%I rhs!) (Sub 0 1))))))\n                (let ((a!2 (not (or (= (%I rhs!) 0) (not a!1)))))\n                  (= (vstd!std_specs.ops.DivSpec.div_req.?\n                       $\n                       (SINT 64)\n                       $\n                       (SINT 64)\n                       self!\n                       rhs!)\n                     (B a!2))))\n                :pattern ((vstd!std_specs.ops.DivSpec.div_req.?\n                            $\n                            (SINT 64)\n                            $\n                            (SINT 64)\n                            self!\n                            rhs!))\n                :skolemid skolem_internal_vstd!std_specs.ops.DivSpec.div_req.?_definition\n                :qid internal_vstd!std_specs.ops.DivSpec.div_req.?_definition))))\n  (not a!1))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= tmp%2 (I a!1))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (%B (vstd!std_specs.ops.DivSpec.div_req.?\n             $\n             (SINT 64)\n             $\n             (SINT 64)\n             (I a!1)\n             (I 2)))))"
+    ]
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(req%core!ops.arith.Div.div. $ (SINT 64) $ (SINT 64) tmp%2 (I 2))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= tmp%2 (I a!1))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (%B (vstd!std_specs.ops.DivSpec.div_req.?\n             $\n             (SINT 64)\n             $\n             (SINT 64)\n             (I a!1)\n             (I 2)))))"
+    ]
+  }
+]

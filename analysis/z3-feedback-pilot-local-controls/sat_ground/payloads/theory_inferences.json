@@ -1,0 +1,11 @@
+[
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= x 0)",
+      "(>= x 0)"
+    ]
+  }
+]

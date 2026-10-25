@@ -1,0 +1,104 @@
+{
+  "id": "sat_ground",
+  "kind": "control",
+  "original_result": null,
+  "expected_result": "sat",
+  "timings": {
+    "baseline": {
+      "completed": 1,
+      "results": {
+        "sat": 1
+      },
+      "median_check_seconds": 0.03952419999768608,
+      "median_process_seconds": 1.1603410999996413,
+      "paired_outcome_mismatches": 0,
+      "median_time_ratio_to_baseline": 1.0
+    },
+    "callback": {
+      "completed": 1,
+      "results": {
+        "sat": 1
+      },
+      "median_check_seconds": 0.03223970000180998,
+      "median_process_seconds": 1.2223928999992495,
+      "paired_outcome_mismatches": 0,
+      "median_time_ratio_to_baseline": 0.8156951944301828
+    },
+    "profile": {
+      "completed": 1,
+      "results": {
+        "sat": 1
+      },
+      "median_check_seconds": 0.04218409999884898,
+      "median_process_seconds": 1.264245700000174,
+      "paired_outcome_mismatches": 0,
+      "median_time_ratio_to_baseline": 1.0672980098602531
+    },
+    "combined": {
+      "completed": 1,
+      "results": {
+        "sat": 1
+      },
+      "median_check_seconds": 0.006545599997480167,
+      "median_process_seconds": 1.1453118999997969,
+      "paired_outcome_mismatches": 0,
+      "median_time_ratio_to_baseline": 0.16560993006470404
+    }
+  },
+  "failed_processes": [],
+  "block_costs": {
+    "theory_inferences": {
+      "bytes": 147,
+      "characters": 147,
+      "tokens": 53,
+      "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+    },
+    "triggers_and_input_terms": {
+      "bytes": 2,
+      "characters": 2,
+      "tokens": 1,
+      "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+    },
+    "quantifier_profile": {
+      "bytes": 2,
+      "characters": 2,
+      "tokens": 1,
+      "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+    },
+    "other_search_inferences": {
+      "bytes": 147,
+      "characters": 147,
+      "tokens": 53,
+      "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+    }
+  },
+  "capabilities": {
+    "status": "measured",
+    "representative": "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-feedback-pilot-local-controls\\sat_ground\\rep-01\\combined",
+    "rules_observed": {
+      "assumption": 2,
+      "smt": 1
+    },
+    "saved_theory_events": 1,
+    "detailed_theory_hints_observed": {},
+    "dependency_nonempty_events": 0,
+    "callback_errors": 0,
+    "events_omitted_by_limits": 0,
+    "input_quantifiers_found": 0,
+    "inventory_incomplete": false,
+    "no_event_observed_quantifiers": 0,
+    "ambiguous_qid_quantifiers": 0,
+    "event_formulas_without_exact_inventory_match": 0,
+    "event_qids_without_inventory_match": [],
+    "native_profile_records": 0,
+    "native_profile_qids_without_inventory_match": [],
+    "quantifiers_without_explicit_patterns": 0,
+    "matching_rows_without_input_term_examples": 0,
+    "source_variable_to_binding_mapping": "not established",
+    "active_matching_term_database": "not extracted",
+    "solver_inferred_patterns": "not extracted",
+    "reason_a_quantifier_was_not_instantiated": "not determined"
+  },
+  "original_outcome_matches_combined": null,
+  "control_expected_outcome_matches": true
+}

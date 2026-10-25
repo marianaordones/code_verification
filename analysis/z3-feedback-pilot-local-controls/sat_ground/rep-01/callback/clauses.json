@@ -1,0 +1,27 @@
+[
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= x 0)"
+    ]
+  },
+  {
+    "rule": "assumption",
+    "hint_smt": "assumption",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= x 0)"
+    ]
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= x 0)",
+      "(>= x 0)"
+    ]
+  }
+]

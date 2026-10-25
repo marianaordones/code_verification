@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "mode": "baseline",
+  "callback_errors": 0,
+  "rules_observed": {},
+  "events_omitted_by_limits": 0,
+  "scope": "isolated diagnostic API replay, not original Verus search",
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "overrides": {
+    "timeout_ms": 5000,
+    "qi.profile": false
+  },
+  "result": "unknown",
+  "check_seconds": 5.065481400000863,
+  "reason_unknown": "timeout",
+  "statistics": {
+    "elim-unconstrained": 1,
+    "restarts": 77,
+    "final checks": 77,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 78,
+    "quant instantiations": 76,
+    "arith row summations": 74,
+    "arith num rows": 75,
+    "arith pivots": 75,
+    "arith assert lower": 30,
+    "arith assert upper": 46,
+    "arith tableau max rows": 75,
+    "arith tableau max columns": 153,
+    "num allocs": 284342784,
+    "rlimit count": 2257175,
+    "max memory": 26.36,
+    "memory": 21.27,
+    "time": 5.064
+  },
+  "saved_events": 0,
+  "instantiations_by_exact_formula": {},
+  "instantiations_by_qid": {},
+  "event_formulas_not_in_inventory": [],
+  "event_qids_not_in_inventory": [],
+  "input_quantifiers": 1,
+  "inventory_quantifiers_saved": 1,
+  "inventory_incomplete": false,
+  "dependency_nonempty_events": 0,
+  "no_event_observed_quantifiers": 0,
+  "quantifiers_without_explicit_patterns": 0,
+  "matching_rows_without_input_term_examples": 1,
+  "detailed_theory_hints_observed": {}
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\mario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-m",
+    "diagnostics.z3_feedback_pilot",
+    "worker",
+    "--query",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-feedback-pilot-local-controls\\unsat_arithmetic\\query.smt2",
+    "--output",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-feedback-pilot-local-controls\\unsat_arithmetic\\rep-01\\profile",
+    "--mode",
+    "profile",
+    "--timeout-ms",
+    "5000"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 1.146722999998019
+}

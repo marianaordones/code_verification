@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "id": "sat_ground",
+      "kind": "control",
+      "expected_result": "sat",
+      "original_result": null,
+      "query_sha256": "677d49aa9a009b0f11f1138e0c56f64594e14012cedd291202cfc1c571aa5e47"
+    },
+    {
+      "id": "unsat_arithmetic",
+      "kind": "control",
+      "expected_result": "unsat",
+      "original_result": null,
+      "query_sha256": "04ff536132379978f21f3ca3ec47440db42f0b88a371333cc2c26e09dfcbb6a3"
+    },
+    {
+      "id": "unsat_quantified",
+      "kind": "control",
+      "expected_result": "unsat",
+      "original_result": null,
+      "query_sha256": "bc25d7b83c12c09fa47f16c4f6dcb801252d5bceaa245a0a1ac53eff40fd6f37"
+    },
+    {
+      "id": "quantifier_without_ground_trigger",
+      "kind": "control",
+      "expected_result": null,
+      "original_result": null,
+      "query_sha256": "ac696ee26a0273f8ba6c59e935de3e4896cc6519eb3662314dbc3cd167fbf273"
+    }
+  ],
+  "repetitions": 1,
+  "timeout_ms": 5000,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "implementation_sha256": "6638f71a4c6c86c17df22fad4b74005caf1bb95d791cf2907ba8350171ba3680"
+}
