@@ -1,0 +1,53 @@
+[
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a (* (- 1) (g b))) 0)",
+      "(<= (+ a (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a (* (- 1) (g b))) 0)",
+      "(>= (+ a (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= a (g b)))",
+      "(<= (+ a (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= a (g b)))",
+      "(>= (+ a (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= a (g b))",
+      "(let ((a!1 (<= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  }
+]

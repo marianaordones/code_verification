@@ -1,0 +1,996 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] #5 0
+[mk-app] #6 f #5
+[mk-app] #7 Int
+[attach-meaning] #7 arith 0
+[mk-app] #8 >= #6 #7
+[mk-app] #9 pattern #6
+[mk-quant] #10 control_nonnegative 1 #9 #8
+[attach-var-names] #10 (|x| ; |Int|)
+[mk-app] #11 f #7
+[mk-app] #12 < #11 #7
+[mk-app] #13 bv
+[attach-meaning] #13 bv #b1
+[mk-app] #14 bv
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #14 bv #b0
+[mk-var] #15 0
+[mk-var] #16 1
+[mk-var] #17 2
+[mk-var] #18 3
+[mk-var] #19 4
+[mk-var] #20 5
+[mk-var] #21 6
+[mk-var] #22 7
+[mk-var] #23 8
+[mk-var] #24 9
+[mk-var] #25 10
+[mk-var] #26 11
+[mk-var] #27 12
+[mk-var] #28 13
+[mk-var] #29 14
+[mk-app] #30 + #23 #21
+[mk-proof] #31 true-axiom #1
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-proof] #32 asserted #10
+[mk-app] #33 = #10 #10
+[mk-proof] #34 refl #33
+[mk-proof] #33 asserted #12
+[mk-app] #34 <= #7 #11
+[mk-app] #35 not #34
+[inst-discovered] theory-solving 0000000000000000 arith# ; #12
+[mk-app] #36 = #12 #35
+[instance] 0000000000000000 #36
+[attach-enode] #36 0
+[end-of-instance]
+[mk-app] #36 = #12 #35
+[mk-proof] #37 rewrite #36
+[mk-app] #38 Int
+[attach-meaning] #38 arith (- 1)
+[mk-app] #39 * #38 #11
+[mk-app] #40 >= #11 #7
+[inst-discovered] theory-solving 0000000000000000 arith# ; #34
+[mk-app] #38 = #34 #40
+[instance] 0000000000000000 #38
+[attach-enode] #38 0
+[end-of-instance]
+[mk-app] #38 = #34 #40
+[mk-proof] #39 rewrite #38
+[mk-app] #41 not #40
+[mk-app] #42 = #35 #41
+[mk-proof] #43 monotonicity #39 #42
+[mk-proof] #44 rewrite #42
+[mk-app] #38 = #12 #41
+[mk-proof] #39 trans #37 #44 #38
+[mk-proof] #43 mp #33 #39 #41
+[mk-app] #3 string
+[mk-app] #4 string
+[mk-app] #5 string
+[mk-app] #6 compose
+[mk-app] #7 string
+[mk-app] #8 compose #7 #3 #6 #5
+[mk-app] #9 indent #8
+[mk-app] #10 string
+[mk-app] #11 compose #10 #4
+[mk-app] #12 indent #11
+[mk-app] #13 compose #12 #9
+[mk-app] #14 choice #13 #13
+[mk-app] #15 compose #6 #5
+[mk-app] #16 indent #15
+[mk-app] #17 compose #10 #14
+[mk-app] #18 indent #17
+[mk-app] #19 compose #18 #16
+[mk-app] #20 compose #10 #13
+[mk-app] #21 indent #20
+[mk-app] #22 compose #21 #16
+[mk-app] #23 choice #22 #19
+[mk-app] #24 string
+[mk-app] #25 string
+[mk-app] #26 cr
+[mk-app] #27 compose #26 #24
+[mk-app] #28 compose #7 #14 #27 #5
+[mk-app] #29 indent #28
+[mk-app] #30 compose #10 #25
+[mk-app] #31 indent #30
+[mk-app] #32 compose #31 #29
+[mk-app] #33 compose #7 #24
+[mk-app] #34 compose #7 #13 #33 #5
+[mk-app] #35 indent #34
+[mk-app] #36 compose #31 #35
+[mk-app] #37 choice #36 #32
+[mk-app] #38 indent #23
+[mk-app] #39 string
+[mk-app] #40 compose #39 #38
+[mk-app] #41 string
+[mk-app] #42 string
+[mk-app] #43 compose #42 #41
+[mk-app] #44 compose #26 #40 #26 #43
+[mk-app] #45 compose #7 #37 #44 #5
+[mk-app] #46 indent #45
+[mk-app] #47 string
+[mk-app] #48 compose #10 #47 #46
+[mk-app] #49 indent #22
+[mk-app] #50 compose #39 #49
+[mk-app] #51 compose #7 #50 #7 #43
+[mk-app] #52 compose #7 #36 #51 #5
+[mk-app] #53 indent #52
+[mk-app] #54 compose #10 #47 #53
+[mk-app] #55 choice #54 #48
+[mk-app] #56 string
+[mk-app] #57 compose #7 #56 #6 #5
+[mk-app] #58 indent #57
+[mk-app] #59 compose #10 #3 #58
+[mk-app] #60 choice #59 #59
+[mk-app] #61 compose #10 #60
+[mk-app] #62 indent #61
+[mk-app] #63 compose #62 #16
+[mk-app] #64 compose #10 #59
+[mk-app] #65 indent #64
+[mk-app] #66 compose #65 #16
+[mk-app] #67 choice #66 #63
+[mk-app] #68 compose #26 #55
+[mk-app] #69 indent #68
+[mk-app] #70 compose #7 #67 #6
+[mk-app] #71 indent #70
+[mk-app] #72 compose #7 #66 #6
+[mk-app] #73 indent #72
+[mk-app] #74 choice #73 #71
+[mk-app] #75 string
+[mk-app] #76 compose #10 #75
+[mk-app] #77 compose #76 #74 #69 #5
+[mk-app] #78 compose #7 #54
+[mk-app] #79 indent #78
+[mk-app] #80 compose #76 #73 #79 #5
+[mk-app] #81 choice #80 #77
+[mk-app] #10 string
+[mk-app] #75 string
+[mk-app] #76 string
+[mk-app] #3 compose
+[mk-app] #7 string
+[mk-app] #56 compose #7 #10 #3 #76
+[mk-app] #6 indent #56
+[mk-app] #5 string
+[mk-app] #57 compose #5 #75
+[mk-app] #58 indent #57
+[mk-app] #59 compose #58 #6
+[mk-app] #64 choice #59 #59
+[mk-app] #65 compose #3 #76
+[mk-app] #15 indent #65
+[mk-app] #16 compose #5 #64
+[mk-app] #66 indent #16
+[mk-app] #72 compose #66 #15
+[mk-app] #73 compose #5 #59
+[mk-app] #47 indent #73
+[mk-app] #25 compose #47 #15
+[mk-app] #30 choice #25 #72
+[mk-app] #5 string
+[mk-app] #75 string
+[mk-app] #5 string
+[mk-app] #75 string
+[mk-app] #57 string
+[mk-app] #58 compose
+[mk-app] #7 string
+[mk-app] #10 compose #7 #5 #58 #57
+[mk-app] #3 indent #10
+[mk-app] #76 string
+[mk-app] #56 compose #76 #75
+[mk-app] #6 indent #56
+[mk-app] #59 compose #6 #3
+[mk-app] #73 choice #59 #59
+[begin-check] 0
+[mk-app] #45 Int
+[attach-meaning] #45 arith 1
+[attach-enode] #45 0
+[mk-app] #46 Real
+[attach-meaning] #46 arith 1
+[attach-enode] #46 0
+[attach-enode] #7 0
+[mk-app] #47 Real
+[attach-meaning] #47 arith 0
+[attach-enode] #47 0
+[mk-app] #48 ~ #8 #8
+[mk-proof] #49 refl #48
+[mk-lambda] #50 <null> 1 #49
+[mk-proof] #51 proof-bind #50
+[mk-app] #52 ~ #10 #10
+[mk-proof] #53 nnf-pos #51 #52
+[mk-proof] #54 mp~ #32 #53 #10
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 ~ #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #10 #10
+[mk-proof] #56 rewrite #55
+[mk-proof] #57 mp #54 #56 #10
+[mk-app] #55 = #41 #41
+[mk-proof] #56 rewrite #55
+[mk-proof] #57 mp #43 #56 #41
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 = #10 #10
+[mk-proof] #56 refl #55
+[mk-app] #55 = #41 #41
+[mk-proof] #56 refl #55
+[mk-app] #55 Int
+[attach-meaning] #55 arith (- 1)
+[mk-app] #76 string
+[mk-app] #75 string
+[mk-app] #56 string
+[mk-app] #6 compose
+[mk-app] #7 string
+[mk-app] #5 compose #7 #76 #6 #56
+[mk-app] #58 indent #5
+[mk-app] #57 string
+[mk-app] #10 compose #57 #75
+[mk-app] #3 indent #10
+[mk-app] #59 compose #3 #58
+[mk-app] #73 choice #59 #59
+[mk-app] #47 compose #6 #56
+[mk-app] #65 indent #47
+[mk-app] #15 compose #57 #73
+[mk-app] #25 indent #15
+[mk-app] #64 compose #25 #65
+[mk-app] #16 compose #57 #59
+[mk-app] #66 indent #16
+[mk-app] #72 compose #66 #65
+[mk-app] #30 choice #72 #64
+[mk-app] #31 string
+[mk-app] #4 string
+[mk-app] #11 cr
+[mk-app] #12 compose #11 #31
+[mk-app] #8 compose #7 #73 #12 #56
+[mk-app] #9 indent #8
+[mk-app] #13 compose #57 #4
+[mk-app] #24 indent #13
+[mk-app] #33 compose #24 #9
+[mk-app] #34 compose #7 #31
+[mk-app] #35 compose #7 #59 #34 #56
+[mk-app] #36 indent #35
+[mk-app] #39 compose #24 #36
+[mk-app] #20 choice #39 #33
+[mk-app] #21 indent #30
+[mk-app] #22 string
+[mk-app] #49 compose #22 #21
+[mk-app] #50 string
+[mk-app] #42 string
+[mk-app] #41 compose #42 #50
+[mk-app] #43 compose #11 #49 #11 #41
+[mk-app] #51 compose #7 #20 #43 #56
+[mk-app] #52 indent #51
+[mk-app] #53 string
+[mk-app] #54 compose #57 #53 #52
+[mk-app] #78 indent #72
+[mk-app] #79 compose #22 #78
+[mk-app] #80 compose #7 #79 #7 #41
+[mk-app] #60 compose #7 #39 #80 #56
+[mk-app] #61 indent #60
+[mk-app] #62 compose #57 #53 #61
+[mk-app] #63 choice #62 #54
+[mk-app] #67 string
+[mk-app] #70 compose #7 #67 #6 #56
+[mk-app] #71 indent #70
+[mk-app] #74 compose #57 #76 #71
+[mk-app] #14 choice #74 #74
+[mk-app] #26 compose #57 #14
+[mk-app] #27 indent #26
+[mk-app] #28 compose #27 #65
+[mk-app] #29 compose #57 #74
+[mk-app] #32 indent #29
+[mk-app] #37 compose #32 #65
+[mk-app] #17 choice #37 #28
+[mk-app] #18 compose #11 #63
+[mk-app] #19 indent #18
+[mk-app] #23 compose #7 #17 #6
+[mk-app] #38 indent #23
+[mk-app] #40 compose #7 #37 #6
+[mk-app] #44 indent #40
+[mk-app] #45 choice #44 #38
+[mk-app] #46 string
+[mk-app] #48 compose #57 #46
+[mk-app] #55 compose #48 #45 #19 #56
+[mk-app] #68 compose #7 #62
+[mk-app] #69 indent #68
+[mk-app] #77 compose #48 #44 #69 #56
+[mk-app] #81 choice #77 #55
+[mk-app] #82 string
+[mk-app] #83 string
+[mk-app] #84 compose #7 #82 #6 #56
+[mk-app] #85 indent #84
+[mk-app] #86 compose #57 #83
+[mk-app] #87 indent #86
+[mk-app] #88 compose #87 #85
+[mk-app] #89 choice #88 #88
+[mk-app] #90 string
+[mk-app] #91 compose #11 #20
+[mk-app] #92 compose #7 #20 #91 #56
+[mk-app] #93 indent #92
+[mk-app] #94 compose #57 #90
+[mk-app] #95 indent #94
+[mk-app] #96 compose #95 #93
+[mk-app] #97 compose #7 #39
+[mk-app] #98 compose #7 #39 #97 #56
+[mk-app] #99 indent #98
+[mk-app] #100 compose #95 #99
+[mk-app] #101 choice #100 #96
+[mk-app] #102 string
+[mk-app] #103 compose #7 #101 #6 #56
+[mk-app] #104 indent #103
+[mk-app] #105 compose #57 #102
+[mk-app] #106 indent #105
+[mk-app] #107 compose #106 #104
+[mk-app] #108 compose #7 #100 #6 #56
+[mk-app] #109 indent #108
+[mk-app] #110 compose #106 #109
+[mk-app] #111 choice #110 #107
+[mk-app] #112 compose #11 #111
+[mk-app] #113 indent #112
+[mk-app] #114 string
+[mk-app] #115 compose #57 #114
+[mk-app] #116 compose #115 #45 #113 #56
+[mk-app] #117 compose #7 #110
+[mk-app] #118 indent #117
+[mk-app] #119 compose #115 #44 #118 #56
+[mk-app] #120 choice #119 #116
+[mk-app] #121 string
+[mk-app] #122 string
+[mk-app] #123 compose #7 #121 #6 #56
+[mk-app] #124 indent #123
+[mk-app] #125 compose #57 #122
+[mk-app] #126 indent #125
+[mk-app] #127 compose #126 #124
+[mk-app] #128 choice #127 #127
+[mk-app] #129 compose #11 #82
+[mk-app] #130 compose #7 #82 #129 #56
+[mk-app] #131 indent #130
+[mk-app] #132 compose #95 #131
+[mk-app] #133 compose #7 #82
+[mk-app] #134 compose #7 #82 #133 #56
+[mk-app] #135 indent #134
+[mk-app] #136 compose #95 #135
+[mk-app] #137 choice #136 #132
+[mk-app] #138 string
+[mk-app] #139 compose #11 #137
+[mk-app] #140 compose #7 #128 #139 #56
+[mk-app] #141 indent #140
+[mk-app] #142 compose #57 #138
+[mk-app] #143 indent #142
+[mk-app] #144 compose #143 #141
+[mk-app] #145 compose #7 #136
+[mk-app] #146 compose #7 #127 #145 #56
+[mk-app] #147 indent #146
+[mk-app] #148 compose #143 #147
+[mk-app] #149 choice #148 #144
+[mk-app] #150 string
+[mk-app] #151 compose #11 #149 #11 #82
+[mk-app] #152 compose #7 #89 #151 #56
+[mk-app] #153 indent #152
+[mk-app] #154 compose #57 #150
+[mk-app] #155 indent #154
+[mk-app] #156 compose #155 #153
+[mk-app] #157 compose #7 #148 #7 #82
+[mk-app] #158 compose #7 #88 #157 #56
+[mk-app] #159 indent #158
+[mk-app] #160 compose #155 #159
+[mk-app] #161 choice #160 #156
+[mk-app] #162 compose #7 #81 #6 #56
+[mk-app] #163 indent #162
+[mk-app] #164 compose #57 #82 #163
+[mk-app] #165 compose #7 #77 #6 #56
+[mk-app] #166 indent #165
+[mk-app] #167 compose #57 #82 #166
+[mk-app] #168 choice #167 #164
+[mk-app] #169 compose #7 #120 #6 #56
+[mk-app] #170 indent #169
+[mk-app] #171 compose #57 #121 #170
+[mk-app] #172 compose #7 #119 #6 #56
+[mk-app] #173 indent #172
+[mk-app] #174 compose #57 #121 #173
+[mk-app] #175 choice #174 #171
+[mk-app] #176 string
+[mk-app] #177 compose #11 #175
+[mk-app] #178 compose #177 #56
+[mk-app] #179 indent #178
+[mk-app] #180 compose #57 #168
+[mk-app] #181 indent #180
+[mk-app] #182 compose #181 #179
+[mk-app] #183 compose #7 #174
+[mk-app] #184 compose #183 #56
+[mk-app] #185 indent #184
+[mk-app] #186 compose #57 #167
+[mk-app] #187 indent #186
+[mk-app] #188 compose #187 #185
+[mk-app] #189 choice #188 #182
+[mk-app] #190 indent #189
+[mk-app] #191 compose #11 #161
+[mk-app] #192 indent #191
+[mk-app] #193 compose #176 #190 #192 #56
+[mk-app] #176 string
+[mk-app] #82 string
+[mk-app] #57 string
+[mk-app] #46 compose
+[mk-app] #48 string
+[mk-app] #76 compose #48 #176 #46 #57
+[mk-app] #7 indent #76
+[mk-app] #67 string
+[mk-app] #6 compose #67 #82
+[mk-app] #56 indent #6
+[mk-app] #70 compose #56 #7
+[mk-app] #71 choice #70 #70
+[mk-app] #74 compose #46 #57
+[mk-app] #29 indent #74
+[mk-app] #32 compose #67 #71
+[mk-app] #47 indent #32
+[mk-app] #65 compose #47 #29
+[mk-app] #37 compose #67 #70
+[mk-app] #40 indent #37
+[mk-app] #44 compose #40 #29
+[mk-app] #53 choice #44 #65
+[mk-app] #4 string
+[mk-app] #13 string
+[mk-app] #24 cr
+[mk-app] #75 compose #24 #4
+[mk-app] #10 compose #48 #71 #75 #57
+[mk-app] #3 indent #10
+[mk-app] #5 compose #67 #13
+[mk-app] #58 indent #5
+[mk-app] #59 compose #58 #3
+[mk-app] #31 compose #48 #4
+[mk-app] #34 compose #48 #70 #31 #57
+[mk-app] #35 indent #34
+[mk-app] #36 compose #58 #35
+[mk-app] #39 choice #36 #59
+[mk-app] #22 indent #53
+[mk-app] #16 string
+[mk-app] #66 compose #16 #22
+[mk-app] #72 string
+[mk-app] #78 string
+[mk-app] #79 compose #78 #72
+[mk-app] #42 compose #24 #66 #24 #79
+[mk-app] #50 compose #48 #39 #42 #57
+[mk-app] #41 indent #50
+[mk-app] #80 string
+[mk-app] #60 compose #67 #80 #41
+[mk-app] #61 indent #44
+[mk-app] #62 compose #16 #61
+[mk-app] #68 compose #48 #62 #48 #79
+[mk-app] #69 compose #48 #36 #68 #57
+[mk-app] #77 indent #69
+[mk-app] #165 compose #67 #80 #77
+[mk-app] #166 choice #165 #60
+[mk-app] #167 string
+[mk-app] #186 compose #48 #167 #46 #57
+[mk-app] #187 indent #186
+[mk-app] #121 compose #67 #176 #187
+[mk-app] #114 choice #121 #121
+[mk-app] #115 compose #67 #114
+[mk-app] #102 indent #115
+[mk-app] #105 compose #102 #29
+[mk-app] #106 compose #67 #121
+[mk-app] #90 indent #106
+[mk-app] #94 compose #90 #29
+[mk-app] #95 choice #94 #105
+[mk-app] #97 compose #24 #166
+[mk-app] #98 indent #97
+[mk-app] #99 compose #48 #95 #46
+[mk-app] #100 indent #99
+[mk-app] #108 compose #48 #94 #46
+[mk-app] #109 indent #108
+[mk-app] #110 choice #109 #100
+[mk-app] #117 string
+[mk-app] #118 compose #67 #117
+[mk-app] #119 compose #118 #110 #98 #57
+[mk-app] #172 compose #48 #165
+[mk-app] #173 indent #172
+[mk-app] #174 compose #118 #109 #173 #57
+[mk-app] #183 choice #174 #119
+[assign] #10 justification -1: 
+[attach-enode] #11 0
+[mk-app] #67 string
+[mk-app] #117 string
+[mk-app] #118 string
+[mk-app] #176 compose
+[mk-app] #48 string
+[mk-app] #167 compose #48 #67 #176 #118
+[mk-app] #46 indent #167
+[mk-app] #57 string
+[mk-app] #186 compose #57 #117
+[mk-app] #187 indent #186
+[mk-app] #121 compose #187 #46
+[mk-app] #106 choice #121 #121
+[mk-app] #90 string
+[mk-app] #74 cr
+[mk-app] #29 compose #74 #67
+[mk-app] #94 compose #48 #106 #29 #118
+[mk-app] #108 indent #94
+[mk-app] #109 compose #57 #90
+[mk-app] #80 indent #109
+[mk-app] #13 compose #80 #108
+[mk-app] #5 compose #48 #67
+[mk-app] #58 compose #48 #121 #5 #118
+[mk-app] #82 indent #58
+[mk-app] #6 compose #80 #82
+[mk-app] #56 choice #6 #13
+[mk-app] #76 string
+[mk-app] #7 compose #48 #56 #176 #118
+[mk-app] #70 indent #7
+[mk-app] #4 compose #57 #76
+[mk-app] #31 indent #4
+[mk-app] #34 compose #31 #70
+[mk-app] #35 compose #48 #6 #176 #118
+[mk-app] #36 indent #35
+[mk-app] #16 compose #31 #36
+[mk-app] #37 choice #16 #34
+[mk-app] #40 string
+[mk-app] #44 compose #74 #106
+[mk-app] #61 compose #48 #67 #44 #118
+[mk-app] #62 indent #61
+[mk-app] #78 compose #57 #40
+[mk-app] #72 indent #78
+[mk-app] #79 compose #72 #62
+[mk-app] #68 compose #48 #121
+[mk-app] #69 compose #48 #67 #68 #118
+[mk-app] #77 indent #69
+[mk-app] #165 compose #72 #77
+[mk-app] #172 choice #165 #79
+[mk-app] #173 string
+[mk-app] #174 compose #48 #172 #176 #118
+[mk-app] #114 indent #174
+[mk-app] #115 compose #57 #173
+[mk-app] #102 indent #115
+[mk-app] #105 compose #102 #114
+[mk-app] #95 compose #48 #165 #176 #118
+[mk-app] #99 indent #95
+[mk-app] #100 compose #102 #99
+[mk-app] #110 choice #100 #105
+[mk-app] #71 string
+[mk-app] #24 compose #74 #110
+[mk-app] #75 compose #48 #56 #24 #118
+[mk-app] #10 indent #75
+[mk-app] #3 compose #57 #71
+[mk-app] #59 indent #3
+[mk-app] #39 compose #59 #10
+[mk-app] #32 compose #48 #100
+[mk-app] #47 compose #48 #6 #32 #118
+[mk-app] #65 indent #47
+[mk-app] #53 compose #59 #65
+[mk-app] #22 choice #53 #39
+[mk-app] #66 string
+[mk-app] #42 string
+[mk-app] #50 compose #48 #66 #176 #118
+[mk-app] #41 indent #50
+[mk-app] #60 compose #57 #42
+[mk-app] #166 indent #60
+[mk-app] #97 compose #166 #41
+[mk-app] #98 choice #97 #97
+[mk-app] #119 string
+[mk-app] #183 indent #94
+[mk-app] #184 compose #57 #119
+[mk-app] #185 indent #184
+[mk-app] #188 compose #185 #183
+[mk-app] #14 indent #58
+[mk-app] #26 compose #185 #14
+[mk-app] #27 choice #26 #188
+[mk-app] #28 compose #48 #27 #176 #118
+[mk-app] #17 indent #28
+[mk-app] #23 compose #102 #17
+[mk-app] #38 compose #48 #26 #176 #118
+[mk-app] #45 indent #38
+[mk-app] #73 compose #102 #45
+[mk-app] #11 choice #73 #23
+[mk-app] #12 compose #74 #11
+[mk-app] #8 compose #48 #110 #12 #118
+[mk-app] #9 indent #8
+[mk-app] #33 compose #59 #9
+[mk-app] #20 compose #48 #73
+[mk-app] #15 compose #48 #100 #20 #118
+[mk-app] #25 indent #15
+[mk-app] #64 compose #59 #25
+[mk-app] #30 choice #64 #33
+[mk-app] #21 string
+[mk-app] #49 compose #48 #21 #176 #118
+[mk-app] #43 indent #49
+[mk-app] #51 compose #166 #43
+[mk-app] #52 choice #51 #51
+[mk-app] #54 compose #48 #56 #12 #118
+[mk-app] #63 indent #54
+[mk-app] #18 compose #59 #63
+[mk-app] #19 compose #48 #6 #20 #118
+[mk-app] #55 indent #19
+[mk-app] #81 compose #59 #55
+[mk-app] #162 choice #81 #18
+[mk-app] #163 string
+[mk-app] #164 string
+[mk-app] #168 compose #74 #52 #74 #163
+[mk-app] #180 compose #48 #98 #168 #118
+[mk-app] #181 indent #180
+[mk-app] #91 compose #57 #164
+[mk-app] #92 indent #91
+[mk-app] #93 compose #92 #181
+[mk-app] #96 compose #48 #51 #48 #163
+[mk-app] #101 compose #48 #97 #96 #118
+[mk-app] #103 indent #101
+[mk-app] #104 compose #92 #103
+[mk-app] #107 choice #104 #93
+[mk-app] #111 string
+[mk-app] #112 compose #74 #107 #74 #11
+[mk-app] #113 compose #48 #37 #112 #118
+[mk-app] #116 indent #113
+[mk-app] #120 compose #57 #111
+[mk-app] #169 indent #120
+[mk-app] #170 compose #169 #116
+[mk-app] #171 compose #48 #104 #48 #73
+[mk-app] #175 compose #48 #16 #171 #118
+[mk-app] #177 indent #175
+[mk-app] #178 compose #169 #177
+[mk-app] #179 choice #178 #170
+[mk-app] #182 compose #48 #22 #176 #118
+[mk-app] #189 indent #182
+[mk-app] #190 compose #57 #66 #189
+[mk-app] #150 compose #48 #53 #176 #118
+[mk-app] #154 indent #150
+[mk-app] #155 compose #57 #66 #154
+[mk-app] #83 choice #155 #190
+[mk-app] #86 compose #48 #30 #176 #118
+[mk-app] #87 indent #86
+[mk-app] #84 compose #57 #21 #87
+[mk-app] #85 compose #48 #64 #176 #118
+[mk-app] #88 indent #85
+[mk-app] #138 compose #57 #21 #88
+[mk-app] #142 choice #138 #84
+[mk-app] #143 compose #48 #162 #176 #118
+[mk-app] #122 indent #143
+[mk-app] #125 compose #57 #163 #122
+[mk-app] #126 compose #48 #81 #176 #118
+[mk-app] #123 indent #126
+[mk-app] #124 compose #57 #163 #123
+[mk-app] #127 choice #124 #125
+[mk-app] #133 string
+[mk-app] #134 compose #74 #142 #74 #127
+[mk-app] #135 compose #134 #118
+[mk-app] #136 indent #135
+[mk-app] #145 compose #57 #83
+[mk-app] #146 indent #145
+[mk-app] #147 compose #146 #136
+[mk-app] #148 compose #48 #138 #48 #124
+[mk-app] #157 compose #148 #118
+[mk-app] #158 indent #157
+[mk-app] #159 compose #57 #155
+[mk-app] #160 indent #159
+[mk-app] #89 compose #160 #158
+[mk-app] #128 choice #89 #147
+[mk-app] #129 indent #128
+[mk-app] #130 compose #74 #179
+[mk-app] #131 indent #130
+[mk-app] #132 compose #133 #129 #131 #118
+[mk-app] #133 string
+[mk-app] #66 string
+[mk-app] #57 string
+[mk-app] #71 compose
+[mk-app] #3 string
+[mk-app] #59 compose #3 #133 #71 #57
+[mk-app] #90 indent #59
+[mk-app] #109 string
+[mk-app] #80 compose #109 #66
+[mk-app] #117 indent #80
+[mk-app] #186 compose #117 #90
+[mk-app] #187 choice #186 #186
+[mk-app] #48 string
+[mk-app] #67 cr
+[mk-app] #176 compose #67 #133
+[mk-app] #118 compose #3 #187 #176 #57
+[mk-app] #167 indent #118
+[mk-app] #46 compose #109 #48
+[mk-app] #121 indent #46
+[mk-app] #5 compose #121 #167
+[mk-app] #58 compose #3 #133
+[mk-app] #82 compose #3 #186 #58 #57
+[mk-app] #6 indent #82
+[mk-app] #173 compose #121 #6
+[mk-app] #115 choice #173 #5
+[mk-app] #102 string
+[mk-app] #40 compose #3 #115 #71 #57
+[mk-app] #78 indent #40
+[mk-app] #72 compose #109 #102
+[mk-app] #68 indent #72
+[mk-app] #69 compose #68 #78
+[mk-app] #77 compose #3 #173 #71 #57
+[mk-app] #165 indent #77
+[mk-app] #95 compose #68 #165
+[mk-app] #99 choice #95 #69
+[assign] (not #40) justification -1: 
+[mk-app] #55 = #10 #1
+[mk-proof] #56 iff-true #54 #55
+[mk-app] #57 = #40 #2
+[mk-proof] #58 iff-false #43 #57
+[eq-expl] #7 root
+[new-match] 000001C7609F0FD8 #10 #9 #7 ; #11
+[mk-app] #59 = #40 #40
+[mk-proof] #60 refl #59
+[mk-app] #61 not #10
+[mk-app] #62 or #61 #40
+[mk-proof] #63 quant-inst #62
+[instance] 000001C7609F0FD8 #63 ; 1
+[mk-app] #109 string
+[mk-app] #102 string
+[mk-app] #72 string
+[mk-app] #68 compose
+[mk-app] #48 string
+[mk-app] #46 compose #48 #109 #68 #72
+[mk-app] #121 indent #46
+[mk-app] #66 string
+[mk-app] #80 compose #66 #102
+[mk-app] #117 indent #80
+[mk-app] #3 compose #117 #121
+[mk-app] #133 choice #3 #3
+[mk-app] #71 compose #68 #72
+[mk-app] #57 indent #71
+[mk-app] #59 compose #66 #133
+[mk-app] #90 indent #59
+[mk-app] #186 compose #90 #57
+[mk-app] #58 compose #66 #3
+[mk-app] #82 indent #58
+[mk-app] #6 compose #82 #57
+[mk-app] #173 choice #6 #186
+[mk-app] #77 string
+[mk-app] #165 string
+[mk-app] #95 cr
+[mk-app] #187 compose #95 #77
+[mk-app] #67 compose #48 #133 #187 #72
+[mk-app] #176 indent #67
+[mk-app] #118 compose #66 #165
+[mk-app] #167 indent #118
+[mk-app] #5 compose #167 #176
+[mk-app] #115 compose #48 #77
+[mk-app] #40 compose #48 #3 #115 #72
+[mk-app] #78 indent #40
+[mk-app] #69 compose #167 #78
+[mk-app] #99 choice #69 #5
+[mk-app] #100 indent #173
+[mk-app] #32 string
+[mk-app] #47 compose #32 #100
+[mk-app] #65 string
+[mk-app] #53 string
+[mk-app] #150 compose #53 #65
+[mk-app] #154 compose #95 #47 #95 #150
+[mk-app] #155 compose #48 #99 #154 #72
+[mk-app] #159 indent #155
+[mk-app] #160 string
+[mk-app] #21 compose #66 #160 #159
+[mk-app] #119 indent #6
+[mk-app] #184 compose #32 #119
+[mk-app] #185 compose #48 #184 #48 #150
+[mk-app] #14 compose #48 #69 #185 #72
+[mk-app] #26 indent #14
+[mk-app] #38 compose #66 #160 #26
+[mk-app] #45 choice #38 #21
+[mk-app] #73 string
+[mk-app] #20 compose #48 #73 #68 #72
+[mk-app] #15 indent #20
+[mk-app] #25 compose #66 #109 #15
+[mk-app] #64 choice #25 #25
+[mk-app] #85 compose #66 #64
+[mk-app] #88 indent #85
+[mk-app] #138 compose #88 #57
+[mk-app] #163 compose #66 #25
+[mk-app] #19 indent #163
+[mk-app] #55 compose #19 #57
+[mk-app] #81 choice #55 #138
+[mk-app] #126 compose #95 #45
+[mk-app] #123 indent #126
+[mk-app] #124 compose #48 #81 #68
+[mk-app] #148 indent #124
+[mk-app] #157 compose #48 #55 #68
+[mk-app] #158 indent #157
+[mk-app] #89 choice #158 #148
+[mk-app] #106 string
+[mk-app] #74 compose #66 #106
+[mk-app] #29 compose #74 #89 #123 #72
+[mk-app] #94 compose #48 #38
+[mk-app] #108 indent #94
+[mk-app] #13 compose #74 #158 #108 #72
+[mk-app] #56 choice #13 #29
+[mk-app] #44 string
+[mk-app] #61 compose #48 #56 #68 #72
+[mk-app] #62 indent #61
+[mk-app] #79 compose #66 #44
+[mk-app] #172 indent #79
+[mk-app] #174 compose #172 #62
+[mk-app] #114 compose #48 #13 #68 #72
+[mk-app] #105 indent #114
+[mk-app] #110 compose #172 #105
+[mk-app] #24 choice #110 #174
+[mk-app] #75 string
+[mk-app] #10 compose #48 #77 #68 #72
+[mk-app] #39 indent #10
+[mk-app] #22 compose #117 #39
+[mk-app] #182 choice #22 #22
+[mk-app] #189 compose #48 #182 #187 #72
+[mk-app] #190 indent #189
+[mk-app] #83 compose #167 #190
+[mk-app] #145 compose #48 #22 #115 #72
+[mk-app] #146 indent #145
+[mk-app] #183 compose #167 #146
+[mk-app] #188 choice #183 #83
+[mk-app] #27 string
+[mk-app] #28 compose #95 #188
+[mk-app] #17 compose #48 #75 #28 #72
+[mk-app] #23 indent #17
+[mk-app] #11 compose #66 #27
+[mk-app] #12 indent #11
+[mk-app] #8 compose #12 #23
+[mk-app] #9 compose #48 #183
+[mk-app] #33 compose #48 #75 #9 #72
+[mk-app] #30 indent #33
+[mk-app] #86 compose #12 #30
+[mk-app] #87 choice #86 #8
+[mk-app] #84 string
+[mk-app] #142 compose #48 #87 #68 #72
+[mk-app] #54 indent #142
+[mk-app] #63 compose #66 #84
+[mk-app] #18 indent #63
+[mk-app] #162 compose #18 #54
+[mk-app] #143 compose #48 #86 #68 #72
+[mk-app] #122 indent #143
+[mk-app] #125 compose #18 #122
+[mk-app] #127 choice #125 #162
+[mk-app] #134 compose #48 #24 #68 #72
+[mk-app] #135 indent #134
+[mk-app] #136 compose #66 #75 #135
+[mk-app] #147 compose #48 #110 #68 #72
+[mk-app] #128 indent #147
+[mk-app] #129 compose #66 #75 #128
+[mk-app] #111 choice #129 #136
+[mk-app] #120 string
+[mk-app] #169 compose #66 #111
+[mk-app] #76 indent #169
+[mk-app] #4 compose #76 #57
+[mk-app] #31 compose #66 #129
+[mk-app] #35 indent #31
+[mk-app] #36 compose #35 #57
+[mk-app] #16 choice #36 #4
+[mk-app] #164 indent #16
+[mk-app] #91 compose #95 #127
+[mk-app] #92 indent #91
+[mk-app] #42 compose #120 #164 #92 #72
+[mk-app] #120 string
+[mk-app] #75 string
+[mk-app] #66 string
+[mk-app] #44 compose
+[mk-app] #79 string
+[mk-app] #172 compose #79 #120 #44 #66
+[mk-app] #106 indent #172
+[mk-app] #74 string
+[mk-app] #109 compose #74 #75
+[mk-app] #48 indent #109
+[mk-app] #73 compose #48 #106
+[mk-app] #68 choice #73 #73
+[mk-app] #72 compose #44 #66
+[mk-app] #20 indent #72
+[mk-app] #15 compose #74 #68
+[mk-app] #25 indent #15
+[mk-app] #163 compose #25 #20
+[mk-app] #19 compose #74 #73
+[mk-app] #71 indent #19
+[mk-app] #57 compose #71 #20
+[mk-app] #55 choice #57 #163
+[mk-app] #157 string
+[mk-app] #158 string
+[mk-app] #160 cr
+[mk-app] #165 compose #160 #157
+[mk-app] #118 compose #79 #68 #165 #66
+[mk-app] #167 indent #118
+[mk-app] #102 compose #74 #158
+[mk-app] #80 indent #102
+[mk-app] #117 compose #80 #167
+[mk-app] #46 compose #79 #157
+[mk-app] #121 compose #79 #73 #46 #66
+[mk-app] #3 indent #121
+[mk-app] #77 compose #80 #3
+[mk-app] #115 choice #77 #117
+[mk-app] #40 indent #55
+[mk-app] #78 string
+[mk-app] #69 compose #78 #40
+[mk-app] #32 string
+[mk-app] #58 string
+[mk-app] #82 compose #58 #32
+[mk-app] #6 compose #160 #69 #160 #82
+[mk-app] #119 compose #79 #115 #6 #66
+[mk-app] #184 indent #119
+[mk-app] #53 string
+[mk-app] #65 compose #74 #53 #184
+[mk-app] #150 indent #57
+[mk-app] #185 compose #78 #150
+[mk-app] #14 compose #79 #185 #79 #82
+[mk-app] #26 compose #79 #77 #14 #66
+[mk-app] #38 indent #26
+[mk-app] #94 compose #74 #53 #38
+[mk-app] #108 choice #94 #65
+[mk-app] #13 string
+[mk-app] #114 compose #79 #13 #44 #66
+[mk-app] #105 indent #114
+[mk-app] #110 compose #74 #120 #105
+[mk-app] #147 choice #110 #110
+[mk-app] #128 compose #74 #147
+[mk-app] #129 indent #128
+[mk-app] #31 compose #129 #20
+[mk-app] #35 compose #74 #110
+[mk-app] #36 indent #35
+[mk-app] #64 compose #36 #20
+[mk-app] #85 choice #64 #31
+[mk-app] #88 compose #160 #108
+[mk-app] #138 indent #88
+[mk-app] #81 compose #79 #85 #44
+[mk-app] #124 indent #81
+[mk-app] #148 compose #79 #64 #44
+[mk-app] #89 indent #148
+[mk-app] #133 choice #89 #124
+[mk-app] #95 string
+[mk-app] #187 compose #74 #95
+[mk-app] #67 compose #187 #133 #138 #66
+[mk-app] #176 compose #79 #94
+[mk-app] #5 indent #176
+[mk-app] #99 compose #187 #89 #5 #66
+[mk-app] #59 choice #99 #67
+[mk-app] #90 string
+[mk-app] #186 compose #79 #59 #44 #66
+[mk-app] #173 indent #186
+[mk-app] #100 compose #74 #90
+[mk-app] #47 indent #100
+[mk-app] #154 compose #47 #173
+[mk-app] #155 compose #79 #99 #44 #66
+[mk-app] #159 indent #155
+[mk-app] #21 compose #47 #159
+[mk-app] #45 choice #21 #154
+[mk-app] #74 string
+[mk-app] #90 string
+[mk-app] #100 string
+[mk-app] #47 compose
+[mk-app] #95 string
+[mk-app] #187 compose #95 #74 #47 #100
+[mk-app] #120 indent #187
+[mk-app] #79 string
+[mk-app] #13 compose #79 #90
+[mk-app] #44 indent #13
+[mk-app] #66 compose #44 #120
+[mk-app] #114 choice #66 #66
+[mk-app] #105 string
+[mk-app] #110 cr
+[mk-app] #35 compose #110 #74
+[mk-app] #36 compose #95 #114 #35 #100
+[mk-app] #72 indent #36
+[mk-app] #20 compose #79 #105
+[mk-app] #64 indent #20
+[mk-app] #148 compose #64 #72
+[mk-app] #89 compose #95 #74
+[mk-app] #53 compose #95 #66 #89 #100
+[mk-app] #158 indent #53
+[mk-app] #102 compose #64 #158
+[mk-app] #80 choice #102 #148
+[end-of-instance]
+[mk-proof] #59 unit-resolution #63 #54 #43 #2
+[eof]

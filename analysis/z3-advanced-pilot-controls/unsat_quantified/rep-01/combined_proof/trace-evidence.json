@@ -1,0 +1,98 @@
+{
+  "status": "parsed",
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 906,
+    "redefined_ids": 731,
+    "[mk-var]": 16,
+    "[attach-meaning]": 11,
+    "[mk-quant]": 1,
+    "[attach-var-names]": 1,
+    "[mk-proof]": 36,
+    "[attach-enode]": 9,
+    "[inst-discovered]": 2,
+    "[instance]": 3,
+    "instances_without_saved_match": 2,
+    "[end-of-instance]": 3,
+    "[begin-check]": 1,
+    "[mk-lambda]": 1,
+    "[assign]": 2,
+    "[eq-expl]": 1,
+    "[new-match]": 1,
+    "[eof]": 1,
+    "matches_saved": 1,
+    "dependency_edges": 0,
+    "chains_saved": 0,
+    "matched_input_qid": 0,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 1,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 1,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 731,
+      "raw": "[new-match] 000001C7609F0FD8 #10 #9 #7 ; #11",
+      "fingerprint": "000001C7609F0FD8",
+      "qid": null,
+      "quantifier_trace_id": "#10",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 4,
+        "term": "(indent (compose string (choice (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) compose (= (compose string (choice #173 #5) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose (= #40 false)))))) (compose string (indent (compose string (choice (indent (compose string (compose (indent #46) (indent #82)) compose (= (compose #3 #115 #71 #57) false))) (compose (compose string string) (indent (compose string cr (compose #74 #106) (compose #3 #187 #176 #57))))) (compose cr string) (compose string (choice (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57)))) (compose cr string) (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))))) (compose cr (choice (compose string (indent (compose string (compose (indent (compose (= #40 #2) string)) (indent (compose string string))) (compose cr string) (compose string (choice (compose (indent #80) (indent #59)) (compose (indent #80) (indent #59))) (compose cr string) (= (compose string (choice #173 #5) compose #57) false))))) (compose string (indent (compose string (choice (compose (indent (compose #57 #119)) (indent (compose #3 #133))) (compose (indent (compose #57 #119)) (indent (compose #48 #106 #29 #118)))) (compose cr string) (compose string (choice (compose (indent #80) (indent #59)) (compose (indent #80) (indent #59))) (compose cr string) (= (compose string (choice #173 #5) compose #57) false))))))) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent #80) (indent #59)) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 7,
+            "term": "(compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose string string) (= (compose string (choice (compose (indent (compose string string)) #6) (compose (indent (compose string string)) (indent (compose string (choice #186 #186) (compose #67 #133) #57)))) compose #57) false))) (compose (compose string string) (indent (compose string (choice (indent (compose string string)) (indent (compose string string))) (compose cr cr) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2)))) (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2))))) (compose cr string) (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#7",
+                  "definition_version": 7,
+                  "term": "(compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose string string) (= (compose string (choice (compose (indent (compose string string)) #6) (compose (indent (compose string string)) (indent (compose string (choice #186 #186) (compose #67 #133) #57)))) compose #57) false))) (compose (compose string string) (indent (compose string (choice (indent (compose string string)) (indent (compose string string))) (compose cr cr) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2)))) (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2))))) (compose cr string) (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false)))",
+                  "resolved": true
+                },
+                "definition_version": 7,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #7 root",
+                "line": 730,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#7"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 4,
+          "term": "(choice (compose string (indent (compose string (compose (indent (compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false) string)) (indent (compose string string))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) (compose (indent (compose #109 #48)) (indent #118))) compose #57) false))))) (compose string (indent (compose string (choice (compose (indent (compose (= (compose string (choice #173 #5) compose #57) false) string)) (indent (compose string string))) (compose (indent (compose (= (compose string (choice #173 #5) compose #57) false) string)) (indent (compose string (choice (indent (compose #109 #48)) (indent (compose #109 #48))) (compose cr cr) (compose string (choice (compose #117 #90) (compose #117 #90)) (compose cr string) (= (compose #3 #115 #71 #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) (compose (indent (compose #109 #48)) (indent #118))) compose #57) false))))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [],
+  "chains": [],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

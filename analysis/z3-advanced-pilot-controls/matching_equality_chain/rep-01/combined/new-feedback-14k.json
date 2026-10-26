@@ -1,0 +1,313 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "line": 331,
+      "raw": "[new-match] 0000022B133D9608 #13 #12 #5 ; #19",
+      "fingerprint": "0000022B133D9608",
+      "qid": null,
+      "quantifier_trace_id": "#13",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 3,
+        "term": "(compose (compose string string compose string) string)",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#5",
+            "definition_version": 7,
+            "term": "(indent (compose string string compose string))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 7,
+                  "term": "(indent (compose string string compose string))",
+                  "resolved": true
+                },
+                "definition_version": 7,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent (compose (compose string string compose string) string))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 329,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 6,
+                    "term": "string",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent (compose (compose string string compose string) string))",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 330,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#19",
+          "definition_version": 3,
+          "term": "(choice (compose (indent (compose string string)) (indent (compose string string compose string))) (compose (indent (compose string string)) (indent (compose string string compose string))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    },
+    {
+      "id": "m2",
+      "line": 349,
+      "raw": "[new-match] 0000022B133D9850 #42 #17 #45 ; #51",
+      "fingerprint": "0000022B133D9850",
+      "qid": null,
+      "quantifier_trace_id": "#42",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 5,
+        "term": "compose",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#45",
+            "definition_version": 8,
+            "term": "(f (indent (compose (compose string string compose string) string)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#45",
+                  "definition_version": 8,
+                  "term": "(f (indent (compose (compose string string compose string) string)))",
+                  "resolved": true
+                },
+                "definition_version": 8,
+                "rule": "cg",
+                "target": "#19",
+                "target_term": {
+                  "trace_id": "#19",
+                  "definition_version": 3,
+                  "term": "(choice (compose (indent (compose string string)) (indent (compose string string compose string))) (compose (indent (compose string string)) (indent (compose string string compose string))))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #45 cg (#6 #5) ; #19",
+                "line": 347,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#6",
+                    "definition_version": 4,
+                    "term": "(indent (compose (compose string string compose string) string))",
+                    "resolved": true
+                  },
+                  {
+                    "trace_id": "#5",
+                    "definition_version": 7,
+                    "term": "(indent (compose string string compose string))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#19",
+                  "definition_version": 3,
+                  "term": "(choice (compose (indent (compose string string)) (indent (compose string string compose string))) (compose (indent (compose string string)) (indent (compose string string compose string))))",
+                  "resolved": true
+                },
+                "definition_version": 3,
+                "rule": "lit",
+                "target": "#5",
+                "target_term": {
+                  "trace_id": "#5",
+                  "definition_version": 7,
+                  "term": "(indent (compose string string compose string))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #19 lit #43 ; #5",
+                "line": 348,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#43",
+                    "definition_version": 4,
+                    "term": "(= (choice (compose (indent (compose string string)) (indent (compose string string compose string))) (compose (indent (compose string string)) (indent (compose string string compose string)))) (indent (compose string string compose string)))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 7,
+                  "term": "(indent (compose string string compose string))",
+                  "resolved": true
+                },
+                "definition_version": 7,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent (compose (compose string string compose string) string))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 329,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 6,
+                    "term": "string",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent (compose (compose string string compose string) string))",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 330,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#51",
+          "definition_version": 3,
+          "term": "(g (f (indent (compose (compose string string compose string) string))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#51",
+            "definition_version": 3,
+            "term": "(g (f (indent (compose (compose string string compose string) string))))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "non_inst_clauses": [
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a (* (- 1) (g b))) 0)",
+        "(<= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a (* (- 1) (g b))) 0)",
+        "(>= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= a (g b)))",
+        "(<= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= a (g b)))",
+        "(>= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= a (g b))",
+        "(let ((a!1 (<= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))",
+        "(let ((a!1 (>= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

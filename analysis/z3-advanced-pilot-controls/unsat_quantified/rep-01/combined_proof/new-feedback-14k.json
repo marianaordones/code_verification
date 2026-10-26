@@ -1,0 +1,96 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "line": 731,
+      "raw": "[new-match] 000001C7609F0FD8 #10 #9 #7 ; #11",
+      "fingerprint": "000001C7609F0FD8",
+      "qid": null,
+      "quantifier_trace_id": "#10",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 4,
+        "term": "(indent (compose string (choice (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) compose (= (compose string (choice #173 #5) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose (= #40 false)))))) (compose string (indent (compose string (choice (indent (compose string (compose (indent #46) (indent #82)) compose (= (compose #3 #115 #71 #57) false))) (compose (compose string string) (indent (compose string cr (compose #74 #106) (compose #3 #187 #176 #57))))) (compose cr string) (compose string (choice (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57)))) (compose cr string) (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))))) (compose cr (choice (compose string (indent (compose string (compose (indent (compose (= #40 #2) string)) (indent (compose string string))) (compose cr string) (compose string (choice (compose (indent #80) (indent #59)) (compose (indent #80) (indent #59))) (compose cr string) (= (compose string (choice #173 #5) compose #57) false))))) (compose string (indent (compose string (choice (compose (indent (compose #57 #119)) (indent (compose #3 #133))) (compose (indent (compose #57 #119)) (indent (compose #48 #106 #29 #118)))) (compose cr string) (compose string (choice (compose (indent #80) (indent #59)) (compose (indent #80) (indent #59))) (compose cr string) (= (compose string (choice #173 #5) compose #57) false))))))) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent #80) (indent #59)) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 7,
+            "term": "(compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose string string) (= (compose string (choice (compose (indent (compose string string)) #6) (compose (indent (compose string string)) (indent (compose string (choice #186 #186) (compose #67 #133) #57)))) compose #57) false))) (compose (compose string string) (indent (compose string (choice (indent (compose string string)) (indent (compose string string))) (compose cr cr) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2)))) (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2))))) (compose cr string) (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#7",
+                  "definition_version": 7,
+                  "term": "(compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false)))) (compose string string) (= (compose string (choice (compose (indent (compose string string)) #6) (compose (indent (compose string string)) (indent (compose string (choice #186 #186) (compose #67 #133) #57)))) compose #57) false))) (compose (compose string string) (indent (compose string (choice (indent (compose string string)) (indent (compose string string))) (compose cr cr) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2)))) (compose (indent (compose string string)) (indent (compose string string compose (= #40 #2))))) (compose cr string) (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose string (choice (compose (indent #46) (indent #82)) (compose (indent #46) (indent #118))) compose #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #109 #66)) (indent (compose #3 #133 #71 #57))) (compose string string) #57))) (compose (indent (compose string string)) (indent #118))) compose #57) false)))",
+                  "resolved": true
+                },
+                "definition_version": 7,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #7 root",
+                "line": 730,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#7"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 4,
+          "term": "(choice (compose string (indent (compose string (compose (indent (compose (= (compose string (choice (compose #121 #6) (compose #121 #167)) compose #57) false) string)) (indent (compose string string))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) (compose (indent (compose #109 #48)) (indent #118))) compose #57) false))))) (compose string (indent (compose string (choice (compose (indent (compose (= (compose string (choice #173 #5) compose #57) false) string)) (indent (compose string string))) (compose (indent (compose (= (compose string (choice #173 #5) compose #57) false) string)) (indent (compose string (choice (indent (compose #109 #48)) (indent (compose #109 #48))) (compose cr cr) (compose string (choice (compose #117 #90) (compose #117 #90)) (compose cr string) (= (compose #3 #115 #71 #57) false)))))) (compose cr string) (compose string (choice (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false)))) (compose (indent (compose string string)) (indent (compose string string compose (= (compose #3 #115 #71 #57) false))))) (compose cr string) (= (compose string (choice (compose (indent (compose #109 #48)) (indent (compose #3 #186 #58 #57))) (compose (indent (compose #109 #48)) (indent #118))) compose #57) false))))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "chains": [],
+  "non_inst_clauses": [
+    {
+      "rule": "mp~",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))\n      (a!2 (lambda ((x Int)) (refl (~ (>= (f x) 0) (>= (f x) 0))))))\n  (mp~ (asserted a!1) (nnf-pos (proof-bind a!2) (~ a!1 a!1)) a!1))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(forall ((x Int)) (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "mp",
+      "hint_smt": "(let ((a!1 (= (< (f 0) 0) (not (<= 0 (f 0)))))\n      (a!2 (= (not (<= 0 (f 0))) (not (>= (f 0) 0))))\n      (a!3 (= (< (f 0) 0) (not (>= (f 0) 0)))))\n  (mp (asserted (< (f 0) 0))\n      (trans (rewrite a!1) (rewrite a!2) a!3)\n      (not (>= (f 0) 0))))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (>= (f 0) 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "quant-inst",
+      "hint_smt": "(let ((a!1 (not (forall ((x Int))\n                  (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))))\n  (quant-inst (or a!1 (>= (f 0) 0))))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (forall ((x Int))\n       (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))",
+        "(>= (f 0) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

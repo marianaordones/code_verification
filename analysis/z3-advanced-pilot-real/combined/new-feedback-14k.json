@@ -1,0 +1,729 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 53,
+        "term": "(choice (choice (compose (indent (compose string string)) (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))) (choice (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string)))) string)) (compose (indent (compose string string)) (compose string string) (indent (compose (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose #25 #406) (compose #314 #460) string))) (compose (indent (compose string string)) (indent (compose string (choice #123 #43) (compose #481 #460) string)))) (indent (compose (indent (compose string string)) (choice string (compose (indent #351) (indent #213))) (compose cr (compose (indent #282) (indent #358)) cr (compose string string) cr (compose cr string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))) (choice (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string) (compose (choice (compose (compose string string (compose #314 #293) string) (indent (choice #284 #496))) (compose (indent (compose #66 #167)) (indent (compose #96 #293)) (indent (compose #37 #112 #80 #282)))) (indent (compose (indent (compose #66 #167)) (compose string (choice #284 #496) (indent #82)))) (indent (compose (choice (compose #314 #283 #449 #242) (compose #218 #87)) (choice (compose #54 #56 #54 #249 #54 #53) (compose #167 #245)) (compose (compose #251 #52 #186) (compose #234 #247) (compose #251 #52 #186) (indent #141) (compose #251 #52 #186) (choice #82 #103)) (indent (compose #314 #283 #420 #242)))))))) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#890",
+            "definition_version": 1,
+            "term": "a!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#890",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #890 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 21,
+            "term": "(compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#891",
+          "definition_version": 1,
+          "term": "(iInv (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))) a!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m2",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 53,
+        "term": "(choice (choice (compose (indent (compose string string)) (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))) (choice (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string)))) string)) (compose (indent (compose string string)) (compose string string) (indent (compose (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose #25 #406) (compose #314 #460) string))) (compose (indent (compose string string)) (indent (compose string (choice #123 #43) (compose #481 #460) string)))) (indent (compose (indent (compose string string)) (choice string (compose (indent #351) (indent #213))) (compose cr (compose (indent #282) (indent #358)) cr (compose string string) cr (compose cr string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))) (choice (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string) (compose (choice (compose (compose string string (compose #314 #293) string) (indent (choice #284 #496))) (compose (indent (compose #66 #167)) (indent (compose #96 #293)) (indent (compose #37 #112 #80 #282)))) (indent (compose (indent (compose #66 #167)) (compose string (choice #284 #496) (indent #82)))) (indent (compose (choice (compose #314 #283 #449 #242) (compose #218 #87)) (choice (compose #54 #56 #54 #249 #54 #53) (compose #167 #245)) (compose (compose #251 #52 #186) (compose #234 #247) (compose #251 #52 #186) (indent #141) (compose #251 #52 #186) (choice #82 #103)) (indent (compose #314 #283 #420 #242)))))))) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#892",
+            "definition_version": 1,
+            "term": "b!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#892",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #892 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 21,
+            "term": "(compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#893",
+          "definition_version": 1,
+          "term": "(iInv (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))) b!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m3",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 53,
+        "term": "(choice (choice (compose (indent (compose string string)) (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))) (choice (indent (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string)))) string)) (compose (indent (compose string string)) (compose string string) (indent (compose (compose string (choice (compose (indent (compose string string)) (indent (compose string (compose #25 #406) (compose #314 #460) string))) (compose (indent (compose string string)) (indent (compose string (choice #123 #43) (compose #481 #460) string)))) (indent (compose (indent (compose string string)) (choice string (compose (indent #351) (indent #213))) (compose cr (compose (indent #282) (indent #358)) cr (compose string string) cr (compose cr string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))) (choice (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string) (compose (choice (compose (compose string string (compose #314 #293) string) (indent (choice #284 #496))) (compose (indent (compose #66 #167)) (indent (compose #96 #293)) (indent (compose #37 #112 #80 #282)))) (indent (compose (indent (compose #66 #167)) (compose string (choice #284 #496) (indent #82)))) (indent (compose (choice (compose #314 #283 #449 #242) (compose #218 #87)) (choice (compose #54 #56 #54 #249 #54 #53) (compose #167 #245)) (compose (compose #251 #52 #186) (compose #234 #247) (compose #251 #52 #186) (indent #141) (compose #251 #52 #186) (choice #82 #103)) (indent (compose #314 #283 #420 #242)))))))) (indent (compose string string (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string))) (compose (indent (compose string string)) (indent (compose string (choice #27 #27) (compose #481 #241) string))))) string)))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#894",
+            "definition_version": 1,
+            "term": "c!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#894",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #894 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 21,
+            "term": "(compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent (compose #314 #119 #457 #242))) (compose string string (indent (compose #314 #119 #457 #242)))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#895",
+          "definition_version": 1,
+          "term": "(iInv (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))) c!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m4",
+      "qid": "prelude_add",
+      "inventory_match": "unique_qid",
+      "formula_ref": "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff",
+      "trigger": {
+        "trace_id": "#385",
+        "definition_version": 3,
+        "term": "(indent (compose (compose cr string) (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))) #393 [term expansion omitted] (compose (indent (choice (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))) string) (compose (indent (compose string (choice (compose cr (choice #293 #37)) (compose cr (choice #293 #37))))) (compose string string)))) (indent (choice (indent (compose string (choice (compose (compose string string (compose #314 #293) string) (indent (choice #284 #496))) (compose (indent (compose #66 #167)) (indent (compose #96 #293)) (indent (compose #37 #112 #80 #282)))))) (compose (indent (compose (choice (compose (indent #87) (indent #341)) (compose (indent #248) (compose #66 #42))) (choice (compose cr string) (compose (indent #249) (indent #59))))) (compose (indent (compose (choice (compose #314 #283 #449 #242) (compose #218 #87)) (compose string string (indent #20) (compose #460 #474 #112 #293)) (compose (compose #251 #52 #186) (choice #295 #180)) (indent (compose #314 #283 #420 #242)))) (compose string (choice (compose (indent #87) (indent #341)) (compose (indent #87) (indent #169))) (compose cr string) string) (indent (compose (compose (compose #82 #326) (compose #89 #124)) (compose (compose #251 #52 #186) (indent #3) (indent #256) (choice #338 #339)) (compose (indent #59) (compose #320 #275) (indent #59) (indent #267) (indent #59) (indent #249)) (choice (compose #460 #474 #112 #293) (compose #460 #203 #265 #293)))))))))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#892",
+            "definition_version": 1,
+            "term": "b!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#892",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #892 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#890",
+            "definition_version": 1,
+            "term": "a!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#890",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #890 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#899",
+          "definition_version": 1,
+          "term": "(Add a! b!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m5",
+      "qid": "prelude_add",
+      "inventory_match": "unique_qid",
+      "formula_ref": "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff",
+      "trigger": {
+        "trace_id": "#385",
+        "definition_version": 3,
+        "term": "(indent (compose (compose cr string) (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))) #393 [term expansion omitted] (compose (indent (choice (compose string string (compose string (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))) string) (compose (indent (compose string (choice (compose cr (choice #293 #37)) (compose cr (choice #293 #37))))) (compose string string)))) (indent (choice (indent (compose string (choice (compose (compose string string (compose #314 #293) string) (indent (choice #284 #496))) (compose (indent (compose #66 #167)) (indent (compose #96 #293)) (indent (compose #37 #112 #80 #282)))))) (compose (indent (compose (choice (compose (indent #87) (indent #341)) (compose (indent #248) (compose #66 #42))) (choice (compose cr string) (compose (indent #249) (indent #59))))) (compose (indent (compose (choice (compose #314 #283 #449 #242) (compose #218 #87)) (compose string string (indent #20) (compose #460 #474 #112 #293)) (compose (compose #251 #52 #186) (choice #295 #180)) (indent (compose #314 #283 #420 #242)))) (compose string (choice (compose (indent #87) (indent #341)) (compose (indent #87) (indent #169))) (compose cr string) string) (indent (compose (compose (compose #82 #326) (compose #89 #124)) (compose (compose #251 #52 #186) (indent #3) (indent #256) (choice #338 #339)) (compose (indent #59) (compose #320 #275) (indent #59) (indent #267) (indent #59) (indent #249)) (choice (compose #460 #474 #112 #293) (compose #460 #203 #265 #293)))))))))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#894",
+            "definition_version": 1,
+            "term": "c!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#894",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #894 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#899",
+            "definition_version": 1,
+            "term": "(Add a! b!)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#899",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #899 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#900",
+          "definition_version": 1,
+          "term": "(Add (Add a! b!) c!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m6",
+      "qid": "internal_core__ops__arith__Div_trait_type_bounds_definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "9ff54c4e68b5d74d27870bf888ff1e61836dc89c2261276bc1c7929fd59fa535",
+      "trigger": {
+        "trace_id": "#652",
+        "definition_version": 1,
+        "term": "(pattern #646 [term expansion omitted])",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#94",
+            "definition_version": 60,
+            "term": "(choice (indent (compose string string)) (indent (compose string string)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#94",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #94 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose #314 #119 #457 #242))) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose string string (indent #351)) (compose string string (indent #351))) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose string string)) (indent (compose string (compose #66 #333 #207) (compose #314 #241) string)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string)))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#94",
+            "definition_version": 60,
+            "term": "(choice (indent (compose string string)) (indent (compose string string)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#94",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #94 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#838",
+          "definition_version": 1,
+          "term": "(tr_bound%core!ops.arith.Div. (choice (indent (compose string string)) (indent (compose string string))) (SINT (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))))) (choice (indent (compose string string)) (indent (compose string string))) (SINT (compose (indent (compose string string)) (choice (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string))))) (compose cr (choice (compose (indent (compose string string)) (indent (compose string (compose string string (indent #351)) (compose string string) string))) (compose (indent (compose string string)) (indent (compose string (choice (compose #66 #333 #207) (compose #66 #333 #207)) (compose cr string) string)))))) (compose cr (choice (compose cr string) (compose (indent (compose string string)) (indent (compose (compose cr (compose string string)) (compose (indent (compose #66 #251)) (indent (compose #314 #27 #117 #242)))))))) (compose (indent (compose string string)) (indent (compose string (compose string string (indent (compose string string compose string))) (compose string string) string))))))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 0,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m13",
+      "qid": null,
+      "inventory_match": "unmatched",
+      "formula_ref": null,
+      "trigger": {
+        "trace_id": "#10",
+        "definition_version": 40,
+        "term": "#10 [term expansion omitted]",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#538",
+            "definition_version": 1,
+            "term": "fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#538",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #538 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#721",
+          "definition_version": 1,
+          "term": "(fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m20",
+      "qid": null,
+      "inventory_match": "unmatched",
+      "formula_ref": null,
+      "trigger": {
+        "trace_id": "#10",
+        "definition_version": 40,
+        "term": "#10 [term expansion omitted]",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#541",
+            "definition_version": 1,
+            "term": "fuel%candidate!min_val.",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#541",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #541 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#759",
+          "definition_version": 1,
+          "term": "(fuel_bool fuel%candidate!min_val.)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    }
+  ],
+  "chains": [],
+  "non_inst_clauses": [
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ b_@ (* (- 1) c_@)) 0)",
+        "(>= (+ b_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ b_@ (* (- 1) c_@)) 0)",
+        "(<= (+ b_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a_@ (* (- 1) c_@)) 0)",
+        "(>= (+ a_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a_@ (* (- 1) c_@)) 0)",
+        "(<= (+ a_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a_@ (* (- 1) b_@)) 0)",
+        "(>= (+ a_@ (* (- 1) b_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a_@ (* (- 1) b_@)) 0)",
+        "(<= (+ a_@ (* (- 1) b_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+        "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+        "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+        "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (= a!1 0))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (<= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (>= a!1 0)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (iLo 64) (- 9223372036854775808))",
+        "(<= (iLo 64) (- 9223372036854775808))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (iLo 64) (- 9223372036854775808))",
+        "(>= (iLo 64) (- 9223372036854775808))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= (iLo 64) (- 9223372036854775808)))",
+        "(<= (iLo 64) (- 9223372036854775808))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= (iLo 64) (- 9223372036854775808)))",
+        "(>= (iLo 64) (- 9223372036854775808))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= (iLo 64) (- 9223372036854775808))",
+        "(not (<= (iLo 64) (- 9223372036854775808)))",
+        "(not (>= (iLo 64) (- 9223372036854775808)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (iHi 64) 9223372036854775808)",
+        "(<= (iHi 64) 9223372036854775808)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (iHi 64) 9223372036854775808)",
+        "(>= (iHi 64) 9223372036854775808)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= (iHi 64) 9223372036854775808))",
+        "(<= (iHi 64) 9223372036854775808)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {},
+  "formulas": {
+    "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d": "(forall ((bits Int) (i Int))\n  (! (= (iInv bits i) (and (<= (iLo bits) i) (< i (iHi bits))))\n     :pattern ((iInv bits i))\n     :skolemid skolem_prelude_i_inv\n     :qid prelude_i_inv))",
+    "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff": "(forall ((x Int) (y Int))\n  (! (= (Add x y) (+ x y))\n     :pattern ((Add x y))\n     :skolemid skolem_prelude_add\n     :qid prelude_add))",
+    "9ff54c4e68b5d74d27870bf888ff1e61836dc89c2261276bc1c7929fd59fa535": "(forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n  (! (=> (tr_bound%core!ops.arith.Div. Self%&. Self%& Rhs&. Rhs&)\n         (and (sized Rhs&.)\n              (sized (proj%%core!ops.arith.Div./Output\n                       Self%&.\n                       Self%&\n                       Rhs&.\n                       Rhs&))))\n     :pattern ((tr_bound%core!ops.arith.Div. Self%&. Self%& Rhs&. Rhs&))\n     :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n     :qid internal_core__ops__arith__Div_trait_type_bounds_definition))"
+  }
+}

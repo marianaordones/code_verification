@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "mode": "combined_proof",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": true,
+    "proof": true
+  },
+  "callback_errors": 0,
+  "rules_observed": {
+    "mp": 3
+  },
+  "non_inst_clauses_observed": 3,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.014737299992702901,
+  "result": "unsat",
+  "check_seconds": 0.012760700003127567,
+  "reason_unknown": null,
+  "statistics": {
+    "conflicts": 1,
+    "num checks": 1,
+    "mk bool var": 3,
+    "arith-lower": 1,
+    "arith-upper": 2,
+    "arith-conflicts": 1,
+    "arith-make-feasible": 1,
+    "arith-max-columns": 10,
+    "arith-max-rows": 3,
+    "num allocs": 547030,
+    "rlimit count": 147,
+    "max memory": 21.1,
+    "memory": 21.1,
+    "time": 0.012
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [],
+  "chains": [],
+  "non_inst_clauses": [
+    {
+      "rule": "asserted",
+      "hint_smt": "(asserted (>= x 0))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= x 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "asserted",
+      "hint_smt": "(asserted (<= x 0))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= x 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(th-lemma (or (<= x 0) (>= x 0)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= x 0)",
+        "(>= x 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "mode": "trace",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": true,
+    "proof": false
+  },
+  "callback_errors": 0,
+  "rules_observed": {},
+  "non_inst_clauses_observed": 0,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.022570100001757964,
+  "result": "unsat",
+  "check_seconds": 0.060739699998521246,
+  "reason_unknown": null,
+  "statistics": {
+    "solve-eqs-steps": 1,
+    "solve-eqs-elim-vars": 1,
+    "conflicts": 1,
+    "added eqs": 5,
+    "mk clause binary": 1,
+    "max generation": 2,
+    "num checks": 1,
+    "mk bool var": 9,
+    "quant instantiations": 2,
+    "arith conflicts": 1,
+    "arith num rows": 1,
+    "arith assert lower": 2,
+    "arith assert upper": 2,
+    "arith tableau max rows": 1,
+    "arith tableau max columns": 4,
+    "arith eq adapter": 1,
+    "num allocs": 1422680,
+    "rlimit count": 735,
+    "max memory": 21.46,
+    "memory": 20.36,
+    "time": 0.06
+  }
+}

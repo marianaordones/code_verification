@@ -1,0 +1,7 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [],
+  "chains": [],
+  "non_inst_clauses": [],
+  "referenced_matches": {}
+}

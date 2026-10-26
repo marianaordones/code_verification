@@ -1,0 +1,26 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [],
+  "chains": [],
+  "non_inst_clauses": [
+    {
+      "rule": "mp~",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (> (f x) x) :pattern ((f x)) :qid control_no_ground_term)))\n      (a!2 (lambda ((x Int))\n             (let ((a!1 (= (> (f x) x) (not (<= (f x) x))))\n                   (a!2 (>= (+ x (* (- 1) (f x))) 0)))\n             (let ((a!3 (= (not (<= (f x) x)) (not a!2))))\n               (trans (rewrite a!1) (rewrite a!3) (= (> (f x) x) (not a!2)))))))\n      (a!3 (forall ((x Int))\n             (! (let ((a!1 (>= (+ x (* (- 1) (f x))) 0)))\n                  (not a!1))\n                :pattern ((f x))\n                :qid control_no_ground_term)))\n      (a!4 (lambda ((x Int))\n             (let ((a!1 (>= (+ x (* (- 1) (f x))) 0)))\n               (refl (~ (not a!1) (not a!1)))))))\n  (mp~ (mp (asserted a!1) (quant-intro (proof-bind a!2) (= a!1 a!3)) a!3)\n       (nnf-pos (proof-bind a!4) (~ a!3 a!3))\n       a!3))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(forall ((x Int))\n  (! (let ((a!1 (>= (+ x (* (- 1) (f x))) 0)))\n       (not a!1))\n     :pattern ((f x))\n     :qid control_no_ground_term))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "asserted",
+      "hint_smt": "(asserted (>= a 0))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= a 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

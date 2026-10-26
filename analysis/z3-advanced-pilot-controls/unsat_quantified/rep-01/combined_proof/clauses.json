@@ -1,0 +1,30 @@
+[
+  {
+    "rule": "mp~",
+    "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))\n      (a!2 (lambda ((x Int)) (refl (~ (>= (f x) 0) (>= (f x) 0))))))\n  (mp~ (asserted a!1) (nnf-pos (proof-bind a!2) (~ a!1 a!1)) a!1))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((x Int)) (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "mp",
+    "hint_smt": "(let ((a!1 (= (< (f 0) 0) (not (<= 0 (f 0)))))\n      (a!2 (= (not (<= 0 (f 0))) (not (>= (f 0) 0))))\n      (a!3 (= (< (f 0) 0) (not (>= (f 0) 0)))))\n  (mp (asserted (< (f 0) 0))\n      (trans (rewrite a!1) (rewrite a!2) a!3)\n      (not (>= (f 0) 0))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (>= (f 0) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "quant-inst",
+    "hint_smt": "(let ((a!1 (not (forall ((x Int))\n                  (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))))\n  (quant-inst (or a!1 (>= (f 0) 0))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((x Int))\n       (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative)))",
+      "(>= (f 0) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "mode": "baseline",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": false,
+    "proof": false
+  },
+  "callback_errors": 0,
+  "rules_observed": {},
+  "non_inst_clauses_observed": 0,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.012216800008900464,
+  "result": "unknown",
+  "check_seconds": 1.0368544000084512,
+  "reason_unknown": "timeout",
+  "statistics": {
+    "elim-unconstrained": 1,
+    "restarts": 51,
+    "final checks": 51,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 52,
+    "quant instantiations": 50,
+    "arith row summations": 48,
+    "arith num rows": 49,
+    "arith pivots": 49,
+    "arith assert lower": 17,
+    "arith assert upper": 33,
+    "arith tableau max rows": 49,
+    "arith tableau max columns": 101,
+    "num allocs": 36025471,
+    "rlimit count": 749725,
+    "max memory": 24.33,
+    "memory": 20.92,
+    "time": 1.036
+  }
+}

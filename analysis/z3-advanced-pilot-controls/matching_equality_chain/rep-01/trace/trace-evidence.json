@@ -1,0 +1,216 @@
+{
+  "status": "parsed",
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 650,
+    "redefined_ids": 239,
+    "[mk-var]": 21,
+    "[mk-quant]": 47,
+    "[attach-var-names]": 47,
+    "[attach-meaning]": 23,
+    "[attach-enode]": 21,
+    "[inst-discovered]": 7,
+    "[instance]": 9,
+    "instances_without_saved_match": 7,
+    "[end-of-instance]": 9,
+    "[begin-check]": 1,
+    "[assign]": 9,
+    "[eq-expl]": 2,
+    "[new-match]": 2,
+    "[eof]": 1,
+    "matches_saved": 2,
+    "dependency_edges": 1,
+    "chains_saved": 1,
+    "matched_input_qid": 0,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 2,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 2,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 807,
+      "raw": "[new-match] 000001DD335A3650 #13 #12 #6 ; #46",
+      "fingerprint": "000001DD335A3650",
+      "qid": null,
+      "quantifier_trace_id": "#13",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 3,
+        "term": "(compose [mk-quant] #76 k!81 3 #75 #74 string)",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#6",
+            "definition_version": 4,
+            "term": "(indent [mk-var] #56 3)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent [mk-var] #56 3)",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 806,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#46",
+          "definition_version": 8,
+          "term": "(f (indent [mk-var] #56 3))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    },
+    {
+      "id": "m2",
+      "line": 818,
+      "raw": "[new-match] 000001DD335A37E0 #42 #17 #46 ; #465",
+      "fingerprint": "000001DD335A37E0",
+      "qid": null,
+      "quantifier_trace_id": "#42",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 5,
+        "term": "compose",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#46",
+            "definition_version": 8,
+            "term": "(f (indent [mk-var] #56 3))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#46",
+                  "definition_version": 8,
+                  "term": "(f (indent [mk-var] #56 3))",
+                  "resolved": true
+                },
+                "definition_version": 8,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent [mk-var] #56 3)",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #46 lit #48 ; #6",
+                "line": 817,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#48",
+                    "definition_version": 4,
+                    "term": "(= (f (indent [mk-var] #56 3)) (indent [mk-var] #56 3))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 4,
+                  "term": "(indent [mk-var] #56 3)",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 806,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#465",
+          "definition_version": 1,
+          "term": "(g (f (indent [mk-var] #56 3)))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "m1",
+      "to": "m2",
+      "term": {
+        "trace_id": "#465",
+        "definition_version": 1,
+        "term": "(g (f (indent [mk-var] #56 3)))",
+        "resolved": true
+      },
+      "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+      "causal_creation_proven": false
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#465",
+            "definition_version": 1,
+            "term": "(g (f (indent [mk-var] #56 3)))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

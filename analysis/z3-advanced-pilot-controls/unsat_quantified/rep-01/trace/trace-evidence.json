@@ -1,0 +1,96 @@
+{
+  "status": "parsed",
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 511,
+    "redefined_ids": 125,
+    "[mk-var]": 21,
+    "[attach-meaning]": 23,
+    "[mk-quant]": 45,
+    "[attach-var-names]": 45,
+    "[attach-enode]": 10,
+    "[inst-discovered]": 4,
+    "[instance]": 5,
+    "instances_without_saved_match": 4,
+    "[end-of-instance]": 5,
+    "[begin-check]": 1,
+    "[assign]": 2,
+    "[eq-expl]": 1,
+    "[new-match]": 1,
+    "[eof]": 1,
+    "matches_saved": 1,
+    "dependency_edges": 0,
+    "chains_saved": 0,
+    "matched_input_qid": 0,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 1,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 1,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 663,
+      "raw": "[new-match] 000001B8FFA1C150 #10 #9 #7 ; #11",
+      "fingerprint": "000001B8FFA1C150",
+      "qid": null,
+      "quantifier_trace_id": "#10",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 2,
+        "term": "(indent (compose string (indent (compose string string (?PO [mk-var] #34 2 string) (not (= (?PO [mk-var] #36 1 string) 1)))) (indent (= (?PO [mk-var] #36 1 string) 1)) string))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 4,
+            "term": "string",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#7",
+                  "definition_version": 4,
+                  "term": "string",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #7 root",
+                "line": 662,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#7"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 2,
+          "term": "(compose (compose string string (?PO [mk-var] #34 2 string) (not (= (?PO [mk-var] #36 1 string) 1))) string)",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [],
+  "chains": [],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

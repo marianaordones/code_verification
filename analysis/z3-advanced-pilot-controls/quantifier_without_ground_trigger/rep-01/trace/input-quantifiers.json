@@ -1,0 +1,53 @@
+{
+  "quantifiers": [
+    {
+      "formula_sha256": "a84ca040dcfb455e77261c92e56375a085f6ae0a6a01b11c8ae766a1ac6dc469",
+      "qid": "control_no_ground_term",
+      "quantifier_smt": "(forall ((x Int)) (! (> (f x) x) :pattern ((f x)) :qid control_no_ground_term))",
+      "formula_omitted": false,
+      "kind": "forall",
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "explicit_patterns_smt": [
+        "((f (:var 0)))"
+      ],
+      "pattern_root_symbols": [
+        "f"
+      ],
+      "weight": 1
+    }
+  ],
+  "matching": [
+    {
+      "formula_sha256": "a84ca040dcfb455e77261c92e56375a085f6ae0a6a01b11c8ae766a1ac6dc469",
+      "qid": "control_no_ground_term",
+      "explicit_patterns_smt": [
+        "((f (:var 0)))"
+      ],
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "terms_by_same_root_symbol": [
+        {
+          "symbol": "f",
+          "ground_terms_in_input_count": 0,
+          "examples_smt": []
+        }
+      ],
+      "origin": "loaded input AST, not the active E-matching term database",
+      "matching_diagnosis": "not determined; symbol overlap is not a matching test"
+    }
+  ],
+  "ast_nodes_visited": 7,
+  "ast_node_limit_hit": false,
+  "quantifiers_found": 1,
+  "quantifiers_not_saved": 0,
+  "oversized_ground_terms_not_saved": 0
+}

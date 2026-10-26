@@ -1,0 +1,336 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "line": 1541,
+      "raw": "[new-match] 000001B534A227E0 #13 #12 #5 ; #19",
+      "fingerprint": "000001B534A227E0",
+      "qid": null,
+      "quantifier_trace_id": "#13",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 12,
+        "term": "(choice string (compose (compose string string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (indent (compose string string)) (compose cr (compose string string)) (indent (compose string string (compose string string) string))))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#5",
+            "definition_version": 17,
+            "term": "(indent (compose string string (compose string string) string))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 17,
+                  "term": "(indent (compose string string (compose string string) string))",
+                  "resolved": true
+                },
+                "definition_version": 17,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 10,
+                  "term": "(compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) string (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (choice (compose (= #6 #5) (indent #26)) (compose (= #6 #5) (indent #199))) compose (indent (compose string string (compose #127 #53) string)))))) (indent (compose string string (compose string string) string))))) compose (indent (compose string string (compose string string) string)))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 1539,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 11,
+                    "term": "(compose cr (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose #36 #53) string))) (compose (indent (compose string (choice #69 #213) compose string)) (indent (compose (compose #42 #198) (choice #210 #4) compose (indent #58)))) (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #305 #91 #5)))) (indent (compose string string (compose string string) string))))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose #36 #53) string))) (choice (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #80 #91 #5))) (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #3 #91 #5)))) (compose cr (choice (compose (indent #199) (indent #313)) (compose (indent #199) (indent #338)))) (indent (compose string string (compose string string) string)))))) compose (indent (compose string string (compose string string) string)))))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 10,
+                  "term": "(compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) string (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (choice (compose (= #6 #5) (indent #26)) (compose (= #6 #5) (indent #199))) compose (indent (compose string string (compose #127 #53) string)))))) (indent (compose string string (compose string string) string))))) compose (indent (compose string string (compose string string) string)))",
+                  "resolved": true
+                },
+                "definition_version": 10,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 1540,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#19",
+          "definition_version": 7,
+          "term": "(choice (compose (indent (compose string (choice (compose (indent (compose string string)) (indent (compose string string (compose string string) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr string) string)))) compose string)) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (compose (= (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (compose string string (compose #36 #53) string) (indent (compose #213 #11 #136 #5))) compose (indent (compose string string (compose #127 #53) string))) (indent (compose string string (compose string string) string))) (indent (compose string (compose (indent (compose #28 #62)) (indent (compose #127 #211 #41 #20))) compose string))) (compose (= (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (compose string string (compose #36 #53) string) (indent (compose #213 #11 #136 #5))) compose (indent (compose string string (compose #127 #53) string))) (indent (compose string string (compose string string) string))) (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)))) compose (indent (compose string string (compose string string) string))))) (compose (indent (compose string (choice (compose (indent (compose string string)) (indent (compose string string (compose string string) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr string) string)))) compose string)) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (choice (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (compose (indent #339) (indent #58)) compose string))) (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (choice (compose #42 #5) (compose #42 #198)) compose string)))) (compose (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (choice (compose #42 #5) (compose #42 #198)) compose string))) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose string string) (compose cr (indent (compose #28 #62))) (indent (compose string string (compose #127 #53) string)))))) compose (indent (compose string string (compose string string) string))))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    },
+    {
+      "id": "m2",
+      "line": 1879,
+      "raw": "[new-match] 000001B534A22A28 #48 #17 #92 ; #93",
+      "fingerprint": "000001B534A22A28",
+      "qid": null,
+      "quantifier_trace_id": "#48",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 15,
+        "term": "(compose string string compose string)",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#92",
+            "definition_version": 3,
+            "term": "(f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#92",
+                  "definition_version": 3,
+                  "term": "(f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string))))",
+                  "resolved": true
+                },
+                "definition_version": 3,
+                "rule": "cg",
+                "target": "#19",
+                "target_term": {
+                  "trace_id": "#19",
+                  "definition_version": 10,
+                  "term": "(compose string string)",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #92 cg (#6 #5) ; #19",
+                "line": 1877,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#6",
+                    "definition_version": 12,
+                    "term": "(compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))",
+                    "resolved": true
+                  },
+                  {
+                    "trace_id": "#5",
+                    "definition_version": 19,
+                    "term": "(indent (compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)))))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#19",
+                  "definition_version": 10,
+                  "term": "(compose string string)",
+                  "resolved": true
+                },
+                "definition_version": 10,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 12,
+                  "term": "(compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #19 lit #20 ; #6",
+                "line": 1878,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#20",
+                    "definition_version": 11,
+                    "term": "(compose (indent (compose string (choice string string))) (indent (compose string string)))",
+                    "resolved": true
+                  }
+                ]
+              }
+            ],
+            "complete": false,
+            "reason": "missing explanation"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#93",
+          "definition_version": 3,
+          "term": "(g (f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#93",
+            "definition_version": 3,
+            "term": "(g (f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "non_inst_clauses": [
+    {
+      "rule": "mp~",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n(let ((a!2 (nnf-pos (proof-bind (lambda ((x Int))\n                                  (let ((a!1 (~ (= (g (f x)) x) (= (g (f x)) x))))\n                                    (refl a!1))))\n                    (~ a!1 a!1))))\n  (mp~ (asserted a!1) a!2 a!1)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(forall ((x Int))\n  (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "mp~",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2)))\n      (a!2 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n(let ((a!3 (quant-intro (proof-bind (lambda ((x Int))\n                                      (let ((a!1 (= (> (g x) 0)\n                                                    (not (<= (g x) 0)))))\n                                        (rewrite a!1))))\n                        (= a!1 a!2)))\n      (a!4 (nnf-pos (proof-bind (lambda ((x Int))\n                                  (let ((a!1 (~ (not (<= (g x) 0))\n                                                (not (<= (g x) 0)))))\n                                    (refl a!1))))\n                    (~ a!2 a!2))))\n  (mp~ (mp (asserted a!1) a!3 a!2) a!4 a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(forall ((x Int))\n  (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "quant-inst",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n(let ((a!2 (or (not a!1) (= (g (f b)) b))))\n  (quant-inst a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n  (not a!1))",
+        "(= (g (f b)) b)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "quant-inst",
+      "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n(let ((a!2 (or (not a!1) (not (<= (g b) 0)))))\n  (quant-inst a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n  (not a!1))",
+        "(not (<= (g b) 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "asserted",
+      "hint_smt": "(asserted (= a b))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= a b)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "asserted",
+      "hint_smt": "(asserted (= (f a) b))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= (f a) b)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "mp",
+      "hint_smt": "(let ((a!1 (rewrite (= (< b 0) (not (<= 0 b)))))\n      (a!2 (rewrite (= (not (<= 0 b)) (not (>= b 0))))))\n(let ((a!3 (trans a!1 a!2 (= (< b 0) (not (>= b 0))))))\n  (mp (asserted (< b 0)) a!3 (not (>= b 0)))))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (>= b 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)) (a!2 (<= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or a!1 a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ b (* (- 1) (g b))) 0)",
+        "(<= (+ b (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)) (a!2 (<= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or a!1 a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ b (* (- 1) (g b))) 0)",
+        "(>= (+ b (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)))\n(let ((a!2 (or (not (= b (g b))) a!1)))\n  (th-lemma a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= b (g b)))",
+        "(<= (+ b (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)))\n(let ((a!2 (or (not (= b (g b))) a!1)))\n  (th-lemma a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= b (g b)))",
+        "(>= (+ b (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "th-lemma",
+      "hint_smt": "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)) (a!2 (>= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or (= b (g b)) (not a!1) (not a!2))))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= b (g b))",
+        "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)))\n  (not a!1))",
+        "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)))\n  (not a!1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

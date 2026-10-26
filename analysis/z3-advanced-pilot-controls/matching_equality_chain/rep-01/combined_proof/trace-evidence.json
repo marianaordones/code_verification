@@ -1,0 +1,263 @@
+{
+  "status": "parsed",
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 3314,
+    "redefined_ids": 2977,
+    "[mk-var]": 16,
+    "[mk-quant]": 3,
+    "[attach-var-names]": 3,
+    "[attach-meaning]": 11,
+    "[mk-proof]": 96,
+    "[attach-enode]": 22,
+    "[inst-discovered]": 4,
+    "[instance]": 6,
+    "instances_without_saved_match": 4,
+    "[end-of-instance]": 6,
+    "[mk-lambda]": 3,
+    "[begin-check]": 1,
+    "[assign]": 10,
+    "[eq-expl]": 4,
+    "[new-match]": 2,
+    "[eof]": 1,
+    "matches_saved": 2,
+    "dependency_edges": 1,
+    "chains_saved": 1,
+    "matched_input_qid": 0,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 2,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 1,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 1541,
+      "raw": "[new-match] 000001B534A227E0 #13 #12 #5 ; #19",
+      "fingerprint": "000001B534A227E0",
+      "qid": null,
+      "quantifier_trace_id": "#13",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 12,
+        "term": "(choice string (compose (compose string string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (indent (compose string string)) (compose cr (compose string string)) (indent (compose string string (compose string string) string))))))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#5",
+            "definition_version": 17,
+            "term": "(indent (compose string string (compose string string) string))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 17,
+                  "term": "(indent (compose string string (compose string string) string))",
+                  "resolved": true
+                },
+                "definition_version": 17,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 10,
+                  "term": "(compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) string (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (choice (compose (= #6 #5) (indent #26)) (compose (= #6 #5) (indent #199))) compose (indent (compose string string (compose #127 #53) string)))))) (indent (compose string string (compose string string) string))))) compose (indent (compose string string (compose string string) string)))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 1539,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 11,
+                    "term": "(compose cr (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose #36 #53) string))) (compose (indent (compose string (choice #69 #213) compose string)) (indent (compose (compose #42 #198) (choice #210 #4) compose (indent #58)))) (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #305 #91 #5)))) (indent (compose string string (compose string string) string))))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose #36 #53) string))) (choice (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #80 #91 #5))) (compose (indent (compose #127 #15 #16 #20)) (indent (compose #213 #3 #91 #5)))) (compose cr (choice (compose (indent #199) (indent #313)) (compose (indent #199) (indent #338)))) (indent (compose string string (compose string string) string)))))) compose (indent (compose string string (compose string string) string)))))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 10,
+                  "term": "(compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (compose string string (compose cr string) string) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) string (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (compose (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (choice (compose (= #6 #5) (indent #26)) (compose (= #6 #5) (indent #199))) compose (indent (compose string string (compose #127 #53) string)))))) (indent (compose string string (compose string string) string))))) compose (indent (compose string string (compose string string) string)))",
+                  "resolved": true
+                },
+                "definition_version": 10,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 1540,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#19",
+          "definition_version": 7,
+          "term": "(choice (compose (indent (compose string (choice (compose (indent (compose string string)) (indent (compose string string (compose string string) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr string) string)))) compose string)) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (compose (= (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (compose string string (compose #36 #53) string) (indent (compose #213 #11 #136 #5))) compose (indent (compose string string (compose #127 #53) string))) (indent (compose string string (compose string string) string))) (indent (compose string (compose (indent (compose #28 #62)) (indent (compose #127 #211 #41 #20))) compose string))) (compose (= (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose (compose string string (compose #36 #53) string) (indent (compose #213 #11 #136 #5))) compose (indent (compose string string (compose #127 #53) string))) (indent (compose string string (compose string string) string))) (indent (compose string (choice (compose (indent #339) (indent #58)) (compose (indent #339) (indent #131))) compose string)))) compose (indent (compose string string (compose string string) string))))) (compose (indent (compose string (choice (compose (indent (compose string string)) (indent (compose string string (compose string string) string))) (compose (indent (compose string string)) (indent (compose string string (compose cr string) string)))) compose string)) (indent (compose (compose (indent (compose string string)) (indent (compose string string (compose cr string) string))) (choice (choice (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (compose (indent #339) (indent #58)) compose string))) (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (choice (compose #42 #5) (compose #42 #198)) compose string)))) (compose (compose (= (compose (compose (indent #339) (indent #131)) (compose (compose #127 #211 #83 #20) (indent #312)) compose (indent (compose #127 #211 #41 #20))) (indent (compose string string (compose #127 #53) string))) (indent (compose string (choice (compose #42 #5) (compose #42 #198)) compose string))) (indent (compose (compose (indent (compose #28 #62)) (indent (compose #127 #211 #83 #20))) (compose string string) (compose cr (indent (compose #28 #62))) (indent (compose string string (compose #127 #53) string)))))) compose (indent (compose string string (compose string string) string))))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    },
+    {
+      "id": "m2",
+      "line": 1879,
+      "raw": "[new-match] 000001B534A22A28 #48 #17 #92 ; #93",
+      "fingerprint": "000001B534A22A28",
+      "qid": null,
+      "quantifier_trace_id": "#48",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 15,
+        "term": "(compose string string compose string)",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#92",
+            "definition_version": 3,
+            "term": "(f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#92",
+                  "definition_version": 3,
+                  "term": "(f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string))))",
+                  "resolved": true
+                },
+                "definition_version": 3,
+                "rule": "cg",
+                "target": "#19",
+                "target_term": {
+                  "trace_id": "#19",
+                  "definition_version": 10,
+                  "term": "(compose string string)",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #92 cg (#6 #5) ; #19",
+                "line": 1877,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#6",
+                    "definition_version": 12,
+                    "term": "(compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))",
+                    "resolved": true
+                  },
+                  {
+                    "trace_id": "#5",
+                    "definition_version": 19,
+                    "term": "(indent (compose string (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose #175 #335)) (indent (compose #26 #117 #16 #84))) compose string))) (compose string string) string)))))",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#19",
+                  "definition_version": 10,
+                  "term": "(compose string string)",
+                  "resolved": true
+                },
+                "definition_version": 10,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 12,
+                  "term": "(compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string string compose string))) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #19 lit #20 ; #6",
+                "line": 1878,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#20",
+                    "definition_version": 11,
+                    "term": "(compose (indent (compose string (choice string string))) (indent (compose string string)))",
+                    "resolved": true
+                  }
+                ]
+              }
+            ],
+            "complete": false,
+            "reason": "missing explanation"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#93",
+          "definition_version": 3,
+          "term": "(g (f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "m1",
+      "to": "m2",
+      "term": {
+        "trace_id": "#93",
+        "definition_version": 3,
+        "term": "(g (f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))))",
+        "resolved": true
+      },
+      "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+      "causal_creation_proven": false
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#93",
+            "definition_version": 3,
+            "term": "(g (f (compose (indent (compose string string compose string)) (choice (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string)) (indent (compose string (compose (indent (compose string string)) (indent (compose string (compose (indent #19) (indent #17)) compose string))) (compose string string) string))) (compose string string) (indent (compose string string)))))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

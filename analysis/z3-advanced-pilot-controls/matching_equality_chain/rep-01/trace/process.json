@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\mario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-m",
+    "diagnostics.z3_advanced_pilot",
+    "worker",
+    "--query",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-advanced-pilot-controls\\matching_equality_chain\\query.smt2",
+    "--context",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-advanced-pilot-controls\\matching_equality_chain\\context.json",
+    "--output",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-advanced-pilot-controls\\matching_equality_chain\\rep-01\\trace",
+    "--mode",
+    "trace",
+    "--timeout-ms",
+    "1000",
+    "--max-trace-mb",
+    "64"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 1.5993673000048148
+}

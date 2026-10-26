@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "mode": "combined_proof",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": true,
+    "proof": true
+  },
+  "callback_errors": 0,
+  "rules_observed": {
+    "mp~": 1,
+    "mp": 1,
+    "quant-inst": 1
+  },
+  "non_inst_clauses_observed": 3,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.06957079999847338,
+  "result": "unsat",
+  "check_seconds": 0.041229499998735264,
+  "reason_unknown": null,
+  "statistics": {
+    "conflicts": 1,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 2,
+    "quant instantiations": 1,
+    "arith-lower": 1,
+    "arith-make-feasible": 1,
+    "arith-max-columns": 5,
+    "num allocs": 546243,
+    "rlimit count": 150,
+    "max memory": 21.15,
+    "memory": 21.15,
+    "time": 0.015
+  }
+}

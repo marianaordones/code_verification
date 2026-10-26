@@ -1,0 +1,67 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "line": 192,
+      "raw": "[new-match] 0000025B5C79B380 #10 #9 #7 ; #11",
+      "fingerprint": "0000025B5C79B380",
+      "qid": null,
+      "quantifier_trace_id": "#10",
+      "inventory_match": "unmatched",
+      "input_formula": null,
+      "input_formula_sha256": null,
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 2,
+        "term": "(indent (compose string (indent (compose string string compose string)) (indent (compose string string)) string))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 4,
+            "term": "string",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#7",
+                  "definition_version": 4,
+                  "term": "string",
+                  "resolved": true
+                },
+                "definition_version": 4,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #7 root",
+                "line": 191,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#7"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 2,
+          "term": "(compose (compose string string compose string) string)",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "chains": [],
+  "non_inst_clauses": [],
+  "referenced_matches": {}
+}

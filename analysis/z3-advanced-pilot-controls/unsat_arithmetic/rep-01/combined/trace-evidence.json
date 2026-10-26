@@ -1,0 +1,33 @@
+{
+  "status": "parsed",
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 37,
+    "redefined_ids": 8,
+    "[attach-meaning]": 13,
+    "[mk-var]": 15,
+    "[attach-enode]": 19,
+    "[inst-discovered]": 4,
+    "[instance]": 4,
+    "instances_without_saved_match": 4,
+    "[end-of-instance]": 4,
+    "[begin-check]": 1,
+    "[mk-proof]": 1,
+    "[assign]": 3,
+    "[eof]": 1,
+    "matches_saved": 0,
+    "dependency_edges": 0,
+    "chains_saved": 0,
+    "matched_input_qid": 0,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 0,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 0,
+    "unresolved_match_terms": 0
+  },
+  "matches": [],
+  "dependencies": [],
+  "chains": [],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

@@ -1,0 +1,35 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [],
+  "chains": [],
+  "non_inst_clauses": [
+    {
+      "rule": "mp",
+      "hint_smt": "(let ((a!1 (= (>= a b) (>= (+ a (* (- 1.0) b)) 0.0))))\n  (mp (asserted (>= a b)) (rewrite a!1) (>= (+ a (* (- 1.0) b)) 0.0)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a (* (- 1.0) b)) 0.0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "mp",
+      "hint_smt": "(let ((a!1 (= (>= b c) (>= (+ b (* (- 1.0) c)) 0.0))))\n  (mp (asserted (>= b c)) (rewrite a!1) (>= (+ b (* (- 1.0) c)) 0.0)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ b (* (- 1.0) c)) 0.0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "mp",
+      "hint_smt": "(let ((a!1 (rewrite (= (> c a) (not (<= c a)))))\n      (a!2 (not (>= (+ a (* (- 1.0) c)) 0.0))))\n(let ((a!3 (rewrite (= (not (<= c a)) a!2))))\n  (mp (asserted (> c a)) (trans a!1 a!3 (= (> c a) a!2)) a!2)))",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (>= (+ a (* (- 1.0) c)) 0.0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {}
+}

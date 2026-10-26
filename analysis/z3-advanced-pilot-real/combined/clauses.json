@@ -1,0 +1,873 @@
+[
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ b_@ (* (- 1) c_@)) 0)",
+      "(>= (+ b_@ (* (- 1) c_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ b_@ (* (- 1) c_@)) 0)",
+      "(<= (+ b_@ (* (- 1) c_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a_@ (* (- 1) c_@)) 0)",
+      "(>= (+ a_@ (* (- 1) c_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a_@ (* (- 1) c_@)) 0)",
+      "(<= (+ a_@ (* (- 1) c_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a_@ (* (- 1) b_@)) 0)",
+      "(>= (+ a_@ (* (- 1) b_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a_@ (* (- 1) b_@)) 0)",
+      "(<= (+ a_@ (* (- 1) b_@)) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+      "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (= a!1 0))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (>= a!1 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (iLo 64) (- 9223372036854775808))",
+      "(<= (iLo 64) (- 9223372036854775808))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (iLo 64) (- 9223372036854775808))",
+      "(>= (iLo 64) (- 9223372036854775808))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (iLo 64) (- 9223372036854775808)))",
+      "(<= (iLo 64) (- 9223372036854775808))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (iLo 64) (- 9223372036854775808)))",
+      "(>= (iLo 64) (- 9223372036854775808))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (iLo 64) (- 9223372036854775808))",
+      "(not (<= (iLo 64) (- 9223372036854775808)))",
+      "(not (>= (iLo 64) (- 9223372036854775808)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (iHi 64) 9223372036854775808)",
+      "(<= (iHi 64) 9223372036854775808)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (iHi 64) 9223372036854775808)",
+      "(>= (iHi 64) 9223372036854775808)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (iHi 64) 9223372036854775808))",
+      "(<= (iHi 64) 9223372036854775808)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (iHi 64) 9223372036854775808))",
+      "(>= (iHi 64) 9223372036854775808)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (iHi 64) 9223372036854775808)",
+      "(not (<= (iHi 64) 9223372036854775808))",
+      "(not (>= (iHi 64) 9223372036854775808))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_req.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_req.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_spec.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!min_val.)\n   (fuel_bool_default fuel%candidate!min_val.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!candies_after_division.)\n   (fuel_bool_default fuel%candidate!candies_after_division.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!is_achievable.)\n   (fuel_bool_default fuel%candidate!is_achievable.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (fuel_bool fuel%candidate!is_optimal.)\n   (fuel_bool_default fuel%candidate!is_optimal.))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ c! (iClip 64 (Add a! b!)) a!1) 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ c! (iClip 64 (Add a! b!)) a!1) 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (= (+ c! (iClip 64 (Add a! b!)) a!1) 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (<= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (>= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (>= a!1 0))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (<= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (<= a!1 0))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (>= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (Add a! b!) (iClip 64 (Add a! b!))))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (<= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= (Add a! b!) (iClip 64 (Add a! b!))))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (>= a!1 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (Add a! b!) (iClip 64 (Add a! b!)))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (>= a!1 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ (Add (Add a! b!) c!) a!1) 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (Add (Add a! b!) c!) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (Add (Add a! b!) c!) a!1) 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ (Add (Add a! b!) c!) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (Add (Add a! b!) c!) (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (Add (Add a! b!) c!) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (= (Add (Add a! b!) c!) (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (+ (Add (Add a! b!) c!) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (Add (Add a! b!) c!) (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (<= (+ (Add (Add a! b!) c!) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (>= (+ (Add (Add a! b!) c!) a!1) 0)))\n  (not a!2)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (>= c! 0))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (<= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (iLo 64) a!1) 0))",
+      "(let ((a!1 (+ (iLo 64) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (<= a!1 0)))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (iLo 64) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (<= a!1 0)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (>= (+ c! (iClip 64 (Add a! b!)) a!1) 0)))\n  (not a!2)))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (not (<= (+ (iHi 64) a!1) 0)))",
+      "(let ((a!1 (+ (Add a! b!) (* (- 1) (iClip 64 (Add a! b!))))))\n  (not (>= a!1 0)))",
+      "(not (>= (iHi 64) 9223372036854775808))",
+      "(not (<= (Add (Add a! b!) c!) 9223372036854775807))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (+ (iHi 64) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)",
+      "(= (Add a! b!) (iClip 64 (Add a! b!)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0))\n      (a!2 (<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)))\n  (or (not a!1) a!2 (= (Add a! b!) (iClip 64 (Add a! b!)))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (not (<= (+ (iLo 64) a!1) 0))))\n  (or a!2 (<= (+ (iHi 64) a!1) 0))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (<= (+ (iLo bits) (* (- 1) (iClip bits i))) 0))\n                      (a!2 (>= (+ (iClip bits i) (* (- 1) (iHi bits))) 0))\n                      (a!3 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!4 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                (let ((a!5 (not (or (not a!3) a!4 (= i (iClip bits i))))))\n                  (not (or (not a!1) a!2 a!5))))\n                :pattern ((iClip bits i))\n                :skolemid skolem_prelude_i_clip\n                :qid prelude_i_clip))))\n  (not a!1))",
+      "(let ((a!1 (+ (iLo 64) (* (- 1) (iClip 64 (Add a! b!)))))\n      (a!2 (+ (iHi 64) (* (- 1) (iClip 64 (Add a! b!)))))\n      (a!3 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0))\n      (a!4 (<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)))\n(let ((a!5 (or (not a!3) a!4 (= (Add a! b!) (iClip 64 (Add a! b!))))))\n  (not (or (not (<= a!1 0)) (<= a!2 0) (not a!5)))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int) (y Int))\n             (! (= (+ y x (* (- 1) (Add x y))) 0)\n                :pattern ((Add x y))\n                :skolemid skolem_prelude_add\n                :qid prelude_add))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!))))\n  (= (+ c! (iClip 64 (Add a! b!)) a!1) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (i Int))\n             (! (let ((a!1 (>= (+ i (* (- 1) (iLo bits))) 0))\n                      (a!2 (>= (+ i (* (- 1) (iHi bits))) 0)))\n                  (not (= (or (not a!1) a!2) (iInv bits i))))\n                :pattern ((iInv bits i))\n                :skolemid skolem_prelude_i_inv\n                :qid prelude_i_inv))))\n  (not a!1))",
+      "(let ((a!1 (* (- 1) (Add (iClip 64 (Add a! b!)) c!)))\n      (a!4 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (not (<= (+ (iLo 64) a!1) 0))))\n(let ((a!3 (or a!2 (<= (+ (iHi 64) a!1) 0))))\n  (not (= a!3 a!4)))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(iInv 64 (Add (iClip 64 (Add a! b!)) c!))",
+      "(let ((a!1 (<= (+ (iLo 64) (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+      "(<= (+ (iHi 64) (* (- 1) (Add a! b!))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (>= a!2 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (<= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (<= a!2 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (>= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (<= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (>= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (= (Add (iClip 64 (Add a! b!)) c!) a!1))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (not (<= a!2 0))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ (Add (iClip 64 (Add a! b!)) c!) (* (- 1) a!1))))\n  (not (>= a!2 0))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (%I (I a!1)) (- 9223372036854775808)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (%I (I a!1)) (- 9223372036854775808)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (%I (I a!1)) (- 9223372036854775808)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (%I (I a!1)) (- 9223372036854775808)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= (%I (I a!1)) (- 9223372036854775808))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (<= (%I (I a!1)) (- 9223372036854775808)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= (%I (I a!1)) (- 9223372036854775808))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (>= (%I (I a!1)) (- 9223372036854775808)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (= (%I (I a!1)) (- 9223372036854775808)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (<= (%I (I a!1)) (- 9223372036854775808))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (>= (%I (I a!1)) (- 9223372036854775808))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (>= a!2 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (<= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (<= a!2 0)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (>= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= a!1 (%I (I a!1)))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (<= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= a!1 (%I (I a!1)))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (>= a!2 0)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (= a!1 (%I (I a!1))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (not (<= a!2 0))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (+ a!1 (* (- 1) (%I (I a!1))))))\n  (not (>= a!2 0))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (has_type (I a!1) (SINT 64)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= a!1 (%I (I a!1)))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (has_type (I (%I (I a!1))) (SINT 64))))\n  (not a!2)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not (= a!1 (%I (I a!1)))))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (iInv 64 (%I (I a!1))))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "rup",
+    "hint_smt": "rup",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (has_type (I a!1) (SINT 64)))",
+      "(let ((a!1 (iInv 64 (Add (iClip 64 (Add a! b!)) c!))))\n  (not a!1))",
+      "(let ((a!1 (iClip 64 (Add (iClip 64 (Add a! b!)) c!))))\n(let ((a!2 (= (Add (iClip 64 (Add a! b!)) c!) a!1)))\n  (not a!2)))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.obeys_div_spec.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_req.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_req.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%vstd!std_specs.ops.impl&%77.div_spec.)\n   (fuel_bool_default fuel%vstd!std_specs.ops.impl&%77.div_spec.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!min_val.)\n   (fuel_bool_default fuel%candidate!min_val.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!candies_after_division.)\n   (fuel_bool_default fuel%candidate!candies_after_division.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!is_achievable.)\n   (fuel_bool_default fuel%candidate!is_achievable.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (forall ((id FuelId))\n       (! (= (fuel_bool id) (fuel_bool_default id))\n          :pattern ((fuel_bool id))\n          :skolemid skolem_prelude_fuel_defaults\n          :qid prelude_fuel_defaults)))",
+      "(= (fuel_bool fuel%candidate!is_optimal.)\n   (fuel_bool_default fuel%candidate!is_optimal.))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((bits Int) (x Int))\n             (! (or (not (iInv bits x)) (has_type (I x) (SINT bits)))\n                :pattern ((has_type (I x) (SINT bits)))\n                :skolemid skolem_prelude_has_type_sint\n                :qid prelude_has_type_sint))))\n  (not a!1))",
+      "false"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "rule": "mp~",
+    "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n(let ((a!2 (nnf-pos (proof-bind (lambda ((x Int))\n                                  (let ((a!1 (~ (= (g (f x)) x) (= (g (f x)) x))))\n                                    (refl a!1))))\n                    (~ a!1 a!1))))\n  (mp~ (asserted a!1) a!2 a!1)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((x Int))\n  (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "mp~",
+    "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2)))\n      (a!2 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n(let ((a!3 (quant-intro (proof-bind (lambda ((x Int))\n                                      (let ((a!1 (= (> (g x) 0)\n                                                    (not (<= (g x) 0)))))\n                                        (rewrite a!1))))\n                        (= a!1 a!2)))\n      (a!4 (nnf-pos (proof-bind (lambda ((x Int))\n                                  (let ((a!1 (~ (not (<= (g x) 0))\n                                                (not (<= (g x) 0)))))\n                                    (refl a!1))))\n                    (~ a!2 a!2))))\n  (mp~ (mp (asserted a!1) a!3 a!2) a!4 a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(forall ((x Int))\n  (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "quant-inst",
+    "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n(let ((a!2 (or (not a!1) (= (g (f b)) b))))\n  (quant-inst a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int))\n             (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))))\n  (not a!1))",
+      "(= (g (f b)) b)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "quant-inst",
+    "hint_smt": "(let ((a!1 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n(let ((a!2 (or (not a!1) (not (<= (g b) 0)))))\n  (quant-inst a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(let ((a!1 (forall ((x Int))\n             (! (not (<= (g x) 0)) :pattern ((g x)) :qid user_candidate_chain2))))\n  (not a!1))",
+      "(not (<= (g b) 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "asserted",
+    "hint_smt": "(asserted (= a b))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= a b)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "asserted",
+    "hint_smt": "(asserted (= (f a) b))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= (f a) b)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "mp",
+    "hint_smt": "(let ((a!1 (rewrite (= (< b 0) (not (<= 0 b)))))\n      (a!2 (rewrite (= (not (<= 0 b)) (not (>= b 0))))))\n(let ((a!3 (trans a!1 a!2 (= (< b 0) (not (>= b 0))))))\n  (mp (asserted (< b 0)) a!3 (not (>= b 0)))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (>= b 0))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "th-lemma",
+    "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)) (a!2 (<= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or a!1 a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(>= (+ b (* (- 1) (g b))) 0)",
+      "(<= (+ b (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "th-lemma",
+    "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)) (a!2 (<= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or a!1 a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= (+ b (* (- 1) (g b))) 0)",
+      "(>= (+ b (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "th-lemma",
+    "hint_smt": "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)))\n(let ((a!2 (or (not (= b (g b))) a!1)))\n  (th-lemma a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= b (g b)))",
+      "(<= (+ b (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "th-lemma",
+    "hint_smt": "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)))\n(let ((a!2 (or (not (= b (g b))) a!1)))\n  (th-lemma a!2)))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(not (= b (g b)))",
+      "(>= (+ b (* (- 1) (g b))) 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  },
+  {
+    "rule": "th-lemma",
+    "hint_smt": "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)) (a!2 (>= (+ b (* (- 1) (g b))) 0)))\n  (th-lemma (or (= b (g b)) (not a!1) (not a!2))))",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(= b (g b))",
+      "(let ((a!1 (<= (+ b (* (- 1) (g b))) 0)))\n  (not a!1))",
+      "(let ((a!1 (>= (+ b (* (- 1) (g b))) 0)))\n  (not a!1))"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  }
+]
