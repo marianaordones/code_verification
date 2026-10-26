@@ -1,0 +1,18 @@
+{
+  "model": "claude-sonnet-4-6",
+  "effort": "low",
+  "count": 50,
+  "max_attempts": 3,
+  "max_queries": 1,
+  "max_quantifiers": 50,
+  "max_instances_each": 3,
+  "internals_token_budget": 14336,
+  "max_model_len": 49152,
+  "max_tokens": 4096,
+  "verification_timeout": 120,
+  "claude_timeout": 900,
+  "seed": null,
+  "temperature": null,
+  "selection_file": "configs/verusbench-sonnet46-50-selection.json",
+  "protocol": "one shared initial generation without internals; two repairs per arm after shared failure"
+}

@@ -1,0 +1,19 @@
+{
+  "provider": "claude_code",
+  "model": "claude-opus-4-8",
+  "effort": "low",
+  "max_attempts": 3,
+  "seed": null,
+  "temperature": null,
+  "max_tokens": 4096,
+  "max_model_len": 49152,
+  "internals_token_budget": 12288,
+  "max_queries": 1,
+  "max_quantifiers": 50,
+  "max_instances_each": 3,
+  "verification_timeout": 120,
+  "claude_timeout": 900,
+  "experiment": "missing-assertions-opus48-low-shared-first-20-50x3",
+  "protocol": "one shared initial action without internals, then proposals 2 and 3 per arm",
+  "selection_file": "configs/missing-opus48-pilot20.json"
+}

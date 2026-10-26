@@ -1,0 +1,36 @@
+{
+  "revision": "f32c274b053c372aa35c9d8a7e12c1df35bda20d",
+  "method": "first 20 of the exact user-supplied 100 IDs, no outcome selection",
+  "source_list": "configs/missing-opus48-user100.json",
+  "source_sha256": "6b2c7fd229c7895d757e4c797355d3db3707919482a568fb6694e06c2182573a",
+  "ids": [
+    "V-135",
+    "V-411",
+    "V-381",
+    "V-245",
+    "V-56",
+    "V-22",
+    "V-329",
+    "V-444",
+    "V-156",
+    "V-283",
+    "V-163",
+    "V-368",
+    "VB-18",
+    "V-304",
+    "V-52",
+    "V-38",
+    "V-167",
+    "VB-61",
+    "VB-34",
+    "V-421"
+  ],
+  "category_counts": {
+    "AX": 4,
+    "INST-forall": 4,
+    "INST-witness": 3,
+    "NLA": 3,
+    "FUEL": 3,
+    "Other": 3
+  }
+}

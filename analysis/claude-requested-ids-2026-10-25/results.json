@@ -1,0 +1,3335 @@
+{
+  "generated_utc": "2026-10-25T22:33:40.532884+00:00",
+  "groups": {
+    "AX": [
+      "V-329",
+      "VB-18",
+      "V-173",
+      "VB-30",
+      "V-391",
+      "V-15",
+      "V-181",
+      "V-268",
+      "V-140",
+      "VB-5"
+    ],
+    "INST-forall": [
+      "V-411",
+      "V-304",
+      "V-421",
+      "V-430",
+      "V-341",
+      "V-325",
+      "V-423",
+      "V-387",
+      "V-424",
+      "VB-21",
+      "V-273"
+    ],
+    "INST-witness": [
+      "V-52",
+      "V-139",
+      "VB-53",
+      "V-206",
+      "V-388",
+      "VB-32",
+      "V-416",
+      "V-302",
+      "VB-20",
+      "V-11"
+    ],
+    "FUEL": [
+      "V-56",
+      "V-163",
+      "V-362",
+      "V-230",
+      "V-361",
+      "V-161",
+      "V-229",
+      "V-221",
+      "V-239"
+    ],
+    "Other": [
+      "V-368",
+      "VB-61",
+      "V-48",
+      "VB-69",
+      "V-105",
+      "V-97",
+      "V-178",
+      "V-129",
+      "V-413",
+      "V-286"
+    ],
+    "Additional missing assertion": [
+      "V-47"
+    ],
+    "VerusBench": [
+      "cloverbench_array_append_strong",
+      "cloverbench_array_concat_strong",
+      "cloverbench_array_copy_strong",
+      "cloverbench_array_product_strong",
+      "cloverbench_array_sum_strong",
+      "cloverbench_is_prime",
+      "cloverbench_two_sum",
+      "diffy_brs3",
+      "diffy_brs4",
+      "diffy_brs5",
+      "diffy_condn",
+      "diffy_ms1",
+      "diffy_ms2",
+      "diffy_ms3",
+      "diffy_ms5",
+      "diffy_res1o",
+      "diffy_s1if",
+      "diffy_s1lif",
+      "diffy_s22if",
+      "diffy_s32if",
+      "diffy_s3if",
+      "diffy_s42if",
+      "mbpp_task_id_161",
+      "mbpp_task_id_240",
+      "mbpp_task_id_262",
+      "mbpp_task_id_273",
+      "mbpp_task_id_290",
+      "mbpp_task_id_424",
+      "mbpp_task_id_445",
+      "mbpp_task_id_476",
+      "mbpp_task_id_572",
+      "mbpp_task_id_616",
+      "mbpp_task_id_618",
+      "mbpp_task_id_769",
+      "mbpp_task_id_798",
+      "mbpp_task_id_94",
+      "misc_basic_nonlinear",
+      "misc_binary_search",
+      "misc_bubble",
+      "misc_conditional_average",
+      "misc_fib",
+      "misc_filter",
+      "misc_findmax",
+      "misc_len_intersect",
+      "misc_linearsearch",
+      "misc_map",
+      "misc_remove_all_greater",
+      "misc_reverse",
+      "misc_sum",
+      "misc_tail_triangle"
+    ]
+  },
+  "studies": [
+    {
+      "study": "claude-local-expanded60-low-v2",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "shared_first": false
+    },
+    {
+      "study": "claude-local-pilot6-format-v2",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "shared_first": false
+    },
+    {
+      "study": "claude-local-smoke",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "shared_first": false
+    },
+    {
+      "study": "missing-opus48-low-shared20-50x3-v1",
+      "model": "claude-opus-4-8",
+      "effort": "low",
+      "shared_first": true
+    },
+    {
+      "study": "verusbench-claude5-low-v1",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "shared_first": false
+    },
+    {
+      "study": "verusbench-claude5-low-v2",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "shared_first": false
+    },
+    {
+      "study": "verusbench-shared20-sonnet-low-v1",
+      "model": "claude-sonnet-5-5",
+      "effort": "low",
+      "shared_first": true
+    },
+    {
+      "study": "verusbench-sonnet20-low-v2",
+      "model": "claude-sonnet-5-5",
+      "effort": "low",
+      "shared_first": false
+    },
+    {
+      "study": "verusbench-sonnet5-low-v1",
+      "model": "claude-sonnet-5-5",
+      "effort": "low",
+      "shared_first": false
+    }
+  ],
+  "records": {
+    "V-329": [
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "AX",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "AX",
+                "statements": "assert(to_int_seq(ans@)[i as int] == ans@[i as int] as int);\nassert(to_int_seq(ans@).subrange(0, i as int).push(ans@[i as int] as int) =~= to_int_seq(ans@).subrange(0, (i + 1) as int));",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "VB-18": [
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "AX",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": false,
+              "edit_error": null,
+              "error_type": "verification",
+              "action": {
+                "mechanism": "AX",
+                "statements": "assert(arr@.take((index + 1) as int) == arr@.take(index as int).push(arr@[index as int])) by { assert(arr@.take((index + 1) as int) =~= arr@.take(index as int).push(arr@[index as int])); }",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": true,
+        "with": "S2",
+        "without": "S2",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "edit_error": null,
+                  "error_type": null,
+                  "action": {
+                    "mechanism": "AX",
+                    "statements": "reveal(Seq::filter);\nassert(arr@.take((index + 1) as int) =~= arr@.take(index as int).push(arr@[index as int]));\nassert(arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int));\nassert(arr@.take((index + 1) as int).last() == arr@[index as int]);",
+                    "law": null,
+                    "nla": false
+                  },
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "edit_error": null,
+                  "error_type": null,
+                  "action": {
+                    "mechanism": "FUEL",
+                    "statements": "reveal(Seq::filter);\nlet ghost x = arr@[index as int];\nassert(arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int));\nassert(arr@.take((index + 1) as int).last() == x);\nassert(arr@.take((index + 1) as int).filter(|y: i32| y < 0) == (if x < 0 { arr@.take(index as int).filter(|y: i32| y < 0).push(x) } else { arr@.take(index as int).filter(|y: i32| y < 0) }));",
+                    "law": null,
+                    "nla": false
+                  },
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-173": [],
+    "VB-30": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "AX",
+        "with": "F",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "F",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Expected direct JSON or exactly one JSON fenced block",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 26472,
+                  "output_tokens": 86,
+                  "truncated": false,
+                  "inference_seconds": 6.9457488409998405,
+                  "processing_seconds": 7.536602461000257,
+                  "internals_exposed": true,
+                  "feedback_seconds": 3.8156648909998694
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Expected direct JSON or exactly one JSON fenced block",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 26566,
+                  "output_tokens": 83,
+                  "truncated": false,
+                  "inference_seconds": 5.103908285999751,
+                  "processing_seconds": 5.732656086999668,
+                  "internals_exposed": true,
+                  "feedback_seconds": 3.8719391589993393
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Expected direct JSON or exactly one JSON fenced block",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 26651,
+                  "output_tokens": 85,
+                  "truncated": false,
+                  "inference_seconds": 3.73355447799986,
+                  "processing_seconds": 4.347972300999572,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 8061,
+                  "output_tokens": 90,
+                  "truncated": false,
+                  "inference_seconds": 3.8932900489999156,
+                  "processing_seconds": 4.56085224599974,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-391": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "AX",
+        "with": "F",
+        "without": "F",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "F",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 28985,
+                  "output_tokens": 58,
+                  "truncated": false,
+                  "inference_seconds": 4.570674890000191,
+                  "processing_seconds": 5.184826291999798,
+                  "internals_exposed": true,
+                  "feedback_seconds": 0.02941560399995069
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "No effective proof/solver-setting change",
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 10725,
+                  "output_tokens": 95,
+                  "truncated": false,
+                  "inference_seconds": 3.801767085999927,
+                  "processing_seconds": 4.283514195999942,
+                  "internals_exposed": false,
+                  "feedback_seconds": 0.031360759000108374
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Ambiguous JSON/object content outside fenced action",
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 10830,
+                  "output_tokens": 767,
+                  "truncated": false,
+                  "inference_seconds": 11.154637527999967,
+                  "processing_seconds": 11.621441060000052,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "F",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 10651,
+                  "output_tokens": 58,
+                  "truncated": false,
+                  "inference_seconds": 5.43263506600033,
+                  "processing_seconds": 5.916267844000231,
+                  "internals_exposed": false,
+                  "feedback_seconds": 0.0055587959996046266
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "No effective proof/solver-setting change",
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 10728,
+                  "output_tokens": 133,
+                  "truncated": false,
+                  "inference_seconds": 4.4499497479996535,
+                  "processing_seconds": 4.93503829500014,
+                  "internals_exposed": false,
+                  "feedback_seconds": 0.004960890999882395
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Ambiguous JSON/object content outside fenced action",
+                  "error_type": "compilation",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 10833,
+                  "output_tokens": 499,
+                  "truncated": false,
+                  "inference_seconds": 7.90380981699991,
+                  "processing_seconds": 8.357078546000139,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-15": [],
+    "V-181": [],
+    "V-268": [],
+    "V-140": [],
+    "VB-5": [],
+    "V-411": [
+      {
+        "study": "claude-local-pilot6-format-v2",
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "shared_first": false,
+        "paper_label": "INST-forall",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 29424,
+                  "output_tokens": 127,
+                  "truncated": false,
+                  "inference_seconds": 8.370943182999781,
+                  "processing_seconds": 9.695406529999673,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 11264,
+                  "output_tokens": 112,
+                  "truncated": false,
+                  "inference_seconds": 4.942558023999936,
+                  "processing_seconds": 6.24228073400036,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "INST-forall",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "INST-forall",
+                "statements": "assert(forall|i: int| 0 <= i < d2.len() ==> d2[i] == d[i]);",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-304": [
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "INST-forall",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "INST-witness",
+                "statements": "assert(result@ == stops@[0]@);\nassert(stops_spec[0] == result@.map_values(|x: i64| x as int));\nassert(0 <= i < stops_spec[0].len());\nassert(stops_spec[0][i] == result@[i] as int);\nassert(in_seq(result@[i] as int, stops_spec[0]));\nassert forall|m: int| 0 <= m < 1int implies in_seq(result@[i] as int, #[trigger] stops_spec[m]) by {\n    assert(m == 0);\n}",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-421": [
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "INST-forall",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "INST-forall",
+                "statements": "assert forall|a: int, b: int| 1 <= a && a < n && a < b && b <= n implies #[trigger] gcd(a, b) <= result by {\n    gcd_bound(a, b);\n    lemma_fundamental_div_mod(n as int, 2);\n    lemma_mod_pos_bound(n as int, 2);\n}",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-430": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-forall",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 27776,
+                  "output_tokens": 204,
+                  "truncated": false,
+                  "inference_seconds": 5.3404724520000855,
+                  "processing_seconds": 6.137708013000065,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 8678,
+                  "output_tokens": 204,
+                  "truncated": false,
+                  "inference_seconds": 4.990278972999931,
+                  "processing_seconds": 5.712085435999597,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-341": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-forall",
+        "with": "S2",
+        "without": "F",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Only collection literal macros are allowed",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 32682,
+                  "output_tokens": 875,
+                  "truncated": false,
+                  "inference_seconds": 12.105123995999747,
+                  "processing_seconds": 12.9122354860001,
+                  "internals_exposed": true,
+                  "feedback_seconds": 6.837537448000148
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 32843,
+                  "output_tokens": 1043,
+                  "truncated": false,
+                  "inference_seconds": 12.123483708000094,
+                  "processing_seconds": 13.06275151400041,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "F",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Only collection literal macros are allowed",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 14183,
+                  "output_tokens": 333,
+                  "truncated": false,
+                  "inference_seconds": 5.877378737000072,
+                  "processing_seconds": 6.620186045000082,
+                  "internals_exposed": false,
+                  "feedback_seconds": 0.006693287999951281
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Only collection literal macros are allowed",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 14344,
+                  "output_tokens": 987,
+                  "truncated": false,
+                  "inference_seconds": 11.595718176000446,
+                  "processing_seconds": 12.395894334999866,
+                  "internals_exposed": false,
+                  "feedback_seconds": 0.005293283999890264
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": false,
+                  "unchanged": true,
+                  "edit_error": "Only collection literal macros are allowed",
+                  "error_type": "verification",
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 14425,
+                  "output_tokens": 770,
+                  "truncated": false,
+                  "inference_seconds": 10.969942964999973,
+                  "processing_seconds": 11.703588522000246,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-325": [],
+    "V-423": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-forall",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 28247,
+                  "output_tokens": 168,
+                  "truncated": false,
+                  "inference_seconds": 5.6473042719999285,
+                  "processing_seconds": 6.467457491999994,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 9696,
+                  "output_tokens": 165,
+                  "truncated": false,
+                  "inference_seconds": 5.15489173800006,
+                  "processing_seconds": 5.913436367000031,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-387": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-forall",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 26938,
+                  "output_tokens": 311,
+                  "truncated": false,
+                  "inference_seconds": 6.386639776000266,
+                  "processing_seconds": 8.314596678000271,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 9281,
+                  "output_tokens": 232,
+                  "truncated": false,
+                  "inference_seconds": 5.44597007900029,
+                  "processing_seconds": 7.330692417000137,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-424": [],
+    "VB-21": [],
+    "V-273": [],
+    "V-52": [
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "INST-witness",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "INST-witness",
+                "statements": "assert(m as int >= 1); assert(valid_choice(y as int, b as int, r as int, m as int, m as int + 1, m as int + 2)); assert(exists|ny: int| #[trigger] valid_choice(y as int, b as int, r as int, ny, ny + 1, ny + 2) && 0 <= ny <= y as int && total as int == ny + (ny + 1) + (ny + 2));",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-139": [],
+    "VB-53": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-witness",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 26807,
+                  "output_tokens": 126,
+                  "truncated": false,
+                  "inference_seconds": 4.16557579099981,
+                  "processing_seconds": 5.030089489000147,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 8518,
+                  "output_tokens": 124,
+                  "truncated": false,
+                  "inference_seconds": 4.788614258000052,
+                  "processing_seconds": 5.59857369600013,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-206": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "INST-witness",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 27190,
+                  "output_tokens": 98,
+                  "truncated": false,
+                  "inference_seconds": 5.678538884999853,
+                  "processing_seconds": 6.451333364999755,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 9897,
+                  "output_tokens": 111,
+                  "truncated": false,
+                  "inference_seconds": 4.2860868140001,
+                  "processing_seconds": 5.018117162999715,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-388": [],
+    "VB-32": [],
+    "V-416": [],
+    "V-302": [],
+    "VB-20": [],
+    "V-11": [],
+    "V-56": [
+      {
+        "study": "claude-local-pilot6-format-v2",
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 32186,
+                  "output_tokens": 174,
+                  "truncated": false,
+                  "inference_seconds": 4.696373270999629,
+                  "processing_seconds": 6.787932540999918,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 13837,
+                  "output_tokens": 151,
+                  "truncated": false,
+                  "inference_seconds": 4.569613850999758,
+                  "processing_seconds": 6.612846940999589,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "FUEL",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "FUEL",
+                "statements": "assert(sum_seq(Seq::<int>::empty()) == 0);",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-163": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 32089,
+                  "output_tokens": 160,
+                  "truncated": false,
+                  "inference_seconds": 5.671783528000105,
+                  "processing_seconds": 6.505699658999674,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 13804,
+                  "output_tokens": 155,
+                  "truncated": false,
+                  "inference_seconds": 5.271591447999981,
+                  "processing_seconds": 6.075325782000164,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "FUEL",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "FUEL",
+                "statements": "assert(distinct_set(ones_seq(0)) =~= Set::<int>::empty());\nassert(distinct_set(ones_seq(1)) =~= Set::<int>::empty().insert(1));",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-362": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 31504,
+                  "output_tokens": 222,
+                  "truncated": false,
+                  "inference_seconds": 8.239183069000319,
+                  "processing_seconds": 9.192181331000029,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 12140,
+                  "output_tokens": 220,
+                  "truncated": false,
+                  "inference_seconds": 5.8082961640002395,
+                  "processing_seconds": 6.716383330000099,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-230": [],
+    "V-361": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 31533,
+                  "output_tokens": 253,
+                  "truncated": false,
+                  "inference_seconds": 6.472515785999349,
+                  "processing_seconds": 7.493307875000028,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 12157,
+                  "output_tokens": 233,
+                  "truncated": false,
+                  "inference_seconds": 4.961368687999311,
+                  "processing_seconds": 5.9227565629998935,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-161": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 30877,
+                  "output_tokens": 128,
+                  "truncated": false,
+                  "inference_seconds": 5.770924711000134,
+                  "processing_seconds": 6.743776915000126,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 12204,
+                  "output_tokens": 120,
+                  "truncated": false,
+                  "inference_seconds": 5.874881552000261,
+                  "processing_seconds": 6.799916608000331,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-229": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "FUEL",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 29516,
+                  "output_tokens": 49,
+                  "truncated": false,
+                  "inference_seconds": 4.648974329999874,
+                  "processing_seconds": 5.634090630000173,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "FUEL",
+                  "input_tokens": 11147,
+                  "output_tokens": 54,
+                  "truncated": false,
+                  "inference_seconds": 3.8658596380000745,
+                  "processing_seconds": 4.759888072000649,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-221": [],
+    "V-239": [],
+    "V-368": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 26449,
+                  "output_tokens": 89,
+                  "truncated": false,
+                  "inference_seconds": 3.840659596000478,
+                  "processing_seconds": 5.053681760000472,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "Other",
+                  "input_tokens": 9151,
+                  "output_tokens": 71,
+                  "truncated": false,
+                  "inference_seconds": 3.8374526999996306,
+                  "processing_seconds": 5.009201742999721,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "Other",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "Other",
+                "statements": "assert(z == max3(a as int, b as int, c as int));",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "VB-61": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-witness",
+                  "input_tokens": 26028,
+                  "output_tokens": 808,
+                  "truncated": false,
+                  "inference_seconds": 11.559385810999629,
+                  "processing_seconds": 12.222567826999693,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 7610,
+                  "output_tokens": 205,
+                  "truncated": false,
+                  "inference_seconds": 4.890481379999983,
+                  "processing_seconds": 5.50986151699999,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "missing-opus48-low-shared20-50x3-v1",
+        "model": "claude-opus-4-8",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": "Other",
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "error_type": null,
+              "action": {
+                "mechanism": "INST-forall",
+                "statements": "assert(forall |k:int| 0 <= k < old_result.len() ==> old_result@[k] == result@[k]); assert(forall |x:i32| old_result@.contains(x) ==> result@.contains(x));",
+                "law": null,
+                "nla": false
+              },
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "V-48": [],
+    "VB-69": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 19423,
+                  "output_tokens": 179,
+                  "truncated": false,
+                  "inference_seconds": 14.200080745000378,
+                  "processing_seconds": 14.814042236000205,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "AX",
+                  "input_tokens": 7262,
+                  "output_tokens": 309,
+                  "truncated": false,
+                  "inference_seconds": 5.429823407000185,
+                  "processing_seconds": 5.990884923000522,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-105": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 19159,
+                  "output_tokens": 94,
+                  "truncated": false,
+                  "inference_seconds": 6.148792504000085,
+                  "processing_seconds": 7.358891947999837,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 10346,
+                  "output_tokens": 79,
+                  "truncated": false,
+                  "inference_seconds": 4.66572188400005,
+                  "processing_seconds": 5.8087497780002195,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-97": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 31242,
+                  "output_tokens": 162,
+                  "truncated": false,
+                  "inference_seconds": 6.7882477279999875,
+                  "processing_seconds": 7.930391324000084,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 11422,
+                  "output_tokens": 250,
+                  "truncated": false,
+                  "inference_seconds": 6.001256309999917,
+                  "processing_seconds": 7.102367406999292,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-178": [],
+    "V-129": [],
+    "V-413": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 28459,
+                  "output_tokens": 800,
+                  "truncated": false,
+                  "inference_seconds": 10.84446170000001,
+                  "processing_seconds": 12.321104509000179,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "INST-forall",
+                  "input_tokens": 10129,
+                  "output_tokens": 610,
+                  "truncated": false,
+                  "inference_seconds": 7.851758736999727,
+                  "processing_seconds": 8.699079019000237,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "V-286": [],
+    "V-47": [
+      {
+        "study": "claude-local-expanded60-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": "Other",
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 16557,
+                  "output_tokens": 155,
+                  "truncated": false,
+                  "inference_seconds": 4.130154292000043,
+                  "processing_seconds": 5.807272789000308,
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "unchanged": false,
+                  "edit_error": null,
+                  "error_type": null,
+                  "nla_enabled": false,
+                  "law": null,
+                  "mechanism": "NLA",
+                  "input_tokens": 10052,
+                  "output_tokens": 155,
+                  "truncated": false,
+                  "inference_seconds": 6.579742372000055,
+                  "processing_seconds": 8.244923854999797,
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cloverbench_array_append_strong": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cloverbench_array_concat_strong": [
+      {
+        "study": "verusbench-claude5-low-v1",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      },
+      {
+        "study": "verusbench-claude5-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "verusbench-sonnet5-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cloverbench_array_copy_strong": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cloverbench_array_product_strong": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "integrity_valid": true,
+              "error_type": null,
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "cloverbench_array_sum_strong": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "integrity_valid": true,
+              "error_type": null,
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "cloverbench_is_prime": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "integrity_valid": true,
+              "error_type": null,
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "cloverbench_two_sum": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "F",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "F",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": "verification",
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": "verification",
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": "verification",
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "single_source_fence",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "diffy_brs3": [],
+    "diffy_brs4": [],
+    "diffy_brs5": [],
+    "diffy_condn": [],
+    "diffy_ms1": [],
+    "diffy_ms2": [],
+    "diffy_ms3": [],
+    "diffy_ms5": [],
+    "diffy_res1o": [],
+    "diffy_s1if": [],
+    "diffy_s1lif": [],
+    "diffy_s22if": [
+      {
+        "study": "verusbench-claude5-low-v1",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      },
+      {
+        "study": "verusbench-claude5-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "verusbench-sonnet5-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "diffy_s32if": [],
+    "diffy_s3if": [],
+    "diffy_s42if": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [],
+        "first_failed": false,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "mbpp_task_id_161": [],
+    "mbpp_task_id_240": [],
+    "mbpp_task_id_262": [],
+    "mbpp_task_id_273": [],
+    "mbpp_task_id_290": [],
+    "mbpp_task_id_424": [],
+    "mbpp_task_id_445": [],
+    "mbpp_task_id_476": [],
+    "mbpp_task_id_572": [],
+    "mbpp_task_id_616": [],
+    "mbpp_task_id_618": [],
+    "mbpp_task_id_769": [],
+    "mbpp_task_id_798": [],
+    "mbpp_task_id_94": [],
+    "misc_basic_nonlinear": [],
+    "misc_binary_search": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": false,
+              "edit_error": null,
+              "integrity_valid": false,
+              "error_type": "syntax",
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": true,
+        "with": "S2",
+        "without": "S2",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "misc_bubble": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [],
+        "first_failed": false,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "misc_conditional_average": [],
+    "misc_fib": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "misc_filter": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S3",
+        "without": "S2",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S3",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": "verification",
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": false,
+                  "error_type": "syntax",
+                  "extraction": "direct_source",
+                  "internals_exposed": true,
+                  "recovery": "Lynette LexError on malformed model output; original raw error preserved"
+                }
+              },
+              {
+                "attempt": 3,
+                "result": {
+                  "attempt": 3,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S2",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": false,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": "verification",
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              },
+              {
+                "attempt": 2,
+                "result": {
+                  "attempt": 2,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "single_source_fence",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "misc_findmax": [
+      {
+        "study": "verusbench-claude5-low-v1",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      },
+      {
+        "study": "verusbench-claude5-low-v2",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "study": "verusbench-sonnet5-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "misc_len_intersect": [
+      {
+        "study": "verusbench-sonnet20-low-v2",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": false,
+        "paper_label": null,
+        "with": "S1",
+        "without": "S1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": true
+                }
+              }
+            ]
+          },
+          "without_internals": {
+            "code": "S1",
+            "tested": true,
+            "attempts": [
+              {
+                "attempt": 1,
+                "result": {
+                  "attempt": 1,
+                  "success": true,
+                  "edit_error": null,
+                  "integrity_valid": true,
+                  "error_type": null,
+                  "extraction": "direct_source",
+                  "internals_exposed": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "misc_linearsearch": [],
+    "misc_map": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "integrity_valid": true,
+              "error_type": null,
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "misc_remove_all_greater": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [],
+        "first_failed": false,
+        "with": "—",
+        "without": "—",
+        "tested": false,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "misc_reverse": [
+      {
+        "study": "verusbench-shared20-sonnet-low-v1",
+        "model": "claude-sonnet-5-5",
+        "effort": "low",
+        "shared_first": true,
+        "paper_label": null,
+        "shared_attempts": [
+          {
+            "attempt": 1,
+            "result": {
+              "attempt": 1,
+              "success": true,
+              "edit_error": null,
+              "integrity_valid": true,
+              "error_type": null,
+              "extraction": "direct_source",
+              "internals_exposed": false
+            }
+          }
+        ],
+        "first_failed": false,
+        "with": "C1",
+        "without": "C1",
+        "tested": true,
+        "details": {
+          "with_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          },
+          "without_internals": {
+            "code": "—",
+            "tested": false,
+            "attempts": []
+          }
+        }
+      }
+    ],
+    "misc_sum": [],
+    "misc_tail_triangle": []
+  }
+}
