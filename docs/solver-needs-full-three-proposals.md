@@ -1,12 +1,12 @@
 # Comparing the complete 12k/20x3 and 24k/50x3 runs
 
-Run from the `code_verification_git` repository root on the cluster:
+Submit from the `code_verification_git` repository root on the cluster:
 
 ```bash
-python3 scripts/compare_solver_needs_three_proposals.py
+bash scripts/submit_solver_needs_three_proposals.sh
 ```
 
-No GPU, packages, model, solver, or Slurm allocation is needed. This script uses Python's standard library and does not import the experiment runner. It can therefore read saved records even when `compare` failed because the working code changed. It does not alter result files or their manifests, and does not certify that prompts stayed unchanged while jobs ran.
+This submits a CPU-only Slurm job (one CPU, 2G RAM, 15 minutes, QoS high). Logs are saved as `logs/solver-needs-three-JOBID.out` and `.err`. The compute-node script loads optional `cluster.env` and selects Python >= 3.9, honoring `CLUSTER_PYTHON`. No GPU, packages, model, or solver is needed. This script uses Python's standard library and does not import the experiment runner. It can therefore read saved records even when `compare` failed because the working code changed. It does not alter result files or their manifests, and does not certify that prompts stayed unchanged while jobs ran.
 
 Defaults:
 
@@ -18,7 +18,7 @@ Defaults:
 Override paths if necessary:
 
 ```bash
-python3 scripts/compare_solver_needs_three_proposals.py \
+bash scripts/submit_solver_needs_three_proposals.sh \
   --previous ../code_verification/results/solver-needs-qwen14b-100/seed-20261018 \
              ../code_verification/results/solver-needs-qwen14b-remaining362/seed-20261018 \
   --current-first100 results/solver-needs-qwen14b-100-internals24k/seed-20261018 \
