@@ -1,0 +1,562 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] #5 0
+[mk-app] #6 f #5
+[mk-app] #7 Int
+[attach-meaning] #7 arith 0
+[mk-app] #8 >= #6 #7
+[mk-app] #9 pattern #6
+[mk-quant] #10 control_nonnegative 1 #9 #8
+[attach-var-names] #10 (|x| ; |Int|)
+[mk-app] #11 f #7
+[mk-app] #12 < #11 #7
+[mk-app] #13 bv
+[attach-meaning] #13 bv #b1
+[mk-app] #14 bv
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #14 bv #b0
+[mk-var] #15 0
+[mk-var] #16 1
+[mk-var] #17 2
+[mk-var] #18 3
+[mk-var] #19 4
+[mk-var] #20 5
+[mk-var] #21 6
+[mk-var] #22 7
+[mk-var] #23 8
+[mk-var] #24 9
+[mk-var] #25 10
+[mk-var] #26 11
+[mk-var] #27 12
+[mk-var] #28 13
+[mk-var] #29 14
+[mk-app] #30 + #23 #21
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #31 <= #7 #11
+[mk-app] #32 not #31
+[inst-discovered] theory-solving 0000000000000000 arith# ; #12
+[mk-app] #33 = #12 #32
+[instance] 0000000000000000 #33
+[attach-enode] #33 0
+[end-of-instance]
+[mk-app] #33 Int
+[attach-meaning] #33 arith (- 1)
+[mk-app] #34 * #33 #11
+[mk-app] #35 >= #11 #7
+[inst-discovered] theory-solving 0000000000000000 arith# ; #31
+[mk-app] #33 = #31 #35
+[instance] 0000000000000000 #33
+[attach-enode] #33 0
+[end-of-instance]
+[mk-app] #33 not #35
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[inst-discovered] theory-solving 0000000000000000 arith# ; #12
+[mk-app] #34 = #12 #32
+[instance] 0000000000000000 #34
+[attach-enode] #34 0
+[end-of-instance]
+[attach-meaning] #14 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #34 Int
+[attach-meaning] #34 arith (- 1)
+[mk-app] #36 * #34 #11
+[inst-discovered] theory-solving 0000000000000000 arith# ; #31
+[mk-app] #34 = #31 #35
+[instance] 0000000000000000 #34
+[attach-enode] #34 0
+[end-of-instance]
+[begin-check] 0
+[mk-var] #34 2
+[mk-var] #36 1
+[mk-app] #37 ?store #34 #36 #5
+[mk-app] #38 ?select #37 #36
+[mk-app] #39 = #38 #5
+[mk-app] #40 pattern #37
+[mk-quant] #41 k!70 3 #40 #39
+[attach-var-names] #41 (|e| ; |Int|) (|i| ; |Int|) (|a| ; |Int|)
+[mk-var] #42 3
+[mk-app] #43 = #34 #36
+[mk-app] #44 ?store #42 #34 #5
+[mk-app] #45 ?select #44 #36
+[mk-app] #46 ?select #42 #36
+[mk-app] #47 = #45 #46
+[mk-app] #48 or #43 #47
+[mk-app] #49 pattern #45
+[mk-quant] #50 k!75 4 #49 #48
+[attach-var-names] #50 (|e| ; |Int|) (|j| ; |Int|) (|i| ; |Int|) (|a| ; |Int|)
+[mk-app] #51 ?PO #34 #36
+[mk-app] #52 Int
+[attach-meaning] #52 arith 1
+[mk-app] #53 = #51 #52
+[mk-app] #54 not #53
+[mk-app] #55 ?PO #36 #5
+[mk-app] #56 = #55 #52
+[mk-app] #57 not #56
+[mk-app] #58 ?PO #34 #5
+[mk-app] #59 = #58 #52
+[mk-app] #60 or #54 #57 #59
+[mk-app] #61 pattern #51 #55
+[mk-quant] #62 k!81 3 #61 #60
+[attach-var-names] #62 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #63 ?PO #5 #36
+[mk-app] #64 = #63 #52
+[mk-app] #65 not #64
+[mk-app] #66 = #36 #5
+[mk-app] #67 or #57 #65 #66
+[mk-app] #68 pattern #55 #63
+[mk-quant] #69 k!87 2 #68 #67
+[attach-var-names] #69 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #70 ?asChild #36 #5
+[mk-app] #71 ?PO #34 #70
+[mk-app] #72 = #71 #52
+[mk-app] #73 not #72
+[mk-app] #74 ?classDown #5 #34
+[mk-app] #75 = #74 #70
+[mk-app] #76 or #73 #75
+[mk-app] #77 pattern #71
+[mk-quant] #78 k!92 3 #77 #76
+[attach-var-names] #78 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #79 ?f #5
+[mk-app] #80 ?finv #79
+[mk-app] #81 = #80 #5
+[mk-app] #82 pattern #79
+[mk-quant] #83 k!96 1 #82 #81
+[attach-var-names] #83 (|t| ; |Int|)
+[mk-app] #84 ?array #5
+[mk-app] #85 ?PO #36 #84
+[mk-app] #86 = #85 #52
+[mk-app] #87 ?elemtype #36
+[mk-app] #88 ?array #87
+[mk-app] #89 = #36 #88
+[mk-app] #90 not #89
+[mk-app] #91 ?PO #87 #5
+[mk-app] #92 = #91 #52
+[mk-app] #93 not #92
+[mk-app] #94 or #90 #93
+[mk-app] #95 not #94
+[mk-app] #96 = #86 #95
+[mk-app] #97 pattern #85
+[mk-quant] #98 k!102 2 #97 #96
+[attach-var-names] #98 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #99 ?is #36 #5
+[mk-app] #100 = #99 #52
+[mk-app] #101 not #100
+[mk-app] #102 ?cast #36 #5
+[mk-app] #103 = #102 #36
+[mk-app] #104 or #101 #103
+[mk-app] #105 pattern #102
+[mk-quant] #106 k!107 2 #105 #104
+[attach-var-names] #106 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #107 ?Object
+[mk-app] #108 ?PO #5 #107
+[mk-app] #109 = #108 #52
+[mk-app] #110 not #109
+[mk-app] #111 ?null
+[mk-app] #112 = #36 #111
+[mk-app] #113 ?typeof #36
+[mk-app] #114 ?PO #113 #5
+[mk-app] #115 = #114 #52
+[mk-app] #116 or #112 #115
+[mk-app] #117 = #100 #116
+[mk-app] #118 or #110 #117
+[mk-app] #119 pattern #108 #99
+[mk-quant] #120 k!114 2 #119 #118
+[attach-var-names] #120 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #121 ?asElems #34
+[mk-app] #122 ?select #121 #36
+[mk-app] #123 ?select #122 #5
+[mk-app] #124 ?elemtype #113
+[mk-app] #125 ?is #123 #124
+[mk-app] #126 = #125 #52
+[mk-app] #127 pattern #123
+[mk-quant] #128 k!119 3 #127 #126
+[attach-var-names] #128 (|i| ; |Int|) (|a| ; |Int|) (|e| ; |Int|)
+[mk-app] #129 - #52
+[mk-app] #130 ?fClosedTime #36
+[mk-app] #131 * #129 #130
+[mk-app] #132 + #5 #131
+[mk-app] #133 <= #132 #7
+[mk-app] #134 ?isAllocated #34 #5
+[mk-app] #135 = #134 #52
+[mk-app] #136 not #135
+[mk-app] #137 ?select #36 #34
+[mk-app] #138 ?isAllocated #137 #5
+[mk-app] #139 = #138 #52
+[mk-app] #140 or #133 #136 #139
+[mk-app] #141 pattern #138
+[mk-quant] #142 k!125 3 #141 #140
+[attach-var-names] #142 (|a0| ; |Int|) (|f| ; |Int|) (|x| ; |Int|)
+[mk-app] #143 ?eClosedTime #34
+[mk-app] #144 * #129 #143
+[mk-app] #145 + #5 #144
+[mk-app] #146 <= #145 #7
+[mk-app] #147 ?isAllocated #42 #5
+[mk-app] #148 = #147 #52
+[mk-app] #149 not #148
+[mk-app] #150 ?select #34 #42
+[mk-app] #151 ?select #150 #36
+[mk-app] #152 ?isAllocated #151 #5
+[mk-app] #153 = #152 #52
+[mk-app] #154 or #146 #149 #153
+[mk-app] #155 pattern #152
+[mk-quant] #156 k!131 4 #155 #154
+[attach-var-names] #156 (|a0| ; |Int|) (|i| ; |Int|) (|e| ; |Int|) (|a| ; |Int|)
+[mk-app] #157 ?asLockSet #5
+[mk-app] #158 ?max #157
+[mk-app] #159 ?select #157 #158
+[mk-app] #160 = #159 #52
+[mk-app] #161 pattern #159
+[mk-quant] #162 k!135 1 #161 #160
+[attach-var-names] #162 (|S| ; |Int|)
+[mk-app] #163 ?isNewArray #5
+[mk-app] #164 = #52 #163
+[mk-app] #165 not #164
+[mk-app] #166 ?typeof #5
+[mk-app] #167 ?arrayType
+[mk-app] #168 ?PO #166 #167
+[mk-app] #169 = #168 #52
+[mk-app] #170 or #165 #169
+[mk-app] #171 pattern #163
+[mk-quant] #172 k!140 1 #171 #170
+[attach-var-names] #172 (|s| ; |Int|)
+[mk-app] #173 ?classLiteral #5
+[mk-app] #174 = #173 #111
+[mk-app] #175 ?Class
+[mk-app] #176 ?is #173 #175
+[mk-app] #177 = #176 #52
+[mk-app] #178 not #177
+[mk-app] #179 ?alloc
+[mk-app] #180 ?isAllocated #173 #179
+[mk-app] #181 = #180 #52
+[mk-app] #182 not #181
+[mk-app] #183 or #174 #178 #182
+[mk-app] #184 not #183
+[mk-app] #185 pattern #173
+[mk-quant] #186 k!146 1 #185 #184
+[attach-var-names] #186 (|t| ; |Int|)
+[mk-app] #187 ?store2 #42 #34 #36 #5
+[mk-app] #188 ?select2 #187 #34 #36
+[mk-app] #189 = #188 #5
+[mk-app] #190 pattern #187
+[mk-quant] #191 k!151 4 #190 #189
+[attach-var-names] #191 (|v| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-var] #192 5
+[mk-var] #193 4
+[mk-app] #194 = #193 #34
+[mk-app] #195 ?store2 #192 #193 #42 #5
+[mk-app] #196 ?select2 #195 #34 #36
+[mk-app] #197 ?select2 #192 #34 #36
+[mk-app] #198 = #196 #197
+[mk-app] #199 or #194 #198
+[mk-app] #200 pattern #196
+[mk-quant] #201 k!156 6 #200 #199
+[attach-var-names] #201 (|v| ; |Int|) (|g| ; |Int|) (|p| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-app] #202 = #42 #36
+[mk-app] #203 or #202 #198
+[mk-quant] #204 k!161 6 #200 #203
+[attach-var-names] #204 (|v| ; |Int|) (|g| ; |Int|) (|p| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-app] #205 ?subtypes #34 #36
+[mk-app] #206 not #205
+[mk-app] #207 ?subtypes #36 #5
+[mk-app] #208 not #207
+[mk-app] #209 ?subtypes #34 #5
+[mk-app] #210 or #206 #208 #209
+[mk-app] #211 pattern #205 #207
+[mk-quant] #212 k!167 3 #211 #210
+[attach-var-names] #212 (|v| ; |Int|) (|u| ; |Int|) (|t| ; |Int|)
+[mk-app] #213 ?subtypes #5 #36
+[mk-app] #214 not #213
+[mk-app] #215 or #208 #214 #66
+[mk-app] #216 pattern #207 #213
+[mk-quant] #217 k!173 2 #216 #215
+[attach-var-names] #217 (|u| ; |Int|) (|t| ; |Int|)
+[mk-app] #218 ?Box #36 #5
+[mk-app] #219 ?UnboxedType #218
+[mk-app] #220 ?System.Object
+[mk-app] #221 ?subtypes #219 #220
+[mk-app] #222 not #221
+[mk-app] #223 = #218 #5
+[mk-app] #224 not #223
+[mk-app] #225 or #222 #224 #66
+[mk-app] #226 pattern #221
+[mk-quant] #227 k!179 2 #226 #225
+[attach-var-names] #227 (|p| ; |Int|) (|x| ; |Int|)
+[mk-app] #228 IntsHeap #42
+[mk-app] #229 ?Smt.true
+[mk-app] #230 = #228 #229
+[mk-app] #231 not #230
+[mk-app] #232 ?AsRepField #36 #5
+[mk-app] #233 ?select2 #42 #34 #232
+[mk-app] #234 ?nullObject
+[mk-app] #235 = #233 #234
+[mk-app] #236 ?ownerRef_
+[mk-app] #237 ?select2 #42 #233 #236
+[mk-app] #238 = #237 #34
+[mk-app] #239 not #238
+[mk-app] #240 ?ownerFrame_
+[mk-app] #241 ?select2 #42 #233 #240
+[mk-app] #242 = #241 #5
+[mk-app] #243 not #242
+[mk-app] #244 or #239 #243
+[mk-app] #245 not #244
+[mk-app] #246 or #231 #235 #245
+[mk-app] #247 pattern #233
+[mk-quant] #248 k!187 4 #247 #246
+[attach-var-names] #248 (|T| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #249 IntsHeap #34
+[mk-app] #250 = #249 #229
+[mk-app] #251 not #250
+[mk-app] #252 ?AsPeerField #5
+[mk-app] #253 ?select2 #34 #36 #252
+[mk-app] #254 = #253 #234
+[mk-app] #255 ?select2 #34 #253 #236
+[mk-app] #256 ?select2 #34 #36 #236
+[mk-app] #257 = #255 #256
+[mk-app] #258 not #257
+[mk-app] #259 ?select2 #34 #253 #240
+[mk-app] #260 ?select2 #34 #36 #240
+[mk-app] #261 = #259 #260
+[mk-app] #262 not #261
+[mk-app] #263 or #258 #262
+[mk-app] #264 not #263
+[mk-app] #265 or #251 #254 #264
+[mk-app] #266 pattern #253
+[mk-quant] #267 k!195 3 #266 #265
+[attach-var-names] #267 (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #268 IntsHeap #36
+[mk-app] #269 = #268 #229
+[mk-app] #270 not #269
+[mk-app] #271 ?select2 #36 #5 #240
+[mk-app] #272 ?PeerGroupPlaceholder_
+[mk-app] #273 = #271 #272
+[mk-app] #274 ?select2 #36 #5 #236
+[mk-app] #275 ?inv_
+[mk-app] #276 ?select2 #36 #274 #275
+[mk-app] #277 ?subtypes #276 #271
+[mk-app] #278 not #277
+[mk-app] #279 ?localinv_
+[mk-app] #280 ?select2 #36 #274 #279
+[mk-app] #281 ?BaseClass_ #271
+[mk-app] #282 = #280 #281
+[mk-app] #283 ?select2 #36 #5 #275
+[mk-app] #284 ?typeof_ #5
+[mk-app] #285 = #283 #284
+[mk-app] #286 not #285
+[mk-app] #287 ?select2 #36 #5 #279
+[mk-app] #288 = #287 #284
+[mk-app] #289 not #288
+[mk-app] #290 or #286 #289
+[mk-app] #291 not #290
+[mk-app] #292 or #270 #273 #278 #282 #291
+[mk-app] #293 pattern #277
+[mk-quant] #294 k!205 2 #293 #292
+[attach-var-names] #294 (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #295 IntsHeap #5
+[mk-app] #296 = #295 #229
+[mk-app] #297 not #296
+[mk-app] #298 ?ClassRepr #36
+[mk-app] #299 ?select2 #5 #298 #240
+[mk-app] #300 = #299 #272
+[mk-app] #301 or #297 #300
+[mk-app] #302 pattern #299
+[mk-quant] #303 k!210 2 #302 #301
+[attach-var-names] #303 (|h| ; |Int|) (|T| ; |Int|)
+[mk-app] #304 ?typeof_ #193
+[mk-app] #305 ?RefArray #42 #36
+[mk-app] #306 ?subtypes #304 #305
+[mk-app] #307 not #306
+[mk-app] #308 ?elements_
+[mk-app] #309 ?select2 #5 #193 #308
+[mk-app] #310 ?RefArrayGet #309 #34
+[mk-app] #311 Ints_ #310 #42
+[mk-app] #312 = #311 #229
+[mk-app] #313 or #297 #307 #312
+[mk-app] #314 pattern #306 #310
+[mk-quant] #315 k!216 5 #314 #313
+[attach-var-names] #315 (|heap| ; |Int|) (|r| ; |Int|) (|i| ; |Int|) (|T| ; |Int|) (|a| ; |Int|)
+[mk-app] #316 = #34 #234
+[mk-app] #317 ?typeof_ #34
+[mk-app] #318 ?RefArray #36 #5
+[mk-app] #319 ?subtypes #317 #318
+[mk-app] #320 not #319
+[mk-app] #321 ?Rank_ #34
+[mk-app] #322 = #321 #5
+[mk-app] #323 or #316 #320 #322
+[mk-app] #324 pattern #319
+[mk-quant] #325 k!222 3 #324 #323
+[attach-var-names] #325 (|r| ; |Int|) (|T| ; |Int|) (|a| ; |Int|)
+[mk-app] #326 ?ValueArray #36 #5
+[mk-app] #327 ?subtypes #34 #326
+[mk-app] #328 not #327
+[mk-app] #329 ?ArrayCategory_ #34
+[mk-app] #330 ?ArrayCategoryValue_
+[mk-app] #331 = #329 #330
+[mk-app] #332 or #328 #331
+[mk-app] #333 pattern #327
+[mk-quant] #334 k!227 3 #333 #332
+[attach-var-names] #334 (|r| ; |Int|) (|ET| ; |Int|) (|T| ; |Int|)
+[mk-app] #335 ?RefArray #34 #36
+[mk-app] #336 ?subtypes #5 #335
+[mk-app] #337 not #336
+[mk-app] #338 ?ElementType_ #5
+[mk-app] #339 ?RefArray #338 #36
+[mk-app] #340 = #5 #339
+[mk-app] #341 not #340
+[mk-app] #342 ?subtypes #338 #34
+[mk-app] #343 not #342
+[mk-app] #344 or #341 #343
+[mk-app] #345 not #344
+[mk-app] #346 or #337 #345
+[mk-app] #347 pattern #336
+[mk-quant] #348 k!234 3 #347 #346
+[attach-var-names] #348 (|T| ; |Int|) (|r| ; |Int|) (|A| ; |Int|)
+[mk-app] #349 ?ValueArray #34 #36
+[mk-app] #350 ?subtypes #5 #349
+[mk-app] #351 not #350
+[mk-app] #352 = #5 #349
+[mk-app] #353 or #351 #352
+[mk-app] #354 pattern #350
+[mk-quant] #355 k!239 3 #354 #353
+[attach-var-names] #355 (|T| ; |Int|) (|r| ; |Int|) (|A| ; |Int|)
+[mk-app] #356 ?AsDirectSubClass #36 #34
+[mk-app] #357 ?subtypes #5 #356
+[mk-app] #358 not #357
+[mk-app] #359 ?OneClassDown #5 #34
+[mk-app] #360 = #359 #36
+[mk-app] #361 or #358 #360
+[mk-app] #362 pattern #357
+[mk-quant] #363 k!244 3 #362 #361
+[attach-var-names] #363 (|C| ; |Int|) (|B| ; |Int|) (|A| ; |Int|)
+[mk-app] #364 Ints_ #36 #5
+[mk-app] #365 = #364 #229
+[mk-app] #366 = #36 #234
+[mk-app] #367 ?typeof_ #36
+[mk-app] #368 ?subtypes #367 #5
+[mk-app] #369 or #366 #368
+[mk-app] #370 = #365 #369
+[mk-app] #371 pattern #364
+[mk-quant] #372 k!250 2 #371 #370
+[attach-var-names] #372 (|T| ; |Int|) (|o| ; |Int|)
+[mk-app] #373 IntsNotNull_ #36 #5
+[mk-app] #374 = #373 #229
+[mk-app] #375 not #365
+[mk-app] #376 or #366 #375
+[mk-app] #377 = #374 #376
+[mk-app] #378 pattern #373
+[mk-quant] #379 k!256 2 #378 #377
+[attach-var-names] #379 (|T| ; |Int|) (|o| ; |Int|)
+[mk-app] #380 = #5 #234
+[mk-app] #381 ?System.Array
+[mk-app] #382 ?subtypes #284 #381
+[mk-app] #383 not #382
+[mk-app] #384 or #270 #380 #383 #291
+[mk-app] #385 pattern #382 #283
+[mk-quant] #386 k!264 2 #385 #384
+[attach-var-names] #386 (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #387 ?AsRangeField #36 #5
+[mk-app] #388 ?select2 #42 #34 #387
+[mk-app] #389 IntnRange #388 #5
+[mk-app] #390 or #231 #389
+[mk-app] #391 pattern #388
+[mk-quant] #392 k!269 4 #391 #390
+[attach-var-names] #392 (|T| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #393 ?allocated_
+[mk-app] #394 ?select2 #34 #36 #393
+[mk-app] #395 = #394 #229
+[mk-app] #396 not #395
+[mk-app] #397 ?select2 #34 #36 #5
+[mk-app] #398 IntsAllocated #34 #397
+[mk-app] #399 = #398 #229
+[mk-app] #400 or #251 #396 #399
+[mk-app] #401 pattern #398
+[mk-quant] #402 k!276 3 #401 #400
+[attach-var-names] #402 (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #403 IntsAllocated #34 #36
+[mk-app] #404 = #403 #229
+[mk-app] #405 not #404
+[mk-app] #406 ?StructGet_ #36 #5
+[mk-app] #407 IntsAllocated #34 #406
+[mk-app] #408 = #407 #229
+[mk-app] #409 or #405 #408
+[mk-app] #410 pattern #407
+[mk-quant] #411 k!281 3 #410 #409
+[attach-var-names] #411 (|f| ; |Int|) (|s| ; |Int|) (|h| ; |Int|)
+[mk-app] #412 ?isAllocated_ #34 #5
+[mk-app] #413 not #412
+[mk-app] #414 ?isAllocated_ #137 #5
+[mk-app] #415 or #133 #413 #414
+[mk-app] #416 pattern #414
+[mk-quant] #417 k!287 3 #416 #415
+[attach-var-names] #417 (|a0| ; |Int|) (|f| ; |Int|) (|x| ; |Int|)
+[mk-app] #418 ?isAllocated_ #42 #5
+[mk-app] #419 not #418
+[mk-app] #420 ?isAllocated_ #151 #5
+[mk-app] #421 or #146 #419 #420
+[mk-app] #422 pattern #420
+[mk-quant] #423 k!293 4 #422 #421
+[attach-var-names] #423 (|a0| ; |Int|) (|i| ; |Int|) (|e| ; |Int|) (|a| ; |Int|)
+[mk-app] #424 = #125 #229
+[mk-quant] #425 k!298 3 #127 #424
+[attach-var-names] #425 (|i| ; |Int|) (|a| ; |Int|) (|e| ; |Int|)
+[mk-app] #426 ?subtypes #36 #84
+[mk-app] #427 ?subtypes #87 #5
+[mk-app] #428 not #427
+[mk-app] #429 or #90 #428
+[mk-app] #430 not #429
+[mk-app] #431 = #426 #430
+[mk-app] #432 pattern #426
+[mk-quant] #433 k!304 2 #432 #431
+[attach-var-names] #433 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #434 ?subtypes #34 #70
+[mk-app] #435 not #434
+[mk-app] #436 or #435 #75
+[mk-app] #437 pattern #434
+[mk-quant] #438 k!309 3 #437 #436
+[attach-var-names] #438 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #439 = #99 #229
+[mk-app] #440 not #439
+[mk-app] #441 or #440 #103
+[mk-quant] #442 k!320 2 #105 #441
+[attach-var-names] #442 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #443 ?subtypes #5 #107
+[mk-app] #444 not #443
+[mk-app] #445 ?subtypes #113 #5
+[mk-app] #446 or #112 #445
+[mk-app] #447 = #439 #446
+[mk-app] #448 or #444 #447
+[mk-app] #449 pattern #443 #99
+[mk-quant] #450 k!327 2 #449 #448
+[attach-var-names] #450 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #451 Int
+[attach-meaning] #451 arith (- 1)
+[assign] #10 justification -1: 
+[attach-enode] #7 0
+[attach-enode] #11 0
+[assign] (not #35) justification -1: 
+[eq-expl] #7 root
+[new-match] 000002A968595440 #10 #9 #7 ; #11
+[mk-app] #451 not #10
+[mk-app] #452 or #451 #35
+[instance] 000002A968595440 ; 1
+[end-of-instance]
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[eof]

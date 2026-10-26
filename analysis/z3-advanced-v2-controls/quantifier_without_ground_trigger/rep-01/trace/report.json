@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "mode": "trace",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": true,
+    "proof": false
+  },
+  "callback_errors": 0,
+  "rules_observed": {},
+  "non_inst_clauses_observed": 0,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "capture_schema": "native-search-v2-no-pretty-print",
+  "deferred_ast_serialization": true,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.020208200003253296,
+  "inventory_scope": "separate non-traced input inventory; no check-sat",
+  "clause_duplicates": 0,
+  "clause_serialization_errors": 0,
+  "trace_search_end_bytes": 1882014,
+  "result": "unknown",
+  "check_seconds": 1.051320400001714,
+  "reason_unknown": "timeout",
+  "statistics": {
+    "elim-unconstrained": 1,
+    "restarts": 22,
+    "final checks": 23,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 24,
+    "quant instantiations": 22,
+    "arith row summations": 20,
+    "arith num rows": 21,
+    "arith pivots": 21,
+    "arith assert lower": 7,
+    "arith assert upper": 15,
+    "arith tableau max rows": 21,
+    "arith tableau max columns": 45,
+    "num allocs": 3916162,
+    "rlimit count": 87669,
+    "max memory": 22.48,
+    "memory": 20.46,
+    "time": 1.05
+  },
+  "clause_serialization_seconds": 1.3999961083754897e-06,
+  "peak_rss_kib": null
+}

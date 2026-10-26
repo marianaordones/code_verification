@@ -1,0 +1,7 @@
+(declare-const a Real)
+(declare-const b Real)
+(declare-const c Real)
+(assert (>= a b))
+(assert (>= b c))
+(assert (> c a))
+(check-sat)

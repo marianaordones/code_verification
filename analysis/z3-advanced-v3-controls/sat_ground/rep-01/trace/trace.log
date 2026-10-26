@@ -1,0 +1,63 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-app] #5 x
+[mk-app] #6 Int
+[attach-meaning] #6 arith 0
+[mk-app] #7 >= #5 #6
+[mk-app] #8 <= #5 #6
+[mk-app] #9 bv
+[attach-meaning] #9 bv #b1
+[mk-app] #10 bv
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #10 bv #b0
+[mk-var] #11 0
+[mk-var] #12 1
+[mk-var] #13 2
+[mk-var] #14 3
+[mk-var] #15 4
+[mk-var] #16 5
+[mk-var] #17 6
+[mk-var] #18 7
+[mk-var] #19 8
+[mk-var] #20 9
+[mk-var] #21 10
+[mk-var] #22 11
+[mk-var] #23 12
+[mk-var] #24 13
+[mk-var] #25 14
+[mk-app] #26 + #19 #17
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[mk-app] #27 >= #6 #6
+[inst-discovered] theory-solving 0000000000000000 arith# ; #27
+[mk-app] #28 = #27 #1
+[instance] 0000000000000000 #28
+[attach-enode] #28 0
+[end-of-instance]
+[mk-app] #27 <= #6 #6
+[inst-discovered] theory-solving 0000000000000000 arith# ; #27
+[mk-app] #28 = #27 #1
+[instance] 0000000000000000 #28
+[attach-enode] #28 0
+[end-of-instance]
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[mk-app] #27 __z3_pilot_capture_end_606b353a5f914221822365cb23666379
+[eof]

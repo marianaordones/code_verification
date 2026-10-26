@@ -1,0 +1,12 @@
+{
+  "quantifiers": [],
+  "matching": [],
+  "ast_nodes_visited": 6,
+  "ast_node_limit_hit": false,
+  "quantifiers_found": 0,
+  "quantifiers_not_saved": 0,
+  "oversized_ground_terms_not_saved": 0,
+  "source_query_sha256": "04ff536132379978f21f3ca3ec47440db42f0b88a371333cc2c26e09dfcbb6a3",
+  "collection_scope": "separate non-traced input inventory; no check-sat",
+  "collection_seconds": 0.7637404999986757
+}

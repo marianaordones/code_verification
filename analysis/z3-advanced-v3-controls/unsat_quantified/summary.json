@@ -1,0 +1,616 @@
+{
+  "id": "unsat_quantified",
+  "kind": "control",
+  "timings": {
+    "baseline": {
+      "completed": 1,
+      "results": {
+        "unsat": 1
+      },
+      "reasons": {
+        "none": 1
+      },
+      "median_check_seconds": 0.022728099997038953,
+      "median_process_seconds": 1.318318999998155,
+      "median_inventory_seconds": 0.040026200003921986,
+      "outcome_mismatches": 0,
+      "reason_mismatches": 0,
+      "trace_limit_interruptions": 0,
+      "time_ratio_to_baseline": 1.0
+    },
+    "callback": {
+      "completed": 1,
+      "results": {
+        "unsat": 1
+      },
+      "reasons": {
+        "none": 1
+      },
+      "median_check_seconds": 0.003579399999580346,
+      "median_process_seconds": 1.2715711000055308,
+      "median_inventory_seconds": 0.011720599999534898,
+      "outcome_mismatches": 0,
+      "reason_mismatches": 0,
+      "trace_limit_interruptions": 0,
+      "time_ratio_to_baseline": 0.15748786744367876
+    },
+    "trace": {
+      "completed": 1,
+      "results": {
+        "unsat": 1
+      },
+      "reasons": {
+        "none": 1
+      },
+      "median_check_seconds": 0.03279810000094585,
+      "median_process_seconds": 1.3110715999937383,
+      "median_inventory_seconds": 0.013338700009626336,
+      "outcome_mismatches": 0,
+      "reason_mismatches": 0,
+      "trace_limit_interruptions": 0,
+      "time_ratio_to_baseline": 1.443063872704662
+    },
+    "combined": {
+      "completed": 1,
+      "results": {
+        "unsat": 1
+      },
+      "reasons": {
+        "none": 1
+      },
+      "median_check_seconds": 0.002708100000745617,
+      "median_process_seconds": 1.3081046000006609,
+      "median_inventory_seconds": 0.012123499996960163,
+      "outcome_mismatches": 0,
+      "reason_mismatches": 0,
+      "trace_limit_interruptions": 0,
+      "time_ratio_to_baseline": 0.11915206291324096
+    }
+  },
+  "original_result": null,
+  "expected_result": "unsat",
+  "runs": [
+    {
+      "mode": "baseline",
+      "rep": 1,
+      "trace_bytes": 0,
+      "trace_counts": {},
+      "parse_seconds": 0.014378099993336946,
+      "trace_status": "trace_missing",
+      "clause_serialization_seconds": 8.999923011288047e-07,
+      "packaging_seconds": 0.0019222999981138855,
+      "callback_errors": 0,
+      "peak_rss_kib": null,
+      "non_inst_saved": 0,
+      "generic_smt_saved": 0,
+      "specific_theory_hints_saved": 0,
+      "clauses_with_dependencies": 0,
+      "costs": {
+        "matching_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "chains_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "non_inst_clauses_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "combined_selected": {
+          "bytes": 167,
+          "characters": 167,
+          "tokens": 48,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "matching_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "chains_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "non_inst_clauses_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "shared_formulas_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        }
+      },
+      "bulk_token_measurement": false,
+      "selection": {
+        "status": "budgeted",
+        "limits": {
+          "matching": [
+            12,
+            7168
+          ],
+          "chains": [
+            6,
+            4096
+          ],
+          "non_inst_clauses": [
+            24,
+            3072
+          ]
+        },
+        "available": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "considered": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "candidate_caps": {
+          "matching": 64,
+          "chains": 24,
+          "non_inst_clauses": 64
+        },
+        "duplicate_clauses_removed": 0,
+        "selected": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "omitted": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "actual_tokens": 48,
+        "estimated_tokens_before_final_check": 48,
+        "encoder_calls": 2,
+        "encoded_characters": 334,
+        "exact_package_checks": 1,
+        "selection_policy": "cached item costs; bounded ranked candidates; final exact token check"
+      },
+      "inventory_incomplete": false,
+      "matches_without_observed_instance": 0
+    },
+    {
+      "mode": "callback",
+      "rep": 1,
+      "trace_bytes": 0,
+      "trace_counts": {},
+      "parse_seconds": 0.01477609999710694,
+      "trace_status": "trace_missing",
+      "clause_serialization_seconds": 3.7999998312443495e-05,
+      "packaging_seconds": 0.0018925000040326267,
+      "callback_errors": 0,
+      "peak_rss_kib": null,
+      "non_inst_saved": 0,
+      "generic_smt_saved": 0,
+      "specific_theory_hints_saved": 0,
+      "clauses_with_dependencies": 0,
+      "costs": {
+        "matching_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "chains_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "non_inst_clauses_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "combined_selected": {
+          "bytes": 167,
+          "characters": 167,
+          "tokens": 48,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "matching_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "chains_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "non_inst_clauses_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "shared_formulas_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        }
+      },
+      "bulk_token_measurement": false,
+      "selection": {
+        "status": "budgeted",
+        "limits": {
+          "matching": [
+            12,
+            7168
+          ],
+          "chains": [
+            6,
+            4096
+          ],
+          "non_inst_clauses": [
+            24,
+            3072
+          ]
+        },
+        "available": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "considered": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "candidate_caps": {
+          "matching": 64,
+          "chains": 24,
+          "non_inst_clauses": 64
+        },
+        "duplicate_clauses_removed": 0,
+        "selected": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "omitted": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "actual_tokens": 48,
+        "estimated_tokens_before_final_check": 48,
+        "encoder_calls": 2,
+        "encoded_characters": 334,
+        "exact_package_checks": 1,
+        "selection_policy": "cached item costs; bounded ranked candidates; final exact token check"
+      },
+      "inventory_incomplete": false,
+      "matches_without_observed_instance": 0
+    },
+    {
+      "mode": "trace",
+      "rep": 1,
+      "trace_bytes": 17591,
+      "trace_counts": {
+        "[tool-version]": 1,
+        "[mk-app]": 397,
+        "repeated_identical_definitions": 2,
+        "[mk-var]": 21,
+        "[attach-meaning]": 23,
+        "[mk-quant]": 45,
+        "[attach-var-names]": 45,
+        "[attach-enode]": 10,
+        "[inst-discovered]": 4,
+        "[instance]": 5,
+        "instances_without_saved_match": 4,
+        "[end-of-instance]": 5,
+        "redefined_ids": 9,
+        "[begin-check]": 1,
+        "[assign]": 2,
+        "[eq-expl]": 1,
+        "[new-match]": 1,
+        "native_end_marker_found": 1,
+        "matches_saved": 1,
+        "dependency_edges": 0,
+        "chains_saved": 0,
+        "matched_input_qid": 1,
+        "ambiguous_input_qid": 0,
+        "unmatched_input_qid": 0,
+        "equality_pairs": 0,
+        "equality_pairs_resolved": 0,
+        "binding_root_paths_resolved": 1,
+        "bindings_with_non_root_steps": 0,
+        "triggers_resolved": 1,
+        "matches_with_top_level_terms": 1,
+        "unresolved_match_terms": 0
+      },
+      "parse_seconds": 0.054028300000936724,
+      "trace_status": "parsed",
+      "clause_serialization_seconds": 1.3999961083754897e-06,
+      "packaging_seconds": 0.009848499990766868,
+      "callback_errors": 0,
+      "peak_rss_kib": null,
+      "non_inst_saved": 0,
+      "generic_smt_saved": 0,
+      "specific_theory_hints_saved": 0,
+      "clauses_with_dependencies": 0,
+      "costs": {
+        "matching_available": {
+          "bytes": 1653,
+          "characters": 1653,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "chains_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "non_inst_clauses_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "combined_selected": {
+          "bytes": 1404,
+          "characters": 1404,
+          "tokens": 462,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "matching_selected": {
+          "bytes": 998,
+          "characters": 998,
+          "tokens": 322,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "chains_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "non_inst_clauses_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "shared_formulas_selected": {
+          "bytes": 153,
+          "characters": 153,
+          "tokens": 92,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        }
+      },
+      "bulk_token_measurement": false,
+      "selection": {
+        "status": "budgeted",
+        "limits": {
+          "matching": [
+            12,
+            7168
+          ],
+          "chains": [
+            6,
+            4096
+          ],
+          "non_inst_clauses": [
+            24,
+            3072
+          ]
+        },
+        "available": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "considered": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "candidate_caps": {
+          "matching": 64,
+          "chains": 24,
+          "non_inst_clauses": 64
+        },
+        "duplicate_clauses_removed": 0,
+        "selected": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "omitted": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "actual_tokens": 462,
+        "estimated_tokens_before_final_check": 522,
+        "encoder_calls": 4,
+        "encoded_characters": 2634,
+        "exact_package_checks": 1,
+        "selection_policy": "cached item costs; bounded ranked candidates; final exact token check"
+      },
+      "inventory_incomplete": false,
+      "matches_without_observed_instance": 0
+    },
+    {
+      "mode": "combined",
+      "rep": 1,
+      "trace_bytes": 2114,
+      "trace_counts": {
+        "[tool-version]": 1,
+        "[mk-app]": 29,
+        "repeated_identical_definitions": 2,
+        "[mk-var]": 16,
+        "[attach-meaning]": 11,
+        "[mk-quant]": 1,
+        "[attach-var-names]": 1,
+        "[attach-enode]": 9,
+        "[inst-discovered]": 2,
+        "[instance]": 3,
+        "instances_without_saved_match": 2,
+        "[end-of-instance]": 3,
+        "redefined_ids": 6,
+        "[begin-check]": 1,
+        "[mk-proof]": 4,
+        "[assign]": 2,
+        "[eq-expl]": 1,
+        "[new-match]": 1,
+        "native_end_marker_found": 1,
+        "matches_saved": 1,
+        "dependency_edges": 0,
+        "chains_saved": 0,
+        "matched_input_qid": 1,
+        "ambiguous_input_qid": 0,
+        "unmatched_input_qid": 0,
+        "equality_pairs": 0,
+        "equality_pairs_resolved": 0,
+        "binding_root_paths_resolved": 1,
+        "bindings_with_non_root_steps": 0,
+        "triggers_resolved": 1,
+        "matches_with_top_level_terms": 1,
+        "unresolved_match_terms": 0
+      },
+      "parse_seconds": 0.0341986999992514,
+      "trace_status": "parsed",
+      "clause_serialization_seconds": 2.0199993741698563e-05,
+      "packaging_seconds": 0.010114899996551685,
+      "callback_errors": 0,
+      "peak_rss_kib": null,
+      "non_inst_saved": 0,
+      "generic_smt_saved": 0,
+      "specific_theory_hints_saved": 0,
+      "clauses_with_dependencies": 0,
+      "costs": {
+        "matching_available": {
+          "bytes": 1651,
+          "characters": 1651,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "chains_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "non_inst_clauses_available": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": null,
+          "tokenizer": "unavailable"
+        },
+        "combined_selected": {
+          "bytes": 1404,
+          "characters": 1404,
+          "tokens": 462,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "matching_selected": {
+          "bytes": 998,
+          "characters": 998,
+          "tokens": 322,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "chains_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "non_inst_clauses_selected": {
+          "bytes": 2,
+          "characters": 2,
+          "tokens": 1,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        },
+        "shared_formulas_selected": {
+          "bytes": 153,
+          "characters": 153,
+          "tokens": 92,
+          "tokenizer": "pinned Qwen Coder tokenizer; standalone JSON, not whole chat"
+        }
+      },
+      "bulk_token_measurement": false,
+      "selection": {
+        "status": "budgeted",
+        "limits": {
+          "matching": [
+            12,
+            7168
+          ],
+          "chains": [
+            6,
+            4096
+          ],
+          "non_inst_clauses": [
+            24,
+            3072
+          ]
+        },
+        "available": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "considered": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "candidate_caps": {
+          "matching": 64,
+          "chains": 24,
+          "non_inst_clauses": 64
+        },
+        "duplicate_clauses_removed": 0,
+        "selected": {
+          "matching": 1,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "omitted": {
+          "matching": 0,
+          "chains": 0,
+          "non_inst_clauses": 0
+        },
+        "actual_tokens": 462,
+        "estimated_tokens_before_final_check": 522,
+        "encoder_calls": 4,
+        "encoded_characters": 2634,
+        "exact_package_checks": 1,
+        "selection_policy": "cached item costs; bounded ranked candidates; final exact token check"
+      },
+      "inventory_incomplete": false,
+      "matches_without_observed_instance": 0
+    }
+  ],
+  "failures": [],
+  "failure_details": [],
+  "semantic_control_errors": [],
+  "original_outcome_mismatches": [],
+  "inventory_process_seconds": 1.518153600001824
+}

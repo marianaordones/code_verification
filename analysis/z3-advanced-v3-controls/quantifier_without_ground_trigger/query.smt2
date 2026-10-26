@@ -1,0 +1,6 @@
+(set-option :smt.mbqi false)
+(declare-fun f (Int) Int)
+(declare-const a Int)
+(assert (forall ((x Int)) (! (> (f x) x) :pattern ((f x)) :qid control_no_ground_term)))
+(assert (>= a 0))
+(check-sat)

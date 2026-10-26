@@ -1,0 +1,309 @@
+{
+  "status": "parsed",
+  "capture_end_bytes": null,
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 61,
+    "repeated_identical_definitions": 2,
+    "[mk-var]": 16,
+    "[mk-quant]": 3,
+    "[attach-var-names]": 3,
+    "[attach-meaning]": 11,
+    "[attach-enode]": 22,
+    "[inst-discovered]": 4,
+    "[instance]": 6,
+    "instances_without_saved_match": 4,
+    "[end-of-instance]": 6,
+    "redefined_ids": 8,
+    "[begin-check]": 1,
+    "[mk-proof]": 7,
+    "[assign]": 10,
+    "[eq-expl]": 4,
+    "[new-match]": 2,
+    "native_end_marker_found": 1,
+    "matches_saved": 2,
+    "dependency_edges": 1,
+    "chains_saved": 1,
+    "matched_input_qid": 2,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 0,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 2,
+    "bindings_with_non_root_steps": 2,
+    "triggers_resolved": 2,
+    "matches_with_top_level_terms": 2,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 106,
+      "raw": "[new-match] 000002848DA782A8 #13 #12 #5 ; #19",
+      "fingerprint": "000002848DA782A8",
+      "qid": "user_candidate_chain1",
+      "quantifier_trace_id": "#13",
+      "inventory_match": "unique_qid",
+      "input_formula": "(forall ((x Int))\n  (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))",
+      "input_formula_sha256": "e3286d75fdf8211716da2eb9f66d53f1b58fdc2febf8e8ee82672c12225058c4",
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 1,
+        "term": "(pattern (f (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#5",
+            "definition_version": 1,
+            "term": "a",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 1,
+                  "term": "a",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 1,
+                  "term": "b",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 104,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 1,
+                    "term": "(= a b)",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 1,
+                  "term": "b",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 105,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#19",
+          "definition_version": 1,
+          "term": "(f a)",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    },
+    {
+      "id": "m2",
+      "line": 124,
+      "raw": "[new-match] 000002848DA784F0 #42 #17 #45 ; #51",
+      "fingerprint": "000002848DA784F0",
+      "qid": "user_candidate_chain2",
+      "quantifier_trace_id": "#42",
+      "inventory_match": "unique_qid",
+      "input_formula": "(forall ((x Int)) (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2))",
+      "input_formula_sha256": "b4e84f12772752ba42a2ac32b1aa217c91f8f6fb9d7c5e1fffb7622fa6ff4c83",
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 1,
+        "term": "(pattern (g (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#45",
+            "definition_version": 5,
+            "term": "(f b)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#45",
+                  "definition_version": 5,
+                  "term": "(f b)",
+                  "resolved": true
+                },
+                "definition_version": 5,
+                "rule": "cg",
+                "target": "#19",
+                "target_term": {
+                  "trace_id": "#19",
+                  "definition_version": 1,
+                  "term": "(f a)",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #45 cg (#6 #5) ; #19",
+                "line": 122,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#6",
+                    "definition_version": 1,
+                    "term": "b",
+                    "resolved": true
+                  },
+                  {
+                    "trace_id": "#5",
+                    "definition_version": 1,
+                    "term": "a",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#19",
+                  "definition_version": 1,
+                  "term": "(f a)",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "lit",
+                "target": "#5",
+                "target_term": {
+                  "trace_id": "#5",
+                  "definition_version": 1,
+                  "term": "a",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #19 lit #43 ; #5",
+                "line": 123,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#43",
+                    "definition_version": 2,
+                    "term": "(= (f a) a)",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#5",
+                  "definition_version": 1,
+                  "term": "a",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "lit",
+                "target": "#6",
+                "target_term": {
+                  "trace_id": "#6",
+                  "definition_version": 1,
+                  "term": "b",
+                  "resolved": true
+                },
+                "raw": "[eq-expl] #5 lit #7 ; #6",
+                "line": 104,
+                "supporting_terms": [
+                  {
+                    "trace_id": "#7",
+                    "definition_version": 1,
+                    "term": "(= a b)",
+                    "resolved": true
+                  }
+                ]
+              },
+              {
+                "source": {
+                  "trace_id": "#6",
+                  "definition_version": 1,
+                  "term": "b",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #6 root",
+                "line": 105,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#6"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#51",
+          "definition_version": 1,
+          "term": "(g (f b))",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "m1",
+      "to": "m2",
+      "term": {
+        "trace_id": "#51",
+        "definition_version": 1,
+        "term": "(g (f b))",
+        "resolved": true
+      },
+      "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+      "causal_creation_proven": false
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#51",
+            "definition_version": 1,
+            "term": "(g (f b))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

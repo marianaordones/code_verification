@@ -1,0 +1,81 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] #5 0
+[mk-app] #6 f #5
+[mk-app] #7 > #6 #5
+[mk-app] #8 pattern #6
+[mk-quant] #9 control_no_ground_term 1 #8 #7
+[attach-var-names] #9 (|x| ; |Int|)
+[mk-app] #10 a
+[mk-app] #11 Int
+[attach-meaning] #11 arith 0
+[mk-app] #12 >= #10 #11
+[mk-app] #13 bv
+[attach-meaning] #13 bv #b1
+[mk-app] #14 bv
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #14 bv #b0
+[mk-var] #15 0
+[mk-var] #16 1
+[mk-var] #17 2
+[mk-var] #18 3
+[mk-var] #19 4
+[mk-var] #20 5
+[mk-var] #21 6
+[mk-var] #22 7
+[mk-var] #23 8
+[mk-var] #24 9
+[mk-var] #25 10
+[mk-var] #26 11
+[mk-var] #27 12
+[mk-var] #28 13
+[mk-var] #29 14
+[mk-app] #30 + #23 #21
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #31 <= #6 #5
+[mk-app] #32 not #31
+[inst-discovered] theory-solving 0000000000000000 arith# ; #7
+[mk-app] #33 = #7 #32
+[instance] 0000000000000000 #33
+[attach-enode] #33 0
+[end-of-instance]
+[mk-app] #33 Int
+[attach-meaning] #33 arith (- 1)
+[mk-app] #34 * #33 #5
+[mk-app] #35 + #34 #6
+[attach-meaning] #33 arith (- 1)
+[mk-app] #36 * #33 #6
+[mk-app] #37 + #5 #36
+[mk-app] #34 >= #37 #11
+[inst-discovered] theory-solving 0000000000000000 arith# ; #31
+[mk-app] #35 = #31 #34
+[instance] 0000000000000000 #35
+[attach-enode] #35 0
+[end-of-instance]
+[mk-app] #35 not #34
+[mk-quant] #38 control_no_ground_term 1 #8 #35
+[attach-var-names] #38 (|x| ; |Int|)
+[begin-check] 0
+[mk-app] #31 Int
+[attach-meaning] #31 arith 1
+[attach-enode] #31 0
+[mk-app] #32 Real
+[attach-meaning] #32 arith 1
+[attach-enode] #32 0
+[attach-enode] #11 0
+[mk-app] #39 Real
+[attach-meaning] #39 arith 0
+[attach-enode] #39 0
+[mk-proof] #40 assumption
+[assign] #38 justification -1: 
+[attach-enode] #10 0
+[assign] #12 justification -1: 
+[eof]

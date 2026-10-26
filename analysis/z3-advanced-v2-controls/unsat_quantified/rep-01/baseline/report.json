@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "mode": "baseline",
+  "timeout_ms": 1000,
+  "overrides": {
+    "timeout_ms": 1000,
+    "trace": false,
+    "proof": false
+  },
+  "callback_errors": 0,
+  "rules_observed": {},
+  "non_inst_clauses_observed": 0,
+  "oversized_clauses_omitted": 0,
+  "clause_sample_omissions": 0,
+  "trace_limit_interrupted": false,
+  "capture_schema": "native-search-v2-no-pretty-print",
+  "deferred_ast_serialization": true,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "inventory_seconds": 0.05301669999607839,
+  "inventory_scope": "separate non-traced input inventory; no check-sat",
+  "clause_duplicates": 0,
+  "clause_serialization_errors": 0,
+  "trace_search_end_bytes": 0,
+  "result": "unsat",
+  "check_seconds": 0.04757330000575166,
+  "reason_unknown": null,
+  "statistics": {
+    "conflicts": 1,
+    "max generation": 1,
+    "num checks": 1,
+    "mk bool var": 2,
+    "quant instantiations": 1,
+    "arith assert upper": 1,
+    "num allocs": 1394226,
+    "rlimit count": 314,
+    "max memory": 21.43,
+    "memory": 20.32,
+    "time": 0.046
+  },
+  "clause_serialization_seconds": 1.400010660290718e-06,
+  "peak_rss_kib": null
+}

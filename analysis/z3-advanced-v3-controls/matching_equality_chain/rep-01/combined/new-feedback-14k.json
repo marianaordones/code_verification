@@ -1,0 +1,162 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "qid": "user_candidate_chain1",
+      "inventory_match": "unique_qid",
+      "formula_ref": "e3286d75fdf8211716da2eb9f66d53f1b58fdc2febf8e8ee82672c12225058c4",
+      "trigger": {
+        "trace_id": "#12",
+        "definition_version": 1,
+        "term": "(pattern (f (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#5",
+            "definition_version": 1,
+            "term": "a",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#6",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #5 lit #7 ; #6",
+              "[eq-expl] #6 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#19",
+          "definition_version": 1,
+          "term": "(f a)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m2",
+      "qid": "user_candidate_chain2",
+      "inventory_match": "unique_qid",
+      "formula_ref": "b4e84f12772752ba42a2ac32b1aa217c91f8f6fb9d7c5e1fffb7622fa6ff4c83",
+      "trigger": {
+        "trace_id": "#17",
+        "definition_version": 1,
+        "term": "(pattern (g (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#45",
+            "definition_version": 5,
+            "term": "(f b)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#6",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #45 cg (#6 #5) ; #19",
+              "[eq-expl] #19 lit #43 ; #5",
+              "[eq-expl] #5 lit #7 ; #6"
+            ],
+            "steps_omitted": 1
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#51",
+          "definition_version": 1,
+          "term": "(g (f b))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m1",
+        "m2"
+      ],
+      "edges": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "term": {
+            "trace_id": "#51",
+            "definition_version": 1,
+            "term": "(g (f b))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "non_inst_clauses": [
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a (* (- 1) (g b))) 0)",
+        "(<= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= a (g b)))",
+        "(<= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(not (= a (g b)))",
+        "(>= (+ a (* (- 1) (g b))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= a (g b))",
+        "(let ((a!1 (<= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))",
+        "(let ((a!1 (>= (+ a (* (- 1) (g b))) 0)))\n  (not a!1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {},
+  "formulas": {
+    "e3286d75fdf8211716da2eb9f66d53f1b58fdc2febf8e8ee82672c12225058c4": "(forall ((x Int))\n  (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))",
+    "b4e84f12772752ba42a2ac32b1aa217c91f8f6fb9d7c5e1fffb7622fa6ff4c83": "(forall ((x Int)) (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2))"
+  }
+}

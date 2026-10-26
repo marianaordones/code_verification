@@ -1,0 +1,12 @@
+[
+  {
+    "rule": "smt",
+    "hint_smt": "smt",
+    "dependencies": [],
+    "clause_literals_smt": [
+      "(<= x 0)",
+      "(>= x 0)"
+    ],
+    "scope": "replay clause; dependencies/branch validity not reconstructed"
+  }
+]

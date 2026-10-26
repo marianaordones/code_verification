@@ -1,0 +1,53 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m1",
+      "qid": "control_nonnegative",
+      "inventory_match": "unique_qid",
+      "formula_ref": "00a47ec809905b68cddcb2c654d4f0d694d54166f7b9d9f8f184ae5815e190ed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 1,
+        "term": "(pattern (f (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 1,
+            "term": "0",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#7",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #7 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 1,
+          "term": "(f 0)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    }
+  ],
+  "chains": [],
+  "non_inst_clauses": [],
+  "referenced_matches": {},
+  "formulas": {
+    "00a47ec809905b68cddcb2c654d4f0d694d54166f7b9d9f8f184ae5815e190ed": "(forall ((x Int)) (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))"
+  }
+}

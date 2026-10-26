@@ -1,0 +1,5 @@
+(declare-fun f (Int) Int) (declare-fun g (Int) Int)
+(declare-const a Int) (declare-const b Int) (assert (= a b))
+(assert (forall ((x Int)) (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1)))
+(assert (forall ((x Int)) (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2)))
+(assert (= (f a) b)) (assert (< b 0)) (check-sat)

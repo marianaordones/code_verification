@@ -1,0 +1,1206 @@
+{
+  "scope": "diagnostic replay, not original Verus search",
+  "matching": [
+    {
+      "id": "m83",
+      "qid": "internal_ens__candidate!lemma_min_le_half_sum._definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "4742f6307563b0a38f3ddcafa7b0b4f094e96e12f7afed201a46130ebd64b974",
+      "trigger": {
+        "trace_id": "#857",
+        "definition_version": 1,
+        "term": "(pattern (ens%candidate!lemma_min_le_half_sum. (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#948",
+            "definition_version": 1,
+            "term": "tmp%5",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#950",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #948 lit #951 ; #950",
+              "[eq-expl] #950 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#945",
+            "definition_version": 1,
+            "term": "tmp%4",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#946",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #945 lit #947 ; #946",
+              "[eq-expl] #946 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#952",
+          "definition_version": 1,
+          "term": "(ens%candidate!lemma_min_le_half_sum. tmp%4 tmp%5)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m87",
+      "qid": "internal_candidate!candies_after_division.?_definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "63e1f49e30b79943699bf6176649d993f2869a96560ab8ee86dedadf842a4db8",
+      "trigger": {
+        "trace_id": "#779",
+        "definition_version": 1,
+        "term": "(pattern (candidate!candies_after_division.? (:var 3) (:var 2) (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#939",
+            "definition_version": 1,
+            "term": "s@",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#939",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #939 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#956",
+            "definition_version": 1,
+            "term": "(I c_@)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#1215",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #956 cg (#927 #894) ; #1215",
+              "[eq-expl] #1215 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#955",
+            "definition_version": 1,
+            "term": "(I b_@)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#1214",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #955 cg (#925 #892) ; #1214",
+              "[eq-expl] #1214 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#954",
+            "definition_version": 1,
+            "term": "(I a_@)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#1213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #954 cg (#923 #890) ; #1213",
+              "[eq-expl] #1213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#957",
+          "definition_version": 1,
+          "term": "(candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m92",
+      "qid": "internal_candidate!min_val.?_definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "dab679e30643d8df35474ccf20b4de2efd9340d3db42f043a36c82ba0d94f136",
+      "trigger": {
+        "trace_id": "#765",
+        "definition_version": 1,
+        "term": "(pattern (candidate!min_val.? (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#3495",
+            "definition_version": 1,
+            "term": "(I (Add b_@ (Sub c_@ (%I s@))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#3495",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #3495 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#3494",
+            "definition_version": 1,
+            "term": "(I (Add a_@ (%I s@)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#3494",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #3494 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#3496",
+          "definition_version": 1,
+          "term": "(candidate!min_val.? (I (Add a_@ (%I s@))) (I (Add b_@ (Sub c_@ (%I s@)))))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m1",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 1,
+        "term": "(pattern (iInv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#890",
+            "definition_version": 1,
+            "term": "a!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#890",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #890 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 1,
+            "term": "64",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#891",
+          "definition_version": 1,
+          "term": "(iInv 64 a!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m2",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 1,
+        "term": "(pattern (iInv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#892",
+            "definition_version": 1,
+            "term": "b!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#892",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #892 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 1,
+            "term": "64",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#893",
+          "definition_version": 1,
+          "term": "(iInv 64 b!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m3",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 1,
+        "term": "(pattern (iInv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#894",
+            "definition_version": 1,
+            "term": "c!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#894",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #894 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 1,
+            "term": "64",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#213",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #213 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#895",
+          "definition_version": 1,
+          "term": "(iInv 64 c!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m4",
+      "qid": "prelude_add",
+      "inventory_match": "unique_qid",
+      "formula_ref": "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff",
+      "trigger": {
+        "trace_id": "#385",
+        "definition_version": 1,
+        "term": "(pattern (Add (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#892",
+            "definition_version": 1,
+            "term": "b!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#892",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #892 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#890",
+            "definition_version": 1,
+            "term": "a!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#890",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #890 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#899",
+          "definition_version": 1,
+          "term": "(Add a! b!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m5",
+      "qid": "prelude_add",
+      "inventory_match": "unique_qid",
+      "formula_ref": "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff",
+      "trigger": {
+        "trace_id": "#385",
+        "definition_version": 1,
+        "term": "(pattern (Add (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#894",
+            "definition_version": 1,
+            "term": "c!",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#894",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #894 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#899",
+            "definition_version": 1,
+            "term": "(Add a! b!)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#899",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #899 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#900",
+          "definition_version": 1,
+          "term": "(Add (Add a! b!) c!)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m8",
+      "qid": "internal_core__ops__arith__Div_trait_type_bounds_definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "9ff54c4e68b5d74d27870bf888ff1e61836dc89c2261276bc1c7929fd59fa535",
+      "trigger": {
+        "trace_id": "#652",
+        "definition_version": 1,
+        "term": "(pattern (tr_bound%core!ops.arith.Div. (:var 3) (:var 2) (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT 64)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#659",
+            "definition_version": 1,
+            "term": "(REF $)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#659",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #659 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT 64)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#659",
+            "definition_version": 1,
+            "term": "(REF $)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#659",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #659 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#841",
+          "definition_version": 1,
+          "term": "(tr_bound%core!ops.arith.Div. (REF $) (SINT 64) (REF $) (SINT 64))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m9",
+      "qid": "internal_core__ops__arith__Div_trait_type_bounds_definition",
+      "inventory_match": "unique_qid",
+      "formula_ref": "9ff54c4e68b5d74d27870bf888ff1e61836dc89c2261276bc1c7929fd59fa535",
+      "trigger": {
+        "trace_id": "#652",
+        "definition_version": 1,
+        "term": "(pattern (tr_bound%core!ops.arith.Div. (:var 3) (:var 2) (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT 64)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#659",
+            "definition_version": 1,
+            "term": "(REF $)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#659",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #659 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#660",
+            "definition_version": 1,
+            "term": "(SINT 64)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#660",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #660 root"
+            ],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#94",
+            "definition_version": 1,
+            "term": "$",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#94",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #94 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#842",
+          "definition_version": 1,
+          "term": "(tr_bound%core!ops.arith.Div. $ (SINT 64) (REF $) (SINT 64))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m14",
+      "qid": "prelude_unbox_box_bool",
+      "inventory_match": "unique_qid",
+      "formula_ref": "a7499066800606cb9eb7f21d7a04c3280762e64d25444da178c35375c491c984",
+      "trigger": {
+        "trace_id": "#134",
+        "definition_version": 1,
+        "term": "(pattern (B (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#1",
+            "definition_version": 1,
+            "term": "true",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#1",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #1 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#723",
+          "definition_version": 1,
+          "term": "(B true)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    {
+      "id": "m24",
+      "qid": "prelude_i_inv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d",
+      "trigger": {
+        "trace_id": "#326",
+        "definition_version": 1,
+        "term": "(pattern (iInv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#899",
+            "definition_version": 1,
+            "term": "(Add a! b!)",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": false,
+            "root": null,
+            "reason": "missing explanation",
+            "steps_raw": [],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#213",
+            "definition_version": 1,
+            "term": "64",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": false,
+            "root": null,
+            "reason": "missing explanation",
+            "steps_raw": [],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#903",
+          "definition_version": 1,
+          "term": "(iInv 64 (Add a! b!))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    }
+  ],
+  "chains": [
+    {
+      "events": [
+        "m83",
+        "m92"
+      ],
+      "edges": [
+        {
+          "from": "m83",
+          "to": "m92",
+          "term": {
+            "trace_id": "#3496",
+            "definition_version": 1,
+            "term": "(candidate!min_val.? (I (Add a_@ (%I s@))) (I (Add b_@ (Sub c_@ (%I s@)))))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    },
+    {
+      "events": [
+        "m83",
+        "m93"
+      ],
+      "edges": [
+        {
+          "from": "m83",
+          "to": "m93",
+          "term": {
+            "trace_id": "#3498",
+            "definition_version": 1,
+            "term": "(EucDiv (Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@)))) 2)",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    },
+    {
+      "events": [
+        "m83",
+        "m94"
+      ],
+      "edges": [
+        {
+          "from": "m83",
+          "to": "m94",
+          "term": {
+            "trace_id": "#3498",
+            "definition_version": 1,
+            "term": "(EucDiv (Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@)))) 2)",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    },
+    {
+      "events": [
+        "m83",
+        "m95"
+      ],
+      "edges": [
+        {
+          "from": "m83",
+          "to": "m95",
+          "term": {
+            "trace_id": "#3495",
+            "definition_version": 1,
+            "term": "(I (Add b_@ (Sub c_@ (%I s@))))",
+            "resolved": true
+          },
+          "evidence": "earlier attach-enode inside instance; later explicit new-match input",
+          "causal_creation_proven": false
+        }
+      ]
+    }
+  ],
+  "non_inst_clauses": [
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (>= (+ (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@)\n         (* (- 1) a!2))\n      0)))",
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (<= (+ (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@)\n         (* (- 1) a!2))\n      0)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (not (= (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@) a!2))))",
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (<= (+ (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@)\n         (* (- 1) a!2))\n      0)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (not (= (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@) a!2))))",
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (>= (+ (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@)\n         (* (- 1) a!2))\n      0)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n  (= (candidate!candies_after_division.? (I a_@) (I b_@) (I c_@) s@) a!2)))",
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n(let ((a!3 (<= (+ (candidate!candies_after_division.?\n                    (I a_@)\n                    (I b_@)\n                    (I c_@)\n                    s@)\n                  (* (- 1) a!2))\n               0)))\n  (not a!3))))",
+        "(let ((a!1 (I (Add b_@ (Sub c_@ (%I s@))))))\n(let ((a!2 (candidate!min_val.? (I (Add a_@ (%I s@))) a!1)))\n(let ((a!3 (>= (+ (candidate!candies_after_division.?\n                    (I a_@)\n                    (I b_@)\n                    (I c_@)\n                    s@)\n                  (* (- 1) a!2))\n               0)))\n  (not a!3))))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ b_@ (* (- 1) c_@)) 0)",
+        "(>= (+ b_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a_@ (* (- 1) c_@)) 0)",
+        "(>= (+ a_@ (* (- 1) c_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(<= (+ a_@ (* (- 1) b_@)) 0)",
+        "(>= (+ a_@ (* (- 1) b_@)) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+        "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(<= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(>= (+ a! b! (* (- 1) (Add a! b!))) 0)"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(= (+ a! b! (* (- 1) (Add a! b!))) 0)",
+        "(let ((a!1 (<= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))",
+        "(let ((a!1 (>= (+ a! b! (* (- 1) (Add a! b!))) 0)))\n  (not a!1))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (<= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (>= a!1 0))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    },
+    {
+      "rule": "smt",
+      "hint_smt": "smt",
+      "dependencies": [],
+      "clause_literals_smt": [
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (= a!1 0))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (<= a!1 0)))",
+        "(let ((a!1 (+ c! (Add a! b!) (* (- 1) (Add (Add a! b!) c!)))))\n  (not (>= a!1 0)))"
+      ],
+      "scope": "replay clause; dependencies/branch validity not reconstructed"
+    }
+  ],
+  "referenced_matches": {
+    "m93": {
+      "id": "m93",
+      "qid": "prelude_eucdiv",
+      "inventory_match": "unique_qid",
+      "formula_ref": "4a0b6e3fab95debbf39c649f0af6b5ac36b32c5076dde371e663488d1ff5306b",
+      "trigger": {
+        "trace_id": "#400",
+        "definition_version": 1,
+        "term": "(pattern (EucDiv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#853",
+            "definition_version": 1,
+            "term": "2",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": false,
+            "root": null,
+            "reason": "missing explanation",
+            "steps_raw": [],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#3497",
+            "definition_version": 1,
+            "term": "(Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#3497",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #3497 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#3498",
+          "definition_version": 1,
+          "term": "(EucDiv (Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@)))) 2)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    "m94": {
+      "id": "m94",
+      "qid": "prelude_div_unsigned_in_bounds",
+      "inventory_match": "unique_qid",
+      "formula_ref": "d551b83ef390757e2272e76ef420a59f6e711d38b93dc325704c14de21fbe8dd",
+      "trigger": {
+        "trace_id": "#400",
+        "definition_version": 1,
+        "term": "(pattern (EucDiv (:var 1) (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#853",
+            "definition_version": 1,
+            "term": "2",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": false,
+            "root": null,
+            "reason": "missing explanation",
+            "steps_raw": [],
+            "steps_omitted": 0
+          }
+        },
+        {
+          "bound_term": {
+            "trace_id": "#3497",
+            "definition_version": 1,
+            "term": "(Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@))))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#3497",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #3497 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#3498",
+          "definition_version": 1,
+          "term": "(EucDiv (Add (Add a_@ (%I s@)) (Add b_@ (Sub c_@ (%I s@)))) 2)",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    },
+    "m95": {
+      "id": "m95",
+      "qid": "prelude_unbox_box_int",
+      "inventory_match": "unique_qid",
+      "formula_ref": "30d0ac5417ec66e04e3ff89a3f4f2c65128248cb77e78ebafe5e7618fdd75274",
+      "trigger": {
+        "trace_id": "#139",
+        "definition_version": 1,
+        "term": "(pattern (I (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#950",
+            "definition_version": 1,
+            "term": "(Add b_@ (Sub c_@ (%I s@)))",
+            "resolved": true
+          },
+          "path_to_root": {
+            "complete_root_path_in_audit": true,
+            "root": "#950",
+            "reason": null,
+            "steps_raw": [
+              "[eq-expl] #950 root"
+            ],
+            "steps_omitted": 0
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#3495",
+          "definition_version": 1,
+          "term": "(I (Add b_@ (Sub c_@ (%I s@))))",
+          "resolved": true
+        }
+      ],
+      "instance_count": 1,
+      "equalities_used": [],
+      "equality_pairs_omitted": 0
+    }
+  },
+  "formulas": {
+    "5106090218e415d9b976064d1dcc1bbd77f7d0505a6ccd0bc6ee438dfb07d98d": "(forall ((bits Int) (i Int))\n  (! (= (iInv bits i) (and (<= (iLo bits) i) (< i (iHi bits))))\n     :pattern ((iInv bits i))\n     :skolemid skolem_prelude_i_inv\n     :qid prelude_i_inv))",
+    "a7499066800606cb9eb7f21d7a04c3280762e64d25444da178c35375c491c984": "(forall ((x Bool))\n  (! (= x (%B (B x)))\n     :pattern ((B x))\n     :skolemid skolem_prelude_unbox_box_bool\n     :qid prelude_unbox_box_bool))",
+    "613040cc2121de7550372d3ae7bb5845e663a3a95e920ed7f6014eba7a2abdff": "(forall ((x Int) (y Int))\n  (! (= (Add x y) (+ x y))\n     :pattern ((Add x y))\n     :skolemid skolem_prelude_add\n     :qid prelude_add))",
+    "9ff54c4e68b5d74d27870bf888ff1e61836dc89c2261276bc1c7929fd59fa535": "(forall ((Self%&. Dcr) (Self%& Type) (Rhs&. Dcr) (Rhs& Type))\n  (! (=> (tr_bound%core!ops.arith.Div. Self%&. Self%& Rhs&. Rhs&)\n         (and (sized Rhs&.)\n              (sized (proj%%core!ops.arith.Div./Output\n                       Self%&.\n                       Self%&\n                       Rhs&.\n                       Rhs&))))\n     :pattern ((tr_bound%core!ops.arith.Div. Self%&. Self%& Rhs&. Rhs&))\n     :skolemid skolem_internal_core__ops__arith__Div_trait_type_bounds_definition\n     :qid internal_core__ops__arith__Div_trait_type_bounds_definition))",
+    "4742f6307563b0a38f3ddcafa7b0b4f094e96e12f7afed201a46130ebd64b974": "(forall ((x! Int) (y! Int))\n  (! (= (ens%candidate!lemma_min_le_half_sum. x! y!)\n        (<= (candidate!min_val.? (I x!) (I y!)) (EucDiv (Add x! y!) 2)))\n     :pattern ((ens%candidate!lemma_min_le_half_sum. x! y!))\n     :skolemid skolem_internal_ens__candidate!lemma_min_le_half_sum._definition\n     :qid internal_ens__candidate!lemma_min_le_half_sum._definition))",
+    "63e1f49e30b79943699bf6176649d993f2869a96560ab8ee86dedadf842a4db8": "(forall ((ap! Poly) (bp! Poly) (sp! Poly) (s! Poly))\n  (! (let ((a!1 (I (Add (%I bp!) (Sub (%I sp!) (%I s!))))))\n     (let ((a!2 (candidate!min_val.? (I (Add (%I ap!) (%I s!))) a!1)))\n       (= (candidate!candies_after_division.? ap! bp! sp! s!) a!2)))\n     :pattern ((candidate!candies_after_division.? ap! bp! sp! s!))\n     :skolemid skolem_internal_candidate!candies_after_division.?_definition\n     :qid internal_candidate!candies_after_division.?_definition))",
+    "dab679e30643d8df35474ccf20b4de2efd9340d3db42f043a36c82ba0d94f136": "(forall ((x! Poly) (y! Poly))\n  (! (let ((a!1 (%I (ite (<= (%I x!) (%I y!)) x! y!))))\n       (= (candidate!min_val.? x! y!) a!1))\n     :pattern ((candidate!min_val.? x! y!))\n     :skolemid skolem_internal_candidate!min_val.?_definition\n     :qid internal_candidate!min_val.?_definition))",
+    "4a0b6e3fab95debbf39c649f0af6b5ac36b32c5076dde371e663488d1ff5306b": "(forall ((x Int) (y Int))\n  (! (= (EucDiv x y) (div x y))\n     :pattern ((EucDiv x y))\n     :skolemid skolem_prelude_eucdiv\n     :qid prelude_eucdiv))",
+    "d551b83ef390757e2272e76ef420a59f6e711d38b93dc325704c14de21fbe8dd": "(forall ((x Int) (y Int))\n  (! (=> (and (<= 0 x) (< 0 y)) (and (<= 0 (EucDiv x y)) (<= (EucDiv x y) x)))\n     :pattern ((EucDiv x y))\n     :skolemid skolem_prelude_div_unsigned_in_bounds\n     :qid prelude_div_unsigned_in_bounds))",
+    "30d0ac5417ec66e04e3ff89a3f4f2c65128248cb77e78ebafe5e7618fdd75274": "(forall ((x Int))\n  (! (= x (%I (I x)))\n     :pattern ((I x))\n     :skolemid skolem_prelude_unbox_box_int\n     :qid prelude_unbox_box_int))"
+  }
+}

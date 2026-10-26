@@ -1,0 +1,96 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-app] #5 x
+[mk-app] #6 Int
+[attach-meaning] #6 arith 0
+[mk-app] #7 >= #5 #6
+[mk-app] #8 <= #5 #6
+[mk-app] #9 bv
+[attach-meaning] #9 bv #b1
+[mk-app] #10 bv
+[attach-meaning] #10 bv #b0
+[attach-meaning] #9 bv #b1
+[attach-meaning] #10 bv #b0
+[attach-meaning] #10 bv #b0
+[mk-var] #11 0
+[mk-var] #12 1
+[mk-var] #13 2
+[mk-var] #14 3
+[mk-var] #15 4
+[mk-var] #16 5
+[mk-var] #17 6
+[mk-var] #18 7
+[mk-var] #19 8
+[mk-var] #20 9
+[mk-var] #21 10
+[mk-var] #22 11
+[mk-var] #23 12
+[mk-var] #24 13
+[mk-var] #25 14
+[mk-app] #26 + #19 #17
+[attach-enode] #1 0
+[attach-enode] #2 0
+[begin-check] 0
+[mk-app] #27 Int
+[attach-meaning] #27 arith 1
+[attach-enode] #27 0
+[mk-app] #28 Real
+[attach-meaning] #28 arith 1
+[attach-enode] #28 0
+[attach-enode] #6 0
+[mk-app] #29 Real
+[attach-meaning] #29 arith 0
+[attach-enode] #29 0
+[attach-enode] #5 0
+[mk-proof] #30 assumption
+[assign] #7 justification -1: 
+[assign] #8 justification -1: 
+[mk-proof] #31 smt
+[mk-app] #32 = #5 #6
+[inst-discovered] theory-solving 0000000000000000 arith#
+[instance] 0000000000000000 #32
+[end-of-instance]
+[mk-app] #3 string
+[mk-app] #4 string
+[mk-app] #3 string
+[mk-app] #4 string
+[mk-app] #5 string
+[mk-app] #6 string
+[mk-app] #7 cr
+[mk-app] #8 compose #7 #4
+[mk-app] #9 string
+[mk-app] #10 compose #9 #3 #8 #6
+[mk-app] #11 indent #10
+[mk-app] #12 string
+[mk-app] #13 compose #12 #5
+[mk-app] #14 indent #13
+[mk-app] #15 compose #14 #11
+[mk-app] #16 compose #9 #4
+[mk-app] #17 compose #9 #3 #16 #6
+[mk-app] #18 indent #17
+[mk-app] #19 compose #14 #18
+[mk-app] #20 choice #19 #15
+[mk-app] #12 string
+[mk-app] #5 string
+[mk-app] #13 string
+[mk-app] #14 string
+[mk-app] #3 cr
+[mk-app] #9 compose #3 #5
+[mk-app] #4 string
+[mk-app] #16 compose #4 #12 #9 #14
+[mk-app] #6 indent #16
+[mk-app] #17 string
+[mk-app] #18 compose #17 #13
+[mk-app] #19 indent #18
+[mk-app] #7 compose #19 #6
+[mk-app] #8 compose #4 #5
+[mk-app] #10 compose #4 #12 #8 #14
+[mk-app] #11 indent #10
+[mk-app] #15 compose #19 #11
+[mk-app] #20 choice #15 #7
+[eof]

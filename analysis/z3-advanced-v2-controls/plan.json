@@ -1,0 +1,79 @@
+{
+  "cases": [
+    {
+      "id": "sat_ground",
+      "kind": "control",
+      "original_result": null,
+      "expected_result": "sat",
+      "context": {},
+      "query_sha256": "677d49aa9a009b0f11f1138e0c56f64594e14012cedd291202cfc1c571aa5e47"
+    },
+    {
+      "id": "unsat_arithmetic",
+      "kind": "control",
+      "original_result": null,
+      "expected_result": "unsat",
+      "context": {},
+      "query_sha256": "04ff536132379978f21f3ca3ec47440db42f0b88a371333cc2c26e09dfcbb6a3"
+    },
+    {
+      "id": "unsat_quantified",
+      "kind": "control",
+      "original_result": null,
+      "expected_result": "unsat",
+      "context": {},
+      "query_sha256": "bc25d7b83c12c09fa47f16c4f6dcb801252d5bceaa245a0a1ac53eff40fd6f37"
+    },
+    {
+      "id": "quantifier_without_ground_trigger",
+      "kind": "control",
+      "original_result": null,
+      "expected_result": null,
+      "context": {},
+      "query_sha256": "ac696ee26a0273f8ba6c59e935de3e4896cc6519eb3662314dbc3cd167fbf273"
+    },
+    {
+      "id": "matching_equality_chain",
+      "kind": "control",
+      "original_result": null,
+      "expected_result": "unsat",
+      "context": {},
+      "query_sha256": "cf1a46c5517ba5f3560d12c6303922107f898b5221e31a4c1417212fbdc1700a"
+    }
+  ],
+  "repetitions": 1,
+  "timeout_ms": 1000,
+  "max_trace_mb": 64,
+  "z3": {
+    "version": "4.12.5",
+    "library_sha256": "9c2218f68bad25d259e852d270663af33026d71dfc87424115b4bdea8fbdfcaf"
+  },
+  "planned_budgets": {
+    "context": 65536,
+    "base": 24576,
+    "previous_complement": 12288,
+    "new_blocks": 14336,
+    "output": 4096,
+    "program_and_other_input": 10240
+  },
+  "tokenizer": ".cluster\\audit-python\\qwen-coder-tokenizer.json",
+  "modes": [
+    "baseline",
+    "callback",
+    "trace",
+    "combined"
+  ],
+  "measure_all_tokens": false,
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "implementation": {
+    "diagnostics/z3_advanced_pilot.py": "5c3335f5ccc22a34b295bae523254b29455c0e8ac6e7c7c1124afc3a328d739d",
+    "diagnostics/z3_trace_evidence.py": "374fbe2730d043049901f10676741b4fa28a6ce5b20a65f420fdf9f63f3a1e41",
+    "diagnostics/z3_clause_capture.py": "e45fda440a778a55eba1cba101f29688f1708b01111eb525975029fff23187ce",
+    "diagnostics/z3_feedback_pilot.py": "479d6a2506253ac33c4e44e113003ea7824a384c13de34acd75a08d7d37b5217",
+    "diagnostics/z3_probe.py": "d5b7310899b5d54096102a68218ef9e41fb92586244d7ab90eb12c4f855b54af",
+    "diagnostics/z3_internals.py": "c4de3e3d30ab30287032f3191b80453c5115cc301c5c0b5ecd54e4ae1085525c",
+    "repair_study/relevance.py": "8787ebd58b91ec43f45f5b5b63369482a675fd9a039b3622e1640b5eb8a8ee94",
+    "baseline/verifier.py": "cc7e2e47b78033d95f2be0b8f04950504a77ef4322a3c4933781e48d5408b58d",
+    "baseline/storage.py": "ed86b304208a7cb5e15e63552480af50ca160268b993bf9023124c5a08aafab0"
+  }
+}

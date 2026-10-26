@@ -1,0 +1,102 @@
+{
+  "status": "parsed",
+  "capture_end_bytes": null,
+  "counts": {
+    "[tool-version]": 1,
+    "[mk-app]": 29,
+    "repeated_identical_definitions": 2,
+    "[mk-var]": 16,
+    "[attach-meaning]": 11,
+    "[mk-quant]": 1,
+    "[attach-var-names]": 1,
+    "[attach-enode]": 9,
+    "[inst-discovered]": 2,
+    "[instance]": 3,
+    "instances_without_saved_match": 2,
+    "[end-of-instance]": 3,
+    "redefined_ids": 6,
+    "[begin-check]": 1,
+    "[mk-proof]": 4,
+    "[assign]": 2,
+    "[eq-expl]": 1,
+    "[new-match]": 1,
+    "native_end_marker_found": 1,
+    "matches_saved": 1,
+    "dependency_edges": 0,
+    "chains_saved": 0,
+    "matched_input_qid": 1,
+    "ambiguous_input_qid": 0,
+    "unmatched_input_qid": 0,
+    "equality_pairs": 0,
+    "equality_pairs_resolved": 0,
+    "binding_root_paths_resolved": 1,
+    "bindings_with_non_root_steps": 0,
+    "triggers_resolved": 1,
+    "matches_with_top_level_terms": 1,
+    "unresolved_match_terms": 0
+  },
+  "matches": [
+    {
+      "id": "m1",
+      "line": 78,
+      "raw": "[new-match] 000001C6229CE610 #10 #9 #7 ; #11",
+      "fingerprint": "000001C6229CE610",
+      "qid": "control_nonnegative",
+      "quantifier_trace_id": "#10",
+      "inventory_match": "unique_qid",
+      "input_formula": "(forall ((x Int)) (! (>= (f x) 0) :pattern ((f x)) :qid control_nonnegative))",
+      "input_formula_sha256": "00a47ec809905b68cddcb2c654d4f0d694d54166f7b9d9f8f184ae5815e190ed",
+      "formula_scope": "input formula associated by qid; search formula may be transformed",
+      "trigger": {
+        "trace_id": "#9",
+        "definition_version": 1,
+        "term": "(pattern (f (:var 0)))",
+        "resolved": true
+      },
+      "bindings": [
+        {
+          "bound_term": {
+            "trace_id": "#7",
+            "definition_version": 1,
+            "term": "0",
+            "resolved": true
+          },
+          "path_to_root": {
+            "steps": [
+              {
+                "source": {
+                  "trace_id": "#7",
+                  "definition_version": 1,
+                  "term": "0",
+                  "resolved": true
+                },
+                "definition_version": 1,
+                "rule": "root",
+                "target": null,
+                "target_term": null,
+                "raw": "[eq-expl] #7 root",
+                "line": 77,
+                "supporting_terms": []
+              }
+            ],
+            "complete": true,
+            "root": "#7"
+          }
+        }
+      ],
+      "top_level_matched_terms": [
+        {
+          "trace_id": "#11",
+          "definition_version": 1,
+          "term": "(f 0)",
+          "resolved": true
+        }
+      ],
+      "equalities_used": [],
+      "instance_count": 1
+    }
+  ],
+  "dependencies": [],
+  "chains": [],
+  "semantics": "Only trace-supported associations. Not a complete causal proof graph or active term database."
+}

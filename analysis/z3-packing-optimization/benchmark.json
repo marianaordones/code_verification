@@ -1,0 +1,81 @@
+{
+  "scope": "same one-second local Verus query evidence; selection differs; not cluster timing",
+  "results": {
+    "previous": {
+      "runs": [
+        {
+          "seconds": 13.200212499999907,
+          "encoder_calls": 180,
+          "encoded_characters": 5193130,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 24
+          },
+          "tokens": 14109
+        },
+        {
+          "seconds": 12.803514900006121,
+          "encoder_calls": 180,
+          "encoded_characters": 5193130,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 24
+          },
+          "tokens": 14109
+        },
+        {
+          "seconds": 15.948931299994001,
+          "encoder_calls": 180,
+          "encoded_characters": 5193130,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 24
+          },
+          "tokens": 14109
+        }
+      ],
+      "median_seconds": 13.200212499999907
+    },
+    "optimized": {
+      "runs": [
+        {
+          "seconds": 0.5171420999977272,
+          "encoder_calls": 181,
+          "encoded_characters": 212463,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 15
+          },
+          "tokens": 12382
+        },
+        {
+          "seconds": 0.49152219999814406,
+          "encoder_calls": 181,
+          "encoded_characters": 212463,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 15
+          },
+          "tokens": 12382
+        },
+        {
+          "seconds": 0.642816200008383,
+          "encoder_calls": 181,
+          "encoded_characters": 212463,
+          "selected": {
+            "matching": 12,
+            "chains": 4,
+            "non_inst_clauses": 15
+          },
+          "tokens": 12382
+        }
+      ],
+      "median_seconds": 0.5171420999977272
+    }
+  }
+}

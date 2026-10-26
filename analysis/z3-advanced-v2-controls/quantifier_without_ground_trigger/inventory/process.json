@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\mario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-m",
+    "diagnostics.z3_advanced_pilot",
+    "inventory",
+    "--query",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-advanced-v2-controls\\quantifier_without_ground_trigger\\query.smt2",
+    "--output",
+    "C:\\Users\\mario\\OneDrive - csr.ufmg.br\\Documents\\GitHub\\code_verification\\analysis\\z3-advanced-v2-controls\\quantifier_without_ground_trigger\\inventory"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 1.5664115999970818
+}

@@ -1,0 +1,86 @@
+[tool-version] Z3 4.12.5
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] #5 0
+[mk-app] #6 f #5
+[mk-app] #7 Int
+[attach-meaning] #7 arith 0
+[mk-app] #8 >= #6 #7
+[mk-app] #9 pattern #6
+[mk-quant] #10 control_nonnegative 1 #9 #8
+[attach-var-names] #10 (|x| ; |Int|)
+[mk-app] #11 f #7
+[mk-app] #12 < #11 #7
+[mk-app] #13 bv
+[attach-meaning] #13 bv #b1
+[mk-app] #14 bv
+[attach-meaning] #14 bv #b0
+[attach-meaning] #13 bv #b1
+[attach-meaning] #14 bv #b0
+[attach-meaning] #14 bv #b0
+[mk-var] #15 0
+[mk-var] #16 1
+[mk-var] #17 2
+[mk-var] #18 3
+[mk-var] #19 4
+[mk-var] #20 5
+[mk-var] #21 6
+[mk-var] #22 7
+[mk-var] #23 8
+[mk-var] #24 9
+[mk-var] #25 10
+[mk-var] #26 11
+[mk-var] #27 12
+[mk-var] #28 13
+[mk-var] #29 14
+[mk-app] #30 + #23 #21
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #31 <= #7 #11
+[mk-app] #32 not #31
+[inst-discovered] theory-solving 0000000000000000 arith# ; #12
+[mk-app] #33 = #12 #32
+[instance] 0000000000000000 #33
+[attach-enode] #33 0
+[end-of-instance]
+[mk-app] #33 Int
+[attach-meaning] #33 arith (- 1)
+[mk-app] #34 * #33 #11
+[mk-app] #35 >= #11 #7
+[inst-discovered] theory-solving 0000000000000000 arith# ; #31
+[mk-app] #33 = #31 #35
+[instance] 0000000000000000 #33
+[attach-enode] #33 0
+[end-of-instance]
+[mk-app] #33 not #35
+[begin-check] 0
+[mk-app] #34 Int
+[attach-meaning] #34 arith 1
+[attach-enode] #34 0
+[mk-app] #36 Real
+[attach-meaning] #36 arith 1
+[attach-enode] #36 0
+[attach-enode] #7 0
+[mk-app] #37 Real
+[attach-meaning] #37 arith 0
+[attach-enode] #37 0
+[mk-app] #31 Int
+[attach-meaning] #31 arith (- 1)
+[mk-proof] #31 assumption
+[assign] #10 justification -1: 
+[attach-enode] #11 0
+[assign] (not #35) justification -1: 
+[eq-expl] #7 root
+[new-match] 00000281511BB400 #10 #9 #7 ; #11
+[mk-app] #32 not #10
+[mk-app] #38 or #32 #35
+[mk-proof] #39 bind #7
+[mk-proof] #40 gen #7
+[mk-proof] #41 inst #10 #33 #39 #40
+[instance] 00000281511BB400 ; 1
+[end-of-instance]
+[eof]

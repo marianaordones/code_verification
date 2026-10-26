@@ -1,0 +1,100 @@
+{
+  "quantifiers": [
+    {
+      "formula_sha256": "e3286d75fdf8211716da2eb9f66d53f1b58fdc2febf8e8ee82672c12225058c4",
+      "qid": "user_candidate_chain1",
+      "quantifier_smt": "(forall ((x Int))\n  (! (= (g (f x)) x) :pattern ((f x)) :qid user_candidate_chain1))",
+      "formula_omitted": false,
+      "kind": "forall",
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "explicit_patterns_smt": [
+        "((f (:var 0)))"
+      ],
+      "pattern_root_symbols": [
+        "f"
+      ],
+      "weight": 1
+    },
+    {
+      "formula_sha256": "b4e84f12772752ba42a2ac32b1aa217c91f8f6fb9d7c5e1fffb7622fa6ff4c83",
+      "qid": "user_candidate_chain2",
+      "quantifier_smt": "(forall ((x Int)) (! (> (g x) 0) :pattern ((g x)) :qid user_candidate_chain2))",
+      "formula_omitted": false,
+      "kind": "forall",
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "explicit_patterns_smt": [
+        "((g (:var 0)))"
+      ],
+      "pattern_root_symbols": [
+        "g"
+      ],
+      "weight": 1
+    }
+  ],
+  "matching": [
+    {
+      "formula_sha256": "e3286d75fdf8211716da2eb9f66d53f1b58fdc2febf8e8ee82672c12225058c4",
+      "qid": "user_candidate_chain1",
+      "explicit_patterns_smt": [
+        "((f (:var 0)))"
+      ],
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "terms_by_same_root_symbol": [
+        {
+          "symbol": "f",
+          "ground_terms_in_input_count": 1,
+          "examples_smt": [
+            "(f a)"
+          ]
+        }
+      ],
+      "origin": "loaded input AST, not the active E-matching term database",
+      "matching_diagnosis": "not determined; symbol overlap is not a matching test"
+    },
+    {
+      "formula_sha256": "b4e84f12772752ba42a2ac32b1aa217c91f8f6fb9d7c5e1fffb7622fa6ff4c83",
+      "qid": "user_candidate_chain2",
+      "explicit_patterns_smt": [
+        "((g (:var 0)))"
+      ],
+      "bound_variables": [
+        {
+          "name": "x",
+          "sort": "Int"
+        }
+      ],
+      "terms_by_same_root_symbol": [
+        {
+          "symbol": "g",
+          "ground_terms_in_input_count": 0,
+          "examples_smt": []
+        }
+      ],
+      "origin": "loaded input AST, not the active E-matching term database",
+      "matching_diagnosis": "not determined; symbol overlap is not a matching test"
+    }
+  ],
+  "ast_nodes_visited": 15,
+  "ast_node_limit_hit": false,
+  "quantifiers_found": 2,
+  "quantifiers_not_saved": 0,
+  "oversized_ground_terms_not_saved": 0,
+  "source_query_sha256": "cf1a46c5517ba5f3560d12c6303922107f898b5221e31a4c1417212fbdc1700a",
+  "collection_scope": "separate non-traced input inventory; no check-sat",
+  "collection_seconds": 0.5437161000008928
+}

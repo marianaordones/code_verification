@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
-#SBATCH --time=03:00:00
+#SBATCH --time=01:00:00
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 set -Eeuo pipefail
@@ -20,4 +20,4 @@ python -m unittest discover -s tests -p test_z3_advanced_pilot.py -v
 python -m diagnostics.z3_advanced_pilot run \
     --study "${1:-results/solver-needs-qwen14b-100-internals24k/seed-20261018}" \
     --output "${2:-results/z3-advanced-pilot/job-${SLURM_JOB_ID}}" \
-    --per-category 3 --repetitions 3 --timeout-ms 5000 --max-trace-mb 64
+    --per-category 3 --repetitions 3 --timeout-ms 5000 --max-trace-mb 64 "${@:3}"
