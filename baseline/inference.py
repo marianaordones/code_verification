@@ -65,7 +65,8 @@ class LocalVLLM:
                           if key in config}
         self.engine = LLM(model=local_model, tokenizer=local_model,
                           dtype="bfloat16", tensor_parallel_size=1, seed=20261018,
-                          max_model_len=config.get("max_model_len", 32768), gpu_memory_utilization=0.90,
+                          max_model_len=config.get("max_model_len", 32768),
+                          gpu_memory_utilization=config.get("gpu_memory_utilization", 0.90),
                           max_num_seqs=config.get("max_num_seqs", 256),
                           generation_config="vllm", enforce_eager=True, **engine_options)
         self.tokenizer = self.engine.get_tokenizer()

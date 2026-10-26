@@ -1,0 +1,59 @@
+
+ADDITIONAL SEARCH EVENTS — OPTIONAL ADVANCED BLOCK
+Both experimental arms receive the same instructions, base statistics/instantiations,
+and input-quantifier complement. Only one arm may also receive advanced_internals.
+There are three TOTAL proposals. Return the same four-field proof-slot JSON action;
+these diagnostics do not grant permission to change implementation or contracts.
+
+The advanced block is collected by separate bounded, instrumented Z3 diagnostic
+replays of the saved failing queries. It is not the original Verus search and need
+not be the same search as solver_internals. queries records outcomes, limits and
+availability. Never silently combine events from different queries or replays.
+
+matching contains recorded E-matching events. trigger is the matched pattern;
+top_level_matched_terms are the concrete terms named in the match; bindings records
+terms in trace order and their paths to equality-class roots. Do not guess a
+multi-variable source-variable mapping from this order. Variables such as (:var 0)
+are bound SMT variables. These are actual match records, unlike the input term
+examples in complementary_internals. instance_count=0 means a match was recorded
+without a corresponding observed instance; it is not proof of a discarded formula.
+
+formula_ref points to formulas in this block; a unique qid associates an INPUT
+formula with the event, but preprocessing may have transformed the search formula.
+An entry in formulas can instead reference an exactly identical formula in
+solver_internals (query_id and zero-based group_index) or complementary_internals
+(zero-based item_index). Those references are checked by full formula hash, not
+by qid similarity. The shared packages are not removed or modified for this.
+ambiguous_qid is not an established formula association. query_id scopes every
+trace ID: #25 in one query is unrelated to #25 in another. IDs/checksums are labels,
+not program facts or source locations. resolved=false is explicitly partial data.
+
+equalities_used contains equality pairs explicitly named by a match. Binding
+path_to_root may additionally show equality rewrites. In steps_raw, lit cites a
+literal, cg denotes congruence, th denotes a theory justification, and root marks
+an equivalence-class root. Complete paths in the audit do not amount to an
+independent checked proof; supports are not recursively verified. steps_omitted
+and equality_pairs_omitted mark truncation. Never treat a partial path as complete.
+Use a relevant equality as a hypothesis for a justified intermediate assertion or
+ghost term, and verify that hypothesis from the program's available facts.
+
+chains references matching events or referenced_matches. An edge means a term
+was attached to the E-graph during an earlier instance and explicitly named in a
+later match. causal_creation_proven=false: this does not prove first creation,
+necessity, or a complete causal dependency. A short chain may suggest a missing
+intermediate proof step, not a lemma to assume without justification.
+
+non_inst_clauses are callback inferences other than quantifier instantiations.
+clause_literals_smt is one DISJUNCTION. For example ["(not P)", "Q"] means
+P implies Q, not that P and Q were separately established. A generic smt hint is
+not a detailed theory derivation; euf/farkas/bound/implied-eq are retained only if
+actually observed. Dependencies and branch validity may be incomplete, and these
+clauses are not automatically unconditional lemmas or useful learned conflicts.
+Prefer clauses relating the failed goal's operations; encoding housekeeping alone
+does not justify nonlinear mode, additional fuel, or a collection law.
+
+Try to identify one concrete missing bridge supported by the program: an equality,
+an argument term exposing a useful quantifier instance, an intermediate assertion,
+or justified unfolding. These events are evidence for repair hypotheses, not new
+axioms. No block, no event, or an omitted event does not establish absence from
+the full search. Verus remains the final judge of the proposed repair.

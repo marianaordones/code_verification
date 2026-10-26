@@ -206,10 +206,15 @@ def select_cases(study, per_category=3, controls_only=False, problem_ids=FIVE_PR
     return cases, skipped
 
 
-def package(evidence, clauses, context, encode):
+def package(evidence, clauses, context, encode, *, token_budget=None, metadata=None):
     """Cache bounded candidate costs; tokenize the assembled package only at the end."""
     payload = {'scope': 'diagnostic replay, not original Verus search', 'matching': [],
                'chains': [], 'non_inst_clauses': [], 'referenced_matches': {}, 'formulas': {}}
+    token_budget = BUDGETS['new_blocks'] if token_budget is None else token_budget
+    if metadata:
+        if set(metadata) & set(payload):
+            raise ValueError('Metadata cannot replace feedback sections')
+        payload.update(metadata)
     limits = {'matching': (12, 7168), 'chains': (6, 4096), 'non_inst_clauses': (24, 3072)}
     matches = {m['id']: m for m in evidence['matches']}
     relevance_cache = {}
@@ -224,6 +229,7 @@ def package(evidence, clauses, context, encode):
                 'reason': p.get('reason'), 'steps_raw': [s['raw'] for s in p['steps'][:3]],
                 'steps_omitted': max(0, len(p['steps']) - 3)}
         return {'id': m['id'], 'qid': m['qid'], 'inventory_match': m['inventory_match'],
+            **({'query_id': m['query_id']} if m.get('query_id') is not None else {}),
             'formula_ref': m['input_formula_sha256'], 'trigger': m['trigger'],
             'bindings': [{'bound_term': b['bound_term'], 'path_to_root': path(b['path_to_root'])} for b in m['bindings']],
             'top_level_matched_terms': m['top_level_matched_terms'], 'instance_count': m['instance_count'],
@@ -233,12 +239,12 @@ def package(evidence, clauses, context, encode):
             'equality_pairs_omitted': max(0, len(m['equalities_used']) - 3)}
     scores = {key: relevance(m) for key, m in matches.items()}
     pools = {'matching': sorted(matches.values(), key=lambda m: (scores[m['id']],
-        m.get('inventory_match') != 'unique_qid', not m.get('instance_count'), m['line'])),
+        m.get('inventory_match') != 'unique_qid', not m.get('instance_count'), m.get('selection_order', m['line']))),
         'chains': sorted(evidence['chains'], key=lambda c: (min(scores[i] for i in c['events']), len(c['events']))),
         'non_inst_clauses': []}
     duplicate_clauses, clause_keys = 0, set()
     for clause in clauses:
-        key = (clause.get('rule'), clause.get('hint_smt'), tuple(clause.get('dependencies', [])),
+        key = (clause.get('query_id'), clause.get('rule'), clause.get('hint_smt'), tuple(clause.get('dependencies', [])),
                tuple(sorted(set(clause.get('clause_literals_smt', [])))))
         if key in clause_keys:
             duplicate_clauses += 1
@@ -275,6 +281,9 @@ def package(evidence, clauses, context, encode):
     selected = {name: [] for name in pools}
     referenced, formulas, history, spent = set(), set(), [], Counter()
     estimated_tokens = measured(payload)
+    if estimated_tokens > token_budget:
+        return None, {'status': 'insufficient_token_budget', 'available': available,
+                      'minimum_tokens': estimated_tokens, 'token_budget': token_budget}
     reserve = 256
 
     def added_cost(name, index):
@@ -291,7 +300,7 @@ def package(evidence, clauses, context, encode):
                 delta += cached(('match', key), event(key)) + 16
                 formula = matches[key].get('input_formula_sha256')
                 if formula and formula not in formulas and formula not in new_formulas:
-                    delta += cached(('formula', formula), {formula: matches[key]['input_formula']})
+                    delta += cached(('formula', formula), {formula: matches[key].get('shared_formula_reference') or matches[key]['input_formula']})
                     new_formulas.add(formula)
         return delta, ids, new_formulas
 
@@ -300,7 +309,7 @@ def package(evidence, clauses, context, encode):
         if index in selected[name] or len(selected[name]) >= limits[name][0]:
             return False
         delta, ids, new_formulas = added_cost(name, index)
-        if estimated_tokens + delta > BUDGETS['new_blocks'] - reserve or (
+        if estimated_tokens + delta > token_budget - reserve or (
                 not borrow and spent[name] + delta > limits[name][1]):
             return False
         selected[name].append(index)
@@ -336,7 +345,7 @@ def package(evidence, clauses, context, encode):
         for key in sorted(wanted):
             match = matches[key]
             if match.get('input_formula_sha256'):
-                value['formulas'][match['input_formula_sha256']] = match['input_formula']
+                value['formulas'][match['input_formula_sha256']] = match.get('shared_formula_reference') or match['input_formula']
         return value
 
     # Additive BPE costs are estimates only. Exact full JSON measurement is the
@@ -345,7 +354,7 @@ def package(evidence, clauses, context, encode):
         payload = assemble()
         actual_tokens = measured(payload)
         exact_checks += 1
-        if actual_tokens <= BUDGETS['new_blocks']:
+        if actual_tokens <= token_budget:
             break
         removable = next(((name, i) for name, i in reversed(history)
             if i in selected[name] and len(selected[name]) > 1), None)
@@ -359,7 +368,8 @@ def package(evidence, clauses, context, encode):
         'candidate_caps': caps, 'duplicate_clauses_removed': duplicate_clauses,
         'selected': {name: len(selected[name]) for name in pools},
         'omitted': {name: available[name] - len(selected[name]) for name in pools},
-        'actual_tokens': actual_tokens, 'estimated_tokens_before_final_check': estimated_tokens,
+        'actual_tokens': actual_tokens, 'token_budget': token_budget,
+        'estimated_tokens_before_final_check': estimated_tokens,
         'encoder_calls': encoder_calls, 'encoded_characters': encoded_characters,
         'exact_package_checks': exact_checks, 'selection_policy': 'cached item costs; bounded ranked candidates; final exact token check'}
 

@@ -13,13 +13,15 @@ from .data import upstream
 ARMS = ('with_internals', 'without_internals')
 
 
-def messages(code, verification, action, context, payload, history, config=None, complement=None):
+def messages(code, verification, action, context, payload, history, config=None, complement=None, advanced=None):
     _, laws = upstream()
     system = (config or {}).get('system_prompt_text')
     if system is None:
         system = (ROOT / 'prompts/solver-needs/system.txt').read_text(encoding='utf-8')
     if (config or {}).get('complement_token_budget'):
         system += '\n' + (ROOT / 'prompts/solver-needs/complement.txt').read_text(encoding='utf-8')
+    if (config or {}).get('advanced_token_budget'):
+        system += '\n' + (ROOT / 'prompts/solver-needs/advanced.txt').read_text(encoding='utf-8')
     # Same complete catalogue for every task and every arm; no successful probe IDs.
     catalogue = '\n'.join(f'LAW {name}\n{body.strip()}' for name, body in laws.LAWS.items())
     user = ('Repair the proof hint at REPAIR_SLOT_BEGIN/END.\n'
@@ -33,11 +35,13 @@ def messages(code, verification, action, context, payload, history, config=None,
         user += '<solver_internals>\n' + json.dumps(payload, ensure_ascii=False, indent=2) + '\n</solver_internals>\n'
     if complement:
         user += '<complementary_internals>\n' + json.dumps(complement, ensure_ascii=False, indent=2) + '\n</complementary_internals>\n'
+    if advanced:
+        user += '<advanced_internals>\n' + json.dumps(advanced, ensure_ascii=False, indent=2) + '\n</advanced_internals>\n'
     user += 'Return only the four-field JSON action. Supply a complete replacement for the current slot/settings.'
     return [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]
 
 
-def fits(code, verification, action, context, payload, history, tokenizer, config, complement=None):
+def fits(code, verification, action, context, payload, history, tokenizer, config, complement=None, advanced=None):
     if payload:
         block = json.dumps(payload, ensure_ascii=False, indent=2)
         if len(tokenizer.encode(block, add_special_tokens=False)) > config['internals_token_budget']:
@@ -45,7 +49,11 @@ def fits(code, verification, action, context, payload, history, tokenizer, confi
     if complement and len(tokenizer.encode(json.dumps(complement, ensure_ascii=False, indent=2),
             add_special_tokens=False)) > config['complement_token_budget']:
         return False
-    prompt = messages(code, verification, action, context, payload, history, config=config, complement=complement)
+    if advanced and len(tokenizer.encode(json.dumps(advanced, ensure_ascii=False, indent=2),
+            add_special_tokens=False)) > config['advanced_token_budget']:
+        return False
+    prompt = messages(code, verification, action, context, payload, history, config=config,
+                      complement=complement, advanced=advanced)
     return len(tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True)) + config['max_tokens'] <= config['max_model_len']
 
 

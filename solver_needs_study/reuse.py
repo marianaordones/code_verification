@@ -35,7 +35,8 @@ def inspect_source(source, destination, config):
                        'reuse_initial_events_required', 'system_prompt_text',
                        'max_quantifiers', 'max_instances_each', 'replay_max_instances',
                        'shared_initial_events_required', 'max_model_len', 'complement_token_budget',
-                       'max_unobserved_quantifiers', 'collect_inventory'}
+                       'max_unobserved_quantifiers', 'collect_inventory', 'advanced_token_budget',
+                       'advanced_timeout_ms', 'advanced_trace_max_mb', 'gpu_memory_utilization'}
     if previous.get('internals_token_budget') != 24576:
         raise ValueError('Reuse must start from the 24k study')
     if {k: v for k, v in config.items() if k not in allowed_changes} != {
@@ -86,7 +87,7 @@ def prepare_case(source, destination, key, manifest, config, tokenizer, shared_p
     requests = [read_json(source / arm / key / 'attempt_01/request.json')
                 for arm in ('with_internals', 'without_internals')]
     common = messages(code, verification, EMPTY, saved['context'], None, [],
-                      config={k: v for k, v in config.items() if k != 'complement_token_budget'})
+                      config={k: v for k, v in config.items() if k not in ('complement_token_budget', 'advanced_token_budget')})
     common_hash = digest(json.dumps(common, sort_keys=True).encode())
     for request in requests:
         if common_messages(request) != common or request['common_messages_sha256'] != common_hash:
