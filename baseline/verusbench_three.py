@@ -25,7 +25,7 @@ CONFIG = ROOT / 'configs/verusbench-qwen14b-three-arms.json'
 def messages(code, feedback=None, version='v4', original=None):
     result = build_messages(code, feedback, 'v4', original=original)
     result[0]['content'] += '\n' + (ROOT / 'prompts/verusbench-three-solver-info.txt').read_text(encoding='utf-8')
-    result[0]['content'] += '\n' + (ROOT / 'prompts/solver-needs/complement.txt').read_text(encoding='utf-8')
+    result[0]['content'] += '\n' + (ROOT / 'prompts/verusbench-three-complement.txt').read_text(encoding='utf-8')
     return result
 
 
@@ -82,8 +82,8 @@ class Provider(ConventionalFeedbackProvider):
 def run_arm(task, arm, config, root, inference, verifier, integrity):
     shared = root / 'shared' / task['id']
     target = root / arm / task['id'] / 'attempt_00'
-    if not (target / 'result.json').exists():
-        shutil.copytree(shared / 'attempt_00', target, dirs_exist_ok=True)
+    # Re-copy every frozen artifact after an interrupted copy; no generation or verification here.
+    shutil.copytree(shared / 'attempt_00', target, dirs_exist_ok=True)
     return run_task(task, config, root / arm, inference, verifier, integrity, Provider(arm, shared))
 
 
@@ -156,7 +156,7 @@ def run(root, config_path):
     os.environ['VERUS_Z3_PATH'] = provenance['z3']['path']
     frozen_config = {**config, **{n: 'sha256:' + provenance[n]['sha256'] for n in ('verus', 'z3', 'lynette')}}
     sources = file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'), *(ROOT / 'diagnostics').glob('*.py'),
-        ROOT / 'prompts/verusbench-three-solver-info.txt', ROOT / 'repair_study/worker.py', ROOT / 'repair_study/relevance.py', ROOT / 'prompts/solver-needs/complement.txt', config_path])
+        ROOT / 'prompts/verusbench-three-solver-info.txt', ROOT / 'repair_study/worker.py', ROOT / 'repair_study/relevance.py', ROOT / 'prompts/verusbench-three-complement.txt', config_path])
     stable = {'config': frozen_config, 'tasks': [{k: v for k, v in t.items() if k != 'file'} for t in tasks],
         'tools': {n: tool_signature(provenance[n]) for n in ('verus', 'z3', 'lynette')},
         'sources': sources, 'provenance_sources': provenance['sources'], 'prompts': file_hashes((ROOT / 'prompts/v4').glob('*.txt')),
@@ -167,7 +167,12 @@ def run(root, config_path):
             raise ValueError('Code/config/tools/inputs changed; use a new output directory')
         write_json(root / 'run.json', {**stable, 'fingerprint': fingerprint, 'provenance': provenance})
         write_json(root / 'selected_ids.json', {'ids': [t['id'] for t in tasks]})
-        inference = LocalVLLM(config)
+        try:
+            inference = LocalVLLM(config)
+        except Exception as error:
+            write_json(root / 'initialization-error.json', {'error': str(error), 'policy': 'fixed64k; no automatic fallback'})
+            raise
+        inference.tokenizer.model_max_length = config['max_model_len']
         verifier = ObligationVerifier(provenance['verus']['path'], provenance['z3']['path'], config['verification_timeout'])
         integrity = IntegrityValidator(provenance['lynette']['path'])
         started = time.perf_counter()
