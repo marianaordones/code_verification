@@ -148,7 +148,7 @@ def pack_for_prompt(evidence, clauses, queries, code, verification, action, hist
             return None, {'status': 'insufficient_remaining_context', 'remaining_input_tokens': available}
         payload, selection = package(evidence, clauses, context,
             lambda text: len(tokenizer.encode(text, add_special_tokens=False)),
-            token_budget=target, metadata=metadata)
+            token_budget=target, metadata=metadata, block=config.get("advanced_block"))
         selection['remaining_input_tokens_before_advanced'] = available
         if payload is None:
             return None, selection
@@ -169,7 +169,9 @@ def pack_for_prompt(evidence, clauses, queries, code, verification, action, hist
 
 
 def attach(folder, code, verification, action, history, tokenizer, config, feedback):
-    if 'advanced' in feedback:
+    if 'advanced' in feedback and not config.get('advanced_blocks'):
+        return feedback
+    if config.get('advanced_blocks') and 'advanced_variants' in feedback:
         return feedback
     started = time.perf_counter()
     records = []
@@ -179,6 +181,16 @@ def attach(folder, code, verification, action, history, tokenizer, config, feedb
         if query['id'] in base_ids and len(records) < config['max_queries']:
             records.append(capture_query(folder, query, config))
     evidence, clauses, queries = merge_queries(records)
+    if config.get('advanced_blocks'):
+        variants = {}
+        for block in config['advanced_blocks']:
+            payload, selection = pack_for_prompt(evidence, clauses, queries, code, verification, action,
+                history, feedback, tokenizer, {**config, 'advanced_block': block})
+            variants[block] = {'payload': payload, 'selection': selection}
+        result = {**feedback, 'advanced_variants': variants, 'advanced_queries': queries,
+                  'advanced_processing_seconds': time.perf_counter() - started}
+        write_json(folder / 'feedback.json', result)
+        return result
     payload, selection = pack_for_prompt(evidence, clauses, queries, code, verification, action,
         history, feedback, tokenizer, config)
     result = {**feedback, 'advanced': payload, 'advanced_selection': selection,

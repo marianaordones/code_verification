@@ -7,7 +7,7 @@ from .prompts import build_messages
 from .storage import digest, read_json, write_json, write_text
 
 
-def run_task(task, config, output, inference, verifier, integrity, feedback=None):
+def run_task(task, config, output, inference, verifier, integrity, feedback=None, max_proposals=None):
     feedback = feedback or ConventionalFeedbackProvider()
     root = Path(output) / task["id"]
     original = Path(task["file"])
@@ -16,7 +16,8 @@ def run_task(task, config, output, inference, verifier, integrity, feedback=None
     latest = None
     attempts = []
     started = time.perf_counter()
-    for index in range(config["max_repairs"] + 1):
+    limit = config["max_repairs"] + 1 if max_proposals is None else max_proposals
+    for index in range(limit):
         folder = root / f"attempt_{index:02}"
         folder.mkdir(parents=True, exist_ok=True)
         record_path = folder / "result.json"
@@ -24,11 +25,13 @@ def run_task(task, config, output, inference, verifier, integrity, feedback=None
             record = read_json(record_path)
         else:
             attempt_started = time.perf_counter()
-            messages = build_messages(current, latest, config.get("prompt_version", "v1"),
+            messages = getattr(feedback, "build_messages", build_messages)(current, latest, config.get("prompt_version", "v1"),
                                       original=original_code)
             request = {"messages": messages, "parameters": config,
                        "seed": config["seed"] + index,
                        "input_sha256": digest(original.read_bytes())}
+            if hasattr(feedback, "validate_prompt"):
+                request.update(feedback.validate_prompt(messages, inference, config))
             request_path = folder / "request.json"
             if request_path.exists() and read_json(request_path) != request:
                 raise ValueError("Saved request differs; use a new run directory")
@@ -79,12 +82,14 @@ def run_task(task, config, output, inference, verifier, integrity, feedback=None
                        + ("Valid: original program preserved." if check["valid"] else
                           "Rejected: " + check["reason"])
                        + "\n</integrity_diagnostics>")
-        if config.get("solver_feedback") == "obligation" and index < config["max_repairs"]:
+        if hasattr(feedback, "enrich") and index < limit - 1:
+            latest = feedback.enrich(folder, current, latest, original_code, inference, config)
+        if not hasattr(feedback, "enrich") and config.get("solver_feedback") == "obligation" and index < config["max_repairs"]:
             from .obligation import solver_feedback
             saved_feedback = folder / "solver/feedback.txt"
             latest = (saved_feedback.read_text(encoding="utf-8") if saved_feedback.exists() else
                       solver_feedback(folder, current, latest, original_code, inference, config))
-        if config.get("solver_feedback") == "internals" and index < config["max_repairs"]:
+        if not hasattr(feedback, "enrich") and config.get("solver_feedback") == "internals" and index < config["max_repairs"]:
             from .internals import internal_feedback
             saved_feedback = folder / "internals/feedback.txt"
             latest = (saved_feedback.read_text(encoding="utf-8") if saved_feedback.exists() else

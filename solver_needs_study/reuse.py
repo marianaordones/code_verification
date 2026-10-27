@@ -36,7 +36,7 @@ def inspect_source(source, destination, config):
                        'max_quantifiers', 'max_instances_each', 'replay_max_instances',
                        'shared_initial_events_required', 'max_model_len', 'complement_token_budget',
                        'max_unobserved_quantifiers', 'collect_inventory', 'advanced_token_budget',
-                       'advanced_timeout_ms', 'advanced_trace_max_mb', 'gpu_memory_utilization'}
+                       'advanced_timeout_ms', 'advanced_trace_max_mb', 'gpu_memory_utilization', 'advanced_blocks'}
     if previous.get('internals_token_budget') != 24576:
         raise ValueError('Reuse must start from the 24k study')
     if {k: v for k, v in config.items() if k not in allowed_changes} != {

@@ -206,7 +206,7 @@ def select_cases(study, per_category=3, controls_only=False, problem_ids=FIVE_PR
     return cases, skipped
 
 
-def package(evidence, clauses, context, encode, *, token_budget=None, metadata=None):
+def package(evidence, clauses, context, encode, *, token_budget=None, metadata=None, block=None):
     """Cache bounded candidate costs; tokenize the assembled package only at the end."""
     payload = {'scope': 'diagnostic replay, not original Verus search', 'matching': [],
                'chains': [], 'non_inst_clauses': [], 'referenced_matches': {}, 'formulas': {}}
@@ -216,6 +216,11 @@ def package(evidence, clauses, context, encode, *, token_budget=None, metadata=N
             raise ValueError('Metadata cannot replace feedback sections')
         payload.update(metadata)
     limits = {'matching': (12, 7168), 'chains': (6, 4096), 'non_inst_clauses': (24, 3072)}
+    if block is not None:
+        if block not in limits:
+            raise ValueError('Unknown advanced block: ' + block)
+        counts = {'matching': 48, 'chains': 24, 'non_inst_clauses': 96}
+        limits = {name: (counts[name] if name == block else 0, token_budget if name == block else 0) for name in limits}
     matches = {m['id']: m for m in evidence['matches']}
     relevance_cache = {}
     def relevance(m):
@@ -257,7 +262,9 @@ def package(evidence, clauses, context, encode, *, token_budget=None, metadata=N
     if encode is None:
         return None, {'status': 'tokenizer_unavailable; package not budgeted', 'available': available}
     caps = {'matching': 64, 'chains': 24, 'non_inst_clauses': 64}
-    pools = {k: v[:caps[k]] for k, v in pools.items()}
+    if block is not None:
+        caps = {'matching': 192, 'chains': 96, 'non_inst_clauses': 256}
+    pools = {k: v[:caps[k]] if block is None or k == block else [] for k, v in pools.items()}
     compact_cache, token_cache = {}, {}
     encoder_calls, encoded_characters, exact_checks = 0, 0, 0
 

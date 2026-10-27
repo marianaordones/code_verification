@@ -42,12 +42,18 @@ def configuration(path=DEFAULT_CONFIG):
             config['complement_token_budget'] != (12288 if advanced else 16384) or config['max_unobserved_quantifiers'] != 20 or
             config['max_quantifiers'] != 50 or config['max_instances_each'] != 3 or not config.get('collect_inventory')):
         raise ValueError('Complement experiment requires 24k base, 16k extra, 50x3, 20 unobserved formulas, three proposals')
-    if advanced and (config['advanced_token_budget'] != 14336 or config['advanced_timeout_ms'] != 5000 or
+    if advanced and (config['advanced_token_budget'] != (12288 if config.get('advanced_blocks') else 14336) or config['advanced_timeout_ms'] != 5000 or
                      config['advanced_trace_max_mb'] != 64 or config.get('gpu_memory_utilization') != 0.95 or
                      config.get('complement_token_budget') != 12288 or config['max_attempts'] != 3 or
                      not config.get('reuse_initial_events_required') or not config.get('shared_initial_events_required')):
         raise ValueError('Advanced study requires 14k extra, 5s replay, 64MiB trace cap and 0.95 GPU allocation')
+    if config.get('advanced_blocks') and config['advanced_blocks'] != ['matching', 'chains', 'non_inst_clauses']:
+        raise ValueError('Expected the three fixed advanced-block arms')
     return config
+
+
+def study_arms(config):
+    return tuple(config.get('advanced_blocks') or ARMS)
 
 
 def load_tokenizer(config):
@@ -67,6 +73,7 @@ def load_tokenizer(config):
 def implementation():
     return file_hashes([*(ROOT / 'solver_needs_study').glob('*.py'),
         ROOT / 'prompts/solver-needs/system.txt', ROOT / 'prompts/solver-needs/complement.txt',
+        ROOT / 'configs/solver-needs-qwen14b-blocks12k.json',
         ROOT / 'prompts/solver-needs/advanced.txt', ROOT / 'configs/solver-needs-qwen14b-advanced64k.json',
         ROOT / 'configs/solver-needs-qwen14b-complement16k.json', ROOT / 'configs/solver-needs-qwen14b.json',
         ROOT / 'configs/solver-needs-qwen14b-internals24k.json',
@@ -191,7 +198,7 @@ def prepare(args):
     files['selected_ids.json'] = digest((root / 'selected_ids.json').read_bytes())
     files['selection.json'] = digest((root / 'selection.json').read_bytes())
     if config.get('advanced_token_budget'):
-        advanced_count = sum(bool(read_json(root / 'inputs' / c['id'] / 'feedback.json').get('advanced')) for c in selected)
+        advanced_count = sum(bool(read_json(root / 'inputs' / c['id'] / 'feedback.json').get('advanced') or any(v['payload'] for v in read_json(root / 'inputs' / c['id'] / 'feedback.json').get('advanced_variants', {}).values())) for c in selected)
         if not advanced_count:
             raise ValueError('No advanced feedback available in preparation; inspect saved advanced/*/availability.json')
         write_json(root / 'advanced-preparation.json', {'cases_with_advanced_feedback': advanced_count,
@@ -232,6 +239,8 @@ def run_case(root, arm, case, config, inference, verifier):
         write_json(root / arm / case['id'] / 'task.json', result)
         return result
     feedback = read_json(frozen / 'feedback.json')
+    if config.get('advanced_blocks'):
+        config = {**config, 'advanced_block': arm}
     action, history, records = dict(EMPTY), [], []
     for index in range(1, config['max_attempts'] + 1):
         folder = root / arm / case['id'] / f'attempt_{index:02}'
@@ -243,7 +252,10 @@ def run_case(root, arm, case, config, inference, verifier):
             payload = feedback['internals'] if arm == 'with_internals' or base_comparison else None
             advanced_study = bool(config.get('advanced_token_budget'))
             extra = feedback.get('complement') if base_comparison and (arm == 'with_internals' or advanced_study) else None
-            advanced = feedback.get('advanced') if advanced_study and arm == 'with_internals' else None
+            if config.get('advanced_blocks'):
+                variant = feedback['advanced_variants'][arm]
+                feedback = {**feedback, 'advanced': variant['payload'], 'advanced_selection': variant['selection']}
+            advanced = feedback.get('advanced') if advanced_study and (arm == 'with_internals' or config.get('advanced_blocks')) else None
             prompt = messages(code, verification, action, feedback['context'], payload, history,
                               config=config, complement=extra, advanced=advanced)
             common = messages(code, verification, action, feedback['context'], payload if base_comparison else None,
@@ -259,7 +271,7 @@ def run_case(root, arm, case, config, inference, verifier):
                 request['shared_feedback_sha256'] = digest(json.dumps({'base': payload, 'complement': extra}, sort_keys=True).encode())
                 request['prompt_tokens'] = len(inference.tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True))
                 request['headroom_after_output_reserve'] = config['max_model_len'] - config['max_tokens'] - request['prompt_tokens']
-                request['advanced_feedback_status'] = feedback.get('advanced_selection', {}).get('status', 'unavailable') if arm == 'with_internals' else 'withheld_by_design'
+                request['advanced_feedback_status'] = feedback.get('advanced_selection', {}).get('status', 'unavailable') if arm == 'with_internals' or config.get('advanced_blocks') else 'withheld_by_design'
             if config.get('provider') == 'claude_code':
                 request['seed'] = None
             if (folder / 'request.json').exists() and read_json(folder / 'request.json') != request:
@@ -267,8 +279,8 @@ def run_case(root, arm, case, config, inference, verifier):
             write_json(folder / 'request.json', request)
             write_json(folder / 'exposure.json', {'availability': feedback['availability'] if arm == 'with_internals' or base_comparison else 'withheld_by_design',
                                                'payload': payload, 'complement': extra, 'advanced': advanced,
-                                               'advanced_selection': feedback.get('advanced_selection') if advanced_study and arm == 'with_internals' else None,
-                                               'advanced_queries': feedback.get('advanced_queries') if advanced_study and arm == 'with_internals' else None,
+                                               'advanced_selection': feedback.get('advanced_selection') if advanced_study and (arm == 'with_internals' or config.get('advanced_blocks')) else None,
+                                               'advanced_queries': feedback.get('advanced_queries') if advanced_study and (arm == 'with_internals' or config.get('advanced_blocks')) else None,
                                                'token_counts': {name: len(inference.tokenizer.encode(json.dumps(value,
                                                    ensure_ascii=False, indent=2), add_special_tokens=False)) if value else 0
                                                    for name, value in [('internals', payload), ('complement', extra), ('advanced', advanced)]},
@@ -325,9 +337,11 @@ def run_case(root, arm, case, config, inference, verifier):
                 feedback = read_json(cache)
             else:
                 feedback = internals(folder, code, verification, action, history, inference.tokenizer, config) if arm == 'with_internals' or config.get('complement_token_budget') else control_feedback(code, verification)
-                if config.get('advanced_token_budget') and arm == 'with_internals':
+                if config.get('advanced_token_budget') and (arm == 'with_internals' or config.get('advanced_blocks')):
                     from .advanced import attach
-                    feedback = attach(folder, code, verification, action, history, inference.tokenizer, config, feedback)
+                    feedback = attach(folder, code, verification, action, history, inference.tokenizer, {**config, 'advanced_blocks': None} if config.get('advanced_blocks') else config, feedback)
+                if config.get('advanced_blocks') and 'advanced_variants' not in feedback:
+                    feedback['advanced_variants'] = {arm: {'payload': feedback.get('advanced'), 'selection': feedback.get('advanced_selection', {})}}
                 write_json(cache, feedback)
                 result['feedback_seconds'] = time.perf_counter() - started
                 write_json(folder / 'result.json', result)
@@ -339,6 +353,9 @@ def run_case(root, arm, case, config, inference, verifier):
 
 def compare(root):
     manifest = validate(root)
+    if manifest['config'].get('advanced_blocks'):
+        from .blocks import compare_blocks
+        return compare_blocks(root, manifest)
     rows, summaries = [], {}
     for case in manifest['cases']:
         row = {**case, 'initially_verified': read_json(root / 'inputs' / case['id'] / 'verification.json')['success'],
@@ -439,6 +456,7 @@ def run(args):
     if {k: tool_signature(v) for k, v in identities.items()} != manifest['tool_hashes']:
         raise ValueError('Prepared inputs and run use different tool binaries/API')
     config = manifest['config']
+    arms = study_arms(config)
     if config.get('provider') == 'claude_code':
         from .claude_code import run_local
         return run_local(root, manifest, identities)
@@ -455,12 +473,12 @@ def run(args):
     write_json(root / 'run.json', {'fingerprint': fingerprint, 'config': config, 'versions': versions,
         'python': sys.version, 'platform': platform.platform(), 'gpu': gpu, 'tools': identities,
         'solver_api_scope': 'same Z3 version; separate instrumented diagnostic library; not original search'})
-    pending = [(i, c) for i, c in enumerate(manifest['cases']) if any(not (root / a / c['id'] / 'task.json').exists() for a in ARMS)]
+    pending = [(i, c) for i, c in enumerate(manifest['cases']) if any(not (root / a / c['id'] / 'task.json').exists() for a in arms)]
     for _, case in pending:
         if read_json(root / 'inputs' / case['id'] / 'verification.json')['success']:
-            for arm in ARMS:
+            for arm in arms:
                 run_case(root, arm, case, config, None, None)
-    pending = [(i, c) for i, c in pending if any(not (root / a / c['id'] / 'task.json').exists() for a in ARMS)]
+    pending = [(i, c) for i, c in pending if any(not (root / a / c['id'] / 'task.json').exists() for a in arms)]
     if not pending:
         compare(root)
         return 0
@@ -472,7 +490,7 @@ def run(args):
     verifier = StudyVerifier(identities['verus']['path'], identities['z3']['path'], config['verification_timeout'])
     try:
         for index, case in pending:
-            for arm in (ARMS if index % 2 == 0 else ARMS[::-1]):
+            for arm in (arms[index % len(arms):] + arms[:index % len(arms)]):
                 if (root / arm / case['id'] / 'task.json').exists():
                     continue
                 try:

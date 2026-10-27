@@ -41,7 +41,7 @@ def messages(code, verification, action, context, payload, history, config=None,
     return [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]
 
 
-def fits(code, verification, action, context, payload, history, tokenizer, config, complement=None, advanced=None):
+def fits(code, verification, action, context, payload, history, tokenizer, config, complement=None, advanced=None, message_builder=None):
     if payload:
         block = json.dumps(payload, ensure_ascii=False, indent=2)
         if len(tokenizer.encode(block, add_special_tokens=False)) > config['internals_token_budget']:
@@ -52,12 +52,14 @@ def fits(code, verification, action, context, payload, history, tokenizer, confi
     if advanced and len(tokenizer.encode(json.dumps(advanced, ensure_ascii=False, indent=2),
             add_special_tokens=False)) > config['advanced_token_budget']:
         return False
-    prompt = messages(code, verification, action, context, payload, history, config=config,
+    prompt = (message_builder or messages)(code, verification, action, context, payload, history, config=config,
                       complement=complement, advanced=advanced)
     return len(tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True)) + config['max_tokens'] <= config['max_model_len']
 
 
-def internals(folder, code, verification, action, history, tokenizer, config, replay=True, saved_context=None):
+def internals(folder, code, verification, action, history, tokenizer, config, replay=True, saved_context=None, message_builder=None):
+    def prompt_fits(*args, **kwargs):
+        return fits(*args, **kwargs, message_builder=message_builder)
     destination = folder / 'feedback.json'
     if destination.exists():
         return read_json(destination)
@@ -102,7 +104,7 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
             for line in (output / 'instantiations.jsonl').read_text(encoding='utf-8').splitlines():
                 if line:
                     events.append((query['id'], json.loads(line)))
-    if not fits(code, verification, action, context, payload, history, tokenizer, config):
+    if not prompt_fits(code, verification, action, context, payload, history, tokenizer, config):
         raise ValueError('Base prompt or replay statistics exceed context; no program/diagnostic truncation')
     grouped = {}
     for query_id, event in events:
@@ -130,7 +132,7 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
                 query['quantifiers'].append(item)
             item['instances'].append({k: group['events'][depth][k]
                                      for k in ('binding_terms_callback_order', 'clause_literals_smt')})
-            if fits(code, verification, action, context, trial, history, tokenizer, config):
+            if prompt_fits(code, verification, action, context, trial, history, tokenizer, config):
                 payload = trial
                 if key not in selected:
                     selected.add(key)
@@ -142,7 +144,7 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
     if config.get('complement_token_budget'):
         from .complement import build
         value['complement'] = build(folder, context, value['internals'], tokenizer, config,
-            lambda extra: fits(code, verification, action, context, value['internals'], history,
+            lambda extra: prompt_fits(code, verification, action, context, value['internals'], history,
                                tokenizer, config, complement=extra))
         value['token_counts'] = {name: len(tokenizer.encode(json.dumps(value[name], ensure_ascii=False,
             indent=2), add_special_tokens=False)) if value.get(name) else 0 for name in ('internals', 'complement')}
