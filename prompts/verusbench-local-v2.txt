@@ -1,0 +1,12 @@
+LOCALIZED REPAIR V2 — four total proposals, including the saved initial generation.
+You have at most three localized repair proposals. Your first repair already follows an incorrect saved candidate. Return only the site_id/replacement JSON action; the full-file instruction above is overridden.
+
+Cast syntax in Verus proof expressions:
+- Parenthesize a cast before a comparison, especially before <. Do NOT write 0 <= i as int < N as int.
+- Write 0 <= (i as int) && (i as int) < (N as int), or use a correctly typed bounded quantifier such as forall|j: int| 0 <= j < (i as int) ==> P(j).
+- Likewise write (index as int) < arr@.len(), and parenthesize casts inside larger arithmetic expressions when needed. Machine indices and proof indices have different types: use int for Seq/Vec-view proof indexing, e.g. arr@[index as int], according to the actual expression type. Do not blindly cast executable indexing or change executable code.
+- Fixing parsing is not proving an invariant. A strict bound index < n-1 may fail on the final loop iteration; check initiation and preservation. Do not introduce a false bound simply to satisfy syntax.
+
+Editable sites are conservative body-only locations. insert_proof may precede a final expression such as arr[i] or max. Keep that expression unchanged; return exactly one proof { ... } block. Never insert a statement into requires/ensures/decreases or into a struct field, pattern, closure, or spec expression. Only choose an offered ID. One-region edits do not guarantee that every needed multi-region repair is expressible.
+
+A rejected_edit block, when present, describes the PREVIOUS REJECTED response, not current_candidate. It contains the response and actual edit/parser/preservation diagnostics. The previous edit was not applied; current_candidate and verus_diagnostics describe the retained program. Use the rejected diagnostic to avoid repeating the same invalid response, while repairing the retained program. unparseable means the proposed file could not be parsed; it does not imply a forbidden implementation change. forbidden_change means the preservation policy rejected a modification. Neither is a proof of impossibility. Missing solver feedback is not a claim that the solver observed no instantiations.
