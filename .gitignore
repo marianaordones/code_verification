@@ -11,3 +11,4 @@ cluster.env
 dist/
 .cluster/
 logs/
+/data/safe/

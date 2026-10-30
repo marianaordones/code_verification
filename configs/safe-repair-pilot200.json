@@ -1,0 +1,1410 @@
+{
+  "seed": 20261018,
+  "count": 200,
+  "repair_rows_in_source": 13768,
+  "unique_repair_inputs": 12844,
+  "method": "round-robin diagnostic x input-loop-isolation strata; shuffled unique input programs",
+  "cases": [
+    {
+      "id": "safe-09458",
+      "index": 9458,
+      "input_code_sha256": "85e0cc9f7b4288b1e95f322e289d1295397ce1e0204af7a5c5dfe69fdb7d5c26",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-11598",
+      "index": 11598,
+      "input_code_sha256": "12206e2aa0e5c1f1b599487ea5fb47ed0a92114ea11be8b4652572a9cb121a72",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07059",
+      "index": 7059,
+      "input_code_sha256": "8a39c75c6716831bd6d3292874b8f487722948ad5c1807ac764060b01888e845",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01887",
+      "index": 1887,
+      "input_code_sha256": "556f612173ea58221a8e309080d528548ae0f5aae8ef03cc214a80a273964509",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-11070",
+      "index": 11070,
+      "input_code_sha256": "a55ed5dafb508195aae5ac61eb974308effe60d411af535b01ac0af487259d8f",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-12434",
+      "index": 12434,
+      "input_code_sha256": "5a57c6ed2d6b223dd70456c52e1733f9151d2b4de3206652dcaabc5b6a7d085d",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19170",
+      "index": 19170,
+      "input_code_sha256": "dac93ce2a968e990f3e0fd061c7ee8176f37f678e5b2296efced61bc88d2824f",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01687",
+      "index": 1687,
+      "input_code_sha256": "7974942c2fdd21620c04eb199171308ea4e3bfa4a040939ff776c27d49802436",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-15761",
+      "index": 15761,
+      "input_code_sha256": "818cd1d034ab9ceb28236ad42b69840b0403620402803641c331b73678a2d349",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-21529",
+      "index": 21529,
+      "input_code_sha256": "e51e2f5cfec1b0725780d682e673de0399bc35db07843c5bdfd0714d361695fb",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-16762",
+      "index": 16762,
+      "input_code_sha256": "9ec99db53f4bae1aadb3bc4fd75fe63abcb84428b9569156324c905d12b3120b",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-02113",
+      "index": 2113,
+      "input_code_sha256": "476a4742c452d1dd3e4bb2879a5821c70c4548c352caf1c10fac643af8532c9e",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07064",
+      "index": 7064,
+      "input_code_sha256": "b361ad0b3068b3668e9ebfb8dbe448e78c9837540851495882c4bb3ed2c0ab4b",
+      "diagnostic_stratum": "resource",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-04289",
+      "index": 4289,
+      "input_code_sha256": "08b5310541118a2777cfad5c48b5739e510c50260ef8fbd9ddf756a721ea2883",
+      "diagnostic_stratum": "resource",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-20004",
+      "index": 20004,
+      "input_code_sha256": "c96e192e07df9a09f069adb0d6b7041bd308157207fb95e6b0669f037ef3b4fd",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-13213",
+      "index": 13213,
+      "input_code_sha256": "181193f3db06d655816e6d7c9d97f63aec70afef206c2060160185b2f55dc19d",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09196",
+      "index": 9196,
+      "input_code_sha256": "2f2294da55b5c1a34a8f78f6b16496d8e03397899aa805eeb7fe24796d1215eb",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-24238",
+      "index": 24238,
+      "input_code_sha256": "de3063b922bb74b25a9aa4f801f0736e07dcbdc371d73af2554c938d2d653b06",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07538",
+      "index": 7538,
+      "input_code_sha256": "457903bbc9fef05638bae9fa3dd9db13984a4670ef51aa980a5ac70c790df82c",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-06173",
+      "index": 6173,
+      "input_code_sha256": "c983591b2eb61e8cc14094e6fb8d83306e5910ec68fd586bb7df94c57253c123",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-20783",
+      "index": 20783,
+      "input_code_sha256": "b02e5135a8c9bee9b4b033bb1e410f860e674e8aad9e58f96c529bff37be9844",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-21240",
+      "index": 21240,
+      "input_code_sha256": "621649163ba4cd7fa465350d452fa4dce945fc1ae37f4db5c8904034d9fd8ea3",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13759",
+      "index": 13759,
+      "input_code_sha256": "1da030229872fbc52cbea8815e37a4a51f5135a029f73e5aba7433160b0c6ded",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-10360",
+      "index": 10360,
+      "input_code_sha256": "b3b1b6c4b5a4427390dbc3ac2abd033f16cadf6401134f01a02183ad8224e8fe",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-04609",
+      "index": 4609,
+      "input_code_sha256": "bc899475bc6062567180a369197bf84727c305c53797a55f9f7639284cd1300d",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-14248",
+      "index": 14248,
+      "input_code_sha256": "530ea298ceb177e7eb030bdc772575293a45687c7f9eb8f90aad9b39366fc786",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-22422",
+      "index": 22422,
+      "input_code_sha256": "8a17e800e3f6038cfbe9c214b3f6e3c187557531c6f4f36ca07a1d9ce316c1d7",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-10286",
+      "index": 10286,
+      "input_code_sha256": "12f223ac0854752e45d0041a3fa739b4c18470d4fbaf039c31487558cab79f89",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-00622",
+      "index": 622,
+      "input_code_sha256": "93d72ddf75566c9692754ab2fd35883bb195f93edd50fd4cc5705a7301514e0b",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-19588",
+      "index": 19588,
+      "input_code_sha256": "e59f0296646afd904739bc22152587382b587b070a44e202329c9cc8a7edea8c",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01216",
+      "index": 1216,
+      "input_code_sha256": "e254cb0c0168e9b59f6a90352993e4360da829597e175a35d612524b849d1437",
+      "diagnostic_stratum": "resource",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-16933",
+      "index": 16933,
+      "input_code_sha256": "e0324c2acd47a9bccbe4eb890f44c8d5d1739685092d3cb62386341485566880",
+      "diagnostic_stratum": "resource",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06448",
+      "index": 6448,
+      "input_code_sha256": "db320f514fbb52347d3e943e57ed1123a97356d197c7a65bc0a096c033cd2f5e",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-04442",
+      "index": 4442,
+      "input_code_sha256": "0de4f9c7e91ae83cfe0f3910a58d8aafecc028bc73a69e3ee1844850e0667fd4",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13034",
+      "index": 13034,
+      "input_code_sha256": "ae3d0b67d6a9cf53cceb23e1e8528ec2d5fe79597289282a30801ed3307411f9",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-11022",
+      "index": 11022,
+      "input_code_sha256": "7202ea0d31462e25b363228c3ea9904b13a12926e828e3d5fa29da222b4b302d",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19249",
+      "index": 19249,
+      "input_code_sha256": "39062e0b63b445f43d76a966df3eebba27e6b73ecfe14e043a05d3fd2d6e09a1",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-09741",
+      "index": 9741,
+      "input_code_sha256": "3e0b100c048571bbc5d81e26295020ca34ee03abef786670837d207d2b62e0de",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-12860",
+      "index": 12860,
+      "input_code_sha256": "048eeae3bbad7c2e935c2b494ee32113e25a9f9306a9d4287cc8ef165b1ba56d",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-07192",
+      "index": 7192,
+      "input_code_sha256": "335b8f6ba1095679b9affa61028531202eb077d54a581f59f2476634718dd418",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06818",
+      "index": 6818,
+      "input_code_sha256": "611960989cfb3dd5cbaf71e5b57952e18e31a560e16218fc81e242607aa252d8",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-15362",
+      "index": 15362,
+      "input_code_sha256": "da735614da0a546a56b8d04fc5adae48a774668b16e8140513aba9e828f412e9",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-23280",
+      "index": 23280,
+      "input_code_sha256": "978a212843d770f587239cf0205736d3b706ed4713196c50675826d8abee8a93",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-21421",
+      "index": 21421,
+      "input_code_sha256": "9d73bf9174c7a3c0037f1b8e904f5f31dfab9cb4345f18e34ee6644b678a85f8",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13457",
+      "index": 13457,
+      "input_code_sha256": "704b9663e211017dce45a696426d4312771dd1cecfec8e913cb7f838da417412",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-07431",
+      "index": 7431,
+      "input_code_sha256": "7a497e0f65d2faa088e9fd590e8cadb24f87a49fc1e1d02c8e5bc52e74821a05",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19398",
+      "index": 19398,
+      "input_code_sha256": "57813743e6e87a59f7f7ee01c9b31902382a76d9d33dafaed4e97d8d47dcdbb4",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05328",
+      "index": 5328,
+      "input_code_sha256": "a7b187dc1dd83e980c9a0c6668fb8dca11066a133d923d837ea4c59f7c3e7007",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06503",
+      "index": 6503,
+      "input_code_sha256": "90fcaaac6c91a69b032b18f06eb52f76ccf0a71758e6538fb31dcc1430a1fcd1",
+      "diagnostic_stratum": "resource",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-11994",
+      "index": 11994,
+      "input_code_sha256": "9a24bc20b3053fbca739586e96ed2d19e7ca8cbc42426f02fad6db44d66c8e33",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-19067",
+      "index": 19067,
+      "input_code_sha256": "5e660dda4027fa6e726ff6a0f3a52494f9756594d61e6e21730ff2135e862031",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01358",
+      "index": 1358,
+      "input_code_sha256": "16a97dc9e419df64328c312d2a383bd4c86141d8507bb3b2e7dc4d8ec33c6627",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-19481",
+      "index": 19481,
+      "input_code_sha256": "6cbc8b1ff2e5475d99f2c6af3af1c7761f5bd5601d5954635b05fa0e7d1157e2",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01712",
+      "index": 1712,
+      "input_code_sha256": "546581bcb70a99ae136e72ef641c59175fc826a00916764d697d178ad3f348af",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01777",
+      "index": 1777,
+      "input_code_sha256": "9c3351cc4a748d12b99195a449187e0ed76852eada04b003993baffc70da5d82",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-11235",
+      "index": 11235,
+      "input_code_sha256": "77ebbb961c5232be7a2b7663ed00198d296145d0305a7041b638b0f1b3ec2d88",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18739",
+      "index": 18739,
+      "input_code_sha256": "700c815374ad856a6c8a428dc667a48958a4c12a8558bfc3965b0e96821b8304",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09449",
+      "index": 9449,
+      "input_code_sha256": "8b7d9383e098b9d419ae0e7fbcc72be7f7182afb9b417298ef2557fff1e4ef8c",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-00318",
+      "index": 318,
+      "input_code_sha256": "7c2c31ac1a7d39c13d39df5deeae40991b70c791aa0a7fc52e4b7fdcb6bbfe2b",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-14295",
+      "index": 14295,
+      "input_code_sha256": "c9197f3e1080e39801b62af976d43dca48b290e53d05e8babcc2753b4da6b1de",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-02518",
+      "index": 2518,
+      "input_code_sha256": "f0cab76a61a4185b2ffd560b88874a01394bd2e1cfb6a50b81db5f7a2ff97b59",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-18638",
+      "index": 18638,
+      "input_code_sha256": "2145e69d3da49182f9dab31c63c9477a3b3496111985b5f1f1de57ffedfb3ea9",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18816",
+      "index": 18816,
+      "input_code_sha256": "77bed51734cc4a0bb3013540d1b24b3d646294a2dec769b579b5aa9495073bce",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-24374",
+      "index": 24374,
+      "input_code_sha256": "1fe8cbcf4a8c6df8cf64a2f876ce95dcbd71d15dc5a8a611f4dbe5c624b48a01",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-06955",
+      "index": 6955,
+      "input_code_sha256": "55291f105849883ebe82f843be816df1bb409fce360cb1834e413e9107da623d",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-04856",
+      "index": 4856,
+      "input_code_sha256": "881d885f49da6bb87cb0e9005c9a18aafd772e3c922bfcf3f8bbec661d0b0597",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-16548",
+      "index": 16548,
+      "input_code_sha256": "e56aab0268fb2f42d0cd508ce3ccfe42ff5b8e24266f37941c39f071bb913321",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-15479",
+      "index": 15479,
+      "input_code_sha256": "c8489c759f50e60b2996f5ac12b4918ae1164bcd4a0c807ba471b4f02073aaaa",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-22251",
+      "index": 22251,
+      "input_code_sha256": "76309f08aa0125a66bdb5ae9ddc4be7c049db51ed056fe09e6cba733f6265de4",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-21374",
+      "index": 21374,
+      "input_code_sha256": "d5416688b7634a108eab0781cb319dfba20e5a8859b780117f8d08877ecbbaf2",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08817",
+      "index": 8817,
+      "input_code_sha256": "2abf92322cd5ac5b99a371c5f7626f67a17ac80bc5889f84fdad5952ae9de08c",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-11192",
+      "index": 11192,
+      "input_code_sha256": "38d514b73769c1af30470256c67f362e0a134ea97b942b34157cf1877a62dc5e",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-12224",
+      "index": 12224,
+      "input_code_sha256": "d709fd19e9df9025b827e9645af44241ecca156850800abeb0e296230c114216",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19663",
+      "index": 19663,
+      "input_code_sha256": "050b3aa7cfa98827e3054b1fea207d5231fc427d244bcaee2ebd251f1656be65",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-13475",
+      "index": 13475,
+      "input_code_sha256": "e63b49e131a03cf155abb05a88b329eaf4dc9e754346a6c9b9455d4f664128e6",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-22982",
+      "index": 22982,
+      "input_code_sha256": "92178f44bc5bc44bbfc89c9d5a7c0227bb9618bb88a04e8c4e992abec15c8ab6",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05312",
+      "index": 5312,
+      "input_code_sha256": "5d3936ccf253ce1ffaa33d7a2b8e632b9a81dfc8bc86a5b8c128bf8f0583fd97",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-00013",
+      "index": 13,
+      "input_code_sha256": "1b6226288aa9d065b8347e0f85e258a6ad19d31f55029a4ac919f9be1141e8e0",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-10653",
+      "index": 10653,
+      "input_code_sha256": "5cc542e85257478f61213c465a6af78cb05129c22e8274d88153da0788493324",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07107",
+      "index": 7107,
+      "input_code_sha256": "c641d99eff72726f703a2ce18bc7695aee3abfc6c9fd86f206cfc1f407a02ebf",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-00508",
+      "index": 508,
+      "input_code_sha256": "391f382a01928cfeb16892c0e5780bca07e2620ee7abfc522eb0612ba7736db4",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-14644",
+      "index": 14644,
+      "input_code_sha256": "c46126842652c83ecd3c590fb6c7adfbc1372263dea2f885cd0f588790d39b94",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-09082",
+      "index": 9082,
+      "input_code_sha256": "03c31994814b001a7d83fab18f21a2812e4b62e87f05ef95b88ebd9959381dba",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-05562",
+      "index": 5562,
+      "input_code_sha256": "bbdad518e06dc72be2d82880b4a95cd62398c19b6dc23830c6ad108d1bc81038",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-24826",
+      "index": 24826,
+      "input_code_sha256": "882a24da4524875246095431a95f0df108e982e518be49e2284e30c917388953",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-10616",
+      "index": 10616,
+      "input_code_sha256": "0546112855ebf70fa988b5ac195838775bb8b0e461a7b609c567d34bbf3f3209",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08882",
+      "index": 8882,
+      "input_code_sha256": "05a5827fcd1e4209e9e1d9c0f24815378841efea08819fee1b51e1c47ee4f9fd",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-08761",
+      "index": 8761,
+      "input_code_sha256": "d38d926e014a505108341025fbd57331f0b32d8bf8304e50429688bbffd4d29d",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08351",
+      "index": 8351,
+      "input_code_sha256": "92c1aff51f42eea302b3f5970b1e7d117d470afa909278b1bc934db0326f8725",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-17026",
+      "index": 17026,
+      "input_code_sha256": "3268bae6697aa92298ac7dafb16238eb5ecf888a238008581a713dd59a2ab4ef",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-24645",
+      "index": 24645,
+      "input_code_sha256": "c0a370f23bea00d55e9f61de239c897d75909a73398cc283ceee9470e53bbb90",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-03737",
+      "index": 3737,
+      "input_code_sha256": "5e24ac5272af43d47ce2978a0c2228ac9c8becce136b8f1f327308dda88fa6bb",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-16576",
+      "index": 16576,
+      "input_code_sha256": "a06e94c728549a3767e0ddf71b2955e6aec859066f6992933257d2df423ff482",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19294",
+      "index": 19294,
+      "input_code_sha256": "b19722412672fd562e3e904e7b07195cab7d4fed2e3f9a99179d9bc116794c51",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05801",
+      "index": 5801,
+      "input_code_sha256": "1c9973120da2deb143df4c96101872738a370835d12e2aacc4dee727c809f4bb",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-00492",
+      "index": 492,
+      "input_code_sha256": "44df4c679ebfd05b371247ea258adef79ef949902367473e5fafb5c04024c074",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-07811",
+      "index": 7811,
+      "input_code_sha256": "5cd678239f0b31f70b4087034b57c1ec7f39f0b4a0c3f5d3d5de215a2ef75097",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-02545",
+      "index": 2545,
+      "input_code_sha256": "84f48780419ad9e0dd22d68cafe470cbad5ec9a16df6d2bc47d151df60f2d1b2",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-00519",
+      "index": 519,
+      "input_code_sha256": "75e786eec1cc6f13355ba76a63284207b8abe554897f505ac3f0f5bbe5926912",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-20348",
+      "index": 20348,
+      "input_code_sha256": "f0873602a8ba3be539f05a1505216f17a64fb800c2f9598b7b9da8d980e814b1",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05396",
+      "index": 5396,
+      "input_code_sha256": "463528ce99a18d0d85edf7d6d48a7fb91d37421a96831d6edd86a621253cc46f",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-11613",
+      "index": 11613,
+      "input_code_sha256": "c68c503f8cdc354d7ea85f52e97999f2c217bc28ddd8725ccf2f8d6eb2ff8ec0",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05024",
+      "index": 5024,
+      "input_code_sha256": "a70ae5e0c3486e2fbd53cc461bff3b7a0e75d53f363b24869d6c230b8fc59721",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07209",
+      "index": 7209,
+      "input_code_sha256": "d305ee19849174e212185b52645d5ce3510e8033755557061b30c2e91266be3e",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-15204",
+      "index": 15204,
+      "input_code_sha256": "9c5eca98a399ee734f4264a736c51a4ac0a38ac65164d97f891fa0b6558f4585",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-12085",
+      "index": 12085,
+      "input_code_sha256": "436e2097ea77dced0f6afff8cf79c5cdd9509d5ecda83f2175d70517368ea269",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-03365",
+      "index": 3365,
+      "input_code_sha256": "4c3f77fde620333e0f5fdadea63f8a1eb820f4efa3e6ef537f3dac35658c6d81",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-08932",
+      "index": 8932,
+      "input_code_sha256": "9754c3ec7f637fa356e397d85c026539ac475f300977d4f41064102145027415",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-06840",
+      "index": 6840,
+      "input_code_sha256": "b65364d378fa08a0b61fcefef0bfbf0b7d4263b105bf95009c22814c11be240c",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13979",
+      "index": 13979,
+      "input_code_sha256": "6ff9d0791da075eadd503ed55903f6c894c3bc43d5667cbaf5160df1c0ffe9e6",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-22222",
+      "index": 22222,
+      "input_code_sha256": "5b503a0d7efc55c42c654ae772e7eb28c021f3c37e736a146fcbf12f0324970e",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-12300",
+      "index": 12300,
+      "input_code_sha256": "87a5df21930b4506af23b007d81c4c2bb4d231bc8b6d43530d0ba3c7999eb588",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-16378",
+      "index": 16378,
+      "input_code_sha256": "4d28324213b74991daa0b06a90fd748b3bd311b335a2282fd13fb24f348c6e16",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-21382",
+      "index": 21382,
+      "input_code_sha256": "f4a4c085ab7e47ab84fb120daff6349debfd6639fa6d4c5cd4a0bb22b428c908",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05590",
+      "index": 5590,
+      "input_code_sha256": "fd6e0287ba68023ba6029d6b2302ce286d62f3340c7b4616aeaf345dd5088fd6",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01688",
+      "index": 1688,
+      "input_code_sha256": "08c575a09bcd6eae4418a8387587354ba2a6e791f202e70345869209469dc962",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-22028",
+      "index": 22028,
+      "input_code_sha256": "1a8598ab2ea3336d24e490d151ed114f2aeb7b0c9bd52a23a5e3572a90227b27",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-23792",
+      "index": 23792,
+      "input_code_sha256": "3ea28045aaa4f86b7f1ebcff8e9dcb657e3cb2e65f1bf5aebde3ecd280709c13",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05050",
+      "index": 5050,
+      "input_code_sha256": "efc518db759e2332f5609556002f84512d83874f6c4922e609664a10943c88c4",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09222",
+      "index": 9222,
+      "input_code_sha256": "daddcc8e9e682a5abc089b62316a431a7d02c105cae57657a47455688be6d047",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-13416",
+      "index": 13416,
+      "input_code_sha256": "f889474f734eb160d49ba2c17b431c7f5ea54e532073fc0a295e4baed8d34a9b",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01854",
+      "index": 1854,
+      "input_code_sha256": "1b26a31d2a11c3609c8edc9ab51ebcf94e276751d5d73b6c8efd69d76909cab3",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-19324",
+      "index": 19324,
+      "input_code_sha256": "a102a0079a15561540a49b03c596a2eabc880ce14fc813f70f710b33d5255632",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-16778",
+      "index": 16778,
+      "input_code_sha256": "7436013d2b78ca0b36c6a3ffcfd445ad4f42054a8bb4cbe9b33acfa212b4a31c",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-24288",
+      "index": 24288,
+      "input_code_sha256": "55d3425db88af0a8dca889cb450aa1da87f28b85faba169fb53354ec446da5d0",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-22988",
+      "index": 22988,
+      "input_code_sha256": "02e84bcf74d0b188f9f96c4cbcec3e3b4cc20fd8eff1916fc755fccefe700dd1",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18134",
+      "index": 18134,
+      "input_code_sha256": "ff4591cf752a86172784090d59a852a55a65c857315c5ae3737fdb0ffc6ce823",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-20505",
+      "index": 20505,
+      "input_code_sha256": "11fa15ae1664095bf5b631d32f3237c08e56b12000df6f876df84be3e190a88e",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18178",
+      "index": 18178,
+      "input_code_sha256": "91a4cfec76faf1f09fd4241715c8b4de935aad449613c14ea66b9440b030e6b1",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-05941",
+      "index": 5941,
+      "input_code_sha256": "a47c07e46a2858370f19090405eea6fa6ac3643b7dcbd3815a7091701f8fdf8a",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-04106",
+      "index": 4106,
+      "input_code_sha256": "9345c56b31186af241a37e35422d9ebb79c9d6542c214f66858aa8b321230125",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-03892",
+      "index": 3892,
+      "input_code_sha256": "923a219f3293cb8ff6be88bc4baf26d9f1938d7f0a756574c124a960c21982a5",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-24525",
+      "index": 24525,
+      "input_code_sha256": "6c959284505471f82c887f91bd4a20541e2b0947a3ce2a78d3ba61ae317afa61",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-12682",
+      "index": 12682,
+      "input_code_sha256": "cedc7ef34586edfa8cb71875237541ba514e1b7d200369da574f27f575c92269",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05968",
+      "index": 5968,
+      "input_code_sha256": "c5dc9891db20b980f16cc928207f9659c7afd7494cb4077fe3faeac05d615de7",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09143",
+      "index": 9143,
+      "input_code_sha256": "cb22dbec48edaff36d6da90d25d6f9a988a3fe9c8267b8ac364dfd832f79a6eb",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-09688",
+      "index": 9688,
+      "input_code_sha256": "1641df84c8edd8b6c64e9717791fcf818159ff6375971f40bf1637b9a9b7c638",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06851",
+      "index": 6851,
+      "input_code_sha256": "f52cf90b426d7d9ed7e998455492562a11911ab68669f9bdfb6c9bb44aa56d7c",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-07182",
+      "index": 7182,
+      "input_code_sha256": "724abc7576dba7592788fe45eb5b41db599e34304adc1992324709cd81e9354d",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-18898",
+      "index": 18898,
+      "input_code_sha256": "bd53a68db262efbefa0dd61de71f868935715c7cce45af56b7ed4f1ce04160c1",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18540",
+      "index": 18540,
+      "input_code_sha256": "69959c949367e8e794af042b69857e5d088a2a1489b776b09f760464d249ba0b",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06834",
+      "index": 6834,
+      "input_code_sha256": "480ce4b7dedaf8c257d6e23812b04eb19750b90b9689c1db55c336d0ea0656e6",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-09878",
+      "index": 9878,
+      "input_code_sha256": "5243f22cbdee3f55adac88577c9f15556395b7f9f165db518bc399221dfcdf2e",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-22870",
+      "index": 22870,
+      "input_code_sha256": "969a937c048d363b9d4de8bf287be9cefaedaf0153c5756f8c8d4a93859f907c",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08942",
+      "index": 8942,
+      "input_code_sha256": "35ea2ea94b320c106b64ef7c7fa1e5b2582e641c63817c8e687f011d65c5586f",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07087",
+      "index": 7087,
+      "input_code_sha256": "93645a861fb91c4eb461a65f4e55d2662d79f320884746be5ec2aa06d137ae6f",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-21131",
+      "index": 21131,
+      "input_code_sha256": "627e5688ccf050e192b8bdcd48847e5b9cceb415d56f7890b325399b4dc82eb2",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06516",
+      "index": 6516,
+      "input_code_sha256": "d2402e7db57be4963cf8fa0f53886933e3d1c3c2914bbca2299fa88903ab729c",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-12268",
+      "index": 12268,
+      "input_code_sha256": "ce3959665fac72dfdaf0c869bac5937b0a2f96ea719ef20a6c86239cc5677c5a",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19575",
+      "index": 19575,
+      "input_code_sha256": "17f02810e381a1ebbb0615234d50e068e509251aff8568a0766e16b2876e7949",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-15201",
+      "index": 15201,
+      "input_code_sha256": "066a6355dc88582728faf5782aaf23cc31d7b98b2e7aebc642618d5afe615a9e",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-00592",
+      "index": 592,
+      "input_code_sha256": "5d63ff76ba0ea284e2dd15225cd33ffa1d35e42e9c4f92e102a25ded1cabe3d5",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-14173",
+      "index": 14173,
+      "input_code_sha256": "2a613a4c266d566146cfb8640c56485832f7d82e9a032fb2aa7a580f6c40444b",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-04508",
+      "index": 4508,
+      "input_code_sha256": "dd1bda370f9fdfd7307ccd75e27749289bf2ed99a63d23c300008e803503bc64",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-05925",
+      "index": 5925,
+      "input_code_sha256": "f877f1686d0b16a0ef33cf0dddcb491139551281f26dc7c3f9d96205073179ba",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-17299",
+      "index": 17299,
+      "input_code_sha256": "14eab562a5114d0bc249a9243155d003de5dacc5c85c3a9306cada6414cc93b7",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01907",
+      "index": 1907,
+      "input_code_sha256": "8f11039b0bcfd69a8b0ee7ac5581e358ffecef48d8d0f7cc4d0da897fa632db9",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-00750",
+      "index": 750,
+      "input_code_sha256": "911af15c2c3b2daa2ecf5a44d279b8262ecc4d7d8b1fe5a72c755b3a18077120",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-18493",
+      "index": 18493,
+      "input_code_sha256": "3f30ab289ae0edc48e57070b43ab4e72abeca0d17e8137c89c39d8f6bb757e69",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06363",
+      "index": 6363,
+      "input_code_sha256": "799a4bb44e6d80483051b4a40ba9382474d4f666d7f22f339d0cd69049c32abc",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-06108",
+      "index": 6108,
+      "input_code_sha256": "1b24666896116180e1ee7f7ea62d3d3a3fc628d2b6ad0483f9ed0da407473514",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09573",
+      "index": 9573,
+      "input_code_sha256": "537137424f1467bffcac4998ac86bba2b3758ba184c903add7dc393a1556f9a0",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-12680",
+      "index": 12680,
+      "input_code_sha256": "c25d09e5a202ed18de9c103a4fb2c86c5ef8c20def7aa9b844cc665b0c741287",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-19009",
+      "index": 19009,
+      "input_code_sha256": "34ca307b5bee81f04381fc9c50c687185c78a7a25352e5028c59c1f92c84d49a",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08590",
+      "index": 8590,
+      "input_code_sha256": "1844fd0b7d50d0fee33e7ef0c915401809ef5dc098c97b4eb85b17d4a3e34bc4",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-02810",
+      "index": 2810,
+      "input_code_sha256": "981bc8a940bd172594468ea9c5556d4fa952ecef47a138b8b8ec9efb0375acdf",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-00741",
+      "index": 741,
+      "input_code_sha256": "838ba39ad4af3c0ebbf6e0581fd319caad58c5a73956143851ad305faddaec0b",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13038",
+      "index": 13038,
+      "input_code_sha256": "8295abe06ef7c43add315fa2b16333c688e92ef224698a0d28b3d446be377771",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-04535",
+      "index": 4535,
+      "input_code_sha256": "5093e5e7dc980e0dbc891fb36f752ec583d06cf590c42d8f3b42563bc24a5bc6",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07960",
+      "index": 7960,
+      "input_code_sha256": "c42f9a79d7ebe8b4aee1149165e502fdbf222868daf96f58432b3d4e19f98e45",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-00278",
+      "index": 278,
+      "input_code_sha256": "4925ca7c62af06fa07bd91654489eeff5d20b762e6f93d639eb7980e66286fc3",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-18083",
+      "index": 18083,
+      "input_code_sha256": "1731baf1c32a3b8054e46db0af5678f7d0925b647ce6416402a8c2c6d4b3f963",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-20280",
+      "index": 20280,
+      "input_code_sha256": "a71c2ba53f7ded8fb74ac9ad1286c59c7f521cfa81c5afd01e47c300bca31ed3",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-13888",
+      "index": 13888,
+      "input_code_sha256": "59720e1621b0521c454ccccac4332486b18c2067ac9ebb595f2e26e89285fe88",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-12983",
+      "index": 12983,
+      "input_code_sha256": "c37c5bd91d7ae71eef0c0a97367f49ec111437b01a0d5639adb9f864cf58e7de",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-05017",
+      "index": 5017,
+      "input_code_sha256": "8074731a9795f086575e563a871c93a4fd340a754b42fe9b5b68d17b9d76b6e3",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-13778",
+      "index": 13778,
+      "input_code_sha256": "ae8876458ab65a57b45320e00ccb751f5763cbeca6150fb7fad24ac6233aad8a",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-09785",
+      "index": 9785,
+      "input_code_sha256": "cc35995b99d46ee777a174a516879496fedf992ef901d0b1d9642481148a0a03",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01153",
+      "index": 1153,
+      "input_code_sha256": "759c889ff79800bab95d1e02ec364ac1a5dafc0b2f93cbae1035f22218115152",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-05453",
+      "index": 5453,
+      "input_code_sha256": "cad12104a4a2fb1356ec703548873ca9d084b085a90898b14701bac5cbc25190",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-19301",
+      "index": 19301,
+      "input_code_sha256": "8e44c8e1de4ca88fc0243b699dcc333be4f0f38f4d42e31b930ed9c67f0c728d",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-20780",
+      "index": 20780,
+      "input_code_sha256": "ebec773faa7925e55172cbc05108631eaf20fdf5a883dec63cd986a0749dea40",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01280",
+      "index": 1280,
+      "input_code_sha256": "f9411e645b9320ede51416e2a2ee709b5feeb7d80cdca7ecc3b1938b569f6807",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-17000",
+      "index": 17000,
+      "input_code_sha256": "5f7c588bb34b46a6b5f38e1502a1e92f7729d25416ad54072499c2f69128df25",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-14892",
+      "index": 14892,
+      "input_code_sha256": "fc221e468d4ff06a18e8c35822583e60a5c001f158c5e0d73b2bb5211d3f2027",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-06500",
+      "index": 6500,
+      "input_code_sha256": "22be42dcd877dc404ed61bb8db3c5a2bcb8a4c5773324f85a5bbe0f9ffe70f3c",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-01279",
+      "index": 1279,
+      "input_code_sha256": "d99249694050c8d7d0d17caef7ef5084548ee8870e57d90d50133e3c80a2b3ae",
+      "diagnostic_stratum": "invariant",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-21231",
+      "index": 21231,
+      "input_code_sha256": "ddd29fb66037181b7fa0cc498b87b9c88d4cb552ec418bb90bd44c891b71d965",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-03869",
+      "index": 3869,
+      "input_code_sha256": "6b3f28a10f6ede70a7a55974f55df1012d93ece168e80b395c7b559d3d6ca08e",
+      "diagnostic_stratum": "other",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-07576",
+      "index": 7576,
+      "input_code_sha256": "1f056a9ac58cc1a48c4dd3aa7eb4fda91ae314cc4a629afdf3d63e96f3c1033f",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-03280",
+      "index": 3280,
+      "input_code_sha256": "dad33a7fbfaf9e1dfc9532a3fef09b468dae71846eb6f032c33be47577ef106a",
+      "diagnostic_stratum": "postcondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01612",
+      "index": 1612,
+      "input_code_sha256": "4e767d09c0e6f062aa68739cefaa4a4745ff20feec8155a12db8dbe701f23654",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-13591",
+      "index": 13591,
+      "input_code_sha256": "207d21a9e87ebde8b243ba699d45832781b6cb60ba97418340092a72a1e1e32e",
+      "diagnostic_stratum": "precondition",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-22722",
+      "index": 22722,
+      "input_code_sha256": "8a33dadd4c5b5320c157865ad3919180ca0d1a0078fa5f9f289297988c1cd31b",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-09689",
+      "index": 9689,
+      "input_code_sha256": "0f52717b352c49f23ef9c58cdd5f80b51d208026f95ce5f44ccb60e88450f497",
+      "diagnostic_stratum": "syntax",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-03703",
+      "index": 3703,
+      "input_code_sha256": "5b4ebb6786e3673f29ab05a464065e85a67cbc9db9b5a419eab54b6fdef4285d",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-06313",
+      "index": 6313,
+      "input_code_sha256": "5dada869b187375d8573ac59592221b71470f89775b96c7d79261b9ab4be3f9a",
+      "diagnostic_stratum": "type",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-05154",
+      "index": 5154,
+      "input_code_sha256": "1a49b6d234be906444f5aec6feae48e75da1b8427fddd2b4685b192e29cec2ce",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": false
+    },
+    {
+      "id": "safe-08780",
+      "index": 8780,
+      "input_code_sha256": "34039fba9b1c943ec9a95b1ddf2452bdea5f4347830065c9bdd1828662b5b615",
+      "diagnostic_stratum": "arithmetic",
+      "input_loop_isolation_false": true
+    },
+    {
+      "id": "safe-01750",
+      "index": 1750,
+      "input_code_sha256": "8668df7cddd7604f73122539ed05e8d648868cb184439656746c0e1b48e213f8",
+      "diagnostic_stratum": "assertion",
+      "input_loop_isolation_false": false
+    }
+  ],
+  "dataset_sha256": "91e10c33b82a321bb64782baee96ab1ffc6c78b406fc30ab22f2b2ab10e7637e"
+}

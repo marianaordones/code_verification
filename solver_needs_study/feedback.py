@@ -13,6 +13,13 @@ from .data import upstream
 ARMS = ('with_internals', 'without_internals')
 
 
+def selected_statistics(raw, normalize=False):
+    if not normalize:
+        return {key: raw.get(key) for key in STATISTICS}
+    canonical = {key.replace('-', ' ').replace('_', ' '): value for key, value in raw.items()}
+    return {key: canonical.get(key) for key in STATISTICS}
+
+
 def messages(code, verification, action, context, payload, history, config=None, complement=None, advanced=None):
     _, laws = upstream()
     system = (config or {}).get('system_prompt_text')
@@ -57,10 +64,10 @@ def fits(code, verification, action, context, payload, history, tokenizer, confi
     return len(tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True)) + config['max_tokens'] <= config['max_model_len']
 
 
-def internals(folder, code, verification, action, history, tokenizer, config, replay=True, saved_context=None, message_builder=None):
+def internals(folder, code, verification, action, history, tokenizer, config, replay=True, saved_context=None, message_builder=None, feedback_name='feedback.json'):
     def prompt_fits(*args, **kwargs):
         return fits(*args, **kwargs, message_builder=message_builder)
-    destination = folder / 'feedback.json'
+    destination = folder / feedback_name
     if destination.exists():
         return read_json(destination)
     report = read_json(folder / 'solver/report.json')
@@ -96,7 +103,7 @@ def internals(folder, code, verification, action, history, tokenizer, config, re
         payload['queries'].append({'id': query['id'], 'query_sha256': digest((folder / 'solver' / query['file']).read_bytes()),
             'original_result': query['result'], 'replay_result': replay_report['result'],
             'reason_unknown': replay_report.get('reason_unknown'), 'diagnostic_timeout_ms': 5000,
-            'statistics': {key: replay_report.get('statistics', {}).get(key) for key in STATISTICS},
+            'statistics': selected_statistics(replay_report.get('statistics', {}), config.get('normalize_statistics', False)),
             'observed_instances': replay_report.get('instantiations_observed'),
             'saved_instances': replay_report.get('instantiations_saved'),
             'callback_errors': replay_report.get('callback_errors'), 'quantifiers': []})
