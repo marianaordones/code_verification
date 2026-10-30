@@ -33,7 +33,7 @@ echo "Submission record: $receipt"
 for batch in a b c d; do
     [[ "$batch_filter" == all || "$batch_filter" == "$batch" ]] || continue
     output="$parent/$batch/seed-20261018"
-    job="$(sbatch --parsable --chdir="$project_root" --job-name="safe-internals-rest-$batch" \
+    job="$(sbatch --parsable --partition=new_p_gen --chdir="$project_root" --job-name="safe-internals-rest-$batch" \
         --output="$project_root/logs/%x-%j.out" --error="$project_root/logs/%x-%j.err" \
         "$project_root/scripts/slurm/safe_internals_remaining.slurm" \
         "$batch" "$dataset" "$output")"
@@ -48,3 +48,4 @@ for batch in a b c d; do
 done
 echo 'Four new shards cover the 11768 remaining repair rows; the first 2000 are excluded.'
 echo 'No GPU is requested. Keep shared collector code unchanged while jobs run.'
+echo 'Partition: new_p_gen; QoS: high.'

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=safe-internals-rest
-#SBATCH --partition=high_performance
+#SBATCH --partition=new_p_gen
 #SBATCH --qos=high
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
