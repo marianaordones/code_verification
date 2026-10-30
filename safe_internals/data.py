@@ -3,9 +3,8 @@ from collections import defaultdict
 import random
 import re
 
-from baseline.integrity import tokens, protected, group_end
+from baseline.integrity import tokens, protected
 from baseline.storage import digest
-from repair_study.regions import spans
 
 FENCE = re.compile(r'```(?:rust|rs)\s*\r?\n(.*?)```', re.S | re.I)
 
@@ -98,25 +97,3 @@ def families(rows):
             else:
                 first[key] = index
     return [f'safe-family-{find(i):05d}' for i in range(len(rows))]
-
-
-def preservation_target(source, target):
-    """Remove only added false attributes in an AST-comparison COPY, never in verification."""
-    before = protected(tokens(source))[0]
-    ts = spans(target)
-    values = [t[0] for t in ts]
-    remaining = before.copy()
-    remove = []
-    for i, token in enumerate(values):
-        if token != '#' or values[i + 1:i + 2] != ['[']:
-            continue
-        end = group_end(values, i + 1)
-        attr = tuple(values[i:end])
-        if remaining[attr]:
-            remaining[attr] -= 1
-        elif attr == ('#', '[', 'verifier', ':', ':', 'loop_isolation', '(', 'false', ')', ']'):
-            remove.append((ts[i][1], ts[end - 1][2]))
-    comparison = target
-    for start, end in reversed(remove):
-        comparison = comparison[:start] + comparison[end:]
-    return comparison, len(remove)

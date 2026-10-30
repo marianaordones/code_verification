@@ -9,16 +9,16 @@ import platform
 import sys
 import time
 
-from baseline.integrity import IntegrityValidator
 from baseline.obligation import ObligationVerifier
 from baseline.prompts import ROOT
 from baseline.provenance import command, tool_identity, tool_signature, file_hashes
 from baseline.storage import digest, read_json, write_json, write_text
-from baseline.verifier import Verifier, execute
+from baseline.verifier import execute
 from diagnostics.z3_internals import api_env, api_identity
 from repair_study.relevance import source_context, rank
 from solver_needs_study.feedback import internals
-from .data import select, codes, code_tags, families, preservation_target
+from .data import select, codes, code_tags, families
+from .validation import preservation, classify, eligibility, POLICY
 
 CONFIG = ROOT / 'configs/safe-internals-pilot200.json'
 TOKENIZER_MODEL = 'Qwen/Qwen2.5-Coder-14B-Instruct'
@@ -30,6 +30,7 @@ PACKAGES = {'20x3': (12288, 20), '50x3': (24576, 50)}
 
 def implementation():
     paths = [*(ROOT / 'safe_internals').glob('*.py'), CONFIG, ROOT / 'configs/safe-repair-pilot200.json',
+             ROOT / 'configs/safe-internals-pilot1000.json', ROOT / 'configs/safe-repair-pilot1000.json',
              ROOT / 'prompts/safe-internals.txt', ROOT / 'requirements-safe-cpu.txt',
              ROOT / 'solver_needs_study/feedback.py', ROOT / 'repair_study/worker.py',
              ROOT / 'repair_study/relevance.py', ROOT / 'repair_study/regions.py',
@@ -39,16 +40,17 @@ def implementation():
     return file_hashes(paths)
 
 
-def prepare(dataset, root):
-    config = read_json(CONFIG)
+def prepare(dataset, root, config_path=CONFIG):
+    config = read_json(config_path)
+    config['preservation_policy'] = POLICY
     source_sha = digest(dataset.read_bytes())
-    frozen_selection = read_json(ROOT / 'configs/safe-repair-pilot200.json')
+    frozen_selection = read_json(ROOT / config.get('selection_file', 'configs/safe-repair-pilot200.json'))
     if source_sha != frozen_selection['dataset_sha256']:
         raise ValueError('Dataset bytes differ from the frozen SAFE source. Use the original sft_safe_25k (1).json file.')
     rows = read_json(dataset)
     selection = select(rows, config['examples'], config['seed'])
     if selection != {k: v for k, v in frozen_selection.items() if k != 'dataset_sha256'}:
-        raise ValueError('Selection differs from the frozen 200-example pilot')
+        raise ValueError('Selection differs from the frozen pilot')
     groups = families(rows)
     manifest = {'schema': 'safe-internals-pilot-v1', 'dataset_sha256': source_sha,
                 'dataset_rows': len(rows), 'selection': selection, 'config': config,
@@ -219,20 +221,14 @@ def collect_case(root, case, config, tokenizer, verus, z3, lynette):
     # Target validation runs AFTER feedback selection and never feeds it.
     target_folder = folder / 'target'
     if not (target_folder / 'verification.json').exists() or read_json(target_folder / 'verification.json')['error_type'] == 'verifier_error':
-        target = Verifier.classify(limited([verus, str((target_folder / 'reference.rs').resolve())],
+        target = classify(limited([verus, str((target_folder / 'reference.rs').resolve())],
                                           config['verification_timeout'], config['verus_memory_mb'],
                                           cwd=target_folder, env=dict(os.environ, VERUS_Z3_PATH=z3)))
         write_json(target_folder / 'verification.json', target)
     if read_json(target_folder / 'verification.json')['error_type'] == 'verifier_error':
         raise RuntimeError('Target verifier infrastructure failure; retained for retry')
     if not (target_folder / 'preservation.json').exists():
-        try:
-            comparison, count = preservation_target(code, (target_folder / 'reference.rs').read_text(encoding='utf-8'))
-            write_text(target_folder / 'preservation-copy.rs', comparison)
-            check = IntegrityValidator(lynette).validate(folder / 'candidate.rs', target_folder / 'preservation-copy.rs')
-            check['added_loop_isolation_false_attributes_ignored_for_preservation'] = count
-        except (ValueError, IndexError) as error:
-            check = {'status': 'unparseable', 'valid': False, 'reason': str(error)}
+        check = preservation(code, (target_folder / 'reference.rs').read_text(encoding='utf-8'), target_folder, lynette)
         write_json(target_folder / 'preservation.json', check)
     packages = {}
     available, candidate_groups = set(), set()
@@ -283,6 +279,8 @@ def collect_case(root, case, config, tokenizer, verus, z3, lynette):
               'capture_seconds': verification['seconds'], 'replay_stage_seconds_this_session': replay_seconds,
               'packing_seconds_this_session': packing_seconds,
               'target_verification_seconds': read_json(target_folder / 'verification.json')['seconds']}
+    result['training_eligibility'] = eligibility(result, read_json(folder / 'metadata.json'))
+    write_json(folder / 'training-eligibility.json', result['training_eligibility'])
     write_json(folder / 'result.json', result)
     return result
 
@@ -350,7 +348,8 @@ def summarize(root):
     cases = manifest['selection']['cases']
     results, missing, collections, captures = [], [], [], []
     exports = {name: [] for name in ('baseline', *PACKAGES)}
-    master = []
+    master, eligibility_rows = [], []
+    validated = {name: [] for name in exports}
     for case in cases:
         folder = root / 'examples' / case['id']
         row, metadata = read_json(folder / 'original.json'), read_json(folder / 'metadata.json')
@@ -359,25 +358,38 @@ def summarize(root):
             master.append({'id': case['id'], 'original': row, 'metadata': metadata, 'status': 'pending_or_collection_error'})
             continue
         result = read_json(folder / 'result.json')
+        decision = eligibility(result, metadata)
+        eligibility_rows.append({'id': case['id'], **decision})
         results.append(result)
         if (folder / 'collection.json').exists():
             collections.append(read_json(folder / 'collection.json'))
         if (folder / 'solver/report.json').exists():
             captures.append(read_json(folder / 'solver/report.json'))
         master.append({'id': case['id'], 'original': row, 'metadata': metadata, 'collection': result,
+                       'training_eligibility': decision,
                        'artifact_directory': str(folder.relative_to(root))})
         for name in exports:
             messages = read_json(folder / f'messages-{name}.json')
             exports[name].append({'id': case['id'], 'family_id': metadata['family_id'],
                                   'messages': messages + [{'role': 'assistant', 'content': row['output']}],
                                   'training_policy': 'assistant_output_only; pilot_unsplit_unfiltered'})
+            if decision['eligible']:
+                validated[name].append({**exports[name][-1],
+                                        'training_policy': 'assistant_output_only; verified_preserved; unsplit'})
     for name, rows in exports.items():
         write_text(root / 'exports' / f'{name}.jsonl', ''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in rows))
+        write_text(root / 'exports' / 'validated' / f'{name}.jsonl',
+                   ''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in validated[name]))
+    write_json(root / 'training-eligibility.json', eligibility_rows)
     write_text(root / 'master.jsonl', ''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in master))
     summary = {'expected': len(cases), 'completed': len(results), 'complete': not missing, 'missing': missing,
+               'preservation_policy': manifest.get('config', {}).get('preservation_policy', 'legacy_unversioned'),
                'statuses': dict(Counter(r['status'] for r in results)),
                'input_errors': dict(Counter(r['input_error_type'] for r in results)),
                'target_verified': sum(r['target_success'] for r in results),
+               'training_eligible': sum(r['eligible'] for r in eligibility_rows),
+               'training_eligible_with_internals': sum(r['eligible'] and r['internals_available'] for r in eligibility_rows),
+               'training_exclusion_reasons': dict(Counter(reason for r in eligibility_rows for reason in r['reasons'])),
                'original_query_results': dict(Counter(q['result'] for c in captures for q in c['queries'])),
                'capture_errors': sum(len(c['capture_errors']) for c in captures),
                'replayed_queries': sum(len(c['queries']) for c in collections),
@@ -400,7 +412,7 @@ def summarize(root):
                'phase_seconds': {phase: distribution([r[phase] for r in results]) for phase in
                                  ('capture_seconds', 'replay_stage_seconds_this_session', 'packing_seconds_this_session', 'target_verification_seconds')},
                'artifact_bytes': sum(p.stat().st_size for p in root.rglob('*') if p.is_file()),
-               'export_scope': 'same completed IDs and targets in all three views; unfiltered; not certified training data',
+               'export_scope': 'exports/ keeps all completed IDs; exports/validated/ contains shared verified/preserved positive IDs; both remain unsplit',
                'version_compatibility': 'SAFE original Verus commit not established; fixed historical VerusBench revision tested empirically'}
     write_json(root / 'summary.json', summary)
     lines = ['# SAFE internals pilot', '', f"Completed: {len(results)}/{len(cases)}; complete: {not missing}.",
@@ -411,10 +423,12 @@ def summarize(root):
     lines += ['', 'Statuses: ' + str(summary['statuses']), 'Input errors: ' + str(summary['input_errors']),
               f"Targets accepted by Verus: {summary['target_verified']} (assume-containing targets are tagged, not filtered).",
               'Preservation: ' + str(summary['preservation']),
+              f"Validated positive SFT candidates: {summary['training_eligible']}; with internals: {summary['training_eligible_with_internals']}.",
+              'Exclusion reasons (can overlap): ' + str(summary['training_exclusion_reasons']),
               f"Packet budget violations: {summary['package_budget_violations']}; input+4096 violations: {summary['context_reservation_violations']}.",
               f"Queries replayed/concordant: {summary['replayed_queries']}/{summary['concordant_replayed_queries']}; capture errors: {summary['capture_errors']}.",
               'Per-case seconds: ' + str(summary['case_seconds']),
-              'All rows retained in master.jsonl. Exports are unsplit, unfiltered pilot views. Do not train blindly.',
+              'All rows retained in master.jsonl. exports/ is unfiltered; exports/validated/ contains verified/preserved positives. Both remain unsplit.',
               'Raw observations are bounded samples from outcome-concordant diagnostic replays, not the original solver search.']
     write_text(root / 'report.md', '\n'.join(lines))
     print(root / 'report.md', flush=True)

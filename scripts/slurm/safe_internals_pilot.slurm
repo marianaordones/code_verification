@@ -26,5 +26,6 @@ if [[ -f "$tools_bundle_dir/tools-native.json" ]]; then
 fi
 source scripts/cluster/setup_z3_internals.sh
 python -m unittest discover -s tests -p 'test_safe_internals.py' -v
-python -m safe_internals prepare --dataset "${1:?SAFE JSON path}" --output "$output"
+python -m safe_internals prepare --dataset "${1:?SAFE JSON path}" --output "$output" \
+    --config "${4:-configs/safe-internals-pilot200.json}"
 python -m safe_internals collect --output "$output" --workers 2

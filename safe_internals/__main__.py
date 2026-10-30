@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from pathlib import Path
 import sys
 
-from .pipeline import prepare, collect, summarize
+from .pipeline import prepare, collect, summarize, CONFIG
 
 
 @contextmanager
@@ -25,6 +25,7 @@ def main():
     parser.add_argument('command', choices=['prepare', 'collect', 'report'])
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--dataset', type=Path)
+    parser.add_argument('--config', type=Path, default=CONFIG)
     parser.add_argument('--workers', type=int, default=2)
     args = parser.parse_args()
     if not 1 <= args.workers <= 2:
@@ -33,7 +34,7 @@ def main():
         parser.error('prepare requires --dataset')
     with lock(args.output):
         if args.command == 'prepare':
-            prepare(args.dataset.resolve(), args.output.resolve())
+            prepare(args.dataset.resolve(), args.output.resolve(), args.config)
             return 0
         if args.command == 'report':
             summarize(args.output.resolve())

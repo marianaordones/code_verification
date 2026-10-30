@@ -7,7 +7,7 @@ import tempfile
 from baseline.obligation import collect_queries
 from baseline.prompts import ROOT
 from baseline.storage import write_text
-from baseline.verifier import Verifier
+from .validation import classify
 
 
 def verify(verifier, source):
@@ -25,7 +25,7 @@ def verify(verifier, source):
         env = dict(os.environ, VERUS_Z3_PATH=str(proxy), Z3_PROBE_REAL=verifier.z3,
                    Z3_PROBE_CAPTURE=str(capture.resolve()))
         env['PYTHONPATH'] = str(ROOT) + os.pathsep + env.get('PYTHONPATH', '')
-        value = Verifier.classify(limited([verifier.executable, str(source.resolve())],
+        value = classify(limited([verifier.executable, str(source.resolve())],
                                           verifier.timeout, verifier.memory_mb, cwd=source.parent, env=env))
     collect_queries(capture, folder, value['timed_out'])
     return value

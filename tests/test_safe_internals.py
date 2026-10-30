@@ -7,6 +7,7 @@ from unittest.mock import patch
 from baseline.integrity import lexical_check
 from baseline.storage import write_json, write_text, read_json
 from safe_internals import data, pipeline
+from safe_internals import validation
 from solver_needs_study import feedback
 
 
@@ -26,6 +27,74 @@ def example(index=0):
 
 
 class SafePilotTests(unittest.TestCase):
+    def test_safe_policy_accepts_attribute_removal_and_addition_in_comparison_copies_only(self):
+        source = '#[verifier::loop_isolation(false)]\nverus! { proof fn f() { assert(forall|i:int| #[trigger] g(i)); } }'
+        target = 'verus! { proof fn f() { assert(forall|i:int| g(i)); } }'
+        a, ai = validation.normalize(source)
+        b, bi = validation.normalize(target)
+        self.assertTrue(lexical_check(a, b)[0])
+        self.assertEqual(len(ai), 2)
+        self.assertEqual(bi, [])
+        self.assertTrue(lexical_check(b, a)[0])
+        with tempfile.TemporaryDirectory() as work, \
+                patch.object(validation.IntegrityValidator, 'validate', return_value={'valid': True, 'status': 'valid'}) as check:
+            result = validation.preservation(source, target, Path(work), 'lynette')
+            before, after = check.call_args.args
+            self.assertNotIn('loop_isolation', before.read_text(encoding='utf-8'))
+            self.assertNotIn('trigger', before.read_text(encoding='utf-8'))
+            self.assertTrue(result['valid'])
+            self.assertEqual(result['policy'], validation.POLICY)
+        self.assertIn('loop_isolation', source)
+
+    def test_other_attributes_trust_bypasses_and_infinite_loop_are_not_exempt(self):
+        source = 'verus! { fn f() { return; } }'
+        a, _ = validation.normalize(source)
+        for attr in ('#[verifier::loop_isolation(true)]', '#[verifier::external_body]', '#[allow(unused)]'):
+            target, _ = validation.normalize(attr + source)
+            self.assertFalse(lexical_check(a, target)[0])
+        target, _ = validation.normalize(source.replace('return;', 'assume(false); return;'))
+        self.assertFalse(lexical_check(a, target)[0])
+        with tempfile.TemporaryDirectory() as work, \
+                patch.object(validation.IntegrityValidator, 'validate', side_effect=AssertionError('Reject before AST')):
+            value = validation.preservation(source, source.replace('return;', 'loop {} return;'), Path(work), 'lynette')
+        self.assertEqual(value['status'], 'invalid')
+        self.assertIn('infinite loop', value['reason'])
+
+    def test_contracts_and_exec_changes_still_reach_strict_ast_checker(self):
+        source = 'verus! { fn f() -> (r:int) ensures r == 1 { 1 } }'
+        target = source.replace('r == 1', 'true')
+        with tempfile.TemporaryDirectory() as work, \
+                patch.object(validation.IntegrityValidator, 'validate', return_value={'valid': False, 'status': 'invalid'}) as check:
+            result = validation.preservation(source, target, Path(work), 'lynette')
+            self.assertEqual(result['status'], 'invalid')
+            self.assertEqual(check.call_count, 1)
+            self.assertIn('ensures true', check.call_args.args[1].read_text(encoding='utf-8'))
+
+    def test_compiler_trait_diagnostic_is_not_misclassified_as_proof(self):
+        result = validation.classify({'returncode': 1, 'timed_out': False,
+                                     'stdout': 'verification results:: 0 verified, 0 errors',
+                                     'stderr': 'error[E0599]: trait bounds were not satisfied', 'seconds': 1})
+        self.assertEqual(result['error_type'], 'compilation')
+        self.assertFalse(result['success'])
+
+    def test_training_filter_requires_verification_preservation_and_no_assume(self):
+        good = {'target_success': True, 'preservation_status': 'valid', 'status': 'internals_available'}
+        tags = {'target_tags': {'assume_call': False}}
+        self.assertTrue(validation.eligibility(good, tags)['eligible'])
+        for changes in ({'target_success': False}, {'preservation_status': 'invalid'},
+                        {'preservation_status': 'unparseable'}, {'status': 'input_already_verified'}):
+            self.assertFalse(validation.eligibility({**good, **changes}, tags)['eligible'])
+        self.assertFalse(validation.eligibility(good, {'target_tags': {'assume_call': True}})['eligible'])
+        self.assertTrue(validation.eligibility({**good, 'status': 'no_captured_failing_queries'}, tags)['eligible'])
+
+    def test_frozen_1000_contains_original_200_in_same_order(self):
+        original = read_json(pipeline.ROOT / 'configs/safe-repair-pilot200.json')
+        extended = read_json(pipeline.ROOT / 'configs/safe-repair-pilot1000.json')
+        self.assertEqual(extended['cases'][:200], original['cases'])
+        self.assertEqual(len(extended['cases']), 1000)
+        self.assertEqual(len({c['input_code_sha256'] for c in extended['cases']}), 1000)
+        self.assertEqual(extended['dataset_sha256'], original['dataset_sha256'])
+
     def test_capture_unmodified_input_then_validate_original_target_and_keep_failed_row(self):
         with tempfile.TemporaryDirectory() as work:
             root = Path(work)
@@ -34,6 +103,7 @@ class SafePilotTests(unittest.TestCase):
             row['output'] = row['output'].replace('proof fn', '#[verifier::loop_isolation(false)]\nproof fn')
             code, target = data.codes(row)
             write_json(folder / 'original.json', row)
+            write_json(folder / 'metadata.json', {'target_tags': {'assume_call': False}})
             write_text(folder / 'candidate.rs', code)
             write_text(folder / 'target/reference.rs', target)
             calls = []
@@ -53,7 +123,7 @@ class SafePilotTests(unittest.TestCase):
                         'stderr': '', 'seconds': 1}
             with patch.object(pipeline.PilotVerifier, 'verify', side_effect=verify_input), \
                  patch.object(pipeline, 'limited', side_effect=verify_target), \
-                 patch.object(pipeline.IntegrityValidator, 'validate', return_value={'status': 'valid', 'valid': True}):
+                 patch.object(validation.IntegrityValidator, 'validate', return_value={'status': 'valid', 'valid': True}):
                 result = pipeline.collect_case(root, {'id': 'a'}, read_json(pipeline.CONFIG),
                                                Tokenizer(), 'verus', 'z3', 'lynette')
             self.assertEqual(calls, ['input', 'target'])
@@ -83,17 +153,17 @@ class SafePilotTests(unittest.TestCase):
         self.assertTrue(data.code_tags(code + '\nassume(true);')['assume_call'])
         source = 'verus! { proof fn f() { assert(true); } }'
         target = source.replace('proof fn', '#[verifier::loop_isolation(false)]\nproof fn')
-        comparison, count = data.preservation_target(source, target)
-        self.assertEqual(count, 1)
-        self.assertTrue(lexical_check(source, comparison)[0])
+        original, _ = validation.normalize(source)
+        comparison, ignored = validation.normalize(target)
+        self.assertEqual(len(ignored), 1)
+        self.assertTrue(lexical_check(original, comparison)[0])
         self.assertIn('loop_isolation(false)', target)
-        unchanged, count = data.preservation_target(target, target)
-        self.assertEqual(unchanged, target)
-        self.assertEqual(count, 0)
-        removed, _ = data.preservation_target(target, source)
-        self.assertFalse(lexical_check(target, removed)[0])
+        unchanged, ignored = validation.normalize(target)
+        self.assertEqual(unchanged, comparison)
+        self.assertEqual(len(ignored), 1)
+        self.assertTrue(lexical_check(comparison, original)[0])
         assume_target = source.replace('assert(true)', 'assume(true)')
-        comparison, _ = data.preservation_target(source, assume_target)
+        comparison, _ = validation.normalize(assume_target)
         self.assertFalse(lexical_check(source, comparison)[0])
 
     def test_family_components_join_source_target_and_labels(self):
@@ -175,8 +245,19 @@ class SafePilotTests(unittest.TestCase):
             views = [json.loads((root / 'exports' / f'{n}.jsonl').read_text()) for n in ('baseline', *pipeline.PACKAGES)]
             self.assertEqual(views[0], views[1])
             self.assertEqual(views[1], views[2])
+            self.assertEqual(report['training_eligible'], 0)
+            self.assertEqual((root / 'exports/validated/50x3.jsonl').read_text(), '')
             with patch.object(pipeline.PilotVerifier, 'verify', side_effect=AssertionError('No repeat verification')):
                 self.assertEqual(pipeline.collect_case(root, cases[0], {}, None, '', '', ''), result)
+            result.update(target_success=True, preservation_status='valid')
+            write_json(folder / 'result.json', result)
+            report = pipeline.summarize(root)
+            self.assertEqual(report['training_eligible'], 1)
+            self.assertEqual(report['training_eligible_with_internals'], 0)
+            positives = [json.loads((root / 'exports/validated' / f'{n}.jsonl').read_text())
+                         for n in ('baseline', *pipeline.PACKAGES)]
+            self.assertTrue(all(row['id'] == 'a' for row in positives))
+            self.assertEqual(positives[0]['messages'][-1], positives[2]['messages'][-1])
 
 
 if __name__ == '__main__':

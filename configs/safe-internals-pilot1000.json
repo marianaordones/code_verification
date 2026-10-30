@@ -1,0 +1,12 @@
+{
+  "examples": 1000,
+  "selection_file": "configs/safe-repair-pilot1000.json",
+  "seed": 20261018,
+  "verification_timeout": 120,
+  "verus_revision_contains": "33269ac",
+  "verus_memory_mb": 4096,
+  "replay_memory_mb": 2048,
+  "replay_wall_seconds": 20,
+  "max_queries": 3,
+  "raw_instances_per_group": 8
+}

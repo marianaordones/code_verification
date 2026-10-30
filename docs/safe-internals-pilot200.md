@@ -1,5 +1,7 @@
 # SAFE: CPU pilot with 200 repair examples
 
+The original completed 200-example run used the earlier preservation policy and unfiltered-only exports. The current collector now uses SAFE proof-attribute policy v2 (permitting removal of false loop-isolation and supported trigger annotations in comparison copies), and also writes `exports/validated/`. For a fresh 1,000-example run including these 200, see [safe-internals-pilot1000.md](safe-internals-pilot1000.md). Do not resume old outputs under changed code/policy.
+
 This collects data only. No GPU, Qwen inference, fine-tuning, or LLM service is used. It downloads only the pinned Qwen Coder tokenizer files.
 
 ## Run on the cluster
@@ -57,7 +59,7 @@ The original SAFE Verus commit was not established from the publication/data car
 2. For a failed input, replay the first up to three SAT/UNKNOWN queries once each. Each replay has a 5-second solver timeout, 20-second outer wall limit and 2GiB per-process address-space limit. Verus processes have 120 seconds and a 4GiB per-process address-space limit. Child processes inherit a 128MiB **per-file** size limit; this is not a total-directory storage quota. Resource/capture failures remain recorded and may prevent feedback.
 3. Save the existing relevance-ranked reservoir: up to 128 quantifier groups per replay, up to eight distinct instances per group, with events above 64,000 serialized characters omitted. Counts of observed/saved events and callback errors remain in raw reports. These are bounded samples, **not all quantifiers or all events in the search**. No matching/chain/clause-complement collection is added.
 4. Build both views from those same saved events, without a second replay: **12,288 tokens / 20 groups × 3 instances**, and **24,576 tokens / 50 groups × 3 instances**. Ranking, background quotas and whole-formula selection reuse the existing selector. Limits are global across selected queries. Only result-concordant replays are eligible. Arithmetic-statistic key spelling is normalized; original statistics remain in the replay report.
-5. Verify the original output separately, after feedback selection. Run preservation independently, allowing only added `loop_isolation(false)` attributes in a comparison copy. The actual target verified by Verus is never stripped or edited. Other preservation failures are recorded, not discarded.
+5. Verify the original output separately, after feedback selection. Run preservation independently under the current SAFE policy v2: supported trigger attributes and `loop_isolation(false)` are omitted from both comparison copies, allowing their addition/removal. Actual programs verified by Verus are never stripped or edited. Other preservation failures remain recorded. Executable/contracts changes and bypasses remain blocked.
 
 Inputs that already verify, compilation/syntax failures, no captured failing queries, divergent replays, targets that fail, and targets containing actual `assume(...)` calls all remain in the master. `assume` is tagged independently on input and target, ignoring comments and strings; nothing is filtered yet. An accepted target containing `assume` is not thereby certified as a complete proof. Verifier infrastructure failures stay pending for retry.
 
