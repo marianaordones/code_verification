@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=safe-internals-rest
-#SBATCH --partition=new_p_gen
-#SBATCH --qos=high
+#SBATCH --partition=new_p_general
+#SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
