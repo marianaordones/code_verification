@@ -49,10 +49,14 @@ def configuration(path=DEFAULT_CONFIG):
         raise ValueError('Advanced study requires 14k extra, 5s replay, 64MiB trace cap and 0.95 GPU allocation')
     if config.get('advanced_blocks') and config['advanced_blocks'] != ['matching', 'chains', 'non_inst_clauses']:
         raise ValueError('Expected the three fixed advanced-block arms')
+    if config.get('single_arm') and (config['single_arm'] != 'with_internals' or not config.get('complement_token_budget') or advanced):
+        raise ValueError('Single-arm mode requires the base24k + complement16k protocol')
     return config
 
 
 def study_arms(config):
+    if config.get('single_arm'):
+        return (config['single_arm'],)
     return tuple(config.get('advanced_blocks') or ARMS)
 
 
@@ -353,6 +357,9 @@ def run_case(root, arm, case, config, inference, verifier):
 
 def compare(root):
     manifest = validate(root)
+    if manifest['config'].get('single_arm'):
+        from .single import summarize
+        return summarize(root, manifest)
     if manifest['config'].get('advanced_blocks'):
         from .blocks import compare_blocks
         return compare_blocks(root, manifest)
@@ -502,7 +509,7 @@ def run(args):
         session['wall_seconds'] = time.perf_counter() - started
         write_json(session_path, session)
         report = compare(root)
-    return 0 if report['complete'] and report['first_pair_check_passed'] else 1
+    return 0 if report['complete'] and (config.get('single_arm') or report['first_pair_check_passed']) else 1
 
 
 def main():

@@ -109,11 +109,14 @@ def prepare(source, root):
     print('Prepared:', dict(Counter(r['status'] for r in rows)), flush=True)
 
 
-def messages(original, code, verification, check, context, payload, progress, rejected=None):
+def messages(original, code, verification, check, context, payload, progress, rejected=None, config=None):
     sites, audit = audit_sites(code)
     system = (ROOT / 'prompts/v4/system.txt').read_text(encoding='utf-8') + '\n' + (ROOT / 'prompts/verusbench-three-solver-info.txt').read_text(encoding='utf-8')
     system += '\n' + (ROOT / 'prompts/repair-study/local.txt').read_text(encoding='utf-8')
     system += '\n' + (ROOT / 'prompts/verusbench-local-v2.txt').read_text(encoding='utf-8')
+    if (config or {}).get('loop_isolation_fixed'):
+        system = system.replace('four total proposals', 'three total proposals').replace('at most three localized repair proposals', 'at most two localized repair proposals')
+        system += '\n' + config['extra_system_prompt']
     user = '<original_program>\n' + original + '\n</original_program>\n<current_candidate>\n' + code + '\n</current_candidate>\n'
     user += '<verus_diagnostics>\n' + verification['stdout'] + '\n' + verification['stderr'] + '\n</verus_diagnostics>\n'
     for tag, value in [('integrity_diagnostics', check), ('source_failure_context', context), ('progress', progress), ('editable_sites', sites), ('editor_scope', audit)]:
@@ -132,7 +135,7 @@ def feedback(folder, frozen, original, code, verification, check, progress, infe
         return read_json(cache)
     from solver_needs_study.feedback import internals
     def builder(code, verification, action, context, payload, history, **kw):
-        return messages(original, code, verification, check, context, payload, progress, rejected=rejected)
+        return messages(original, code, verification, check, context, payload, progress, rejected=rejected, config=config)
     if initial:
         shutil.copytree(frozen / 'initial/solver', folder / 'solver', dirs_exist_ok=True)
         if (frozen / 'initial/internals').exists():
@@ -189,8 +192,8 @@ def run_case(root, arm, row, config, inference, verifier, integrity):
                 value = feedback(evidence_folder, frozen, original, code, verification, check, progress, inference, config, initial=index == 1, rejected=rejected)
                 payload, context = value['internals'], value['context']
                 exposure = value
-            prompt = messages(original, code, verification, check, context, payload, progress, rejected=rejected)
-            common = messages(original, code, verification, check, context, None, progress, rejected=rejected)
+            prompt = messages(original, code, verification, check, context, payload, progress, rejected=rejected, config=config)
+            common = messages(original, code, verification, check, context, None, progress, rejected=rejected, config=config)
             count = len(inference.tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True))
             if count + config['max_tokens'] > config['max_model_len']:
                 raise ValueError('Localized prompt exceeds context; no source truncation')

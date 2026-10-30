@@ -28,15 +28,20 @@ def inspect_source(source, destination, config):
     if source == destination or source.is_relative_to(destination) or destination.is_relative_to(source):
         raise ValueError('Source and destination studies must be separate directories')
     manifest = read_json(source / 'manifest.json')
-    if manifest['revision'] != REVISION or len(manifest['cases']) != 100:
-        raise ValueError('Expected the pinned 100-task study')
+    if manifest['revision'] != REVISION or len(manifest['cases']) not in (100, 362):
+        raise ValueError('Expected a pinned 100-task or remaining-362 study')
+    if len(manifest['cases']) == 362:
+        from baseline.prompts import ROOT
+        expected_ids = read_json(ROOT / 'configs/solver-needs-tasks-remaining362.json')['ids']
+        if [case['id'] for case in manifest['cases']] != expected_ids:
+            raise ValueError('Reuse source must contain the frozen remaining 362 IDs in order')
     previous = manifest['config']
     allowed_changes = {'max_attempts', 'internals_token_budget', 'experiment',
                        'reuse_initial_events_required', 'system_prompt_text',
                        'max_quantifiers', 'max_instances_each', 'replay_max_instances',
                        'shared_initial_events_required', 'max_model_len', 'complement_token_budget',
                        'max_unobserved_quantifiers', 'collect_inventory', 'advanced_token_budget',
-                       'advanced_timeout_ms', 'advanced_trace_max_mb', 'gpu_memory_utilization', 'advanced_blocks'}
+                       'advanced_timeout_ms', 'advanced_trace_max_mb', 'gpu_memory_utilization', 'advanced_blocks', 'single_arm'}
     if previous.get('internals_token_budget') != 24576:
         raise ValueError('Reuse must start from the 24k study')
     if {k: v for k, v in config.items() if k not in allowed_changes} != {
