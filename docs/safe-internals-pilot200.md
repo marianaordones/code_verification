@@ -31,6 +31,8 @@ bash scripts/submit_safe_internals_pilot.sh
 
 No native tools bundle? This pilot does not build Verus; restore/provide the existing bundle first. It must contain `tools-native.json` and `tools-native.tar.gz`. Do not substitute the newer Solver Needs Verus release.
 
+The CPU job adds the existing cargo/rustup directories to PATH before staging Verus and checks Rust 1.76.0. If missing, it installs that toolchain without self-updating rustup or changing the default toolchain. A tokenizer-only warning about missing PyTorch/TensorFlow/Flax is expected. pip warnings mentioning unrelated system packages such as Streamlit/s3fs do not establish a collector failure: the pilot installs into its own cache; new installations ignore globally installed packages.
+
 Logs: `logs/safe-internals-200-JOBID.out` and `.err`. The `.out` prints `Collected safe-NNNNN: STATUS` once an example finishes. No real collection has been run locally during implementation.
 
 ## Selection and provenance

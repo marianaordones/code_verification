@@ -34,7 +34,7 @@ flock 9
 if [[ ! -f "$PROJECT_LIBS/.complete" ]]; then
     [[ ! -e "$PROJECT_LIBS" ]] || { echo "Incomplete CPU cache: $PROJECT_LIBS" >&2; return 22; }
     libs_stage="$(mktemp -d "${PROJECT_LIBS}.partial.XXXXXXXX")"
-    "$PYTHON_BIN" -m pip install --only-binary=:all: --target "$libs_stage" -r requirements-safe-cpu.txt
+    "$PYTHON_BIN" -m pip install --ignore-installed --only-binary=:all: --target "$libs_stage" -r requirements-safe-cpu.txt
     PYTHONPATH="$libs_stage" "$PYTHON_BIN" - "$libs_stage" <<'PY'
 import importlib.metadata as m, pathlib, sys
 import transformers, tokenizers, huggingface_hub

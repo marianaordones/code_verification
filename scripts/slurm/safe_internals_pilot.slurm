@@ -18,6 +18,7 @@ if [[ "${3:-collect}" == report ]]; then
     python -m safe_internals report --output "$output"
     exit 0
 fi
+source scripts/cluster/setup_safe_rust.sh
 source scripts/cluster/stage_tools.sh
 if [[ -f "$tools_bundle_dir/tools-native.json" ]]; then
     export SAFE_TOOLS_MANIFEST="$PROJECT_ROOT/$tools_bundle_dir/tools-native.json"
