@@ -24,7 +24,7 @@ cat > "$work/bin/sbatch" <<'SH'
 printf 'sbatch %s\n' "$*" >> "$MOCK_SAFE_CALLS"
 [[ " $* " == *' --hold '* ]]
 [[ " $* " == *' --partition=new_p_general '* ]]
-[[ " $* " == *' --qos=normal '* ]]
+[[ " $* " == *' --qos=high '* ]]
 [[ " $* " != *' --exclude='* && " $* " != *' --nodelist='* && " $* " != *' --gres='* ]]
 echo 900001
 SH
