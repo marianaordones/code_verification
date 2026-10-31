@@ -1,0 +1,371 @@
+{
+  "benchmark_tasks": 150,
+  "hits": [
+    {
+      "id": "safe-01295",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-04331",
+      "field": "input",
+      "benchmark": "misc_tail_triangle",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8613138686131386
+    },
+    {
+      "id": "safe-04338",
+      "field": "input",
+      "benchmark": "diffy_brs4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8894736842105263
+    },
+    {
+      "id": "safe-04338",
+      "field": "input",
+      "benchmark": "diffy_brs5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8105263157894737
+    },
+    {
+      "id": "safe-04345",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-04994",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-05029",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-05431",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8097560975609757
+    },
+    {
+      "id": "safe-05650",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-05650",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.9318181818181818
+    },
+    {
+      "id": "safe-05650",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-05650",
+      "field": "output",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-07278",
+      "field": "input",
+      "benchmark": "diffy_brs3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.9368421052631579
+    },
+    {
+      "id": "safe-07278",
+      "field": "output",
+      "benchmark": "diffy_brs3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8421052631578947
+    },
+    {
+      "id": "safe-07344",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8097560975609757
+    },
+    {
+      "id": "safe-07719",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-07719",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-07719",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-07842",
+      "field": "input",
+      "benchmark": "diffy_s2lif",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8066037735849056
+    },
+    {
+      "id": "safe-09119",
+      "field": "input",
+      "benchmark": "misc_map",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.9272727272727272
+    },
+    {
+      "id": "safe-09119",
+      "field": "output",
+      "benchmark": "misc_map",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8606060606060606
+    },
+    {
+      "id": "safe-10480",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-11844",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.9318181818181818
+    },
+    {
+      "id": "safe-11844",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-11844",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-12299",
+      "field": "input",
+      "benchmark": "misc_findmax",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8014705882352942
+    },
+    {
+      "id": "safe-14001",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8806818181818182
+    },
+    {
+      "id": "safe-14001",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8636363636363636
+    },
+    {
+      "id": "safe-14001",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-14887",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-17649",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-19488",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-19488",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-19488",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-19631",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8146341463414634
+    },
+    {
+      "id": "safe-20349",
+      "field": "input",
+      "benchmark": "diffy_brs2",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8052631578947368
+    },
+    {
+      "id": "safe-20425",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-21364",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-21416",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8181818181818182
+    },
+    {
+      "id": "safe-21755",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8011363636363636
+    },
+    {
+      "id": "safe-21755",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8011363636363636
+    },
+    {
+      "id": "safe-21755",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8522727272727273
+    },
+    {
+      "id": "safe-22244",
+      "field": "input",
+      "benchmark": "diffy_ms3",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8125
+    },
+    {
+      "id": "safe-22244",
+      "field": "input",
+      "benchmark": "diffy_ms4",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8806818181818182
+    },
+    {
+      "id": "safe-22244",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8636363636363636
+    },
+    {
+      "id": "safe-22262",
+      "field": "input",
+      "benchmark": "diffy_ms5",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8181818181818182
+    },
+    {
+      "id": "safe-22437",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-22592",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-22817",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-22864",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8048780487804879
+    },
+    {
+      "id": "safe-23278",
+      "field": "input",
+      "benchmark": "diffy_res1o",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.824390243902439
+    },
+    {
+      "id": "safe-24813",
+      "field": "input",
+      "benchmark": "diffy_sina1",
+      "match": "shingle_containment_review",
+      "benchmark_shingle_coverage": 0.8511904761904762
+    }
+  ],
+  "parse_errors": [],
+  "scope": "First program fence in SAFE input/output vs local VerusBench manifest programs. Comments/whitespace ignored; approximate matches require review. No guarantee against renamed or proof-modified variants."
+}
