@@ -80,6 +80,7 @@ def main():
         'model': model_id, 'revision': revision, 'dataset_manifest': manifest,
         'smoke': args.smoke, 'epochs': args.epochs, 'max_length': 32768,
         'gpu': torch.cuda.get_device_name(), 'torch': torch.__version__,
+        'custom_forward_autocast': 'cuda_bfloat16',
         'training_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'loss': 'assistant tokens only; chunked exact cross entropy; no packing/truncation'}
     provenance_path = args.output / 'training-provenance.json'
@@ -110,13 +111,18 @@ def main():
         def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
             labels = inputs.pop('labels')[:, 1:]
             base = model.get_base_model()
-            hidden = base.model(**inputs, use_cache=False, return_dict=True).last_hidden_state[:, :-1]
+            # Calling base.model bypasses Accelerate's wrapped outer forward.
+            # Explicit autocast is therefore required even with bf16=True in
+            # TrainingArguments, especially for PEFT's FP32 adapter weights.
+            with torch.autocast(device_type='cuda', dtype=torch.bfloat16):
+                hidden = base.model(**inputs, use_cache=False, return_dict=True).last_hidden_state[:, :-1]
             mask = labels != -100
             selected, targets = hidden[mask], labels[mask]
             if not targets.numel():
                 raise ValueError('No supervised tokens')
             def loss_chunk(h, y):
-                logits = base.lm_head(h).float()
+                with torch.autocast(device_type='cuda', dtype=torch.bfloat16):
+                    logits = base.lm_head(h).float()
                 return torch.nn.functional.cross_entropy(logits, y, reduction='sum')
             total = sum(checkpoint(loss_chunk, selected[i:i+128], targets[i:i+128], use_reentrant=False)
                         for i in range(0, len(targets), 128)) / len(targets)

@@ -18,7 +18,15 @@ case "$mode" in
     scontrol release "$job"
     echo "Released job: $job"
     ;;
-  smoke) sbatch --time=04:00:00 scripts/slurm/safe_sft_train.slurm --smoke "$@" ;;
-  train) sbatch scripts/slurm/safe_sft_train.slurm "$@" ;;
+  smoke|train)
+    gpu_options=(--gres="gpu:${SFT_GPU_TYPE:+${SFT_GPU_TYPE}:}1")
+    [[ -z "${SFT_PARTITION:-}" ]] || gpu_options+=(--partition="$SFT_PARTITION")
+    [[ -z "${SFT_NODE:-}" ]] || gpu_options+=(--nodelist="$SFT_NODE")
+    if [[ "$mode" == smoke ]]; then
+      sbatch "${gpu_options[@]}" --time=04:00:00 scripts/slurm/safe_sft_train.slurm --smoke "$@"
+    else
+      sbatch "${gpu_options[@]}" scripts/slurm/safe_sft_train.slurm "$@"
+    fi
+    ;;
   *) echo 'Use validate-generation, prepare, smoke or train' >&2; exit 2 ;;
 esac

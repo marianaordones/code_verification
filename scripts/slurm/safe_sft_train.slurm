@@ -13,6 +13,8 @@
 set -Eeuo pipefail
 cd "${SLURM_SUBMIT_DIR:?}"
 if [[ -f cluster.env ]]; then source ./cluster.env; fi
+# Set before importing torch. Helps fragmentation; does not add GPU capacity.
+export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
 source scripts/cluster/setup_safe_sft.sh
 nvidia-smi
 python scripts/train_safe_sft.py "$@"
