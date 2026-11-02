@@ -10,11 +10,14 @@ python -m solver_needs_study.download tools --destination "$NATIVE_WORKSPACE/ver
 export VERUS_BIN="$NATIVE_WORKSPACE/verus/verus"
 export Z3_BIN="$NATIVE_WORKSPACE/verus/z3"
 export VERUS_Z3_PATH="$Z3_BIN"
-export PATH="$HOME/.cargo/bin:$PATH"
+# Keep the working rustup selected by runtime initialization. Do not shadow it
+# with another HOME alias on the shared filesystem.
 if ! command -v rustup >/dev/null; then
     curl --fail --location --proto '=https' --tlsv1.2 https://sh.rustup.rs -o "$JOB_TMP/rustup-init.sh"
     bash "$JOB_TMP/rustup-init.sh" -y --no-modify-path --profile minimal --default-toolchain none
+    export PATH="${CARGO_HOME:-$HOME/.cargo}/bin:$PATH"
 fi
+source scripts/cluster/stage_local_rustup.sh
 # Probe without an implicit installation, which could trigger a self-update.
 # HOME and /mnt/users may be aliases on this cluster; never replace rustup here.
 export RUSTUP_AUTO_INSTALL=0
