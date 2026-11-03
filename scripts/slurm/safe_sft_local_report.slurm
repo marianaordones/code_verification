@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=safe-local-report
-#SBATCH --partition=new_p_general
+#SBATCH --partition=high_performance
+#SBATCH --gres=gpu:L40S:1
 #SBATCH --qos=high
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4G

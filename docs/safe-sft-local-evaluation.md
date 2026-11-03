@@ -14,25 +14,29 @@ GPU run. The new scripts read the source without modifying it; both old/new
 evaluations may run concurrently if enough GPUs are available.
 
 ```bash
-SFT_GPU_TYPE=L40S bash scripts/submit_safe_sft_local.sh all
+bash scripts/submit_safe_sft_local.sh all
 ```
 
-This submits CPU preparation -> GPU run -> report for each dataset. One GPU per
-dataset; both arms are handled by the same model load. Use SFT_GPU_TYPE=A100 to
-request that Slurm type. high_performance / high for GPU, new_p_general / high for
-CPU, with the existing held-job exclusion workaround. Default GPU limit 48h.
+This submits ONE job per dataset, on high_performance / high with one L40S.
+Preparation, both feedback arms and final reporting run sequentially inside that
+same allocation. No new_p_general jobs or separate CPU dependencies are submitted.
+Both dataset jobs may run in parallel, one L40S each. Default limit 48h, 8 CPUs,
+64G host RAM. GPU type/partition are explicitly fixed by this launcher; old
+SFT_GPU_TYPE/SFT_PARTITION environment overrides no longer change these jobs.
 
 One dataset only, with explicit source and output parents:
 
 ```bash
-SFT_GPU_TYPE=A100 bash scripts/submit_safe_sft_local.sh solver-needs \
+bash scripts/submit_safe_sft_local.sh solver-needs \
   results/safe-sft-eval-v1 results/safe-sft-local-v1
 ```
 
 Reports: results/safe-sft-local-v1/{verusbench,solver-needs}/comparison.md and
 comparison.json. Detailed requests, JSON responses, edit errors, preservation,
 Verus diagnostics and solver packets are retained. Submission IDs are printed and
-stored in logs/safe-local-submission-*.tsv.
+stored in logs/safe-local-submission-*.tsv. Existing queued jobs are not modified
+automatically: cancel only the obsolete job IDs you intend to replace before
+resubmitting. Completed preparation/results are reused with unchanged inputs.
 
 ## Proposals and editable actions
 
