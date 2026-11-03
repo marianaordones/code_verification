@@ -77,6 +77,17 @@ bash scripts/submit_safe_sft.sh train \
 ```
 
 Training defaults to high_performance / high, one GPU, 64G host RAM, 48h limit.
+Optional environment variables on submission: SFT_GPU_TYPE (exact Slurm GPU
+type), SFT_PARTITION and SFT_NODE. Inspect `sinfo -N -o '%N %P %G %f'` first.
+For example, only if the configured type is a100_80gb:
+`SFT_GPU_TYPE=a100_80gb bash scripts/submit_safe_sft.sh smoke --output results/safe-sft-smoke-a100-v2`.
+An A100 may have 40GB or 80GB; its name alone is insufficient to establish capacity.
+The custom internal model forward explicitly enables CUDA BF16 autocast, since
+it bypasses Accelerate's outer forward wrapper. Allocator expandable segments are
+enabled to reduce fragmentation. Neither change guarantees that 32k fits on L40S.
+After an OOM, rerun the smoke test in a new output directory, not the failed one.
+Do not request two GPUs with this single-GPU trainer: DDP does not pool memory for
+one example, and model/FSDP sharding would require a separate implementation.
 It uses a separate pinned dependency cache, not the vLLM environment. Model files
 reuse the existing .cluster/models download without symlinks. Full training has
 not been executed here. L40S memory feasibility and duration require the smoke

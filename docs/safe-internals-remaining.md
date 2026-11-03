@@ -38,7 +38,11 @@ Optional argument 1 changes the dataset path; argument 2 changes the new output 
 bash scripts/submit_safe_internals_remaining.sh "/path/sft_safe_25k.json"
 ```
 
-The launcher prints four job IDs. They have no dependencies on each other or the first two jobs, and can run concurrently when resources permit. Each requests **4 CPUs, 32G RAM, high QoS, 24 hours, no GPU**, with two concurrent examples internally. Four new jobs therefore request a total of 16 CPUs and 128G RAM when all are running.
+The launcher prints four job IDs. They have no dependencies on each other or the first two jobs, and can run concurrently when resources permit. Each requests **partition new_p_general, 4 CPUs, 32G RAM, high QoS, 24 hours, no GPU**, with two concurrent examples internally. Four new jobs therefore request a total of 16 CPUs and 128G RAM when all are running. The correct partition name comes from the supplied `lab_gpu.zip`; `new_p_gen` was not a valid name. Other collector/report scripts retain their own partition settings.
+
+Following the supplied kit, each job is submitted with `--hold`, then excluded nodes are set using `scontrol update`, and only then is it released. No `--exclude` or `--nodelist` is passed to sbatch, since the kit reports those options are rejected at submission. The initial exclusion list is `viper01,viper02,viper03,viper05,viper06,viper07,viper08`: the kit's dated 14 October exclusions plus viper07's observed startup failures. This is a conservative routing choice, not a claim that every listed node remains broken or that GPU driver problems affect CPU collection. It normally leaves viper04 among the listed nodes. Administrators' updated guidance can override the list via `SAFE_EXCLUDE_NODES` (empty is allowed). If updating exclusions fails, the job remains HELD and the launcher stops rather than releasing it onto an unreviewed node.
+
+The kit's Torch/CUDA requirements and GPU health checks are not used for this CPU-only workload. The existing SAFE CPU requirements remain unchanged. Python without pip is now supported: a pinned pip bootstrap is installed in job-local scratch and kept on PYTHONPATH for the later isolated Z3 package installation as well. No system Python, GPU runtime cache, or scientific collector code is modified.
 
 Outputs:
 
@@ -54,6 +58,16 @@ Each output has the same report/master/exports layout as the first jobs. Both 12
 The dedicated selection driver applies a deterministic round-robin by historical diagnostic/isolation strata, preserves every remaining repair row and interleaves that order across four shards. It changes the selector only in its own preparation process, restoring it afterwards, and archives selection-driver provenance with the frozen inputs. Do not run generic `safe_internals prepare` directly for these shards: it would select from the beginning rather than excluding the first 2,000.
 
 ## Resume only one shard
+
+The updated launcher anchors the project directory and supplies absolute stdout/stderr paths to Slurm. It prints each path and writes a submission receipt under `logs/safe-remaining-submission-*.tsv`. The batch script prints `SAFE_REMAINING_START` before initialization and reports failure stage/source line through an ERR trap. Required files and script syntax/line endings are checked before submission. Shared collector modules and their fingerprints remain unchanged.
+
+For a quick failure with empty logs, first consult Slurm rather than assuming a timeout:
+
+```bash
+bash scripts/diagnose_safe_remaining.sh 13293,13294,13295,13296
+```
+
+This login-node diagnostic submits nothing and saves accounting, available scheduler details and log tails into `logs/safe-remaining-diagnosis-13293-13294-13295-13296.txt`. If another startup attempt is needed, update `scripts/submit_safe_internals_remaining.sh` and `scripts/slurm/safe_internals_remaining.slurm`, then submit only one shard with the command below. Its first log lines distinguish user-script execution from scheduler/log-directory failures; the last `SAFE_STAGE`/`SAFE_REMAINING_ERROR` identifies the failing initialization stage. Exit 1 alone does not establish which command failed.
 
 Use the same dataset/output/code/tools. For example, resubmit only shard c:
 
