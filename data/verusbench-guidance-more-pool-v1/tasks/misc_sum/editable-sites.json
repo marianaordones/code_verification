@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 349,
+    "end": 349,
+    "line": 20,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 373,
+    "end": 373,
+    "line": 21,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 419,
+    "end": 547,
+    "line": 23,
+    "existing_text": "invariant\n            0 <= i <= n,\n            arith_sum_int(n as nat) < 10000,\n            arith_sum_int(i as nat) == sum,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 557,
+    "end": 557,
+    "line": 28,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 576,
+    "end": 576,
+    "line": 29,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 777,
+    "end": 777,
+    "line": 35,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 802,
+    "end": 802,
+    "line": 37,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 809,
+    "end": 809,
+    "line": 40,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

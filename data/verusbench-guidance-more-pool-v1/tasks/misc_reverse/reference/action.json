@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= n <= length / 2,\n            v.len() == old(v).len(),\n            v.len() == length,\n            forall|i: int| 0 <= i < n ==> v[i] == old(v)[length - i - 1],\n            forall|i: int| 0 <= i < n ==> v[length - i - 1] == old(v)[i],\n            forall|i: int| n <= i < length - n ==> v[i] == old(v)[i],\n        "
+    }
+  ]
+}

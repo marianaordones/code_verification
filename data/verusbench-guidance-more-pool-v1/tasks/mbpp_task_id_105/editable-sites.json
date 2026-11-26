@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 439,
+    "end": 439,
+    "line": 26,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 462,
+    "end": 462,
+    "line": 27,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 520,
+    "end": 671,
+    "line": 30,
+    "existing_text": "invariant\n            0 <= index <= arr.len(),\n            0 <= counter <= index,\n            count_boolean(arr.subsequence(0, index)) == counter,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 681,
+    "end": 681,
+    "line": 35,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 711,
+    "end": 711,
+    "line": 36,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 743,
+    "end": 743,
+    "line": 38,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 765,
+    "end": 765,
+    "line": 40,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 776,
+    "end": 776,
+    "line": 43,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

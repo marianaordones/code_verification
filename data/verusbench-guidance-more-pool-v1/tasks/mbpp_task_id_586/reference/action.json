@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            n <= index <= list.len(),\n            list@.subrange(n as int, index as int) =~= new_list@,\n        "
+    },
+    {
+      "site_id": "R7",
+      "replacement": "invariant\n            0 < n < list@.len(),\n            0 <= index <= n,\n            new_list@ =~= list@.subrange(n as int, list@.len() as int).add(\n                list@.subrange(0, index as int),\n            ),\n        "
+    }
+  ]
+}

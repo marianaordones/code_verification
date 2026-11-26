@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\CloverBench\\verified\\array_append_strong.rs",
+  "official_source_sha256": "6f5b605eb266e7482c7135db2f344f2cd7396eeaa8917b1f49f3fbde45677256",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

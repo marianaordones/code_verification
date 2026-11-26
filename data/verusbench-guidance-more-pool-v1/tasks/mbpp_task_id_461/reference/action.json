@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= text.len(),\n            0 <= count <= index,\n            count_uppercase_recursively(text@.subrange(0, index as int)) == count,\n        "
+    }
+  ]
+}

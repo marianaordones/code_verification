@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_588/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 2 verified, 1 errors\n",
+  "stderr": "note: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_588/proposal_01/candidate.rs:29:1\n   |\n29 | fn difference_max_min(arr: &Vec<i32>) -> (diff: i32)\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_588/proposal_01/candidate.rs:35:1\n   |\n34 |           diff == max_rcur(arr@) - min_rcur(arr@),\n   |           --------------------------------------- failed this postcondition\n35 | / {\n36 | |     let mut min_val = arr[0];\n37 | |     let mut max_val = arr[0];\n38 | |     let mut index = 1;\n...  |\n56 | |     max_val - min_val\n57 | | }\n   | |_^ at the end of the function body\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_588/proposal_01/candidate.rs:43:13\n   |\n43 |             index > 0 ==> forall|i: int| 0 <= i < index ==> min_val <= #[trigger] arr[i] <= max_val,\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.898696094984189,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 2,
+  "verification_errors": 1
+}

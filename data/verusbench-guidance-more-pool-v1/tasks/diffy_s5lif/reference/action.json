@@ -1,0 +1,16 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n\t\t\tforall |j: int| 0<= j < i ==> a[j] == 1,\n\t\t\ta.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R7",
+      "replacement": "invariant\n\t\t\tforall |j: int| 0<= j < i ==> a[j] == 6,\n\t\t\tforall |j: int| i <= j < N ==> a[j] == 1,\n\t\t\ta.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R13",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tforall |j: int| 0<= j < N ==> a[j] == 6,\n\t\t\tsum[0] == 6 * i,\n\t\t\tsum.len() == 1,\n\t\t\ta.len() == N,\n\t\t\tN < 1000,\n\t        "
+    }
+  ]
+}

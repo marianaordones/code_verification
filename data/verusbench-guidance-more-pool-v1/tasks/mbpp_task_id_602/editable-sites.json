@@ -1,0 +1,114 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 476,
+    "end": 476,
+    "line": 25,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 499,
+    "end": 499,
+    "line": 26,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 556,
+    "end": 662,
+    "line": 28,
+    "existing_text": "invariant\n            0 <= index <= arr.len(),\n            count_frequency_rcr(arr@, key) == counter,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 672,
+    "end": 672,
+    "line": 32,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 709,
+    "end": 709,
+    "line": 33,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 741,
+    "end": 741,
+    "line": 35,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 763,
+    "end": 763,
+    "line": 37,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1273,
+    "end": 1273,
+    "line": 52,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "id": "R9",
+    "kind": "loop_invariants",
+    "start": 1329,
+    "end": 1496,
+    "line": 54,
+    "existing_text": "invariant\n            0 <= index <= str1.len(),\n            forall|k: int|\n                0 <= k < index ==> count_frequency_rcr(str1@, #[trigger] str1[k]) <= 1,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1506,
+    "end": 1506,
+    "line": 59,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1563,
+    "end": 1563,
+    "line": 60,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1616,
+    "end": 1616,
+    "line": 62,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1638,
+    "end": 1638,
+    "line": 64,
+    "existing_text": "",
+    "id": "R13"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1646,
+    "end": 1646,
+    "line": 67,
+    "existing_text": "",
+    "id": "R14"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_142/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 0 errors\n",
+  "stderr": "error[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_142/proposal_01/candidate.rs:35:40\n   |\n35 |             count_identical(arr1@.take(index), arr2@.take(index), arr3@.take(index)) == count,\n   |                                   ---- ^^^^^ expected `int`, found `usize`\n   |                                   |\n   |                                   arguments to this method are incorrect\n   |\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:137:22\n\nerror[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_142/proposal_01/candidate.rs:35:59\n   |\n35 |             count_identical(arr1@.take(index), arr2@.take(index), arr3@.take(index)) == count,\n   |                                                      ---- ^^^^^ expected `int`, found `usize`\n   |                                                      |\n   |                                                      arguments to this method are incorrect\n   |\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:137:22\n\nerror[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_142/proposal_01/candidate.rs:35:78\n   |\n35 |             count_identical(arr1@.take(index), arr2@.take(index), arr3@.take(index)) == count,\n   |                                                                         ---- ^^^^^ expected `int`, found `usize`\n   |                                                                         |\n   |                                                                         arguments to this method are incorrect\n   |\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:137:22\n\nerror: aborting due to 3 previous errors\n\nFor more information about this error, try `rustc --explain E0308`.\n",
+  "timed_out": false,
+  "seconds": 12.728862274903804,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": 0
+}

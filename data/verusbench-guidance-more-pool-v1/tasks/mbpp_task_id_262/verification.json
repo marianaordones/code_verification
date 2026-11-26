@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 1 verified, 2 errors\n",
+  "stderr": "note: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs:6:1\n  |\n6 | fn split_array(list: &Vec<i32>, l: usize) -> (new_list: (Vec<i32>, Vec<i32>))\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs:13:1\n   |\n11 |           new_list.0@ == list@.subrange(0, l as int),\n   |           ------------------------------------------ failed this postcondition\n12 |           new_list.1@ == list@.subrange(l as int, list.len() as int),\n13 | / {\n14 | |     let mut part1: Vec<i32> = Vec::new();\n15 | |     let mut index = 0;\n16 | |     while index < l\n...  |\n36 | |     (part1, part2)\n37 | | }\n   | |_^ at the end of the function body\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs:13:1\n   |\n12 |           new_list.1@ == list@.subrange(l as int, list.len() as int),\n   |           ---------------------------------------------------------- failed this postcondition\n13 | / {\n14 | |     let mut part1: Vec<i32> = Vec::new();\n15 | |     let mut index = 0;\n16 | |     while index < l\n...  |\n36 | |     (part1, part2)\n37 | | }\n   | |_^ at the end of the function body\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs:20:67\n   |\n20 |             forall |k: int| 0 <= k < index ==> part1[k as int] == list[k as int],\n   |                                                                   ^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_262/proposal_01/candidate.rs:22:20\n   |\n22 |         part1.push(list[index]);\n   |                    ^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 16.922937814844772,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 1,
+  "verification_errors": 2
+}

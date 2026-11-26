@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 0 errors\n",
+  "stderr": "error[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:43:38\n   |\n43 |             min_val == min_rcur(arr@[0..index]),\n   |                                 -----^^^^^^^^-\n   |                                 |    |\n   |                                 |    expected `int`, found `Range<usize>`\n   |                                 arguments to this method are incorrect\n   |\n   = note: expected struct `builtin::int`\n              found struct `std::ops::Range<usize>`\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:60:22\n\nerror[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:43:33\n   |\n43 |             min_val == min_rcur(arr@[0..index]),\n   |                        -------- ^^^^^^^^^^^^^^ expected `Seq<i32>`, found `i32`\n   |                        |\n   |                        arguments to this function are incorrect\n   |\n   = note: expected struct `vstd::seq::Seq<i32>`\n                found type `i32`\nnote: function defined here\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:19:9\n   |\n19 | spec fn min_rcur(seq: Seq<i32>) -> int\n   |         ^^^^^^^^ -------------\n\nerror[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:44:38\n   |\n44 |             max_val == max_rcur(arr@[0..index]),\n   |                                 -----^^^^^^^^-\n   |                                 |    |\n   |                                 |    expected `int`, found `Range<usize>`\n   |                                 arguments to this method are incorrect\n   |\n   = note: expected struct `builtin::int`\n              found struct `std::ops::Range<usize>`\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:60:22\n\nerror[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:44:33\n   |\n44 |             max_val == max_rcur(arr@[0..index]),\n   |                        -------- ^^^^^^^^^^^^^^ expected `Seq<i32>`, found `i32`\n   |                        |\n   |                        arguments to this function are incorrect\n   |\n   = note: expected struct `vstd::seq::Seq<i32>`\n                found type `i32`\nnote: function defined here\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_476/proposal_01/candidate.rs:9:9\n   |\n9  | spec fn max_rcur(seq: Seq<i32>) -> int\n   |         ^^^^^^^^ -------------\n\nerror: aborting due to 4 previous errors\n\nFor more information about this error, try `rustc --explain E0308`.\n",
+  "timed_out": false,
+  "seconds": 6.313076494028792,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": 0
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs5/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 0 errors\n",
+  "stderr": "error[E0277]: the trait bound `bool: builtin::Integer` is not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs5/proposal_01/candidate.rs:40:14\n   |\n40 |             sum[0] == (i > 0) as int * (5 * (i / 5) + a[0] * (i % 5 == 0)),\n   |                       ^^^^^^^^^^^^^^ the trait `builtin::Integer` is not implemented for `bool`\n   |\nnote: required by a bound in `builtin::spec_cast_integer`\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/builtin/src/lib.rs:895:1\n\nerror[E0277]: the trait bound `bool: builtin::Integer` is not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs5/proposal_01/candidate.rs:40:53\n   |\n40 |             sum[0] == (i > 0) as int * (5 * (i / 5) + a[0] * (i % 5 == 0)),\n   |                                                       -------^^^^^^^^^^^^\n   |                                                       |      |\n   |                                                       |      the trait `builtin::Integer` is not implemented for `bool`\n   |                                                       required by a bound introduced by this call\n   |\n   = help: the trait `builtin::SpecMul<Rhs>` is implemented for `i32`\n   = note: required for `i32` to implement `builtin::SpecMul<bool>`\n\nerror: aborting due to 2 previous errors\n\nFor more information about this error, try `rustc --explain E0277`.\n",
+  "timed_out": false,
+  "seconds": 6.42334937886335,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": 0
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_ms5/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 2 verified, 1 errors\n",
+  "stderr": "error: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_ms5/proposal_01/candidate.rs:36:4\n   |\n36 |             sum[0] <= 4 * i,\n   |             ^^^^^^^^^^^^^^^\n\nerror: aborting due to 1 previous error\n\n",
+  "timed_out": false,
+  "seconds": 10.185301437973976,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 2,
+  "verification_errors": 1
+}

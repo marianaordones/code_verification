@@ -1,0 +1,98 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 269,
+    "end": 269,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 309,
+    "end": 309,
+    "line": 14,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 346,
+    "end": 346,
+    "line": 15,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 402,
+    "end": 595,
+    "line": 18,
+    "existing_text": "invariant\n            index <= first_end,\n            replaced_list.len() == index,\n            first.len() > 0,\n            forall |k:int| 0 <= k < index ==> replaced_list[k] == first[k],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 605,
+    "end": 605,
+    "line": 24,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 647,
+    "end": 647,
+    "line": 25,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 669,
+    "end": 669,
+    "line": 27,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "id": "R8",
+    "kind": "loop_invariants",
+    "start": 719,
+    "end": 1020,
+    "line": 29,
+    "existing_text": "invariant\n            index <= second.len(),\n            replaced_list.len() == first_end + index,\n            first.len() > 0,\n            forall |k:int| 0 <= k < first_end ==> replaced_list[k] == first[k],\n            forall |k:int| 0 <= k < index ==> replaced_list[first_end + k] == second[k],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1030,
+    "end": 1030,
+    "line": 36,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1073,
+    "end": 1073,
+    "line": 37,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1095,
+    "end": 1095,
+    "line": 39,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1112,
+    "end": 1112,
+    "line": 42,
+    "existing_text": "",
+    "id": "R12"
+  }
+]

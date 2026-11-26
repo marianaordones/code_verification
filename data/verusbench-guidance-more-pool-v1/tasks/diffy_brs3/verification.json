@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs3/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 1 verified, 2 errors\n",
+  "stderr": "error: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs3/proposal_01/candidate.rs:40:4\n   |\n40 |             sum[0] == 3 * (i as i32) - a[0],\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_brs3/proposal_01/candidate.rs:40:4\n   |\n40 |             sum[0] == 3 * (i as i32) - a[0],\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.418361453805119,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 1,
+  "verification_errors": 2
+}

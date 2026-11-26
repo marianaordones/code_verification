@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant \n            i <= n,\n            sum == arith_sum_int(i as nat),\n            arith_sum_int(n as nat) < 10000,\n        "
+    }
+  ]
+}

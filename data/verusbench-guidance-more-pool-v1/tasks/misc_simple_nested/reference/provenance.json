@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\Misc\\verified\\simple_nested.rs",
+  "official_source_sha256": "181e1dcc73409409368c7f513275b46f2a45de1306b2ca918220472fbac43fff",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

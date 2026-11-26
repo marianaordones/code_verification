@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 235,
+    "end": 235,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 280,
+    "end": 280,
+    "line": 14,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 306,
+    "end": 306,
+    "line": 15,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 359,
+    "end": 517,
+    "line": 17,
+    "existing_text": "invariant\n            0 <= n <= len,\n            b.len() == n,\n            forall|i: int| (0 <= i && i < n) ==> b[i] == a[i],\n            a.len() <= 100,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 527,
+    "end": 527,
+    "line": 23,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 549,
+    "end": 549,
+    "line": 24,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 570,
+    "end": 570,
+    "line": 26,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 575,
+    "end": 575,
+    "line": 29,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

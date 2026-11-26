@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 5 verified, 2 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:70:2\n   |\n70 | /     while (i < N as usize)\n71 | |         invariant \n72 | |             0 <= i <= N,\n73 | |             b.len() == N,\n...  |\n79 | |         i = i + 1;\n80 | |     }\n   | |_____^\n\nnote: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:83:2\n   |\n83 | /     while (i < N as usize)\n84 | |         invariant \n85 | |             0 <= i <= N,\n86 | |             c.len() == N,\n...  |\n92 | |         i = i + 1;\n93 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:76:4\n   |\n76 |             sum[0] == i + N,\n   |             ^^^^^^^^^^^^^^^\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:78:14\n   |\n78 |         sum.set(0, sum[0] + b[i]);\n   |                    ^^^^^^^^^^^^^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:89:4\n   |\n89 |             sum[0] == i + 2 * N,\n   |             ^^^^^^^^^^^^^^^^^^^\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res2o/proposal_01/candidate.rs:91:14\n   |\n91 |         sum.set(0, sum[0] + c[i]);\n   |                    ^^^^^^^^^^^^^\n\nerror: aborting due to 4 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 11.423268032958731,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 5,
+  "verification_errors": 2
+}

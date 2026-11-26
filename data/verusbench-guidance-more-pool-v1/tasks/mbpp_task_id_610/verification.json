@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 3 errors\n",
+  "stderr": "error: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs:14:1\n   |\n11 | /         new_list@ == list@.subrange(0, k - 1 as int).add(\n12 | |             list@.subrange(k as int, list.len() as int),\n13 | |         ),\n   | |_________- failed this postcondition\n14 | / {\n15 | |     let mut new_list = Vec::new();\n16 | |     let mut index = 0;\n17 | |     while index < (k - 1)\n...  |\n37 | |     new_list\n38 | | }\n   | |_^ at the end of the function body\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs:21:63\n   |\n21 |             forall |i: int| 0 <= i < index ==> new_list[i] == list[i],\n   |                                                               ^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs:23:23\n   |\n23 |         new_list.push(list[index]);\n   |                       ^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs:32:13\n   |\n32 |             forall |i: int| k <= i < index ==> new_list[i - k + (k - 1)] == list[i],\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_610/proposal_01/candidate.rs:32:48\n   |\n32 |             forall |i: int| k <= i < index ==> new_list[i - k + (k - 1)] == list[i],\n   |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.186622036155313,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 3
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_sum/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 2 verified, 2 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_sum/proposal_01/candidate.rs:22:5\n   |\n22 | /     while i < n\n23 | |         invariant\n24 | |             0 <= i <= n,\n25 | |             arith_sum_int(n as nat) < 10000,\n...  |\n35 | |         sum = sum + i;\n36 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_sum/proposal_01/candidate.rs:26:13\n   |\n26 |             arith_sum_int(i as nat) == sum,\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: assertion failed\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_sum/proposal_01/candidate.rs:29:16\n   |\n29 |         assert(0 <= i * (i + 1) <= 10000) by (nonlinear_arith)\n   |                ^^^^^^^^^^^^^^^^^^^^^^^^^ assertion failed\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_sum/proposal_01/candidate.rs:35:15\n   |\n35 |         sum = sum + i;\n   |               ^^^^^^^\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 8.184001043904573,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 2,
+  "verification_errors": 2
+}

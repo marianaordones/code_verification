@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr1.len(),\n            0 <= count <= index,\n            arr1.len() == arr2.len() && arr2.len() == arr3.len(),\n            count_identical(\n                arr1@.subrange(0, index as int),\n                arr2@.subrange(0, index as int),\n                arr3@.subrange(0, index as int),\n            ) == count,\n        "
+    }
+  ]
+}

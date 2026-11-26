@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n        0 <= i <= nums@.len(),\n        nums@.subrange(0, i  as int).to_set() =~= (res@.to_set()),\n        res@.no_duplicates(),\n    "
+    },
+    {
+      "site_id": "R6",
+      "replacement": "invariant\n            0 <= i < nums@.len(),\n            0 <= j <= res@.len(),\n            res@.no_duplicates(),\n            nums@.subrange(0, i  as int).to_set() =~= (res@.to_set()),\n            forall |k| 0 <= k < j ==> res@[k] != nums@[i as int],\n        ensures\n            0<= i < nums@.len(),\n            0 <= j <= res@.len(),\n            res@.no_duplicates(),\n            nums@.subrange(0, i  as int).to_set() =~= (res@.to_set()),\n            found ==> (j < res@.len() && res@[j as int] == nums@[i as int]),\n            !found ==> forall |k| 0 <= k < j ==> res@[k] != nums@[i as int],\n            !found ==> j == res@.len()\n        "
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 1 errors\n",
+  "stderr": "note: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs:6:1\n  |\n6 | pub fn simple_nested(a: &mut Vec<i32>, b: &Vec<i32>, N: i32) -> (sum: i32)\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs:8:29\n  |\n8 |         forall |k:int| k <= #[trigger] b[k] <= k + 1,\n  |                             ^^^^^^^^^^^^^^^\n --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n  |\n  = note: recommendation not met\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs:14:1\n   |\n13 |           N <= sum <= 2*N\n   |                --- failed this postcondition\n14 | / {  \n15 | |     let mut i: usize = 0;\n16 | |     let mut sum: i32 = 0;\n17 | |     while (i < N as usize) \n...  |\n47 | |     sum\n48 | | }\n   | |_^ at the end of the function body\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs:22:33\n   |\n22 |             forall |k:int| k <= #[trigger] b[k] <= k + 1,\n   |                                 ^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_simple_nested/proposal_01/candidate.rs:44:15\n   |\n44 |         sum = sum + a[i];\n   |               ^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.199005534872413,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 1
+}

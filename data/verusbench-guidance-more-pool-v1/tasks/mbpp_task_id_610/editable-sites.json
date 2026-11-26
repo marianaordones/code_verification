@@ -1,0 +1,90 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 329,
+    "end": 329,
+    "line": 15,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 364,
+    "end": 364,
+    "line": 16,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 417,
+    "end": 572,
+    "line": 18,
+    "existing_text": "invariant\n            0 <= index <= k - 1,\n            new_list.len() == index,\n            forall |i: int| 0 <= i < index ==> new_list[i] == list[i],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 582,
+    "end": 582,
+    "line": 23,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 618,
+    "end": 618,
+    "line": 24,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 640,
+    "end": 640,
+    "line": 26,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "id": "R7",
+    "kind": "loop_invariants",
+    "start": 696,
+    "end": 955,
+    "line": 28,
+    "existing_text": "invariant\n            k <= index <= list.len(),\n            new_list.len() == index - k + (k - 1),\n            forall |i: int| 0 <= i < k - 1 ==> new_list[i] == list[i],\n            forall |i: int| k <= i < index ==> new_list[i - k + (k - 1)] == list[i],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 965,
+    "end": 965,
+    "line": 34,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1001,
+    "end": 1001,
+    "line": 35,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1023,
+    "end": 1023,
+    "line": 37,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1035,
+    "end": 1035,
+    "line": 40,
+    "existing_text": "",
+    "id": "R11"
+  }
+]

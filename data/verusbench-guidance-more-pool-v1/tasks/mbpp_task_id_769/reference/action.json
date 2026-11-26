@@ -1,0 +1,16 @@
+{
+  "edits": [
+    {
+      "site_id": "R2",
+      "replacement": "invariant\n            forall|m: int| 0 <= m < index ==> (arr[m] != key),\n        "
+    },
+    {
+      "site_id": "R9",
+      "replacement": "invariant\n            forall|i: int|\n                0 <= i < index ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n                    arr1[i],\n                )),\n            forall|m: int, n: int|\n                0 <= m < n < result.len() ==> #[trigger] result[m] != #[trigger] result[n],\n        "
+    },
+    {
+      "site_id": "R14",
+      "replacement": "invariant\n            forall|i: int|\n                0 <= i < arr1.len() ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n                    arr1[i],\n                )),\n            forall|i: int|\n                0 <= i < index ==> (!arr1@.contains(#[trigger] arr2[i]) ==> result@.contains(\n                    arr2[i],\n                )),\n            forall|m: int, n: int|\n                0 <= m < n < result.len() ==> #[trigger] result[m] != #[trigger] result[n],\n        "
+    }
+  ]
+}

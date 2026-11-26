@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\CloverBench\\verified\\is_prime.rs",
+  "official_source_sha256": "4192049afee19d1753539205394c0441dee63c3e6a6ef54b574ad1df5257f85e",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

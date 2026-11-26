@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 177,
+    "end": 177,
+    "line": 11,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 223,
+    "end": 223,
+    "line": 12,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 255,
+    "end": 255,
+    "line": 14,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 310,
+    "end": 783,
+    "line": 16,
+    "existing_text": "invariant\n            even_list.len() <= index,\n            forall |i: int| 0 <= i < index ==> (even_list[( i ) as int] % 2 == 0),\n            forall |i: int| 0 <= i < index ==> (arr[( i ) as int] % 2 == 0 ==> even_list[( i ) as int] == arr[( i ) as int]),\n            forall |i: int| 0 <= i < arr.len() ==> (arr[( i ) as int] % 2 == 0) ==> (exists |j: int| 0 <= j < even_list.len() && even_list[( j ) as int] == arr[( i ) as int]),\n            input_len == arr.len(),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 793,
+    "end": 793,
+    "line": 23,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 832,
+    "end": 832,
+    "line": 24,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 878,
+    "end": 878,
+    "line": 26,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 900,
+    "end": 900,
+    "line": 28,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 913,
+    "end": 913,
+    "line": 31,
+    "existing_text": "",
+    "id": "R9"
+  }
+]

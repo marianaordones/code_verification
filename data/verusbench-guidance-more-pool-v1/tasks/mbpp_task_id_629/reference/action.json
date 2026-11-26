@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            even_numbers@ == arr@.take(index as int).filter(|x: u32| x % 2 == 0),\n        "
+    }
+  ]
+}

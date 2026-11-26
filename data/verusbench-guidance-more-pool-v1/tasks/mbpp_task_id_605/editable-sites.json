@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 290,
+    "end": 290,
+    "line": 17,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 310,
+    "end": 310,
+    "line": 18,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 334,
+    "end": 334,
+    "line": 20,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 381,
+    "end": 536,
+    "line": 22,
+    "existing_text": "invariant\n            index > 1,\n            index <= n,\n            n >= 2,\n            forall|k: int| 2 <= k < index ==> !is_divisible(n as int, k),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 546,
+    "end": 546,
+    "line": 28,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 582,
+    "end": 582,
+    "line": 29,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 614,
+    "end": 614,
+    "line": 31,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 636,
+    "end": 636,
+    "line": 33,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 644,
+    "end": 644,
+    "line": 36,
+    "existing_text": "",
+    "id": "R9"
+  }
+]

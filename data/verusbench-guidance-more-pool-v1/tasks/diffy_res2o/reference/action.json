@@ -1,0 +1,28 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n\t\t\tforall |j: int| 0<= j < i ==> a[j] == 1,\n\t\t\ta.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R7",
+      "replacement": "invariant\n\t\t\tforall |j: int| 0<= j < i ==> b[j] == 1,\n\t\t\tb.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R11",
+      "replacement": "invariant\n\t\t\tforall |j: int| 0<= j < i ==> c[j] == 1,\n\t\t\tc.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R15",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tsum.len() == 1,\n\t\t\tsum[0] == i,\n\t\t\tforall |j: int| 0<= j < N ==> a[j] == 1,\n\t\t\ta.len() == N,\n\t        "
+    },
+    {
+      "site_id": "R19",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tsum.len() == 1,\n\t\t\tsum[0] == i + N,\n\t\t\tforall |j: int| 0<= j < N ==> b[j] == 1,\n\t\t\tb.len() == N,\n\t\t\tN < 1000,\n\t        "
+    },
+    {
+      "site_id": "R23",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tsum.len() == 1,\n\t\t\tsum[0] == i + 2 * N,\n\t\t\tforall |j: int| 0<= j < N ==> c[j] == 1,\n\t\t\tc.len() == N,\n\t\t\tN < 1000,\n\t        "
+    }
+  ]
+}

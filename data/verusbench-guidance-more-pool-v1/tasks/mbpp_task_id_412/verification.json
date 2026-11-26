@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 2 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:15:5\n   |\n15 | /     while index < arr.len()\n16 | |         invariant\n17 | |             even_list.len() <= index,\n18 | |             forall |i: int| 0 <= i < index ==> (even_list[( i ) as int] % 2 == 0),\n...  |\n26 | |         index += 1;\n27 | |     }\n   | |_____^\n\nnote: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:7:1\n  |\n7 | fn remove_odds(arr: &Vec<u32>) -> (even_list: Vec<u32>)\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:10:1\n   |\n9  |           even_list@ == arr@.filter(|x: u32| x % 2 == 0),\n   |           ---------------------------------------------- failed this postcondition\n10 | / {\n11 | |     let mut even_list: Vec<u32> = Vec::new();\n12 | |     let input_len = arr.len();\n13 | |\n...  |\n28 | |     even_list\n29 | | }\n   | |_^ at the end of the function body\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:18:13\n   |\n18 |             forall |i: int| 0 <= i < index ==> (even_list[( i ) as int] % 2 == 0),\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:18:49\n   |\n18 |             forall |i: int| 0 <= i < index ==> (even_list[( i ) as int] % 2 == 0),\n   |                                                 ^^^^^^^^^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:19:13\n   |\n19 |             forall |i: int| 0 <= i < index ==> (arr[( i ) as int] % 2 == 0 ==> even_list[( i ) as int] == arr[( i ) as int]),\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:19:80\n   |\n19 |             forall |i: int| 0 <= i < index ==> (arr[( i ) as int] % 2 == 0 ==> even_list[( i ) as int] == arr[( i ) as int]),\n   |                                                                                ^^^^^^^^^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_412/proposal_01/candidate.rs:20:13\n   |\n20 | ...   forall |i: int| 0 <= i < arr.len() ==> (arr[( i ) as int] % 2 == 0) ==> (exists |j: int| 0 <= j < even_list.len() && even_list[( j ) as int] == arr[( i ) as int...\n   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: aborting due to 4 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.766583553981036,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 2
+}

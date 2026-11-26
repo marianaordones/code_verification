@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R4",
+      "replacement": "invariant\n            start <= _end <= arr.len(),\n            start <= index <= _end,\n            sum == sum_to(arr@.subrange(start as int, index as int)),\n            forall|j: int|\n                start <= j <= index ==> (i64::MIN * index <= (sum_to(\n                    #[trigger] arr@.subrange(start as int, j),\n                )) <= i64::MAX * index),\n        "
+    }
+  ]
+}

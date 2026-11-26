@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_769/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 1 verified, 1 errors\n",
+  "stderr": "note: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_769/proposal_01/candidate.rs:27:1\n   |\n27 | fn difference(arr1: &Vec<i32>, arr2: &Vec<i32>) -> (result: Vec<i32>)\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_769/proposal_01/candidate.rs:39:1\n   |\n29 | /         forall|i: int|\n30 | |             0 <= i < arr1.len() ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n31 | |                 arr1[i],\n32 | |             )),\n   | |______________- failed this postcondition\n...\n39 | / {\n40 | |     let mut result = Vec::new();\n41 | |\n42 | |     let mut index = 0;\n...  |\n70 | |     result\n71 | | }\n   | |_^ at the end of the function body\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_769/proposal_01/candidate.rs:60:13\n   |\n60 | /             forall|i: int| 0 <= i < index ==> (!arr1@.contains(#[trigger] arr2[i]) ==> result@.contains(\n61 | |                 arr2[i],\n62 | |             )),\n   | |______________^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.0522837119642645,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 1,
+  "verification_errors": 1
+}

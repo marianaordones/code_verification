@@ -1,0 +1,90 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 201,
+    "end": 201,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 249,
+    "end": 343,
+    "line": 15,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tforall |k: int| 0 <= k < i ==> a[k] == k % 1,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 347,
+    "end": 347,
+    "line": 20,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 367,
+    "end": 367,
+    "line": 21,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 383,
+    "end": 383,
+    "line": 24,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "id": "R6",
+    "kind": "loop_invariants",
+    "start": 418,
+    "end": 547,
+    "line": 27,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < i ==> a[k] == k % 1,\n\t\t\tsum[0] == 0,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 551,
+    "end": 551,
+    "line": 34,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 568,
+    "end": 568,
+    "line": 35,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 597,
+    "end": 597,
+    "line": 37,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 630,
+    "end": 630,
+    "line": 39,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 646,
+    "end": 646,
+    "line": 42,
+    "existing_text": "",
+    "id": "R11"
+  }
+]

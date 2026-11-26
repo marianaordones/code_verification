@@ -1,0 +1,82 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 499,
+    "end": 499,
+    "line": 27,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 529,
+    "end": 529,
+    "line": 28,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 546,
+    "end": 546,
+    "line": 29,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 563,
+    "end": 563,
+    "line": 30,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "id": "R5",
+    "kind": "loop_invariants",
+    "start": 599,
+    "end": 866,
+    "line": 33,
+    "existing_text": "invariant\n        2 <= i,\n        i <= n,\n        forall |j: int| 0 <= j < i ==> fib[j as int] == fibo(j),\n        fib.len() == i,\n        forall |j: int| 0 <= j < i ==> fib[j as int] < 0x8000_0000, // Added by AI\n        fibo_fits_i32(n as int),\n        n >= 2,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 876,
+    "end": 876,
+    "line": 42,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 924,
+    "end": 924,
+    "line": 43,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 952,
+    "end": 952,
+    "line": 44,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 971,
+    "end": 971,
+    "line": 47,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 977,
+    "end": 977,
+    "line": 49,
+    "existing_text": "",
+    "id": "R10"
+  }
+]

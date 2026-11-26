@@ -1,0 +1,146 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 210,
+    "end": 210,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 226,
+    "end": 226,
+    "line": 14,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 265,
+    "end": 409,
+    "line": 16,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\t// All elements in a are still 0\n\t\t\tforall |k:int| 0 <= k < i ==> a[k] == 0,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 413,
+    "end": 413,
+    "line": 23,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 428,
+    "end": 428,
+    "line": 24,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 444,
+    "end": 444,
+    "line": 27,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "id": "R7",
+    "kind": "loop_invariants",
+    "start": 468,
+    "end": 859,
+    "line": 29,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\t// All elements in a are either 1 or 2\n\t\t\tforall |k:int| 0 <= k < i ==> a[k] == 1 || a[k] == 2,\n\t\t\t// All elements in a that are 1 were set in this loop\n\t\t\tforall |k:int| 0 <= k < i && a[k] == 1 ==> a[k] == 1,\n\t\t\t// All elements in a that are 2 were set in this loop\n\t\t\tforall |k:int| 0 <= k < i && a[k] == 2 ==> a[k] == 2,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 863,
+    "end": 863,
+    "line": 40,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 883,
+    "end": 883,
+    "line": 41,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 917,
+    "end": 917,
+    "line": 43,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 943,
+    "end": 943,
+    "line": 45,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 959,
+    "end": 959,
+    "line": 48,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "id": "R13",
+    "kind": "loop_invariants",
+    "start": 983,
+    "end": 1178,
+    "line": 50,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tsum[0] == 2 * i,\n\t\t\t// All elements in a are still 1 or 2\n\t\t\tforall |k:int| 0 <= k < N ==> a[k] == 1 || a[k] == 2,\n\t\t\tN < 1000,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1182,
+    "end": 1182,
+    "line": 59,
+    "existing_text": "",
+    "id": "R14"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1202,
+    "end": 1202,
+    "line": 60,
+    "existing_text": "",
+    "id": "R15"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1243,
+    "end": 1243,
+    "line": 62,
+    "existing_text": "",
+    "id": "R16"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1276,
+    "end": 1276,
+    "line": 64,
+    "existing_text": "",
+    "id": "R17"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1292,
+    "end": 1292,
+    "line": 67,
+    "existing_text": "",
+    "id": "R18"
+  }
+]

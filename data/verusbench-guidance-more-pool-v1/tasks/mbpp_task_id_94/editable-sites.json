@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 486,
+    "end": 486,
+    "line": 17,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 520,
+    "end": 520,
+    "line": 18,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 576,
+    "end": 845,
+    "line": 21,
+    "existing_text": "invariant\n            index <= arr.len(),\n            min_second_index < arr.len(),\n            forall|i: int| 0 <= i < index ==> arr[i][1] >= arr[min_second_index][1],\n            forall|i: int| 0 <= i < arr.len() ==> arr[i].len() >= 2,\n            arr.len() > 0,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 855,
+    "end": 855,
+    "line": 28,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 913,
+    "end": 913,
+    "line": 29,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 957,
+    "end": 957,
+    "line": 31,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 979,
+    "end": 979,
+    "line": 33,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1007,
+    "end": 1007,
+    "line": 36,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

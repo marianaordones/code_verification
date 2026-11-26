@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            arr1.len() == arr2.len(),\n            0 <= index <= arr2.len(),\n            output_arr.len() == index,\n            forall|i: int|\n                (0 <= i < arr1.len()) ==> (i32::MIN <= #[trigger] (arr1[i] * arr2[i]) <= i32::MAX),\n            forall|k: int|\n                0 <= k < index ==> #[trigger] output_arr[k] == #[trigger] (arr1[k] * arr2[k]),\n        "
+    }
+  ]
+}

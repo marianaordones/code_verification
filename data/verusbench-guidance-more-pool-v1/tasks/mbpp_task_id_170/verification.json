@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 2 verified, 1 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs:28:5\n   |\n28 | /     while index < _end\n29 | |         invariant\n30 | |             start <= index <= _end,\n31 | |             sum_to(arr@.subrange(start as int, index as int)) == sum,\n...  |\n34 | |         index += 1;\n35 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs:31:13\n   |\n31 |             sum_to(arr@.subrange(start as int, index as int)) == sum,\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs:31:20\n   |\n31 |             sum_to(arr@.subrange(start as int, index as int)) == sum,\n   |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:132:37\n   |\n   = note: recommendation not met\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs:33:15\n   |\n33 |         sum = sum + arr[index] as i128;\n   |               ^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_170/proposal_01/candidate.rs:33:21\n   |\n33 |         sum = sum + arr[index] as i128;\n   |                     ^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 12.47617367003113,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 2,
+  "verification_errors": 1
+}

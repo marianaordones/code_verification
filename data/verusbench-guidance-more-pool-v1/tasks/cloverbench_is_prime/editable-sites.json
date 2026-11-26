@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 441,
+    "end": 441,
+    "line": 21,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 503,
+    "end": 712,
+    "line": 23,
+    "existing_text": "invariant\n            1 < candidate,\n            2 <= factor,\n            factor <= candidate,\n            candidate > 1,\n            forall|f: nat| 2 <= f && f < factor ==> !divides(f, candidate as nat),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 722,
+    "end": 722,
+    "line": 30,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 763,
+    "end": 763,
+    "line": 31,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 795,
+    "end": 795,
+    "line": 33,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 826,
+    "end": 826,
+    "line": 35,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 834,
+    "end": 834,
+    "line": 38,
+    "existing_text": "",
+    "id": "R7"
+  }
+]

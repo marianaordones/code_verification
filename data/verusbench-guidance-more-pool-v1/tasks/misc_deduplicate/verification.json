@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_deduplicate/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 0 errors\n",
+  "stderr": "error[E0599]: no method named `subsequence` found for struct `vstd::seq::Seq` in the current scope\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_deduplicate/proposal_01/candidate.rs:27:64\n   |\n27 |             nums@.to_set().subset_of(res@.to_set().union(nums@.subsequence(0, i).to_set()))\n   |                                                                ^^^^^^^^^^^ method not found in `Seq<i32>`\n\nerror[E0599]: no method named `subsequence` found for struct `vstd::seq::Seq` in the current scope\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_deduplicate/proposal_01/candidate.rs:37:68\n   |\n37 |                 nums@.to_set().subset_of(res@.to_set().union(nums@.subsequence(0, i).to_set()))\n   |                                                                    ^^^^^^^^^^^ method not found in `Seq<i32>`\n\nerror: aborting due to 2 previous errors\n\nFor more information about this error, try `rustc --explain E0599`.\n",
+  "timed_out": false,
+  "seconds": 6.733635763870552,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": 0
+}

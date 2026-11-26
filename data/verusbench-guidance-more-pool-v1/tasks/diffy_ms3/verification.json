@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_ms3/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 1 verified, 2 errors\n",
+  "stderr": "error: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_ms3/proposal_01/candidate.rs:33:4\n   |\n33 |             sum[0] <= 2 * i,\n   |             ^^^^^^^^^^^^^^^\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_ms3/proposal_01/candidate.rs:38:15\n   |\n38 |             sum.set(0, sum[0] + a[i]);\n   |                        ^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 10.06616564001888,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 1,
+  "verification_errors": 2
+}

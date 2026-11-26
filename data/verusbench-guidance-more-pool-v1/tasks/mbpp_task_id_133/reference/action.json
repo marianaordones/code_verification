@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            forall|j: int|\n                0 <= j <= index ==> (i64::MIN * index <= (sum_negative_to(\n                    #[trigger] arr@.subrange(0, j),\n                )) <= 0),\n            sum_negative_to(arr@.subrange(0, index as int)) == sum_neg,\n        "
+    }
+  ]
+}

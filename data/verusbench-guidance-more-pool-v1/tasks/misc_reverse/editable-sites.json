@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 247,
+    "end": 247,
+    "line": 12,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 273,
+    "end": 273,
+    "line": 13,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 328,
+    "end": 546,
+    "line": 15,
+    "existing_text": "invariant\n            n <= length / 2,\n            v.len() == length,\n            forall|i: int| 0 <= i < n ==> v[i] == old(v)[length - i - 1],\n            forall|i: int| n <= i < length - n ==> v[i] == old(v)[i],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 556,
+    "end": 556,
+    "line": 21,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 578,
+    "end": 578,
+    "line": 22,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 613,
+    "end": 613,
+    "line": 23,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 634,
+    "end": 634,
+    "line": 24,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 669,
+    "end": 669,
+    "line": 26,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 688,
+    "end": 688,
+    "line": 29,
+    "existing_text": "",
+    "id": "R9"
+  }
+]

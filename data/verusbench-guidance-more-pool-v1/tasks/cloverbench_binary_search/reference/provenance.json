@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\CloverBench\\verified\\binary_search.rs",
+  "official_source_sha256": "e34f63b89e1776827b3a39450229da012ae3074a2e489100a6be3b0c8af0c026",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

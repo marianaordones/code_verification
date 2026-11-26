@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res1o/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 4 verified, 1 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res1o/proposal_01/candidate.rs:51:2\n   |\n51 | /     while (i < N as usize)\n52 | |         invariant \n53 | |             0 <= i <= N,\n54 | |             b.len() == N,\n...  |\n61 | |         i = i + 1;\n62 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res1o/proposal_01/candidate.rs:58:4\n   |\n58 |             sum[0] == i + N,\n   |             ^^^^^^^^^^^^^^^\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/diffy_res1o/proposal_01/candidate.rs:60:14\n   |\n60 |         sum.set(0, sum[0] + b[i]);\n   |                    ^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 11.491788513958454,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 4,
+  "verification_errors": 1
+}

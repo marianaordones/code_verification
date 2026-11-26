@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R5",
+      "replacement": "invariant\n            forall |k: int| 0 <= k < i ==> #[trigger] fib@[k] == fibo(k),\n            fibo_fits_i32(n as int),\n            2 <= i,\n            fib@.len() == i, \n            i <= n,\n        "
+    }
+  ]
+}

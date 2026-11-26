@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            i2 < v.len(),\n            exists|i: int| i1 <= i <= i2 && k == v[i],\n            forall|i: int, j: int| 0 <= i <= j < v.len() ==> v[i] <= v[j],\n        "
+    }
+  ]
+}

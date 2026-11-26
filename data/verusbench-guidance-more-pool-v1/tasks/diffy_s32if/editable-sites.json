@@ -1,0 +1,146 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 210,
+    "end": 210,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 226,
+    "end": 226,
+    "line": 14,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 265,
+    "end": 373,
+    "line": 16,
+    "existing_text": "invariant\n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < i ==> a[k] == 1,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 377,
+    "end": 377,
+    "line": 22,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 392,
+    "end": 392,
+    "line": 23,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 408,
+    "end": 408,
+    "line": 26,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "id": "R7",
+    "kind": "loop_invariants",
+    "start": 432,
+    "end": 585,
+    "line": 28,
+    "existing_text": "invariant\n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < i ==> a[k] == 4,\n\t\t\tforall |k: int| i <= k < N ==> a[k] == 1,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 589,
+    "end": 589,
+    "line": 35,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 609,
+    "end": 609,
+    "line": 36,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 643,
+    "end": 643,
+    "line": 38,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 669,
+    "end": 669,
+    "line": 40,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 685,
+    "end": 685,
+    "line": 43,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "id": "R13",
+    "kind": "loop_invariants",
+    "start": 709,
+    "end": 837,
+    "line": 45,
+    "existing_text": "invariant\n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < N ==> a[k] == 4,\n\t\t\tsum[0] == 4 * i,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 841,
+    "end": 841,
+    "line": 52,
+    "existing_text": "",
+    "id": "R14"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 861,
+    "end": 861,
+    "line": 53,
+    "existing_text": "",
+    "id": "R15"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 902,
+    "end": 902,
+    "line": 55,
+    "existing_text": "",
+    "id": "R16"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 935,
+    "end": 935,
+    "line": 57,
+    "existing_text": "",
+    "id": "R17"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 951,
+    "end": 951,
+    "line": 60,
+    "existing_text": "",
+    "id": "R18"
+  }
+]

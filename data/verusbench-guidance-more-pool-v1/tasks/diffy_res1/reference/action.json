@@ -1,0 +1,20 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n\t\t\ta.len() == N,\n\t\t\tforall |k:int| 0 <= k < i ==> a[k] == 1,\n\t        "
+    },
+    {
+      "site_id": "R7",
+      "replacement": "invariant\n\t\t\tb.len() == N,\n\t\t\tforall |k:int| 0 <= k < i ==> b[k] == 1,\n\t        "
+    },
+    {
+      "site_id": "R11",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tsum.len() == 1,\n\t\t\tsum[0] == i,\n                        a.len() == N,\n\t\t\tforall |k:int| 0 <= k < N ==> a[k] == 1,\n\t        "
+    },
+    {
+      "site_id": "R15",
+      "replacement": "invariant\n\t\t\ti <= N,\n\t\t\tsum.len() == 1,\n                        b.len() == N,\n\t\t\tsum[0] == N + i,\n                        N < 1000,\n\t\t\tforall |k:int| 0 <= k < N ==> b[k] == 1,\n\t        "
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R2",
+      "replacement": "invariant\n            0 <= idx <= (main.len() - sub.len()),\n            0 <= i <= sub.len(),\n            0 <= idx + i <= main.len(),\n            forall|k: int| 0 <= k < i ==> main[idx + k] == sub[k],\n            forall|k: int|\n                0 <= k < i ==> (main@.subrange(idx as int, (idx + k)) =~= sub@.subrange(0, k)),\n        "
+    },
+    {
+      "site_id": "R10",
+      "replacement": "invariant\n            sub.len() <= main.len(),\n            0 <= index <= (main.len() - sub.len()) + 1,\n            forall|k: int, l: int|\n                (0 <= k < index) && l == k + sub.len() ==> (#[trigger] (main@.subrange(k, l))\n                    != sub@),\n        "
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 189,
+    "end": 189,
+    "line": 11,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 238,
+    "end": 238,
+    "line": 12,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 293,
+    "end": 382,
+    "line": 14,
+    "existing_text": "invariant\n            even_numbers@ == arr@.take(index).filter(|x: u32| x % 2 == 0),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 392,
+    "end": 392,
+    "line": 17,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 431,
+    "end": 431,
+    "line": 18,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 480,
+    "end": 480,
+    "line": 20,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 502,
+    "end": 502,
+    "line": 22,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 518,
+    "end": 518,
+    "line": 25,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

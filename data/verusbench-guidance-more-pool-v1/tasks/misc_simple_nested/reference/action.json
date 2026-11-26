@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant \n            0 <= i <= N,\n            N <= 0x3FFF_FFFF,\n            a.len() == N,  // always specify the length of vectors used in the loop\n            b.len() == N,  // always specify the length of vectors used in the loop\n            forall |k:int| k <= #[trigger] b[k] <= k + 1,\n            i <= sum <= 2*i,\n        "
+    },
+    {
+      "site_id": "R6",
+      "replacement": "invariant \n                0 <= i < N,\n                0 <= j <= i,\n                a.len() == N,  // always specify the length of vectors used in the loop\n                i + 1 - j <= a[i as int] <= i + 2 - j,\n            "
+    }
+  ]
+}

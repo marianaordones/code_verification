@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 182,
+    "end": 182,
+    "line": 11,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 227,
+    "end": 227,
+    "line": 12,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 259,
+    "end": 259,
+    "line": 14,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 314,
+    "end": 497,
+    "line": 16,
+    "existing_text": "invariant\n            0 <= index <= input_len,\n            odd_list.len() <= index,\n            forall |k:int| 0 <= k < index ==> (arr[k] % 2 != 0) ==> odd_list.contains(arr[k]),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 507,
+    "end": 507,
+    "line": 21,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 546,
+    "end": 546,
+    "line": 22,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 591,
+    "end": 591,
+    "line": 24,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 613,
+    "end": 613,
+    "line": 26,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 625,
+    "end": 625,
+    "line": 29,
+    "existing_text": "",
+    "id": "R9"
+  }
+]

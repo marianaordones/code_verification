@@ -1,0 +1,122 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 321,
+    "end": 321,
+    "line": 14,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 368,
+    "end": 588,
+    "line": 16,
+    "existing_text": "invariant\n            0 <= i <= sub.len(),\n            sub.len() <= main.len(),\n            0 <= idx <= (main.len() - sub.len()),\n            forall |j: int| 0 <= j < i ==> main[idx + j as usize] == sub[j as usize],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 598,
+    "end": 598,
+    "line": 22,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 641,
+    "end": 641,
+    "line": 23,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 673,
+    "end": 673,
+    "line": 25,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 691,
+    "end": 691,
+    "line": 27,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1037,
+    "end": 1037,
+    "line": 40,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1073,
+    "end": 1073,
+    "line": 41,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1097,
+    "end": 1097,
+    "line": 43,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "id": "R10",
+    "kind": "loop_invariants",
+    "start": 1168,
+    "end": 1498,
+    "line": 45,
+    "existing_text": "invariant\n            0 <= index <= (main.len() - sub.len()) + 1,\n            sub.len() <= main.len(),\n            forall |k: int, l: int| 0 <= k <= (main.len() - sub.len()) && l == k + sub.len() && (#[trigger] (main@.subrange(k, l))) =~= sub@ ==> exists|j: int| 0 <= j < sub.len() && main[k + j as usize] == sub[j as usize],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1508,
+    "end": 1508,
+    "line": 50,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1568,
+    "end": 1568,
+    "line": 51,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1599,
+    "end": 1599,
+    "line": 53,
+    "existing_text": "",
+    "id": "R13"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1621,
+    "end": 1621,
+    "line": 55,
+    "existing_text": "",
+    "id": "R14"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1630,
+    "end": 1630,
+    "line": 58,
+    "existing_text": "",
+    "id": "R15"
+  }
+]

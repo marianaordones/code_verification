@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            negative_list@ == arr@.take(index as int).filter(|x: i32| x < 0),\n        "
+    }
+  ]
+}

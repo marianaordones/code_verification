@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_binary_search/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 1 errors\n",
+  "stderr": "note: function body check: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_binary_search/proposal_01/candidate.rs:8:1\n  |\n8 | fn binary_search(v: &Vec<u64>, k: u64) -> (r: usize)\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_binary_search/proposal_01/candidate.rs:15:1\n   |\n14 |           k == v[r as int],\n   |           ---------------- failed this postcondition\n15 | / {\n16 | |     let mut i1: usize = 0;\n17 | |     let mut i2: usize = v.len() - 1;\n18 | |     while i1 != i2\n...  |\n33 | |     i1\n34 | | }\n   | |_^ at the end of the function body\n\nerror: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_binary_search/proposal_01/candidate.rs:24:13\n   |\n24 |             forall|i:int| i1 <= i <= i2 ==> k == v[i] ==> i == i2,\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.226802243851125,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 1
+}

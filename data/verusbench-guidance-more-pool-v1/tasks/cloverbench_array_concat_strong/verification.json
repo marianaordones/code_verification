@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 2 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:17:5\n   |\n17 | /     while n != len\n18 | |         invariant\n19 | |             0 <= n && n <= len,\n20 | |             c.len() == n,\n...  |\n33 | |         n = n + 1;\n34 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:21:13\n   |\n21 |             forall|i: int| (0 <= i && i < a.len()) ==> c[i] == a[i],\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:21:13\n   |\n21 |             forall|i: int| (0 <= i && i < a.len()) ==> c[i] == a[i],\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:21:56\n   |\n21 |             forall|i: int| (0 <= i && i < a.len()) ==> c[i] == a[i],\n   |                                                        ^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:22:70\n   |\n22 |             forall|i: int| (a.len() <= i && i < c.len()) ==> c[i] == b[i - a.len()],\n   |                                                                      ^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_concat_strong/proposal_01/candidate.rs:30:17\n   |\n30 |                 b[n - a.len()]\n   |                 ^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.972281769150868,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 2
+}

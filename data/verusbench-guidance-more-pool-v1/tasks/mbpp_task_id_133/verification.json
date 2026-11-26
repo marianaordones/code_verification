@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_133/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 0 errors\n",
+  "stderr": "error[E0308]: mismatched types\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_133/proposal_01/candidate.rs:31:39\n   |\n31 |             sum_negative_to(arr@.take(index)) == sum_neg,\n   |                                  ---- ^^^^^ expected `int`, found `usize`\n   |                                  |\n   |                                  arguments to this method are incorrect\n   |\nnote: method defined here\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/seq.rs:137:22\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0308`.\n",
+  "timed_out": false,
+  "seconds": 15.873774700798094,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": 0
+}

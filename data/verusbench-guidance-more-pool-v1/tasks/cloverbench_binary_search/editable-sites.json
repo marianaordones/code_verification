@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 337,
+    "end": 337,
+    "line": 15,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 364,
+    "end": 364,
+    "line": 16,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 424,
+    "end": 716,
+    "line": 18,
+    "existing_text": "invariant\n            0 <= i1 <= i2 < v.len(),\n            forall|i: int, j: int| 0 <= i <= j < v.len() ==> v[i] <= v[j],\n            exists|i: int| 0 <= i < v.len() && k == v[i],\n            forall|i: int| 0 <= i < v.len() && k == v[i] ==> (i1 <= i && i <= i2),\n            v.len() > 0,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 726,
+    "end": 726,
+    "line": 25,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 763,
+    "end": 763,
+    "line": 26,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 790,
+    "end": 790,
+    "line": 27,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 832,
+    "end": 832,
+    "line": 29,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 861,
+    "end": 861,
+    "line": 32,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 866,
+    "end": 866,
+    "line": 34,
+    "existing_text": "",
+    "id": "R9"
+  }
+]

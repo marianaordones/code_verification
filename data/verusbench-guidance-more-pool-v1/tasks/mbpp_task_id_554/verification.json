@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_554/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "error: The verifier does not yet support the following Rust feature: overloaded deref (`std::vec::Vec<u32>` is implicity converted to `[u32]`)\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_554/proposal_01/candidate.rs:19:69\n   |\n19 |             forall |k:int| 0 <= k < index ==> (arr[k] % 2 != 0) ==> odd_numbers.contains(&arr[k]),\n   |                                                                     ^^^^^^^^^^^\n\nerror: aborting due to 1 previous error\n\n",
+  "timed_out": false,
+  "seconds": 6.750138494884595,
+  "success": false,
+  "error_type": "compilation",
+  "verified_functions": 0,
+  "verification_errors": -1
+}

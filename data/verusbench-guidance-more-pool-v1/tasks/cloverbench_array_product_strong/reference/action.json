@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R4",
+      "replacement": "invariant\n            n <= len,\n            n == c@.len(),\n            len == a@.len(),\n            a.len() <= 100 && a.len() == b.len(),\n            forall|i: int| (0 <= i && i < a.len()) ==> (a[i] * b[i] < 1000),\n            forall|i: int| (0 <= i && i < n) ==> c[i] == #[trigger] a[i] * #[trigger] b[i],\n        "
+    }
+  ]
+}

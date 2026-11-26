@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 < n < list@.len(),\n            0 <= index <= n,\n            reversed_list.len() == index,\n            forall|k: int| 0 <= k < index ==> reversed_list[k] == list[n - 1 - k],\n        "
+    },
+    {
+      "site_id": "R7",
+      "replacement": "invariant\n            n <= index <= list.len(),\n            reversed_list@ =~= list@.subrange(0, n as int).reverse().add(\n                list@.subrange(n as int, index as int),\n            ),\n        "
+    }
+  ]
+}

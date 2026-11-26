@@ -1,0 +1,90 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 211,
+    "end": 211,
+    "line": 14,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 259,
+    "end": 404,
+    "line": 16,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < i ==> a[k] == (k % 5) as i32,\n\t\t\tN > 0,\n\t\t\tN < 1000,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 408,
+    "end": 408,
+    "line": 24,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 436,
+    "end": 436,
+    "line": 25,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 452,
+    "end": 452,
+    "line": 28,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "id": "R6",
+    "kind": "loop_invariants",
+    "start": 487,
+    "end": 652,
+    "line": 31,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k: int| 0 <= k < N ==> a[k] == (k % 5) as i32,\n\t\t\tsum[0] <= 4 * i,\n\t\t\tN > 0,\n\t\t\tN < 1000,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 656,
+    "end": 656,
+    "line": 40,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 673,
+    "end": 673,
+    "line": 41,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 702,
+    "end": 702,
+    "line": 43,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 735,
+    "end": 735,
+    "line": 45,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 751,
+    "end": 751,
+    "line": 48,
+    "existing_text": "",
+    "id": "R11"
+  }
+]

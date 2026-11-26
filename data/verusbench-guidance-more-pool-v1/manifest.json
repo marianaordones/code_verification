@@ -1,0 +1,1927 @@
+{
+  "schema": "guidance-additional-provisional-v1",
+  "source_archive_sha256": "9a9d991274af7a8ba2c10e9d58894da7ce89e7d422323a49e8800ef4d427e287",
+  "source_tools": {
+    "verus": {
+      "sha256": "bd4eebce18b0a2e1a6393e76bdcab4104db9b284989bf515bd8ecfc0d40c6f0d"
+    },
+    "z3": {
+      "sha256": "260a93f9ad37363d880d251c79e3af07888ef3b2171eb8ec8d4d3808678a3e84"
+    },
+    "lynette": {
+      "sha256": "b61d557553e5fb09dee4f46b11b21ef083ea7736ed3c4c5e135a87a7c9042a25"
+    }
+  },
+  "tasks": [
+    {
+      "id": "cloverbench_array_append_strong",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_array_copy_strong",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_array_sum_strong",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_binary_search",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "category": "CloverBench",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_brs1",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_brs2",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_brs3",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_brs4",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_brs5",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_conda",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_condg",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_ms1",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_ms2",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_ms3",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_ms4",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_ms5",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_res1",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_res1o",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_res2",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R19",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R23",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_res2o",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R19",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R23",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s12if",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s1lif",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s2lif",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s32if",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s3if",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s4if",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s5if",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_s5lif",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R13",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_sina2",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_sina4",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "diffy_sina5",
+      "category": "Diffy",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R19",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_105",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_133",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_142",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_161",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_170",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_18",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_240",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_262",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_290",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_412",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_426",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_431",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_436",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_445",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_460",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_461",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_476",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_572",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R11",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_576",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R10",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_579",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R14",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_586",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_588",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_602",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_605",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_610",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_629",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_644",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_69",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R10",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_743",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R5",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_755",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R7",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_764",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_769",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R9",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R14",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_798",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_807",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "mbpp_task_id_94",
+      "category": "MBPP",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_binary_search",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_deduplicate",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_fib",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R5",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_map",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_remove_all_greater",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R4",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_reverse",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_simple_nested",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        },
+        {
+          "site_id": "R6",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    },
+    {
+      "id": "misc_sum",
+      "category": "Misc",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ],
+      "reference_origin": "official_invariant_lists",
+      "revalidation_required": true
+    }
+  ],
+  "files": {
+    "tasks/cloverbench_array_append_strong/candidate.rs": "90029423c70a48ccb6fb452431c764a81fd5a4663b3da8c84bcef5f794474f4d",
+    "tasks/cloverbench_array_append_strong/editable-sites.json": "3da2eb66b533e6827eb9292d191166e58eb61ce3efc1cc3c5580633e7326faca",
+    "tasks/cloverbench_array_append_strong/original.rs": "94c2a0ea88ef3eed74a393b5e509f4d3d15beceb5ae8598593d5a432cc31fa7c",
+    "tasks/cloverbench_array_append_strong/verification.json": "98a236c65a19508349b2fcf491a1f57afa4f7f63964303ea32c8fec23359fd4c",
+    "tasks/cloverbench_array_concat_strong/candidate.rs": "739b63ded66ea53ff21c8a0a4650f9b48929fd8001e2c1b81c89a0db0c470a9d",
+    "tasks/cloverbench_array_concat_strong/editable-sites.json": "f9b752b0c3c7f592611d23f0d4d256ca17d860fd79c0cb819fbd144e7c138c96",
+    "tasks/cloverbench_array_concat_strong/original.rs": "ffe680369928643c277e9c0ba420fb2b42f1f3078f1e20367a73f409d5eb0524",
+    "tasks/cloverbench_array_concat_strong/verification.json": "9f1428e51d72b8c47871121520c2a9ed453e6413deddb4c6ca9920e800eb8105",
+    "tasks/cloverbench_array_copy_strong/candidate.rs": "4bb756170fb8cc7f298e3bb571aab6d18865f7a93e61fe8f7f07afd24073d0e4",
+    "tasks/cloverbench_array_copy_strong/editable-sites.json": "a3f7337612f9ba618c0cce65ad9fb2fe1ff2cfae303a5177c7cf5c2c4284556e",
+    "tasks/cloverbench_array_copy_strong/original.rs": "82e7848f176d71315eb23debb0bc01d65d6fed7d15af4c625f026781198a0219",
+    "tasks/cloverbench_array_copy_strong/verification.json": "86a713154400f669f3f368232c69031f92d121c2af0ee07bb11f6f2a6c786d17",
+    "tasks/cloverbench_array_product_strong/candidate.rs": "9fc84ec5805cec4ea0b0077955a95deb1b84838f161510ddeddf32d3d3918355",
+    "tasks/cloverbench_array_product_strong/editable-sites.json": "ec6c348c75173076c3434fedc060e9873073545c4593272538c495d8ce8c94bb",
+    "tasks/cloverbench_array_product_strong/original.rs": "f17d4b05fec29bf73aa643b77c0b26016d096b89f8ffa0d4301e20d2e103a00c",
+    "tasks/cloverbench_array_product_strong/verification.json": "a8ea6cb709cc5e48321fc4c648eff37fd0e671401f7e17654e9db423566833ef",
+    "tasks/cloverbench_array_sum_strong/candidate.rs": "240c81cf0f728a7feabde7dbffe24104b446ea885daade586596df56df943dbf",
+    "tasks/cloverbench_array_sum_strong/editable-sites.json": "b78c4c6ac8ca5cefb7f296c14896f4ff27636b07f0d02e5973449bd859a2f40d",
+    "tasks/cloverbench_array_sum_strong/original.rs": "c1a1c72498798102fc408d90d72a49cc46c7f2c7839ed0c510cf434e86c51ed1",
+    "tasks/cloverbench_array_sum_strong/verification.json": "365747a63a63bfd8ceb15c70c4345f84ea89c5402bac27202792ea14dd1b4e15",
+    "tasks/cloverbench_binary_search/candidate.rs": "3f6409f8200ed224eaba5e00701758e77e3b6b16656589576707a5467310c0a2",
+    "tasks/cloverbench_binary_search/editable-sites.json": "a2eefe8dc0bb9ff4bd92d89c3e498055c999280308608edf2456d5edda4277e3",
+    "tasks/cloverbench_binary_search/original.rs": "dff29ac79b9cff59df187138873cdc15ea7ffe432d9e4df8d62589a88760770e",
+    "tasks/cloverbench_binary_search/verification.json": "83fceff9f703965c2d8343fe4618030a68f343da07801966b44704ff4dd2517e",
+    "tasks/cloverbench_is_prime/candidate.rs": "fb7484b4dcb1f0e5448c2ecc10e1ebd2a2a08ce8cf80c5c385764ed132bdbcf3",
+    "tasks/cloverbench_is_prime/editable-sites.json": "1072d8d712d8c5a4746c4261d3ef721ad1392b3d0fc9b3bd0379fb4a700f2c69",
+    "tasks/cloverbench_is_prime/original.rs": "dcab82d1f8b0089ab70adfdd409b7ea10834dfd5db04b7acdeefdfcf5dd20a9e",
+    "tasks/cloverbench_is_prime/verification.json": "d766674e367921a765f09f5f74b7d555cc53c691374f1b54f62cc68ded25d3ed",
+    "tasks/diffy_brs1/candidate.rs": "ef9be489e626f3a386c212949723daa0209c2fd94fb2c5add53ea20b1149e3f0",
+    "tasks/diffy_brs1/editable-sites.json": "54abe19f61ea92bfa04468632278f766ea14e5f1651209bd57f91acf0a7249d6",
+    "tasks/diffy_brs1/original.rs": "7b7e624cdf458ce5b6159744c033c86355c5a5dc0855979f2518826a5753dc6d",
+    "tasks/diffy_brs1/verification.json": "159c3030c6c79c720013b6145b1dfdf4b7925e8609fcb1949f6450c440ad207a",
+    "tasks/diffy_brs2/candidate.rs": "8eb4d9a82b23066fe53afc74aee9ac7ba152c7af6927b755263c668626c4aca1",
+    "tasks/diffy_brs2/editable-sites.json": "2f9675db6f828c1de641b3b42e44c68b57df4e23b4d16f6bd244a4fd4a8784de",
+    "tasks/diffy_brs2/original.rs": "ab913d250e3481c6d2f04a231d464d8117f88462f0fd8dd153700c53a74285fe",
+    "tasks/diffy_brs2/verification.json": "892d473e11ec856cefd165c29cedf643ad77276d5d6efb8444671c4867ec0731",
+    "tasks/diffy_brs3/candidate.rs": "ab16dd05f71ca1e94cb2367fd562daa0e3eef38ad3ca8528fabddcf4c186aae8",
+    "tasks/diffy_brs3/editable-sites.json": "493fb13cadb834c9c67cd54f2518dc6817398d206d65a3154ce8dd339c8f4c8d",
+    "tasks/diffy_brs3/original.rs": "c9a8d9648cbc6fc291bbf82957e3d355acb96ac824364dbfc36bc44746c89984",
+    "tasks/diffy_brs3/verification.json": "b5b74a8ee2dae39d395d9c2d8d8e38be79c3e3d0bbe46af7ebd29c28268182d3",
+    "tasks/diffy_brs4/candidate.rs": "cfae80d7e5cb5365ddb9ca0edfa020f82dfd58e31e8cdbf952d88edbd5935875",
+    "tasks/diffy_brs4/editable-sites.json": "2ac8e8c3a72bf30db7bf6a74b93579b0a15a82b8b62cd746470bbf3e098fb63a",
+    "tasks/diffy_brs4/original.rs": "6ab0007cfb10f17170bf0bb1a645cfbd6680c4253cbb647006f75dc0c6ba0d97",
+    "tasks/diffy_brs4/verification.json": "3d96de65289ff724113bfd38cd2632d5cb3fa5a4d3b59d986c219380b33e67e9",
+    "tasks/diffy_brs5/candidate.rs": "f26c315432acdb3a916e381eea92548704ef1698fe5ba06fe1a1577c7831e33a",
+    "tasks/diffy_brs5/editable-sites.json": "d8da9af24aed4b2f988f5345d07b1f647687f591d139c1ef043d5c70bb04dd33",
+    "tasks/diffy_brs5/original.rs": "0efadff0e54b9923e4c266c32289cb3c62fb792d2a27bbebad07bd3f98898c9d",
+    "tasks/diffy_brs5/verification.json": "8871b7340e4c55f3dbffb926093f7f1768837a1ba77dd8499c4d5d0df7f4d520",
+    "tasks/diffy_conda/candidate.rs": "2fc82abe6b81104a9a01d6f43f15540d376a405312eed3e6e0e59748d619f5e8",
+    "tasks/diffy_conda/editable-sites.json": "fe14fe62903adc2c22058c352670ca02c54dbc1bd99097fb98a3573bb0615bce",
+    "tasks/diffy_conda/original.rs": "97a0d0fad04505e246a76ab82c62977955c3dcc730e20fa69609992e9e839280",
+    "tasks/diffy_conda/verification.json": "726c483c2f0ed3ec0a58f0f5a74c3eeb5a09f5cc049f0a026952f073d96cb64d",
+    "tasks/diffy_condg/candidate.rs": "1929a2c1b4898489cf2cf18d608b9ecf4d4ac756d17452e942166d5acf50799f",
+    "tasks/diffy_condg/editable-sites.json": "5b561e9a1b45a4330c0b68c21f111ed98b3af78e6a60e4198c83ee0b374b73a7",
+    "tasks/diffy_condg/original.rs": "f118b6e940921aea1d1fab9a8877d4c4df5451df2597723376beefe0d6ebb527",
+    "tasks/diffy_condg/verification.json": "422675ff0eca8f012a07f03a260bb34255a81bdbac4a2e48554c71777c1b96cb",
+    "tasks/diffy_ms1/candidate.rs": "052ff7e5bf52117447461b293473acf99dab4a5b655a6f3b28b3360d8fec7b80",
+    "tasks/diffy_ms1/editable-sites.json": "ece00bca9bda6bce7b5250ee7f23dd8195a65b9de53d44436bdac0faaf11d4f2",
+    "tasks/diffy_ms1/original.rs": "2932bef4830921ce6294c4a126ac7d7bb6af0474af702b6b388b49c3721ccce3",
+    "tasks/diffy_ms1/verification.json": "5c9c3e258475d8d17023c1e7a539542772a3fdffdcb2bf972d2169d00d8959d6",
+    "tasks/diffy_ms2/candidate.rs": "4a51aa604ef911049cb151bd9d6f64bb73035bc8229bf6c7caaa1b063d954b85",
+    "tasks/diffy_ms2/editable-sites.json": "6d3d76121a735cdccf7de87e8e47e77d770799ebab3a9bf218350b254eb044f4",
+    "tasks/diffy_ms2/original.rs": "fbe6931403054ea728423bff14884e2837db25775d49e9d4ae1faa04299c5b66",
+    "tasks/diffy_ms2/verification.json": "1e49ca15a12f2c88f6e7d03c091e76fac99f6a6351975c175cd8572b7763043d",
+    "tasks/diffy_ms3/candidate.rs": "12431bb21c210b3bcd4cc69800c98e42b93ba83082f289841e46091ca1d61bd3",
+    "tasks/diffy_ms3/editable-sites.json": "9e19eee879457470864630fbe1b355d81b7d314628f01634f76a5302510ae94b",
+    "tasks/diffy_ms3/original.rs": "80ba438f824d5fc507e8af04857a6199b7a7b5909218250103b46780ff7b3cc5",
+    "tasks/diffy_ms3/verification.json": "fa47e51cc8d87990ca40e2f9e436a7d43b8f36f4da7a1db2bae1030b9a1cbd5e",
+    "tasks/diffy_ms4/candidate.rs": "7756c0fb55f87386719f865d66aaf5552222b5c8f169ebbfaa17f0795fbbecc5",
+    "tasks/diffy_ms4/editable-sites.json": "50e42029699d5b524aa2c496c9dc42a30a0af7b8d984075309d4d1ea42ef6600",
+    "tasks/diffy_ms4/original.rs": "6ec6f37aa527edd1d0a8a5ba7479112b00d33a9714cb8d0770df6b042f281908",
+    "tasks/diffy_ms4/verification.json": "2718ebe96888d88d696d9c82ae1f418356c96a8742435071b822b1fd461d8f9c",
+    "tasks/diffy_ms5/candidate.rs": "0a00278679a62233ca9e878d6f8446f9578ce326fc45955a11e8fc3bfcd9f5f7",
+    "tasks/diffy_ms5/editable-sites.json": "b08604c507467537db28087ec189f925c731334dc476893d7a7d63b810eba65b",
+    "tasks/diffy_ms5/original.rs": "015df4b81c52201a4b03285470e1e2f3bf393e90fd45e6f692e5d0b704ca875c",
+    "tasks/diffy_ms5/verification.json": "3ea2f1166a0ac06eb8cebdd66fee6a24ce6248b309397435b53b56981020d23f",
+    "tasks/diffy_res1/candidate.rs": "39e23758808c9eaf397d5454591c0242c3fd0b563417e1d4a29decb2dd16486c",
+    "tasks/diffy_res1/editable-sites.json": "6069c5550c3ee8aea4c64c95280070e67f77943d3d98e113aca8c32f68a3fe75",
+    "tasks/diffy_res1/original.rs": "9bf66c67eb0ba07d51590492ebdb96c3d0e33f09cb09bf2e933aad0c82d9cf66",
+    "tasks/diffy_res1/verification.json": "bc44535dd4ffc10f8e31a2175004f1f63fd076fdbba2955fb7f062caa6e1c83d",
+    "tasks/diffy_res1o/candidate.rs": "964af27772c16c565d884d0241ab3844131584096eb09adacf6fa871c0e51514",
+    "tasks/diffy_res1o/editable-sites.json": "7e2ed84478369973f98edf0ac50686777ee7c70703f137c3d41fe0f0910b5564",
+    "tasks/diffy_res1o/original.rs": "e97f808b668b7a2d11b4f9603558441016e287e016d8c63aafd5ddce1d193b81",
+    "tasks/diffy_res1o/verification.json": "33869b698fecaa21b4e7b6b500d2fe0a55b5921fc34bc8e53c2fbde842d28799",
+    "tasks/diffy_res2/candidate.rs": "50f34bea7d7c3fd00d22045ea3037c76eb608069e590a59e05a9e8fcb27afdc6",
+    "tasks/diffy_res2/editable-sites.json": "61a601195a2994d0533fa3bacd1b9770b8bcd730826c54bbab055686a4fae90c",
+    "tasks/diffy_res2/original.rs": "9c481c833fb1181d818a3df55a4d4e60ac33d16682457d142c8a555d91b7f1d2",
+    "tasks/diffy_res2/verification.json": "1de9f074c6819d81ad97527c635d1eac02c2e2f9f7214575866a879c3c1e1079",
+    "tasks/diffy_res2o/candidate.rs": "4da5b91f99f256b4463d7d17e8301935ae9790feb6dccef1a4ab9f371dc63f11",
+    "tasks/diffy_res2o/editable-sites.json": "08bf10d4d7becbea4bc4419693f41b7d1f4a152ff55cc8786b097f8d682721e3",
+    "tasks/diffy_res2o/original.rs": "565f9bd67c80529ff20384721f64fc86c21174916ba04d5c0c2741ce45ae2eed",
+    "tasks/diffy_res2o/verification.json": "3eebc4d87655c2e44449d572d03b9116876be5fb54001449ca29c9cd11d0818d",
+    "tasks/diffy_s12if/candidate.rs": "fd77123dcf455a711bb2125794be457be70aa780be3beb3e0552c2d1d1d1b921",
+    "tasks/diffy_s12if/editable-sites.json": "b8708106764fe1600383f64de881cc05699f02534f7700cc30f07528e34afec1",
+    "tasks/diffy_s12if/original.rs": "51cc3a6848f1e79b470c24847d9efede99eb4547f8cf315146f0c1f0aec2368e",
+    "tasks/diffy_s12if/verification.json": "8afa13d3a7d7c6ba2f338ed827b1e9dfd97aa4ba8f9160d856018b96b9602e06",
+    "tasks/diffy_s1lif/candidate.rs": "5d8c41ccb2698f91c0a8bf18756cfa78f3d2f88af6a79e8655be310f178a8b97",
+    "tasks/diffy_s1lif/editable-sites.json": "28d1491ea536540a58f0276b7861948b827d7e498aa9aa15ef7f31b60fdf7874",
+    "tasks/diffy_s1lif/original.rs": "97a0d0fad04505e246a76ab82c62977955c3dcc730e20fa69609992e9e839280",
+    "tasks/diffy_s1lif/verification.json": "3a4ba320f07e3747aa3408d722d8b4a62a5912d6bc3d40b090d71ee6a2fee741",
+    "tasks/diffy_s2lif/candidate.rs": "4a9e29ce5f9414cd0143990428c34d3c36960141e3c050936d89c8b510879f10",
+    "tasks/diffy_s2lif/editable-sites.json": "0ed0128ac52ed8c03c8a2871c744042c7a970b9432b119423fdd21f720ce9186",
+    "tasks/diffy_s2lif/original.rs": "f5e172dc702655f3f250a83bc9b468ed39099f5f2d749d77c2cf714ec4e4e682",
+    "tasks/diffy_s2lif/verification.json": "c176ce54facc74964bc5c6a8faf084e540f46f1a6efea729c9e9e2087197bd62",
+    "tasks/diffy_s32if/candidate.rs": "adfb77e8645b398630204be8f80df3fca58cccc1e11d378ca17b94e311bfe8e7",
+    "tasks/diffy_s32if/editable-sites.json": "543101dc0c18a772133758e4cdf9961e35d3abacbde62eb14c53f2322dd865c9",
+    "tasks/diffy_s32if/original.rs": "c4ab44dab486842f37adb7d0de95d5c78328602c3600268150fd2c2f8101586e",
+    "tasks/diffy_s32if/verification.json": "ca577ee744a40a3c35878eaffbbf97795c656c169ce9f87dc68427718cfb9f2f",
+    "tasks/diffy_s3if/candidate.rs": "efc194f1719389c5b6bfa93fdf39d2800596a6bb84e9275ef89164012d15c517",
+    "tasks/diffy_s3if/editable-sites.json": "98c3213a4dc458e00899d2eeacc61c74edb7a1114f6d29ebc779ff70b45065da",
+    "tasks/diffy_s3if/original.rs": "0018980fcd83f262589f73ca789d39fd439c94886cd19dc8d38664e80f5882a6",
+    "tasks/diffy_s3if/verification.json": "8c00c0b71235ac2e164837294e295384337ba5c91adad80e76fa3e969eef5b88",
+    "tasks/diffy_s4if/candidate.rs": "6ed6e67c49df2c72f6151437d13459bf54fdf56720167e3bf34c40bb24989a71",
+    "tasks/diffy_s4if/editable-sites.json": "8847c1088cb3c1cc740bdff45b97798b6199e4bf8770a5acf97a4a918489c27c",
+    "tasks/diffy_s4if/original.rs": "abf0df734f0d75cd8ff97a28892b9ba261eec74e28d2c61f1bd67942a1ea0859",
+    "tasks/diffy_s4if/verification.json": "911762545c753b8e74a9489c3aef18029cb4bd9d670fe3195ea012c2e2a14831",
+    "tasks/diffy_s5if/candidate.rs": "5e5416a34621683b0de8ed46b7370398d9acffd8d81562fc904f6ec46a289b9d",
+    "tasks/diffy_s5if/editable-sites.json": "906020697940a1c5593a5a5c434bdda6127e15bdbd46bd7cb83ebaabdf08532c",
+    "tasks/diffy_s5if/original.rs": "d650e7cfdf11fc2aac5a64e1ebd6001716875a5ae88423f7675fe18457c4e552",
+    "tasks/diffy_s5if/verification.json": "73537c153937bc565366d2a59ef33ce05a2bc9d89e030f8f22cdec1f1ce86c41",
+    "tasks/diffy_s5lif/candidate.rs": "a78aac3c77ff282c5fe85a3aaa98b88283aa97814e3d4b7861d934039c400822",
+    "tasks/diffy_s5lif/editable-sites.json": "455b7bcf7ad59e283c7376bec1d895549d00fa54c0dc5bc6955b731b70e3f73f",
+    "tasks/diffy_s5lif/original.rs": "3e93362909301949819bc33b5f8038116a59ffd53e065452caafee17e7257987",
+    "tasks/diffy_s5lif/verification.json": "dd210e04ccc92463f81da5716dd78fe251f69cdcd6d6a675fa8a22ca8eccac91",
+    "tasks/diffy_sina2/candidate.rs": "960d4ff41d19e1bfe71712b508f311a1043d715baf2af7f38cccccd05ba45ba3",
+    "tasks/diffy_sina2/editable-sites.json": "e9e1d077d46f60191654221170ebc4fb23b281876f6fce55f67d0fc9557b4f73",
+    "tasks/diffy_sina2/original.rs": "4b90c440cdd91cb543d9fa78c1edc9ab31422757261c96d18e6cd1856cd68622",
+    "tasks/diffy_sina2/verification.json": "dabaeb44babfe73548d33c8eb0cd4642be8bd556e387bcf49fd274fb1315240b",
+    "tasks/diffy_sina4/candidate.rs": "6e7ecf17e120ff0b78a3954c0decce6aad147a08c36e60ebf98cb7b705ec96d5",
+    "tasks/diffy_sina4/editable-sites.json": "6e8df3bfcad9b1051fc3e11a3f0664b157fb3a19c913320a77016bde9f3b536d",
+    "tasks/diffy_sina4/original.rs": "7784323b56e381401a7e09f77aff4f1ffbd32d258d3e6f69424c386b4ba0b2bf",
+    "tasks/diffy_sina4/verification.json": "f96440fcd6700a29d5c87991571be3497dafba88ee420b22ce7e674eb5db6e3c",
+    "tasks/diffy_sina5/candidate.rs": "5f906b46281f7bf4f8f58e5b286b7d14ca61c7543250194a7732598d5665ab3e",
+    "tasks/diffy_sina5/editable-sites.json": "819292c57c85fd968e347288a21658142d17ec745a813c678b9b8981a419cf7f",
+    "tasks/diffy_sina5/original.rs": "341dfb22424bcce1ddd56ff2e0d83ce6cceacb4821c6e17af51cf37aa4de2c26",
+    "tasks/diffy_sina5/verification.json": "4567e50d305f3c66d46ae677cbf0a72d36355fd13f6e7f29a8202528a6501d20",
+    "tasks/mbpp_task_id_105/candidate.rs": "83f06ec48f06d0107c42b1283a67a270fad2b64522bb267911eb05bd27f8435f",
+    "tasks/mbpp_task_id_105/editable-sites.json": "a5b146ab7107c3740f5769919f401625f47bf0eb41c8fe1f9f21f2117daca4f2",
+    "tasks/mbpp_task_id_105/original.rs": "1cfd31cc79bb6d50a9f93d33aa3069d5878c373cad6967bedd4ccccc6782bf1e",
+    "tasks/mbpp_task_id_105/verification.json": "77751ae3b5fb048feafb6e7616cc3817732d186871c1098bdf64043651f94acd",
+    "tasks/mbpp_task_id_133/candidate.rs": "efdaf4f0108e3e4c025f1c0ac5646b589b0a28da55a8c4687d6fac9d3e3a9bc4",
+    "tasks/mbpp_task_id_133/editable-sites.json": "94d5da2769360f92664cb59f7ee049c9d1719652cf2555487dcad422417e6970",
+    "tasks/mbpp_task_id_133/original.rs": "2c3d9c33e9beb559a18ca642f3daab3870e8e82b915bac47c985d46d7a6f5bea",
+    "tasks/mbpp_task_id_133/verification.json": "0716dba2daff2a0062ade5fcb5d67f6bd37aeaa5e5fd8a45794d0a077f2a5b78",
+    "tasks/mbpp_task_id_142/candidate.rs": "53ffa6681e9eeba333d97bc9e415d061179b1abc427220cb6a5dde48f5bea6b3",
+    "tasks/mbpp_task_id_142/editable-sites.json": "4f1e1dcac7308052a84bbcb14242ef6795114e4ed9a6f160b3f9a3e40f1fcd35",
+    "tasks/mbpp_task_id_142/original.rs": "2515e0ba37328579b9a35f514e29d10b164f1e4d5a6eb7513102c508aee63fb7",
+    "tasks/mbpp_task_id_142/verification.json": "7ec3a8f0cc46b319555ebed9b0ebbbf4802f73f9b66d5facb05d055cf87965ea",
+    "tasks/mbpp_task_id_145/candidate.rs": "61659f68c636b35a537112ef52f3aafc34568aa9f9a43a3be7359c6b0b59a3f2",
+    "tasks/mbpp_task_id_145/editable-sites.json": "6767d742cd9fcebaf652856e84c3f00e6b75887bc775bca01a065fc3c200822c",
+    "tasks/mbpp_task_id_145/original.rs": "926c18807d2e4e9942dea40905391cc6582f09e51fcaad76506fd8b24f592293",
+    "tasks/mbpp_task_id_145/verification.json": "5608ae01667c1fc1d77bcf8cc9d44ba697f291a8344fffb2f7aab9b8175b8970",
+    "tasks/mbpp_task_id_161/candidate.rs": "62af4110170e36ea20972ba65be9f79c02d790304a2408760b00f136c1841416",
+    "tasks/mbpp_task_id_161/editable-sites.json": "2f87868025467fae18005f34005dbf6787e0b030481b9e508ab0cdc4419f26ea",
+    "tasks/mbpp_task_id_161/original.rs": "94c180f29e37e70b4a6047b886a861f85470b1c009a1cee3b22d454a1d631f4f",
+    "tasks/mbpp_task_id_161/verification.json": "a5ce0fe0f3adc137210204989b5980b4e916d6cd2e2b95a64c7b83b564bfe6b7",
+    "tasks/mbpp_task_id_170/candidate.rs": "beb40bf80be7a90a15bf1bd5f5799a93f6266f89ec7073e6ebbe659ef478140a",
+    "tasks/mbpp_task_id_170/editable-sites.json": "2ad7404a701417b3e34f0e9c0089c007b0371f01c4724cf859d984a0111112bf",
+    "tasks/mbpp_task_id_170/original.rs": "d50d9be132238bd4e3334e8445653af05208131480a1dc010b02db9bb3292530",
+    "tasks/mbpp_task_id_170/verification.json": "47723c8ba48dd879a11a53fd55fdf2dcabdc01a19ec3a80d86af32a5a71879a9",
+    "tasks/mbpp_task_id_18/candidate.rs": "23a6d59402990a302617e7720f1e7a2683de333dae550b51f8cb407d8d3285e5",
+    "tasks/mbpp_task_id_18/editable-sites.json": "51c42486ab733f53d81a3f68d9718e2f60ed967a14f00ef25d42b11e432fadd4",
+    "tasks/mbpp_task_id_18/original.rs": "8a6ec2116532fa42e94b396b83e26d1789befb13ccfd86b898143ff2dae862b4",
+    "tasks/mbpp_task_id_18/verification.json": "bc2bed22719ef71076334e3742a38abb644fcc37347ec3621cff761ee04439df",
+    "tasks/mbpp_task_id_240/candidate.rs": "a1bbba273788ce03b869cbf6a1d77ade83b4639494c612e95e47505eaea259c4",
+    "tasks/mbpp_task_id_240/editable-sites.json": "1892e5101fc6f883bd792b100d3f408bfa8fa904cf8c734e014d2635fa0433bd",
+    "tasks/mbpp_task_id_240/original.rs": "e105c79f81e0407a0b8f403fd10cc699065ae71dfc2202d8d91d158337f28d73",
+    "tasks/mbpp_task_id_240/verification.json": "5af28bd866a45bb09a3769b41b4af281e244215f5dcca7ee8f7f55641176108e",
+    "tasks/mbpp_task_id_262/candidate.rs": "d1a6bf5fdffd264e6625f36a9622b4c71cdf73d9fdc3b321f5903920a0d7399c",
+    "tasks/mbpp_task_id_262/editable-sites.json": "f9920041d529ba6f1e29be08e5f5451092ff4446c2a170a90f562108c2c08112",
+    "tasks/mbpp_task_id_262/original.rs": "084df30eb3c368ba20695b3cc8c554a95c604e56ebdc9f2ff2ed5ba62543da45",
+    "tasks/mbpp_task_id_262/verification.json": "7fb8c2e5c40abee2dd6c1bfa4f0b02599f31bf240e97bb03172e7aec1415b267",
+    "tasks/mbpp_task_id_290/candidate.rs": "80a4af29fa43f15a04031e1164e3f444c4b27bc3e8b6653b8fccc64c9d7ac7ed",
+    "tasks/mbpp_task_id_290/editable-sites.json": "346345715bf564470c77f6d245a392fb7bd68491e14c6ba6724e67c29fa52fad",
+    "tasks/mbpp_task_id_290/original.rs": "5dfc3817472e7ec67d4d3664089f6fd934748ac77009229857557495377ffb6d",
+    "tasks/mbpp_task_id_290/verification.json": "1d5399778e3f35d7edf36b1654c28348f5de694454e1cf4b52d1ec2515bdc52b",
+    "tasks/mbpp_task_id_3/candidate.rs": "81a6079474e465586d759716156f7576517aa7b98f9a738f8bb06533f67fde69",
+    "tasks/mbpp_task_id_3/editable-sites.json": "ef06ecec8f798ffcd0c57c081c1058053ffc8c154cb46e8200b0840dc6fac20c",
+    "tasks/mbpp_task_id_3/original.rs": "ab0ea6c7a8901a9c310f22bf1f224e5d51ba34bef70d32a8b3ac6dcbd8e99d74",
+    "tasks/mbpp_task_id_3/verification.json": "6a5a483b0ac24dcec2fb242833090c460b58ab83e794b1cdc014fad161b4d2f3",
+    "tasks/mbpp_task_id_412/candidate.rs": "eb0e9cc4caf263a36df1771f7a3d294ef72a568637ce48ba7b3c48e1e0394c64",
+    "tasks/mbpp_task_id_412/editable-sites.json": "8eea51d856ef2be3d358ba3b15f099b78c76cbc0806fbcc0751caa2720f62c0a",
+    "tasks/mbpp_task_id_412/original.rs": "d5c267bbd525d93f9d64c073f32b5f098845a037417c1ebca584f88a6d01198c",
+    "tasks/mbpp_task_id_412/verification.json": "f3dffa9d5dce83aed2af8c0c3e19dd9cbfc843cdf77f68c8d5c8fb77c0c05b8d",
+    "tasks/mbpp_task_id_426/candidate.rs": "70495b7b630c4189287b801d9b201a6bd8fade28495294179737f79e0c2b791c",
+    "tasks/mbpp_task_id_426/editable-sites.json": "516c84d67a43e6819ecc9feae351c4ab61b569410e181249c3c00b45bb21696b",
+    "tasks/mbpp_task_id_426/original.rs": "0e9bc61d1cd067e02ba95e60cc36ec02a4334971a381881cfca3e23162847555",
+    "tasks/mbpp_task_id_426/verification.json": "ca55f849338229330d23556ade366a39aaa122e73888bc19a65cf115a67ba04b",
+    "tasks/mbpp_task_id_431/candidate.rs": "b9a3cc8d7933621f011953d8ab9237cb705dcfc9e95d6f5a010e664c2cf7839f",
+    "tasks/mbpp_task_id_431/editable-sites.json": "92911fcd21de252f8a2353c447ee81c64aef1333a650498970aa8a2be48d07d9",
+    "tasks/mbpp_task_id_431/original.rs": "e7bf4a9fa3359e30ff02670517ef6a3eec23ff22c297ee2c4125090f021a5a28",
+    "tasks/mbpp_task_id_431/verification.json": "e0a2836196dd1593e38defeff903971383ae370a714479e50ca55816ce8627c5",
+    "tasks/mbpp_task_id_436/candidate.rs": "dd7005724eb4b8dd6776e167ffd16acb9e5e386c20c6f1666a634abc90a0e47a",
+    "tasks/mbpp_task_id_436/editable-sites.json": "25efa039751f02acf5ccfa6c919aeaa6aa6e6bd6778fb506039bc0ef0aa03358",
+    "tasks/mbpp_task_id_436/original.rs": "1e5cd354b724d0cdb94fb4cdbb65e40d95f36d8f7154fdef6b6cee2283383761",
+    "tasks/mbpp_task_id_436/verification.json": "e990f7a5cbe4b96cfc73cb9e3aa7bd3a2475e935f01c40ad1d4931db4ef11f19",
+    "tasks/mbpp_task_id_445/candidate.rs": "a356cb41a53b88ea8ff11ad5cb6ad2a8e6a98fd45fe822b250c011014a62d520",
+    "tasks/mbpp_task_id_445/editable-sites.json": "57e6c6cad616d76b520ac81d4072eb7d7cb71bcbbaf880deb5506713d303e8ed",
+    "tasks/mbpp_task_id_445/original.rs": "dce056cb5c38aeea5851beab43f5747774fe1ed93b000a5d8f28a79ebcdc64a4",
+    "tasks/mbpp_task_id_445/verification.json": "cf5c7e159484d441c19d732e0721af1d974aeccd8baf61035d193cd4f5b17bb2",
+    "tasks/mbpp_task_id_460/candidate.rs": "f145bf20a1a3062f662adc9d0d094d56a6f65f86493f5db151f5f9c7319ad85e",
+    "tasks/mbpp_task_id_460/editable-sites.json": "f3ffb898a69bb25b81a9f944a7cbbf24edac0d958613373b35bc47c794c539c6",
+    "tasks/mbpp_task_id_460/original.rs": "50d4520d41de4cbaf3f3ff04c0535952198828b621dbba7c792c3830bb3ca530",
+    "tasks/mbpp_task_id_460/verification.json": "45b65960875d5ad416a5606b5c524bc0834dcf769207204d5118fd8d977281e3",
+    "tasks/mbpp_task_id_461/candidate.rs": "f531651ee0c8fb484224b01d2384daa874291a526deb01a0e2e73e08a8c36012",
+    "tasks/mbpp_task_id_461/editable-sites.json": "3b02030e5bd9467674a950cea037f59af1f056503eca0fa6d8232e6b2cfbc8c8",
+    "tasks/mbpp_task_id_461/original.rs": "8740e241f0713f2e2b5dda634dc80dbf3df2354af8d09eac1e0bd86d323e819f",
+    "tasks/mbpp_task_id_461/verification.json": "21b41e01342e534206810dc875f60e6a8fa4ac24c06c4cdc2e8b357ff0423c86",
+    "tasks/mbpp_task_id_476/candidate.rs": "0f50560a0721620a0a8992a21c92ee3fc200777712b243b756697c93393bccdf",
+    "tasks/mbpp_task_id_476/editable-sites.json": "452d38382d84cedb694fccd077279bf5340bf89b77acafecb08087c7645e4e6f",
+    "tasks/mbpp_task_id_476/original.rs": "80e34f8e6f8c1a47db11629411d2c2fb7f46dd8144eecdedd5e1e2f156337ede",
+    "tasks/mbpp_task_id_476/verification.json": "dc13b149a8144701ce87a2e102528f37f28a3f35fc6232e1d83ef7abad0b0e9d",
+    "tasks/mbpp_task_id_554/candidate.rs": "e0e2968a2f247d510649ad056a276bb4741916921cad0c1a225e24b00d80d1ad",
+    "tasks/mbpp_task_id_554/editable-sites.json": "fecafb43eba8c7bda21e2ba07fa285eef764503c5dc977a463dbeaaf10b2bf1b",
+    "tasks/mbpp_task_id_554/original.rs": "0f75381a67a27628de6b94c08bdc9ddfbf54818c011d33607d89fcb194c72c69",
+    "tasks/mbpp_task_id_554/verification.json": "42fab4b318199143ec6b148d803e006612d2c2e3be7482cbd630b2c3f29457e6",
+    "tasks/mbpp_task_id_572/candidate.rs": "d3410d86f64e862f1974fd427889198980fa336ca9841597a20822e28c3926fd",
+    "tasks/mbpp_task_id_572/editable-sites.json": "87d1cbe2d4b33be8e105112e55387008fca68f1f222eeae3e2fb94f4ac8d75ff",
+    "tasks/mbpp_task_id_572/original.rs": "621d21b19362228842c143dcae0fad2baaef7c17f267f6e5518f5118b5234c88",
+    "tasks/mbpp_task_id_572/verification.json": "638d9832af57395f36fa4e00d1c2fbef7aa69f067fc32d592dde5b518dcb58f3",
+    "tasks/mbpp_task_id_576/candidate.rs": "c952e83434340c7dbfc1b7d260f736a4439ce5d0d6faeaa7dd1eff750d52a600",
+    "tasks/mbpp_task_id_576/editable-sites.json": "cf82e1ea36d49d6d654af308de9d967f77c19658c2262114567efb69f9c53262",
+    "tasks/mbpp_task_id_576/original.rs": "1fe6ba8fe2d48ff225fb1af8da790a10761580cb6a125ec0578fe58dbcd3ed10",
+    "tasks/mbpp_task_id_576/verification.json": "6bfa20e382b73a8925b007134b271aa951f89acfb67ffd6af31420c7feab83d0",
+    "tasks/mbpp_task_id_579/candidate.rs": "8f4561ca43873ed526e65b6de940eee68155c7daaf4901def3fa6ef3cd8ed013",
+    "tasks/mbpp_task_id_579/editable-sites.json": "0d71c90c68c09e6ff9a845ab39677e0fa454434202e2544a8b25882681492d47",
+    "tasks/mbpp_task_id_579/original.rs": "a2b7c1720705476229310d4251784393eaf5a2c9783cc97bb8195b41972e1ac0",
+    "tasks/mbpp_task_id_579/verification.json": "ea3df946f699c90715e92dae02e88ce36f1c3801560bfb1b76519fc1e4989765",
+    "tasks/mbpp_task_id_586/candidate.rs": "b5c5d959bf7637f51a352c7ab0767fa6a9492354c974c1f25565e04090c03459",
+    "tasks/mbpp_task_id_586/editable-sites.json": "0d8360e34a2229e4d91b9d08469fe51e5c0ced3cc4fe4420761915e3f479d6c1",
+    "tasks/mbpp_task_id_586/original.rs": "1f3c76a58dec92689e585ef96158be946c22b5600b029209fbe954397fd15079",
+    "tasks/mbpp_task_id_586/verification.json": "d211273df4cc673bd48ad597be629d43bdaefbd431cfc6d6b82e78321f1e8e10",
+    "tasks/mbpp_task_id_588/candidate.rs": "96051f766bfb04223c1bd82b6c5d66435b9874481b70fe1def0f685e208cdeae",
+    "tasks/mbpp_task_id_588/editable-sites.json": "2f340ff13ed811d065fb7cd5862df17de6a73455289914b13fac62f51d55bd88",
+    "tasks/mbpp_task_id_588/original.rs": "0dd2055f06c9518a092a94de7f6c03677f5f748d5f93adffbb9e52ace106951f",
+    "tasks/mbpp_task_id_588/verification.json": "f3d5f3dc8f34345188a53678ceb54969fd3d022edf366f927127bfffee9f7098",
+    "tasks/mbpp_task_id_602/candidate.rs": "3f1063e2bd7fb3ad44aa10233ea8a48569967f4b12d18f80cd98466625e7872c",
+    "tasks/mbpp_task_id_602/editable-sites.json": "a8dfdea6245cb6eb84511638c60b27ab45702cfd7dd3de578ecab086679518e9",
+    "tasks/mbpp_task_id_602/original.rs": "a76b3fd5a411537e5b10904531b699fc15338d95183b58b0f436e36913cc7c28",
+    "tasks/mbpp_task_id_602/verification.json": "fc89df1477dc47119157f5a15a6ba38dbbe631bc08bd31a273a90d0f6124f543",
+    "tasks/mbpp_task_id_605/candidate.rs": "1754d30a39ea461d212ab86c1598bfbf062bbc50cec726de1990f8631729039d",
+    "tasks/mbpp_task_id_605/editable-sites.json": "6eaa6b97aca1f6b8c299a54074fae0518e866daf850c5c42413c180c167e2be2",
+    "tasks/mbpp_task_id_605/original.rs": "275a50235193baf116162a4654d9c2707f994ec7bdd7c04d999dceb19128f9a2",
+    "tasks/mbpp_task_id_605/verification.json": "14d1833fe13040994413ecd67972a86182eb30dee2b553486a4fbdf20fb11aed",
+    "tasks/mbpp_task_id_610/candidate.rs": "34fa4668dc2ac0f03dda118243266d574f25bbc2361f7c86d1a9041799d91f55",
+    "tasks/mbpp_task_id_610/editable-sites.json": "c05b3de7ed5e4c0b2c84ab3c920a483306bb41a4fd03d43d1bbc289f387d5599",
+    "tasks/mbpp_task_id_610/original.rs": "505b15b6113f4f1478124e67909aefc04f916c735247a9c6901818828aac6d54",
+    "tasks/mbpp_task_id_610/verification.json": "8ff760140346af7bd3e8a9065d41401880fb80df13d912dbe870a4653fe880d7",
+    "tasks/mbpp_task_id_629/candidate.rs": "5cf4250d936e4ea72cdcbd55e77fbbbff15e35e945111b910e578a9203e54194",
+    "tasks/mbpp_task_id_629/editable-sites.json": "d2874567b1e5376bb8f114b214c266f1f0c9635e14cb44afc7c82f07b0270332",
+    "tasks/mbpp_task_id_629/original.rs": "f242817cc1c7e9454fa0df586d7928575f1d8542d8801ef07e6cb65240976ca8",
+    "tasks/mbpp_task_id_629/verification.json": "852f0e40cad1a853d545a374e839cab788532c16f70a26fd76b0eaa04990fed2",
+    "tasks/mbpp_task_id_644/candidate.rs": "010bef7dd8d315f08bd277b9f61f8da18fa5a7028e91077046357ad353b64bb0",
+    "tasks/mbpp_task_id_644/editable-sites.json": "51e2110c3c028f799fb4ffc715f333d35b1138de87a9fc3c61a87f44eaf56a07",
+    "tasks/mbpp_task_id_644/original.rs": "15daa4a41d79538a17c2c4ba90a4416bc561413d2ab01d601144c4e619c27e36",
+    "tasks/mbpp_task_id_644/verification.json": "90e05f523e2fafef45f93ea1365a6cb8ea2e7cafa79f1a4c2da3d07d08e15eee",
+    "tasks/mbpp_task_id_69/candidate.rs": "23061de1f845d0ae5cc15e1c21fb96b078d85b49f7680f5e24f4188e6c2a99c0",
+    "tasks/mbpp_task_id_69/editable-sites.json": "67d78c174b1cc9ce9a70d5850c61f2af07b11a707552bb91b8f0997ac01e5731",
+    "tasks/mbpp_task_id_69/original.rs": "2f699b11492acdeb3aa5cc924bc833c27b055d872a30cdd3905e0d3d46fc0a81",
+    "tasks/mbpp_task_id_69/verification.json": "20d1b085a6dfa444e7bf5f963b29dec29817df850ccb8ca4d480904dc2732b78",
+    "tasks/mbpp_task_id_743/candidate.rs": "677ecf1e3c33dbf2e4618b32d83ab56c9b1e4012d846af2b784368636f858054",
+    "tasks/mbpp_task_id_743/editable-sites.json": "e38b38d7b434b1fc225c46a0b505b558369bf02d3c4ddefb0c5e5e5da0ceff22",
+    "tasks/mbpp_task_id_743/original.rs": "cc2039cbe378bc746154eb8340d8df8242b99aa4d27aca7013c4e0eda02a2e13",
+    "tasks/mbpp_task_id_743/verification.json": "62755cca953788e60532e51bda3e9a6c17442df310ca46c9990121e1fb60eb3f",
+    "tasks/mbpp_task_id_755/candidate.rs": "fd4ff06382cad944139a742078f30e9025c36f849ef14cbe3ef8680bbe4c1521",
+    "tasks/mbpp_task_id_755/editable-sites.json": "fbfc6d55af1179cafa3c05b6174c486e5f06f67700b5490ddfff1bc48f0da5b0",
+    "tasks/mbpp_task_id_755/original.rs": "fcce2bc578097cc9590fea1701d61f6afdbcb21a94dcac7a14c7819c9946de83",
+    "tasks/mbpp_task_id_755/verification.json": "30307d4fa297aed6cf2731e8f63e5bc602a30df93a8f683335310a8a9e1b742d",
+    "tasks/mbpp_task_id_764/candidate.rs": "aac971a5a2de7ce91d32c8aa0d6cd80fd493ff9d71ce95fc8c8171bbe198ecfa",
+    "tasks/mbpp_task_id_764/editable-sites.json": "d0f13b4fe126aa895482c3b87dc52ed6cf9bd82909bed929d73df2da5af2b610",
+    "tasks/mbpp_task_id_764/original.rs": "47e2b67522ae4f564a581ee6bdf421d99914cf3e4ef50babc510d8eff16f1f92",
+    "tasks/mbpp_task_id_764/verification.json": "5516705c6d07d2e24f8f324eee745457f424365032f6c9376cfed8b32fb351b7",
+    "tasks/mbpp_task_id_769/candidate.rs": "7ee3c45ae6a0d8a3f0041b60f982b2c63923e3fd77cc4bd827dad79de8ee13c2",
+    "tasks/mbpp_task_id_769/editable-sites.json": "ca9f20f6eb5590e1f73ddaf05379991ea3e4fc9c5be198cf20e5b03282d07d00",
+    "tasks/mbpp_task_id_769/original.rs": "5647ad7c0b3d1279ae551dc28966a195917533ca8378f0b3df019682e8c925d1",
+    "tasks/mbpp_task_id_769/verification.json": "d4e601dd4af1bceb35e4178edf755535867e28f728d367915fcd7e5292ed7fa1",
+    "tasks/mbpp_task_id_798/candidate.rs": "8da1e522ce7e0bbebd1ad495d8aca326a1b3b40260214eb6f00c2e83ccbe9415",
+    "tasks/mbpp_task_id_798/editable-sites.json": "f3442f8a14a6bf7367ccc4d798678901660268e430f4d9ac715cb2663fa60b8f",
+    "tasks/mbpp_task_id_798/original.rs": "b9473a1100de497fb31446c1b7de0abff251cd20b888422bef166c7a5efdda35",
+    "tasks/mbpp_task_id_798/verification.json": "99dc37a06830018fa808c477be2da6541e8f18d7a3ea4132d3d8c6fcc7782f6c",
+    "tasks/mbpp_task_id_807/candidate.rs": "c4cae985f3eaf078ce03ba3d8de8dade82396abe4365b6019d51af56a76080a2",
+    "tasks/mbpp_task_id_807/editable-sites.json": "ab3f0e218c511666c48e611206b923c4c49a58f570700300318a5787256ff5f3",
+    "tasks/mbpp_task_id_807/original.rs": "49920149d6ed789bf09c1fd930c5e4a70491682194ddb90c4aa2088c9107b7c1",
+    "tasks/mbpp_task_id_807/verification.json": "76771c18721a9669d9679d010629d6df19ab022ceac59fd64a30dfa6350515fc",
+    "tasks/mbpp_task_id_94/candidate.rs": "a0bd7193a0fdf898ef990666016341c4de492b6e213f019497876f3b89b1fec0",
+    "tasks/mbpp_task_id_94/editable-sites.json": "d8f6c83c20479a097fe04b7c41c5a42f433fa6d68d24fed646220c29b3029b93",
+    "tasks/mbpp_task_id_94/original.rs": "57fa45f5c626adf0ca40c0cae15390ac43a4e3b1f5972058ba75892077512e43",
+    "tasks/mbpp_task_id_94/verification.json": "46ff90b47432b053d83aac922336ac642e13a0ffb648f9a0bd3721efe159c894",
+    "tasks/misc_binary_search/candidate.rs": "c74d3dd70dc42a5cc23e3f9742c1efa18b6a9b9ca301a710f10e84474c0caf94",
+    "tasks/misc_binary_search/editable-sites.json": "318ea88397a1e4984b355b4e2a381827902afa43d1839c4186ffb0e7ccc1a1d2",
+    "tasks/misc_binary_search/original.rs": "5c56c6932ad723573a4ba9cf378edd81927c278e7fa0c192b71187f74737d486",
+    "tasks/misc_binary_search/verification.json": "228d15b74e131a67ff43791558a0246ac031396ab6714d9f43e89d4ae88b4759",
+    "tasks/misc_deduplicate/candidate.rs": "e725534548d9a0b001872506d304dab9f2a5cfcbced893b98f6550df66ee9667",
+    "tasks/misc_deduplicate/editable-sites.json": "b5f8d4d01cca75f81c5a7b21eda02993b3ab07796b8e54beb0e57ba30042027e",
+    "tasks/misc_deduplicate/original.rs": "96e6791c16e4bfa876fb2044e651a225f7801962516c13a3e57fcfee041b694e",
+    "tasks/misc_deduplicate/verification.json": "1202835312310c7ddf02145d4ab6785b04a3385775dd9d793db70396c3975931",
+    "tasks/misc_fib/candidate.rs": "4321ccd43ad2171c9470786d063dc8949cc43cd9dbac0b858fa2e4e9257e784f",
+    "tasks/misc_fib/editable-sites.json": "83f2ce56fa4ddcb8118e7e286c4ca29f2631cb58facf6380504d2fa104f17cce",
+    "tasks/misc_fib/original.rs": "b37985b11669caad2fdd6e8b46cd91a2b265863a1ff28df205f0637287d6e57e",
+    "tasks/misc_fib/verification.json": "cef80b704a32a37810b9c6b698b2ae4d84bf02b63d42934cc2a833b86566305c",
+    "tasks/misc_map/candidate.rs": "338f33c5b312168df0fe5c5c0339f0917fe8d89c4dc4efc5be021bd22f95a4ce",
+    "tasks/misc_map/editable-sites.json": "2e52ea69da6f44f7f54eeb6a86afd825bef70bcfe14aa7603cd6292801a12b0b",
+    "tasks/misc_map/original.rs": "a9bff6bebc0bc2732d2c2f9cb464da9ceb97eba781b9b467fc97e3a8ed759d86",
+    "tasks/misc_map/verification.json": "a7f7868533fec7ff06ccf161043e74ce4ce42cb2086d29cb65008e2e7e06d987",
+    "tasks/misc_remove_all_greater/candidate.rs": "45761a8e79538a0e7946d080102cea56e5fde1765985aabebfd2771476a285a5",
+    "tasks/misc_remove_all_greater/editable-sites.json": "7a7264c51136066d8fc760559ba5e0368f8788ebd301f3f9897355fbae59d360",
+    "tasks/misc_remove_all_greater/original.rs": "a984803f001054f8f99199e43c56342e0bc195ef9c0abdd38885093743bf97b4",
+    "tasks/misc_remove_all_greater/verification.json": "e043f5cb982840e1a507eaae22f2691afd9163b51797ae799a4ecb57bf90d9ca",
+    "tasks/misc_reverse/candidate.rs": "790d4d192c8e0bc11d9effca3d48456ad78e7d8ac4458072eae895744651726e",
+    "tasks/misc_reverse/editable-sites.json": "31231a290551b5c1e060237e7047fc51af7bbf5b6476daa9b72afe3bb875eca6",
+    "tasks/misc_reverse/original.rs": "3542472a72d862c0713d8c8e902a77b147e4bec711b8ce6728afc49ad6de156c",
+    "tasks/misc_reverse/verification.json": "6c05b374cf1cb10fb75a85a17a246f692806684f5093dbe4826e1988a8c2460c",
+    "tasks/misc_simple_nested/candidate.rs": "6abfdc411df9bda98f5c6733f2800e66eebcbc0689d3263986ff6d80185fdf3d",
+    "tasks/misc_simple_nested/editable-sites.json": "873ef48a017fccc60f1099d7dce817523b7caa9aa3a04681177d9ba0db8e2fa0",
+    "tasks/misc_simple_nested/original.rs": "0c7054751fae5260bff9dc3ed5336524438d3bc5dd5e2d6cb7b46fce218001ca",
+    "tasks/misc_simple_nested/verification.json": "74518c50fc2ba0a7caa487703773651a96985e397985399fedf3d53c444dc80d",
+    "tasks/misc_sum/candidate.rs": "8382c411144a00460c7ff967e7943818c206ec9a11b9b188bed77e3cadbe9d48",
+    "tasks/misc_sum/editable-sites.json": "4f71758c6d8f036aff3ed1edf2f1ba20dc2747893dccd3475cd5a16c97292faf",
+    "tasks/misc_sum/original.rs": "58df631ae2d2d296e47d8a9d6b215f0d56ec0bc74cb80d1d1d8cf67ed61c31e7",
+    "tasks/misc_sum/verification.json": "8a861ea75c3681f3e59e5a0260ef28522db6da7d443b9596f872141b536a9f9a",
+    "tasks/cloverbench_array_append_strong/reference/action.json": "3e7d55e98a05540325168dc2abbf66aa6f6ba688fdb7bf2c9e1ff46f8fa81686",
+    "tasks/cloverbench_array_append_strong/reference/candidate.rs": "db151b7647197d466356de3eb55b37723a799c8f7edb67391229fde3613a3d9c",
+    "tasks/cloverbench_array_append_strong/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/cloverbench_array_append_strong/reference/provenance.json": "295957398fb1bd2470992f412d19143815e033c354ad4de9fa5fdd0732afa976",
+    "tasks/cloverbench_array_concat_strong/reference/action.json": "fcc03f3b5df74cd64c95c28112f88e4ce9c0269435d35758392b7e27b8ebc84e",
+    "tasks/cloverbench_array_concat_strong/reference/candidate.rs": "b32d6f9a3e5bdf4f100720dae4f1d93f46f7f13ae9a6836406a049ab9aa28648",
+    "tasks/cloverbench_array_concat_strong/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/cloverbench_array_concat_strong/reference/provenance.json": "ebea39c99f47144a5d6bd43ebe0afec820e2632d743b71afb2a0adcddf018eab",
+    "tasks/cloverbench_array_copy_strong/reference/action.json": "fb18f46c1a86e9a3bc8f31e561259687b5cca1251a557c4b14a396a2e23f1c9f",
+    "tasks/cloverbench_array_copy_strong/reference/candidate.rs": "9a8559765907c3ac1e50c66bc088babfb92c06247d870b520dc52b254fd44792",
+    "tasks/cloverbench_array_copy_strong/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/cloverbench_array_copy_strong/reference/provenance.json": "b3bcea01d60d091f7fbac69e867021a91dab60fcbfe7d1306357dcd3d5860a39",
+    "tasks/cloverbench_array_product_strong/reference/action.json": "6bb7ccf8914cb861f404eae6c70ad1db47ae7e084bf1bbfae25b1de9e3e3e153",
+    "tasks/cloverbench_array_product_strong/reference/candidate.rs": "b7c7bec3cf06132c9b14514bf9e00aeb4e53fb531106a4a74a96088454580948",
+    "tasks/cloverbench_array_product_strong/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/cloverbench_array_product_strong/reference/provenance.json": "ecf36cb1a1caa511ae62a6afce92e59da724d2b13a74bcf2e7cf96fadbf39c2b",
+    "tasks/cloverbench_array_sum_strong/reference/action.json": "fdb9e8612b86532022afe2346ef1e199c2a46fc5b2d6a6d93fffee5cbfa3c3d2",
+    "tasks/cloverbench_array_sum_strong/reference/candidate.rs": "31cfaa810a3a4f4a17dadefd368b8a6cb2eb2042fc78b53d689d754ea6b425c2",
+    "tasks/cloverbench_array_sum_strong/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/cloverbench_array_sum_strong/reference/provenance.json": "bf55aaad3cc8b2e93a1752d158fded2113a5881465efce5c2fad0e0a9fa361e7",
+    "tasks/cloverbench_binary_search/reference/action.json": "b0a81ce7a1474309d466084eb32360a2fa0ff6339ea5b50a72323ebed371b11d",
+    "tasks/cloverbench_binary_search/reference/candidate.rs": "2d1daea6eb9622d7c094d17878632a8bab47c19b4f6dd15ef014165b5b9e288f",
+    "tasks/cloverbench_binary_search/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/cloverbench_binary_search/reference/provenance.json": "769ec4e6b248c71a8e4e266d4f42f65298c557c0f6c77ddfaf30548250da1d2d",
+    "tasks/cloverbench_is_prime/reference/action.json": "e63ec776a8314c5b079db080d6d9e096eee77609ac19512dbd9bace08a7926c0",
+    "tasks/cloverbench_is_prime/reference/candidate.rs": "f99c4294467033ff7db0bdf4a780e9ec9a258111fcb279e76f4d9339bc801ba1",
+    "tasks/cloverbench_is_prime/reference/decisions.json": "f11bebc8ca37c14eaa9abb16733332f4c2d1e5e3f755c4ebba4b2792aa9fa607",
+    "tasks/cloverbench_is_prime/reference/provenance.json": "b739f6326aef2fb0ede1e808a1324f2b0f7a1160669afa302aa6766b9dc0a689",
+    "tasks/diffy_brs1/reference/action.json": "e0400748a208e672a26bfa21de9458865f7f2b208f5b02b479f5f410f1896759",
+    "tasks/diffy_brs1/reference/candidate.rs": "fb6231465ec56a4063393fd100a76e610e293fd1c08bd9093913856898603c15",
+    "tasks/diffy_brs1/reference/decisions.json": "18970599c4713f1761d6ff34daeabcd622fbc72de096fe5c09943943cfa041eb",
+    "tasks/diffy_brs1/reference/provenance.json": "16c964d68303606eb3a1e9c824cbcb4b7556501ea96da6219032bcc5609330e6",
+    "tasks/diffy_brs2/reference/action.json": "9675ee67c7689054a0fc17eadf896041c4efe00c3f6ef85198dc22b0bc1ebb7f",
+    "tasks/diffy_brs2/reference/candidate.rs": "4344123ac3852b408b46a316e115556f83070d7e99c283d45d0bde2e5775b55e",
+    "tasks/diffy_brs2/reference/decisions.json": "18970599c4713f1761d6ff34daeabcd622fbc72de096fe5c09943943cfa041eb",
+    "tasks/diffy_brs2/reference/provenance.json": "00cda04f78010fa4912e645f8d35503ce4b4e74dc7fbe092ecc77d1396d1e794",
+    "tasks/diffy_brs3/reference/action.json": "9a9c313f2006716ba3a7d34011bb570e23467f658bc884d04b4bc0e05de4f150",
+    "tasks/diffy_brs3/reference/candidate.rs": "b4a3458882c6e68f7c60965a3093d69a7053ec4ba067f326d62a51944415e8e9",
+    "tasks/diffy_brs3/reference/decisions.json": "18970599c4713f1761d6ff34daeabcd622fbc72de096fe5c09943943cfa041eb",
+    "tasks/diffy_brs3/reference/provenance.json": "73c54bf5d9f57633ab15ba0b1472c6a66e998c22f010bc3d10202b51a05f12d0",
+    "tasks/diffy_brs4/reference/action.json": "ce79ce16e2cbb132dcb658468c65c457eaa247389df890ba08929b5b599e1e31",
+    "tasks/diffy_brs4/reference/candidate.rs": "c2a9b664b1999203cc02fbe4c1c2f32b187e18977fa196bfd22fd89584da87d5",
+    "tasks/diffy_brs4/reference/decisions.json": "18970599c4713f1761d6ff34daeabcd622fbc72de096fe5c09943943cfa041eb",
+    "tasks/diffy_brs4/reference/provenance.json": "6e1782c95b99976d0f467d3e859b7cb7069f82a06878bd283fd9a2d92f523ac8",
+    "tasks/diffy_brs5/reference/action.json": "5ed132e67302f3cfd832d6137a0916699d20450f5c206bb9b083b0b87e36cb27",
+    "tasks/diffy_brs5/reference/candidate.rs": "8e15f951f26dee2626927f7f0869d77736efda2187252a1ac0cb0c79dcfa73e8",
+    "tasks/diffy_brs5/reference/decisions.json": "18970599c4713f1761d6ff34daeabcd622fbc72de096fe5c09943943cfa041eb",
+    "tasks/diffy_brs5/reference/provenance.json": "6a5fad666f74ee181987b07e8933b8f0c0f8e949cd1608ec85d8bfa91566e400",
+    "tasks/diffy_conda/reference/action.json": "0a72d28a9295a04df20212e1d93d05c472bdb948373e4569fdc72a8bcb75f5a5",
+    "tasks/diffy_conda/reference/candidate.rs": "030752a772d4e3fa1a19d02e88318218aa347f3d057571f00aba812dcb3de92f",
+    "tasks/diffy_conda/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_conda/reference/provenance.json": "cc0090bfb24068db01b11b83ef62dafdf6a08f0356884c06eb9535069402a6c6",
+    "tasks/diffy_condg/reference/action.json": "59ddee7d15f957559ea96bb9c4114a32a4b2bfbba9a4d8433fa0187658d9cc05",
+    "tasks/diffy_condg/reference/candidate.rs": "d3c09356369d32e230b75d92b633340aeaafae01805a343ee3156579eaa2d7af",
+    "tasks/diffy_condg/reference/decisions.json": "3f3001130376fd64a7e070e541e7d31ce3be72d3e9a246bdad5593532c4b0327",
+    "tasks/diffy_condg/reference/provenance.json": "5f20bf39e2ed7eb2f76426883fcb8789b2ceb378021420dcc69f6b6b83da7945",
+    "tasks/diffy_ms1/reference/action.json": "0db5e92e3a2061d0291e8f16a001edeeeb0badfe8e1162a24a4eb10d90972c5b",
+    "tasks/diffy_ms1/reference/candidate.rs": "8186b7482642ba749c50115789c3c9c17aeb44e0a813ebcd8f9cc46a4cd2bfd4",
+    "tasks/diffy_ms1/reference/decisions.json": "f6a7ccfedda73df831e57037c8e99dfb3f924a998eb4c14447c8d4f00bbf8ca8",
+    "tasks/diffy_ms1/reference/provenance.json": "f7d766d1fd8849da345511ac806bd3ac184a98a428ba9b2d85d89b0774ea3955",
+    "tasks/diffy_ms2/reference/action.json": "b92e22c297be6ad8cd20d53d043326293c9a3dc9529decbff2d5ae0afc399127",
+    "tasks/diffy_ms2/reference/candidate.rs": "33d973eea4dc0cdd13d444679d00fe0815fe6285637ee0913e38322681f557af",
+    "tasks/diffy_ms2/reference/decisions.json": "f6a7ccfedda73df831e57037c8e99dfb3f924a998eb4c14447c8d4f00bbf8ca8",
+    "tasks/diffy_ms2/reference/provenance.json": "f854f6dbafed4855630f2d04e09027266c7f4aa0868ef28a45f85b035562348f",
+    "tasks/diffy_ms3/reference/action.json": "093603794ea895a4d0d01384fd07f8cefc31005d020c7d0889012c22ad21209d",
+    "tasks/diffy_ms3/reference/candidate.rs": "fd167a6d37599de8d173e25673b52b7cc7ae598d7dc31356809041e5246e2ed2",
+    "tasks/diffy_ms3/reference/decisions.json": "f6a7ccfedda73df831e57037c8e99dfb3f924a998eb4c14447c8d4f00bbf8ca8",
+    "tasks/diffy_ms3/reference/provenance.json": "49c020edbac9ef5be79381365e68ac85fd2454ad436bd2de0397d7ac4a6a249e",
+    "tasks/diffy_ms4/reference/action.json": "c56cddd2ec403f73a4457194f69878ecc59b2f090e6fb865a11cca6980328d96",
+    "tasks/diffy_ms4/reference/candidate.rs": "158c4d1ba485585dd361f20ddc3aede1d0107abf227925c88e03bdca417e6811",
+    "tasks/diffy_ms4/reference/decisions.json": "f6a7ccfedda73df831e57037c8e99dfb3f924a998eb4c14447c8d4f00bbf8ca8",
+    "tasks/diffy_ms4/reference/provenance.json": "084a7fa1856c17cae03db9977a9a0e3e114c591e842686bf42169c8b2a7c7d46",
+    "tasks/diffy_ms5/reference/action.json": "8126dd128cbb0d459f5a666d435856595e8b6a6dbc55a09a9890a498997e2f60",
+    "tasks/diffy_ms5/reference/candidate.rs": "6623b020595ad8ba9ed4877850aa13ff0fd6c1c6a582920d2b67c058df784eaa",
+    "tasks/diffy_ms5/reference/decisions.json": "f6a7ccfedda73df831e57037c8e99dfb3f924a998eb4c14447c8d4f00bbf8ca8",
+    "tasks/diffy_ms5/reference/provenance.json": "bb62e4b11ae614011a69bc276b42d369726df97579aeddf74906ff828f0baab1",
+    "tasks/diffy_res1/reference/action.json": "d009a6ad3d17faf398de49b330999ddc5f5d3d94b6ca33900c077bbec59f9083",
+    "tasks/diffy_res1/reference/candidate.rs": "70a8c947283a6a30c91740e1a9205825aeeac99c60adc244970a7cceb27a7d2e",
+    "tasks/diffy_res1/reference/decisions.json": "b544df506f2e983e29ed01006a98a060e357fdb65f333f649b86242331e4fc1e",
+    "tasks/diffy_res1/reference/provenance.json": "23071dc2685059d0ff30ea6216c913c5b9d673ba5db38a03c438fcde5edce6ff",
+    "tasks/diffy_res1o/reference/action.json": "7faa2f9a7676b5be3804e988b24379ed5ed5a553cae3a70eecc7e99d634cdedb",
+    "tasks/diffy_res1o/reference/candidate.rs": "bea9c65d8535428e5b9cb8696f4ce19e740e96241261f32dab6d14893931279c",
+    "tasks/diffy_res1o/reference/decisions.json": "b544df506f2e983e29ed01006a98a060e357fdb65f333f649b86242331e4fc1e",
+    "tasks/diffy_res1o/reference/provenance.json": "268c38bde5667557f199f9c23db006a7f16b41c94138da54eddb0d24a627e024",
+    "tasks/diffy_res2/reference/action.json": "74e73ac539fb5af20ad38316690879020fc2f51ed5650cfe6f577d559d677725",
+    "tasks/diffy_res2/reference/candidate.rs": "54a4ae53e5230ace28588baa42b5479927d7ad8962ec93ccf599a5672fb3cd0c",
+    "tasks/diffy_res2/reference/decisions.json": "c55c1be1bd519ea082209ec241db43cd4aa845fd031b89660973afdee057065d",
+    "tasks/diffy_res2/reference/provenance.json": "fb32a47881bc8dd3383a50b2c0f6441f73a53379c8187c9afb4bf02a8ff0f805",
+    "tasks/diffy_res2o/reference/action.json": "079ff77737b17210e760a3b33785a20ad5de6f11256ee2e063acce1fdf32b9c6",
+    "tasks/diffy_res2o/reference/candidate.rs": "935164b34fcb469d9e66707f131bea09f78e2474fa9b5bc4a5e57cb9125c0639",
+    "tasks/diffy_res2o/reference/decisions.json": "c55c1be1bd519ea082209ec241db43cd4aa845fd031b89660973afdee057065d",
+    "tasks/diffy_res2o/reference/provenance.json": "61f46306501c43ca8b5ee02360b2e443373f258be8be38e0ce19007a71f2bfae",
+    "tasks/diffy_s12if/reference/action.json": "d274e6d4526523b7da9bb758671c47c3c519e2c4c68635309cc4e3382242e85f",
+    "tasks/diffy_s12if/reference/candidate.rs": "1528c972b60974968af99006cc050749a9b56b0203423801f6ae57e64461563b",
+    "tasks/diffy_s12if/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_s12if/reference/provenance.json": "651f20a0916306d863e45980d6d86c6f6cae084e8ef254eceb5647fad86c12f4",
+    "tasks/diffy_s1lif/reference/action.json": "172d6d990535a691e2cb0e90322ea90c1720e88b8eb9f0c656dceab8be03e30d",
+    "tasks/diffy_s1lif/reference/candidate.rs": "826582c63596f117d73e4d9bc4741044eaafe0bad44d8dbb7a90126aa43792e1",
+    "tasks/diffy_s1lif/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_s1lif/reference/provenance.json": "5d76656438e11d61ded8b1133127e7f1c164f8a41702fdd42d08a27619dfa7cd",
+    "tasks/diffy_s2lif/reference/action.json": "a9ec593e5401b2eaee8568a2c59f88a71172a1ab401f0e409278b2f66650d5d5",
+    "tasks/diffy_s2lif/reference/candidate.rs": "6a83cee3559d330615030d10d6661b1389ce7e50a162ec6e0d772c9e963191af",
+    "tasks/diffy_s2lif/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_s2lif/reference/provenance.json": "bd461628788e54af2cef0ecdb2c466edc68755fe089ed95336b948ec3b3df449",
+    "tasks/diffy_s32if/reference/action.json": "e33dbf9f68e344149da962260dc350f4ec364c08cb322fcfcf89da1485d75207",
+    "tasks/diffy_s32if/reference/candidate.rs": "150240c24630e60251dfc450dbedc1fb2b1e4df480058bf7fa5987bcf600bc47",
+    "tasks/diffy_s32if/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_s32if/reference/provenance.json": "f2d8272ee13e3d94334838e13858f68fdc48bb9f7f1b503276a641d67462a677",
+    "tasks/diffy_s3if/reference/action.json": "8ab910d7b9576eb9c245fb004d064fd7772da1f2bcaa3d80533cab24ba70ea29",
+    "tasks/diffy_s3if/reference/candidate.rs": "8045a439d14cac7b34d15c0c71915722df7e38dcca28f3fa417d94b2a881b816",
+    "tasks/diffy_s3if/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/diffy_s3if/reference/provenance.json": "730d32d7a617fdb89b16bf1da34e5f8b3de698c81fece036d1a51eaeda4930d4",
+    "tasks/diffy_s4if/reference/action.json": "91bcc164e82998484266733d9bf22c952b4cd6aff9afd5f2cd92281726a04ef7",
+    "tasks/diffy_s4if/reference/candidate.rs": "c6acf513a0abd98211a29fcca57d168b201dcd4233cd5549c0b57c28619bb880",
+    "tasks/diffy_s4if/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/diffy_s4if/reference/provenance.json": "da3e80286166937b1e3f9bf2cb2e2d8d13a6a98b5b5cdbb2366f927d6917298a",
+    "tasks/diffy_s5if/reference/action.json": "30d9599663b28e3ca428a82856f2c28480babc194798e2c2cd744ba4219ba895",
+    "tasks/diffy_s5if/reference/candidate.rs": "c3378188f476f53fac4644732291139a50960f0f677a4f7dd15e85d41035deee",
+    "tasks/diffy_s5if/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/diffy_s5if/reference/provenance.json": "445baf85787817a03e4ef0ab93a12be6f723aa3241b4096b860fc97ec9299394",
+    "tasks/diffy_s5lif/reference/action.json": "446a6f325ad90a577ca7d8111ec4eb17d2e2207fd703a53d133d0c6afdfa3889",
+    "tasks/diffy_s5lif/reference/candidate.rs": "cb9de712426edc53a9b15f166abe17cf8fde62ecea8b1e85db970411ed2265e2",
+    "tasks/diffy_s5lif/reference/decisions.json": "1f3675f08a8b00d66cc73227f3ac5e819854258253d7ab16c3e0cee8562cf1f7",
+    "tasks/diffy_s5lif/reference/provenance.json": "01e0ee1c187a19eac116c9b38f4230a078ba4b82a9d1ccd944c4432cabdd9580",
+    "tasks/diffy_sina2/reference/action.json": "6b54876d6d9cf2d2c8a751df93e751619b99957c8874aa6830cfdac9985dffc8",
+    "tasks/diffy_sina2/reference/candidate.rs": "51334035745a1009ddffe17413b08aab5f4c5cb1a6730c5acb3851f6fd885a9d",
+    "tasks/diffy_sina2/reference/decisions.json": "3f3001130376fd64a7e070e541e7d31ce3be72d3e9a246bdad5593532c4b0327",
+    "tasks/diffy_sina2/reference/provenance.json": "5d17e61633b845cbf4ec166798e7372453bf0cc549464fa8bfee5573dcbebdbb",
+    "tasks/diffy_sina4/reference/action.json": "42717af8d09568931f03141fbd896927e3eb55d6bc0945a97e2d271f50d2c630",
+    "tasks/diffy_sina4/reference/candidate.rs": "6e12361236c34de9a12ddb8ddb64c3f0834cac8f129a735b00312e634adf7b26",
+    "tasks/diffy_sina4/reference/decisions.json": "b544df506f2e983e29ed01006a98a060e357fdb65f333f649b86242331e4fc1e",
+    "tasks/diffy_sina4/reference/provenance.json": "73fcf036114f87e7506d861f013bb581d71a47b97464d712186b20c130fd4afd",
+    "tasks/diffy_sina5/reference/action.json": "fea2d960ccd9a4e327806253b17d4b33a9d96ef48e2f00d019f131c2d428485c",
+    "tasks/diffy_sina5/reference/candidate.rs": "bc5eb477981fc90d365c0b08721cae1659dfb25d9a007fbfdf1110c3cf56a79a",
+    "tasks/diffy_sina5/reference/decisions.json": "015ab953a7a88486910bc6cb4216391604cc157587cf58d34efa5872fad78b24",
+    "tasks/diffy_sina5/reference/provenance.json": "ff8dda178f684aa67c17fe7ae2be1153a2eb75ec90fd918dc039adfeeb0d61e3",
+    "tasks/mbpp_task_id_105/reference/action.json": "af0aa73a9559a16356caab8eae46aedf9f6604ca2d564437eb0fce762352eea6",
+    "tasks/mbpp_task_id_105/reference/candidate.rs": "80edff40914a5af55c77f14bb85b8b1c939e1cfc3b66aad4f2019f972b2320c8",
+    "tasks/mbpp_task_id_105/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_105/reference/provenance.json": "7c8384c8131ba1fc172bcf819aaf751f2baeea5196f3762ecf224ee0d0866c99",
+    "tasks/mbpp_task_id_133/reference/action.json": "e0fc2ab884dd1a3e986344c5bc03df899a91a6ed733ba968ef7d6cebe53c685a",
+    "tasks/mbpp_task_id_133/reference/candidate.rs": "c801a2a680e1d9b6c2a3b47ef086deaac8558b2fbf5c7724975e1e9e3345399a",
+    "tasks/mbpp_task_id_133/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_133/reference/provenance.json": "a93e95f1d31b45a6b60ecd0c10fc6c98c32041ce0f5207414af782e3fff9e673",
+    "tasks/mbpp_task_id_142/reference/action.json": "1708c23dee2abe2e3d6473fe307e4d55155bec57fa9c672b9d8cf9f5c027fe21",
+    "tasks/mbpp_task_id_142/reference/candidate.rs": "b9b51469fd8f5867bf32f23ebfeddc16572dd4335d9ba26c44ad501d42e96f56",
+    "tasks/mbpp_task_id_142/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_142/reference/provenance.json": "6c293284d449aad652280b714fbf235104615c49020793131c03dd9566f6991a",
+    "tasks/mbpp_task_id_145/reference/action.json": "031b490d4dec9af9fe44f497351ce4dc7ce30492b2f25ca519948768e6906b1b",
+    "tasks/mbpp_task_id_145/reference/candidate.rs": "095ec1c23821b0f4f17b93a4b449cc0516030e7edfe0d481ee18a1510c997c49",
+    "tasks/mbpp_task_id_145/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_145/reference/provenance.json": "79be0a69738bded33aa99584bd3a7c96aad25e6b4119c6392ae1d344b0f774ac",
+    "tasks/mbpp_task_id_161/reference/action.json": "ed7149f904f16d515e40adcfc6988fc6b0df335737a4e757ff4547af33890b8a",
+    "tasks/mbpp_task_id_161/reference/candidate.rs": "ab8e524adc0ec842c32f57dd9d83d3c291ac40642646c013226b8ddd53fdfd40",
+    "tasks/mbpp_task_id_161/reference/decisions.json": "c01585cd734072a78815b04b024da9b3b85bedac0331d5cd546ca47f32dde251",
+    "tasks/mbpp_task_id_161/reference/provenance.json": "81c08b657902476dfef6c200bf0e3fdcf8a18181739183823318fa07a855f2a9",
+    "tasks/mbpp_task_id_170/reference/action.json": "f3c4333da980014ec3a56dc1ca660bf220517d777bbb742f0defcd925145e614",
+    "tasks/mbpp_task_id_170/reference/candidate.rs": "12b5cc1ab000be5a00e88ec4820a060e1f72ae6152fa8f04384cf7984e5d09ea",
+    "tasks/mbpp_task_id_170/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_170/reference/provenance.json": "c2314e11b123b9c0e457c384425d925c3384e844f0650152d0e647ab2eb7e2b3",
+    "tasks/mbpp_task_id_18/reference/action.json": "c9a4bed82bb049c6d9ebdc51329deabd115dd9069a623ff33a97af5205aed897",
+    "tasks/mbpp_task_id_18/reference/candidate.rs": "adab87447288289f6e43920d69420ee5bf3189f9b60b8598efb4785d62b26cde",
+    "tasks/mbpp_task_id_18/reference/decisions.json": "c01585cd734072a78815b04b024da9b3b85bedac0331d5cd546ca47f32dde251",
+    "tasks/mbpp_task_id_18/reference/provenance.json": "08601b0e006e6da89bc7e02e6e5426a1be08bd5b4dfe438de5026d5f192936dc",
+    "tasks/mbpp_task_id_240/reference/action.json": "10239493bded36db2b71838da31cac9b951c39cf9244725f6fed798ead24b6c1",
+    "tasks/mbpp_task_id_240/reference/candidate.rs": "291b8784db997b2648ae3d3cd21358697eabab37811196731fb07002c39e5484",
+    "tasks/mbpp_task_id_240/reference/decisions.json": "60270a9e799cda46bfa3629eedda80c7d4ad97a1c2f68e381fe8b7004f13c106",
+    "tasks/mbpp_task_id_240/reference/provenance.json": "630b1c522fb111516520416e89096c42157e6c4f8bed4cadb134481a8161aa1a",
+    "tasks/mbpp_task_id_262/reference/action.json": "6fc486991ae850698be369aa9b87fad09a50d0d5e7af7d03e36360ae15291979",
+    "tasks/mbpp_task_id_262/reference/candidate.rs": "49e0943109933e243b0ac2166fcda2e035fce700502f53fd236ccca14744ba92",
+    "tasks/mbpp_task_id_262/reference/decisions.json": "889b7f023077800eb439f6abb5549131cbbf064822e93a3945bc24c6702e1d42",
+    "tasks/mbpp_task_id_262/reference/provenance.json": "ec17d192f1053124bf73eaf347a90f9f1ae0496a77c4059eca97879982fbdc8f",
+    "tasks/mbpp_task_id_290/reference/action.json": "764f553e486fc6f629d23dc5f5a59e8b5b69813fd00e4c0e7ff9c2776616b897",
+    "tasks/mbpp_task_id_290/reference/candidate.rs": "c73bdce7c24de2ba5b33fde5aa2d1d8d2b7837be9de4ccf37257e7124658357d",
+    "tasks/mbpp_task_id_290/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_290/reference/provenance.json": "f1348d26bcc7e9149fae87d4eeb8fe2d07695bd8eed6f559be3bf8f1d98845ec",
+    "tasks/mbpp_task_id_3/reference/action.json": "f62219e80e6ea0733a6e1ce935a713d6d0c738d1b944f3325eb665bfcd1a6ee4",
+    "tasks/mbpp_task_id_3/reference/candidate.rs": "ccd319705c9e7ffdf61a9ff417479fafb38e2443cc635adbc27040e35ad6e344",
+    "tasks/mbpp_task_id_3/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_3/reference/provenance.json": "384e6dd69482026fde64b11528fdb01a8bc0860598e8b8e5f3c8727e0b8e0fd4",
+    "tasks/mbpp_task_id_412/reference/action.json": "8145b16f57d1bac9ebd4a959337fa539c33d7fec80b80cae8749c340df8cac54",
+    "tasks/mbpp_task_id_412/reference/candidate.rs": "3d96ccc6d12d50fd9a55939dee39627599cc6ef0431c437984e8be9d9946d106",
+    "tasks/mbpp_task_id_412/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_412/reference/provenance.json": "11003fabea326ce88a6744a4928259e2048fc09ef868f347e9b9f355220d406e",
+    "tasks/mbpp_task_id_426/reference/action.json": "f890f37c007e15703e52790b20d1846baf82f43d68045d019e01a179445cfb47",
+    "tasks/mbpp_task_id_426/reference/candidate.rs": "8c787eb87822e6a759799552cf6a058acee4f6ff8180f8a9540b6c0b0953a923",
+    "tasks/mbpp_task_id_426/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_426/reference/provenance.json": "ffd0a099a3e38cef30aaf9ff3aa8af88392758ad74e03d62fc8baac08fcf1f97",
+    "tasks/mbpp_task_id_431/reference/action.json": "d4b133cbd503a4302f47afbd2ea11353d4e313fb4fe7439d25a7b50d07ac5683",
+    "tasks/mbpp_task_id_431/reference/candidate.rs": "d34d153ad45b6861b800b030e429caea503757d755a52fad148104bf034d192f",
+    "tasks/mbpp_task_id_431/reference/decisions.json": "a1cb1b630939240a8ace7dfb80cc01232fef2cef863df134e1c3e87a56fc9c18",
+    "tasks/mbpp_task_id_431/reference/provenance.json": "b6f20730beb89fb260b7bb6ae6e2cd7e4e14322606d517125fe5a14123008f76",
+    "tasks/mbpp_task_id_436/reference/action.json": "b9847d20bea812e6c889d221e3d72320f364f955f8777646e4949054865f9a85",
+    "tasks/mbpp_task_id_436/reference/candidate.rs": "7bc7fc8eb040203be8ff7b01770b1b86535e20762fb633d62d54d22b73f63847",
+    "tasks/mbpp_task_id_436/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_436/reference/provenance.json": "bb01488f028c1c74bb591177da24e68eedf4070437e6282804980bd83b429e07",
+    "tasks/mbpp_task_id_445/reference/action.json": "0c7493550b352554e80319c0fe2e9f31232a8627bec8ece8b0edd950fa00de5b",
+    "tasks/mbpp_task_id_445/reference/candidate.rs": "64f142888729e2c57a6d4756663187eb3a025cb1cf1fcb223b177ad7cdeaca5b",
+    "tasks/mbpp_task_id_445/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_445/reference/provenance.json": "4cd8fc5a4fc1f4526d0d8ba86ade1d15ecdd69db3a9619a306f53d0b175ccc1d",
+    "tasks/mbpp_task_id_460/reference/action.json": "46d3752d9074d4329bce690aee4b1a4113fcf5b83c2738228bb1d7d0dec2ed64",
+    "tasks/mbpp_task_id_460/reference/candidate.rs": "23c33bee6a12b85ba98e229b47f44966e5bc98da4a9d8e2444e7fc6e597bd449",
+    "tasks/mbpp_task_id_460/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_460/reference/provenance.json": "fb294ccdf303cbe1c1789dd288327b33cae3231130733b1b4eb0d71a0ab6dfa6",
+    "tasks/mbpp_task_id_461/reference/action.json": "6cb67fc6e3c3f38350fefd59dcfdd8c4167fae60fc3bf419abd6ada10fc25042",
+    "tasks/mbpp_task_id_461/reference/candidate.rs": "91e65405cca4c151c5c6ba1bc8a4ad9b4b77d94ebe7c79bf66a709e2f9ebf310",
+    "tasks/mbpp_task_id_461/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_461/reference/provenance.json": "c46750c466af3a53c9b1c66d71a02c55c8cff1bf07fcc3c77ed1c42ccb031048",
+    "tasks/mbpp_task_id_476/reference/action.json": "a4b0363fd71df641313cf813e7afb4b5df3cb0994faa487fa48dd69f3bd5a144",
+    "tasks/mbpp_task_id_476/reference/candidate.rs": "d4d19092a1430996d23a1a5c4ef46f5394271a7971653ed4336f9b8908c6126e",
+    "tasks/mbpp_task_id_476/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_476/reference/provenance.json": "c6cb61721500a7cefed9dd123e5e09245fbfed70b7507c5971f08e3a5aa74457",
+    "tasks/mbpp_task_id_554/reference/action.json": "471942aed3dc11a86a9f91ac29dd188283179b346449adaa269f1faef0e74818",
+    "tasks/mbpp_task_id_554/reference/candidate.rs": "ac94e7f67c28d05e6b76c9e358b2eae4bc155291ea172b5c4aaa257bb89f616d",
+    "tasks/mbpp_task_id_554/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_554/reference/provenance.json": "35f46e00bab9202a8dec1b032be541a6855b4f70550c215c5d2f10777d4ba604",
+    "tasks/mbpp_task_id_572/reference/action.json": "ee7523066bf5bdea9f2cd35efc62217d5a2d96ba60dda88f968d38fa6dd5d51e",
+    "tasks/mbpp_task_id_572/reference/candidate.rs": "352270a3a09ed964bf8267d81ade271a3abac5d5f235fb4761ad317687967a9b",
+    "tasks/mbpp_task_id_572/reference/decisions.json": "14a023625fb85e45e3aa85040c9e67aafa6f3f80f81d4f9cad10ce65c14423c6",
+    "tasks/mbpp_task_id_572/reference/provenance.json": "758b926dcba08f5fd4e48f5028dc733e0208e08acfc7b1a3b3a41a8a62dc5cf8",
+    "tasks/mbpp_task_id_576/reference/action.json": "54870c5a13dbaa1917d5d0259f903512b8682b51da3b37f6938d56e6c4df2de7",
+    "tasks/mbpp_task_id_576/reference/candidate.rs": "0946975987f9296182d3afe6f4d168c415c907d9c7d78f16a0f534454f4c48a4",
+    "tasks/mbpp_task_id_576/reference/decisions.json": "043fad6dd4f40dbe85fe7c8cda84bb228ecf254453e0e937f9e300cd9a627a04",
+    "tasks/mbpp_task_id_576/reference/provenance.json": "ac83233a6e0bb9a0cf2bcab8534c22fbe9dda254dbf8ba31bd302212c2391ace",
+    "tasks/mbpp_task_id_579/reference/action.json": "025e4e33825f9ddd2bb45d9605a70dc86b871c81d8d9395305616f9c1479fadf",
+    "tasks/mbpp_task_id_579/reference/candidate.rs": "7a4d813fc68f89024629cd6fdfc66cb81ad2cd2c46a85e30f35464dbfe087a29",
+    "tasks/mbpp_task_id_579/reference/decisions.json": "31b5470fe6d7183e438bc103286bfe9525a2b7a6f722db6610a1006129eb18fd",
+    "tasks/mbpp_task_id_579/reference/provenance.json": "8483223802f56deb69cd7478c6baea2df4bd470639623e9fa31fd101fa1313a4",
+    "tasks/mbpp_task_id_586/reference/action.json": "b656fd5dadc0b11ebd949bfc86fad4952c452f6fba797c07644e443555bc068e",
+    "tasks/mbpp_task_id_586/reference/candidate.rs": "9870f73997f67cc3ca346e147a760b7097bf6da7a99ec684651ca032bf4e582a",
+    "tasks/mbpp_task_id_586/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/mbpp_task_id_586/reference/provenance.json": "9abb1eab6beb6333d06d009683dc70755969b4d4df1a0cb703ae8d784b2f0907",
+    "tasks/mbpp_task_id_588/reference/action.json": "a4b0363fd71df641313cf813e7afb4b5df3cb0994faa487fa48dd69f3bd5a144",
+    "tasks/mbpp_task_id_588/reference/candidate.rs": "8e43e034b3a4edaff4f90d4257df91c449167a4c5408939194c82d53ecf1371c",
+    "tasks/mbpp_task_id_588/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_588/reference/provenance.json": "92b57cfbcac4f85cff0894de768a02a2c98db9aeef962eda0ec1219b9d86e4c2",
+    "tasks/mbpp_task_id_602/reference/action.json": "872a97fea47d018408fc7840744a2a9e2c92b715f092f0788e25f0710f339956",
+    "tasks/mbpp_task_id_602/reference/candidate.rs": "172fc70c7eba1989014a10f2280bc02f2c94df52b1fa23d1f101d21b7a1b22f2",
+    "tasks/mbpp_task_id_602/reference/decisions.json": "09f993e3ef1bb13b5e0dfd9fac9ae46d9d2fe9fc8d8b4e57cdd6ba1986893397",
+    "tasks/mbpp_task_id_602/reference/provenance.json": "a3c8ea2296a80aa9543fc9f85789f03d818a5842e91a0ca9cdb1797cab7fede3",
+    "tasks/mbpp_task_id_605/reference/action.json": "e6b137699494803b22f777c8b1089638a6f803ec079015b2c23808b301c418c8",
+    "tasks/mbpp_task_id_605/reference/candidate.rs": "37758665a3c4125b297445ba61607cffdc20045668aed39fc853fa1c29fde1b9",
+    "tasks/mbpp_task_id_605/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/mbpp_task_id_605/reference/provenance.json": "b05db8bebe671253ac6bf697269fcf6aa206eff9cabaeb43c659e00801bae079",
+    "tasks/mbpp_task_id_610/reference/action.json": "caa22b012eec0a03618d498f1e983833b3ccd2a2d0e6c433ae376d88b8fc876c",
+    "tasks/mbpp_task_id_610/reference/candidate.rs": "81e1d9d5436131867a81b09e5f9ba0157266be79b3d84963a35bb17e059967f2",
+    "tasks/mbpp_task_id_610/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/mbpp_task_id_610/reference/provenance.json": "9448560e6f623ea98105cdbeb27e40a2cc31f40b948d631867cf20264080c28a",
+    "tasks/mbpp_task_id_629/reference/action.json": "1701b28f1f259061f8f62250e1587390f3b4593a9cffc9ab083ebd6e6e9106c4",
+    "tasks/mbpp_task_id_629/reference/candidate.rs": "2c4624c30912b4330e0275ac6856070cc471e60fe6a328ee2056addde69f112d",
+    "tasks/mbpp_task_id_629/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_629/reference/provenance.json": "1839451701874704df81f64a4927189b080825d9569e10a807f5e8934aa19975",
+    "tasks/mbpp_task_id_644/reference/action.json": "739146e16c2a14067e67faa0cd1250999bfd5ef2208244e49d5c1b9fabd53e72",
+    "tasks/mbpp_task_id_644/reference/candidate.rs": "fb9e78c2540bd53d9a2adf9cbbac381d3ec122d211b810fa0dc24be5ad8b1ca6",
+    "tasks/mbpp_task_id_644/reference/decisions.json": "403be8bfd3e14997648306328dafdb792a9ea6c66bfa7a7ef9dda0cb8f6dfb19",
+    "tasks/mbpp_task_id_644/reference/provenance.json": "7dbd398ca056998539320d1fb4865d1db007ade3eed9d353229c8e542e4078d8",
+    "tasks/mbpp_task_id_69/reference/action.json": "54870c5a13dbaa1917d5d0259f903512b8682b51da3b37f6938d56e6c4df2de7",
+    "tasks/mbpp_task_id_69/reference/candidate.rs": "3d7f917570d655ee0f6fb2b8c7bbe12952caf0c6f8a0ea275667183be2a9e3bb",
+    "tasks/mbpp_task_id_69/reference/decisions.json": "043fad6dd4f40dbe85fe7c8cda84bb228ecf254453e0e937f9e300cd9a627a04",
+    "tasks/mbpp_task_id_69/reference/provenance.json": "5952a858f98e733136ff19c722e981b1cff483b8b7db0d9af99bdfb00001caf1",
+    "tasks/mbpp_task_id_743/reference/action.json": "5f66eed65017f0fb83ba6844cb59c2c0d5e8fe70512fd146c111b558994366a6",
+    "tasks/mbpp_task_id_743/reference/candidate.rs": "5b60bdd2bccaf7afe4b48f4f50f7e7510da7cad77995e071acd49917abfc78cd",
+    "tasks/mbpp_task_id_743/reference/decisions.json": "c56043ee845fd4aab60eb71ef44c953a51a8cdc50a0f584467a90bf44f45c4bd",
+    "tasks/mbpp_task_id_743/reference/provenance.json": "2f6d3aeb1718e5a792617dba66a668fed1509d4cad9b94c31961d04a4cec944a",
+    "tasks/mbpp_task_id_755/reference/action.json": "5e484c8cd91bd3782c2b1a3c92294f9f7059e4a5c812397dab90500ba6327976",
+    "tasks/mbpp_task_id_755/reference/candidate.rs": "d0fb09bc474ec804e3252c74661c6850dd9969e1742ad18f043e0aad1584a8a9",
+    "tasks/mbpp_task_id_755/reference/decisions.json": "de92190aa174c66f8ef7fbe52df291ce6537cb7873213e865305bd9bbbda1644",
+    "tasks/mbpp_task_id_755/reference/provenance.json": "ccb0b55c7c0f5463b0a7502d09ecd7eeb72ff3ede560f2cb7633b510969d5799",
+    "tasks/mbpp_task_id_764/reference/action.json": "10cdbb0e69e21c548333449fa876f5bad8c48786efb0aa40f2d3b9b95b0be964",
+    "tasks/mbpp_task_id_764/reference/candidate.rs": "1db3dc8925a3ee68cdd013dab56d361268bd9524ae37bd9a1f9790f7f0cf199d",
+    "tasks/mbpp_task_id_764/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_764/reference/provenance.json": "8d64ce4ea02afb07f11e21c69360af56f9bddd4e970c803a75edca2afb2bef45",
+    "tasks/mbpp_task_id_769/reference/action.json": "025e4e33825f9ddd2bb45d9605a70dc86b871c81d8d9395305616f9c1479fadf",
+    "tasks/mbpp_task_id_769/reference/candidate.rs": "5e211886bbfc9aa177f099e88bc29621d3a6c1edcc0a06fc0c3fd5c33c4dea16",
+    "tasks/mbpp_task_id_769/reference/decisions.json": "31b5470fe6d7183e438bc103286bfe9525a2b7a6f722db6610a1006129eb18fd",
+    "tasks/mbpp_task_id_769/reference/provenance.json": "d12d82fdb9366f956088acfbaa946b740809070a41695b4aa86dd0cac0cc5534",
+    "tasks/mbpp_task_id_798/reference/action.json": "b42606f2be413b6567037881bc0d9318f33afb85110ec2547b60d03bcdf0295e",
+    "tasks/mbpp_task_id_798/reference/candidate.rs": "5d88b6de93ec3bc33f42dd88c0b2635b32f27a73d73270726d4fcb891a266a07",
+    "tasks/mbpp_task_id_798/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_798/reference/provenance.json": "eb9ca7747afd6c1dc30b9b2be757aab85cd29a2a9ccfc92c46e0e3e866481656",
+    "tasks/mbpp_task_id_807/reference/action.json": "fa418834dd3fb5190dc3056eb2c10765158eb94af709b01c55d0c28187dd233b",
+    "tasks/mbpp_task_id_807/reference/candidate.rs": "5531b576c5d6b972245e56bbfd438c08207ef86f9ebe03e2d4573fe858c45186",
+    "tasks/mbpp_task_id_807/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_807/reference/provenance.json": "3e4ed1a481d702b288d66ee96a6886f32a93a1af86ffe7d5a0505c1de68e960d",
+    "tasks/mbpp_task_id_94/reference/action.json": "5016b28a9da91920589f83c965fdcbab3814a3339558cdd7722d6d91ccd7286f",
+    "tasks/mbpp_task_id_94/reference/candidate.rs": "629f10eb99c5700f19297e2451b5f27fca77fe38fa12824538daf9d7de6a8b80",
+    "tasks/mbpp_task_id_94/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_94/reference/provenance.json": "ff0b6dcd01018749920e8d3803f9efaecd43771d93f8dc70e9223925e6c73086",
+    "tasks/misc_binary_search/reference/action.json": "b0a81ce7a1474309d466084eb32360a2fa0ff6339ea5b50a72323ebed371b11d",
+    "tasks/misc_binary_search/reference/candidate.rs": "96f81ebbdd5094d760f9a2d527e17b7dba5a3772754913fec2da0ea20bf22875",
+    "tasks/misc_binary_search/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/misc_binary_search/reference/provenance.json": "00ff2b6414df88efe8102a48273bcbb5b1968af6d3926a9423b7a738a52f72d2",
+    "tasks/misc_deduplicate/reference/action.json": "e876496add6aa0e1c4ff98f2db6584338550fe5efa1af6aaf09a747b42f9cd96",
+    "tasks/misc_deduplicate/reference/candidate.rs": "045991306c250b872b7adc88047215a07d3ba5b67a9d02ded0a9343a8d70b5fc",
+    "tasks/misc_deduplicate/reference/decisions.json": "45ab0082aed49508c9f22564e1f39f3fe0bc7d91e05a5b49a03d85ace47f02a9",
+    "tasks/misc_deduplicate/reference/provenance.json": "c31ebda91b5f966a65846244ebb724771e02963533a95ed494e33979682eb335",
+    "tasks/misc_fib/reference/action.json": "6a9a427427108b6cfc97623cda6b7fbda6214536fcac88590b7be00faecd3e82",
+    "tasks/misc_fib/reference/candidate.rs": "e50a5ca07fb7c43db76cc718681b377a77880a9388b3c1b4f2897ec6207cc8fb",
+    "tasks/misc_fib/reference/decisions.json": "32d6bac6bfdf1b817686eab3448b592bf6cfc3ef79e305f1fd2ab483c62a97f7",
+    "tasks/misc_fib/reference/provenance.json": "c1bddcbf3dedfeae5c10dfc8a2bd802868cd51a62ab53f150a95ac3979994625",
+    "tasks/misc_map/reference/action.json": "0168c9d1d212bfc3ff15cf5fce54aa4a5edc0a41654b0736732116180a5c07cd",
+    "tasks/misc_map/reference/candidate.rs": "90721adfce416100c46d0be630595f5b9fa6f8879526e55a60a7b14358e376e5",
+    "tasks/misc_map/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/misc_map/reference/provenance.json": "5ae5c930ca989e099174eff159b3db4bd7386d5bf1160f4b0c5fa59496911616",
+    "tasks/misc_remove_all_greater/reference/action.json": "6234c74bfabb4c29960c53cd23f3eda9552028c475448362d323ba7d24bf6338",
+    "tasks/misc_remove_all_greater/reference/candidate.rs": "bf9a15700c4b0bc56e887ede62e91aa914220b42201c7ded4579c8d6a7faab80",
+    "tasks/misc_remove_all_greater/reference/decisions.json": "9dd80b096c91c5ad4c51a6d3d5e1f8fbec15b086d315ce4247063c1e12d32f51",
+    "tasks/misc_remove_all_greater/reference/provenance.json": "5cf19814e3fbd07510de4d20150054d40d2b40be7b436ecf28a5e1685a197059",
+    "tasks/misc_reverse/reference/action.json": "27e1adb9efefad3d18e5f1eb0ea40aaa4518820762eb566dffdb0331a35aac57",
+    "tasks/misc_reverse/reference/candidate.rs": "bb19c91810a40e9341cef12150bf408b1d7fd3bb405681bbd18788757564f499",
+    "tasks/misc_reverse/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/misc_reverse/reference/provenance.json": "96c669ae8ba2e71c5d1f8530802232742cb2bea59dba8c60c03c3ac19b258355",
+    "tasks/misc_simple_nested/reference/action.json": "07c664d595e4c0c07f2adafb6749974236ac374cd5f3c248812c7268b588268b",
+    "tasks/misc_simple_nested/reference/candidate.rs": "76a84012f00beaf544a26c85fed53d8d7a5dcfafa0b6ff3efd878636880bde10",
+    "tasks/misc_simple_nested/reference/decisions.json": "45ab0082aed49508c9f22564e1f39f3fe0bc7d91e05a5b49a03d85ace47f02a9",
+    "tasks/misc_simple_nested/reference/provenance.json": "d01691a570ea255527e5cc896a462f18f4a5aeb019598ba041960bb7c0ed7a6a",
+    "tasks/misc_sum/reference/action.json": "ed0c97b375bc8962b44682feefc7c02e50a76a3fb906d0df27d3c6b5d4cb4336",
+    "tasks/misc_sum/reference/candidate.rs": "a07ab4f44b9f4aebf0fe8defff525c504b832f62267efed7673db77985e921bb",
+    "tasks/misc_sum/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/misc_sum/reference/provenance.json": "6450132869c6f25f8325bbf1aad7dbb12dac1d4a4fecb45c6648cfde3e374f94"
+  },
+  "excluded_previous_ids": [
+    "diffy_sina3",
+    "mbpp_task_id_616",
+    "mbpp_task_id_70",
+    "misc_cell_2_sum",
+    "misc_choose_odd",
+    "misc_findmax",
+    "misc_trigger"
+  ],
+  "audit": [
+    {
+      "id": "misc_bubble",
+      "reason": "missing_official_reference"
+    },
+    {
+      "id": "misc_len_intersect",
+      "reason": "Loop-list correspondence unavailable"
+    },
+    {
+      "id": "misc_tail_triangle",
+      "reason": "Loop-list correspondence unavailable"
+    }
+  ],
+  "status": "PROVISIONAL: no new target is certified; run validate before inference"
+}

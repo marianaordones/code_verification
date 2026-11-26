@@ -1,0 +1,154 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 230,
+    "end": 230,
+    "line": 12,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 285,
+    "end": 398,
+    "line": 14,
+    "existing_text": "invariant\n            0 <= index <= arr.len(),\n            forall |j: int| 0 <= j < index ==> arr[j] != key,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 408,
+    "end": 408,
+    "line": 18,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 445,
+    "end": 445,
+    "line": 19,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 476,
+    "end": 476,
+    "line": 21,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 498,
+    "end": 498,
+    "line": 23,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1067,
+    "end": 1067,
+    "line": 40,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1101,
+    "end": 1101,
+    "line": 42,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "id": "R9",
+    "kind": "loop_invariants",
+    "start": 1157,
+    "end": 1466,
+    "line": 44,
+    "existing_text": "invariant\n            0 <= index <= arr1.len(),\n            forall|i: int| 0 <= i < index ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n                arr1[i],\n            )),\n            forall|i: int, j: int| 0 <= i < j < result.len() ==> #[trigger] result[i] != #[trigger] result[j],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1476,
+    "end": 1476,
+    "line": 51,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1559,
+    "end": 1559,
+    "line": 52,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1603,
+    "end": 1603,
+    "line": 54,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1625,
+    "end": 1625,
+    "line": 56,
+    "existing_text": "",
+    "id": "R13"
+  },
+  {
+    "id": "R14",
+    "kind": "loop_invariants",
+    "start": 1673,
+    "end": 1982,
+    "line": 58,
+    "existing_text": "invariant\n            0 <= index <= arr2.len(),\n            forall|i: int| 0 <= i < index ==> (!arr1@.contains(#[trigger] arr2[i]) ==> result@.contains(\n                arr2[i],\n            )),\n            forall|i: int, j: int| 0 <= i < j < result.len() ==> #[trigger] result[i] != #[trigger] result[j],\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1992,
+    "end": 1992,
+    "line": 65,
+    "existing_text": "",
+    "id": "R15"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 2075,
+    "end": 2075,
+    "line": 66,
+    "existing_text": "",
+    "id": "R16"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 2119,
+    "end": 2119,
+    "line": 68,
+    "existing_text": "",
+    "id": "R17"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 2141,
+    "end": 2141,
+    "line": 70,
+    "existing_text": "",
+    "id": "R18"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 2151,
+    "end": 2151,
+    "line": 73,
+    "existing_text": "",
+    "id": "R19"
+  }
+]

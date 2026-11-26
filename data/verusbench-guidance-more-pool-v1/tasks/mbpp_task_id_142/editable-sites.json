@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 745,
+    "end": 745,
+    "line": 29,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 768,
+    "end": 768,
+    "line": 30,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 824,
+    "end": 999,
+    "line": 32,
+    "existing_text": "invariant\n            0 <= index <= arr1.len(),\n            count <= index,\n            count_identical(arr1@.take(index), arr2@.take(index), arr3@.take(index)) == count,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1009,
+    "end": 1009,
+    "line": 37,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1083,
+    "end": 1083,
+    "line": 38,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1113,
+    "end": 1113,
+    "line": 40,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1135,
+    "end": 1135,
+    "line": 42,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1144,
+    "end": 1144,
+    "line": 45,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

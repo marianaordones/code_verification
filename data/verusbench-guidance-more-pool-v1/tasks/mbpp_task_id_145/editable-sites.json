@@ -1,0 +1,82 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 346,
+    "end": 346,
+    "line": 14,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 376,
+    "end": 376,
+    "line": 15,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 407,
+    "end": 407,
+    "line": 17,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "id": "R4",
+    "kind": "loop_invariants",
+    "start": 462,
+    "end": 730,
+    "line": 19,
+    "existing_text": "invariant\n            1 <= index <= arr.len(),\n            forall|i: int| 0 <= i < index ==> arr[i] >= min_val && arr[i] <= max_val,\n            forall|i: int| 0 <= i < arr.len() ==> i32::MIN / 2 < #[trigger] arr[i] < i32::MAX / 2,\n            min_val <= max_val,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 740,
+    "end": 740,
+    "line": 25,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 780,
+    "end": 780,
+    "line": 26,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 857,
+    "end": 857,
+    "line": 28,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 897,
+    "end": 897,
+    "line": 30,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 919,
+    "end": 919,
+    "line": 32,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 940,
+    "end": 940,
+    "line": 35,
+    "existing_text": "",
+    "id": "R10"
+  }
+]

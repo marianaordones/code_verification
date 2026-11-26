@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            0 <= counter <= index,\n            count_boolean(arr@.subrange(0, index as int)) == counter,\n        "
+    }
+  ]
+}

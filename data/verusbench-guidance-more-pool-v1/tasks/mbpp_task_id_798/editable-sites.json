@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 297,
+    "end": 297,
+    "line": 21,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 320,
+    "end": 320,
+    "line": 22,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 378,
+    "end": 469,
+    "line": 25,
+    "existing_text": "invariant\n            index <= arr.len(),\n            sum_to(arr@.take(index)) == sum,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 479,
+    "end": 479,
+    "line": 29,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 519,
+    "end": 519,
+    "line": 30,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 541,
+    "end": 541,
+    "line": 32,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 548,
+    "end": 548,
+    "line": 35,
+    "existing_text": "",
+    "id": "R7"
+  }
+]

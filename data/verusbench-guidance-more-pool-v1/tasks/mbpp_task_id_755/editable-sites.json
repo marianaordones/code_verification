@@ -1,0 +1,106 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 918,
+    "end": 918,
+    "line": 37,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 952,
+    "end": 952,
+    "line": 38,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 994,
+    "end": 994,
+    "line": 40,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1031,
+    "end": 1031,
+    "line": 41,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1054,
+    "end": 1054,
+    "line": 42,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1086,
+    "end": 1086,
+    "line": 44,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "id": "R7",
+    "kind": "loop_invariants",
+    "start": 1145,
+    "end": 1486,
+    "line": 46,
+    "existing_text": "invariant\n            2 <= index,\n            forall|k: int| 0 <= k < index && k != min_index ==> numbers[k] >= numbers[min_index],\n            exists|k: int| 0 <= k < index && k != min_index && numbers[k] == numbers[second_min_index],\n            numbers.len() >= 2,\n            min_index < index,\n            second_min_index < index,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1496,
+    "end": 1496,
+    "line": 54,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1549,
+    "end": 1549,
+    "line": 55,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1591,
+    "end": 1591,
+    "line": 56,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1685,
+    "end": 1685,
+    "line": 58,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1729,
+    "end": 1729,
+    "line": 60,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1784,
+    "end": 1784,
+    "line": 65,
+    "existing_text": "",
+    "id": "R13"
+  }
+]

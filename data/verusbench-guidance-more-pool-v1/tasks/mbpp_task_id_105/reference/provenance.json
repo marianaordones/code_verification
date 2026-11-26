@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\MBPP\\verified\\task_id_105.rs",
+  "official_source_sha256": "97ffbb4c5f0b77b88907b2ab948d3b88ff3b4bb60ccd945f064f11e24f003dd3",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

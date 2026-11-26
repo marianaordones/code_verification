@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 1 verified, 1 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:17:5\n   |\n17 | /     while n != len\n18 | |         invariant\n19 | |             n <= len,\n20 | |             c.len() == n,\n...  |\n27 | |         n = n + 1;\n28 | |     }\n   | |_____^\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:21:58\n   |\n21 |             forall|i: int| (0 <= i && i < n) ==> c[i] == #[trigger] a[i] * #[trigger] b[i],\n   |                                                          ^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nnote: recommendation not met\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:21:76\n   |\n21 |             forall|i: int| (0 <= i && i < n) ==> c[i] == #[trigger] a[i] * #[trigger] b[i],\n   |                                                                            ^^^^^^^^^^^^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:27:18\n   |\n   = note: recommendation not met\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:25:28\n   |\n25 |         let product: u32 = a[n] * b[n];\n   |                            ^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: possible arithmetic underflow/overflow\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:25:28\n   |\n25 |         let product: u32 = a[n] * b[n];\n   |                            ^^^^^^^^^^^\n\nerror: precondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/cloverbench_array_product_strong/proposal_01/candidate.rs:25:35\n   |\n25 |         let product: u32 = a[n] * b[n];\n   |                                   ^^^^\n  --> /tmp/verus-native-5923-SRs40dNi/verus-source/source/vstd/std_specs/vec.rs:52:9\n   |\n   = note: failed precondition\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.059268505079672,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 1,
+  "verification_errors": 1
+}

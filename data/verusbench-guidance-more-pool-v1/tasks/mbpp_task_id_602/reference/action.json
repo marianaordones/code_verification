@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            0 <= counter <= index,\n            count_frequency_rcr(arr@.subrange(0, index as int), key) == counter,\n        "
+    },
+    {
+      "site_id": "R9",
+      "replacement": "invariant\n            0 <= index <= str1.len(),\n            str1@.take(index as int) =~= str1@.take(index as int).filter(\n                |x: u8| count_frequency_rcr(str1@, x) <= 1,\n            ),\n        "
+    }
+  ]
+}

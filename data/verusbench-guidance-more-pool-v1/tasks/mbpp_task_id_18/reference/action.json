@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R2",
+      "replacement": "invariant\n            forall|m: int| 0 <= m < i ==> (str[m] != key),\n        "
+    },
+    {
+      "site_id": "R9",
+      "replacement": "invariant\n            forall|k: int|\n                0 <= k < output_str.len() ==> (str1@.contains(#[trigger] output_str[k])\n                    && !str2@.contains(#[trigger] output_str[k])),\n            forall|k: int|\n                0 <= k < index ==> (str2@.contains(#[trigger] str1[k]) || output_str@.contains(\n                    #[trigger] str1[k],\n                )),\n        "
+    }
+  ]
+}

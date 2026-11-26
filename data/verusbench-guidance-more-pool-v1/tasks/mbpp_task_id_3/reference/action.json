@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R4",
+      "replacement": "invariant\n            2 <= index,\n            forall|k: int| 2 <= k < index ==> !is_divisible(n as int, k),\n        "
+    }
+  ]
+}

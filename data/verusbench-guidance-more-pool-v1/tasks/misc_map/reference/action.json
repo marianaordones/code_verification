@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant \n            xlen == x.len(),  // always specify the length of vectors used in the loop\n            forall |k:int| 0 <= k < i ==> #[trigger] x[k] == old(x)[k] + 4,\n            forall |k:int| i <= k < xlen ==> x[k] == old(x)[k],\n            forall |k:int| 0 <= k < xlen ==> old(x)[k] <= 0x7FFF_FFFB,\n        "
+    }
+  ]
+}

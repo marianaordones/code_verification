@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R4",
+      "replacement": "invariant \n            forall |k:int| 0 <= k < result.len() ==> result[k] <= e && v@.contains(#[trigger] result[k]),\n            forall |k:int| 0 <= k < i && v[k] <= e ==> result@.contains(#[trigger] v[k]),\n        "
+    }
+  ]
+}

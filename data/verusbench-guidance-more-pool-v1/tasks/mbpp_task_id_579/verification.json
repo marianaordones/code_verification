@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_579/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 3 verified, 2 errors\n",
+  "stderr": "note: while loop: not all errors may have been reported; rerun with a higher value for --multiple-errors to find other potential errors in this function\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_579/proposal_01/candidate.rs:54:5\n   |\n54 | /     while index < arr2.len()\n55 | |         invariant\n56 | |             0 <= index <= arr2.len(),\n57 | |             result.len() <= arr1.len() + index,\n...  |\n69 | |         index += 1;\n70 | |     }\n   | |_____^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_579/proposal_01/candidate.rs:43:13\n   |\n43 | /             forall|i: int| 0 <= i < index ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n44 | |                 arr1[i],\n45 | |             )),\n   | |______________^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_579/proposal_01/candidate.rs:58:13\n   |\n58 | /             forall|i: int| 0 <= i < arr1.len() ==> (!arr2@.contains(#[trigger] arr1[i]) ==> result@.contains(\n59 | |                 arr1[i],\n60 | |             )),\n   | |______________^\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_579/proposal_01/candidate.rs:61:13\n   |\n61 | /             forall|i: int| 0 <= i < index ==> (!arr1@.contains(#[trigger] arr2[i]) ==> result@.contains(\n62 | |                 arr2[i],\n63 | |             )),\n   | |______________^\n\nerror: aborting due to 3 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.174187194090337,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 3,
+  "verification_errors": 2
+}

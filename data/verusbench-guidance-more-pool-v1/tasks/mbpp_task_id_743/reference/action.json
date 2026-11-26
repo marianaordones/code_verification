@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "site_id": "R5",
+      "replacement": "invariant\n            split_index <= index <= list.len(),\n            list@.subrange(split_index as int, index as int) =~= new_list@,\n        "
+    },
+    {
+      "site_id": "R9",
+      "replacement": "invariant\n            0 <= split_index <= list@.len(),\n            0 <= index <= split_index,\n            new_list@ =~= list@.subrange(split_index as int, list@.len() as int).add(\n                list@.subrange(0, index as int),\n            ),\n        "
+    }
+  ]
+}

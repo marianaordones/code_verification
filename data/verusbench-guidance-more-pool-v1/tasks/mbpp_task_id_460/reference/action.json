@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr.len(),\n            first_elem_arr.len() == index,\n            forall|i: int| 0 <= i < arr.len() ==> #[trigger] arr[i].len() > 0,\n            forall|k: int| 0 <= k < index ==> #[trigger] first_elem_arr[k] == #[trigger] arr[k][0],\n        "
+    }
+  ]
+}

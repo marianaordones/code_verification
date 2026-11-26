@@ -1,0 +1,6 @@
+{
+  "official_source": "references\\verus-proof-synthesis\\benchmarks\\Verus-Bench\\Diffy\\verified\\ms4.rs",
+  "official_source_sha256": "1d5135abe0d3ec46b64984190d9170e9e7d1615f7a7561a13175ca70e45b75b5",
+  "status": "unverified_reference_derived_proposal",
+  "method": "Transfer invariant lists in loop order only; preserve all other candidate code. No copied main function, decreases clause, contract or solver option."
+}

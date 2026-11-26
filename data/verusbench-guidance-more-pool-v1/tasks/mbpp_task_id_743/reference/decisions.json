@@ -1,0 +1,10 @@
+[
+  {
+    "site_id": "R5",
+    "action": "loop_invariants"
+  },
+  {
+    "site_id": "R9",
+    "action": "loop_invariants"
+  }
+]
