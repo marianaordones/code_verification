@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/verus-native-23816-ZDQp8Fpu/lynette",
+    "additions",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/misc_trigger/proposal_01/preservation-input.rs",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/misc_trigger/proposal_01/preservation-copy.rs"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 0.02516485983505845,
+  "valid": true,
+  "reason": "",
+  "status": "valid",
+  "policy": "safe-proof-attributes-v2",
+  "ignored_attributes": {
+    "input": [],
+    "target": []
+  },
+  "scope": "only comparison copies normalized; actual input/target verified unchanged"
+}

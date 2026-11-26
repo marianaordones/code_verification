@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R1",
+      "replacement": "proof {\n        assert(f(arr@, i as int));\n    }"
+    }
+  ]
+}

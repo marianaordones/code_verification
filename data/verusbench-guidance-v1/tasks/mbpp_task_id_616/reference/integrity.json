@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/tmp/verus-native-23816-ZDQp8Fpu/lynette",
+    "additions",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/preservation-input.rs",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/preservation-copy.rs"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 0.011083779856562614,
+  "valid": true,
+  "reason": "",
+  "status": "valid",
+  "policy": "safe-proof-attributes-v2",
+  "ignored_attributes": {
+    "input": [
+      {
+        "attribute": "# [ trigger ]",
+        "start": 308,
+        "end": 318
+      },
+      {
+        "attribute": "# [ trigger ]",
+        "start": 464,
+        "end": 474
+      },
+      {
+        "attribute": "# [ trigger ]",
+        "start": 488,
+        "end": 498
+      }
+    ],
+    "target": [
+      {
+        "attribute": "# [ trigger ]",
+        "start": 308,
+        "end": 318
+      },
+      {
+        "attribute": "# [ trigger ]",
+        "start": 464,
+        "end": 474
+      },
+      {
+        "attribute": "# [ trigger ]",
+        "start": 488,
+        "end": 498
+      }
+    ]
+  },
+  "scope": "only comparison copies normalized; actual input/target verified unchanged"
+}

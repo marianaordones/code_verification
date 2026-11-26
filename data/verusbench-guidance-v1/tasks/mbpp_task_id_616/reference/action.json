@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R3",
+      "replacement": "invariant\n            0 <= index <= arr1.len(),\n            output_arr.len() == index,\n            forall|i: int| 0 <= i < index ==> output_arr[i] == (arr1[i] % arr2[i]),\n            arr1.len() == arr2.len(),\n            forall|i: int| 0 <= i < arr2.len() ==> arr2[i] != 0,"
+    }
+  ]
+}

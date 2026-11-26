@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 341,
+    "end": 341,
+    "line": 15,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 396,
+    "end": 617,
+    "line": 17,
+    "existing_text": "invariant\n            index <= seq.len(),\n            seq.len() > 0,\n            forall|i: int, j: int| (0 <= i < index && 0 <= j < seq.len()) ==> (#[trigger] seq[i].len()\n                == #[trigger] seq[j].len()),\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 627,
+    "end": 627,
+    "line": 23,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 685,
+    "end": 685,
+    "line": 24,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 717,
+    "end": 717,
+    "line": 26,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 739,
+    "end": 739,
+    "line": 28,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 747,
+    "end": 747,
+    "line": 31,
+    "existing_text": "",
+    "id": "R7"
+  }
+]

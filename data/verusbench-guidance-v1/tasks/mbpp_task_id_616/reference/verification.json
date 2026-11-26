@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-23816-ZDQp8Fpu/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/candidate.rs"
+  ],
+  "returncode": 0,
+  "stdout": "verification results:: 2 verified, 0 errors\n",
+  "stderr": "note: automatically chose triggers for this expression:\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/candidate.rs:24:13\n   |\n24 |             forall|i: int| 0 <= i < index ==> output_arr[i] == (arr1[i] % arr2[i]),\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nnote:   trigger 1 of 1:\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/candidate.rs:24:47\n   |\n24 |             forall|i: int| 0 <= i < index ==> output_arr[i] == (arr1[i] % arr2[i]),\n   |                                               ^^^^^^^^^^^^^\n\nnote: Verus printed one or more automatically chosen quantifier triggers\n      because it had low confidence in the chosen triggers.\n      To suppress these messages, do one of the following:\n        (1) manually annotate a single desired trigger using #[trigger]\n            (example: forall|i: int, j: int| f(i) && #[trigger] g(i) && #[trigger] h(j)),\n        (2) manually annotate multiple desired triggers using #![trigger ...]\n            (example: forall|i: int| #![trigger f(i)] #![trigger g(i)] f(i) && g(i)),\n        (3) accept the automatically chosen trigger using #![auto]\n            (example: forall|i: int, j: int| #![auto] f(i) && g(i) && h(j))\n        (4) use the --triggers-silent command-line option to suppress all printing of triggers.\n      (Note: triggers are used by the underlying SMT theorem prover to instantiate quantifiers;\n      the theorem prover instantiates a quantifier whenever some expression matches the\n      pattern specified by one of the quantifier's triggers.)\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/mbpp_task_id_616/proposal_01/candidate.rs:24:13\n   |\n24 |             forall|i: int| 0 <= i < index ==> output_arr[i] == (arr1[i] % arr2[i]),\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "timed_out": false,
+  "seconds": 4.349297787994146,
+  "success": true,
+  "error_type": null,
+  "verified_functions": 2,
+  "verification_errors": 0
+}

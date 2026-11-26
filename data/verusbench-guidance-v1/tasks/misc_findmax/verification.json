@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_findmax/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 2 errors\n",
+  "stderr": "error: postcondition not satisfied\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_findmax/proposal_01/candidate.rs:12:1\n   |\n11 |       exists |i: int| 0 <= i < nums@.len() ==> nums@[i] == ret,\n   |       -------------------------------------------------------- failed this postcondition\n12 | / {\n13 | |     let mut max = nums[0];\n14 | |     let mut i = 1;\n15 | |     while i < nums.len()\n...  |\n26 | |     max\n27 | | }\n   | |_^ at the end of the function body\n\nerror: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/misc_findmax/proposal_01/candidate.rs:19:9\n   |\n19 |         exists |j: int| 0 <= j < i ==> nums@[j] == max,\n   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.0114936931058764,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 2
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 214,
+    "end": 214,
+    "line": 11,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 268,
+    "end": 375,
+    "line": 13,
+    "existing_text": "invariant\n            0 <= j <= v.len(),\n            exists |q:int| 0 <= q < v.len() && v[q] % 2 == 1,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 385,
+    "end": 385,
+    "line": 17,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 416,
+    "end": 416,
+    "line": 18,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 444,
+    "end": 444,
+    "line": 20,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 465,
+    "end": 465,
+    "line": 22,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 469,
+    "end": 469,
+    "line": 24,
+    "existing_text": "",
+    "id": "R7"
+  }
+]

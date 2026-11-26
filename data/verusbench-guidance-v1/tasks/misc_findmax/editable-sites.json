@@ -1,0 +1,66 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 278,
+    "end": 278,
+    "line": 13,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 305,
+    "end": 305,
+    "line": 14,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 349,
+    "end": 500,
+    "line": 16,
+    "existing_text": "invariant\n        i <= nums.len(),\n        forall |j: int| 0 <= j < i ==> nums@[j] <= max,\n        exists |j: int| 0 <= j < i ==> nums@[j] == max,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 510,
+    "end": 510,
+    "line": 21,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 541,
+    "end": 541,
+    "line": 22,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 574,
+    "end": 574,
+    "line": 24,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 592,
+    "end": 592,
+    "line": 26,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 598,
+    "end": 598,
+    "line": 28,
+    "existing_text": "",
+    "id": "R8"
+  }
+]

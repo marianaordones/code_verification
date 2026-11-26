@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R2",
+      "replacement": "invariant\n            1 <= index <= seq.len(),\n            forall|i: int, j: int| (0 <= i < index && 0 <= j < index) ==> (#[trigger] seq[i].len() == #[trigger] seq[j].len()),\n            seq.len() > 0,"
+    }
+  ]
+}

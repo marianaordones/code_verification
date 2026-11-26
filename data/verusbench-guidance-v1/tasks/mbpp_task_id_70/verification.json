@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-13442-9x45MPnb/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_70/proposal_01/candidate.rs"
+  ],
+  "returncode": 1,
+  "stdout": "verification results:: 0 verified, 2 errors\n",
+  "stderr": "error: invariant not satisfied at end of loop body\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_70/proposal_01/candidate.rs:20:13\n   |\n20 | /             forall|i: int, j: int| (0 <= i < index && 0 <= j < seq.len()) ==> (#[trigger] seq[i].len()\n21 | |                 == #[trigger] seq[j].len()),\n   | |___________________________________________^\n\nerror: invariant not satisfied before loop\n  --> /mnt/users/mariana.soares/code_verification_git/results/safe-sft-eval-v1/verusbench/shared/mbpp_task_id_70/proposal_01/candidate.rs:20:13\n   |\n20 | /             forall|i: int, j: int| (0 <= i < index && 0 <= j < seq.len()) ==> (#[trigger] seq[i].len()\n21 | |                 == #[trigger] seq[j].len()),\n   | |___________________________________________^\n\nerror: aborting due to 2 previous errors\n\n",
+  "timed_out": false,
+  "seconds": 7.592198048951104,
+  "success": false,
+  "error_type": "verification",
+  "verified_functions": 0,
+  "verification_errors": 2
+}

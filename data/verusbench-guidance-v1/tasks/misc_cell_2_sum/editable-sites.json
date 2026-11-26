@@ -1,0 +1,98 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 204,
+    "end": 204,
+    "line": 12,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "id": "R2",
+    "kind": "loop_invariants",
+    "start": 261,
+    "end": 381,
+    "line": 14,
+    "existing_text": "invariant \n            0 <= i <= N,\n            a.len() == N,\n            forall |k: int| 0 <= k < i ==> a[k] <= 2,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 384,
+    "end": 384,
+    "line": 19,
+    "existing_text": "",
+    "id": "R3"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 412,
+    "end": 412,
+    "line": 21,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 430,
+    "end": 430,
+    "line": 23,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 452,
+    "end": 452,
+    "line": 26,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 463,
+    "end": 463,
+    "line": 27,
+    "existing_text": "",
+    "id": "R7"
+  },
+  {
+    "id": "R8",
+    "kind": "loop_invariants",
+    "start": 522,
+    "end": 667,
+    "line": 30,
+    "existing_text": "invariant\n            0 <= i <= N,\n            a.len() == N,\n            sum <= 2 * i,\n            forall |k: int| 0 <= k < N ==> a[k] <= 2,\n    "
+  },
+  {
+    "kind": "insert_proof",
+    "start": 677,
+    "end": 677,
+    "line": 36,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 696,
+    "end": 696,
+    "line": 37,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 718,
+    "end": 718,
+    "line": 40,
+    "existing_text": "",
+    "id": "R11"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 724,
+    "end": 724,
+    "line": 42,
+    "existing_text": "",
+    "id": "R12"
+  }
+]

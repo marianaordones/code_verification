@@ -1,0 +1,146 @@
+[
+  {
+    "kind": "insert_proof",
+    "start": 275,
+    "end": 275,
+    "line": 14,
+    "existing_text": "",
+    "id": "R1"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 291,
+    "end": 291,
+    "line": 15,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "id": "R3",
+    "kind": "loop_invariants",
+    "start": 339,
+    "end": 428,
+    "line": 17,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tforall |k:int| 0 <= k < i ==> a[k] == 1,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 432,
+    "end": 432,
+    "line": 22,
+    "existing_text": "",
+    "id": "R4"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 447,
+    "end": 447,
+    "line": 23,
+    "existing_text": "",
+    "id": "R5"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 463,
+    "end": 463,
+    "line": 26,
+    "existing_text": "",
+    "id": "R6"
+  },
+  {
+    "id": "R7",
+    "kind": "loop_invariants",
+    "start": 496,
+    "end": 585,
+    "line": 28,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\tb.len() == N,\n\t\t\tforall |k:int| 0 <= k < i ==> b[k] == 1,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 589,
+    "end": 589,
+    "line": 33,
+    "existing_text": "",
+    "id": "R8"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 604,
+    "end": 604,
+    "line": 34,
+    "existing_text": "",
+    "id": "R9"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 620,
+    "end": 620,
+    "line": 37,
+    "existing_text": "",
+    "id": "R10"
+  },
+  {
+    "id": "R11",
+    "kind": "loop_invariants",
+    "start": 653,
+    "end": 777,
+    "line": 39,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\tsum.len() == 1,\n\t\t\ta.len() == N,\n\t\t\tforall |k:int| 0 <= k < N ==> a[k] == 1,\n\t\t\tsum[0] == i,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 781,
+    "end": 781,
+    "line": 46,
+    "existing_text": "",
+    "id": "R12"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 810,
+    "end": 810,
+    "line": 47,
+    "existing_text": "",
+    "id": "R13"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 826,
+    "end": 826,
+    "line": 50,
+    "existing_text": "",
+    "id": "R14"
+  },
+  {
+    "id": "R15",
+    "kind": "loop_invariants",
+    "start": 859,
+    "end": 1025,
+    "line": 52,
+    "existing_text": "invariant \n\t\t\t0 <= i <= N,\n\t\t\ta.len() == N,\n\t\t\tb.len() == N,\n\t\t\tsum.len() == 1,\n\t\t\tforall |k:int| 0 <= k < i ==> a[k] == b[k] + sum[0],\n\t\t\tsum[0] == N,\n\t\t\tN < 1000,\n\t"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1029,
+    "end": 1029,
+    "line": 61,
+    "existing_text": "",
+    "id": "R16"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 1056,
+    "end": 1056,
+    "line": 62,
+    "existing_text": "",
+    "id": "R17"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 1072,
+    "end": 1072,
+    "line": 65,
+    "existing_text": "",
+    "id": "R18"
+  }
+]

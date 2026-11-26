@@ -1,0 +1,8 @@
+{
+  "edits": [
+    {
+      "site_id": "R8",
+      "replacement": "invariant\n            0 <= i <= N,\n            a.len() == N,\n            sum <= 2 * i,\n            forall |k: int| 0 <= k < N ==> a[k] <= 2,\n            sum <= 2 * N,\n            N <= 0x7FFF_FFFF,"
+    }
+  ]
+}

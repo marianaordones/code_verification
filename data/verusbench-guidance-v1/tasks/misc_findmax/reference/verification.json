@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/anaconda3/bin/python3.12",
+    "-m",
+    "safe_internals.limits",
+    "--memory-mb",
+    "4096",
+    "--file-mb",
+    "128",
+    "--",
+    "/tmp/verus-native-23816-ZDQp8Fpu/verus/verus",
+    "/mnt/users/mariana.soares/code_verification_git/results/safe-multiedit-eval-v1/verusbench/without_internals/misc_findmax/proposal_02/candidate.rs"
+  ],
+  "returncode": 0,
+  "stdout": "verification results:: 2 verified, 0 errors\n",
+  "stderr": "",
+  "timed_out": false,
+  "seconds": 7.826517137000337,
+  "success": true,
+  "error_type": null,
+  "verified_functions": 2,
+  "verification_errors": 0
+}

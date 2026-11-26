@@ -1,0 +1,26 @@
+[
+  {
+    "id": "R1",
+    "kind": "proof_block",
+    "start": 376,
+    "end": 433,
+    "line": 20,
+    "existing_text": "proof {\n        assert(forall |k: int| f(arr@, k));\n    }"
+  },
+  {
+    "kind": "insert_proof",
+    "start": 438,
+    "end": 438,
+    "line": 23,
+    "existing_text": "",
+    "id": "R2"
+  },
+  {
+    "kind": "lemma_definitions",
+    "start": 447,
+    "end": 447,
+    "line": 25,
+    "existing_text": "",
+    "id": "R3"
+  }
+]

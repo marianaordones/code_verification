@@ -1,0 +1,840 @@
+{
+  "schema": "verusbench-oracle-guidance-v1",
+  "source_archive_sha256": "9a9d991274af7a8ba2c10e9d58894da7ce89e7d422323a49e8800ef4d427e287",
+  "source_tools": {
+    "verus": {
+      "sha256": "bd4eebce18b0a2e1a6393e76bdcab4104db9b284989bf515bd8ecfc0d40c6f0d"
+    },
+    "z3": {
+      "sha256": "260a93f9ad37363d880d251c79e3af07888ef3b2171eb8ec8d4d3808678a3e84"
+    },
+    "lynette": {
+      "sha256": "b61d557553e5fb09dee4f46b11b21ef083ea7736ed3c4c5e135a87a7c9042a25"
+    }
+  },
+  "tasks": [
+    {
+      "id": "diffy_sina3",
+      "category": "Diffy",
+      "source_reference": "verusbench/without_internals/diffy_sina3/proposal_01/",
+      "decisions": [
+        {
+          "site_id": "R15",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "mbpp_task_id_616",
+      "category": "MBPP",
+      "source_reference": "verusbench/without_internals/mbpp_task_id_616/proposal_01/",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "mbpp_task_id_70",
+      "category": "MBPP",
+      "source_reference": "verusbench/with_internals/mbpp_task_id_70/proposal_02/",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "misc_cell_2_sum",
+      "category": "Misc",
+      "source_reference": "verusbench/without_internals/misc_cell_2_sum/proposal_03/",
+      "decisions": [
+        {
+          "site_id": "R8",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "misc_choose_odd",
+      "category": "Misc",
+      "source_reference": "verusbench/with_internals/misc_choose_odd/proposal_01/",
+      "decisions": [
+        {
+          "site_id": "R2",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "misc_findmax",
+      "category": "Misc",
+      "source_reference": "verusbench/without_internals/misc_findmax/proposal_02/",
+      "decisions": [
+        {
+          "site_id": "R3",
+          "action": "loop_invariants"
+        }
+      ]
+    },
+    {
+      "id": "misc_trigger",
+      "category": "Misc",
+      "source_reference": "verusbench/without_internals/misc_trigger/proposal_01/",
+      "decisions": [
+        {
+          "site_id": "R1",
+          "action": "assertions_and_proof"
+        }
+      ]
+    }
+  ],
+  "files": {
+    "tasks/diffy_sina3/candidate.rs": "0456dde56b84604cc052400f6c01430f85cdca72bf1218e46952ee54762ceb98",
+    "tasks/diffy_sina3/editable-sites.json": "bacfe1135364c1d6dc02785c110bb7243d45c32fdecd321f7d902be22422e39b",
+    "tasks/diffy_sina3/original.rs": "99fa3d49de5856827a69b93636b8b6d45660528bcb757ab2b0128b0f11145830",
+    "tasks/diffy_sina3/verification.json": "09abd05407e15b8a3989cd4a640af032142a319b1e709dd90d34cca21abb1f1e",
+    "tasks/mbpp_task_id_616/candidate.rs": "162094f24fa736e88bef9332f5d2b0584452fa8bbc96e92c107c343ab9be1514",
+    "tasks/mbpp_task_id_616/editable-sites.json": "22c74d9593546bfe0864316c7223e65c9c12fba8a2af355f94f112ea2f117c72",
+    "tasks/mbpp_task_id_616/original.rs": "9ea1296a151c516945d9b45180084487876e93b6365e84e19c8136688b33712c",
+    "tasks/mbpp_task_id_616/verification.json": "d2783e9580b6e0d79e6b575a8f685957226b025db1cce39968d6bdc253eaa7ed",
+    "tasks/mbpp_task_id_70/candidate.rs": "243560011d5bf281d00f2e988ef8484c4996f14d20c9428b8cd7dce0f0271121",
+    "tasks/mbpp_task_id_70/editable-sites.json": "b048f43d32c92dcd481dd7c6ae278a7b802df8c52c0e3a3304ee76853bd22e9b",
+    "tasks/mbpp_task_id_70/original.rs": "41821f91377f34bcaa05f9a57ef4f58ed4f56384b547d439ebedd6b794a769d1",
+    "tasks/mbpp_task_id_70/verification.json": "44dcc53fb8d397067094fa633fcff616941aac310526f0e1bfd25f54a8297a14",
+    "tasks/misc_cell_2_sum/candidate.rs": "fa2005361ff127a68d69f061dec4b585827d9ccfb255f47502439cba10a3e817",
+    "tasks/misc_cell_2_sum/editable-sites.json": "f1a4575f923a72dc186e7f11336b391f557184b0f77c69b57e4316ebf5d6b64a",
+    "tasks/misc_cell_2_sum/original.rs": "62a83ff6baddeb984bd9faaddc26f62d03fcede583567e7c2c31fa41ea524582",
+    "tasks/misc_cell_2_sum/verification.json": "9c5280ce126f51b36d272547ddd481d5c4b4426544bc6c5940deb0d84a799732",
+    "tasks/misc_choose_odd/candidate.rs": "06b55448c1b1aee24ffb55badf6e50061780bdaa5cf9068ab1b7eb2b3dfd0bbb",
+    "tasks/misc_choose_odd/editable-sites.json": "19f7fa84a3f6909fe186be1b785ba90b56f25be830c7d674915f31c098c8e98b",
+    "tasks/misc_choose_odd/original.rs": "9d9ae1317296c9c25616c9365f4065b56aaa638c556c8b9185b66ff98b3baa2b",
+    "tasks/misc_choose_odd/verification.json": "1bbb9a319c6d9b9806ce2ad6f614a1ae55dbdaeb88a5e460df09860932149e58",
+    "tasks/misc_findmax/candidate.rs": "a450f13c4763708107c5f429be27184886e8d396f61f0fe7669a15f7ec27845d",
+    "tasks/misc_findmax/editable-sites.json": "3fa1d42f357aca1226429b4cf1eb8d4651b61a11cb64e5079f7296cad51a482c",
+    "tasks/misc_findmax/original.rs": "8c8ab34be41f0d6dba6dbc40d54cfc4b8869620407327b89c27bb82bdd55f4c8",
+    "tasks/misc_findmax/verification.json": "b7ff666ebc11e40a8d455886eaf0fe6360924e83c9efaa674ba20bb2a9bb4449",
+    "tasks/misc_trigger/candidate.rs": "b4a8cf56322273b9973b63b8761115cb07911a6431d64c46c32b5d5a0d8fb3c5",
+    "tasks/misc_trigger/editable-sites.json": "9b4c780b6cbbfde3a5e63073ada20f2889b47ac9b0e75f2f6bd8cb7e1c3f49e2",
+    "tasks/misc_trigger/original.rs": "3c6efa45e4a306d37f1c54d47ca578c7f764febca8bd35d836fa7ccd641925dc",
+    "tasks/misc_trigger/verification.json": "ed35e2fea65dd598794e72dbba7a93c4032f797e3022af073f60714f03921e03",
+    "tasks/diffy_sina3/reference/action.json": "9b062001c9462e891569fa2b85f46a740ef3caf160e14d598bb1d1218ddab48f",
+    "tasks/diffy_sina3/reference/candidate.rs": "8ead497b5acf0248e26d91d247cacda12fc95402ce27aab403d16bf6426f2951",
+    "tasks/diffy_sina3/reference/decisions.json": "20fcf942cd29d4dde4c21f838baed06d7ca767b84db2eb4983b278d110f8f54e",
+    "tasks/diffy_sina3/reference/integrity.json": "c829000bff1921b56870a3fe783090698e4a47959a5947b73d17729722af9701",
+    "tasks/diffy_sina3/reference/verification.json": "2053c91976f43b6d9954aa10bb3d7642b80b9b4a9a7a6d0d5cfa164060dddae7",
+    "tasks/mbpp_task_id_616/reference/action.json": "1e2157a32a26d1f27dfb1004432a1ee25c7ead5740aa456f02d37a7cae8d4396",
+    "tasks/mbpp_task_id_616/reference/candidate.rs": "3540ddfb63be2dbecad4f88c54b03219494e20b6c740468b19e7856d6cc8d38a",
+    "tasks/mbpp_task_id_616/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/mbpp_task_id_616/reference/integrity.json": "56a4472a682d44ba425f231c00a5f291becc7a4c0a939af2fa3af47eae614875",
+    "tasks/mbpp_task_id_616/reference/verification.json": "93a6a7261e0313c0f33661cf268aeedf5e609eafbcc189ed90a139e5a313bbdc",
+    "tasks/mbpp_task_id_70/reference/action.json": "a950592cfb6177b9d047f527fe131d9f484cbc8a2b9aa27cf76d90a2b2c93d6a",
+    "tasks/mbpp_task_id_70/reference/candidate.rs": "6f29d4553b912dccfcf77ef4ccfceb56f9b96d85d0143e2ac3dca6cf4c6313a4",
+    "tasks/mbpp_task_id_70/reference/decisions.json": "f11bebc8ca37c14eaa9abb16733332f4c2d1e5e3f755c4ebba4b2792aa9fa607",
+    "tasks/mbpp_task_id_70/reference/integrity.json": "0dd6cb06845e458ee0f8c09af5cab7d75155f50fd9d103f00a9ccbe4caa19314",
+    "tasks/mbpp_task_id_70/reference/verification.json": "46b9c2f0867d89fff1bc83099c8a0a28fef452ecd7a61198cef325a5a12830b1",
+    "tasks/misc_cell_2_sum/reference/action.json": "ae77cde84c1ad1251a02bd2beab937be751fdb87f1bda99ee049aed3e6370f1e",
+    "tasks/misc_cell_2_sum/reference/candidate.rs": "0841d1cb9f371fcd8887513af1b345737d8c6b69495121b17438d349608e4568",
+    "tasks/misc_cell_2_sum/reference/decisions.json": "f2c6e30788e4ad6711127c59a9ab8d4898862db03e3343412ef55d058d5a9249",
+    "tasks/misc_cell_2_sum/reference/integrity.json": "cf9dae674560d893c1eff89fb28141016b511561e995096507167377fcb63980",
+    "tasks/misc_cell_2_sum/reference/verification.json": "1b35a35e0605c1880b825e2d94cbf6d627604da024ecb5d3bfec55bb3eb2cc69",
+    "tasks/misc_choose_odd/reference/action.json": "b6d2ec7cafb065b78d60b957ccc9f9b85ae286c2e56af828dfa2c0dda254045d",
+    "tasks/misc_choose_odd/reference/candidate.rs": "18a97dbd815b5cdf1192a52562bdfe156c7a6ef846be06fae4f97ae9ff82a6c4",
+    "tasks/misc_choose_odd/reference/decisions.json": "f11bebc8ca37c14eaa9abb16733332f4c2d1e5e3f755c4ebba4b2792aa9fa607",
+    "tasks/misc_choose_odd/reference/integrity.json": "f72206e477aa390d99ab283aafdf43d07ef65ec6b58f77b613883f3eb6ef2709",
+    "tasks/misc_choose_odd/reference/verification.json": "cb4429d9f3a4ab6112e71a77f375f006e78760245e7cbdafb4d717fbf0a58108",
+    "tasks/misc_findmax/reference/action.json": "f2042713da031895e4a01c34ebbfbc40828c20a4890a76e4483c47025cec131d",
+    "tasks/misc_findmax/reference/candidate.rs": "5f3adc66895a30d7d690d4e9de8a4d34b0f6c47963b1d8330fa27fe5723e0cb6",
+    "tasks/misc_findmax/reference/decisions.json": "196418bba6ede6e20c4547d055694a92ca0f3ff2aa6ff848df82e5f95af58094",
+    "tasks/misc_findmax/reference/integrity.json": "39fbaac91024183b3b6d7824da8bd0e01de3736889874bd76630bd6ae20568b4",
+    "tasks/misc_findmax/reference/verification.json": "ac6c4cc10ec7d80678551a54624a06803b8ec755474d50c4810ea5979e703397",
+    "tasks/misc_trigger/reference/action.json": "e1ade38e5a8b9fc60b1d9f2ed57630b803d47d0674b73a78db71caa2bd962f34",
+    "tasks/misc_trigger/reference/candidate.rs": "0540de3fcd8c1d504a40afae54987cc0284cccdeec08b5ccc8952d12bc6ecec2",
+    "tasks/misc_trigger/reference/decisions.json": "bf327ea61a143dc2aac2d476ae0541ac0367ec9e2b0f5084d3e51e7f69c6179e",
+    "tasks/misc_trigger/reference/integrity.json": "ba3ccab0ee8006ef997898893275ead83f953bee864b7bd809e2a4cc4b03465c",
+    "tasks/misc_trigger/reference/verification.json": "e7167c33aa0debd83e5c5c3a1f005d4122605e6457ef9a248ff05c880f552d35"
+  },
+  "source_eligible": 90,
+  "actions": {
+    "loop_invariants": 6,
+    "assertions_and_proof": 1
+  },
+  "audit": [
+    {
+      "id": "cloverbench_array_append_strong",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "without_internals",
+          "proposal": 3,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        },
+        {
+          "arm": "with_internals",
+          "proposal": 2,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "cloverbench_array_concat_strong",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "with_internals",
+          "proposal": 2,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "cloverbench_array_copy_strong",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "with_internals",
+          "proposal": 1,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "cloverbench_array_product_strong",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "with_internals",
+          "proposal": 2,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "cloverbench_array_sum_strong",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "with_internals",
+          "proposal": 3,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "cloverbench_binary_search",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "cloverbench_is_prime",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_brs1",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_brs2",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_brs3",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_brs4",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_brs5",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_conda",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_condg",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_ms1",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_ms2",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_ms3",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_ms4",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_ms5",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_res1",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_res1o",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_res2",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_res2o",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s12if",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s1lif",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s2lif",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s32if",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s3if",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s4if",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "without_internals",
+          "proposal": 3,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "diffy_s5if",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_s5lif",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_sina2",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_sina3",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": []
+    },
+    {
+      "id": "diffy_sina4",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "diffy_sina5",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_105",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_133",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_142",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_145",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_161",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_170",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_18",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_240",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_262",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_290",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_3",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_412",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_426",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_431",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "without_internals",
+          "proposal": 3,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "mbpp_task_id_436",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_445",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_460",
+      "status": "excluded",
+      "reasons": [
+        {
+          "arm": "without_internals",
+          "proposal": 1,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "mbpp_task_id_461",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_476",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_554",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_572",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_576",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_579",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_586",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_588",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_602",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_605",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_610",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_616",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": [
+        {
+          "arm": "with_internals",
+          "proposal": 2,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "mbpp_task_id_629",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_644",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_69",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_70",
+      "status": "selected",
+      "valid_references": 2,
+      "other_references": []
+    },
+    {
+      "id": "mbpp_task_id_743",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_755",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_764",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_769",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_798",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_807",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "mbpp_task_id_94",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_binary_search",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_bubble",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_cell_2_sum",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": [
+        {
+          "arm": "with_internals",
+          "proposal": 3,
+          "reason": "Reference requires loop_isolation option outside the three actions"
+        }
+      ]
+    },
+    {
+      "id": "misc_choose_odd",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": []
+    },
+    {
+      "id": "misc_deduplicate",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_fib",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_findmax",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": []
+    },
+    {
+      "id": "misc_len_intersect",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_map",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_remove_all_greater",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_reverse",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_simple_nested",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_sum",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_tail_triangle",
+      "status": "excluded",
+      "reasons": [
+        "No saved successful repair"
+      ]
+    },
+    {
+      "id": "misc_trigger",
+      "status": "selected",
+      "valid_references": 1,
+      "other_references": []
+    }
+  ],
+  "selection_bias": "Selected because some saved run repaired them. Diagnostic subset, not representative VerusBench rate.",
+  "reference_status": "Archived Verus+integrity success and reproduced reference tokens; revalidate on cluster before inference."
+}
